@@ -1,0 +1,12 @@
+# Not an AI: the human incident commander (orca.agents.Commander; the dashboard/console calls it).
+name: commander
+kind: human
+organisation: the incident commander (human)
+mandate: >
+  Approve or reject plans (hashed, time-limited, PIN), resolve AMBIGUITY and CONFLICT, confirm or
+  reject pre-confirmed gaps, send notices. Owns every A3 decision; no agent can do any of these.
+reports_to: the organisations' executives; counsel for legal matters
+max_level: 0
+tools: []
+owns: []
+prompt: ""
