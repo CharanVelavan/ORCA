@@ -1,12 +1,23 @@
 # ORCA-NTN playbook catalogue (fixed; agents choose from it, they cannot invent steps).
-# executable: true = implemented in orca/remediation.py; false = specified only (shown, never run).
+# executable: true = runnable through orca/remediation.py (guards: owner, own assets, one-time approval
+#   token, expiry, clone test, fresh verdict, staged 5/25/100 %, rollback). Network effects of PB-01/06/11-17
+#   are applied by orca/sim/netops.py through the World.health hook (orca.sim.netops.attach); see docs/NETWORK.md.
+# executable: false = specified only (shown, never run).
 # owner = the only role that may execute it, and only on targets in its own asset list.
+# Network fields (Opus B, 8 Nov): kind (patch | heal | contain | inform), netconfig (what the diff changes),
+#   sim_action (simulator effect), verification (re-scan checks + re-attack test), rollback, closes (scanner checks).
+# Everything is emulated: no vendor code, no real device, no real network.
 - id: PB-01
   title: Disable exposed VPN account, rotate credentials
   owner: satellite_operator
   executable: true
   target_kind: mgmt_account
+  kind: contain
   steps: [disable the account, revoke its sessions, rotate shared credentials, keep logs]
+  netconfig: "SAT-MGMT accounts[<user>].enabled: false; credential_ref: revoked"
+  sim_action: management intrusion contained (attacker sessions end)
+  verification: {rescan: [], reattack: [ka_sat_chain with that account must fail]}
+  rollback: revert SAT-MGMT.yaml to the snapshot (re-enables the account; only on a failed stage)
   risk: low
 - id: PB-02
   title: Enforce MFA on management access
@@ -14,6 +25,7 @@
   executable: false
   target_kind: mgmt_system
   risk: low
+  notes: Superseded by PB-11 (rotate credentials + MFA), which is executable.
 - id: PB-03
   title: Block attacker sources at the management firewall
   owner: satellite_operator
@@ -37,11 +49,20 @@
   owner: mobile_operator
   executable: true
   target_kind: site
+  kind: heal
   params: [path]
   preconditions:
     - backup path integrity verified
     - gateway located in India (Authz Rules 2026, Rule 60(1)(b))
   steps: [check path integrity, check gateway country, clone test, staged rollout 5/25/100, health check, rollback on failure]
+  clean_path_checks: [path exists, gateway in India (Authz Rule 60(1)(b)), gateway not forbidden, not jammed,
+                      no equipment fault, gateway up, management plane not compromised,
+                      feeder link encrypted (satellite paths), integrity probe not failed]
+  netconfig: "<site> backhaul.active_path: <path>; failover_allowed: false for every path via a gateway outside India"
+  sim_action: site switches to the backup path; link pins of the old path clear
+  verification: {rescan: [SCN-FOREIGN-PATH], reattack: [foreign_failover must fail], checks: [path clean, active path switched]}
+  rollback: revert the site YAML and switch the simulator back to the previous path
+  closes: [SCN-FOREIGN-PATH]
   risk: medium
 - id: PB-07
   title: Re-authenticate terminals and towers
@@ -55,18 +76,122 @@
   executable: false
   target_kind: any
   risk: medium
+  notes: Superseded for the emulated fleet by PB-14 (firmware update in waves).
 - id: PB-09
   title: Shed non-critical load to protect the battery
   owner: mobile_operator
   executable: false
   target_kind: site
   risk: medium
+  notes: Superseded by PB-15 (battery-saving mode), which is executable.
 - id: PB-10
   title: Warn dependent services (hospitals, payments, 112, grid) through the agent bus
   owner: mobile_operator
   executable: true
   target_kind: site
+  kind: inform
   params: [message]
   steps: [Gap Analyst drafts the warning, commander approves, send to dependants of the target sites]
   risk: low
   notes: Voluntary - no binding duty to warn was found (GAP-IN-02).
+- id: PB-11
+  title: Rotate credentials and enforce MFA on management access
+  owner: satellite_operator
+  executable: true
+  target_kind: mgmt_system
+  kind: patch
+  preconditions: [a break-glass account with MFA stays enabled, rotation ticket recorded]
+  steps: [enforce MFA, rotate every enabled account credential (vault reference only), remove factory defaults,
+          clone test, staged rollout, re-scan, re-attack]
+  netconfig: "<device> auth.mfa_required: true; accounts[*].mfa: true, default_password: false, credential_age_days: 0, credential_ref: vault:emulated/...rotated"
+  sim_action: management intrusion contained
+  verification: {rescan: [SCN-DEFAULT-CRED, SCN-NO-MFA, SCN-STALE-CRED],
+                 reattack: [ka_sat_chain must fail at the login step, default_cred_login must fail]}
+  rollback: revert the device YAML to the snapshot (old credential references; a failed stage only)
+  closes: [SCN-DEFAULT-CRED, SCN-NO-MFA, SCN-STALE-CRED]
+  risk: low
+- id: PB-12
+  title: Close the exposed VPN and management interface (jump host only)
+  owner: satellite_operator
+  executable: true
+  target_kind: mgmt_system
+  kind: patch
+  preconditions: [NOC jump host reachable, out-of-band console available]
+  steps: [restrict VPN sources to the NOC jump host, move the management interface behind the jump host,
+          clone test, staged rollout, re-scan, re-attack]
+  netconfig: "<device> vpn.exposure: restricted, allowed_sources: [noc-jump-host]; mgmt_interface.exposure: jump_host_only"
+  sim_action: management intrusion contained
+  verification: {rescan: [SCN-VPN-EXPOSED, SCN-MGMT-EXPOSED], reattack: [ka_sat_chain must fail at the VPN step]}
+  rollback: revert the device YAML to the snapshot
+  closes: [SCN-VPN-EXPOSED, SCN-MGMT-EXPOSED]
+  risk: medium
+- id: PB-13
+  title: Encrypt and authenticate the feeder link
+  owner: satellite_operator
+  executable: true
+  target_kind: gateway
+  kind: patch
+  preconditions: [gateway located in India, key held in the emulated HSM, maintenance window agreed]
+  steps: [enable AES-256-GCM with authentication on the feeder link, clone test, staged rollout, re-scan, re-attack]
+  netconfig: "<gateway> feeder_link.encryption: AES-256-GCM, authentication: true, key_ref: hsm:emulated/..."
+  verification: {rescan: [SCN-FEEDER-CLEAR], reattack: [feeder_intercept must fail]}
+  rollback: revert the gateway YAML to the snapshot
+  closes: [SCN-FEEDER-CLEAR]
+  risk: medium
+  notes: Needs gateway assets for satellite_operator in orca/world.py DEFAULT_ASSETS (patch proposed in docs/NETWORK.md).
+- id: PB-14
+  title: Update firmware in waves (signed images only)
+  owner: satellite_operator
+  executable: true
+  target_kind: terminal
+  kind: patch
+  params: [version]
+  preconditions: [signed image available, previous image kept for rollback]
+  steps: [wave 1 = 5 %, wave 2 = 25 %, wave 3 = 100 % of the targets, health check after each wave, re-scan, re-attack]
+  netconfig: "<terminal> firmware.version: <baseline target>, signed: true, accept_unsigned_commands: false"
+  verification: {rescan: [SCN-FW-OUTDATED, SCN-FW-UNSIGNED], reattack: [firmware_exploit must fail]}
+  rollback: revert each updated terminal YAML to its snapshot (previous image)
+  closes: [SCN-FW-OUTDATED, SCN-FW-UNSIGNED]
+  risk: high
+- id: PB-15
+  title: Battery-saving mode (keep 112 and hospital traffic, shed general load)
+  owner: mobile_operator
+  executable: true
+  target_kind: site
+  kind: heal
+  params: [enable, shed]
+  preconditions: [M2 forecasts battery exhaustion or mains is off, 112 and hospital carriers are excluded from shedding]
+  steps: [configure the profile, enable it, clone test, staged rollout, check battery trend]
+  netconfig: "<site> power.battery_saving: {configured: true, enabled: true, shed: [general]}"
+  sim_action: site load falls by 40 % (battery lasts longer)
+  verification: {rescan: [SCN-NO-BATTERY-SAVING], checks: [battery-saving active]}
+  rollback: revert the site YAML; full load restored
+  closes: [SCN-NO-BATTERY-SAVING]
+  risk: medium
+- id: PB-16
+  title: Pre-stage a clean backup path from the M2 forecast
+  owner: mobile_operator
+  executable: true
+  target_kind: site
+  kind: heal
+  params: [path]
+  preconditions: [M2 P10 minutes-to-failure under 30, the PB-06 clean-path checks pass]
+  steps: [run the clean-path checks, warm the backup path (no traffic moved), keep watching M2]
+  netconfig: "<site> backhaul.prestaged_path: <path>; foreign failover paths disabled"
+  sim_action: backup path warmed; PB-06 can switch without a cold start
+  verification: {checks: [path clean], reattack: [foreign_failover must fail]}
+  rollback: revert the site YAML
+  risk: low
+- id: PB-17
+  title: Re-attack watch after a heal or patch
+  owner: mobile_operator
+  executable: true
+  target_kind: site
+  kind: heal
+  params: [minutes]
+  steps: [raise monitoring on the healed site for N minutes, re-run the re-attack tests, alert on any repeat]
+  netconfig: "<site> monitoring.reattack_watch: true, watch_minutes: N"
+  sim_action: watch window recorded; repeat anomalies inside it raise an alert
+  verification: {checks: [watch active]}
+  rollback: revert the site YAML
+  risk: low

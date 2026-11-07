@@ -1,0 +1,64 @@
+# EMULATED device configuration (ORCA-NTN sandbox). Not a real device. No secrets: credentials are
+# references to an emulated vault, never values.
+id: SAT-MGMT
+kind: mgmt_system
+owner: satellite_operator
+country: IN
+description: Satellite operator network management system and its remote-access VPN (KA-SAT pattern target)
+firmware:
+  version: 7.4.2
+  signed: true
+vpn:
+  enabled: true
+  exposure: internet
+  allowed_sources:
+  - 0.0.0.0/0
+  appliance_patch_level: 2025-11
+mgmt_interface:
+  exposure: internet
+  protocols:
+  - https
+  - ssh
+auth:
+  mfa_required: false
+  session_timeout_min: 480
+accounts:
+- user: noc-vendor-7
+  role: vendor-support
+  enabled: true
+  mfa: false
+  credential_ref: vault:emulated/noc-vendor-7/v1
+  credential_age_days: 412
+  default_password: false
+- user: admin
+  role: superuser
+  enabled: true
+  mfa: false
+  credential_ref: factory-default
+  credential_age_days: 1460
+  default_password: true
+- user: noc-ops-1
+  role: operator
+  enabled: true
+  mfa: true
+  credential_ref: vault:emulated/noc-ops-1/v3
+  credential_age_days: 30
+  default_password: false
+- user: telemetry-srv
+  role: service
+  enabled: true
+  mfa: false
+  credential_ref: vault:emulated/telemetry-srv/v1
+  credential_age_days: 200
+  default_password: false
+logging:
+  retention_days: 180
+  location: IN
+manages:
+- GW-IN-1
+- GW-IN-2
+- TERM-CHN-01
+- TERM-CHN-02
+- TERM-CHN-03
+- TERM-CHN-04
+- TERM-CHN-05

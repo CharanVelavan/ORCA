@@ -1,0 +1,442 @@
+{
+  "generated_by": "python -m orca.models.train",
+  "seed": 7,
+  "data": "synthetic, emulated Chennai network (orca/sim); no real operator data",
+  "sizes": {
+    "m3_train_windows": 53200,
+    "val": 13300,
+    "abstain_calibration": 13300,
+    "test_in_distribution": 13300,
+    "heldout_harder": 26600
+  },
+  "M1": {
+    "model": "IsolationForest(200 trees) on normal windows; ECOD (numpy) comparison",
+    "threshold": 0.5638,
+    "in_distribution": {
+      "auc_iforest": 0.897,
+      "auc_ecod": 0.996,
+      "ensemble_false_alarm_rate_normal": 0.0079,
+      "ensemble_detection_rate_by_class": {
+        "fault-weather": 0.854,
+        "fault-power/equipment": 0.598,
+        "attack-jamming": 0.771,
+        "attack-management-plane": 0.677,
+        "attack-gnss": 0.999,
+        "attack-signalling": 0.923
+      },
+      "iforest_only_false_alarm_rate": 0.0069,
+      "iforest_only_detection_rate": 0.246,
+      "ecod_only_false_alarm_rate": 0.0024,
+      "ecod_only_detection_rate": 0.808
+    },
+    "heldout_harder": {
+      "auc_iforest": 0.864,
+      "auc_ecod": 0.988,
+      "ensemble_false_alarm_rate_normal": 0.0226,
+      "ensemble_detection_rate_by_class": {
+        "fault-weather": 0.755,
+        "fault-power/equipment": 0.79,
+        "attack-jamming": 0.601,
+        "attack-management-plane": 0.609,
+        "attack-gnss": 0.998,
+        "attack-signalling": 0.785
+      },
+      "iforest_only_false_alarm_rate": 0.019,
+      "iforest_only_detection_rate": 0.222,
+      "ecod_only_false_alarm_rate": 0.0095,
+      "ecod_only_detection_rate": 0.756
+    }
+  },
+  "M2_minute": {
+    "model": "LightGBM quantile P10/P50/P90 + split-conformal",
+    "n_test": 15595,
+    "n_failing": 13548,
+    "mae_p50_failing_min": 4.31,
+    "mae_physics_baseline_failing_min": 4.29,
+    "interval_p10_p90_coverage": 0.925,
+    "mean_interval_width_min": 8.7,
+    "conformal_widening_min": 0.0,
+    "false_forecast_rate_no_failure": 0.0342,
+    "within_30min_recall": 0.959,
+    "features": [
+      "link_margin_db",
+      "margin_slope5",
+      "margin_slope10",
+      "rain_mm_h",
+      "rain_slope5",
+      "expected_fade_db",
+      "battery_pct",
+      "battery_slope5",
+      "mains_power",
+      "battery_saving",
+      "is_satellite",
+      "is_microwave",
+      "physics_ttf_min"
+    ],
+    "horizon_min": 120,
+    "test_split": "heldout (harder ranges)"
+  },
+  "M3": {
+    "model": "LightGBM multiclass + calibrated abstain + TreeSHAP",
+    "classes": [
+      "normal",
+      "fault-weather",
+      "fault-power/equipment",
+      "attack-jamming",
+      "attack-management-plane",
+      "attack-gnss",
+      "attack-signalling",
+      "abstain"
+    ],
+    "abstain_tau": 0.9,
+    "abstain_margin": 0.0,
+    "in_distribution": {
+      "n": 13300,
+      "accuracy_no_abstain": 1.0,
+      "coverage": 1.0,
+      "selective_accuracy": 1.0,
+      "abstain_rate": 0.0,
+      "per_class": {
+        "normal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 4663
+        },
+        "fault-weather": {
+          "precision": 0.999,
+          "recall": 0.999,
+          "support": 1721
+        },
+        "fault-power/equipment": {
+          "precision": 1.0,
+          "recall": 0.999,
+          "support": 1346
+        },
+        "attack-jamming": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1374
+        },
+        "attack-management-plane": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1381
+        },
+        "attack-gnss": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1404
+        },
+        "attack-signalling": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 1411
+        }
+      },
+      "confusion_rows_true_cols_pred": {
+        "rows": [
+          "normal",
+          "fault-weather",
+          "fault-power/equipment",
+          "attack-jamming",
+          "attack-management-plane",
+          "attack-gnss",
+          "attack-signalling"
+        ],
+        "cols": [
+          "normal",
+          "fault-weather",
+          "fault-power/equipment",
+          "attack-jamming",
+          "attack-management-plane",
+          "attack-gnss",
+          "attack-signalling",
+          "abstain"
+        ],
+        "matrix": [
+          [
+            4662,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1720,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1344,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1374,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1381,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1404,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1411,
+            0
+          ]
+        ]
+      }
+    },
+    "heldout_harder": {
+      "n": 26600,
+      "accuracy_no_abstain": 0.971,
+      "coverage": 0.983,
+      "selective_accuracy": 0.987,
+      "abstain_rate": 0.017,
+      "per_class": {
+        "normal": {
+          "precision": 0.996,
+          "recall": 1.0,
+          "support": 8930
+        },
+        "fault-weather": {
+          "precision": 0.922,
+          "recall": 1.0,
+          "support": 3730
+        },
+        "fault-power/equipment": {
+          "precision": 1.0,
+          "recall": 0.841,
+          "support": 2769
+        },
+        "attack-jamming": {
+          "precision": 1.0,
+          "recall": 0.897,
+          "support": 2838
+        },
+        "attack-management-plane": {
+          "precision": 1.0,
+          "recall": 0.984,
+          "support": 2756
+        },
+        "attack-gnss": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 2783
+        },
+        "attack-signalling": {
+          "precision": 1.0,
+          "recall": 0.994,
+          "support": 2794
+        }
+      },
+      "confusion_rows_true_cols_pred": {
+        "rows": [
+          "normal",
+          "fault-weather",
+          "fault-power/equipment",
+          "attack-jamming",
+          "attack-management-plane",
+          "attack-gnss",
+          "attack-signalling"
+        ],
+        "cols": [
+          "normal",
+          "fault-weather",
+          "fault-power/equipment",
+          "attack-jamming",
+          "attack-management-plane",
+          "attack-gnss",
+          "attack-signalling",
+          "abstain"
+        ],
+        "matrix": [
+          [
+            8926,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            3729,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            54,
+            2329,
+            1,
+            0,
+            0,
+            0,
+            385
+          ],
+          [
+            0,
+            253,
+            0,
+            2546,
+            0,
+            0,
+            0,
+            39
+          ],
+          [
+            26,
+            5,
+            0,
+            0,
+            2712,
+            0,
+            0,
+            13
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2783,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2778,
+            4
+          ]
+        ]
+      }
+    }
+  },
+  "M4": {
+    "model": "MILP (SciPy HiGHS) with lexicographic priority; greedy fallback",
+    "case": "two sites share a 60 Mbps backup gateway, 100 Mbps demand",
+    "method": "milp",
+    "112_fully_served": true,
+    "hospital_fully_served": true,
+    "shed": [
+      {
+        "site": "CHN-01",
+        "service": "general",
+        "shed_mbps": 20.0,
+        "why": "priority 5 (general) after higher-priority services; capacity 45 Mbps"
+      },
+      {
+        "site": "CHN-05",
+        "service": "general",
+        "shed_mbps": 20.0,
+        "why": "priority 5 (general) after higher-priority services; capacity 40 Mbps"
+      }
+    ],
+    "greedy_shed": [
+      {
+        "site": "CHN-01",
+        "service": "general",
+        "shed_mbps": 15.0,
+        "why": "priority 5 (general) after higher-priority services; capacity 45 Mbps"
+      },
+      {
+        "site": "CHN-05",
+        "service": "general",
+        "shed_mbps": 25.0,
+        "why": "priority 5 (general) after higher-priority services; capacity 40 Mbps"
+      }
+    ]
+  },
+  "features": [
+    "snr_db",
+    "snr_slope5",
+    "rx_delta_db",
+    "noise_rise_db",
+    "fade_residual_db",
+    "rain_mm_h",
+    "expected_fade_db",
+    "packet_loss",
+    "loss_mean10",
+    "txn_success",
+    "traffic_load",
+    "mains_power",
+    "battery_pct",
+    "battery_slope5",
+    "terminals_frac",
+    "logins10",
+    "anomalous_logins10",
+    "failed_logins10",
+    "cmds10",
+    "wipe10",
+    "cfg10",
+    "telemetry_edit10",
+    "telemetry_mismatch",
+    "gnss_cn0_mean",
+    "gnss_cn0_std",
+    "gnss_agc_db",
+    "gnss_clock_abs_ns",
+    "gnss_pos_jump_m",
+    "ss7_msg_ratio",
+    "ss7_loc_query_rate",
+    "ss7_loc_share",
+    "ss7_foreign_share",
+    "ss7_error_rate",
+    "is_satellite",
+    "is_microwave",
+    "is_fibre"
+  ],
+  "train_seconds": 20.0
+}

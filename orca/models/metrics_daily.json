@@ -1,0 +1,12 @@
+{
+  "status": "ok",
+  "data": "Turkcell rl-kpis.tsv (real, daily, Turkey microwave links)",
+  "task": "RLF within the next 3 days from one link-day",
+  "split": "time: train < 2020-06-01 <= test",
+  "n_train": 1428606,
+  "n_test": 553330,
+  "base_rate_test": 0.00245,
+  "roc_auc": 0.57,
+  "pr_auc": 0.0053,
+  "precision_top_1pct": 0.0154
+}
