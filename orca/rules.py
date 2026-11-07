@@ -118,6 +118,16 @@ def find_gap(kb, topic: str, jurisdiction: str) -> tuple[str, str]:
     return candidate_gap_id(jurisdiction, topic), "candidate (not yet in the gap register)"
 
 
+def rejected_gap(kb, topic: str, jurisdiction: str) -> dict | None:
+    """The gap a human rejected for this topic, if any. Check this before find_gap: a rejected
+    gap must never be re-raised under a fresh candidate id."""
+    for g in kb.gaps.values():
+        if (g.get("topic") == topic and g["jurisdiction"] in (jurisdiction, "INTL")
+                and g.get("status") == "rejected"):
+            return g
+    return None
+
+
 # ----------------------------------------------------------------- the engine
 class _Engine:
     def __init__(self, facts: dict, kb):
@@ -299,12 +309,19 @@ class _Engine:
             shared = sorted(ta & tb)
             if not shared:
                 continue
-            gap, status = find_gap(self.kb, rule["gap_topic"], self.jur)
             body = (f"{a['playbook']} ({a.get('agent', '?')}) and {b['playbook']} ({b.get('agent', '?')}) both act on "
                     f"{', '.join(shared)}. {rule['clash']} The cited records support each side but none settles the "
                     f"choice in the sources we checked, as of {self.as_of}; a human decides.")
-            self.add("CONFLICT", rule["id"], rule.get("topic"), recs, body, gap_id=gap, actions=[dict(a), dict(b)],
-                     notes=[f"gap {gap}: {status}"])
+            rej = rejected_gap(self.kb, rule["gap_topic"], self.jur)
+            if rej:                       # a human ruled this is not a gap: keep the clash, raise no gap
+                gap, note = None, (f"rejected gap {rej['id']} ({rej.get('verified_by')}): "
+                                   f"topic '{rule['gap_topic']}' not raised as a gap")
+            else:
+                gap, status = find_gap(self.kb, rule["gap_topic"], self.jur)
+                note = f"gap {gap}: {status}"
+            self.add("CONFLICT", rule["id"], rule.get("topic"), recs or rule["records"], body, gap_id=gap,
+                     actions=[dict(a), dict(b)],
+                     notes=[note])
 
     # ---- 4. topic coverage
     def questions(self):
@@ -339,10 +356,8 @@ class _Engine:
                          f"{label}: the matching {jur} record(s) {', '.join(ids(by('in_force')))} are in force but "
                          f"record unverified, so coverage is not asserted.")
                 continue
-            rejected = [g for g in self.kb.gaps.values() if g.get("topic") == topic
-                        and g["jurisdiction"] in (jur, "INTL") and g.get("status") == "rejected"]
-            if rejected:                  # a human ruled this is not a gap: state the facts, cite the decision
-                g = rejected[0]
+            g = rejected_gap(self.kb, topic, jur)
+            if g:                         # a human ruled this is not a gap: state the facts, cite the decision
                 cite = ids(recs) or [e for e in g.get("evidence", []) if e in self.kb.records]
                 self.add("INSUFFICIENT_EVIDENCE", rid, topic, cite,
                          f"{label}: no in-force duty specific to this topic on {self.on}, but gap {g['id']} was "

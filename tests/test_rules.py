@@ -128,6 +128,21 @@ def test_conflict_pb05_pb06():
     assert ev(f) == []                      # no shared target, no clash
 
 
+def test_conflict_on_rejected_gap_topic_raises_no_gap():
+    # the PB-05/PB-06 clash links to joint_command = GAP-IN-07, rejected by the human (8 Nov 2026):
+    # the clash stays, but no gap id and no fresh GAP-CAND candidate
+    f = {"jurisdiction": "IN", "proposed_actions": [
+        {"playbook": "PB-05", "agent": "satellite_operator", "targets": ["gw-chennai-1"],
+         "supporting_records": ["IN-CERTIN-DIR-2022-ANX1-ii"]},
+        {"playbook": "PB-06", "agent": "mobile_operator", "targets": ["gw-chennai-1"],
+         "supporting_records": ["IN-TELACT-2023-20"]}]}
+    out = ev(f)
+    v = one(out)
+    assert v.verdict == "CONFLICT" and v.gap_id is None
+    assert any("rejected gap GAP-IN-07" in n for n in v.notes)
+    assert not any("GAP-CAND" in str(x.gap_id) or any("GAP-CAND" in n for n in x.notes) for x in out)
+
+
 # ---------------------------------------------------------------- coverage and guards
 def test_each_of_six_verdicts_occurs():
     seen = {v.verdict for v in ev({**CLOCKS, "applies": CTI})}              # AMBIGUITY, COMPLIANT
