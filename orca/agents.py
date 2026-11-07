@@ -702,8 +702,12 @@ class Agent:
         res = self.proto.send(Message(type="approve_request", sender=self.role.name, recipients=[COMMANDER],
                                       text=f"Approve {playbook} on {', '.join(_as_list(targets))}: {reason}",
                                       refs=[p["hash"]], playbook=playbook))
-        return {k: p[k] for k in ("hash", "playbook", "targets", "expires_at", "executable", "clone_test")} | {
-            "status": "waiting for the human commander", "message": res}
+        out = {k: p[k] for k in ("hash", "playbook", "targets", "expires_at", "executable", "clone_test", "mode")}
+        if p.get("auto_token"):                 # the human granted ASSISTED/AUTO for this scope
+            return out | {"status": f"approved automatically under {p['mode']} (hard limits still apply)",
+                          "token": p["auto_token"], "token_expires_at": p["token_expires_at"],
+                          "next": "call execute_playbook with exactly these targets, params and this token"}
+        return out | {"status": "waiting for the human commander", "message": res}
 
     # ---------------------------------------------------------------- A2 tools
     def t_execute_playbook(self, playbook: str, targets, token: str, params: dict | None = None) -> dict:
@@ -720,19 +724,30 @@ class Commander:
 
     def pending(self) -> list[dict]:
         used = {t["hash"] for t in self.rem.tokens.values()}
-        return [p for h, p in self.rem.plans.items() if h not in used and h not in self.rejected]
+        return [p for h, p in self.rem.plans.items()
+                if h not in used and h not in self.rejected and not p.get("executed") and not p.get("auto_token")]
 
     def approve(self, plan_hash: str, pin: str) -> str:
         token = self.rem.approve(plan_hash, self.name, pin)
         p = self.rem.plans[plan_hash]
         self.proto.send(Message(type="inform", sender=COMMANDER, recipients=[p["owner"]], refs=[plan_hash],
                                 text=f"Approved {p['playbook']} on {', '.join(p['targets'])} with params "
-                                     f"{json.dumps(p['params'])}. One-time token: {token}. Expires {p['expires_at']}. "
+                                     f"{json.dumps(p['params'])}. One-time token: {token}. Expires {p['token_expires_at']}. "
                                      "Call execute_playbook with exactly these targets and params."))
         return token
 
     def reject(self, plan_hash: str, reason: str) -> None:
         self.rem.reject(plan_hash, self.name, reason)
+
+    # autonomy controls (Mission 6): human only, PIN-checked, logged
+    def set_mode(self, mode: str, pin: str, minutes: int, sites="*", playbooks="*") -> dict:
+        return self.rem.set_mode(mode, self.name, pin, minutes, sites, playbooks)
+
+    def kill(self, pin: str, reason: str) -> None:
+        self.rem.kill(self.name, pin, reason)
+
+    def release_kill(self, pin: str) -> None:
+        self.rem.release_kill(self.name, pin)
         self.rejected.add(plan_hash)
         p = self.rem.plans.get(plan_hash)
         if p:

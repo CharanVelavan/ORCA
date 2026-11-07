@@ -15,8 +15,7 @@ Covered now:
 
 Not built yet (skipped with a reason): autonomy modes, kill switch, blast-radius cap.
 
-Known bug (strict xfail): a single-use approval token can be re-minted at the same clock instant and
-then runs the plan a second time. See ``test_single_use_token_cannot_be_reminted``.
+The re-mintable token bug found here (8 Nov) is fixed in Mission 6; its test now passes.
 """
 import datetime as dt
 import hashlib
@@ -157,40 +156,140 @@ def test_agent_execute_without_token_is_refused_through_the_tool_path(w):
     assert "executed" not in kinds(w)
 
 
-@pytest.mark.xfail(reason="BUG: orca/remediation.py:108-109 derives the token from plan hash, approver, PIN and "
-                          "clock only, and approve() resets used=False. Approving the same plan again at the same "
-                          "clock instant re-mints the same token, so a spent token runs the plan a second time.",
-                   strict=True)
+def at(w, minutes):
+    """Move the facts clock to NOW + minutes."""
+    w.facts["now"] = (dt.datetime.fromisoformat(NOW) + dt.timedelta(minutes=minutes)).isoformat()
+
+
+def clean_route(w, site="CHN-02", path="B", gateway="GW-IN-2"):
+    w.routes = {site: {path: {"gateway": gateway, "integrity": "verified"}}}
+
+
+WARN = {"message": "Emulated satellite backhaul degraded; expect delays."}
+
+
 def test_single_use_token_cannot_be_reminted(w):
     rem = Remediation(w)
     plan, token = approve_plan(rem, "satellite_operator", "PB-01", ["noc-vendor-7"])
     assert rem.execute("satellite_operator", "PB-01", ["noc-vendor-7"], {}, token)["ok"]
-    again = rem.approve(plan["hash"], "Charan Velavan", "4321")     # same clock instant, same PIN
-    refused = False
-    try:
-        rem.execute("satellite_operator", "PB-01", ["noc-vendor-7"], {}, again)
-    except Refused:
-        refused = True
-    assert refused, "a spent approval token was accepted a second time"
+    with pytest.raises(Refused, match="already run"):             # same clock instant, same PIN
+        rem.approve(plan["hash"], "Charan Velavan", "4321")
+    with pytest.raises(Refused):
+        rem.execute("satellite_operator", "PB-01", ["noc-vendor-7"], {}, token)
 
 
-@pytest.mark.skip(reason="Mission 6: autonomy modes MANUAL / ASSISTED / AUTO (scoped per site or playbook) "
-                         "are not built yet")
-def test_autonomy_modes_gate_execution():
-    pass
+def test_each_approval_mints_a_new_token(w):
+    rem = Remediation(w)
+    plan = rem.request_approval("satellite_operator", "PB-01", ["noc-vendor-7"], {}, "t")
+    assert rem.approve(plan["hash"], "Charan Velavan", "4321") != rem.approve(plan["hash"], "Charan Velavan", "4321")
 
 
-@pytest.mark.skip(reason="Mission 6: kill switch is not built yet")
-def test_kill_switch_stops_execution():
-    pass
+# ------------------------------------------------------------------ Mission 6: two clocks
+def test_token_clock_starts_at_approval(w):
+    rem = Remediation(w)
+    plan = rem.request_approval("satellite_operator", "PB-01", ["noc-vendor-7"], {}, "t")
+    at(w, 25)                                       # human takes 25 min: request still fresh (30 min)
+    token = rem.approve(plan["hash"], "Charan Velavan", "4321")
+    at(w, 38)                                       # 13 min after approval, 38 after request: still valid
+    assert rem.execute("satellite_operator", "PB-01", ["noc-vendor-7"], {}, token)["ok"]
 
 
-@pytest.mark.skip(reason="Mission 6: blast-radius cap (sites per action, actions per 10 min) is not built yet")
-def test_blast_radius_cap():
-    pass
+def test_token_expires_15_min_after_approval(w):
+    rem = Remediation(w)
+    _, token = approve_plan(rem, "satellite_operator", "PB-01", ["noc-vendor-7"])
+    at(w, 16)
+    with pytest.raises(Refused, match="approval expired"):
+        rem.execute("satellite_operator", "PB-01", ["noc-vendor-7"], {}, token)
 
 
-# ================================================================== ownership and gateways
+def test_stale_request_cannot_be_approved(w):
+    rem = Remediation(w)
+    plan = rem.request_approval("satellite_operator", "PB-01", ["noc-vendor-7"], {}, "t")
+    at(w, 31)
+    with pytest.raises(Refused, match="stale"):
+        rem.approve(plan["hash"], "Charan Velavan", "4321")
+
+
+def test_configured_pin_is_checked(w):
+    import hashlib
+    rem = Remediation(w, pin_sha256=hashlib.sha256(b"2468").hexdigest())
+    plan = rem.request_approval("satellite_operator", "PB-01", ["noc-vendor-7"], {}, "t")
+    with pytest.raises(Refused, match="wrong PIN"):
+        rem.approve(plan["hash"], "Charan Velavan", "4321")
+    assert rem.approve(plan["hash"], "Charan Velavan", "2468")
+
+
+# ------------------------------------------------------------------ Mission 6: autonomy modes
+def test_autonomy_modes_gate_execution(w):
+    rem = Remediation(w)
+    clean_route(w)
+    assert "auto_token" not in rem.request_approval("mobile_operator", "PB-10", ["CHN-01"], WARN, "t")  # MANUAL
+    rem.set_mode("ASSISTED", "Charan Velavan", "4321", minutes=60)
+    low = rem.request_approval("mobile_operator", "PB-10", ["CHN-01"], WARN, "t")
+    assert low["mode"] == "ASSISTED" and low["auto_token"]
+    assert rem.execute("mobile_operator", "PB-10", ["CHN-01"], WARN, low["auto_token"])["ok"]
+    med = rem.request_approval("mobile_operator", "PB-06", ["CHN-02"], {"path": "B"}, "t")
+    assert "auto_token" not in med                  # PB-06 is medium risk: ASSISTED asks the human
+    rem.set_mode("AUTO", "Charan Velavan", "4321", minutes=60, sites=["CHN-02"])
+    med = rem.request_approval("mobile_operator", "PB-06", ["CHN-02"], {"path": "B"}, "t2")
+    assert med["mode"] == "AUTO" and rem.execute("mobile_operator", "PB-06", ["CHN-02"], {"path": "B"},
+                                                 med["auto_token"])["ok"]
+    assert any(e["kind"] == "approved" and e["actor"].startswith("autonomy:AUTO") for e in w.audit.entries())
+
+
+def test_autonomy_scope_and_expiry(w):
+    rem = Remediation(w)
+    rem.set_mode("AUTO", "Charan Velavan", "4321", minutes=10, sites=["CHN-03"])
+    assert rem.mode_for("PB-10", ["CHN-01"])[0] == "MANUAL"      # outside the granted sites
+    assert rem.mode_for("PB-10", ["CHN-03"])[0] == "AUTO"
+    at(w, 11)
+    assert rem.mode_for("PB-10", ["CHN-03"])[0] == "MANUAL"      # grant expired
+
+
+def test_auto_never_uses_a_foreign_gateway(w):
+    rem = Remediation(w)
+    clean_route(w, gateway="GW-XX")
+    rem.set_mode("AUTO", "Charan Velavan", "4321", minutes=60)
+    plan = rem.request_approval("mobile_operator", "PB-06", ["CHN-02"], {"path": "B"}, "t")
+    assert "auto_token" not in plan and not plan["clone_test"]["passed"]
+
+
+def test_auto_downgrades_on_m3_doubt(w):
+    rem = Remediation(w)
+    rem.set_mode("AUTO", "Charan Velavan", "4321", minutes=60)
+    w.alerts.append({"source": "M3", "site": "CHN-02", "label": "abstain"})
+    assert rem.mode_for("PB-06", ["CHN-02"])[0] == "ASSISTED"
+    assert "autonomy_downgraded" in kinds(w)
+
+
+def test_kill_switch_stops_execution(w):
+    rem = Remediation(w)
+    rem.set_mode("AUTO", "Charan Velavan", "4321", minutes=60)
+    plan = rem.request_approval("mobile_operator", "PB-10", ["CHN-01"], WARN, "t")
+    rem.kill("Charan Velavan", "4321", "operator saw something odd")
+    with pytest.raises(Refused, match="kill switch"):
+        rem.execute("mobile_operator", "PB-10", ["CHN-01"], WARN, plan["auto_token"])
+    with pytest.raises(Refused, match="kill switch"):
+        rem.approve(plan["hash"], "Charan Velavan", "4321")
+    rem.release_kill("Charan Velavan", "4321")
+    assert rem.mode_for("PB-10", ["CHN-01"])[0] == "MANUAL"      # grants must be set again
+    with pytest.raises(Refused):                                   # the revoked token stays dead
+        rem.execute("mobile_operator", "PB-10", ["CHN-01"], WARN, plan["auto_token"])
+
+
+def test_blast_radius_cap(w):
+    rem = Remediation(w)
+    rem.set_mode("AUTO", "Charan Velavan", "4321", minutes=60)
+    wide = rem.request_approval("mobile_operator", "PB-10", ["CHN-01", "CHN-02", "CHN-03"], WARN, "t")
+    assert "auto_token" not in wide and "autonomy_blocked" in kinds(w)
+    for i in range(6):                              # rate limit: 6 executions per 10 min, any mode
+        p = rem.request_approval("mobile_operator", "PB-10", ["CHN-01"], {"message": f"w{i}"}, "t")
+        rem.execute("mobile_operator", "PB-10", ["CHN-01"], {"message": f"w{i}"}, p["auto_token"])
+    p = rem.request_approval("mobile_operator", "PB-10", ["CHN-01"], {"message": "w7"}, "t")
+    with pytest.raises(Refused, match="rate limit"):
+        rem.execute("mobile_operator", "PB-10", ["CHN-01"], {"message": "w7"}, p["auto_token"])
+
+
 def test_agent_cannot_execute_another_owners_playbook(w):
     rem = Remediation(w)
     _, token = approve_plan(rem, "satellite_operator", "PB-01", ["noc-vendor-7"])
