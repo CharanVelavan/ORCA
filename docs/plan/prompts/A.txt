@@ -1,0 +1,60 @@
+You are planning agent A for ORCA-NTN, a team entry to the ITU AI for Good Sandbox Hackathon (UAE).
+Submission is 10 Nov 2026; today is 7 Nov 2026. You PLAN ONLY: do not create, edit or delete any file.
+Return your full result as your final message (Markdown). The coordinator will save it to
+the file named at the end of this prompt.
+
+## Read first (absolute paths)
+- /Users/CharanVelavan/Charan/SSN/UAE/orca-ntn/docs/HANDOFF_NEXT_CHAT.md  (jury rules, scope; these win)
+- /Users/CharanVelavan/Charan/SSN/UAE/orca-ntn/docs/BUILD_PLAN.md  (architecture, models, agents, playbooks;
+  note its "no 5-page limit" row is superseded: the report is strictly 5 pages incl. images)
+- /Users/CharanVelavan/Charan/SSN/UAE/orca-ntn/kb/  (SCHEMA.md, sources.yaml, india/records.yaml,
+  global/records.yaml, gaps/india.yaml, sources/*.pdf|html = official texts already downloaded)
+- /Users/CharanVelavan/Charan/SSN/UAE/orca-ntn/docs/plan/cg-datasets.md  (ITU CG Datasets catalogue, text)
+- /Users/CharanVelavan/Charan/SSN/UAE/charan/country-documents.md  (verified source list, India + UAE, with gaps)
+- /Users/CharanVelavan/Charan/SSN/UAE/charan/india-citation-check.md  (WARNING: its CERT-In Annexure I quotes
+  are wrong; trust the KB records and the PDFs in kb/sources instead. country-documents.md also misnumbers
+  CERT-In Directions: point of contact is (iii), 180-day logs is (iv).)
+
+## Jury rules (7 Nov, override everything older)
+1. Priority: report > GitHub code > video. 2. Report strictly 5 pages incl. images, ITU template.
+3. Short idea overview first, then the role of the AI and of EACH agent and model in detail.
+4. Must be useful as a pillar of everyday work, not only a crisis tool.
+5. POLICY EXPLAINABILITY IS CRITICAL: state explicitly what an AI agent can explain and what humans
+   must explain. 6. Any country may be chosen, as long as its policy is clear.
+7. Datasets from the ITU CG Datasets catalogue.
+
+Theme: cyber security in everyday life on NTN (satellite-backed networks) + self-healing from the
+effects of a cyber attack. NTN has little cyber policy; that gap is the point. Main city currently
+Chennai. Architecture: deterministic YAML rule engine (P node) gives six verdicts COMPLIANT /
+VIOLATION / AMBIGUITY / CONFLICT / POTENTIAL_GAP / INSUFFICIENT_EVIDENCE citing KB record ids;
+LLM agents (Qwen3.8-27B) assess, draft, explain, and execute approved playbooks via execute_playbook
+with a hashed, time-limited human approval. Models M1 Isolation Forest, M2 minute/daily forecaster,
+M3 8-class fault-vs-attack LightGBM + SHAP + abstain, M4 MILP capacity allocator.
+
+## Country status
+Planning agent B is deciding the country in parallel (keep India, or switch). Assume India primary
+with EU/UAE comparisons for now, and mark every item that depends on the country with [COUNTRY] so it
+can be swapped once B reports.
+
+## Your job: the role of each AI agent and ML model, in detail
+Cover the rule engine (P node), M1, M2 (minute + daily tier), M3, M4, and every LLM agent: the core six
+(mobile operator, satellite operator, power utility, national CERT, telecom regulator, Gap Analyst /
+policy adviser) plus the human incident commander, and the optional three (neighbouring CERT,
+data-protection authority, critical-service customer such as a hospital or payments switch).
+
+For EACH, give:
+1. Everyday job (jury rule 4: a normal Tuesday, not only a crisis): e.g. drift checks, patch-exposure
+   tracking, weekly risk forecast, compliance self-check, KB update review.
+2. Inputs (MQTT topics, KB layers, model outputs) and outputs (alert, verdict, draft notice, plan).
+3. Tools it may call (query_kb, run_rule_engine, select_playbook, draft_notice, execute_playbook,
+   others you justify) and the playbooks PB-01..PB-09 it owns.
+4. Decisions it MAY take alone, decisions it MAY NOT take, and the human it reports to.
+5. Its part in self-healing after an attack (Predict > Heal > Coordinate > Contain > Fix > Report gaps).
+6. What it can explain about its own output (one line; agent B owns the full explainability split).
+Also: one sequence of a single incident (Chennai, KA-SAT-style management-plane wipe + jamming-forced
+failover) naming which agent/model acts at each step, and an everyday-day timeline (no incident).
+Flag any agent that adds little and could be cut or merged to save build time (3 days left).
+Finish with a compact report table (one row per agent/model, <= 16 rows, fits ~half a page).
+
+Return the full result as your final message; the coordinator saves it to
+orca-ntn/docs/plan/A-agent-roles.md. Do not edit files.

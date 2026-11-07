@@ -1,0 +1,55 @@
+You are planning agent C for ORCA-NTN, a team entry to the ITU AI for Good Sandbox Hackathon (UAE).
+Submission is 10 Nov 2026; today is 7 Nov 2026. You PLAN ONLY: do not create, edit or delete any file.
+Return your full result as your final message (Markdown). The coordinator will save it to
+the file named at the end of this prompt.
+
+## Read first (absolute paths)
+- /Users/CharanVelavan/Charan/SSN/UAE/orca-ntn/docs/HANDOFF_NEXT_CHAT.md  (jury rules, scope; these win)
+- /Users/CharanVelavan/Charan/SSN/UAE/orca-ntn/docs/BUILD_PLAN.md  (architecture, models, agents, playbooks;
+  note its "no 5-page limit" row is superseded: the report is strictly 5 pages incl. images)
+- /Users/CharanVelavan/Charan/SSN/UAE/orca-ntn/kb/  (SCHEMA.md, sources.yaml, india/records.yaml,
+  global/records.yaml, gaps/india.yaml, sources/*.pdf|html = official texts already downloaded)
+- /Users/CharanVelavan/Charan/SSN/UAE/orca-ntn/docs/plan/cg-datasets.md  (ITU CG Datasets catalogue, text)
+- /Users/CharanVelavan/Charan/SSN/UAE/charan/country-documents.md  (verified source list, India + UAE, with gaps)
+- /Users/CharanVelavan/Charan/SSN/UAE/charan/india-citation-check.md  (WARNING: its CERT-In Annexure I quotes
+  are wrong; trust the KB records and the PDFs in kb/sources instead. country-documents.md also misnumbers
+  CERT-In Directions: point of contact is (iii), 180-day logs is (iv).)
+
+## Jury rules (7 Nov, override everything older)
+1. Priority: report > GitHub code > video. 2. Report strictly 5 pages incl. images, ITU template.
+3. Short idea overview first, then the role of the AI and of EACH agent and model in detail.
+4. Must be useful as a pillar of everyday work, not only a crisis tool.
+5. POLICY EXPLAINABILITY IS CRITICAL: state explicitly what an AI agent can explain and what humans
+   must explain. 6. Any country may be chosen, as long as its policy is clear.
+7. Datasets from the ITU CG Datasets catalogue.
+
+Theme: cyber security in everyday life on NTN (satellite-backed networks) + self-healing from the
+effects of a cyber attack. NTN has little cyber policy; that gap is the point. Main city currently
+Chennai. Architecture: deterministic YAML rule engine (P node) gives six verdicts COMPLIANT /
+VIOLATION / AMBIGUITY / CONFLICT / POTENTIAL_GAP / INSUFFICIENT_EVIDENCE citing KB record ids;
+LLM agents (Qwen3.8-27B) assess, draft, explain, and execute approved playbooks via execute_playbook
+with a hashed, time-limited human approval. Models M1 Isolation Forest, M2 minute/daily forecaster,
+M3 8-class fault-vs-attack LightGBM + SHAP + abstain, M4 MILP capacity allocator.
+
+## Country status
+Planning agent B is deciding the country in parallel (keep India, or switch). Assume India primary
+with EU/UAE comparisons for now, and mark every item that depends on the country with [COUNTRY] so it
+can be swapped once B reports.
+
+## Your job: datasets + build feasibility
+1. From docs/plan/cg-datasets.md (121 datasets) pick the best datasets for this theme. Candidates to
+   assess at least: #13 SDN intrusion and vulnerability, #49 network log anomaly, #33/#50 5G core
+   failure/RCA, #18 KDDI failure classification, #52/#62 Turkcell RLF (already downloaded to data/raw/,
+   profiled in BUILD_PLAN.md 4.2), #8 site power, #11 RAN KPIs, #75 DFS secure authentication, #74 RAG
+   for public services, #6 TeleQnA. Add others from the catalogue if better.
+2. For each pick: catalogue number and name, link, licence, size, format, whether it is actually
+   accessible now (use web search; try the URL; say VERIFIED or UNVERIFIED), and which model/agent it
+   feeds (M1 / M2 / M3 / M4 / RAG / evaluation). Say where synthetic data (data/DATA_CARD.md) is still
+   needed and why.
+3. Re-plan the GitHub build for 3 days (8, 9, 10 Nov; submit 10 Nov) under priority report > code >
+   video. Inspect the repo (orca/, tools/, kb/, tests/, data/) to see what exists. Give a day-by-day
+   plan with hour estimates for a 3-person team, a minimum viable demo that must work, and a cut list
+   ordered by what to drop first. Keep: rule engine, audit log, execute_playbook, at least M1 + M3,
+   one end-to-end scenario.
+4. Risks (data access, compute, Qwen3.8 GCP endpoint not yet available) with fallbacks.
+Output Markdown with a datasets table first, then the build plan.

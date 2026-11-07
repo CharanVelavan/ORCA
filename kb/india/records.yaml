@@ -10,8 +10,9 @@
   authority: CERT-In
   binding_status: binding
   issued: 2022-04-28
-  in_force_from: null
+  in_force_from: 2022-06-27
   topic: incident_reporting
+  topics: [incident_reporting]
   obligation:
     actor: service_provider_intermediary_data_centre_body_corporate_government
     action: report_cyber_incident
@@ -24,7 +25,7 @@
   source: in-certin-dir-2022
   verified: true
   verified_by: charan/india-citation-check.md (5 Nov 2026)
-  notes: The effective date (in_force_from) has not been checked.
+  notes: In force from 2022-06-27 ("effective after 60 days" from 28 Apr 2022, PDF p. 3).
 
 - id: IN-CERTIN-DIR-2022-iii
   jurisdiction: IN
@@ -33,8 +34,9 @@
   authority: CERT-In
   binding_status: binding
   issued: 2022-04-28
-  in_force_from: null
+  in_force_from: 2022-06-27
   topic: point_of_contact
+  topics: [point_of_contact]
   obligation:
     actor: service_provider_intermediary_data_centre_body_corporate_government
     action: designate_point_of_contact
@@ -56,8 +58,9 @@
   authority: CERT-In
   binding_status: binding
   issued: 2022-04-28
-  in_force_from: null
+  in_force_from: 2022-06-27
   topic: log_retention
+  topics: [log_retention]
   obligation:
     actor: service_provider_intermediary_data_centre_body_corporate_government
     action: retain_ict_logs_in_india
@@ -79,8 +82,9 @@
   authority: CERT-In
   binding_status: binding
   issued: 2022-04-28
-  in_force_from: null
+  in_force_from: 2022-06-27
   topic: incident_reporting
+  topics: [incident_reporting]
   quote: "Compromise of critical systems/information"
   pinpoint: Annexure I, item ii, PDF p. 4
   summary: Compromise of critical systems is reportable. This covers wiping or commanding terminals through the operator's management network.
@@ -96,8 +100,9 @@
   authority: CERT-In
   binding_status: binding
   issued: 2022-04-28
-  in_force_from: null
+  in_force_from: 2022-06-27
   topic: incident_reporting
+  topics: [incident_reporting]
   quote: "Unauthorised access of IT systems/data"
   pinpoint: Annexure I, item iii, PDF p. 4
   summary: Unauthorised access is reportable. This covers the login through the misconfigured VPN.
@@ -113,8 +118,9 @@
   authority: CERT-In
   binding_status: binding
   issued: 2022-04-28
-  in_force_from: null
+  in_force_from: 2022-06-27
   topic: incident_reporting
+  topics: [incident_reporting]
   quote: "Attack on servers such as Database, Mail and DNS and network devices such as Routers"
   pinpoint: Annexure I, item vi, PDF p. 4
   summary: Attacks on network devices such as routers are reportable.
@@ -130,8 +136,9 @@
   authority: CERT-In
   binding_status: binding
   issued: 2022-04-28
-  in_force_from: null
+  in_force_from: 2022-06-27
   topic: incident_reporting
+  topics: [incident_reporting]
   quote: "Attacks on Critical infrastructure, SCADA and operational technology systems and Wireless networks"
   pinpoint: Annexure I, item ix, PDF p. 4
   summary: Attacks on critical infrastructure, operational technology and wireless networks are reportable. This covers jamming-forced failover and utility OT.
@@ -147,8 +154,9 @@
   authority: CERT-In
   binding_status: binding
   issued: 2022-04-28
-  in_force_from: null
+  in_force_from: 2022-06-27
   topic: incident_reporting
+  topics: [incident_reporting]
   quote: "Data Breach"
   pinpoint: Annexure I, item xi, PDF p. 4
   summary: Data breaches are reportable.
@@ -164,8 +172,9 @@
   authority: CERT-In
   binding_status: binding
   issued: 2022-04-28
-  in_force_from: null
+  in_force_from: 2022-06-27
   topic: incident_reporting
+  topics: [incident_reporting]
   quote: "Data Leak"
   pinpoint: Annexure I, item xii, PDF p. 4
   summary: Data leaks are reportable.
@@ -184,6 +193,7 @@
   issued: 2024-11-21
   in_force_from: 2024-11-21
   topic: incident_reporting
+  topics: [incident_reporting, telecom_cyber_security]
   obligation:
     actor: telecommunication_entity
     action: report_security_incident
@@ -196,7 +206,7 @@
   source: in-tcsr-2024
   verified: true
   verified_by: charan/india-citation-check.md (5 Nov 2026)
-  notes: Counted from occurrence, not noticing, unlike CERT-In Direction (ii). A 2025 amendment exists and has not been checked.
+  notes: Counted from occurrence, not noticing, unlike CERT-In Direction (ii). The 2025 amendment (G.S.R. 771(E), 22 Oct 2025) inserts Rule 7A on number validation and does not change Rule 7 (checked 7 Nov 2026).
 
 - id: IN-CTIR-2024-R7-1-j
   jurisdiction: IN
@@ -207,6 +217,7 @@
   issued: 2024-11-22
   in_force_from: 2024-11-22
   topic: critical_infrastructure
+  topics: [critical_infrastructure, incident_reporting]
   obligation:
     actor: critical_telecommunication_infrastructure_owner
     action: intimate_incident
@@ -231,6 +242,7 @@
   issued: 2026-02-26
   in_force_from: null
   topic: space_cyber
+  topics: [space_cyber, incident_reporting]
   obligation:
     actor: satcom_operator_or_service_provider
     action: report_cyber_incident
@@ -245,6 +257,24 @@
   verified_by: charan/india-citation-check.md (5 Nov 2026)
   notes: The PDF does not state its legal status, so don't call it binding or non-binding.
 
+- id: IN-SPACEFW-2026-ANXB-IV
+  jurisdiction: IN
+  instrument: CERT-In / SIA-India Cyber Security Framework and Guidelines for Space including Satellite Communication
+  clause: Annexure B (Self-Assessment Maturity Checklist), IV Respond, SATCOM-specific focus
+  authority: CERT-In with SIA-India
+  binding_status: not_stated
+  issued: 2026-02-26
+  in_force_from: null
+  topic: space_cyber
+  topics: [space_cyber, downstream_warning]
+  quote: "Stakeholders: Establish procedures for notifying critical infrastructure partners, regulatory bodies, and customers, especially when service disruption occurs."
+  pinpoint: Annexure B, section IV (Respond), PDF p. 48
+  summary: A self-assessment checklist item asks SatCom operators to have procedures for notifying critical-infrastructure partners, regulators and customers. No deadline, content or recipient list is set.
+  source: in-space-fw-2026
+  verified: true
+  verified_by: PDF opened 7 Nov 2026 (kb/sources, sha256 in sources.yaml)
+  notes: Nearest provision for GAP-IN-02. Found by the full-text search on 7 Nov 2026, so GAP-IN-02 was narrowed. The line sits in a two-column table; its row (4.2 Communications) is read from layout and needs a human check.
+
 # --- Data protection --------------------------------------------------------------------
 - id: IN-DPDP-ACT-2023-8-6
   jurisdiction: IN
@@ -253,21 +283,22 @@
   authority: Parliament of India / MeitY
   binding_status: binding_not_in_force
   issued: 2023-08-11
-  in_force_from: null
+  in_force_from: 2027-05-13
   topic: personal_data_breach
+  topics: [personal_data_breach]
   obligation:
     actor: data_fiduciary
     action: intimate_personal_data_breach
     recipient: Data Protection Board and affected Data Principals
     deadline: null
     trigger: awareness
-  quote: null
-  pinpoint: Section 8(6)
+  quote: "In the event of a personal data breach, the Data Fiduciary shall give the Board and each affected Data Principal, intimation of such breach in such form and manner as may be prescribed."
+  pinpoint: Section 8(6), PDF p. 11
   summary: A Data Fiduciary intimates the Board and each affected Data Principal of a personal data breach, in the prescribed form and manner.
   source: in-dpdp-act-2023
-  verified: false
-  verified_by: null
-  notes: Commences in phases, about May 2027. The enactment date (11 Aug 2023) is from memory and needs checking.
+  verified: true
+  verified_by: PDF opened 7 Nov 2026 (kb/sources, sha256 in sources.yaml)
+  notes: Enacted 11 Aug 2023 (checked in the PDF). Section 8 commences with DPDP Rules 2025 rule 1(4), about 13 May 2027; until then not in force.
 
 - id: IN-DPDP-RULES-2025-R7
   jurisdiction: IN
@@ -278,21 +309,40 @@
   issued: 2025-11-13
   in_force_from: 2027-05-13
   topic: personal_data_breach
+  topics: [personal_data_breach]
   obligation:
     actor: data_fiduciary
     action: detailed_breach_intimation_to_board
     recipient: Data Protection Board
     deadline: PT72H
     trigger: awareness
-  quote: null
-  pinpoint: Rule 7
+  quote: "within seventy-two hours of becoming aware of the breach, or within such longer period as the Board may allow on a request made in writing in this behalf"
+  pinpoint: Rule 7(2)(b), PDF p. 26
   summary: Initial intimation to the Board without delay; detailed intimation within 72 hours (or longer if the Board allows); affected Data Principals informed without delay.
   source: in-dpdp-rules-2025
-  verified: false
-  verified_by: null
-  notes: Commences 18 months after Gazette publication (13 Nov 2025), so about 13 May 2027. No binding breach clock applies today.
+  verified: true
+  verified_by: PDF opened 7 Nov 2026 (kb/sources, sha256 in sources.yaml)
+  notes: Rule 1(4) says rules 3, 5 to 16, 22 and 23 "shall come into force eighteen months after the date of publication". Commences 18 months after Gazette publication (13 Nov 2025), so about 13 May 2027. No binding breach clock applies today.
 
-# --- Acts (summaries only) --------------------------------------------------------------
+# --- Acts --------------------------------------------------------------------------------
+- id: IN-TELACT-2023-2-s
+  jurisdiction: IN
+  instrument: Telecommunications Act, 2023
+  clause: Section 2(s)
+  authority: Parliament of India / DoT
+  binding_status: binding
+  issued: 2023-12-24
+  in_force_from: null
+  topic: ntn_coverage
+  topics: [ntn_coverage]
+  quote: "\"telecommunication network\" means a system or series of systems of telecommunication equipment or infrastructure, including terrestrial or satellite networks or submarine networks"
+  pinpoint: Section 2(s), PDF p. 3
+  summary: Satellite networks are telecommunication networks under the Act, so telecom duties reach NTN operators. Negative control for "is NTN covered at all?".
+  source: in-telact-2023
+  verified: true
+  verified_by: PDF opened 7 Nov 2026 (kb/sources, sha256 in sources.yaml)
+  notes: Commences in phases (s.1(3)); the commencement notification for s.2 is not in our sources. Treated as in force; a human should confirm.
+
 - id: IN-ITACT-2000-70B
   jurisdiction: IN
   instrument: Information Technology Act, 2000
@@ -302,30 +352,32 @@
   issued: 2000-06-09
   in_force_from: null
   topic: cert_powers
-  quote: null
-  pinpoint: Section 70B(4), 70B(6)
+  topics: [cert_powers]
+  quote: "may call for information and give direction to the service providers, intermediaries, data centres, body corporate and any other person."
+  pinpoint: Section 70B(6), PDF p. 30
   summary: 70B(4) sets CERT-In's functions, including incident response and coordination; 70B(6) lets it call for information and issue directions. The Act itself sets no reporting deadline.
   source: in-itact-2000
-  verified: false
-  verified_by: null
-  notes: The subjects were confirmed in the citation check; the wording was not quoted. The 2000 date is from memory and needs checking.
+  verified: true
+  verified_by: PDF opened 7 Nov 2026 (kb/sources, sha256 in sources.yaml)
+  notes: Enacted 9 Jun 2000 (checked). 70B(4) lists CERT-In's functions, incl. "coordination of cyber incidents response activities". 70A/70B were inserted by the 2008 amendment; in_force_from not recorded.
 
 - id: IN-TELACT-2023-20
   jurisdiction: IN
   instrument: Telecommunications Act, 2023
-  clause: Section 20
+  clause: Section 20(1)(b)
   authority: Parliament of India / DoT
   binding_status: binding
   issued: 2023-12-24
   in_force_from: null
   topic: emergency_powers
-  quote: null
-  pinpoint: Section 20
-  summary: Central Government powers on public-emergency or public-safety grounds, including temporary possession and directions. It contains no priority-routing order.
+  topics: [emergency_powers]
+  quote: "provide for appropriate mechanism to ensure that messages of a user or group of users authorised for response and recovery during public emergency are routed on priority."
+  pinpoint: Section 20(1)(b), PDF p. 9
+  summary: In a public emergency, the Central or a State Government may, by notification, route the messages of authorised responders on priority. It is a power used case by case, not a standing order across service classes (112 callers, hospitals, water, payments).
   source: in-telact-2023
-  verified: false
-  verified_by: null
-  notes: Commences in phases. The 24 Dec 2023 date is from memory and needs checking.
+  verified: true
+  verified_by: PDF opened 7 Nov 2026 (kb/sources, sha256 in sources.yaml)
+  notes: Corrects the earlier summary ("contains no priority-routing order"). Nearest provision for GAP-IN-03. Commences in phases (s.1(3)); commencement notification not in our sources.
 
 - id: IN-TELACT-2023-22
   jurisdiction: IN
@@ -336,13 +388,14 @@
   issued: 2023-12-24
   in_force_from: null
   topic: telecom_cyber_security
+  topics: [telecom_cyber_security, critical_infrastructure]
   quote: null
   pinpoint: Section 22
   summary: Telecom cyber-security measures and the power to make rules for critical telecommunication infrastructure. This is the parent provision of both 2024 rule sets.
   source: in-telact-2023
   verified: false
   verified_by: null
-  notes: The 24 Dec 2023 date is from memory and needs checking.
+  notes: Enacted 24 Dec 2023 (checked in the PDF). Commences in phases (s.1(3)); commencement notification not in our sources. Quote not yet extracted.
 
 - id: IN-TELACT-2023-24
   jurisdiction: IN
@@ -353,10 +406,11 @@
   issued: 2023-12-24
   in_force_from: null
   topic: standards
+  topics: [standards]
   quote: null
   pinpoint: Section 24
   summary: Standards, conformity assessment and certification for telecom equipment, networks and services. It contains no priority-routing order.
   source: in-telact-2023
   verified: false
   verified_by: null
-  notes: The 24 Dec 2023 date is from memory and needs checking.
+  notes: Enacted 24 Dec 2023 (checked in the PDF). Commences in phases (s.1(3)); commencement notification not in our sources. Quote not yet extracted.

@@ -1,6 +1,7 @@
 # Official sources only. `sha256` is filled in by `python tools/fetch_sources.py`,
 # which downloads each file into kb/sources/ (not committed) and records its hash.
-# All URLs come from charan/country-documents.md and charan/india-citation-check.md.
+# URLs come from charan/country-documents.md and charan/india-citation-check.md; India Code
+# and DoT links were updated on 7 Nov 2026 after both sites moved (old links return HTML).
 
 - id: in-certin-dir-2022
   title: Directions under sub-section (6) of section 70B of the Information Technology Act, 2000
@@ -17,8 +18,8 @@
 - id: in-itact-2000
   title: The Information Technology Act, 2000 (as amended)
   authority: Parliament of India / MeitY
-  url: https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf
-  sha256: null
+  url: https://indiacode.gov.in/server/api/core/bitstreams/770a7d02-48f2-4274-bab9-10d0f48ee264/content
+  sha256: 003b3218fe399b293c73f6aef9ca52e5c1d080388c43fb0523572c1dc5f3d529
 
 - id: in-telact-2023
   title: The Telecommunications Act, 2023
@@ -30,7 +31,7 @@
   title: Telecommunications (Telecom Cyber Security) Rules, 2024
   authority: Department of Telecommunications
   url: https://www.dot.gov.in/static/uploads/2025/07/7922e64b2a1ea70363e1b66970df52f5.pdf
-  sha256: null
+  sha256: f78b746dbf461b7254c8e0367b4f4aa5b3c2fcb07edd832b8dc93caaed54dacc
 
 - id: in-ctir-2024
   title: Telecommunications (Critical Telecommunication Infrastructure) Rules, 2024
@@ -47,14 +48,14 @@
 - id: in-dpdp-act-2023
   title: The Digital Personal Data Protection Act, 2023
   authority: Parliament of India / MeitY
-  url: https://www.meity.gov.in/digital-personal-data-protection-act-2023-4
-  sha256: null
+  url: https://indiacode.gov.in/server/api/core/bitstreams/52f9ecbb-b927-4ba6-ae6f-ca2fac50d4df/content
+  sha256: dda561b9fd6420e1b99157b60f92bb0470a6154c6d559bbee3482ac255ac2c24
 
 - id: in-dpdp-rules-2025
   title: Digital Personal Data Protection Rules, 2025 (Gazette text)
   authority: MeitY
   url: https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf
-  sha256: null
+  sha256: eabc7d05e013144615d78ddc0e8b9c9aac1920e814f4fad38ce6560951f5aa08
 
 - id: eu-nis2-2022
   title: Directive (EU) 2022/2555 (NIS2)
@@ -73,3 +74,21 @@
   authority: TDRA (UAE)
   url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/Instruction-Interconnection-19Feb2006-EN-pdf.ashx
   sha256: 2720bedb598ab88a685c83269de91b94d68b576a6d510c78bd2d3cc99b40660e
+
+- id: in-tcsr-2025-amendment
+  title: Telecommunications (Telecom Cyber Security) Amendment Rules, 2025 (G.S.R. 771(E), 22 Oct 2025)
+  authority: Department of Telecommunications
+  url: https://eservices.dot.gov.in/sites/default/files/circular-notifications/telecom-cyber-security-amendment-rules-2025_0.pdf
+  sha256: fe249008ba43a70bd50da278f0150b61e3a42161f21899882afca5057d895363
+
+- id: in-dpdp-rules-2025-corrigendum
+  title: Corrigendum to the Digital Personal Data Protection Rules, 2025 (G.S.R. 892(E), 11 Dec 2025)
+  authority: MeitY
+  url: https://indiacode.gov.in/server/api/core/bitstreams/fb67b17e-e31c-4407-83ba-59f856dabc69/content
+  sha256: 0de59b2277e0514c0b6ca11181e1e4dd21f3186c93b0592fb7111f72f4373d92
+
+- id: ae-tdra-iar-v1-1
+  title: UAE Information Assurance Regulation, Version 1.1
+  authority: TDRA (UAE)
+  url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/UAE-Information-Assurance-Regulation-v1-1-pdf.ashx
+  sha256: 636990f28c97d7f7a2d6816cf1130223472e82d9ccda523a622aa64e0d8f5f41

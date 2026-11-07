@@ -21,17 +21,25 @@ TOPICS = {
     "incident_reporting", "point_of_contact", "log_retention", "cert_powers",
     "emergency_powers", "telecom_cyber_security", "critical_infrastructure", "standards",
     "personal_data_breach", "cross_border_transfer", "space_cyber", "emergency_priority",
+    # added 7 Nov 2026 for topic-coverage gap detection
+    "ntn_coverage", "downstream_warning", "capacity_priority", "failover_path_security",
+    "backup_power", "joint_command",
 }
+GAP_KINDS = {"coverage", "ambiguity", "standards"}
+GAP_STATUS = {"candidate", "confirmed"}
 JURISDICTIONS = {"IN", "EU", "US", "AE", "INTL"}
 DURATION = re.compile(r"^P(\d+D)?(T(\d+H)?(\d+M)?)?$")
 RECORD_FIELDS = {
     "id", "jurisdiction", "instrument", "clause", "authority", "binding_status", "issued",
-    "in_force_from", "topic", "obligation", "quote", "pinpoint", "summary", "source",
+    "in_force_from", "topic", "topics", "obligation", "quote", "pinpoint", "summary", "source",
     "verified", "verified_by", "notes",
 }
 REQUIRED = {"id", "jurisdiction", "instrument", "clause", "authority", "binding_status",
-            "topic", "summary", "source", "verified"}
-GAP_REQUIRED = {"id", "jurisdiction", "title", "finding", "evidence", "affects", "verified"}
+            "topic", "topics", "summary", "source", "verified"}
+GAP_REQUIRED = {"id", "jurisdiction", "kind", "topic", "status", "title", "finding", "evidence",
+                "affects", "search", "verified"}
+GAP_FIELDS = GAP_REQUIRED | {"analysis", "interim_action", "recommendation", "verified_by", "notes"}
+SEARCH_REQUIRED = {"date", "sources_checked", "terms", "nearest_provision", "why_not_covered"}
 
 
 @dataclass
@@ -39,6 +47,7 @@ class KB:
     records: dict[str, dict] = field(default_factory=dict)
     gaps: dict[str, dict] = field(default_factory=dict)
     sources: dict[str, dict] = field(default_factory=dict)
+    as_of: dt.date | None = None          # date the KB content was last checked (kb/meta.yaml)
 
     def get(self, rid: str) -> dict:
         return self.records.get(rid) or self.gaps[rid]
@@ -46,14 +55,37 @@ class KB:
     def by_jurisdiction(self, *codes: str) -> list[dict]:
         return [r for r in self.records.values() if r["jurisdiction"] in codes]
 
-    def in_force(self, rid: str, on: dt.date) -> bool:
+    def in_force_status(self, rid: str, on: dt.date) -> str:
+        """in_force | not_yet | status_not_stated | not_binding (see docs/plan/build-contract.md).
+
+        A binding record with in_force_from null counts as in force; validate() flags those
+        so the date gets filled in.
+        """
         r = self.records[rid]
-        if r["binding_status"] not in {"binding", "binding_not_in_force"}:
-            return False
+        b = r["binding_status"]
+        if b == "not_stated":
+            return "status_not_stated"
+        if b in {"non_binding", "proposal"}:
+            return "not_binding"
         start = r.get("in_force_from")
-        if start is None:
-            return r["binding_status"] == "binding"
-        return on >= start
+        if b == "binding_not_in_force":
+            return "in_force" if start is not None and on >= start else "not_yet"
+        return "in_force" if start is None or on >= start else "not_yet"
+
+    def in_force(self, rid: str, on: dt.date) -> bool:
+        return self.in_force_status(rid, on) == "in_force"
+
+    def covering(self, topic: str, jurisdiction: str, on: dt.date) -> list[dict]:
+        """Records of one jurisdiction whose `topics` include `topic`, each copied with `_status`."""
+        out = []
+        for rid, r in self.records.items():
+            if r["jurisdiction"] == jurisdiction and topic in r.get("topics", []):
+                out.append({**r, "_status": self.in_force_status(rid, on)})
+        return out
+
+    def gaps_for(self, topic: str, jurisdiction: str) -> list[dict]:
+        return [g for g in self.gaps.values()
+                if g.get("topic") == topic and g["jurisdiction"] in (jurisdiction, "INTL")]
 
 
 def _load_list(path: Path) -> list[dict]:
@@ -65,6 +97,9 @@ def _load_list(path: Path) -> list[dict]:
 
 def load(kb_dir: Path = KB_DIR) -> KB:
     kb = KB()
+    meta = kb_dir / "meta.yaml"
+    if meta.exists():
+        kb.as_of = (yaml.safe_load(meta.read_text()) or {}).get("as_of")
     for s in _load_list(kb_dir / "sources.yaml"):
         kb.sources[s["id"]] = s
     for p in sorted(kb_dir.glob("gaps/*.yaml")):
@@ -99,6 +134,12 @@ def validate(kb: KB) -> list[str]:
             errs.append(f"{where}: bad binding_status {r.get('binding_status')}")
         if r.get("topic") not in TOPICS:
             errs.append(f"{where}: bad topic {r.get('topic')}")
+        tops = r.get("topics") or []
+        if not tops or r.get("topic") not in tops:
+            errs.append(f"{where}: topics must be a non-empty list that includes topic")
+        for t in tops:
+            if t not in TOPICS:
+                errs.append(f"{where}: bad topics entry {t}")
         if r.get("source") not in kb.sources:
             errs.append(f"{where}: source {r.get('source')} not in sources.yaml")
         for k in ("issued", "in_force_from"):
@@ -123,6 +164,26 @@ def validate(kb: KB) -> list[str]:
         missing = GAP_REQUIRED - g.keys()
         if missing:
             errs.append(f"{where}: missing {sorted(missing)}")
+        extra = set(g) - GAP_FIELDS - {"_file"}
+        if extra:
+            errs.append(f"{where}: unknown fields {sorted(extra)}")
+        if g.get("kind") not in GAP_KINDS:
+            errs.append(f"{where}: bad kind {g.get('kind')}")
+        if g.get("topic") not in TOPICS:
+            errs.append(f"{where}: bad topic {g.get('topic')}")
+        if g.get("status") not in GAP_STATUS:
+            errs.append(f"{where}: bad status {g.get('status')}")
+        if g.get("verified") and (g.get("status") != "confirmed" or not g.get("verified_by")):
+            errs.append(f"{where}: verified gap needs status confirmed and verified_by (a human)")
+        if g.get("status") == "confirmed" and not g.get("verified"):
+            errs.append(f"{where}: confirmed gap must be verified by a human")
+        srch = g.get("search") or {}
+        miss = SEARCH_REQUIRED - srch.keys()
+        if miss:
+            errs.append(f"{where}: search record missing {sorted(miss)}")
+        for sid in srch.get("sources_checked", []):
+            if sid not in kb.sources:
+                errs.append(f"{where}: sources_checked {sid} not in sources.yaml")
         for ev in g.get("evidence", []):
             if ev not in kb.records:
                 errs.append(f"{where}: evidence {ev} is not a record id")

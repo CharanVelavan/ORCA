@@ -14,6 +14,14 @@ on architecture, models and data still apply unless changed here). Submission: *
 6. Any country may be chosen, as long as its policy is clear.
 7. Datasets: from the ITU **CG Datasets** catalogue (Feb 2025, 121 datasets):
    `~/Downloads/2.CG Datasets Feb 13 2025 4.docx`.
+8. **Code delivery (judges' answer to the user, 7 Nov):** any repo format is fine and a dashboard
+   (or anything of our choice) is allowed, but **clear instructions on how to run the entire code are
+   mandatory**. We may **host it on Google Cloud or AWS** and link it from the repo so the jury needn't
+   set anything up, and/or send the whole code base with clear setup instructions for their laptops.
+   **Raspberry Pi 5 and STM32MP135F-DK** may be used if needed.
+9. **User priority (7 Nov): the biggest win is finding policy gaps, analysing them and taking the
+   required actions.** The gap pipeline (detect → prove with evidence and search record → analyse →
+   interim playbook + recommendation to the named regulator) is the headline of the report and demo.
 
 ## 2. Scope (decided by the user, 7 Nov)
 - Theme: **cyber security in everyday life on NTN (satellite-backed networks) + self-healing from
@@ -33,7 +41,7 @@ on architecture, models and data still apply unless changed here). Submission: *
   ownership, clone test, rule verdict checks). Playbooks PB-01..PB-09.
 - KB = structured records (rule engine) + RAG (ChromaDB) over the same official sources.
 
-## 4. Planning agents to run (none started yet)
+## 4. Planning agents (all four DONE 7 Nov; merged draft: `docs/BUILD_PLAN_v2.md`, awaiting user approval)
 Order: **run agent B first** (it decides the country), then A, C and D in parallel with B's result.
 All four plan only and must not edit files. Give each: the jury rules above, this file,
 `docs/BUILD_PLAN.md`, `kb/` and the CG dataset list.
@@ -55,7 +63,7 @@ After the agents: merge into `docs/BUILD_PLAN_v2.md`, give the user a short deci
 **build nothing until the user approves v2**. Ask before editing any .docx/.pdf.
 
 ## 5. State of the work
-- Repo `orca-ntn/` (git initialised, **no commit yet**): KB v1 (23 records, 17 verified quotes,
+- Repo `orca-ntn/` (one commit 9e1ac47; `docs/plan/` and `docs/BUILD_PLAN_v2.md` untracked): KB v1 (23 records, 17 verified quotes,
   7 gaps), validator and tests pass, `docs/BUILD_PLAN.md`, `data/DATA_CARD.md` (v0),
   `data/research/01–03` + `VERIFIED.md`, `data/itu_p838_3_coefficients.csv`, Turkcell data in
   `data/raw/` (gitignored).

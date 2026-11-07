@@ -11,6 +11,7 @@
   issued: 2022-12-14
   in_force_from: null
   topic: incident_reporting
+  topics: [incident_reporting]
   obligation:
     actor: essential_or_important_entity
     action: early_warning
@@ -34,6 +35,7 @@
   issued: 2022-12-14
   in_force_from: null
   topic: incident_reporting
+  topics: [incident_reporting]
   obligation:
     actor: essential_or_important_entity
     action: incident_notification
@@ -57,6 +59,7 @@
   issued: 2022-12-14
   in_force_from: null
   topic: incident_reporting
+  topics: [incident_reporting, downstream_warning]
   obligation:
     actor: essential_or_important_entity
     action: inform_affected_service_recipients
@@ -80,6 +83,7 @@
   issued: 2016-04-27
   in_force_from: 2018-05-25
   topic: personal_data_breach
+  topics: [personal_data_breach]
   obligation:
     actor: controller
     action: notify_personal_data_breach
@@ -103,6 +107,7 @@
   issued: 2006-02-19
   in_force_from: null
   topic: emergency_priority
+  topics: [emergency_priority]
   quote: "All emergency calls must be treated with the highest priority within the Points of Interconnection."
   pinpoint: PDF p. 21
   summary: Emergency calls get the highest priority at points of interconnection; dedicated capacity should be provided if possible. It does not rank other services for scarce backup capacity.

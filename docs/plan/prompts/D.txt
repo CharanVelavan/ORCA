@@ -1,0 +1,72 @@
+You are planning agent D for ORCA-NTN, a team entry to the ITU AI for Good Sandbox Hackathon (UAE).
+Submission is 10 Nov 2026; today is 7 Nov 2026. You PLAN ONLY: do not create, edit or delete any file.
+Return your full result as your final message (Markdown). The coordinator will save it to
+the file named at the end of this prompt.
+
+## Read first (absolute paths)
+- /Users/CharanVelavan/Charan/SSN/UAE/orca-ntn/docs/HANDOFF_NEXT_CHAT.md  (jury rules, scope; these win)
+- /Users/CharanVelavan/Charan/SSN/UAE/orca-ntn/docs/BUILD_PLAN.md  (architecture, models, agents, playbooks;
+  note its "no 5-page limit" row is superseded: the report is strictly 5 pages incl. images)
+- /Users/CharanVelavan/Charan/SSN/UAE/orca-ntn/kb/  (SCHEMA.md, sources.yaml, india/records.yaml,
+  global/records.yaml, gaps/india.yaml, sources/*.pdf|html = official texts already downloaded)
+- /Users/CharanVelavan/Charan/SSN/UAE/orca-ntn/docs/plan/cg-datasets.md  (ITU CG Datasets catalogue, text)
+- /Users/CharanVelavan/Charan/SSN/UAE/charan/country-documents.md  (verified source list, India + UAE, with gaps)
+- /Users/CharanVelavan/Charan/SSN/UAE/charan/india-citation-check.md  (WARNING: its CERT-In Annexure I quotes
+  are wrong; trust the KB records and the PDFs in kb/sources instead. country-documents.md also misnumbers
+  CERT-In Directions: point of contact is (iii), 180-day logs is (iv).)
+
+## Jury rules (7 Nov, override everything older)
+1. Priority: report > GitHub code > video. 2. Report strictly 5 pages incl. images, ITU template.
+3. Short idea overview first, then the role of the AI and of EACH agent and model in detail.
+4. Must be useful as a pillar of everyday work, not only a crisis tool.
+5. POLICY EXPLAINABILITY IS CRITICAL: state explicitly what an AI agent can explain and what humans
+   must explain. 6. Any country may be chosen, as long as its policy is clear.
+7. Datasets from the ITU CG Datasets catalogue.
+
+Theme: cyber security in everyday life on NTN (satellite-backed networks) + self-healing from the
+effects of a cyber attack. NTN has little cyber policy; that gap is the point. Main city currently
+Chennai. Architecture: deterministic YAML rule engine (P node) gives six verdicts COMPLIANT /
+VIOLATION / AMBIGUITY / CONFLICT / POTENTIAL_GAP / INSUFFICIENT_EVIDENCE citing KB record ids;
+LLM agents (Qwen3.8-27B) assess, draft, explain, and execute approved playbooks via execute_playbook
+with a hashed, time-limited human approval. Models M1 Isolation Forest, M2 minute/daily forecaster,
+M3 8-class fault-vs-attack LightGBM + SHAP + abstain, M4 MILP capacity allocator.
+
+## Inputs from the other planning agents (read all three)
+- /Users/CharanVelavan/Charan/SSN/UAE/orca-ntn/docs/plan/A-agent-roles.md   (role of each agent/model)
+- /Users/CharanVelavan/Charan/SSN/UAE/orca-ntn/docs/plan/B-policy-country.md (explainability split + country)
+- /Users/CharanVelavan/Charan/SSN/UAE/orca-ntn/docs/plan/C-datasets-build.md (datasets + 3-day build)
+B's country decision wins; A and C assumed India and marked country-dependent items [COUNTRY].
+Current report: /Users/CharanVelavan/Charan/SSN/UAE/submission/ORCA-NTN-initial-report.docx (9 pages,
+Rajasthan story; must be cut to 5 and rewritten). Read it (e.g. `textutil -convert txt -stdout`) but do
+NOT edit it. ITU template: /Users/CharanVelavan/Charan/SSN/UAE/AI-for-Good-Sandbox-Hackathon-submission-template.docx
+(read only; follow its section order).
+
+## Your job: the 5-page report + integration
+1. Page and figure budget: for each template section, the space it gets (in fractions of a page, total
+   exactly 5 incl. images at Times New Roman 12 pt), which figures/tables go in (max ~3 figures), and
+   what moves to the GitHub README instead. Follow jury rule 3: short idea overview first, then the
+   role of the AI and of each agent/model in detail.
+2. How to show "pillar of everyday work" (rule 4) concretely in that space: e.g. a normal-day vs
+   incident-day table, named everyday users (payments, hospitals, 112, utilities, homes).
+3. Where and how the explainability split (rule 5) appears: B's table, sized to fit.
+4. Review A, B and C against each other and against BUILD_PLAN.md: list every conflict (agent counts,
+   model scope, dataset choice, country, timeline) with a proposed resolution.
+5. Scope cuts: given C's 3-day plan and report > code > video, what to cut, ordered, and what the
+   report may still claim honestly (only what is built and run; NTN links are emulated).
+6. A short decision list for the user (<= 10 items, each with a recommended answer).
+Return the full result as your final message; the coordinator saves it to
+orca-ntn/docs/plan/D-report-integration.md. Do not edit files.
+
+## Added after A-C reported (from the ITU mentoring session notes in /Users/CharanVelavan/Charan/SSN/UAE/sessions/)
+- Judges evaluate only what is documented: "the scenarios you claim and document, not what they think
+  should be there" (session 3). Model accuracy, speed and business value are NOT evaluated.
+- Round 1 (11-18 Nov): judges read the report and GitHub; nobody is known to run the code. The video
+  shows setup, terminals, demo steps and output; screenshots are acceptable if the video is not ready (session 5).
+- Final, 8 Dec Dubai: live booth demo; judges ADD THEIR OWN SCENARIO during the demo (session 1).
+- Judges are nominated by the UAE host authorities (session 3). B recommends India primary + EU comparison
+  and found no binding UAE clock; B did not weigh the UAE-judge point. Assess whether and how the report
+  should still name UAE instruments (TDRA IAR v1.1, TDRA interconnection emergency priority) and frame
+  the UAE as evidence of the NTN gap, without overclaiming.
+- Known conflicts to resolve: A designs all agents with everyday jobs and 9 playbooks; C builds only
+  PB-01 + PB-06 and cuts MQTT, M2, M4 early. A says the console is the STM32 board; BUILD_PLAN says a
+  FastAPI web console. C says M3 = 7 classes + abstain, not 8. The repo already has one commit (9e1ac47).

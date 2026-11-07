@@ -22,7 +22,10 @@ UA = "ORCA-NTN-kb-fetch/0.1"
 
 
 def local_path(src: dict) -> Path:
-    ext = ".pdf" if src["url"].lower().split("?")[0].endswith((".pdf", ".ashx")) else ".html"
+    url = src["url"].lower().split("?")[0]
+    # India Code serves PDFs from .../bitstreams/<uuid>/content (no .pdf suffix).
+    is_pdf = url.endswith((".pdf", ".ashx")) or "/server/api/core/bitstreams/" in url
+    ext = ".pdf" if is_pdf else ".html"
     return OUT / (src["id"] + ext)
 
 

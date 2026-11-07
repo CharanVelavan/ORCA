@@ -1,0 +1,37 @@
+# India rules for the P node (orca/rules.py). Deadlines and triggers are read from the KB
+# obligation of each record, never repeated here. `default: true` = applies unless the
+# facts list `applies:` explicitly.
+
+# Records in one group give clocks for the same incident; different deadlines -> AMBIGUITY.
+clock_groups:
+  - id: IN-R-CLOCKS
+    topic: incident_reporting
+    gap: GAP-IN-01-THREE-CLOCKS
+
+deadline_rules:
+  - id: IN-R-DEADLINE-CERTIN-ii        # CERT-In Direction (ii): 6 h from noticing
+    record: IN-CERTIN-DIR-2022-ii
+    group: IN-R-CLOCKS
+    default: true
+  - id: IN-R-DEADLINE-TCSR-7-1         # Telecom Cyber Security Rules: 6 h from occurrence
+    record: IN-TCSR-2024-R7-1
+    group: IN-R-CLOCKS
+    default: true
+  - id: IN-R-DEADLINE-CTIR-7-1-j       # only if the entity is designated critical telecom infrastructure
+    record: IN-CTIR-2024-R7-1-j
+    group: IN-R-CLOCKS
+    default: false
+  - id: IN-R-DEADLINE-SPACEFW          # binding status not stated -> AMBIGUITY, never "not applicable"
+    record: IN-SPACEFW-2026-3-2-1
+    group: IN-R-CLOCKS
+    gap: GAP-IN-09-SPACE-FW-STATUS
+    default: false
+
+# Playbook pairs that clash when they act on a shared target.
+conflicts:
+  - id: IN-R-CONFLICT-PB05-PB06
+    topic: failover_path_security
+    playbooks: [PB-05, PB-06]
+    gap_topic: joint_command
+    records: [IN-CERTIN-DIR-2022-ANX1-ii]
+    clash: "PB-05 isolates the management segment (stops the attack, preserves logs); PB-06 fails traffic over through the same gateway (keeps emergency calls up). Both cannot run on the same target."
