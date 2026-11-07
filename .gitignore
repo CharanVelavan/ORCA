@@ -13,3 +13,5 @@ chroma/
 *.log
 corpus/
 .claude/worktrees/
+kb/vec_snapshots/
+kb/vec_cache/

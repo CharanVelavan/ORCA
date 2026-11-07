@@ -263,7 +263,9 @@ def test_cannot_request_approval_for_someone_elses_playbook(w):
 def test_adviser_answers_from_kb_with_citations(w):
     a = PolicyAdviser(w).ask("Within how many hours must a cyber incident be reported to CERT-In?")
     assert a["found"] and "IN-CERTIN-DIR-2022-ii" in a["citations"]
-    assert all(w.kb.records.get(c) or w.kb.gaps.get(c) for c in a["citations"])
+    # every citation is a record, a gap, or (when the vector KB is installed) a real chunk id
+    from orca.protocol import classify_citation
+    assert all(classify_citation(c, w.kb) for c in a["citations"])
 
 
 @pytest.mark.parametrize("q", ["What is the fine for jaywalking in Mumbai?", "What is the capital of France?",
