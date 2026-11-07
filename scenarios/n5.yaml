@@ -1,0 +1,105 @@
+id: N5
+title: One incident, several reporting clocks
+story: An emulated management-plane breach simultaneously affects telecom backhaul and electrical power grid communications across independent operators.
+kind: attack
+start: "2026-11-10T19:00:00+05:30"
+seed: 108
+jurisdiction: IN
+entity: {designated_cti: true}
+m3_expected: attack-management-plane
+sites: [CHN-04]
+everyday_impact:
+  - {who: "power grid controllers", from: 18, what: "substation telemetry severed"}
+  - {who: "112 callers", from: 24, what: "emergency routing degraded"}
+events:
+  - t: 0
+    actor: M1
+    what: M1 detects anomalous management API queries across shared infrastructure.
+    signals:
+      - {site: CHN-04, signal: vpn_login, value: {user: grid-mgmt, anomalous: true}}
+  - t: 5
+    actor: satellite_operator
+    what: Satellite operator detects unauthorized configuration read on Guindy gateway link.
+  - t: 12
+    actor: M3
+    what: M3 attributes activity to coordinated management-plane intrusion.
+    signals:
+      - {site: CHN-04, signal: mgmt_command, value: {type: config_change, count: 3}}
+  - t: 18
+    actor: power_utility
+    what: Power utility identifies loss of remote supervisory control telemetry.
+    signals:
+      - {site: CHN-04, signal: packet_loss, value: 0.45}
+  - t: 24
+    actor: mobile_operator
+    what: Mobile operator observes degradation of emergency and grid communications.
+    signals:
+      - {site: CHN-04, signal: traffic_load, value: {service: grid, load: 1.2}}
+  - t: 28
+    actor: cert_in
+    what: CERT-In agent maps disparate statutory incident reporting deadlines across affected sectors.
+    facts:
+      now: "2026-11-10T19:28:00+05:30"
+      triggers:
+        occurrence: "2026-11-10T19:00:00+05:30"
+        noticing: "2026-11-10T19:05:00+05:30"
+        awareness: "2026-11-10T19:18:00+05:30"
+      applies: [IN-CERTIN-DIR-2022-ii, IN-TCSR-2024-R7-1, IN-CTIR-2024-R7-1-j]
+    expect:
+      - {verdict: AMBIGUITY, gap: GAP-IN-01-REPORTING-CLOCKS}
+  - t: 35
+    actor: gap_analyst
+    what: Gap Analyst audits binding cross-sector space cyber baselines.
+    facts:
+      obligation_questions:
+        - {id: Q-N5-SPACE, topic: space_cyber, text: "Is there a binding cross-sector space cyber standard?"}
+    expect:
+      - {verdict: POTENTIAL_GAP, gap: GAP-IN-09-SPACE-CYBER-ADVISORY}
+  - t: 41
+    actor: gap_analyst
+    what: Gap Analyst audits downstream warning requirements across interconnected critical sectors.
+    facts:
+      obligation_questions:
+        - {id: Q-N5-WARN, topic: downstream_warning, text: "Are cross-sector operators required to warn dependent power utilities?"}
+    expect:
+      - {verdict: POTENTIAL_GAP, gap: GAP-IN-02-NO-DOWNSTREAM-WARNING}
+  - t: 48
+    actor: commander
+    what: Commander approves PB-01 account containment and PB-10 notification to state grid authorities.
+  - t: 64
+    actor: mobile_operator
+    what: Mobile operator fails over site CHN-04 to verified domestic backup path.
+    signals:
+      - {site: CHN-04, signal: route_candidate, value: {path: B, gateway: GW-IN-2, integrity: verified}}
+    facts:
+      obligation_questions:
+        - {id: Q-N5-LOC, topic: data_location, text: "Is backup route terminated at an Indian gateway per Authz Rule 60(1)(b)?"}
+    expect:
+      - {verdict: COMPLIANT}
+  - t: 82
+    actor: M1
+    what: M1 confirms recovery of grid telemetry and emergency communications.
+    signals:
+      - {site: CHN-04, signal: txn_success, value: {service: grid, rate: 0.96}}
+playbooks:
+  - {id: PB-01, owner: satellite_operator, approver: commander, executed: true}
+  - {id: PB-06, owner: mobile_operator, approver: commander, executed: true,
+     precondition: "path integrity verified and gateway in India (Authz Rule 60(1)(b))"}
+  - {id: PB-10, owner: mobile_operator, approver: commander, executed: true}
+heal:
+  what: Guindy site CHN-04 isolates compromised management segment and restores grid telemetry on verified domestic backup.
+  metric: txn_success
+  service: grid
+  site: CHN-04
+  target_before: 0.55
+  target_after: 0.96
+  proof: [route trace shows GW-IN-2, grid telemetry restored on clean link]
+human_decisions:
+  - "Commander aligns incident response timeline to earliest reporting deadline."
+  - "Commander approves PB-10 notification to electricity grid coordination center."
+  - "Commander authorizes PB-06 failover over domestic backup."
+rules_off: "Without the rule engine, multi-operator clock disparities lead to statutory reporting non-compliance and missed sector alerts."
+demo_seconds: 100
+risks:
+  - "Do not claim all four regulatory report types are mandatory for every entity."
+  - "Grid telemetry encryption formats may delay gateway handoff."

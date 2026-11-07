@@ -1,3 +1,6 @@
+> **8 Nov update: read `docs/plan/MASTER_PLAN_v3.md` first.** It is the agreed plan (goal, missions,
+> agent split, waves, rules, state). It overrides this file where they conflict.
+
 # Handoff for the next chat (written 7 Nov 2026)
 
 Read this first, then `docs/BUILD_PLAN.md` (v1, written before the jury rules below; sections 2–4

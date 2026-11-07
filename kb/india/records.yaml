@@ -787,3 +787,22 @@
   verified: true
   verified_by: PDF opened by Claude 8 Nov 2026 (pdftotext, PDF p. 105)
   notes: Group IV = Wi-Fi CPE, IP Router, Cell Broadcast Centre, PABX (+ later NGFW). Issued under MTCTE, which makes certification mandatory, but the cover leaves "Date of Enforcement" blank, so binding_status is not_stated. Evidence for GAP-IN-09 - the controls exist in Indian standards but are not applied to satellite ground equipment.
+
+# --- added 8 Nov 2026 (agent G-A, scenarios) ---
+- id: IN-AUTHZ-2026-R60-1-b
+  jurisdiction: IN
+  instrument: Telecommunications (Authorisation for Provision of Principal Telecommunication Services) Rules, 2026
+  clause: Rule 60(1)(b)
+  authority: Department of Telecommunications
+  binding_status: binding
+  issued: 2026-06-23
+  in_force_from: 2026-06-23
+  topic: data_location
+  topics: [data_location]
+  quote: "ensure that no traffic originating from or terminating at a user terminal located in India is routed via satellite earth station gateways located outside India, directly or through inter-satellite communication links, including during failure of satellite earth station gateway located in India or as part of telecommunication network optimisation;"
+  pinpoint: "Rule 60(1)(b), PDF p. 112"
+  summary: A satellite authorisation holder must ensure Indian user traffic is not routed via gateways outside India, including during domestic gateway failure or network optimisation.
+  source: in-authz-rules-2026
+  verified: true
+  verified_by: "PDF opened by Claude 8 Nov 2026 (pdftotext, PDF p. 112; quote matches verbatim); verification set at Charan Velavan's instruction"
+  notes: "Added by agent G-A 8 Nov 2026. Used for the Indian-gateway COMPLIANT check in scenarios and the PB-06 precondition."

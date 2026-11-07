@@ -1,0 +1,259 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "query_kb",
+      "description": "Search the knowledge base of verified legal records. Returns record ids, clauses and summaries.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "topic": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "question"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "read_alerts",
+      "description": "Read model alerts (M1-M4) and events, optionally for one site or source.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "site": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "explain_model",
+      "description": "Get the model's own explanation (e.g. SHAP features) for one alert id.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "alert_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "alert_id"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "draft_notice",
+      "description": "Draft a notice. It stays a draft until a human sends it.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "certin_report",
+              "dot_report",
+              "downstream_warning",
+              "policy_brief",
+              "information_request"
+            ]
+          },
+          "recipient": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "recipient",
+          "body"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "record_gap",
+      "description": "Record a DRAFT policy-gap finding for human review. Evidence must be existing record or gap ids.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string"
+          },
+          "finding": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "topic",
+          "finding",
+          "evidence"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "run_rule_engine",
+      "description": "Run the deterministic rule engine on the current facts. Optionally add coverage questions as {topic, text}. Returns verdicts with record ids, gap ids and deadlines.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "questions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "topic": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "topic",
+                "text"
+              ]
+            }
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "select_playbook",
+      "description": "List playbooks from the fixed catalogue, with owner, preconditions and whether you own them.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "goal": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "send_message",
+      "description": "Send a typed message to another role agent or to the human commander.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "to": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "to",
+          "kind",
+          "text"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "request_approval",
+      "description": "Ask the human commander to approve a playbook plan. Returns the plan hash, expiry and clone-test result.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "playbook": {
+            "type": "string"
+          },
+          "targets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "params": {
+            "type": "object"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "playbook",
+          "targets",
+          "reason"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "execute_playbook",
+      "description": "Execute an approved playbook you own, with the one-time approval token from the commander.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "playbook": {
+            "type": "string"
+          },
+          "targets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "params": {
+            "type": "object"
+          },
+          "token": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "playbook",
+          "targets",
+          "token"
+        ]
+      }
+    }
+  }
+]

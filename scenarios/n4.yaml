@@ -1,0 +1,108 @@
+id: N4
+title: The network dashboard lies
+story: An attacker alters management telemetry on emulated satellite links to display false health metrics while emergency calls fail.
+kind: attack
+start: "2026-11-10T19:00:00+05:30"
+seed: 107
+jurisdiction: IN
+entity: {designated_cti: false}
+m3_expected: attack-management-plane
+sites: [CHN-03]
+everyday_impact:
+  - {who: "112 callers", from: 8, what: "emergency calls fail while dashboard indicates normal health"}
+events:
+  - t: 0
+    actor: attacker
+    what: Attacker falsifies management plane health metrics.
+    signals:
+      - {site: CHN-03, signal: mgmt_command, value: {type: telemetry_edit, count: 6}}
+  - t: 8
+    actor: M1
+    what: M1 detects mismatch between synthetic dashboard telemetry and actual traffic loss.
+    signals:
+      - {site: CHN-03, signal: telemetry_reported, value: {metric: loss, value: 0.0}}
+      - {site: CHN-03, signal: packet_loss, value: 0.65}
+  - t: 14
+    actor: M3
+    what: M3 confirms management-plane intrusion manipulating reported link state.
+    signals:
+      - {site: CHN-03, signal: vpn_login, value: {user: telemetry-srv, anomalous: true}}
+  - t: 20
+    actor: gap_analyst
+    what: Gap Analyst audits binding satellite management security baselines.
+    facts:
+      obligation_questions:
+        - {id: Q-N4-SPACE, topic: space_cyber, text: "Are satellite management plane integrity baselines legally binding?"}
+    expect:
+      - {verdict: POTENTIAL_GAP, gap: GAP-IN-09-SPACE-CYBER-ADVISORY}
+  - t: 27
+    actor: mobile_operator
+    what: Mobile operator proposes primary candidate failover path A.
+    signals:
+      - {site: CHN-03, signal: route_candidate, value: {path: A, gateway: GW-IN-1, integrity: unverified}}
+  - t: 31
+    actor: gap_analyst
+    what: Gap Analyst audits route integrity verification duties before failover.
+    facts:
+      obligation_questions:
+        - {id: Q-N4-CLEAN, topic: failover_path_security, text: "Is route integrity verification mandated before failover execution?"}
+    expect:
+      - {verdict: POTENTIAL_GAP, gap: GAP-IN-08-NO-CLEAN-PATH-CHECK}
+  - t: 38
+    actor: gap_analyst
+    what: Gap Analyst audits downstream warning requirements under manipulated telemetry conditions.
+    facts:
+      obligation_questions:
+        - {id: Q-N4-WARN, topic: downstream_warning, text: "Must operators warn downstream emergency services of spoofed telemetry conditions?"}
+    expect:
+      - {verdict: POTENTIAL_GAP, gap: GAP-IN-02-NO-DOWNSTREAM-WARNING}
+  - t: 44
+    actor: satellite_operator
+    what: Satellite operator proposes PB-05 while mobile operator proposes PB-06 on tower CHN-03.
+    facts:
+      proposed_actions:
+        - {playbook: PB-05, agent: satellite_operator, targets: [CHN-03], supporting_records: [IN-CERTIN-DIR-2022-ANX1-ii]}
+        - {playbook: PB-06, agent: mobile_operator, targets: [CHN-03], supporting_records: [IN-TELACT-2023-20]}
+    expect:
+      - {verdict: CONFLICT}
+  - t: 47
+    actor: commander
+    what: Commander resolves conflict by sequencing PB-01 first, leaves PB-05 unexecuted, and approves PB-10.
+  - t: 56
+    actor: mobile_operator
+    what: Mobile operator fails over tower CHN-03 to verified domestic path B.
+    signals:
+      - {site: CHN-03, signal: route_candidate, value: {path: B, gateway: GW-IN-2, integrity: verified}}
+    facts:
+      obligation_questions:
+        - {id: Q-N4-LOC, topic: data_location, text: "Is failover gateway situated in India per Authz Rule 60(1)(b)?"}
+    expect:
+      - {verdict: COMPLIANT}
+  - t: 72
+    actor: M1
+    what: Independent user plane telemetry confirms 112 emergency calls restored.
+    signals:
+      - {site: CHN-03, signal: txn_success, value: {service: 112, rate: 0.98}}
+playbooks:
+  - {id: PB-01, owner: satellite_operator, approver: commander, executed: true}
+  - {id: PB-06, owner: mobile_operator, approver: commander, executed: true,
+     precondition: "path integrity verified and gateway in India (Authz Rule 60(1)(b))"}
+  - {id: PB-10, owner: mobile_operator, approver: commander, executed: true}
+  - {id: PB-05, owner: satellite_operator, approver: commander, executed: false, note: "specified, not executed"}
+heal:
+  what: Tower CHN-03 fails over from compromised telemetry satellite path to verified domestic microwave route.
+  metric: txn_success
+  service: 112
+  site: CHN-03
+  target_before: 0.35
+  target_after: 0.98
+  proof: [route trace shows GW-IN-2, independent user-plane telemetry verifies call completion]
+human_decisions:
+  - "Commander trusts independent user-plane telemetry over spoofed management dashboard."
+  - "Commander resolves playbook conflict by sequencing PB-01 credential isolation before PB-06 failover."
+  - "Commander approves PB-10 emergency notification drafted by Gap Analyst."
+rules_off: "Without the rule engine, contradictory telemetry paralyses operational command and conflicting playbooks deadlock."
+demo_seconds: 105
+risks:
+  - "Requires two independent telemetry planes to detect falsified health reporting."
+  - "Attacker might attempt secondary tampering on microwave telemetry."

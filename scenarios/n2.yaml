@@ -1,0 +1,83 @@
+id: N2
+title: Payments disappear, but nobody gets warned
+story: An unintended routing configuration error disrupts emulated satellite backhaul for commercial payment terminals and ATMs.
+kind: fault
+start: "2026-11-10T19:00:00+05:30"
+seed: 105
+jurisdiction: IN
+entity: {designated_cti: false}
+m3_expected: fault-power/equipment
+sites: [CHN-02]
+everyday_impact:
+  - {who: "T. Nagar retail shoppers", from: 7, what: "UPI payments fail"}
+  - {who: "merchant banks", from: 7, what: "ATM transactions timeout"}
+events:
+  - t: 0
+    actor: satellite_operator
+    what: Satellite operator applies routine maintenance routing update.
+    signals:
+      - {site: CHN-02, signal: mgmt_command, value: {type: config_change, count: 1}}
+  - t: 7
+    actor: M1
+    what: M1 detects sharp drop in payment transaction completion rate.
+    signals:
+      - {site: CHN-02, signal: txn_success, value: {service: payments, rate: 0.30}}
+  - t: 12
+    actor: M3
+    what: M3 evaluates failure pattern and classifies outage as non-malicious equipment fault.
+    signals:
+      - {site: CHN-02, signal: packet_loss, value: 0.52}
+  - t: 20
+    actor: mobile_operator
+    what: Mobile operator confirms widespread retail payment failures in commercial district.
+    signals:
+      - {site: CHN-02, signal: traffic_load, value: {service: payments, load: 1.5}}
+  - t: 26
+    actor: gap_analyst
+    what: Gap Analyst audits obligation to warn downstream financial institutions and merchants.
+    facts:
+      obligation_questions:
+        - {id: Q-N2-WARN, topic: downstream_warning, text: "Are operators obligated to issue formal downstream warnings for non-malicious outages?"}
+    expect:
+      - {verdict: POTENTIAL_GAP, gap: GAP-IN-02-NO-DOWNSTREAM-WARNING}
+  - t: 35
+    actor: satellite_operator
+    what: Satellite operator isolates misconfigured routing table entry on primary gateway link.
+  - t: 43
+    actor: commander
+    what: Commander approves PB-10 merchant advisory drafted by Gap Analyst.
+  - t: 50
+    actor: mobile_operator
+    what: Mobile operator fails over commercial hub CHN-02 to clean microwave backup.
+    signals:
+      - {site: CHN-02, signal: route_candidate, value: {path: B, gateway: GW-IN-2, integrity: verified}}
+    facts:
+      obligation_questions:
+        - {id: Q-N2-LOC, topic: data_location, text: "Is failover gateway located in India per Authz Rule 60(1)(b)?"}
+    expect:
+      - {verdict: COMPLIANT}
+  - t: 73
+    actor: M1
+    what: M1 verifies payment transaction recovery over microwave backup path.
+    signals:
+      - {site: CHN-02, signal: txn_success, value: {service: payments, rate: 0.97}}
+playbooks:
+  - {id: PB-06, owner: mobile_operator, approver: commander, executed: true,
+     precondition: "path integrity verified and gateway in India (Authz Rule 60(1)(b))"}
+  - {id: PB-10, owner: mobile_operator, approver: commander, executed: true}
+heal:
+  what: Commercial hub CHN-02 restores payment terminal transactions by failing over from corrupted satellite route to clean microwave link.
+  metric: txn_success
+  service: payments
+  site: CHN-02
+  target_before: 0.30
+  target_after: 0.97
+  proof: [route trace shows GW-IN-2, payment transactions restored]
+human_decisions:
+  - "Commander approves PB-10 advisory to merchant acquirers despite absence of statutory duty."
+  - "Commander authorizes PB-06 microwave routing until configuration audit completes."
+rules_off: "Without the rule engine, non-malicious configuration outages trigger no downstream warning and payment gateways are left uninformed."
+demo_seconds: 70
+risks:
+  - "NEEDS CHECK: TCSR 'security incident' definition (docs/sweep/tcsr-security-incident.md) decides whether reporting clocks apply."
+  - "Merchant point-of-sale retries create temporary traffic spikes after link restoration."

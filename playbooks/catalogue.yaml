@@ -1,0 +1,72 @@
+# ORCA-NTN playbook catalogue (fixed; agents choose from it, they cannot invent steps).
+# executable: true = implemented in orca/remediation.py; false = specified only (shown, never run).
+# owner = the only role that may execute it, and only on targets in its own asset list.
+- id: PB-01
+  title: Disable exposed VPN account, rotate credentials
+  owner: satellite_operator
+  executable: true
+  target_kind: mgmt_account
+  steps: [disable the account, revoke its sessions, rotate shared credentials, keep logs]
+  risk: low
+- id: PB-02
+  title: Enforce MFA on management access
+  owner: satellite_operator
+  executable: false
+  target_kind: mgmt_system
+  risk: low
+- id: PB-03
+  title: Block attacker sources at the management firewall
+  owner: satellite_operator
+  executable: false
+  target_kind: mgmt_system
+  risk: low
+- id: PB-04
+  title: Roll terminals back to last signed firmware
+  owner: satellite_operator
+  executable: false
+  target_kind: terminal
+  risk: high
+- id: PB-05
+  title: Isolate the management segment (keep logs, CERT-In Direction (iv))
+  owner: satellite_operator
+  executable: false
+  target_kind: mgmt_system
+  risk: high
+- id: PB-06
+  title: Fail over to a backup path verified clean first
+  owner: mobile_operator
+  executable: true
+  target_kind: site
+  params: [path]
+  preconditions:
+    - backup path integrity verified
+    - gateway located in India (Authz Rules 2026, Rule 60(1)(b))
+  steps: [check path integrity, check gateway country, clone test, staged rollout 5/25/100, health check, rollback on failure]
+  risk: medium
+- id: PB-07
+  title: Re-authenticate terminals and towers
+  owner: mobile_operator
+  executable: false
+  target_kind: site
+  risk: medium
+- id: PB-08
+  title: Apply the vendor patch (asset owner)
+  owner: asset_owner
+  executable: false
+  target_kind: any
+  risk: medium
+- id: PB-09
+  title: Shed non-critical load to protect the battery
+  owner: mobile_operator
+  executable: false
+  target_kind: site
+  risk: medium
+- id: PB-10
+  title: Warn dependent services (hospitals, payments, 112, grid) through the agent bus
+  owner: mobile_operator
+  executable: true
+  target_kind: site
+  params: [message]
+  steps: [Gap Analyst drafts the warning, commander approves, send to dependants of the target sites]
+  risk: low
+  notes: Voluntary - no binding duty to warn was found (GAP-IN-02).

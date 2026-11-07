@@ -1,0 +1,84 @@
+id: N3
+title: The invisible weakness in a feeder link
+story: An emulated satellite feeder link carries unencrypted test traffic without link-layer protection during an operational audit.
+kind: audit
+start: "2026-11-10T19:00:00+05:30"
+seed: 106
+jurisdiction: IN
+entity: {designated_cti: false}
+m3_expected: abstain
+sites: [CHN-05]
+everyday_impact: []
+events:
+  - t: 0
+    actor: judge
+    what: Judge injects synthetic audit inspecting feeder link security controls.
+    signals:
+      - {site: CHN-05, signal: link_protection, value: unprotected}
+  - t: 6
+    actor: satellite_operator
+    what: Satellite operator discovers test feeder link operating without link-layer encryption.
+  - t: 12
+    actor: M1
+    what: M1 monitors link throughput and confirms zero packet loss on active stream.
+    signals:
+      - {site: CHN-05, signal: packet_loss, value: 0.01}
+  - t: 18
+    actor: M3
+    what: M3 evaluates link indicators and abstains from threat classification.
+  - t: 23
+    actor: gap_analyst
+    what: Gap Analyst audits mandatory NTN link-layer encryption standards.
+    facts:
+      obligation_questions:
+        - {id: Q-N3-STD, topic: standards, text: "Do mandatory telecom cyber standards enforce feeder link encryption?"}
+    expect:
+      - {verdict: POTENTIAL_GAP, gap: GAP-IN-06-STANDARDS}
+  - t: 29
+    actor: gap_analyst
+    what: Gap Analyst audits satellite cyber baseline rules.
+    facts:
+      obligation_questions:
+        - {id: Q-N3-SPACE, topic: space_cyber, text: "Is there a binding space cyber security directive for feeder links?"}
+    expect:
+      - {verdict: POTENTIAL_GAP, gap: GAP-IN-09-SPACE-CYBER-ADVISORY}
+  - t: 36
+    actor: commander
+    what: Commander orders proactive traffic avoidance away from the unprotected feeder link.
+  - t: 44
+    actor: mobile_operator
+    what: Mobile operator tests protected domestic backup path.
+    signals:
+      - {site: CHN-05, signal: route_candidate, value: {path: B, gateway: GW-IN-2, integrity: verified}}
+  - t: 57
+    actor: commander
+    what: Commander approves PB-06 failover to protected domestic gateway.
+    facts:
+      obligation_questions:
+        - {id: Q-N3-LOC, topic: data_location, text: "Is protected backup gateway located inside India per Authz Rule 60(1)(b)?"}
+    expect:
+      - {verdict: COMPLIANT}
+  - t: 74
+    actor: M1
+    what: M1 confirms all operational traffic successfully rerouted onto protected domestic path.
+    signals:
+      - {site: CHN-05, signal: link_protection, value: protected}
+playbooks:
+  - {id: PB-06, owner: mobile_operator, approver: commander, executed: true,
+     precondition: "path integrity verified and gateway in India (Authz Rule 60(1)(b))"}
+heal:
+  what: Coastal tower CHN-05 shifts traffic away from unprotected satellite feeder link to verified protected domestic path.
+  metric: packet_loss
+  service: general
+  site: CHN-05
+  target_before: 1.00
+  target_after: 0.00
+  proof: [route trace shows GW-IN-2, unencrypted path decommissioned]
+human_decisions:
+  - "Commander proactively evacuates traffic from unencrypted link despite zero active packet loss."
+  - "Commander approves PB-06 failover to domestic encrypted gateway."
+rules_off: "Without the rule engine, unencrypted feeder links carry production traffic indefinitely because anomaly telemetry detects no outage."
+demo_seconds: 90
+risks:
+  - "Passive traffic eavesdropping is undetectable via operational telemetry; requires audit inject."
+  - "Encryption key exchange overhead on satellite backup link."

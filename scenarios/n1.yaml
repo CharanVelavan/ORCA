@@ -1,0 +1,88 @@
+id: N1
+title: Hospital corridor battery cliff
+story: Mains power fails at an emulated cell site, battery reserves deplete rapidly, and hospital communications risk sudden cutoff.
+kind: fault
+start: "2026-11-10T19:00:00+05:30"
+seed: 104
+jurisdiction: IN
+entity: {designated_cti: false}
+m3_expected: fault-power/equipment
+sites: [CHN-01]
+everyday_impact:
+  - {who: "Park Town hospital staff", from: 14, what: "emergency telemetry threatened"}
+  - {who: "112 callers", from: 20, what: "ambulance dispatches delayed"}
+events:
+  - t: 0
+    actor: power_utility
+    what: Power utility reports grid supply failure at Park Town substation.
+    signals:
+      - {site: CHN-01, signal: mains_power, value: 0}
+  - t: 7
+    actor: M1
+    what: M1 detects rising packet loss as backup generation fails to engage.
+    signals:
+      - {site: CHN-01, signal: packet_loss, value: 0.15}
+  - t: 14
+    actor: M2
+    what: M2 forecasts site battery depletion within twenty minutes.
+    signals:
+      - {site: CHN-01, signal: battery_pct, value: 18}
+  - t: 20
+    actor: M3
+    what: M3 attributes anomaly to physical electrical equipment failure.
+    signals:
+      - {site: CHN-01, signal: traffic_load, value: {service: hospital, load: 1.1}}
+  - t: 25
+    actor: gap_analyst
+    what: Gap Analyst audits statutory minimum battery backup duration floors.
+    facts:
+      obligation_questions:
+        - {id: Q-N1-PWR, topic: backup_power, text: "Does regulation mandate specific battery backup duration for critical towers?"}
+    expect:
+      - {verdict: AMBIGUITY, gap: GAP-IN-04-NO-BATTERY-FLOOR}
+  - t: 29
+    actor: gap_analyst
+    what: Gap Analyst audits requirement to warn downstream hospital administrators.
+    facts:
+      obligation_questions:
+        - {id: Q-N1-WARN, topic: downstream_warning, text: "Are operators required to warn downstream hospitals of impending power cutoff?"}
+    expect:
+      - {verdict: POTENTIAL_GAP, gap: GAP-IN-02-NO-DOWNSTREAM-WARNING}
+  - t: 36
+    actor: commander
+    what: Commander approves PB-10 downstream warning drafted by Gap Analyst and authorizes PB-06 path testing.
+  - t: 48
+    actor: mobile_operator
+    what: Mobile operator executes PB-06 failover to microwave backup with domestic gateway.
+    signals:
+      - {site: CHN-01, signal: route_candidate, value: {path: B, gateway: GW-IN-2, integrity: verified}}
+    facts:
+      obligation_questions:
+        - {id: Q-N1-LOC, topic: data_location, text: "Is failover route terminated at an Indian gateway per Authz Rule 60(1)(b)?"}
+    expect:
+      - {verdict: COMPLIANT}
+  - t: 66
+    actor: M1
+    what: M1 confirms restored communication service for the hospital corridor.
+    signals:
+      - {site: CHN-01, signal: txn_success, value: {service: hospital, rate: 0.98}}
+playbooks:
+  - {id: PB-06, owner: mobile_operator, approver: commander, executed: true,
+     precondition: "path integrity verified and gateway in India (Authz Rule 60(1)(b))"}
+  - {id: PB-10, owner: mobile_operator, approver: commander, executed: true}
+heal:
+  what: Hospital corridor tower CHN-01 fails over to secondary domestic microwave path before battery shutdown.
+  metric: txn_success
+  service: hospital
+  site: CHN-01
+  target_before: 0.54
+  target_after: 0.98
+  proof: [route trace shows GW-IN-2, battery depletion mitigated by microwave offload]
+human_decisions:
+  - "Commander prioritises hospital corridor traffic over commercial services."
+  - "Commander approves PB-10 notification to hospital emergency directors."
+  - "Commander authorises PB-06 failover to secondary microwave path."
+rules_off: "Without the rule engine, the system fails to warn hospital personnel before battery exhaustion and lacks clarity on mandatory backup power duties."
+demo_seconds: 75
+risks:
+  - "Fuel delivery for auxiliary generators is outside autonomous software control."

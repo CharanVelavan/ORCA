@@ -1,0 +1,97 @@
+id: S2
+title: A storm leaves Chennai fighting for capacity
+story: Heavy northeast monsoon rains cause severe rain fade on emulated satellite links while multiple essential services compete for degraded backhaul bandwidth.
+kind: fault
+start: "2026-11-10T19:00:00+05:30"
+seed: 102
+jurisdiction: IN
+entity: {designated_cti: false}
+m3_expected: fault-weather
+sites: [CHN-01, CHN-02, CHN-04, CHN-05]
+everyday_impact:
+  - {who: "112 callers", from: 21, what: "emergency calls drop"}
+  - {who: "Park Town hospital staff", from: 21, what: "patient telemetry slows down"}
+  - {who: "power grid controllers", from: 21, what: "substation telemetry delayed"}
+events:
+  - t: 0
+    actor: M1
+    what: M1 detects rising traffic and packet loss during heavy monsoon rain.
+    signals:
+      - {site: CHN-05, signal: rain_mm_h, value: 45.0}
+      - {site: CHN-05, signal: packet_loss, value: 0.22}
+  - t: 7
+    actor: M2
+    what: M2 forecasts severe rain fade and reduced link margin.
+    signals:
+      - {site: CHN-05, signal: snr_db, value: 3.2}
+      - {site: CHN-05, signal: link_margin_db, value: 1.5}
+  - t: 13
+    actor: M3
+    what: M3 evaluates degradation pattern as weather-induced fade.
+    signals:
+      - {site: CHN-01, signal: traffic_load, value: {service: 112, load: 1.4}}
+  - t: 21
+    actor: M2
+    what: M2 predicts battery exhaustion at coastal tower CHN-05 following mains interruption.
+    signals:
+      - {site: CHN-05, signal: mains_power, value: 0}
+      - {site: CHN-05, signal: battery_pct, value: 20}
+  - t: 25
+    actor: gap_analyst
+    what: Gap Analyst audits statutory minimum battery backup runtime requirements.
+    facts:
+      obligation_questions:
+        - {id: Q-S2-PWR, topic: backup_power, text: "Do regulations specify a mandatory minimum battery floor?"}
+    expect:
+      - {verdict: AMBIGUITY, gap: GAP-IN-04-NO-BATTERY-FLOOR}
+  - t: 32
+    actor: M4
+    what: M4 requests legally binding capacity allocation and priority rules.
+    facts:
+      obligation_questions:
+        - {id: Q-S2-PRIO, topic: capacity_priority, text: "Is there a legally binding multi-sector capacity priority order?"}
+    expect:
+      - {verdict: AMBIGUITY, gap: GAP-IN-03-NO-PRIORITY-ORDER}
+  - t: 47
+    actor: commander
+    what: "Commander establishes a temporary operational priority order: 112 calls first, hospitals second, grid third."
+  - t: 59
+    actor: mobile_operator
+    what: Mobile operator fails over coastal site CHN-05 to domestic backup gateway.
+    signals:
+      - {site: CHN-05, signal: route_candidate, value: {path: B, gateway: GW-IN-2, integrity: verified}}
+    facts:
+      obligation_questions:
+        - {id: Q-S2-LOC, topic: data_location, text: "Is backup satellite gateway located in India per Authz Rule 60(1)(b)?"}
+    expect:
+      - {verdict: COMPLIANT}
+  - t: 76
+    actor: mobile_operator
+    what: Mobile operator executes PB-10 to alert downstream emergency services after commander approval.
+  - t: 94
+    actor: M1
+    what: M1 confirms critical traffic delivery restored on prioritized queues.
+    signals:
+      - {site: CHN-05, signal: txn_success, value: {service: 112, rate: 0.97}}
+      - {site: CHN-01, signal: txn_success, value: {service: hospital, rate: 0.95}}
+playbooks:
+  - {id: PB-06, owner: mobile_operator, approver: commander, executed: true,
+     precondition: "path integrity verified and gateway in India (Authz Rule 60(1)(b))"}
+  - {id: PB-10, owner: mobile_operator, approver: commander, executed: true}
+heal:
+  what: Priority queuing and domestic gateway failover restore critical traffic during monsoon rain fade.
+  metric: txn_success
+  service: 112
+  site: CHN-05
+  target_before: 0.68
+  target_after: 0.97
+  proof: [route trace shows GW-IN-2, domestic gateway verified, critical traffic prioritised]
+human_decisions:
+  - "Commander establishes temporary capacity priority order: 112 calls first, hospitals second, power grid third, general commercial shed."
+  - "Commander clarifies that priority allocation is an operational decision rather than statutory command."
+  - "Commander approves PB-10 downstream warning drafted by Gap Analyst."
+rules_off: "Without the rule engine, the controller arbitrarily sheds emergency traffic and lacks statutory guidance for multi-sector prioritization."
+demo_seconds: 105
+risks:
+  - "Monsoon rain fade signatures must remain clearly distinguished from adversarial RF jamming."
+  - "Commercial traffic remains degraded during emergency priority enforcement."

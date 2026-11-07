@@ -1,0 +1,142 @@
+id: CAP
+title: Chennai's double crisis
+story: Severe northeast monsoon rain fade and a concurrent management-plane intrusion compound link degradation on emulated satellite and terrestrial networks.
+kind: mixed
+start: "2026-11-10T19:00:00+05:30"
+seed: 110
+jurisdiction: IN
+entity: {designated_cti: true}
+m3_expected: attack-management-plane
+sites: [CHN-01, CHN-02, CHN-04, CHN-05]
+everyday_impact:
+  - {who: "112 callers", from: 17, what: "emergency calls drop across coastal and urban sectors"}
+  - {who: "Park Town hospital staff", from: 37, what: "telemetry disrupted under battery depletion"}
+  - {who: "commercial banking clients", from: 57, what: "transactions fail under capacity shedding"}
+events:
+  - t: 0
+    actor: M2
+    what: M2 models heavy monsoon rain fade causing link capacity drops at coastal site CHN-05.
+    signals:
+      - {site: CHN-05, signal: rain_mm_h, value: 50.0}
+      - {site: CHN-05, signal: link_margin_db, value: 1.0}
+  - t: 8
+    actor: gap_analyst
+    what: M1 flags an anomalous management login and Gap Analyst audits satellite cyber baselines.
+    signals:
+      - {site: CHN-02, signal: vpn_login, value: {user: admin-chennai, anomalous: true}}
+    facts:
+      obligation_questions:
+        - {id: Q-CAP-SPACE, topic: space_cyber, text: "Is there a binding satellite cyber baseline?"}
+    expect:
+      - {verdict: POTENTIAL_GAP, gap: GAP-IN-09-SPACE-CYBER-ADVISORY}
+  - t: 17
+    actor: M3
+    what: M3 confirms management-plane attack pattern while noting rain fade as a separate concurrent cause.
+    signals:
+      - {site: CHN-02, signal: mgmt_command, value: {type: config_change, count: 5}}
+  - t: 26
+    actor: gap_analyst
+    what: Gap Analyst audits NTN cyber security standards.
+    facts:
+      obligation_questions:
+        - {id: Q-CAP-STD, topic: standards, text: "Are specific cyber security standards mandated for NTN?"}
+    expect:
+      - {verdict: POTENTIAL_GAP, gap: GAP-IN-06-STANDARDS}
+  - t: 37
+    actor: gap_analyst
+    what: Battery reserves drop at CHN-01 and Gap Analyst audits mandatory backup power floors.
+    signals:
+      - {site: CHN-01, signal: mains_power, value: 0}
+      - {site: CHN-01, signal: battery_pct, value: 15}
+    facts:
+      obligation_questions:
+        - {id: Q-CAP-PWR, topic: backup_power, text: "Is there a mandatory minimum battery floor?"}
+    expect:
+      - {verdict: AMBIGUITY, gap: GAP-IN-04-NO-BATTERY-FLOOR}
+  - t: 48
+    actor: gap_analyst
+    what: Mobile operator proposes candidate path A which fails integrity checks; Gap Analyst audits path security.
+    signals:
+      - {site: CHN-01, signal: route_candidate, value: {path: A, gateway: GW-IN-1, integrity: unverified}}
+    facts:
+      obligation_questions:
+        - {id: Q-CAP-CLEAN, topic: failover_path_security, text: "Is clean-path integrity verification required before failover?"}
+    expect:
+      - {verdict: POTENTIAL_GAP, gap: GAP-IN-08-NO-CLEAN-PATH-CHECK}
+  - t: 57
+    actor: gap_analyst
+    what: Traffic demand exceeds degraded backhaul capacity; Gap Analyst audits capacity priority rules.
+    signals:
+      - {site: CHN-01, signal: traffic_load, value: {service: 112, load: 1.6}}
+    facts:
+      obligation_questions:
+        - {id: Q-CAP-PRIO, topic: capacity_priority, text: "Is there a legally binding multi-sector capacity priority order?"}
+    expect:
+      - {verdict: AMBIGUITY, gap: GAP-IN-03-NO-PRIORITY-ORDER}
+  - t: 68
+    actor: gap_analyst
+    what: Interconnected critical utilities suffer disruption; Gap Analyst audits downstream warning rules.
+    facts:
+      obligation_questions:
+        - {id: Q-CAP-WARN, topic: downstream_warning, text: "Are operators required to issue downstream warnings to critical infrastructure?"}
+    expect:
+      - {verdict: POTENTIAL_GAP, gap: GAP-IN-02-NO-DOWNSTREAM-WARNING}
+  - t: 75
+    actor: mobile_operator
+    what: PB-06 precondition blocks GW-XX (Authz Rule 60(1)(b)).
+    signals:
+      - {site: CHN-01, signal: route_candidate, value: {path: C, gateway: GW-XX, integrity: verified}}
+  - t: 80
+    actor: cert_in
+    what: CERT-In agent maps disparate statutory incident reporting clocks.
+    facts:
+      now: "2026-11-10T20:20:00+05:30"
+      triggers:
+        occurrence: "2026-11-10T19:00:00+05:30"
+        noticing: "2026-11-10T19:08:00+05:30"
+        awareness: "2026-11-10T19:17:00+05:30"
+      applies: [IN-CERTIN-DIR-2022-ii, IN-TCSR-2024-R7-1, IN-CTIR-2024-R7-1-j]
+    expect:
+      - {verdict: AMBIGUITY, gap: GAP-IN-01-REPORTING-CLOCKS}
+  - t: 94
+    actor: commander
+    what: Commander approves PB-01 account containment, establishes temporary emergency priority order, and approves PB-10.
+  - t: 112
+    actor: mobile_operator
+    what: Mobile operator fails over site CHN-01 to clean domestic path B via GW-IN-2.
+    signals:
+      - {site: CHN-01, signal: route_candidate, value: {path: B, gateway: GW-IN-2, integrity: verified}}
+    facts:
+      obligation_questions:
+        - {id: Q-CAP-LOC, topic: data_location, text: "Is failover gateway located in India per Authz Rule 60(1)(b)?"}
+    expect:
+      - {verdict: COMPLIANT}
+  - t: 154
+    actor: M1
+    what: M1 confirms critical service recovery across all monitored sites.
+    signals:
+      - {site: CHN-01, signal: txn_success, value: {service: 112, rate: 0.97}}
+      - {site: CHN-01, signal: packet_loss, value: 0.03}
+playbooks:
+  - {id: PB-01, owner: satellite_operator, approver: commander, executed: true}
+  - {id: PB-06, owner: mobile_operator, approver: commander, executed: true,
+     precondition: "path integrity verified and gateway in India (Authz Rule 60(1)(b))"}
+  - {id: PB-10, owner: mobile_operator, approver: commander, executed: true}
+heal:
+  what: Multi-site recovery prioritises emergency and hospital traffic over verified domestic backup paths while isolating compromised management accounts.
+  metric: txn_success
+  service: 112
+  site: CHN-01
+  target_before: 0.43
+  target_after: 0.97
+  proof: [route trace shows GW-IN-2, foreign gateway GW-XX rejected, emergency traffic prioritised]
+human_decisions:
+  - "Commander establishes temporary triage order: 112 calls first, hospital second, power grid third, commercial traffic shed."
+  - "Commander rejects foreign gateway proposal GW-XX and unverified trap path A."
+  - "Commander authorises PB-01 account containment and PB-10 downstream warning."
+rules_off: "Without the rule engine, compound weather and attack degradation triggers illegal foreign failover and contradictory reporting clocks."
+demo_seconds: 120
+risks:
+  - "Monsoon rain fade is a separate physical cause and not an adversarial attack artifact."
+  - "Foreign gateway proposal GW-XX is strictly blocked by PB-06 precondition under Authz Rule 60(1)(b)."
+  - "Candidate gap conclusions are regulatory ambiguities rather than operator violations."

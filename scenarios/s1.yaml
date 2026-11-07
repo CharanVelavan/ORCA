@@ -1,0 +1,121 @@
+id: S1
+title: The night Chennai's satellite terminals disappear
+story: An attacker steals management credentials and sends destructive wipe commands to emulated satellite backhaul modems.
+kind: attack
+start: "2026-11-10T19:00:00+05:30"
+seed: 101
+jurisdiction: IN
+entity: {designated_cti: true}
+m3_expected: attack-management-plane
+sites: [CHN-01, CHN-02]
+everyday_impact:
+  - {who: "112 callers", from: 24, what: "emergency calls fail"}
+  - {who: "retail shoppers", from: 24, what: "UPI payments fail"}
+  - {who: "Park Town hospital staff", from: 24, what: "telemetry unreachable"}
+events:
+  - t: 0
+    actor: M1
+    what: M1 flags an anomalous VPN login on the management plane.
+    signals:
+      - {site: CHN-02, signal: vpn_login, value: {user: noc-vendor-7, anomalous: true}}
+  - t: 4
+    actor: satellite_operator
+    what: Satellite operator discovers exposed administrative credentials on the portal.
+  - t: 8
+    actor: M3
+    what: M3 classifies management-plane attack pattern.
+    signals:
+      - {site: CHN-02, signal: mgmt_command, value: {type: config_change, count: 4}}
+  - t: 12
+    actor: gap_analyst
+    what: Gap Analyst audits binding satellite cyber security baselines.
+    facts:
+      obligation_questions:
+        - {id: Q-S1-SPACE, topic: space_cyber, text: "Is there a binding satellite cyber security baseline?"}
+    expect:
+      - {verdict: POTENTIAL_GAP, gap: GAP-IN-09-SPACE-CYBER-ADVISORY}
+  - t: 18
+    actor: satellite_operator
+    what: Attacker transmits destructive wipe commands to satellite backhaul modems.
+    signals:
+      - {site: CHN-02, signal: mgmt_command, value: {type: wipe, count: 12}}
+      - {site: CHN-01, signal: mgmt_command, value: {type: wipe, count: 8}}
+  - t: 24
+    actor: mobile_operator
+    what: Mobile operator reports backhaul modem loss and transaction drops at towers CHN-01 and CHN-02.
+    signals:
+      - {site: CHN-02, signal: terminals_up, value: 0}
+      - {site: CHN-01, signal: terminals_up, value: 0}
+      - {site: CHN-02, signal: packet_loss, value: 0.58}
+  - t: 30
+    actor: cert_in
+    what: CERT-In agent maps disparate statutory incident reporting clocks.
+    facts:
+      now: "2026-11-10T19:30:00+05:30"
+      triggers:
+        occurrence: "2026-11-10T19:00:00+05:30"
+        noticing: "2026-11-10T19:04:00+05:30"
+        awareness: "2026-11-10T19:18:00+05:30"
+      applies: [IN-CERTIN-DIR-2022-ii, IN-TCSR-2024-R7-1, IN-CTIR-2024-R7-1-j]
+    expect:
+      - {verdict: AMBIGUITY, gap: GAP-IN-01-REPORTING-CLOCKS}
+  - t: 36
+    actor: gap_analyst
+    what: Gap Analyst audits requirements to warn downstream emergency services.
+    facts:
+      obligation_questions:
+        - {id: Q-S1-WARN, topic: downstream_warning, text: "Are operators required to warn downstream emergency services?"}
+    expect:
+      - {verdict: POTENTIAL_GAP, gap: GAP-IN-02-NO-DOWNSTREAM-WARNING}
+  - t: 40
+    actor: satellite_operator
+    what: Satellite operator proposes PB-05 while mobile operator proposes PB-06 on towers CHN-01 and CHN-02.
+    facts:
+      proposed_actions:
+        - {playbook: PB-05, agent: satellite_operator, targets: [CHN-01, CHN-02], supporting_records: [IN-CERTIN-DIR-2022-ANX1-ii]}
+        - {playbook: PB-06, agent: mobile_operator, targets: [CHN-01, CHN-02], supporting_records: [IN-TELACT-2023-20]}
+    expect:
+      - {verdict: CONFLICT}
+  - t: 43
+    actor: commander
+    what: Commander resolves conflict by sequencing PB-01 first, leaves PB-05 unexecuted, and approves PB-10.
+  - t: 55
+    actor: mobile_operator
+    what: Mobile operator fails over towers CHN-01 and CHN-02 to microwave backup via domestic gateway.
+    signals:
+      - {site: CHN-02, signal: route_candidate, value: {path: B, gateway: GW-IN-2, integrity: verified}}
+    facts:
+      obligation_questions:
+        - {id: Q-S1-LOC, topic: data_location, text: "Is failover gateway located in India per Authz Rule 60(1)(b)?"}
+    expect:
+      - {verdict: COMPLIANT}
+  - t: 78
+    actor: M1
+    what: M1 confirms recovery of critical traffic over microwave backup links.
+    signals:
+      - {site: CHN-02, signal: packet_loss, value: 0.05}
+      - {site: CHN-01, signal: packet_loss, value: 0.04}
+playbooks:
+  - {id: PB-01, owner: satellite_operator, approver: commander, executed: true}
+  - {id: PB-06, owner: mobile_operator, approver: commander, executed: true,
+     precondition: "path integrity verified and gateway in India (Authz Rule 60(1)(b))"}
+  - {id: PB-10, owner: mobile_operator, approver: commander, executed: true}
+  - {id: PB-05, owner: satellite_operator, approver: commander, executed: false, note: "specified, not executed"}
+heal:
+  what: Towers CHN-01 and CHN-02 move from wiped satellite backhaul modems to microwave backup.
+  metric: txn_success
+  service: 112
+  site: CHN-02
+  target_before: 0.42
+  target_after: 0.95
+  proof: [route trace shows GW-IN-2, path B integrity verified, txn_success measured after]
+human_decisions:
+  - "Authorise management credential isolation despite operational disruption."
+  - "Resolve PB-05 and PB-06 conflict: execute PB-01 credential isolation first, then PB-06 microwave failover."
+  - "Commander approves PB-10 downstream warning drafted by Gap Analyst."
+rules_off: "Without the rule engine, contradictory reporting deadlines create compliance failure and clashing playbooks deadlock on shared towers."
+demo_seconds: 110
+risks:
+  - "KA-SAT inspiration only; emulated environment does not model physical terminal damage."
+  - "Shop terminals with their own satellite modems stay down."
+  - "NEEDS CHECK: Which paths preserve critical services after terminal wipes."

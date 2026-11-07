@@ -11,3 +11,5 @@ runs/
 chroma/
 .DS_Store
 *.log
+corpus/
+.claude/worktrees/

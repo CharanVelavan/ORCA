@@ -1,0 +1,77 @@
+id: S0
+title: A normal day on Chennai's hybrid network
+story: Emulated satellite and terrestrial links operate within normal parameters during routine operations.
+kind: normal
+start: "2026-11-10T19:00:00+05:30"
+seed: 100
+jurisdiction: IN
+entity: {designated_cti: false}
+m3_expected: normal
+sites: [CHN-01, CHN-02, CHN-03, CHN-04]
+everyday_impact: []
+events:
+  - t: 0
+    actor: M1
+    what: M1 monitors routine traffic telemetry across Chennai towers.
+    signals:
+      - {site: CHN-01, signal: traffic_load, value: {service: 112, load: 0.35}}
+  - t: 15
+    actor: M2
+    what: M2 reports clear weather and healthy link margins.
+    signals:
+      - {site: CHN-02, signal: rain_mm_h, value: 0.0}
+      - {site: CHN-02, signal: link_margin_db, value: 12.5}
+  - t: 30
+    actor: M3
+    what: M3 evaluates telemetry and confirms nominal status.
+    signals:
+      - {site: CHN-03, signal: packet_loss, value: 0.01}
+  - t: 45
+    actor: gap_analyst
+    what: Gap Analyst audits baseline regulatory coverage for incident reporting and telecom security.
+    facts:
+      obligation_questions:
+        - {id: Q-S0-REP, topic: incident_reporting, text: "Are incident reporting duties covered under Indian regulations?"}
+        - {id: Q-S0-CYBER, topic: telecom_cyber_security, text: "Are telecom cyber security duties covered?"}
+    expect:
+      - {verdict: COMPLIANT}
+      - {verdict: COMPLIANT}
+  - t: 60
+    actor: mobile_operator
+    what: Mobile operator verifies domestic satellite gateway routing.
+    signals:
+      - {site: CHN-01, signal: route_candidate, value: {path: A, gateway: GW-IN-1, integrity: verified}}
+    facts:
+      obligation_questions:
+        - {id: Q-S0-LOC, topic: data_location, text: "Is the active satellite gateway located in India per Authz Rule 60(1)(b)?"}
+    expect:
+      - {verdict: COMPLIANT}
+  - t: 75
+    actor: cert_in
+    what: Routine periodic compliance confirmation filed within statutory window.
+    facts:
+      now: "2026-11-10T20:15:00+05:30"
+      triggers:
+        noticing: "2026-11-10T19:00:00+05:30"
+        awareness: "2026-11-10T19:00:00+05:30"
+        occurrence: "2026-11-10T19:00:00+05:30"
+      applies: [IN-CERTIN-DIR-2022-ii]
+      reports:
+        - {record: IN-CERTIN-DIR-2022-ii, sent_at: "2026-11-10T19:30:00+05:30"}
+    expect:
+      - {verdict: COMPLIANT}
+playbooks: []
+heal:
+  what: Routine baseline telemetry confirmed across all emulated links.
+  metric: txn_success
+  service: 112
+  site: CHN-01
+  target_before: 0.99
+  target_after: 0.99
+  proof: [route trace shows GW-IN-1, nominal telemetry logs]
+human_decisions:
+  - "Maintain routine operating posture without manual intervention."
+rules_off: "Without continuous rule evaluation, negative controls and baseline compliance cannot be proven."
+demo_seconds: 60
+risks:
+  - "Negative control baseline assumes all in-force obligations remain verified in the knowledge base."
