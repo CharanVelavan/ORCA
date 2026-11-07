@@ -147,3 +147,10 @@
   url: https://handle.itu.int/11.1002/1000/15877
   sha256: 22558bd88f221ff4bd625d89099fb39eb062408c5ca8adbaf52ffec8d01f69f9
   notes: Downloaded by agent C; not re-downloaded by Claude (ITU blocks scripted requests).
+
+- id: in-nccs-itsar-csr-g4-2026
+  title: ITSAR702042604, Common Security Requirements, Group-IV Devices, V2.0.0 (24 Apr 2026)
+  authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+  url: https://nccs.gov.in/public/itsar/ITSAR002042604.pdf
+  sha256: 814b7cd392758bf6f093bc33ec3354d0fa07ce1c52428712d44aa5d71837377b
+  notes: Downloaded by Claude 8 Nov 2026. Issued under MTCTE. "Date of Enforcement" left blank on the cover. The NCCS list of published ITSARs (nccs.gov.in/home/itsars, 64 entries, read 8 Nov 2026) has no ITSAR for satellite equipment (VSAT, gateway, earth station, TT&C); the draft lists showed no entries.

@@ -768,3 +768,22 @@
   verified: true
   verified_by: PDF opened by Claude 7 Nov 2026
   notes: Advisory (PIB 2233122). Nearest text for GAP-IN-08 - about restoring systems after an incident, not checking a backup path before failover during one.
+
+# --- added 8 Nov 2026 (TEC / ITSAR check for GAP-IN-09) ---
+- id: IN-NCCS-ITSAR-G4-2-12-10
+  jurisdiction: IN
+  instrument: NCCS ITSAR702042604, Common Security Requirements, Group-IV Devices, V2.0.0
+  clause: Requirements 2.12.10 (Management Interface Isolation) and 2.12.12 (Secure VPN connection)
+  authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+  binding_status: not_stated
+  issued: 2026-04-24
+  in_force_from: null
+  topic: telecom_cyber_security
+  topics: [telecom_cyber_security]
+  quote: "PABX shall support management software usage/critical command execution only through a dedicated management interface."
+  pinpoint: 2.12.10, PDF p. 105 (document p. 104 of 108); 2.12.12 same page - "PABX shall establish VPN connections with its peers strictly using the secure cryptographic controls"; both marked "(applicable to PABX only; to be tested only on PABX of Group IV)"
+  summary: India's equipment security standard requires a dedicated management interface and secure VPNs - the two controls KA-SAT broke - but only for office phone exchanges (PABX), not for satellite equipment.
+  source: in-nccs-itsar-csr-g4-2026
+  verified: true
+  verified_by: PDF opened by Claude 8 Nov 2026 (pdftotext, PDF p. 105)
+  notes: Group IV = Wi-Fi CPE, IP Router, Cell Broadcast Centre, PABX (+ later NGFW). Issued under MTCTE, which makes certification mandatory, but the cover leaves "Date of Enforcement" blank, so binding_status is not_stated. Evidence for GAP-IN-09 - the controls exist in Indian standards but are not applied to satellite ground equipment.

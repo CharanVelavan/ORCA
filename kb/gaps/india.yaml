@@ -19,10 +19,13 @@
 #
 # Not searched (scope limits; a gap may be covered there): Unified/UASL licence conditions for operators
 # not yet migrated to the 2026 Authz Rules, the national Cyber Crisis Management Plan, NCIIPC rules, CERT-In
-# Rules 2013, the Disaster Management Act 2005, IN-SPACe / Department of Space norms, TEC / ITSAR
-# standards, and sector regulators of dependants (RBI, CEA cyber rules).
+# Rules 2013, the Disaster Management Act 2005, IN-SPACe / Department of Space norms, TEC essential
+# requirements (non-security parts of MTCTE), and sector regulators of dependants (RBI, CEA cyber rules).
+# Searched 8 Nov: the NCCS list of 64 published ITSARs (no satellite-equipment ITSAR; see GAP-IN-09).
 #
 # History
+#  v3.3 (8 Nov) ITSAR check for GAP-IN-09: new record IN-NCCS-ITSAR-G4-2-12-10; GAP-IN-09 text names the
+#       KA-SAT entry points as examples. Status unchanged (confirmed); the reviewer should re-read the new text.
 #  v3   (7 Nov) policy sweep (docs/sweep/): 17 Indian sources; PIB 2233122 says the space framework is
 #       advisory; GAP-IN-09 became the headline gap.
 #  v3.1 (7 Nov, Goldfish review round 1: Sonnet G1, Gemini G2/G3; docs/sweep/goldfish-round1.md)
@@ -245,7 +248,7 @@
     ask: Notify a satellite-link security standard under s.19 (for example CCSDS SDLS); ask 3GPP and ITU-T to specify feeder-link and inter-satellite-link security.
   verified: true
   verified_by: Charan Velavan, 2026-11-08 (human review of nearest provision and reasoning)
-  notes: Sweep SD-18, CL-07, CL-32. v3.2 narrowed (Goldfish G1, G3 round 2 - overlapped GAP-IN-09). TEC / ITSAR standards were not searched. No EU or UAE text in our KB names a feeder-link standard; this is a gap in international standards.
+  notes: Sweep SD-18, CL-07, CL-32. v3.2 narrowed (Goldfish G1, G3 round 2 - overlapped GAP-IN-09). The NCCS ITSAR list (8 Nov 2026) has no ITSAR for satellite links; the Crypto-Controls ITSAR (V2.0.0, enforced 1 Jan 2026) sets algorithms for certified equipment, not a satellite-link standard. No EU or UAE text in our KB names a feeder-link standard; this is a gap in international standards.
 
 - id: GAP-IN-07-NO-JOINT-PLAN
   jurisdiction: IN
@@ -323,20 +326,20 @@
   topic: space_cyber
   status: confirmed
   title: No binding satellite-specific cyber-resilience baseline; the space framework is advisory
-  finding: For licensees under the 2026 Authorisation Rules ("new authorised entities"), binding general security duties apply (TCSR Rule 4; Authz Rule 54 network security and vendor checks, Rule 50 trusted sources, Rule 53 remote-access permission). Their satellite chapter (Authz Rules 59 to 62) adds interception, gateway location, terminal registration, rogue-signal and rogue-terminal reports, and interference monitoring and mitigation on direction (Rule 60(1)(f)). Older GMPCS licensees are bound by licence conditions instead. Satellite-specific cyber controls - protecting command and control links, key management, ground-segment segmentation, telemetry monitoring - appear only in the CERT-In / SIA-India framework, which PIB states is "advisory in nature". No binding satellite-specific cyber-resilience baseline was found in the sources we checked, as of 2026-11-07.
-  evidence: [IN-PIB-2026-SPACEFW-ADVISORY, IN-AUTHZ-2026-R54-1, IN-AUTHZ-2026-R60-1, IN-AUTHZ-2026-R62-2, IN-AUTHZ-2026-R62-7, IN-AUTHZ-2026-R59-4, IN-SPACEFW-2026-SDLS, IN-SPACEFW-2026-3-2-1]
+  finding: For licensees under the 2026 Authorisation Rules ("new authorised entities"), binding general security duties apply (TCSR Rule 4; Authz Rule 54 network security and vendor checks, Rule 50 trusted sources, Rule 53 remote-access permission). Their satellite chapter (Authz Rules 59 to 62) adds interception, gateway location, terminal registration, rogue-signal and rogue-terminal reports, and interference monitoring and mitigation on direction (Rule 60(1)(f)). Older GMPCS licensees are bound by licence conditions instead. Satellite-specific cyber controls - protecting command and control links, key management, ground-segment segmentation, telemetry monitoring - appear only in the CERT-In / SIA-India framework, which PIB states is "advisory in nature". India's equipment security standards (NCCS ITSARs, issued under MTCTE) do require a dedicated management interface and secure VPNs - the two entry points of the 2022 KA-SAT attack - but only for office phone exchanges (PABX, ITSAR Group IV 2.12.10, 2.12.12); none of the 64 published ITSARs covers satellite equipment (checked 8 Nov 2026). Nor was any binding rule found on encrypting satellite links. No binding satellite-specific cyber-resilience baseline was found in the sources we checked, as of 2026-11-08.
+  evidence: [IN-PIB-2026-SPACEFW-ADVISORY, IN-AUTHZ-2026-R54-1, IN-AUTHZ-2026-R60-1, IN-AUTHZ-2026-R62-2, IN-AUTHZ-2026-R62-7, IN-AUTHZ-2026-R59-4, IN-SPACEFW-2026-SDLS, IN-SPACEFW-2026-3-2-1, IN-NCCS-ITSAR-G4-2-12-10]
   affects: [satellite_operator, mobile_operator, critical_service_customer, cert_in]
   search:
     date: 2026-11-07
     sources_checked: *IN_ALL
-    terms: ["satellite", "earth station", "gateway", "telecommand|telemetry|TT&C", "encrypt", "authenticat*", "segmentation", "key management", "interference", "advisory", "binding", "sabotage"]
+    terms: ["satellite", "earth station", "gateway", "telecommand|telemetry|TT&C", "encrypt", "authenticat*", "segmentation", "key management", "interference", "advisory", "binding", "sabotage", "ITSAR (NCCS list, 8 Nov)", "management interface", "VPN"]
     nearest_provision:
       source: in-space-fw-2026
       pinpoint: PDF p. 17
       quote: "Adopt standardized and validated cryptographic protocols (e.g., FIPS 140-3, Consultative Committee for Space Data Systems Space Data Link Security (CCSDS SDLS), Advanced Encryption Standard (AES)-256)."
     why_not_covered: PIB release 2233122 (26 Feb 2026) - "These guidelines are advisory in nature". The framework's §3.2 heading says "Regulatory Obligations", but no legal basis is stated. The binding rules are general (any telecom network), about sovereignty and interception, or about interference on direction; GMPCS conditions 41.7 and 41.9 set outcomes (privacy, counter sabotage), not satellite controls.
   analysis:
-    impact: A KA-SAT-style attack (the 2022 attack that used a satellite operator's management network to disable thousands of user terminals) would breach general duties but no binding satellite-specific control that a regulator could audit.
+    impact: A KA-SAT-style attack (2022 - a misconfigured VPN gave access to the satellite operator's management network, and commands from it disabled tens of thousands of user terminals) would breach general duties but no binding satellite-specific control that a regulator could audit. The same two controls are already mandated for an office PABX. Context only, not evidence - the "Don't Look Up" study (ACM CCS 2025) found about half of the GEO satellite traffic it observed was unencrypted.
     affected: [satellite_operator, critical_service_customer]
     comparison:
       EU: null
@@ -350,4 +353,4 @@
     ask: Make a core set of the framework's satellite controls binding, for example as Authz Rule 62 security conditions or a standard notified under Telecom Act s.19.
   verified: true
   verified_by: Charan Velavan, 2026-11-08 (human review of nearest provision and reasoning)
-  notes: Headline gap. Replaces v2 GAP-IN-09-SPACE-FW-STATUS (resolved by PIB 2233122). Comparison - NIS2 (EU-NIS2-2022-ANNEX-I-SPACE) brings space ground operators under binding general duties, which is parity with Authz Rule 54, not a satellite-specific baseline; the EU Space Act proposal COM(2025) 335 would add satellite-specific rules but is only a proposal (docs/sweep/checklist.yaml). So no binding comparator is claimed. Sub-points parked (Goldfish G3) - no space ISAC or binding threat-sharing duty (CL-20, SD-08); satellite compromise is not a named CERT-In Annexure I incident type (SD-17). Sweep CL-01..04, CL-06, CL-10, CL-11, CL-14, CL-15, CL-22, CL-35, SD-01, SD-02, SD-05, SD-16.
+  notes: Headline gap. Replaces v2 GAP-IN-09-SPACE-FW-STATUS (resolved by PIB 2233122). Comparison - NIS2 (EU-NIS2-2022-ANNEX-I-SPACE) brings space ground operators under binding general duties, which is parity with Authz Rule 54, not a satellite-specific baseline; the EU Space Act proposal COM(2025) 335 would add satellite-specific rules but is only a proposal (docs/sweep/checklist.yaml). So no binding comparator is claimed. Sub-points parked (Goldfish G3) - no space ISAC or binding threat-sharing duty (CL-20, SD-08); satellite compromise is not a named CERT-In Annexure I incident type (SD-17). v3.3 (8 Nov) - ITSAR check - source in-nccs-itsar-csr-g4-2026 and the NCCS ITSAR list were checked for this gap only. Sweep CL-01..04, CL-06, CL-10, CL-11, CL-14, CL-15, CL-22, CL-35, SD-01, SD-02, SD-05, SD-16.
