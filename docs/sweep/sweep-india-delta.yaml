@@ -1,0 +1,884 @@
+- id: SD-01
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 114
+    pinpoint: rule 62(2)
+    quote: The operation, maintenance and control facility for the satellite earth
+      station gateway and user terminals connected with the satellite network of a
+      new authorised entity shall be located in India.
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: applies only to new authorised entities providing services via satellite
+  reason: Specific cyber security controls for gateways and earth stations exist in
+    the CERT-In space framework, but that framework is advisory (PIB 2233122). Rule
+    62(2) mandates physical location of gateway control facilities in India, but does
+    not prescribe technical security standards.
+- id: SD-02
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Encryption and cryptographic authentication of TT&C links are recommended
+    in sections 5.3 and 6.3 of the CERT-In space cyber framework, but the framework
+    is confirmed advisory (PIB 2233122); no binding statutory rule imposes them.
+- id: SD-03
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 112
+    pinpoint: rule 59(4)(a)
+    quote: unauthorised satellite signal that it may detect originating or terminating
+      within India
+  - source: in-telecom-principal-services-rules-2026
+    page: 113
+    pinpoint: rule 60(1)(f)
+    quote: provide any information of and conduct tests, for interference monitoring,
+      and to take necessary steps, as directed by the Central Government, for its
+      mitigation
+  scope_note: applies only to new authorised entities providing services via satellite
+  reason: Rule 59(4)(a) and Rule 60(1)(f) impose binding duties on satellite authorised
+    entities to report unauthorised satellite signals and provide information for
+    interference monitoring, but intentional RF jamming and GNSS spoofing are not
+    comprehensively codified as distinct reportable categories.
+- id: SD-04
+  old_result: COVERED
+  new_result: COVERED
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 114
+    pinpoint: rule 62(1)
+    quote: Every new authorised entity having permission in rule 59 shall, prior to
+      provision of principal telecommunication services to users using satellite network,
+      successfully demonstrate the lawful interception systems and lawful interception
+      monitoring facilities
+  - source: dot-gmpcs-license-agreement
+    page: 35
+    pinpoint: condition 41.1
+    quote: The operation and maintenance of the GMPCS gateway, which may be located
+      in India, shall be entrusted to VSNL or an agency authorised by the Government
+      for this purpose. The LICENSEE shall demonstrate the system capabilities with
+      respect to security
+  scope_note: applies to satellite authorisations under Chapter VII and GMPCS licence
+    holders
+  reason: Chapter VII rule 62 of the 2026 Rules and Condition 41 of the GMPCS Licence
+    Agreement establish explicit, binding security and interception conditions directly
+    applicable to satellite network authorisations.
+- id: SD-05
+  old_result: UNCLEAR
+  new_result: COVERED
+  evidence:
+  - source: dot-gmpcs-license-agreement
+    page: 30
+    pinpoint: condition 31.3
+    quote: The user/ mobile terminals employed in the network shall be of a type/model
+      certified by an internationally accredited agency with respect to ITU/ETSI/TEC
+      standards or any other international standard as may be approved by the Government.
+  - source: dot-gmpcs-license-agreement
+    page: 30
+    pinpoint: condition 31.4
+    quote: Administrative approval for the User Terminals (UT) which have been registered
+      with ITU or certified by other International Scientific Test Laboratories shall
+      be accorded by TEC on behalf of Licensing Authority, for use in India
+  - source: in-telecom-principal-services-rules-2026
+    page: 114
+    pinpoint: rule 62(6)
+    quote: Every new authorised entity shall ensure that any access to its principal
+      telecommunication services to a user shall be provided only after registering
+      the user terminal provided to such user, on equipment identity register of such
+      new authorised entity
+  scope_note: applies to GMPCS licensees and new authorised entities providing services
+    via satellite
+  reason: Condition 31.3-31.4 of the DoT GMPCS agreement mandates international/TEC
+    certification and administrative security approval by TEC for satellite user terminals,
+    and Rule 62(6) mandates EIR registration before service access.
+- id: SD-06
+  old_result: COVERED
+  new_result: COVERED
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 106
+    pinpoint: rule 45(1)(c)
+    quote: obtain the details of the supply chain of the telecommunication equipment
+      and systems, from the manufacturer, vendor or supplier of the telecommunication
+      equipment and systems at the time of procurement and keep a record of the same
+  - source: in-telecom-principal-services-rules-2026
+    page: 107
+    pinpoint: rule 50(5)
+    quote: Every new authorised entity shall adhere to conditions as specified by
+      the designated authority on its website for procurement of telecommunication
+      equipment and establish, operate, maintain and expand only trusted products
+      in its telecommunication network.
+  scope_note: applies to all new authorised entities
+  reason: Rules 45(1)(c) and 50 of the 2026 Rules add direct binding duties to record
+    supply chain details and deploy only trusted products from trusted sources designated
+    by the National Cyber Security Coordinator.
+- id: SD-07
+  old_result: COVERED
+  new_result: COVERED
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 106
+    pinpoint: rule 46
+    quote: Every new authorised entity shall ensure that domestic traffic, or any
+      part thereof, is not hauled or routed through any place outside India
+  - source: in-telecom-principal-services-rules-2026
+    page: 112
+    pinpoint: rule 60(1)(a)
+    quote: ensure that all traffic on the satellite network originating from or terminating
+      on the user terminals located in India shall pass through a satellite earth
+      station gateway, located in India, of such new authorised entity
+  - source: in-telecom-principal-services-rules-2026
+    page: 114
+    pinpoint: rule 62(2)
+    quote: The operation, maintenance and control facility for the satellite earth
+      station gateway and user terminals connected with the satellite network of a
+      new authorised entity shall be located in India.
+  scope_note: applies only to new authorised entities providing services via satellite
+  reason: Rules 46, 60(1)(a)-(b), and 62(2) establish strict statutory requirements
+    that satellite gateways, control facilities, and domestic traffic remain exclusively
+    within India, prohibiting extraterritorial routing even during gateway failure.
+- id: SD-08
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Threat information sharing is recommended in space cyber framework sections
+    4.2 and 7.2, but the framework is advisory (PIB 2233122); no binding statutory
+    mandate obliges satellite operators to participate in a sector ISAC.
+- id: SD-09
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Vulnerability reporting channels are encouraged under CERT-In FAQ 35 and
+    space framework section 8.2, but the space framework is advisory (PIB 2233122)
+    and Indian law lacks a binding statutory CVD framework with safe harbour.
+- id: SD-11
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Customer and downstream notification recommendations in space framework
+    section 7.2 are advisory (PIB 2233122). Binding rules mandate incident reports
+    to the government/CERT-In, but do not mandate warning dependent users.
+- id: SD-12
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: dot-disaster-sop-telecom
+    page: 12
+    pinpoint: section 3.2.5
+    quote: Priority user groups are to be identified, who might be involved in rescue,
+      relief and restoration activities... Priority is to be given to these groups
+      for provisioning of additional communication facilities and restoration of telecom
+      services
+  - source: in-telecom-principal-services-rules-2026
+    page: 101
+    pinpoint: rule 38(1)
+    quote: Every new authorised entity shall for the purposes of disaster management,
+      ensuring public safety or providing response to an emergency or a disaster as
+      defined under the Disaster Management Act, 2005 (53 of 2005), adhere to such
+      directions
+  scope_note: DoT SOP-2017 for telecom service providers responding to disasters;
+    binding status not stated
+  reason: DoT SOP-2017 section 3.2.5 identifies priority user groups (police, fire,
+    medical, NDRF, army) for priority telecom provisioning, backed by Rule 38(1) disaster
+    obligations, but SOP binding status is unstated.
+- id: SD-13
+  old_result: NOT_FOUND
+  new_result: UNCLEAR
+  evidence:
+  - source: dot-disaster-sop-telecom
+    page: 9
+    pinpoint: section 3.1.4
+    quote: Provide an uninterrupted power supply (UPS) along with sufficient External
+      Battery support to ensure that the power supply is not interrupted to the key
+      equipment in the event of a main power supply failure.
+  scope_note: DoT SOP-2017 for telecom service providers responding to disasters;
+    binding status not stated
+  reason: DoT SOP-2017 section 3.1.4 recommends uninterrupted power supplies (UPS),
+    external battery support, and backup generators for critical telecom elements,
+    but the SOP's binding status is unstated and no specific minimum duration (e.g.
+    hours) is codified.
+- id: SD-14
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: dot-disaster-sop-telecom
+    page: 6
+    pinpoint: section 2.3.1
+    quote: At National or central level, all Disaster related activities will be coordinated
+      and monitored by National Telecom Disaster Co-ordination Committee (NTDCC).
+      The committee will be chaired by the Member (T), DOT
+  - source: dot-disaster-sop-telecom
+    page: 16
+    pinpoint: section 6.1(iv)
+    quote: TERM units of DOT shall be the single nodal point in the disaster region
+      where representatives of TSPs shall also be present to coordinate and oversee
+      communication restoration efforts.
+  scope_note: DoT SOP-2017 institutional disaster coordination structure for telecom
+    sector
+  reason: DoT SOP-2017 sections 2.3.1 and 6.1(iv) establish the NTDCC and TERM single
+    nodal point across DoT and TSPs, but this is a physical disaster response mechanism
+    of unstated binding status that does not integrate CERT-In for joint cyber command.
+- id: SD-15
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-trai-qos-regulations-2024
+    page: 102
+    pinpoint: regulation B(iv)
+    quote: Percentage of significant network outage (services not available in a district
+      for more than 4 hours) reported to the Authority within 24 hrs of start of the
+      outage
+  - source: in-telecom-principal-services-rules-2026
+    page: 112
+    pinpoint: rule 59(4)
+    quote: Every new authorised entity shall report the following incidents to the
+      Central Government, and shall adhere to such directions issued by the Central
+      Government in this behalf
+  scope_note: applies to telecom access/broadband providers and satellite network
+    authorised entities
+  reason: 'New sources confirm disparate reporting clocks across regulators: TRAI
+    QoS regulations mandate a 24-hour clock from outage start, while TCSR mandates
+    6 hours from occurrence, CERT-In mandates 6 hours from noticing, and PSR 2026
+    mandates reporting unauthorised signals on the portal.'
+- id: SD-16
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: official PIB release on CERT-In/SIA-India space cyber security guidelines
+  reason: The Government of India officially confirmed via PIB release ID 2233122
+    that the CERT-In/SIA-India space framework guidelines are advisory in nature,
+    resolving doubts about their binding effect.
+- id: SD-17
+  old_result: UNCLEAR
+  new_result: COVERED
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 112
+    pinpoint: rule 59(4)
+    quote: (a) unauthorised satellite signal that it may detect originating or terminating
+      within India; and (b) unauthorised access from India of any satellite that may
+      be under its control or operation
+  scope_note: applies only to new authorised entities providing services via satellite
+  reason: Rule 59(4) of the 2026 Rules establishes a binding statutory duty on satellite
+    authorised entities to report unauthorised satellite signals and unauthorised
+    satellite access to the Central Government.
+- id: SD-18
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: dot-gmpcs-license-agreement
+    page: 30
+    pinpoint: condition 31.3
+    quote: The user/ mobile terminals employed in the network shall be of a type/model
+      certified by an internationally accredited agency with respect to ITU/ETSI/TEC
+      standards or any other international standard as may be approved by the Government.
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: applies to GMPCS licence holders
+  reason: GMPCS agreement Condition 31.3 cites ITU/ETSI/TEC standards for user terminals,
+    while citations of CCSDS and ISO standards in the space framework remain advisory
+    (PIB 2233122); 3GPP NTN security standards remain uncited in binding rules.
+- id: CL-01
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Requirements for validated encryption and cryptographic authentication of
+    command and telemetry links are set out in space framework sections 5.3 and 6.3,
+    but the framework is advisory (PIB 2233122); no binding statutory rule imposes
+    them.
+- id: CL-02
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Anti-replay sequence numbering and counters for command links are recommended
+    in space framework section 6.3(b), which is confirmed advisory (PIB 2233122);
+    no binding statutory rule mandates them.
+- id: CL-03
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Cryptographic key lifecycle management policies across space and ground
+    segments are recommended in space framework section 6.3(c), but the framework
+    is advisory (PIB 2233122); no binding rule mandates formal key lifecycle management.
+- id: CL-04
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 108
+    pinpoint: rule 53(1)
+    quote: Every new authorised entity shall seek prior permission of the Central
+      Government, to provide remote access to its telecommunication network from a
+      location outside India
+  - source: in-telecom-principal-services-rules-2026
+    page: 114
+    pinpoint: rule 62(2)
+    quote: The operation, maintenance and control facility for the satellite earth
+      station gateway and user terminals connected with the satellite network of a
+      new authorised entity shall be located in India.
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: applies to new authorised entities providing services via satellite
+  reason: Network segmentation and isolation of ground command systems are detailed
+    in space framework section 6.2, which is advisory (PIB 2233122). Rules 53 and
+    62(2) restrict foreign remote access and mandate Indian control facilities, but
+    do not codify specific logical network segmentation.
+- id: CL-06
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 112
+    pinpoint: rule 59(4)(a)
+    quote: unauthorised satellite signal that it may detect originating or terminating
+      within India
+  - source: in-telecom-principal-services-rules-2026
+    page: 113
+    pinpoint: rule 60(1)(d)
+    quote: provide real-time traffic monitoring facility to ensure the compliance
+      of clauses (a) to (c) above
+  - source: in-telecom-principal-services-rules-2026
+    page: 115
+    pinpoint: rule 62(11)(b)
+    quote: deploy appropriate technical measures, including automated tools or other
+      suitable mechanisms for identification and reporting of any such device in its
+      telecommunication network.
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: applies only to new authorised entities providing services via satellite
+  reason: Continuous monitoring and IDS recommendations in space framework section
+    6.2 are advisory (PIB 2233122). Rules 59(4), 60(1)(d), and 62(11)(b) mandate real-time
+    traffic monitoring and automated tools to identify spoofing and unauthorised signals,
+    providing stronger nearest duties.
+- id: CL-07
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Network-layer encryption and operator protection for satellite feeder links
+    recommended in space framework section 5.3 are confirmed advisory (PIB 2233122);
+    no binding statutory rule mandates feeder link encryption.
+- id: CL-09
+  old_result: UNCLEAR
+  new_result: COVERED
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 114
+    pinpoint: rule 62(7)
+    quote: Every new authorised entity shall report to the Central Government on the
+      portal, any attempt to access or use the satellite network by a user terminal
+      not registered under sub-rule (6)
+  - source: in-telecom-principal-services-rules-2026
+    page: 114
+    pinpoint: rule 62(11)(a)
+    quote: ensure that no location spoofing tool, whether hardware or software, be
+      incorporated with the user terminals to hide the actual location of the user
+      terminals; and
+  - source: in-telecom-principal-services-rules-2026
+    page: 115
+    pinpoint: rule 62(11)(b)
+    quote: deploy appropriate technical measures, including automated tools or other
+      suitable mechanisms for identification and reporting of any such device in its
+      telecommunication network.
+  scope_note: applies only to new authorised entities providing services via satellite
+  reason: Rule 62(7)-(8) and Rule 62(11) of the 2026 Rules impose binding statutory
+    duties on satellite operators to detect and report unregistered/rogue user terminals
+    and deploy automated technical measures against terminal location spoofing.
+- id: CL-10
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Secure boot, signed firmware updates, and tamper-resistant storage for commercial
+    terminals are recommended in space framework section 6.5, which is advisory (PIB
+    2233122); binding rules prohibit spoofing tools but do not mandate secure boot
+    or tamper resistance.
+- id: CL-11
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 113
+    pinpoint: rule 60(1)(f)
+    quote: provide any information of and conduct tests, for interference monitoring,
+      and to take necessary steps, as directed by the Central Government, for its
+      mitigation
+  - source: in-telecom-principal-services-rules-2026
+    page: 112
+    pinpoint: rule 59(4)(a)
+    quote: unauthorised satellite signal that it may detect originating or terminating
+      within India
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: applies only to new authorised entities providing services via satellite
+  reason: Technical anti-jamming measures like adaptive nulling are recommended in
+    space framework section 6.1, which is advisory (PIB 2233122). Rule 60(1)(f) and
+    Rule 59(4)(a) impose nearest duties for interference monitoring tests and reporting
+    unauthorised signals.
+- id: CL-12
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 114
+    pinpoint: rule 62(11)(a)
+    quote: ensure that no location spoofing tool, whether hardware or software, be
+      incorporated with the user terminals to hide the actual location of the user
+      terminals; and
+  - source: in-telecom-principal-services-rules-2026
+    page: 115
+    pinpoint: rule 62(16)
+    quote: Every new authorised entity shall ensure compliance with the directions
+      and timelines issued by the Central Government in respect of provision of positioning
+      services through Indian regional navigation satellite systems in its user terminals.
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: applies only to new authorised entities providing services via satellite
+  reason: Anti-spoofing and resilient multi-source timing for satellite buses recommended
+    in space framework section 6.3(e) are advisory (PIB 2233122). Rule 62(11) and
+    62(16) prohibit user terminal location spoofing and mandate regional navigation
+    (NavIC) compliance.
+- id: CL-13
+  old_result: COVERED
+  new_result: COVERED
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 106
+    pinpoint: rule 45(1)(c)
+    quote: obtain the details of the supply chain of the telecommunication equipment
+      and systems, from the manufacturer, vendor or supplier of the telecommunication
+      equipment and systems at the time of procurement and keep a record of the same
+  - source: in-telecom-principal-services-rules-2026
+    page: 107
+    pinpoint: rule 50(5)
+    quote: Every new authorised entity shall adhere to conditions as specified by
+      the designated authority on its website for procurement of telecommunication
+      equipment and establish, operate, maintain and expand only trusted products
+      in its telecommunication network.
+  scope_note: applies to all new authorised entities
+  reason: Rule 45(1)(c) and Rule 50 establish binding supply chain verification and
+    trusted source requirements for telecommunication systems, strengthening existing
+    CTIR 2024 obligations.
+- id: CL-14
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 105
+    pinpoint: rule 45(1)(a)
+    quote: ensure that all documentation, including software details of telecommunication
+      equipment and systems are obtained from manufacturer, vendor or supplier of
+      telecommunication equipment and systems in English
+  - source: in-telecom-principal-services-rules-2026
+    page: 106
+    pinpoint: rule 45(1)(b)
+    quote: maintain a record of all software updates and changes, and provide to the
+      Central Government details of such category of software updates and changes
+      within fifteen days of completion of such updates and changes
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: applies to all new authorised entities
+  reason: Formal SBOM and COTS vulnerability testing recommended in space framework
+    section 6.3(f) are advisory (PIB 2233122). Rule 45(1)(a)-(b) requires preserving
+    software documentation and reporting software updates within 15 days, providing
+    nearest binding duties.
+- id: CL-15
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Formal security assessments of commercial launch providers and third-party
+    ground stations recommended in space framework section 3.2.3 and 6.2 are confirmed
+    advisory (PIB 2233122); no binding statutory rule mandates pre-integration assessments.
+- id: CL-16
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-trai-qos-regulations-2024
+    page: 102
+    pinpoint: regulation B(iv)
+    quote: Percentage of significant network outage (services not available in a district
+      for more than 4 hours) reported to the Authority within 24 hrs of start of the
+      outage
+  scope_note: TRAI QoS regulations apply to access and broadband providers
+  reason: TRAI QoS regulations establish a 24-hour reporting clock specifically for
+    significant network outages, but cyber incident notification remains under a 6-hour
+    clock (CERT-In / TCSR Rule 7).
+- id: CL-18
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 112
+    pinpoint: rule 59(4)
+    quote: (a) unauthorised satellite signal that it may detect originating or terminating
+      within India; and (b) unauthorised access from India of any satellite that may
+      be under its control or operation
+  - source: in-telecom-principal-services-rules-2026
+    page: 113
+    pinpoint: rule 60(1)(f)
+    quote: provide any information of and conduct tests, for interference monitoring,
+      and to take necessary steps, as directed by the Central Government, for its
+      mitigation
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: applies only to new authorised entities providing services via satellite
+  reason: Rule 59(4) mandates reporting unauthorised satellite signals and unauthorised
+    satellite access, and Rule 60(1)(f) mandates interference monitoring info. Reporting
+    of orbital telemetry anomalies in space framework section 7.1 remains advisory
+    (PIB 2233122).
+- id: CL-19
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Recommendations to inform downstream users and interconnected carriers in
+    space framework section 7.2 are advisory (PIB 2233122). TRAI QoS rules require
+    rebate/reporting for outages, but no binding rule mandates warning downstream
+    carriers of cyber incidents.
+- id: CL-20
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Participation in a sectoral ISAC or space threat exchange recommended in
+    space framework sections 4.2 and 7.2 is confirmed advisory (PIB 2233122); no statutory
+    mandate requires participation.
+- id: CL-21
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Coordinated vulnerability disclosure procedures recommended in space framework
+    section 8.2 are confirmed advisory (PIB 2233122); no binding statutory CVD mechanism
+    or legal safe harbour exists.
+- id: CL-22
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 114
+    pinpoint: rule 62(1)
+    quote: Every new authorised entity having permission in rule 59 shall, prior to
+      provision of principal telecommunication services to users using satellite network,
+      successfully demonstrate the lawful interception systems and lawful interception
+      monitoring facilities
+  - source: dot-gmpcs-license-agreement
+    page: 35
+    pinpoint: condition 41.1
+    quote: The LICENSEE shall demonstrate the system capabilities with respect to
+      security aspects including monitoring to the LICENSOR or its authorised representative
+      prior to starting of operations in India.
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: applies to satellite authorisations and GMPCS licensees
+  reason: Pre-launch penetration testing recommended in space framework section 5.3
+    is advisory (PIB 2233122). Rule 62(1) and GMPCS Condition 41.1 require pre-operational
+    demonstration of security and interception systems, serving as nearest binding
+    duties.
+- id: CL-23
+  old_result: COVERED
+  new_result: COVERED
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 112
+    pinpoint: rule 59(3)
+    quote: The Central Government may, subject to its assessment of the application,
+      grant permission to the new authorised entity, subject to such terms and conditions
+      as it may specify in such permission
+  - source: in-telecom-principal-services-rules-2026
+    page: 112
+    pinpoint: rule 59(6)
+    quote: A new authorised entity that has been granted permission under sub-rule
+      (3) may apply for assignment of spectrum under applicable law, subject to meeting
+      any other eligibility conditions for such assignment under such law.
+  - source: in-telecom-principal-services-rules-2026
+    page: 114
+    pinpoint: rule 62(1)
+    quote: Every new authorised entity having permission in rule 59 shall, prior to
+      provision of principal telecommunication services to users using satellite network,
+      successfully demonstrate the lawful interception systems and lawful interception
+      monitoring facilities
+  scope_note: applies to new authorised entities providing services via satellite
+  reason: Rule 59(1)-(3), Rule 59(6), and Rule 62(1) explicitly condition satellite
+    network permissions and subsequent spectrum assignment on security baseline compliance
+    and successful demonstration of interception/monitoring systems.
+- id: CL-24
+  old_result: NOT_FOUND
+  new_result: UNCLEAR
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 112
+    pinpoint: rule 59(3)(b)
+    quote: shall prior to undertaking such change in the satellite network or in frequency
+      band as specified in the orders, directions or guidelines issued by the Central
+      Government, apply on the portal, for its approval in writing.
+  - source: in-telecom-principal-services-rules-2026
+    page: 106
+    pinpoint: rule 45(1)(b)
+    quote: maintain a record of all software updates and changes, and provide to the
+      Central Government details of such category of software updates and changes
+      within fifteen days of completion of such updates and changes
+  scope_note: applies only to new authorised entities providing services via satellite
+  reason: Rule 59(3)(b) requires prior written approval before making specified changes
+    to a satellite network, and Rule 45(1)(b) requires reporting software updates
+    within 15 days; while not a specific in-orbit firmware re-authorisation scheme,
+    these provide nearest binding provisions.
+- id: CL-25
+  old_result: COVERED
+  new_result: COVERED
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 106
+    pinpoint: rule 46
+    quote: Every new authorised entity shall ensure that domestic traffic, or any
+      part thereof, is not hauled or routed through any place outside India
+  - source: in-telecom-principal-services-rules-2026
+    page: 112
+    pinpoint: rule 60(1)(a)
+    quote: ensure that all traffic on the satellite network originating from or terminating
+      on the user terminals located in India shall pass through a satellite earth
+      station gateway, located in India, of such new authorised entity
+  - source: in-telecom-principal-services-rules-2026
+    page: 114
+    pinpoint: rule 62(2)
+    quote: The operation, maintenance and control facility for the satellite earth
+      station gateway and user terminals connected with the satellite network of a
+      new authorised entity shall be located in India.
+  scope_note: applies only to new authorised entities providing services via satellite
+  reason: Rules 44, 46, 60(1)(a)-(c), and 62(2) strictly prohibit routing or mirroring
+    domestic satellite traffic outside India and mandate that gateway operation, maintenance,
+    and control facilities reside in India.
+- id: CL-26
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Maintaining redundant and physically diverse TT&C links recommended in space
+    framework section 5.3 and 6.3(a) is confirmed advisory (PIB 2233122); no binding
+    statutory rule mandates link diversity.
+- id: CL-27
+  old_result: NOT_FOUND
+  new_result: UNCLEAR
+  evidence:
+  - source: dot-disaster-sop-telecom
+    page: 12
+    pinpoint: section 3.2.5
+    quote: TSPs should keep, as inventory, certain minimum number of portable BTSs
+      and satellite equipment for connecting to BSC/MSC in case of disaster. Suggested
+      number could be around 10 per TSP
+  - source: dot-disaster-sop-telecom
+    page: 16
+    pinpoint: section 6.1(ii)
+    quote: If required portable / vehicle mounted / air-transportable BTSs / BSCs
+      with backhaul on satellite media may be installed by TSPs.
+  scope_note: DoT SOP-2017 for telecom service providers responding to disasters;
+    binding status not stated
+  reason: DoT SOP-2017 section 3.2.5 and 6.1(ii) recommend maintaining portable BTSs
+    with satellite/VSAT backhaul (around 10 per TSP) and deploying satellite media
+    for disaster restoration, providing a nearest provision, though it is not an automated
+    failover requirement.
+- id: CL-28
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: dot-disaster-sop-telecom
+    page: 12
+    pinpoint: section 3.2.5
+    quote: Priority user groups are to be identified, who might be involved in rescue,
+      relief and restoration activities... Priority is to be given to these groups
+      for provisioning of additional communication facilities and restoration of telecom
+      services
+  - source: in-telecom-principal-services-rules-2026
+    page: 101
+    pinpoint: rule 38(1)
+    quote: Every new authorised entity shall for the purposes of disaster management,
+      ensuring public safety or providing response to an emergency or a disaster as
+      defined under the Disaster Management Act, 2005 (53 of 2005), adhere to such
+      directions
+  scope_note: DoT SOP-2017 for telecom service providers responding to disasters;
+    binding status not stated
+  reason: DoT SOP-2017 section 3.2.5 and Rule 38(1) mandate priority provisioning
+    and restoration for identified emergency response user groups during disaster
+    response, but do not operationalize automated QoS traffic pre-emption on NTN links.
+- id: CL-29
+  old_result: NOT_FOUND
+  new_result: UNCLEAR
+  evidence:
+  - source: dot-disaster-sop-telecom
+    page: 9
+    pinpoint: section 3.1.4
+    quote: Provide an uninterrupted power supply (UPS) along with sufficient External
+      Battery support to ensure that the power supply is not interrupted to the key
+      equipment in the event of a main power supply failure.
+  scope_note: DoT SOP-2017 for telecom service providers responding to disasters;
+    binding status not stated
+  reason: DoT SOP-2017 section 3.1.4 recommends redundant UPS, external battery support,
+    and backup generators for critical telecom components generally, serving as nearest
+    provision, but does not specifically mandate them for satellite ground gateways.
+- id: CL-30
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: dot-disaster-sop-telecom
+    page: 6
+    pinpoint: section 2.3.1
+    quote: At National or central level, all Disaster related activities will be coordinated
+      and monitored by National Telecom Disaster Co-ordination Committee (NTDCC).
+      The committee will be chaired by the Member (T), DOT
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: DoT SOP-2017 disaster coordination framework
+  reason: Inter-agency space cyber defense mechanisms recommended in space framework
+    section 7.2 are advisory (PIB 2233122). The NTDCC under DoT SOP-2017 coordinates
+    disaster telecom operations but excludes defense/military space commands.
+- id: CL-31
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Establishing a specialized Space CSIRT recommended in space framework sections
+    7.2 and 7.3 is confirmed advisory (PIB 2233122); no designated statutory Space
+    CSIRT has been established.
+- id: CL-32
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: dot-gmpcs-license-agreement
+    page: 30
+    pinpoint: condition 31.3
+    quote: The user/ mobile terminals employed in the network shall be of a type/model
+      certified by an internationally accredited agency with respect to ITU/ETSI/TEC
+      standards or any other international standard as may be approved by the Government.
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: applies to GMPCS licence holders
+  reason: Citations of CCSDS 355.0-B-2 in space framework section 9.2(a) are advisory
+    (PIB 2233122). GMPCS agreement Condition 31.3 cites ITU/ETSI/TEC standards for
+    terminals, but no binding rule mandates CCSDS SDLS for satellite links.
+- id: CL-33
+  old_result: COVERED
+  new_result: COVERED
+  evidence:
+  - source: in-telecom-principal-services-rules-2026
+    page: 101
+    pinpoint: rule 39(1)(a)
+    quote: majority of directors on the board of such new authorised entity shall
+      be Indian citizens;
+  - source: in-telecom-principal-services-rules-2026
+    page: 101
+    pinpoint: rule 39(1)(b)
+    quote: the chief officer in charge of telecommunication network, security, officers
+      in charge of core telecommunication network and system administrators of such
+      new authorised entity shall be resident Indian citizens;
+  scope_note: applies to all new authorised entities
+  reason: Rule 39(1)(a)-(b) mandates that a majority of the board of directors must
+    be Indian citizens and requires designated chief officers in charge of telecommunication
+    network security to be resident Indian citizens, reinforcing TCSR Rule 6.
+- id: CL-35
+  old_result: UNCLEAR
+  new_result: UNCLEAR
+  evidence:
+  - source: in-pib-space-guidelines-2026
+    page: 1
+    pinpoint: release ID 2233122
+    quote: These guidelines are advisory in nature
+  scope_note: PIB release confirming legal status of CERT-In/SIA-India space framework
+  reason: Flight computer cryptographic verification of software images and anti-rollback
+    protections recommended in space framework section 6.3(f) are confirmed advisory
+    (PIB 2233122); no binding statutory rule mandates in-orbit firmware verification.

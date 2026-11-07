@@ -325,15 +325,12 @@ class _Engine:
             if recs and all(r["_status"] == "status_not_stated" for r in recs):
                 gap, st = find_gap(self.kb, topic, jur)
                 notes = [f"gap {gap}: {st}"]
-                # the registered ambiguity gap about records whose binding status is not stated
-                notes += [f"binding status not stated: see {g['id']}"
-                          for g in self.kb.gaps_for("space_cyber", jur) if g["id"] != gap]
                 self.add("AMBIGUITY", rid, topic, ids(recs),
                          f"{label}: the only matching record(s) {', '.join(ids(recs))} do not state whether they bind, "
                          f"so two readings are given and neither is dropped as 'not applicable'.",
                          gap_id=gap,
-                         readings=[{"reading": "framework binding", "result": "procedure required (no deadline stated)"},
-                                   {"reading": "framework not binding",
+                         readings=[{"reading": "record binding", "result": "duty as written in the record (see its quote)"},
+                                   {"reading": "record not binding",
                                     "result": f"no duty found in the sources we checked, as of {self.as_of}"}],
                          notes=notes)
                 continue

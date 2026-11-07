@@ -31,7 +31,9 @@ def question(topic, jur="IN", on="2026-11-10", **kw):
 
 # ---------------------------------------------------------------- deadlines
 CLOCKS = {"jurisdiction": "IN", "now": f"2026-11-10T20:00:00{IST}",
-          "triggers": {"noticing": f"2026-11-10T19:02:00{IST}", "occurrence": f"2026-11-10T18:40:00{IST}"}}
+          "triggers": {"noticing": f"2026-11-10T19:02:00{IST}", "awareness": f"2026-11-10T19:02:00{IST}",
+                       "occurrence": f"2026-11-10T18:40:00{IST}"}}
+CTI = ["IN-CERTIN-DIR-2022-ii", "IN-TCSR-2024-R7-1", "IN-CTIR-2024-R7-1-j"]   # entity runs designated CTI
 
 
 def test_certin_deadline_arithmetic():
@@ -44,8 +46,8 @@ def test_certin_deadline_arithmetic():
 
 
 def test_tcsr_deadline_arithmetic():
-    v = one(ev({**CLOCKS, "applies": ["IN-TCSR-2024-R7-1"]}))
-    assert dt.datetime.fromisoformat(v.deadline) == dt.datetime.fromisoformat(f"2026-11-11T00:40:00{IST}")
+    v = one(ev({**CLOCKS, "applies": ["IN-TCSR-2024-R7-1"]}))    # notified Rule 7(1)(a): from becoming aware
+    assert dt.datetime.fromisoformat(v.deadline) == dt.datetime.fromisoformat(f"2026-11-11T01:02:00{IST}")
     assert v.deadline.endswith("+05:30")
 
 
@@ -60,7 +62,7 @@ def test_sent_in_time_is_compliant_and_late_is_violation():
 
 
 def test_not_sent_after_deadline_is_violation():
-    f = {**CLOCKS, "applies": ["IN-TCSR-2024-R7-1"], "now": f"2026-11-11T01:00:00{IST}"}
+    f = {**CLOCKS, "applies": ["IN-TCSR-2024-R7-1"], "now": f"2026-11-11T01:10:00{IST}"}
     assert one(ev(f)).verdict == "VIOLATION"
 
 
@@ -68,41 +70,47 @@ def test_missing_trigger_or_now_is_insufficient_evidence():
     f = {"jurisdiction": "IN", "now": f"2026-11-10T20:00:00{IST}", "applies": ["IN-TCSR-2024-R7-1"],
          "triggers": {"noticing": f"2026-11-10T19:02:00{IST}"}}
     v = one(ev(f))
-    assert v.verdict == "INSUFFICIENT_EVIDENCE" and "triggers.occurrence" in v.explanation
+    assert v.verdict == "INSUFFICIENT_EVIDENCE" and "triggers.awareness" in v.explanation
     f = {**CLOCKS, "applies": ["IN-TCSR-2024-R7-1"]}
     del f["now"]
     assert one(ev(f)).verdict == "INSUFFICIENT_EVIDENCE"
 
 
+def test_default_clocks_agree_for_ordinary_entity():
+    # CERT-In (noticing) and TCSR (awareness) start at the same moment here: no ambiguity
+    assert not [v for v in ev(CLOCKS) if v.verdict == "AMBIGUITY"]
+
+
 def test_ambiguity_gives_earliest_deadline():
-    vs = ev(CLOCKS)
+    vs = ev({**CLOCKS, "applies": CTI})
     amb = one(vs, "AMBIGUITY", "IN-R-CLOCKS")
-    assert amb.gap_id == "GAP-IN-01-THREE-CLOCKS"
+    assert amb.gap_id == "GAP-IN-01-REPORTING-CLOCKS"
     assert dt.datetime.fromisoformat(amb.deadline) == dt.datetime.fromisoformat(f"2026-11-11T00:40:00{IST}")
-    assert len(amb.readings) == 2
-    assert {r["record"] for r in amb.readings} == {"IN-CERTIN-DIR-2022-ii", "IN-TCSR-2024-R7-1"}
+    assert {r["record"] for r in amb.readings} == set(CTI)
     assert amb.time_left == "4 h 40 m left"
 
 
 def test_fault_then_attack_lists_each_reading():
-    f = {**CLOCKS, "triggers": {"noticing": f"2026-11-11T06:40:00{IST}",
+    f = {**CLOCKS, "applies": CTI, "triggers": {"noticing": f"2026-11-11T06:40:00{IST}",
+                                                "awareness": f"2026-11-11T06:40:00{IST}",
                                 "occurrence": [{"label": "outage start", "at": f"2026-11-11T02:10:00{IST}"},
                                                {"label": "first malicious login", "at": f"2026-11-11T01:55:00{IST}"}]},
          "now": f"2026-11-11T06:40:00{IST}",
          "classifications": [{"at": f"2026-11-11T02:10:00{IST}", "label": "fault"},
                              {"at": f"2026-11-11T06:40:00{IST}", "label": "attack"}]}
     amb = one(ev(f), "AMBIGUITY", "IN-R-CLOCKS")
-    assert len(amb.readings) == 3
+    assert len(amb.readings) == 4          # CERT-In, TCSR, CTIR x2 occurrence readings
     assert amb.deadline.startswith("2026-11-11T07:55")
     assert amb.time_left == "1 h 15 m left"
     assert any("fault" in n for n in amb.notes)
 
 
-def test_space_framework_status_not_stated_is_ambiguity():
+def test_space_framework_is_advisory_not_a_legal_clock():
+    # PIB 2233122 (26 Feb 2026): "advisory in nature" -> its 6 h line is never applied as a legal deadline
     f = {**CLOCKS, "applies": ["IN-SPACEFW-2026-3-2-1"]}
     v = one(ev(f))
-    assert v.verdict == "AMBIGUITY" and v.gap_id == "GAP-IN-09-SPACE-FW-STATUS"
-    assert "not applicable" not in v.explanation.replace("'not applicable'", "")
+    assert v.verdict == "INSUFFICIENT_EVIDENCE" and "not binding" in v.explanation
+    assert v.verdict not in ("COMPLIANT", "VIOLATION")
 
 
 # ---------------------------------------------------------------- conflict
@@ -122,8 +130,8 @@ def test_conflict_pb05_pb06():
 
 # ---------------------------------------------------------------- coverage and guards
 def test_each_of_six_verdicts_occurs():
-    seen = {v.verdict for v in ev(CLOCKS)}                                   # AMBIGUITY, COMPLIANT
-    seen |= {question("capacity_priority").verdict}                          # POTENTIAL_GAP
+    seen = {v.verdict for v in ev({**CLOCKS, "applies": CTI})}              # AMBIGUITY, COMPLIANT
+    seen |= {question("failover_path_security").verdict}                     # POTENTIAL_GAP
     seen |= {one(ev({**CLOCKS, "now": f"2026-11-11T02:00:00{IST}", "applies": ["IN-TCSR-2024-R7-1"]})).verdict}
     seen |= {one(ev({"jurisdiction": "IN", "applies": ["IN-TCSR-2024-R7-1"], "triggers": {}})).verdict}
     seen |= {ev({"proposed_actions": [{"playbook": "PB-05", "targets": ["g"]},
@@ -166,7 +174,7 @@ def test_footer_asof_and_ids_exist_on_all_verdicts():
 
 
 def test_explanation_wording_for_gaps():
-    v = question("capacity_priority")
+    v = question("failover_path_security")
     assert f"as of {KB.as_of}" in v.explanation
     assert "sources we checked" in v.explanation
 
@@ -189,17 +197,42 @@ def test_negative_control(jur, topic, record):
 
 
 # ---------------------------------------------------------------- positive gap checks
-def test_downstream_warning_in_is_ambiguity_via_space_framework():
+def test_downstream_warning_in_is_gap_with_advisory_material_cited():
     v = question("downstream_warning")
-    assert v.verdict == "AMBIGUITY" and v.gap_id.startswith("GAP-IN-02")
-    assert "IN-SPACEFW-2026-ANXB-IV" in v.record_ids
-    assert len(v.readings) == 2 and any("GAP-IN-09-SPACE-FW-STATUS" in n for n in v.notes)
+    assert v.verdict == "POTENTIAL_GAP" and v.gap_id.startswith("GAP-IN-02")
+    assert "IN-SPACEFW-2026-ANXB-IV" in v.record_ids          # advisory checklist item is shown, not counted
+
+
+@pytest.mark.parametrize("topic,prefix,record", [
+    ("capacity_priority", "GAP-IN-03", "IN-DOT-SOP-2017-3-2-5"),   # SOP priority groups, status not stated
+    ("backup_power", "GAP-IN-04", "IN-DOT-SOP-2017-3-1-3"),        # SOP "sufficient" backup, no hours
+])
+def test_sop_topics_are_ambiguity(topic, prefix, record):
+    v = question(topic)
+    assert v.verdict == "AMBIGUITY" and v.gap_id.startswith(prefix) and record in v.record_ids
+
+
+def test_space_cyber_in_is_headline_gap():
+    v = question("space_cyber")
+    assert v.verdict == "POTENTIAL_GAP" and v.gap_id == "GAP-IN-09-SPACE-CYBER-ADVISORY"
+
+
+@pytest.mark.parametrize("topic,record", [
+    ("data_location", "IN-AUTHZ-2026-R62-2"),
+    ("terminal_control", "IN-AUTHZ-2026-R62-7"),
+    ("interference_reporting", "IN-AUTHZ-2026-R59-4"),
+])
+def test_binding_satellite_rules_are_covered(topic, record):       # negative controls from the sweep
+    v = question(topic)
+    assert v.verdict == "COMPLIANT" and record in v.record_ids
+
+
+def test_eu_space_cyber_covered():
+    assert question("space_cyber", jur="EU").verdict == "COMPLIANT"
 
 
 @pytest.mark.parametrize("topic,prefix", [
-    ("capacity_priority", "GAP-IN-03"),
     ("failover_path_security", "GAP-IN-08"),
-    ("backup_power", "GAP-IN-04"),
     ("joint_command", "GAP-IN-07"),
 ])
 def test_potential_gap_registered(topic, prefix):

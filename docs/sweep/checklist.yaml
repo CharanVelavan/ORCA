@@ -1,0 +1,1064 @@
+- id: CL-01
+  area: control_link
+  question: Does the national policy require satellite command, control, and telemetry links to implement validated encryption
+    and cryptographic authentication to prevent unauthorized command execution?
+  why_it_matters_ntn: Compromise of the command uplink allows malicious actors to hijack space vehicles, alter orbital trajectories,
+    or disable satellite payloads permanently.
+  references:
+  - doc: US Space Policy Directive-5 (SPD-5)
+    authority: Executive Office of the President of the United States
+    pinpoint: Section 4(b)(i)
+    url: https://www.federalregister.gov/documents/2020/09/10/2020-20150/cybersecurity-principles-for-space-systems
+    quote: Protection against unauthorized access to critical space vehicle functions. This should include safeguarding command,
+      control, and telemetry links using effective and validated authentication or encryption measures
+    binding: guidance
+    fetched: true
+  - doc: CCSDS 355.0-B-2 (SDLS)
+    authority: Consultative Committee for Space Data Systems (CCSDS)
+    pinpoint: Section 1.3, Page 1-2
+    url: https://public.ccsds.org/Pubs/355x0b2.pdf
+    quote: providing authentication, data integrity, replay protection, and/or data confidentiality.
+    binding: standard
+    fetched: true
+  search_terms:
+  - command link encryption
+  - telecommand authentication
+  - TT&C security
+  - positive control
+  - satellite telemetry link
+  - uplink encryption
+  - spacecraft command authorization
+- id: CL-02
+  area: control_link
+  question: Does the national policy require satellite command links to implement anti-replay mechanisms, such as sequence
+    numbering or anti-replay counters, to reject previously recorded valid commands?
+  why_it_matters_ntn: Adversaries can record valid past ground station commands and retransmit them later to trigger unintended
+    thruster firing, payload shutdown, or state resets.
+  references:
+  - doc: CCSDS 355.0-B-2 (SDLS)
+    authority: Consultative Committee for Space Data Systems (CCSDS)
+    pinpoint: Section 2.3.2.1, Page 2-4
+    url: https://public.ccsds.org/Pubs/355x0b2.pdf
+    quote: provides for the use of sequence numbering to detect the unauthorized replay of previously transmitted data.
+    binding: standard
+    fetched: true
+  - doc: CCSDS 350.1-G-3
+    authority: Consultative Committee for Space Data Systems (CCSDS)
+    pinpoint: Section 4.8, Page 4-4
+    url: https://public.ccsds.org/Pubs/350x1g3.pdf
+    quote: Transmissions to or from a spacecraft or between ground system computers can be intercepted, recorded, and played
+      back at a later time.
+    binding: standard
+    fetched: true
+  search_terms:
+  - anti-replay
+  - sequence numbering
+  - replay attack
+  - command playback
+  - telecommand counter
+  - replay protection
+- id: CL-03
+  area: control_link
+  question: Does the national policy require satellite operators to maintain a formal lifecycle management policy for cryptographic
+    keys governing generation, secure storage, distribution, rotation, and revocation across space and ground assets?
+  why_it_matters_ntn: Long mission lifespans and exposed broadcast links make static or poorly managed cryptographic keys
+    susceptible to compromise without feasible physical replacement.
+  references:
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 85(2)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: Union space operators shall establish a lifecycle management policy for the cryptographic keys which shall set
+      out rules for the protection and management of cryptographic key to ensure the secure generation, use, storage, distribution,
+      and disposal thereof.
+    binding: proposal
+    fetched: true
+  - doc: NIST IR 8401
+    authority: National Institute of Standards and Technology (NIST)
+    pinpoint: Section 4, PR.MP-1, Page 23
+    url: https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8401.pdf
+    quote: required for purposes such as cryptographic key loading/rotation, software and firmware updates, or other data
+      transfers for isolated components.
+    binding: guidance
+    fetched: true
+  search_terms:
+  - key management
+  - cryptographic key lifecycle
+  - key rotation
+  - key generation
+  - secure key storage
+  - key revocation
+  - space key distribution
+- id: CL-04
+  area: ground_segment
+  question: Does the national policy require satellite ground stations, mission operations centers, and command gateways to
+    maintain logical network segmentation and access controls isolating command systems from untrusted public networks?
+  why_it_matters_ntn: Satellite ground stations serve as the primary terrestrial bridge to space assets; compromise of internet-facing
+    ground networks provides lateral pathways to spacecraft commanding.
+  references:
+  - doc: NIST IR 8401
+    authority: National Institute of Standards and Technology (NIST)
+    pinpoint: Section 4, PR.AC-5, Page 20
+    url: https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8401.pdf
+    quote: Organizations should establish procedures and controls to protect the integrity of ground segment networks.
+    binding: guidance
+    fetched: true
+  - doc: US Space Policy Directive-5 (SPD-5)
+    authority: Executive Office of the President of the United States
+    pinpoint: Section 4(b)(v)
+    url: https://www.federalregister.gov/documents/2020/09/10/2020-20150/cybersecurity-principles-for-space-systems
+    quote: Adoption of appropriate cybersecurity hygiene practices, physical security for automated information systems, and
+      intrusion detection methodologies for system elements such as information systems, antennas, terminals, receivers, routers,
+      associated local and wide area networks, and power supplies;
+    binding: guidance
+    fetched: true
+  search_terms:
+  - ground segment security
+  - ground station network isolation
+  - mission operations center
+  - gateway access control
+  - network segmentation
+  - telemetry tracking and command station
+- id: CL-05
+  area: ground_segment
+  question: Does the national policy require shared ground stations and Ground Station-as-a-Service (GSaaS) providers to enforce
+    multi-tenant cryptographic isolation and strict data separation between competing satellite operators?
+  why_it_matters_ntn: The proliferation of commercial multi-mission ground networks introduces risks of cross-tenant data
+    leakage and unauthorized command injection across shared RF software-defined radios.
+  references:
+  - doc: ENISA Space Threat Landscape (2025)
+    authority: European Union Agency for Cybersecurity (ENISA)
+    pinpoint: Section 4.1, Page 30
+    url: https://www.enisa.europa.eu/sites/default/files/2025-03/Space_Threat_Landscape_Report_fin.pdf
+    quote: Furthermore, the multitenant nature of SOaaS introduces distinct threats to data privacy and service availability
+      in orbit.
+    binding: guidance
+    fetched: true
+  - doc: NIST IR 8401
+    authority: National Institute of Standards and Technology (NIST)
+    pinpoint: Section 1.2, Page 3
+    url: https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8401.pdf
+    quote: includes any system, network, or capability that interacts with a satellite bus or payload for purposes of Querying,
+      Commanding, Control and Status (C&S), or Command and Control (C2).
+    binding: guidance
+    fetched: true
+  search_terms:
+  - Ground Station-as-a-Service
+  - GSaaS
+  - multi-tenancy
+  - tenant isolation
+  - shared ground station
+  - cloud ground station
+  - cross-tenant separation
+- id: CL-06
+  area: ground_segment
+  question: Does the national policy require satellite ground control facilities to deploy continuous automated monitoring
+    and intrusion detection systems capable of identifying telemetry anomalies and unauthorized uplink attempts?
+  why_it_matters_ntn: Subtle command injection or unauthorized parameter drift in orbit can only be caught in time if ground
+    operations actively baseline and inspect telemetry streams for anomalies.
+  references:
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 83(1)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: Union space operators shall monitor on a continuous basis the occurrence of anomalies and incidents by using appropriate
+      detection systems and mechanisms.
+    binding: proposal
+    fetched: true
+  - doc: NIST IR 8401
+    authority: National Institute of Standards and Technology (NIST)
+    pinpoint: Section 4, DE.AE-1, Page 27
+    url: https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8401.pdf
+    quote: Organizations should verify that operational performance baselines and expected data flows are captured, developed,
+      and maintained to detect events.
+    binding: guidance
+    fetched: true
+  search_terms:
+  - telemetry anomaly detection
+  - ground intrusion detection
+  - unauthorized uplink
+  - continuous monitoring
+  - telemetry baseline
+  - command logging
+- id: CL-07
+  area: ground_segment
+  question: Does the national policy require operator protection and network-layer encryption for satellite feeder links connecting
+    ground gateways to spaceborne network nodes?
+  why_it_matters_ntn: Because 3GPP defines feeder links as transport links outside core mobile specification scope, national
+    policy must ensure feeder transport cannot be intercepted or tampered with.
+  references:
+  - doc: 3GPP TR 33.700-29
+    authority: 3rd Generation Partnership Project (3GPP)
+    pinpoint: Section 4, Page 10
+    url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.700-29/33700-29-j10.zip
+    quote: The feeder link and the inter-satellite link (ISL) are assumed to act only as transport layer links and are not
+      specified in 3GPP.
+    binding: standard
+    fetched: true
+  - doc: 3GPP TR 33.700-29
+    authority: 3rd Generation Partnership Project (3GPP)
+    pinpoint: Section 4, Page 10
+    url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.700-29/33700-29-j10.zip
+    quote: The security environment of 3GPP systems on board orbiting satellites is dependent on implementation and operation’s
+      policy.
+    binding: standard
+    fetched: true
+  search_terms:
+  - feeder link security
+  - satellite gateway backhaul
+  - feeder link transport
+  - ground-to-satellite transport
+  - inter-satellite link transport
+  - feeder encryption
+- id: CL-08
+  area: user_terminal
+  question: Does the national policy require non-terrestrial user terminals to conceal permanent subscriber identities (e.g.
+    SUPI/IMSI) using public-key cryptography over satellite radio links before network authentication?
+  why_it_matters_ntn: The vast geographic coverage of satellite beams makes unencrypted user identifiers easily interceptable
+    over wide areas, enabling mass user tracking and eavesdropping.
+  references:
+  - doc: 3GPP TS 33.501
+    authority: 3rd Generation Partnership Project (3GPP)
+    pinpoint: Clause 6.12.2, Page 128
+    url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.501/33501-j70.zip
+    quote: is used for SUPI protection and de-concealment of the SUCI.
+    binding: standard
+    fetched: true
+  - doc: 3GPP TR 33.700-29
+    authority: 3rd Generation Partnership Project (3GPP)
+    pinpoint: Section 5.2.3, Page 12
+    url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.700-29/33700-29-j10.zip
+    quote: The 3GPP system shall support means to mitigate the potential linkability and trackability attack on UE in the
+      Store and Forward Satellite Operation.
+    binding: standard
+    fetched: true
+  search_terms:
+  - SUCI
+  - SUPI
+  - subscriber identity concealment
+  - user identity privacy
+  - IMSI protection
+  - non-terrestrial network terminal
+  - satellite user terminal
+- id: CL-09
+  area: user_terminal
+  question: Does the national policy require satellite and non-terrestrial network operators to implement mechanisms to detect
+    rogue user terminals and verify terminal geolocation against GPS/GNSS spoofing?
+  why_it_matters_ntn: Attackers can deploy rogue NTN user equipment with forged GNSS coordinates to unlawfully access authorized
+    spectrum, bypass regional regulatory controls, or siphon capacity.
+  references:
+  - doc: ENISA Space Threat Landscape (2025)
+    authority: European Union Agency for Cybersecurity (ENISA)
+    pinpoint: Section 3.3, Page 27
+    url: https://www.enisa.europa.eu/sites/default/files/2025-03/Space_Threat_Landscape_Report_fin.pdf
+    quote: Consumer interfaces include terminals that enable users to interact with the satellite directly or with other ground
+      station segments.
+    binding: guidance
+    fetched: true
+  - doc: 3GPP TR 33.700-29
+    authority: 3rd Generation Partnership Project (3GPP)
+    pinpoint: Section 1, Scope, Page 9
+    url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.700-29/33700-29-j10.zip
+    quote: Identify and study the security and privacy key issues of the Store and Forward (S&F) Satellite operation both
+      for NR NTN (5GS) and for IoT NTN (EPS).
+    binding: standard
+    fetched: true
+  search_terms:
+  - rogue terminal
+  - terminal geolocation verification
+  - user equipment spoofing
+  - NTN terminal validation
+  - satellite terminal authorization
+  - GNSS spoofing detection
+- id: CL-10
+  area: user_terminal
+  question: Does the national policy require commercial satellite user terminals (e.g. VSATs, Direct-to-Cell devices) to enforce
+    secure boot, cryptographically signed firmware updates, and tamper-resistant storage?
+  why_it_matters_ntn: Compromised customer terminals can be turned into distributed botnets targeting satellite uplink gateways
+    or used to extract proprietary protocol security keys.
+  references:
+  - doc: ENISA Space Threat Landscape (2025)
+    authority: European Union Agency for Cybersecurity (ENISA)
+    pinpoint: Section 5.2, Page 42
+    url: https://www.enisa.europa.eu/sites/default/files/2025-03/Space_Threat_Landscape_Report_fin.pdf
+    quote: This includes secure boot mechanisms to ensure the correct image is loaded at each startup.
+    binding: guidance
+    fetched: true
+  - doc: ASD Multinational LEO SATCOM Guidance (2026)
+    authority: Australian Signals Directorate (ASD / ACSC)
+    pinpoint: User Segment & Procurement Guidance
+    url: https://www.cyber.gov.au/about-us/advisories/securing-space-cyber-security-low-earth-orbit-satellite-communications
+    quote: ''
+    binding: guidance
+    fetched: false
+  search_terms:
+  - user terminal firmware
+  - VSAT secure boot
+  - satellite modem security
+  - terminal tamper resistance
+  - cryptographically signed firmware
+  - endpoint security
+- id: CL-11
+  area: jamming_spoofing
+  question: Does the national policy require satellite operators to implement technical measures, such as beamforming, adaptive
+    nulling, or frequency agile links, to detect and mitigate intentional RF uplink jamming?
+  why_it_matters_ntn: High-power terrestrial RF jamming can overwhelm weak uplink receivers in orbit, severing command and
+    control or denying vital communication across wide territories.
+  references:
+  - doc: US Space Policy Directive-5 (SPD-5)
+    authority: Executive Office of the President of the United States
+    pinpoint: Section 4(b)(iii)
+    url: https://www.federalregister.gov/documents/2020/09/10/2020-20150/cybersecurity-principles-for-space-systems
+    quote: Protection against communications jamming and spoofing, such as signal strength monitoring programs, secured transmitters
+      and receivers, authentication, or effective, validated, and tested encryption measures
+    binding: guidance
+    fetched: true
+  - doc: CCSDS 350.1-G-3
+    authority: Consultative Committee for Space Data Systems (CCSDS)
+    pinpoint: Section 4.5, Page 4-3
+    url: https://public.ccsds.org/Pubs/350x1g3.pdf
+    quote: Denial of communications to and from a spacecraft accomplished by interfering with the RF or optical signal.
+    binding: standard
+    fetched: true
+  search_terms:
+  - uplink jamming
+  - RF interference mitigation
+  - radio frequency interference
+  - anti-jamming
+  - frequency agility
+  - adaptive nulling
+  - signal jamming
+- id: CL-12
+  area: jamming_spoofing
+  question: Does the national policy require space systems and satellite buses relying on GNSS for positioning, navigation,
+    and timing (PNT) to incorporate anti-spoofing and resilient multi-source timing mechanisms?
+  why_it_matters_ntn: Spoofed navigation data can trick satellite attitude control systems into mispointing antennas or thrusters,
+    destabilizing constellations and disrupting synchronized telecommunications.
+  references:
+  - doc: ENISA Space Threat Landscape (2025)
+    authority: European Union Agency for Cybersecurity (ENISA)
+    pinpoint: Annex D, Page 104
+    url: https://www.enisa.europa.eu/sites/default/files/2025-03/Space_Threat_Landscape_Report_fin.pdf
+    quote: RF mapping allows better characterisation of jamming and spoofing attacks from Earth or from other satellites so
+      that other defences can be more effectively employed.
+    binding: guidance
+    fetched: true
+  - doc: NIST IR 8270
+    authority: National Institute of Standards and Technology (NIST)
+    pinpoint: Section 2.1.1, Page 4
+    url: https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8270.pdf
+    quote: The bus consists of the components of the vehicle associated with the “flying of the satellite,” such as power,
+      structure, attitude control system, processing and command control, and telemetry.
+    binding: guidance
+    fetched: true
+  search_terms:
+  - GNSS spoofing
+  - PNT resilience
+  - satellite navigation spoofing
+  - attitude determination security
+  - GPS spoofing mitigation
+  - timing resilience
+- id: CL-13
+  area: supply_chain
+  question: Does the national policy require space system operators and manufacturers to implement supply chain risk management
+    to verify the provenance and authenticity of critical hardware components and electronic chips?
+  why_it_matters_ntn: Counterfeit or trojanized radiation-hardened microelectronics installed on orbiting satellites cannot
+    be physically repaired or replaced once launched.
+  references:
+  - doc: US Space Policy Directive-5 (SPD-5)
+    authority: Executive Office of the President of the United States
+    pinpoint: Section 4(b)(vi)
+    url: https://www.federalregister.gov/documents/2020/09/10/2020-20150/cybersecurity-principles-for-space-systems
+    quote: Management of supply chain risks that affect cybersecurity of space systems through tracking manufactured products;
+      requiring sourcing from trusted suppliers; identifying counterfeit, fraudulent, and malicious equipment; and assessing
+      other available risk mitigation measures.
+    binding: guidance
+    fetched: true
+  - doc: EU NIS2 Directive (EU) 2022/2555
+    authority: European Parliament and Council of the European Union
+    pinpoint: Article 21(2)(d)
+    url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+    quote: supply chain security, including security-related aspects concerning the relationships between each entity and
+      its direct suppliers or service providers
+    binding: law
+    fetched: true
+  search_terms:
+  - space supply chain
+  - hardware provenance
+  - counterfeit components
+  - trusted source
+  - space electronics authenticity
+  - supply chain risk management
+- id: CL-14
+  area: supply_chain
+  question: Does the national policy require satellite operators and ground segment software vendors to maintain a Software
+    Bill of Materials (SBOM) and conduct vulnerability testing on COTS and third-party code?
+  why_it_matters_ntn: Satellite ground station and flight software rely heavily on commercial and open-source libraries; undiscovered
+    vulnerabilities expose critical orbital infrastructure to remote compromise.
+  references:
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 92(1)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: Union space operators shall establish a supply chain risk management framework. Their contracts with supplier manufacturers
+      and service providers shall contain supply-chain security-related aspects in particular on information security requirements.
+    binding: proposal
+    fetched: true
+  - doc: ENISA Space Threat Landscape (2025)
+    authority: European Union Agency for Cybersecurity (ENISA)
+    pinpoint: Section 7, Page 69
+    url: https://www.enisa.europa.eu/sites/default/files/2025-03/Space_Threat_Landscape_Report_fin.pdf
+    quote: Additional hardening of COTS, as well as strict procedures for security cryptographic keys, are critical for safeguarding
+      space systems.
+    binding: guidance
+    fetched: true
+  search_terms:
+  - Software Bill of Materials
+  - SBOM
+  - COTS software hardening
+  - satellite software supply chain
+  - third-party code vetting
+  - flight software vulnerability testing
+- id: CL-15
+  area: supply_chain
+  question: Does the national policy require space operators to subject commercial launch service providers and third-party
+    ground station operators to formal security assessments before mission integration?
+  why_it_matters_ntn: Third-party launch ground integration facilities and shared TT&C providers have direct physical and
+    pre-launch data access to satellites, creating backdoor vectors.
+  references:
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 76(1)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: Union space operators shall take all the necessary measures to manage the risks posed to the security of network
+      and information systems and the security of the physical infrastructure and environment
+    binding: proposal
+    fetched: true
+  - doc: NIST IR 8270
+    authority: National Institute of Standards and Technology (NIST)
+    pinpoint: Section 2.2.2, Page 7
+    url: https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8270.pdf
+    quote: Manufactures and companies should be aware of the long lifetime of some spacecraft and build in flexibility to
+      address cyber threats over the lifetime of the vehicle.
+    binding: guidance
+    fetched: true
+  search_terms:
+  - launch provider vetting
+  - commercial launch security
+  - pre-launch integration security
+  - ground station supplier assessment
+  - space mission integration vetting
+- id: CL-16
+  area: incident_reporting
+  question: Does the national policy require satellite and non-terrestrial network operators to submit an initial early warning
+    notification of any significant cyber incident to national authorities within 24 hours of becoming aware?
+  why_it_matters_ntn: Fast-moving cyber attacks against satellite communications require rapid national situational awareness
+    to prevent cascading degradation across dependent terrestrial critical infrastructure.
+  references:
+  - doc: EU NIS2 Directive (EU) 2022/2555
+    authority: European Parliament and Council of the European Union
+    pinpoint: Article 23(4)(a)
+    url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+    quote: without undue delay and in any event within 24 hours of becoming aware of the significant incident, an early warning,
+      which, where applicable, shall indicate whether the significant incident is suspected of being caused by unlawful or
+      malicious acts
+    binding: law
+    fetched: true
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 93(3)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: Where Union space operators qualify as essential or important entities pursuant to Annexes I or II of Directive
+      (EU) 2022/2555 , the reporting referred to in paragraph 2, shall be carried out through the CSIRTs
+    binding: proposal
+    fetched: true
+  search_terms:
+  - 24 hours incident reporting
+  - early warning cyber incident
+  - mandatory incident notification
+  - significant incident awareness
+  - CERT-In reporting timeline
+  - satellite incident report
+- id: CL-17
+  area: incident_reporting
+  question: Does the national policy require satellite operators to submit a detailed incident notification within 72 hours
+    and an exhaustive final incident analysis report within one month of a major security event?
+  why_it_matters_ntn: Thorough root-cause disclosures ensure that technical vulnerabilities in space protocols and firmware
+    are systematically documented and remediated across the national sector.
+  references:
+  - doc: EU NIS2 Directive (EU) 2022/2555
+    authority: European Parliament and Council of the European Union
+    pinpoint: Article 23(4)(b)
+    url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+    quote: without undue delay and in any event within 72 hours of becoming aware of the significant incident, an incident
+      notification, which, where applicable, shall update the information referred to in point (a) and indicate an initial
+      assessment
+    binding: law
+    fetched: true
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 91(1)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: Union space operators shall establish and implement an incident management process that allows them to promptly
+      detect, identify, handle and respond to incidents and to report significant incidents
+    binding: proposal
+    fetched: true
+  search_terms:
+  - 72 hours notification
+  - final incident report
+  - incident root cause analysis
+  - incident management process
+  - detailed incident notification
+  - incident assessment report
+- id: CL-18
+  area: incident_reporting
+  question: Does the national policy require satellite operators to report electronic interference (jamming/spoofing) and
+    space-vehicle telemetry anomalies affecting critical orbital functions to the designated national agency?
+  why_it_matters_ntn: Distinguishing between environmental space phenomena (solar flares/space radiation) and state-sponsored
+    electronic warfare or cyber attacks requires immediate centralized event telemetry analysis.
+  references:
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 95(1)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: relevant information on cyber-attacks, cyber threats, electronic interferences such as jamming, spoofing, information
+      on indicators of compromise, adversarial tactics, techniques and procedures, near misses, vulnerabilities, threat-actor-specific
+      information
+    binding: proposal
+    fetched: true
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 83(1)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: Union space operators shall monitor on a continuous basis the occurrence of anomalies and incidents by using appropriate
+      detection systems and mechanisms.
+    binding: proposal
+    fetched: true
+  search_terms:
+  - electronic interference reporting
+  - jamming reporting
+  - space telemetry anomaly
+  - satellite interference notification
+  - orbital anomaly reporting
+  - interference investigation
+- id: CL-19
+  area: downstream_warning
+  question: Does the national policy require satellite communication providers to inform affected downstream users and interconnected
+    telecommunications carriers without undue delay when a cyber incident impairs service availability?
+  why_it_matters_ntn: Emergency services, maritime vessels, and remote telecom towers rely on NTN links; lack of prompt outage
+    warnings prevents them from activating secondary failover mechanisms.
+  references:
+  - doc: EU NIS2 Directive (EU) 2022/2555
+    authority: European Parliament and Council of the European Union
+    pinpoint: Article 23(2)
+    url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+    quote: Where applicable, Member States shall ensure that essential and important entities communicate, without undue delay,
+      to the recipients of their services that are potentially affected by a significant cyber threat any measures or remedies
+    binding: law
+    fetched: true
+  - doc: EU NIS2 Directive (EU) 2022/2555
+    authority: European Parliament and Council of the European Union
+    pinpoint: Article 21(1)
+    url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+    quote: to prevent or minimise the impact of incidents on recipients of their services and on other services.
+    binding: law
+    fetched: true
+  search_terms:
+  - downstream user warning
+  - customer outage notification
+  - recipient notification
+  - interconnected carrier alert
+  - service disruption notice
+  - telecom outage warning
+- id: CL-20
+  area: info_sharing
+  question: Does the national policy require participation in a sectoral Information Sharing and Analysis Center (ISAC) or
+    cyber threat exchange for space and satellite operators?
+  why_it_matters_ntn: Because commercial space operators face sophisticated advanced persistent threat (APT) groups, collective
+    defense and rapid sharing of indicators of compromise (IoCs) are crucial to protect peer systems.
+  references:
+  - doc: US Space Policy Directive-5 (SPD-5)
+    authority: Executive Office of the President of the United States
+    pinpoint: Section 4(d)
+    url: https://www.federalregister.gov/documents/2020/09/10/2020-20150/cybersecurity-principles-for-space-systems
+    quote: They should also share threat, warning, and incident information within the space industry, using venues such as
+      Information Sharing and Analysis Centers to the greatest extent possible, consistent with applicable law.
+    binding: guidance
+    fetched: true
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 95(1)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: Union space operators may, on a voluntary basis, exchange among themselves relevant information in the area of
+      cybersecurity, including relevant information on cyber-attacks, cyber threats, electronic interferences such as jamming,
+      spoofing
+    binding: proposal
+    fetched: true
+  search_terms:
+  - Space ISAC
+  - threat intelligence sharing
+  - information sharing forum
+  - indicators of compromise
+  - space threat exchange
+  - cyber threat collaboration
+- id: CL-21
+  area: vuln_disclosure
+  question: Does the national policy require a coordinated vulnerability disclosure (CVD) process enabling security researchers
+    to report vulnerabilities in satellite platforms and ground software without fear of legal reprisal?
+  why_it_matters_ntn: Vulnerabilities in satellite communication protocols and terminals are often discovered by third-party
+    researchers; coordinated disclosure ensures prompt remediation before active exploitation.
+  references:
+  - doc: EU NIS2 Directive (EU) 2022/2555
+    authority: European Parliament and Council of the European Union
+    pinpoint: Article 12(1)
+    url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+    quote: Each Member State shall designate one of its CSIRTs as a coordinator for the purposes of coordinated vulnerability
+      disclosure. The CSIRT designated as coordinator shall act as a trusted intermediary, facilitating, where necessary,
+      the interaction
+    binding: law
+    fetched: true
+  - doc: EU NIS2 Directive (EU) 2022/2555
+    authority: European Parliament and Council of the European Union
+    pinpoint: Article 21(2)(e)
+    url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+    quote: security in network and information systems acquisition, development and maintenance, including vulnerability handling
+      and disclosure
+    binding: law
+    fetched: true
+  search_terms:
+  - coordinated vulnerability disclosure
+  - CVD
+  - vulnerability handling
+  - security researcher protection
+  - responsible disclosure
+  - satellite vulnerability reporting
+- id: CL-22
+  area: vuln_disclosure
+  question: Does the national policy require satellites and associated ground segment software to undergo rigorous penetration
+    testing and independent cybersecurity verification prior to orbital launch?
+  why_it_matters_ntn: Once a spacecraft is in orbit, patching firmware flaws or architectural vulnerabilities is exceedingly
+    risky and may lead to irreversible loss of vehicle control.
+  references:
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 76(6)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: Union space operators shall establish, implement and apply a policy and procedures to assess whether the cybersecurity
+      risk-management measures taken are effectively implemented
+    binding: proposal
+    fetched: true
+  - doc: NIST IR 8401
+    authority: National Institute of Standards and Technology (NIST)
+    pinpoint: Section 4, ID.RA-1, Page 14
+    url: https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8401.pdf
+    quote: Organizations should identify, document, and report vulnerabilities that exist in the ground segment. Vulnerability
+      scanning is normally tested on a representative system
+    binding: guidance
+    fetched: true
+  search_terms:
+  - pre-launch security testing
+  - satellite penetration testing
+  - independent security evaluation
+  - cybersecurity verification
+  - spacecraft software audit
+  - pre-flight vulnerability assessment
+- id: CL-23
+  area: licensing
+  question: Does the national policy require demonstrable compliance with mandatory cybersecurity and resilience baselines
+    as a prerequisite for issuing or renewing space activity licenses and spectrum authorizations?
+  why_it_matters_ntn: Integrating cybersecurity into statutory licensing ensures that commercial operators cannot cut corners
+    on security to reduce launch timelines or operational overhead.
+  references:
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 6(1)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: Union space operators shall not provide space services unless they have obtained in a Member State an authorisation
+      to carry out space activities which demonstrate compliance with the requirements laid down in Title IV, Chapters I to
+      V
+    binding: proposal
+    fetched: true
+  - doc: US Space Policy Directive-5 (SPD-5)
+    authority: Executive Office of the President of the United States
+    pinpoint: Section 4(c)
+    url: https://www.federalregister.gov/documents/2020/09/10/2020-20150/cybersecurity-principles-for-space-systems
+    quote: Implementation of these principles, through rules, regulations, and guidance, should enhance space system cybersecurity,
+      including through the consideration and adoption, where appropriate, of cybersecurity best practices and norms of behavior.
+    binding: guidance
+    fetched: true
+  search_terms:
+  - space authorization
+  - satellite licensing condition
+  - cybersecurity license requirement
+  - spectrum authorization security
+  - space activity permit
+  - IN-SPACe authorization
+- id: CL-24
+  area: licensing
+  question: Does the national policy require satellite operators to undergo regulatory review or re-authorization when implementing
+    major in-orbit firmware overhauls or changes to mission control architecture?
+  why_it_matters_ntn: Major over-the-air payload reconfigurations or ground migration to third-party cloud services fundamentally
+    alter the system attack surface and invalidate prior security approvals.
+  references:
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 13(1)(a)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: 'A Union space operator of Union-owned assets shall immediately report to the Agency: (a) any unforeseen event
+      that may require the modification of its authorisation;'
+    binding: proposal
+    fetched: true
+  - doc: NIST IR 8270
+    authority: National Institute of Standards and Technology (NIST)
+    pinpoint: Section 2.1.2, Page 5
+    url: https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8270.pdf
+    quote: Command and control are the signaling operations sent to the satellite to conduct a mission function, perform diagnostics,
+      reset the state of the equipment, send updates, and/or activate the propulsion systems of the vehicle.
+    binding: guidance
+    fetched: true
+  search_terms:
+  - re-authorization
+  - license amendment
+  - mission control architecture change
+  - in-orbit software overhaul
+  - space license modification
+  - material change notification
+- id: CL-25
+  area: data_location
+  question: Does the national policy require sovereign control or jurisdictional restrictions on where satellite command telemetry
+    and user communication payload data are routed and stored?
+  why_it_matters_ntn: Allowing sensitive telemetry and critical user communications to traverse untrusted foreign ground stations
+    exposes national traffic to foreign surveillance and extraterritorial seizure.
+  references:
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 82(1)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: Union space operators shall take the measures laid down in point 3, of Annex VII, and any other measures that are
+      necessary and adequate to ensure the resilience of the physical assets
+    binding: proposal
+    fetched: true
+  - doc: EU NIS2 Directive (EU) 2022/2555
+    authority: European Parliament and Council of the European Union
+    pinpoint: Article 21(1)
+    url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+    quote: Member States shall ensure that essential and important entities take appropriate and proportionate technical,
+      operational and organisational measures to manage the risks posed to the security of network and information systems
+    binding: law
+    fetched: true
+  search_terms:
+  - data localization
+  - gateway location requirement
+  - telemetry data routing
+  - satellite payload data sovereignty
+  - ground station jurisdiction
+  - cross-border data flow
+- id: CL-26
+  area: failover
+  question: Does the national policy require space systems to maintain redundant and physically diverse command-and-control
+    links to retain or recover positive control during cyber or link disruptions?
+  why_it_matters_ntn: If a primary ground station or communication frequency is jammed or compromised, lack of alternate backup
+    TT&C pathways will cause permanent loss of space vehicle custody.
+  references:
+  - doc: US Space Policy Directive-5 (SPD-5)
+    authority: Executive Office of the President of the United States
+    pinpoint: Section 4(b)
+    url: https://www.federalregister.gov/documents/2020/09/10/2020-20150/cybersecurity-principles-for-space-systems
+    quote: ensure operators or automated control center systems can retain or recover positive control of space vehicles.
+    binding: guidance
+    fetched: true
+  - doc: NIST IR 8401
+    authority: National Institute of Standards and Technology (NIST)
+    pinpoint: Section 4, PR.PT-5, Page 26
+    url: https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8401.pdf
+    quote: Mechanisms (e.g., failsafe, load balancing, hot swap) are implemented to achieve resilience requirements in normal
+      and adverse situations
+    binding: guidance
+    fetched: true
+  search_terms:
+  - command link failover
+  - redundant TT&C
+  - positive control recovery
+  - diverse ground station
+  - satellite control redundancy
+  - backup link
+- id: CL-27
+  area: failover
+  question: Does the national policy require telecommunications operators to incorporate non-terrestrial networks into disaster
+    recovery plans as an automated backup mechanism for failed terrestrial networks?
+  why_it_matters_ntn: In major natural disasters or widespread cyber outages knocking out terrestrial fiber, satellite NTN
+    provides the only resilient secondary link for critical national communications.
+  references:
+  - doc: EU NIS2 Directive (EU) 2022/2555
+    authority: European Parliament and Council of the European Union
+    pinpoint: Article 21(2)(c)
+    url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+    quote: business continuity, such as backup management and disaster recovery, and crisis management
+    binding: law
+    fetched: true
+  - doc: 3GPP TR 33.700-29
+    authority: 3rd Generation Partnership Project (3GPP)
+    pinpoint: Section 4, Page 10
+    url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.700-29/33700-29-j10.zip
+    quote: Native IP-based communication protocol (as defined in TS 33.210 [6]) security at the network layer can be used
+      to secure the IP transport connectivity available over the feeder link and the inter-satellite link (ISL)
+    binding: standard
+    fetched: true
+  search_terms:
+  - disaster recovery failover
+  - terrestrial satellite failover
+  - network resilience backup
+  - business continuity plan
+  - NTN disaster rerouting
+  - crisis communication
+- id: CL-28
+  area: capacity_priority
+  question: Does the national policy require satellite and NTN networks to enforce priority access, traffic pre-emption, and
+    quality of service (QoS) guarantees for national security and emergency response services?
+  why_it_matters_ntn: During national crises, surging commercial traffic can saturate satellite transponders, blocking critical
+    defense, disaster response, and governmental command traffic.
+  references:
+  - doc: EU NIS2 Directive (EU) 2022/2555
+    authority: European Parliament and Council of the European Union
+    pinpoint: Article 21(1)
+    url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+    quote: take appropriate and proportionate technical, operational and organisational measures to manage the risks posed
+      to the security of network and information systems which those entities use for their operations or for the provision
+      of their services
+    binding: law
+    fetched: true
+  - doc: 3GPP TR 33.700-29
+    authority: 3rd Generation Partnership Project (3GPP)
+    pinpoint: Section 1, Scope, Page 9
+    url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.700-29/33700-29-j10.zip
+    quote: The impact on regulatory services in the context of 5G satellite access. In particular, the assessment of the potential
+      impact to lawful intercept in regenerative, Store and Forward (S&F), and UE-satellite-UE communication enhancement architecture.
+    binding: standard
+    fetched: true
+  search_terms:
+  - priority access
+  - traffic pre-emption
+  - emergency communication priority
+  - satellite capacity allocation
+  - QoS guarantee
+  - national security priority traffic
+- id: CL-29
+  area: backup_power
+  question: Does the national policy require satellite ground gateways, Earth stations, and control centers to maintain redundant
+    uninterruptible power supplies (UPS) and autonomous on-site backup generators?
+  why_it_matters_ntn: Ground station power outages immediately disconnect satellites from ground monitoring and user data
+    relays, severing vital national communication backbones.
+  references:
+  - doc: US Space Policy Directive-5 (SPD-5)
+    authority: Executive Office of the President of the United States
+    pinpoint: Section 4(b)(v)
+    url: https://www.federalregister.gov/documents/2020/09/10/2020-20150/cybersecurity-principles-for-space-systems
+    quote: intrusion detection methodologies for system elements such as information systems, antennas, terminals, receivers,
+      routers, associated local and wide area networks, and power supplies;
+    binding: guidance
+    fetched: true
+  - doc: NIST IR 8401
+    authority: National Institute of Standards and Technology (NIST)
+    pinpoint: Section 4, PR.PT-5, Page 26
+    url: https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8401.pdf
+    quote: Organizations should consider measures as applicable such as power backup, redundant communications infrastructure,
+      and alternate service providers.
+    binding: guidance
+    fetched: true
+  search_terms:
+  - backup power requirement
+  - uninterruptible power supply
+  - UPS ground station
+  - diesel generator
+  - earth station power resilience
+  - battery autonomy
+- id: CL-30
+  area: joint_command
+  question: Does the national policy require an operational inter-agency joint coordination mechanism between civil space
+    agencies, defense/military space commands, and telecom regulators for space cyber defense?
+  why_it_matters_ntn: Hybrid warfare and space-domain attacks blur the line between civilian and military targets, requiring
+    seamless cross-jurisdictional defense and response coordination.
+  references:
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 94(1)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: The Union Space Resilience Network (‘EUSRN’) is established to support coordination and exchanges between the Agency
+      and the competent authorities in fulfilling their respective mandates
+    binding: proposal
+    fetched: true
+  - doc: US Space Policy Directive-5 (SPD-5)
+    authority: Executive Office of the President of the United States
+    pinpoint: Section 2, Purpose
+    url: https://www.federalregister.gov/documents/2020/09/10/2020-20150/cybersecurity-principles-for-space-systems
+    quote: Agencies are directed to work with the commercial space industry and other non-government space operators, consistent
+      with these principles and with applicable law, to further define best practices
+    binding: guidance
+    fetched: true
+  search_terms:
+  - inter-agency space coordination
+  - civil-military space coordination
+  - Space Command
+  - joint cyber command
+  - cross-agency space security
+  - space defense coordination
+- id: CL-31
+  area: joint_command
+  question: Does the national policy require the establishment or designation of a specialized Space Computer Security Incident
+    Response Team (Space CSIRT) with technical orbital and RF expertise to support satellite operators during cyber incidents?
+  why_it_matters_ntn: General IT CSIRTs lack specialized knowledge of orbital mechanics, RF uplink protocols, and spacecraft
+    flight software necessary to triage in-orbit cyber compromises.
+  references:
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 93(3)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: Where Union space operators qualify as essential or important entities pursuant to Annexes I or II of Directive
+      (EU) 2022/2555 , the reporting referred to in paragraph 2, shall be carried out through the CSIRTs
+    binding: proposal
+    fetched: true
+  - doc: EU NIS2 Directive (EU) 2022/2555
+    authority: European Parliament and Council of the European Union
+    pinpoint: Article 10(1)
+    url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+    quote: Each Member State shall designate or establish one or more CSIRTs. The CSIRTs may be designated or established
+      within a competent authority.
+    binding: law
+    fetched: true
+  search_terms:
+  - Space CSIRT
+  - sectoral CERT space
+  - Space Computer Security Incident Response Team
+  - space cyber incident team
+  - CERT-In sectoral space
+  - specialized space CERT
+- id: CL-32
+  area: standards
+  question: Does the national policy require adherence to recognized international space link security standards, such as
+    CCSDS Space Data Link Security (SDLS), for satellite telemetry and telecommand?
+  why_it_matters_ntn: Proprietary security protocols frequently contain cryptographic weaknesses and hinder interoperability
+    between national assets and international partner ground tracking networks.
+  references:
+  - doc: CCSDS 355.0-B-2 (SDLS)
+    authority: Consultative Committee for Space Data Systems (CCSDS)
+    pinpoint: Section 1.1, Page 1-1
+    url: https://public.ccsds.org/Pubs/355x0b2.pdf
+    quote: The purpose of this Recommended Standard is to specify the Space Data Link Security Protocol (hereafter referred
+      as the Security Protocol) for CCSDS data links.
+    binding: standard
+    fetched: true
+  - doc: US Space Policy Directive-5 (SPD-5)
+    authority: Executive Office of the President of the United States
+    pinpoint: Section 4(b)(i)
+    url: https://www.federalregister.gov/documents/2020/09/10/2020-20150/cybersecurity-principles-for-space-systems
+    quote: Protection against unauthorized access to critical space vehicle functions. This should include safeguarding command,
+      control, and telemetry links using effective and validated authentication or encryption measures
+    binding: guidance
+    fetched: true
+  - doc: ITU-T Recommendation X.1144
+    authority: International Telecommunication Union (ITU-T SG17)
+    pinpoint: XACML 3.0 Policy Language Framework
+    url: https://www.itu.int/rec/T-REC-X.1144-202403-I/en
+    quote: ''
+    binding: standard
+    fetched: false
+  search_terms:
+  - CCSDS SDLS
+  - Space Data Link Security
+  - space cryptographic standards
+  - international space standards
+  - ISO space security standards
+  - standardized telemetry protocol
+- id: CL-33
+  area: governance
+  question: Does the national policy require satellite operators to assign corporate board / executive liability for cyber
+    risk management and designate an accountable Space Security Officer or CISO?
+  why_it_matters_ntn: Without direct legal accountability at the board level, cyber security investments are frequently deprioritized
+    in favor of commercial satellite launch schedules.
+  references:
+  - doc: EU NIS2 Directive (EU) 2022/2555
+    authority: European Parliament and Council of the European Union
+    pinpoint: Article 20(1)
+    url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+    quote: Member States shall ensure that the management bodies of essential and important entities approve the cybersecurity
+      risk-management measures taken by those entities in order to comply with Article 21, oversee its implementation and
+      can be held liable
+    binding: law
+    fetched: true
+  - doc: EU Space Act Proposal COM(2025) 335
+    authority: European Commission
+    pinpoint: Article 91(2)
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+    quote: Union space operators shall ensure that at least the significant incidents are reported to the senior risk management
+      staff immediately.
+    binding: proposal
+    fetched: true
+  search_terms:
+  - Space Security Officer
+  - Chief Information Security Officer
+  - CISO
+  - board cyber governance
+  - executive accountability cybersecurity
+  - management body liability
+- id: CL-34
+  area: other
+  question: Does the national policy require space systems to maintain strict cryptographic authorization safeguards on deorbit
+    and disposal commands to prevent unauthorized intentional orbital re-entry or weaponized collisions?
+  why_it_matters_ntn: Hijacking a satellite's end-of-life propulsion maneuvers can create kinetic orbital collision debris
+    or cause uncontrolled atmospheric re-entry over populated regions.
+  references:
+  - doc: US Space Policy Directive-5 (SPD-5)
+    authority: Executive Office of the President of the United States
+    pinpoint: Section 3(c), Definitions
+    url: https://www.federalregister.gov/documents/2020/09/10/2020-20150/cybersecurity-principles-for-space-systems
+    quote: means the assurance that a space vehicle will only execute commands transmitted by an authorized source and that
+      those commands are executed in the proper order and at the intended time.
+    binding: guidance
+    fetched: true
+  - doc: NIST IR 8270
+    authority: National Institute of Standards and Technology (NIST)
+    pinpoint: Section 2.2.2, Page 8
+    url: https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8270.pdf
+    quote: The decommissioning of a commercial satellite is a high-risk endeavor with requirements for the post-mission disposition
+      of satellites. General good practices include maintaining control of orbital debris released during normal operations,
+      minimizing debris
+    binding: guidance
+    fetched: true
+  search_terms:
+  - deorbit command authorization
+  - disposal orbit security
+  - end-of-life disposal safeguards
+  - unauthorized deorbiting
+  - positive control decommissioning
+  - satellite hijacking debris
+- id: CL-35
+  area: other
+  question: Does the national policy require satellite flight computers to cryptographically verify software images and enforce
+    anti-rollback protections before executing in-orbit firmware or patch updates?
+  why_it_matters_ntn: An adversary who uploads malicious flight software or rolls back firmware to a vulnerable legacy version
+    can permanently brick the spacecraft or seize payload control.
+  references:
+  - doc: ENISA Space Threat Landscape (2025)
+    authority: European Union Agency for Cybersecurity (ENISA)
+    pinpoint: Section 5.2, Page 42
+    url: https://www.enisa.europa.eu/sites/default/files/2025-03/Space_Threat_Landscape_Report_fin.pdf
+    quote: This includes secure boot mechanisms to ensure the correct image is loaded at each startup. Furthermore, vetted
+      backup operational images and a robust recovery process are essential
+    binding: guidance
+    fetched: true
+  - doc: NIST IR 8270
+    authority: National Institute of Standards and Technology (NIST)
+    pinpoint: Section 2.1.2, Page 5
+    url: https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8270.pdf
+    quote: Internal vehicle cybersecurity refers to the cybersecurity capabilities of the satellite vehicle itself, including
+      its ability to protect itself against cybersecurity threats, detect threat actions, respond to cybersecurity attacks,
+      and recover when necessary.
+    binding: guidance
+    fetched: true
+  search_terms:
+  - in-orbit firmware update
+  - over-the-air satellite patching
+  - firmware cryptographic verification
+  - anti-rollback protection
+  - flight software update security
+  - onboard software integrity

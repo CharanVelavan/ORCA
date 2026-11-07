@@ -8,12 +8,13 @@ def test_kb_is_valid():
     assert kbmod.validate(kb) == []
 
 
-def test_three_six_hour_clocks_have_different_triggers():
+def test_six_hour_clocks_have_different_triggers():
     kb = kbmod.load()
     certin = kb.records["IN-CERTIN-DIR-2022-ii"]["obligation"]
-    dot = kb.records["IN-TCSR-2024-R7-1"]["obligation"]
+    dot = kb.records["IN-TCSR-2024-R7-1"]["obligation"]          # notified G.S.R. 720(E), not the draft
+    cti = kb.records["IN-CTIR-2024-R7-1-j"]["obligation"]
     assert certin["deadline"] == dot["deadline"] == "PT6H"
-    assert certin["trigger"] == "noticing" and dot["trigger"] == "occurrence"
+    assert (certin["trigger"], dot["trigger"], cti["trigger"]) == ("noticing", "awareness", "occurrence")
 
 
 def test_dpdp_breach_clock_not_in_force_today():

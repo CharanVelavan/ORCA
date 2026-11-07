@@ -69,7 +69,7 @@ New fields: `topic`, `status` (candidate / confirmed), `search{date, sources_che
 | GAP-IN-05 no breach clock today | Voluntary 72 h notice draft (marked voluntary) | MeitY / Data Protection Board: interim guidance before about May 2027; GDPR Art. 33 comparison |
 | GAP-IN-07 no joint plan (D7) | The ORCA incident-commander role + shared audit log | CERT-In + DoT (+ NDMA, to check): a named cross-institution incident lead |
 | **GAP-IN-08 (new): no rule requires the backup path to be verified clean before failover during an attack** | **PB-06's clean-path check** | DoT + ITU-T SG17: a security precondition for failover |
-| **GAP-IN-09 (new): the 2026 space framework's legal status is not stated** (AMBIGUITY) | Treat its 6 h as binding for safety (protective filing) | CERT-In: state its status |
+| **GAP-IN-09 (v3.2): no binding satellite-specific cyber-resilience baseline; the space framework is advisory (PIB 2233122)** (POTENTIAL_GAP) | Treat framework controls as advice; flag missing ones | DoT/CERT-In: make core satellite controls binding |
 | GAP-IN-06 standards: feeder links out of scope (TR 33.700-29); no policy-as-code format | Our YAML format, published | 3GPP SA3 / ITU-T SG17; also note this is a gap in the Readiness 2.0 report |
 
 GAP-IN-08 and GAP-IN-09 need their search records written before they are claimed: about 30 minutes each, mostly from B's findings.

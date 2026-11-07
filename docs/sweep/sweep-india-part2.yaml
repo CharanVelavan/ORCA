@@ -1,0 +1,846 @@
+# Sweep Part 2: India evaluation against extended checklist (CL-01 to CL-35)
+# Items duplicating seed items (SD-01 to SD-18) are skipped from re-sweep and marked with duplicate_of.
+
+- id: CL-01
+  question: Does the national policy require satellite command, control, and telemetry links to implement validated encryption
+    and cryptographic authentication to prevent unauthorized command execution?
+  duplicate_of: SD-02
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 17
+    pinpoint: section 5.3
+    quote: Enforce end-to-end encryption for telemetry, tracking, command (TT&C), and data payload links.
+  - source: in-space-fw-2026
+    page: 28
+    pinpoint: section 6.3(b)
+    quote: Cryptographic message authentication (MACs, digital signatures) on telecommands and critical telemetry.
+  searched:
+  - telemetry
+  - telecommand
+  - TT&C
+  - command and control
+  - encrypt
+  - authentication
+  - uplink
+  reason: Duplicates seed item SD-02 ('Must satellite command and control (TT&C) links be encrypted or authenticated?'). See
+    SD-02 in docs/sweep/sweep-india.yaml.
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: CL-02
+  question: Does the national policy require satellite command links to implement anti-replay mechanisms, such as sequence
+    numbering or anti-replay counters, to reject previously recorded valid commands?
+  duplicate_of: null
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 28
+    pinpoint: section 6.3(b)
+    quote: Replay protection (sequence numbers / nonces / anti-replay windows).
+  searched:
+  - replay
+  - anti-replay
+  - sequence number
+  - counter
+  - anti-replay windows
+  reason: "Anti-replay protection (sequence numbers and anti-replay windows) is recommended in the space cyber framework (\xA7\
+    6.3(b)), but the framework has unstated legal status and no binding statutory rule mandates it."
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: CL-03
+  question: Does the national policy require satellite operators to maintain a formal lifecycle management policy for cryptographic
+    keys governing generation, secure storage, distribution, rotation, and revocation across space and ground assets?
+  duplicate_of: null
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 28
+    pinpoint: section 6.3(b)
+    quote: 'Strong key lifecycle management: generation, distribution, rotation, revocation, emergency recovery, with audit
+      trails.'
+  searched:
+  - cryptographic key
+  - key management
+  - HSM
+  - key rotation
+  - Hardware Security Module
+  - OTAR
+  reason: "Cryptographic key lifecycle management (generation, distribution, rotation, revocation, emergency recovery) is\
+    \ specified in space framework \xA76.3(b), but it is guidance only without a binding statutory mandate."
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: CL-04
+  question: Does the national policy require satellite ground stations, mission operations centers, and command gateways to
+    maintain logical network segmentation and access controls isolating command systems from untrusted public networks?
+  duplicate_of: SD-01
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 22
+    pinpoint: section 6.2
+    quote: The Ground Segment comprises mission control centres, ground stations, network gateways, data processing facilities,
+      teleport sites, launch control systems, and associated ICT infrastructure.
+  - source: in-space-fw-2026
+    page: 13
+    pinpoint: section 3.2.3
+    quote: Operators must conduct periodic security reviews for international gateways and ground stations located abroad.
+  searched:
+  - gateway
+  - earth station
+  - ground station
+  - ground segment
+  - teleport
+  - hub
+  reason: Duplicates seed item SD-01 ('Must satellite gateways / earth stations meet specific cyber security requirements?').
+    See SD-01 in docs/sweep/sweep-india.yaml.
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: CL-05
+  question: Does the national policy require shared ground stations and Ground Station-as-a-Service (GSaaS) providers to enforce
+    multi-tenant cryptographic isolation and strict data separation between competing satellite operators?
+  duplicate_of: null
+  result: NOT_FOUND
+  evidence: []
+  searched:
+  - multi-tenant
+  - GSaaS
+  - ground station as a service
+  - shared ground
+  - cryptographic isolation
+  - data separation
+  reason: No provision addressing multi-tenant cryptographic isolation or Ground Station-as-a-Service (GSaaS) data separation
+    was found in the checked Indian sources.
+  related_gap: null
+  confidence: high
+- id: CL-06
+  question: Does the national policy require satellite ground control facilities to deploy continuous automated monitoring
+    and intrusion detection systems capable of identifying telemetry anomalies and unauthorized uplink attempts?
+  duplicate_of: null
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 33
+    pinpoint: section 7.1
+    quote: 'Anomaly Detection: Advanced analytics, threat intelligence feeds, and behavior-based anomaly detection shall be
+      deployed to identify deviations in system performance, communication patterns, or command telemetry'
+  - source: in-tcsr-2024
+    page: 10
+    pinpoint: Rule 4(5)(h)
+    quote: establish facilities such as Security Operations Centre (SOC), by itself or in collaboration with other telecommunication
+      entities,
+  searched:
+  - telemetry anomal
+  - intrusion detection
+  - NIDS
+  - uplink attempt
+  - continuous monitoring
+  reason: "Telemetry anomaly detection is outlined in space framework \xA77.1 and SOC intrusion detection is mandated generally\
+    \ for telecom entities under TCSR 2024 Rule 4(5)(h), but specific ground control telemetry anomaly detection is guidance\
+    \ only."
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: CL-07
+  question: Does the national policy require operator protection and network-layer encryption for satellite feeder links connecting
+    ground gateways to spaceborne network nodes?
+  duplicate_of: null
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 29
+    pinpoint: section 6.3(e)
+    quote: Use IPsec/TLS for ground-backhaul transport where IP-based links are used.
+  searched:
+  - feeder link
+  - ground-to-ground backhaul
+  - network-layer encryption
+  - IPsec
+  - gateway
+  reason: "Space framework \xA76.3(e) recommends IPsec/TLS for ground-backhaul transport, but feeder link security specifically\
+    \ is left out of binding rules (and out of 3GPP scope, see GAP-IN-06)."
+  related_gap: GAP-IN-06-STANDARDS
+  confidence: high
+- id: CL-08
+  question: Does the national policy require non-terrestrial user terminals to conceal permanent subscriber identities (e.g.
+    SUPI/IMSI) using public-key cryptography over satellite radio links before network authentication?
+  duplicate_of: null
+  result: NOT_FOUND
+  evidence: []
+  searched:
+  - SUPI
+  - IMSI
+  - conceal
+  - subscriber identity
+  - permanent identity
+  - public-key cryptography
+  reason: While IMEI registration and mobile number validation are mandated under TCSR 2024 Rule 8, no requirement for concealing
+    subscriber identities (SUPI/IMSI) using public-key cryptography over satellite links was found in the checked sources.
+  related_gap: null
+  confidence: high
+- id: CL-09
+  question: Does the national policy require satellite and non-terrestrial network operators to implement mechanisms to detect
+    rogue user terminals and verify terminal geolocation against GPS/GNSS spoofing?
+  duplicate_of: null
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 28
+    pinpoint: section 6.3(d)
+    quote: Validate signal source by combining cryptographic authentication with RF-level checks (expected Doppler, time-of-flight,
+      signal signature).
+  searched:
+  - rogue
+  - geolocation
+  - terminal spoofing
+  - detect rogue user terminals
+  - Doppler
+  reason: "Space framework \xA76.3(d) recommends signal validation combining cryptographic authentication with RF-level checks\
+    \ to detect spoofing, but this is guidance only without a binding statutory rule."
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: CL-10
+  question: Does the national policy require commercial satellite user terminals (e.g. VSATs, Direct-to-Cell devices) to enforce
+    secure boot, cryptographically signed firmware updates, and tamper-resistant storage?
+  duplicate_of: SD-05
+  result: UNCLEAR
+  evidence:
+  - source: in-telact-2023
+    page: 9
+    pinpoint: Section 19(a)
+    quote: (a) telecommunication equipment, telecommunication identifiers and telecommunication network;
+  - source: in-space-fw-2026
+    page: 29
+    pinpoint: section 6.4
+    quote: The User Segment includes end-user terminals, VSATs, modems, satellite phones, IoT gateways, and related equipment
+      that connect to satellite networks for communication or data services.
+  searched:
+  - terminal
+  - modem
+  - user equipment
+  - customer premises
+  - certification
+  - testing
+  - trusted source
+  reason: Duplicates seed item SD-05 ('Are there security standards or certification for satellite user terminals / modems?').
+    See SD-05 in docs/sweep/sweep-india.yaml.
+  related_gap: null
+  confidence: high
+- id: CL-11
+  question: Does the national policy require satellite operators to implement technical measures, such as beamforming, adaptive
+    nulling, or frequency agile links, to detect and mitigate intentional RF uplink jamming?
+  duplicate_of: null
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 28
+    pinpoint: section 6.3(c)
+    quote: Use of directional antennas and nulling/beamforming techniques where available.
+  - source: in-space-fw-2026
+    page: 28
+    pinpoint: section 6.3(c)
+    quote: Spread-spectrum / frequency hopping where operationally feasible.
+  searched:
+  - beamforming
+  - adaptive nulling
+  - frequency agile
+  - spread spectrum
+  - frequency hopping
+  - jamming
+  reason: "Technical anti-jamming measures including beamforming, nulling, and spread spectrum are recommended in space framework\
+    \ \xA76.3(c), but the framework is guidance only with unstated legal status."
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: CL-12
+  question: Does the national policy require space systems and satellite buses relying on GNSS for positioning, navigation,
+    and timing (PNT) to incorporate anti-spoofing and resilient multi-source timing mechanisms?
+  duplicate_of: null
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 42
+    pinpoint: section 11, item 10
+    quote: '10. NIST: Foundational PNT Profile: Applying the Cybersecurity Framework for the Responsible Use of Positioning,
+      Navigation, and Timing (PNT) Services'
+  - source: in-certin-dir-2022
+    page: 2
+    pinpoint: paragraph (i)
+    quote: All service providers, intermediaries, data centres, body corporate and Government organisations shall connect
+      to the Network Time Protocol (NTP) Server
+  searched:
+  - PNT
+  - positioning
+  - timing
+  - GNSS anti-spoofing
+  - multi-source
+  - NTP Server
+  reason: CERT-In Directions 2022 mandate NTP time synchronization for ICT systems, and the space framework references the
+    NIST Foundational PNT profile, but no binding rule requires GNSS anti-spoofing or multi-source timing for satellite buses.
+  related_gap: null
+  confidence: high
+- id: CL-13
+  question: Does the national policy require space system operators and manufacturers to implement supply chain risk management
+    to verify the provenance and authenticity of critical hardware components and electronic chips?
+  duplicate_of: SD-06
+  result: COVERED
+  evidence:
+  - source: in-ctir-2024
+    page: 8
+    pinpoint: Rule 7(1)(e)
+    quote: maintain records of the supply chain of the telecommunication equipment and other equipment deployed in the Critical
+      Telecommunication Infrastructure till such infrastructure is in use, and provide such records
+  - source: in-ctir-2024
+    page: 7
+    pinpoint: Rule 4(b)
+    quote: National Security Directive on Telecommunication Sector (NSDTS) as issued by the Central Government;
+  - source: in-telact-2023
+    page: 10
+    pinpoint: Section 21(d)
+    quote: procurement of telecommunication equipment and telecommunication services only from trusted sources;
+  searched:
+  - trusted source
+  - trusted product
+  - supply chain
+  - procure
+  - vendor
+  - testing and certification
+  reason: Duplicates seed item SD-06 ('Are satellite / telecom equipment and components subject to supply-chain security checks?').
+    See SD-06 in docs/sweep/sweep-india.yaml.
+  related_gap: null
+  confidence: high
+- id: CL-14
+  question: Does the national policy require satellite operators and ground segment software vendors to maintain a Software
+    Bill of Materials (SBOM) and conduct vulnerability testing on COTS and third-party code?
+  duplicate_of: null
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 18
+    pinpoint: section 5.8
+    quote: Maintain Bill of Materials as per the technical guidelines on SBOM, QBOM & CBOM, AIBOM, HBOM issued by CERT-In.
+  - source: in-tcsr-2024
+    page: 9
+    pinpoint: Rule 4(5)(a)(ii)
+    quote: telecommunication network testing, including hardening, vulnerability assessment and penetration testing;
+  searched:
+  - SBOM
+  - bill of materials
+  - software bill
+  - COTS
+  - third-party code
+  - hardening
+  reason: "Maintaining SBOMs and BOM variants according to CERT-In technical guidelines is recommended in space framework\
+    \ \xA75.8, and TCSR Rule 4(5)(a)(ii) mandates vulnerability assessments, but a binding statutory SBOM obligation was not\
+    \ found."
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: CL-15
+  question: Does the national policy require space operators to subject commercial launch service providers and third-party
+    ground station operators to formal security assessments before mission integration?
+  duplicate_of: null
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 37
+    pinpoint: section 9.3
+    quote: Information security audit report of the vendor to be made available to Procuring entity on periodic basis or when
+      required.
+  - source: in-space-fw-2026
+    page: 38
+    pinpoint: section 9.3
+    quote: Right to audit contractual responsibilities or to have the audits carried out by third parties.
+  searched:
+  - launch service
+  - launch provider
+  - launch vehicle
+  - mission integration
+  - audit report of the vendor
+  reason: "Space framework \xA79.3 provides vendor risk management controls including audit rights and information security\
+    \ reports, but no binding statutory rule mandates security assessments of commercial launch providers before integration."
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: CL-16
+  question: Does the national policy require satellite and non-terrestrial network operators to submit an initial early warning
+    notification of any significant cyber incident to national authorities within 24 hours of becoming aware?
+  duplicate_of: SD-15
+  result: UNCLEAR
+  evidence:
+  - source: in-certin-dir-2022
+    page: 2
+    pinpoint: paragraph (ii)
+    quote: mandatorily report cyber incidents as mentioned in Annexure I to CERT-In within 6 hours of noticing such incidents
+      or being brought to notice about such incidents.
+  - source: in-tcsr-2024
+    page: 11
+    pinpoint: Rule 7(1)
+    quote: On the occurrence of any security incident affecting a telecommunication entity, such entity shall report the same
+      to the Central Government within six (6) hours of such occurrence
+  searched:
+  - six hours
+  - 6 hours
+  - report
+  - occurrence
+  - noticing
+  - aware
+  - within
+  reason: Duplicates seed item SD-15 ('Are incident reporting clocks and triggers consistent across regulators?'). See SD-15
+    in docs/sweep/sweep-india.yaml.
+  related_gap: GAP-IN-01-THREE-CLOCKS
+  confidence: high
+- id: CL-17
+  question: Does the national policy require satellite operators to submit a detailed incident notification within 72 hours
+    and an exhaustive final incident analysis report within one month of a major security event?
+  duplicate_of: null
+  result: NOT_FOUND
+  evidence: []
+  searched:
+  - 72 hours
+  - one month
+  - detailed incident notification
+  - final incident analysis
+  - exhaustive final
+  reason: Initial reporting is strictly mandated within 6 hours under CERT-In Directions and TCSR 2024 Rule 7, but no 72-hour
+    detailed notification or one-month final incident report requirement exists for telecom/satellite cyber incidents in the
+    checked sources.
+  related_gap: GAP-IN-01-THREE-CLOCKS
+  confidence: high
+- id: CL-18
+  question: Does the national policy require satellite operators to report electronic interference (jamming/spoofing) and
+    space-vehicle telemetry anomalies affecting critical orbital functions to the designated national agency?
+  duplicate_of: SD-03
+  result: UNCLEAR
+  evidence:
+  - source: in-tcsr-2024
+    page: 11
+    pinpoint: Rule 7(1)
+    quote: On the occurrence of any security incident affecting a telecommunication entity, such entity shall report the same
+      to the Central Government within six (6) hours of such occurrence
+  - source: in-space-fw-2026
+    page: 12
+    pinpoint: section 3.2.1
+    quote: All SatCom operators and service providers must report cybersecurity incidents, breaches, or anomalies within 6
+      hours of noticing the incident to CERT-In.
+  searched:
+  - jamming
+  - interference
+  - spoofing
+  - GNSS
+  - GPS
+  - harmful interference
+  reason: Duplicates seed item SD-03 ('Must operators report RF jamming, interference or GNSS spoofing incidents?'). See SD-03
+    in docs/sweep/sweep-india.yaml.
+  related_gap: null
+  confidence: high
+- id: CL-19
+  question: Does the national policy require satellite communication providers to inform affected downstream users and interconnected
+    telecommunications carriers without undue delay when a cyber incident impairs service availability?
+  duplicate_of: SD-11
+  result: UNCLEAR
+  evidence:
+  - source: in-tcsr-2024
+    page: 11
+    pinpoint: Rule 7(2)
+    quote: The Central Government may, where it determines that disclosure of the security incident is in the public interest,
+      inform the public of such security incident, or require the affected telecommunication entity to do so.
+  - source: in-space-fw-2026
+    page: 48
+    pinpoint: Annexure B, section 4.2
+    quote: 'Stakeholders: Establish procedures for notifying critical infrastructure partners, regulatory bodies, and customers,
+      especially when service disruption occurs.'
+  searched:
+  - notify
+  - inform
+  - customers
+  - users
+  - public
+  - disclosure
+  - stakeholder
+  reason: Duplicates seed item SD-11 ('Must an operator warn dependent customers / critical services after an incident?').
+    See SD-11 in docs/sweep/sweep-india.yaml.
+  related_gap: GAP-IN-02-NO-DOWNSTREAM-WARNING
+  confidence: high
+- id: CL-20
+  question: Does the national policy require participation in a sectoral Information Sharing and Analysis Center (ISAC) or
+    cyber threat exchange for space and satellite operators?
+  duplicate_of: SD-08
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 33
+    pinpoint: section 7.1
+    quote: 'Shared Threat Intelligence: Establish mechanisms for sharing alerts and advisories via CERT-In or sectoral CERTs.'
+  - source: in-space-fw-2026
+    page: 36
+    pinpoint: section 9.1
+    quote: All SatCom entities must maintain communication channels with CERT-In and other relevant agencies & stakeholders
+      for threat intelligence, advisories, and incident coordination.
+  searched:
+  - information sharing
+  - share
+  - ISAC
+  - threat intelligence
+  - coordination
+  - advisory
+  reason: Duplicates seed item SD-08 ('Is there a sector body or duty for sharing threat information among operators?'). See
+    SD-08 in docs/sweep/sweep-india.yaml.
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: CL-21
+  question: Does the national policy require a coordinated vulnerability disclosure (CVD) process enabling security researchers
+    to report vulnerabilities in satellite platforms and ground software without fear of legal reprisal?
+  duplicate_of: SD-09
+  result: UNCLEAR
+  evidence:
+  - source: in-certin-faq-2022
+    page: 11
+    pinpoint: Question 15
+    quote: At present, the reporting of vulnerability as a standalone or in isolation, unconnected with the cyber security
+      incident is not mandatory.
+  - source: in-space-fw-2026
+    page: 51
+    pinpoint: section 12
+    quote: 'Alerts, advisories and Vulnerability notes: subscribe@cert-in.org.in'
+  searched:
+  - vulnerabilit
+  - disclosure
+  - report
+  - bug
+  - responsible
+  reason: Duplicates seed item SD-09 ('Is there a vulnerability disclosure route for satellite / telecom systems?'). See SD-09
+    in docs/sweep/sweep-india.yaml.
+  related_gap: null
+  confidence: high
+- id: CL-22
+  question: Does the national policy require satellites and associated ground segment software to undergo rigorous penetration
+    testing and independent cybersecurity verification prior to orbital launch?
+  duplicate_of: null
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 39
+    pinpoint: section 10.2
+    quote: 'Penetration Testing (Red Team Assessments): Simulated attacks on ground stations, TT&C (Telemetry, Tracking, and
+      Command) systems, and network infrastructure to reveal exploitable flaws.'
+  - source: in-tcsr-2024
+    page: 9
+    pinpoint: Rule 4(5)(a)(ii)
+    quote: telecommunication network testing, including hardening, vulnerability assessment and penetration testing;
+  searched:
+  - pre-launch
+  - penetration testing
+  - orbital launch
+  - prior to launch
+  - pre-launch security testing
+  reason: "Pre-launch penetration testing is recommended in space framework \xA710.1(c) and \xA710.2, and TCSR Rule 4(5)(a)(ii)\
+    \ requires penetration testing of telecommunication networks, but a binding statutory rule specifically requiring pre-orbital\
+    \ launch penetration testing was not found."
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: CL-23
+  question: Does the national policy require demonstrable compliance with mandatory cybersecurity and resilience baselines
+    as a prerequisite for issuing or renewing space activity licenses and spectrum authorizations?
+  duplicate_of: SD-04
+  result: COVERED
+  evidence:
+  - source: in-tcsr-2024
+    page: 9
+    pinpoint: Rule 4(5)
+    quote: 'Each telecommunication entity shall ensure compliance with the following measures to ensure telecom cyber security:
+      (a) adopt a telecom cyber security policy'
+  - source: in-tcsr-2024
+    page: 8
+    pinpoint: Rule 2(1)(f)
+    quote: "\u201Ctelecommunication entity\" means any person providing telecommunication services, or establishing, operating,\
+      \ maintaining, or expanding telecommunication network, including an authorised entity holding an authorisation under\
+      \ sub-section (1) of section 3 of the Act"
+  - source: in-telact-2023
+    page: 3
+    pinpoint: Section 2(s)
+    quote: (s) "telecommunication network" means a system or series of systems of telecommunication equipment or infrastructure,
+      including terrestrial or satellite networks
+  searched:
+  - GMPCS
+  - satellite
+  - authorisation
+  - licence
+  - license
+  - VSAT
+  - satellite-based
+  reason: Duplicates seed item SD-04 ('Do satellite communication licences / authorisations carry cyber security conditions?').
+    See SD-04 in docs/sweep/sweep-india.yaml.
+  related_gap: null
+  confidence: high
+- id: CL-24
+  question: Does the national policy require satellite operators to undergo regulatory review or re-authorization when implementing
+    major in-orbit firmware overhauls or changes to mission control architecture?
+  duplicate_of: null
+  result: NOT_FOUND
+  evidence: []
+  searched:
+  - firmware overhaul
+  - in-orbit
+  - re-authorization
+  - mission control architecture
+  - regulatory review
+  reason: While CTIR 2024 Rule 7(1)(c) requires maintaining documentation of network architecture changes, no requirement
+    for regulatory review or re-authorization for in-orbit firmware overhauls was found in the checked sources.
+  related_gap: null
+  confidence: high
+- id: CL-25
+  question: Does the national policy require sovereign control or jurisdictional restrictions on where satellite command telemetry
+    and user communication payload data are routed and stored?
+  duplicate_of: SD-07
+  result: COVERED
+  evidence:
+  - source: in-certin-dir-2022
+    page: 3
+    pinpoint: paragraph (iv)
+    quote: maintain them securely for a rolling period of 180 days and the same shall be maintained within the Indian jurisdiction.
+  - source: in-space-fw-2026
+    page: 13
+    pinpoint: section 3.2.3
+    quote: International collaboration and data exchange including data localization within India, lawful interception capabilities,
+      restrictions on routing data through foreign gateways, and requirements to indigenize ground infrastructure must be
+      in compliance
+  searched:
+  - within India
+  - located in India
+  - India
+  - localis
+  - gateway in India
+  - store
+  - maintain logs
+  reason: Duplicates seed item SD-07 ('Must satellite services keep gateways, traffic or logs in India?'). See SD-07 in docs/sweep/sweep-india.yaml.
+  related_gap: null
+  confidence: high
+- id: CL-26
+  question: Does the national policy require space systems to maintain redundant and physically diverse command-and-control
+    links to retain or recover positive control during cyber or link disruptions?
+  duplicate_of: null
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 16
+    pinpoint: section 5.2
+    quote: Reinforce link security with redundant command authentication, secure telemetry handling, and protected data paths.
+  - source: in-space-fw-2026
+    page: 18
+    pinpoint: section 5.9
+    quote: Establish mechanisms for failover operations and rapid restoration of affected services.
+  searched:
+  - redundant command
+  - physically diverse
+  - positive control
+  - diverse command-and-control
+  - failover operations
+  reason: "Space framework \xA75.2 and \xA75.9 recommend redundant command authentication, protected data paths, and failover\
+    \ operations, but this is guidance only without a binding statutory duty."
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: CL-27
+  question: Does the national policy require telecommunications operators to incorporate non-terrestrial networks into disaster
+    recovery plans as an automated backup mechanism for failed terrestrial networks?
+  duplicate_of: null
+  result: NOT_FOUND
+  evidence: []
+  searched:
+  - disaster recovery
+  - automated backup
+  - incorporate non-terrestrial
+  - terrestrial networks
+  - backup mechanism
+  reason: General business continuity and disaster recovery standard operating procedures are mandated for Critical Telecommunication
+    Infrastructure under CTIR 2024 Rule 7(1)(i), but no rule requires incorporating satellite or non-terrestrial networks
+    as an automated backup mechanism.
+  related_gap: null
+  confidence: high
+- id: CL-28
+  question: Does the national policy require satellite and NTN networks to enforce priority access, traffic pre-emption, and
+    quality of service (QoS) guarantees for national security and emergency response services?
+  duplicate_of: SD-12
+  result: UNCLEAR
+  evidence:
+  - source: in-telact-2023
+    page: 9
+    pinpoint: Section 20(1)(b)
+    quote: provide for appropriate mechanism to ensure that messages of a user or group of users authorised for response and
+      recovery during public emergency are routed on priority.
+  searched:
+  - priority
+  - emergency
+  - public emergency
+  - disaster
+  - critical service
+  - routed on priority
+  reason: Duplicates seed item SD-12 ('Is there a standing priority order for emergency / critical services on scarce capacity?').
+    See SD-12 in docs/sweep/sweep-india.yaml.
+  related_gap: GAP-IN-03-NO-PRIORITY-ORDER
+  confidence: high
+- id: CL-29
+  question: Does the national policy require satellite ground gateways, Earth stations, and control centers to maintain redundant
+    uninterruptible power supplies (UPS) and autonomous on-site backup generators?
+  duplicate_of: SD-13
+  result: NOT_FOUND
+  evidence: []
+  searched:
+  - battery
+  - backup power
+  - power backup
+  - UPS
+  - diesel
+  - generator
+  - hours of backup
+  reason: Duplicates seed item SD-13 ('Is there a minimum backup power / battery duration for telecom sites?'). See SD-13
+    in docs/sweep/sweep-india.yaml.
+  related_gap: GAP-IN-04-NO-BATTERY-FLOOR
+  confidence: high
+- id: CL-30
+  question: Does the national policy require an operational inter-agency joint coordination mechanism between civil space
+    agencies, defense/military space commands, and telecom regulators for space cyber defense?
+  duplicate_of: SD-14
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 34
+    pinpoint: section 7.2
+    quote: Rapid coordination among the mission control, ground station operators, network administrators, and national cybersecurity
+      agencies shall be ensured for unified response actions.
+  - source: in-tcsr-2024
+    page: 11
+    pinpoint: Rule 6(3)
+    quote: The Chief Telecommunication Security Officer shall be responsible for coordinating with the Central Government
+      for the implementation of these rules, including compliance with any reporting requirements under these rules
+  searched:
+  - coordinat
+  - joint
+  - crisis management
+  - command
+  - committee
+  - nodal
+  reason: Duplicates seed item SD-14 ('Is there a defined joint incident command across operators, CERT and regulators?').
+    See SD-14 in docs/sweep/sweep-india.yaml.
+  related_gap: GAP-IN-07-NO-JOINT-PLAN
+  confidence: high
+- id: CL-31
+  question: Does the national policy require the establishment or designation of a specialized Space Computer Security Incident
+    Response Team (Space CSIRT) with technical orbital and RF expertise to support satellite operators during cyber incidents?
+  duplicate_of: null
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 33
+    pinpoint: section 7.1
+    quote: Sector-specific Security Operations Centers (SOCs) shall maintain an incident repository and coordinate with CERT-In/NCCC
+      for threat intelligence correlation and policy refinement.
+  - source: in-space-fw-2026
+    page: 18
+    pinpoint: section 5.10
+    quote: Appoint a Chief Satellite Security Officer (CSSO) to oversee cybersecurity governance within the organization.
+  searched:
+  - Space CSIRT
+  - Space-CERT
+  - CSIRT
+  - Space Security Operations Centre
+  - Sat-SOC
+  reason: "Space framework \xA77.1 and \xA76.2 recommend establishing sector-specific SOCs (Sat-SOC) coordinating with CERT-In/NCCC,\
+    \ but no specialized Space CSIRT has been formally established or designated in binding statutory rules."
+  related_gap: GAP-IN-07-NO-JOINT-PLAN
+  confidence: high
+- id: CL-32
+  question: Does the national policy require adherence to recognized international space link security standards, such as
+    CCSDS Space Data Link Security (SDLS), for satellite telemetry and telecommand?
+  duplicate_of: SD-18
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 37
+    pinpoint: section 9.2(a)
+    quote: 'International Standards: ISO/IEC 27001 (ISMS), ISO/IEC 27019 (Industrial Control Systems), CCSDS 355.0-B-2 (Space
+      Link Security)'
+  - source: in-ctir-2024
+    page: 7
+    pinpoint: Rule 4(a)
+    quote: specifications, testing requirements, or conformity assessment, as applicable, issued by Telecommunication Engineering
+      Centre, National Centre for Communication Security
+  searched:
+  - 3GPP
+  - ITU
+  - CCSDS
+  - standard
+  - ISO
+  - TEC
+  - specification
+  reason: Duplicates seed item SD-18 ('Do Indian rules reference security standards for NTN / satellite links (3GPP, ITU,
+    CCSDS)?'). See SD-18 in docs/sweep/sweep-india.yaml.
+  related_gap: GAP-IN-06-STANDARDS
+  confidence: high
+- id: CL-33
+  question: Does the national policy require satellite operators to assign corporate board / executive liability for cyber
+    risk management and designate an accountable Space Security Officer or CISO?
+  duplicate_of: null
+  result: COVERED
+  evidence:
+  - source: in-tcsr-2024
+    page: 11
+    pinpoint: Rule 6(2)
+    quote: The Chief Telecommunication Security Officer shall be a citizen and resident of India, and responsible to the Board
+      of Directors or similar governing body of the telecommunication entity.
+  - source: in-space-fw-2026
+    page: 18
+    pinpoint: section 5.10
+    quote: Appoint a Chief Satellite Security Officer (CSSO) to oversee cybersecurity governance within the organization.
+  searched:
+  - board of directors
+  - Chief Satellite Security Officer
+  - CSSO
+  - CTSO
+  - CISO
+  - executive liability
+  reason: "TCSR 2024 Rule 6(2) legally mandates that the Chief Telecommunication Security Officer must be responsible directly\
+    \ to the Board of Directors or similar governing body, and space framework \xA75.10 provides for a Chief Satellite Security\
+    \ Officer (CSSO)."
+  related_gap: null
+  confidence: high
+- id: CL-34
+  question: Does the national policy require space systems to maintain strict cryptographic authorization safeguards on deorbit
+    and disposal commands to prevent unauthorized intentional orbital re-entry or weaponized collisions?
+  duplicate_of: null
+  result: NOT_FOUND
+  evidence: []
+  searched:
+  - deorbit
+  - disposal
+  - re-entry
+  - collision
+  - weaponized
+  - decommissioning
+  reason: "While end-of-life verification (secure data erasure and command link disablement) is recommended in space framework\
+    \ \xA710.1(e), no provision requiring cryptographic safeguards specifically for deorbit and disposal commands was found\
+    \ in the checked sources."
+  related_gap: null
+  confidence: high
+- id: CL-35
+  question: Does the national policy require satellite flight computers to cryptographically verify software images and enforce
+    anti-rollback protections before executing in-orbit firmware or patch updates?
+  duplicate_of: null
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 17
+    pinpoint: section 5.5
+    quote: Enable secure boot and cryptographic validation of all mission-critical components.
+  - source: in-space-fw-2026
+    page: 29
+    pinpoint: section 6.3(f)
+    quote: "Strict change management and signed/verified firmware update processes for modems, modems\u2019 controllers and\
+      \ baseband equipment."
+  searched:
+  - anti-rollback
+  - verify software
+  - secure boot
+  - flight computer
+  - firmware update
+  - mission-critical components
+  reason: "Secure boot, cryptographic validation of components, and signed/verified firmware updates are recommended in space\
+    \ framework \xA75.5 and \xA76.3, but anti-rollback protections are not explicitly mandated and the framework is guidance\
+    \ only."
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high

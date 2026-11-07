@@ -28,10 +28,11 @@
   sha256: 81663bfba1915837df416dd99ec7b1b823de05ea16c4fafa30e8dc1c0616d503
 
 - id: in-tcsr-2024
-  title: Telecommunications (Telecom Cyber Security) Rules, 2024
+  title: Telecommunications (Telecom Cyber Security) Rules, 2024 (notified, G.S.R. 720(E), 21 Nov 2024)
   authority: Department of Telecommunications
-  url: https://www.dot.gov.in/static/uploads/2025/07/7922e64b2a1ea70363e1b66970df52f5.pdf
-  sha256: f78b746dbf461b7254c8e0367b4f4aa5b3c2fcb07edd832b8dc93caaed54dacc
+  url: "https://thc.nic.in/Central%20Governmental%20Rules/Telecommunications%20(Telecom%20Cyber%20Security)%20Rules,%202024.pdf"
+  sha256: 16f93fbc5e1bbdbdee56b3b98a020e0d49e32f98b524ed8942ac8d6f7dc81494
+  notes: Gazette copy on a government (.nic.in) mirror. The old dot.gov.in URL (static/uploads/2025/07/7922e6...) served the 28 Aug 2024 DRAFT, G.S.R. 520(E) (sha256 f78b746d...); kept as kb/sources/incoming/in-tcsr-2024-DRAFT-GSR520E.pdf. Corrected 7 Nov 2026.
 
 - id: in-ctir-2024
   title: Telecommunications (Critical Telecommunication Infrastructure) Rules, 2024
@@ -92,3 +93,57 @@
   authority: TDRA (UAE)
   url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/UAE-Information-Assurance-Regulation-v1-1-pdf.ashx
   sha256: 636990f28c97d7f7a2d6816cf1130223472e82d9ccda523a622aa64e0d8f5f41
+
+# --- added 7 Nov 2026 night (sweep; each re-downloaded by Claude and hash-matched unless noted) ---
+- id: in-pib-space-fw-2026
+  title: "PIB release 2233122: India's Space Ecosystem Gets Cyber Shield as SIA-India, CERT-In Release Joint Guidelines (26 Feb 2026)"
+  authority: Press Information Bureau / MeitY
+  url: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2233122
+  sha256: 5c0a18fb4dd2ec401a1a781f07d96d3cbfc7408c30b6e7faa08b34b8c3add7ea
+  notes: HTML page saved 7 Nov 2026; page markup can change, the quoted sentence is what matters.
+
+- id: in-authz-rules-2026
+  title: Telecommunications (Authorisation for Provision of Principal Telecommunication Services) Rules, 2026 (G.S.R. 513(E), 23 Jun 2026)
+  authority: Department of Telecommunications
+  url: http://eservices.dot.gov.in/sites/default/files/reference-doc/prinipal-telecom-services-rule-2026.pdf
+  sha256: 52608d4a74075233add8acfa9f75c880212916b8117bd085e2e76e8548d3d6c5
+
+- id: in-dot-disaster-sop-2017
+  title: Standard Operating Procedure (SOP-2017) for Telecommunication Services for Responding to Disasters
+  authority: Department of Telecommunications
+  url: https://ntiprit.gov.in/pdf/ictindisaster/SOP_2017_deptt_of_Telecom.pdf
+  sha256: a20c84779294b94389825f25ffeceb14070a9f88718b08b2191ad9bff2dbc656
+  notes: Hosted by NTIPRIT (DoT training institute). Binding status not stated in the document.
+
+- id: in-trai-qos-2024
+  title: Standards of Quality of Service of Access (Wireline and Wireless) and Broadband (Wireline and Wireless) Service Regulations, 2024
+  authority: Telecom Regulatory Authority of India
+  url: https://trai.gov.in/sites/default/files/2024-10/Regulation_02082024.pdf
+  sha256: 25d7c3f1658264242121bdca86b0357b09531440725eea2cc820abe8285e4ad7
+
+- id: in-cea-comm-2020
+  title: Central Electricity Authority (Technical Standards for Communication System in Power System Operations) Regulations, 2020
+  authority: Central Electricity Authority
+  url: "https://thc.nic.in/Central%20Governmental%20Regulations/Central%20Electricity%20Authority%20(Techinical%20Standards%20for%20Communication%20System%20in%20Power%20System%20Operations)%20Regulations,%202020.pdf"
+  sha256: 370ed2bf59389aa012a22a82630c6c376996deb21ebfec81f70e82e57caaff94
+  notes: Scanned Gazette copy on a government (.nic.in) mirror, not cea.nic.in; not re-downloaded by Claude. OCR (macOS Vision) of PDF pages 6-9 = Gazette pp. 303-306 in kb/sources/.text/in-cea-comm-2020.ocr.txt.
+
+- id: in-dot-gmpcs-licence
+  title: Licence Agreement for Provision of Global Mobile Personal Communication by Satellite (GMPCS) Service
+  authority: Department of Telecommunications
+  url: https://www.eservices.dot.gov.in/sites/default/files/2024-11/GMPCS%20License%20Agreement.PDF
+  sha256: 04f25bf5f9aa92e1a03ae0e47d6a6b6410133335e46a3bcc1f2b9c73e81b54ff
+
+- id: intl-3gpp-tr-33700-29
+  title: 3GPP TR 33.700-29 V19.1.0, Study on security aspects of 5G satellite access phase 3
+  authority: 3GPP SA3
+  url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.700-29/33700-29-j10.zip
+  sha256: 4cb00691ea8a1fb5a2c4d22735a1f2585784fd3b74365ebceaec86a1db0a0a91
+  notes: sha256 is of the .docx inside the zip (kb/sources/intl-3gpp-tr-33700-29.docx).
+
+- id: intl-itut-x1144-2024
+  title: Recommendation ITU-T X.1144 (04/2024), eXtensible Access Control Markup Language (XACML) Version 3.1
+  authority: ITU-T
+  url: https://handle.itu.int/11.1002/1000/15877
+  sha256: 22558bd88f221ff4bd625d89099fb39eb062408c5ca8adbaf52ffec8d01f69f9
+  notes: Downloaded by agent C; not re-downloaded by Claude (ITU blocks scripted requests).

@@ -44,7 +44,7 @@
     deadline: null
     trigger: none
   quote: "shall designate a Point of Contact to interface with CERT-In."
-  pinpoint: Direction (iii), PDF p. 2
+  pinpoint: Direction (iii), PDF p. 3
   summary: Each covered entity names a point of contact for CERT-In.
   source: in-certin-dir-2022
   verified: true
@@ -68,7 +68,7 @@
     deadline: P180D
     trigger: none
   quote: "maintain them securely for a rolling period of 180 days and the same shall be maintained within the Indian jurisdiction."
-  pinpoint: Direction (iv), PDF p. 2
+  pinpoint: Direction (iv), PDF p. 3
   summary: ICT system logs are kept securely for a rolling 180 days, inside India.
   source: in-certin-dir-2022
   verified: true
@@ -86,7 +86,7 @@
   topic: incident_reporting
   topics: [incident_reporting]
   quote: "Compromise of critical systems/information"
-  pinpoint: Annexure I, item ii, PDF p. 4
+  pinpoint: Annexure I, item ii, PDF p. 5
   summary: Compromise of critical systems is reportable. This covers wiping or commanding terminals through the operator's management network.
   source: in-certin-dir-2022
   verified: true
@@ -104,7 +104,7 @@
   topic: incident_reporting
   topics: [incident_reporting]
   quote: "Unauthorised access of IT systems/data"
-  pinpoint: Annexure I, item iii, PDF p. 4
+  pinpoint: Annexure I, item iii, PDF p. 5
   summary: Unauthorised access is reportable. This covers the login through the misconfigured VPN.
   source: in-certin-dir-2022
   verified: true
@@ -122,7 +122,7 @@
   topic: incident_reporting
   topics: [incident_reporting]
   quote: "Attack on servers such as Database, Mail and DNS and network devices such as Routers"
-  pinpoint: Annexure I, item vi, PDF p. 4
+  pinpoint: Annexure I, item vi, PDF p. 5
   summary: Attacks on network devices such as routers are reportable.
   source: in-certin-dir-2022
   verified: true
@@ -140,7 +140,7 @@
   topic: incident_reporting
   topics: [incident_reporting]
   quote: "Attacks on Critical infrastructure, SCADA and operational technology systems and Wireless networks"
-  pinpoint: Annexure I, item ix, PDF p. 4
+  pinpoint: Annexure I, item ix, PDF p. 5
   summary: Attacks on critical infrastructure, operational technology and wireless networks are reportable. This covers jamming-forced failover and utility OT.
   source: in-certin-dir-2022
   verified: true
@@ -158,7 +158,7 @@
   topic: incident_reporting
   topics: [incident_reporting]
   quote: "Data Breach"
-  pinpoint: Annexure I, item xi, PDF p. 4
+  pinpoint: Annexure I, item xi, PDF p. 5
   summary: Data breaches are reportable.
   source: in-certin-dir-2022
   verified: true
@@ -176,7 +176,7 @@
   topic: incident_reporting
   topics: [incident_reporting]
   quote: "Data Leak"
-  pinpoint: Annexure I, item xii, PDF p. 4
+  pinpoint: Annexure I, item xii, PDF p. 5
   summary: Data leaks are reportable.
   source: in-certin-dir-2022
   verified: true
@@ -186,8 +186,8 @@
 # --- Telecom rules, 2024 ------------------------------------------------------------------
 - id: IN-TCSR-2024-R7-1
   jurisdiction: IN
-  instrument: Telecommunications (Telecom Cyber Security) Rules, 2024
-  clause: Rule 7(1)
+  instrument: Telecommunications (Telecom Cyber Security) Rules, 2024 (G.S.R. 720(E), 21 Nov 2024)
+  clause: Rule 7(1)(a)
   authority: Department of Telecommunications
   binding_status: binding
   issued: 2024-11-21
@@ -199,14 +199,15 @@
     action: report_security_incident
     recipient: Central Government (DoT)
     deadline: PT6H
-    trigger: occurrence
-  quote: "such entity shall report the same to the Central Government within six (6) hours of such occurrence"
-  pinpoint: Rule 7(1), PDF p. 11
-  summary: A security incident affecting a telecommunication entity is reported to the Central Government within six hours of occurrence.
+    trigger: awareness
+  quote: "within six hours of becoming aware of a security incident affecting its telecommunication network or telecommunication service, report the same to the Central Government with relevant details of the affected system including the description of such incident; and"
+  pinpoint: Rule 7(1)(a), PDF p. 5 of the notified Gazette text; Rule 7(1)(b) adds details "within twenty-four hours of becoming aware"
+  summary: A telecommunication entity reports a security incident to the Central Government within six hours of becoming aware of it, and gives users affected, duration, area, impact and remedies within twenty-four hours.
   source: in-tcsr-2024
   verified: true
-  verified_by: charan/india-citation-check.md (5 Nov 2026)
-  notes: Counted from occurrence, not noticing, unlike CERT-In Direction (ii). The 2025 amendment (G.S.R. 771(E), 22 Oct 2025) inserts Rule 7A on number validation and does not change Rule 7 (checked 7 Nov 2026).
+  verified_by: Notified Gazette G.S.R. 720(E) opened by Claude 7 Nov 2026 (replaces the draft G.S.R. 520(E) that was on disk)
+  notes: CORRECTED 7 Nov 2026 night. Earlier text ("within six (6) hours of such occurrence", 5 Nov citation check) was the 28 Aug 2024 DRAFT, G.S.R. 520(E). Found by Goldfish reviewer G1; external-review lead R1 was right. Trigger is awareness, close to CERT-In's "noticing"; CTIR Rule 7(1)(j) still counts from occurrence. The 2025 amendment (G.S.R. 771(E)) inserts Rule 7A and does not change Rule 7.
+
 
 - id: IN-CTIR-2024-R7-1-j
   jurisdiction: IN
@@ -238,7 +239,7 @@
   instrument: CERT-In / SIA-India Cyber Security Framework and Guidelines for Space including Satellite Communication
   clause: §3.2.1
   authority: CERT-In with SIA-India
-  binding_status: not_stated
+  binding_status: non_binding
   issued: 2026-02-26
   in_force_from: null
   topic: space_cyber
@@ -250,19 +251,19 @@
     deadline: PT6H
     trigger: noticing
   quote: "All SatCom operators and service providers must report cybersecurity incidents, breaches, or anomalies within 6 hours of noticing the incident to CERT-In."
-  pinpoint: §3.2.1, PDF p. 11
-  summary: Repeats the six-hour CERT-In clock for satellite operators; §7.1 (PDF p. 32) says the same.
+  pinpoint: §3.2.1, PDF p. 12
+  summary: Repeats the six-hour CERT-In clock for satellite operators; §7.1 (PDF p. 33) says the same.
   source: in-space-fw-2026
   verified: true
   verified_by: charan/india-citation-check.md (5 Nov 2026)
-  notes: The PDF does not state its legal status, so don't call it binding or non-binding.
+  notes: The PDF itself does not state its legal status. PIB release 2233122 (26 Feb 2026, MeitY) says "These guidelines are advisory in nature" (source in-pib-space-fw-2026), so binding_status is non_binding from 7 Nov 2026. Binding duties from other law (e.g. CERT-In Direction (ii)) still apply.
 
 - id: IN-SPACEFW-2026-ANXB-IV
   jurisdiction: IN
   instrument: CERT-In / SIA-India Cyber Security Framework and Guidelines for Space including Satellite Communication
   clause: Annexure B (Self-Assessment Maturity Checklist), IV Respond, SATCOM-specific focus
   authority: CERT-In with SIA-India
-  binding_status: not_stated
+  binding_status: non_binding
   issued: 2026-02-26
   in_force_from: null
   topic: space_cyber
@@ -273,7 +274,7 @@
   source: in-space-fw-2026
   verified: true
   verified_by: PDF opened 7 Nov 2026 (kb/sources, sha256 in sources.yaml)
-  notes: Nearest provision for GAP-IN-02. Found by the full-text search on 7 Nov 2026, so GAP-IN-02 was narrowed. The line sits in a two-column table; its row (4.2 Communications) is read from layout and needs a human check.
+  notes: Nearest provision for GAP-IN-02. Found by the full-text search on 7 Nov 2026, so GAP-IN-02 was narrowed. The line sits in a two-column table; its row (4.2 Communications) is read from layout and needs a human check. Advisory per PIB release 2233122 (26 Feb 2026).
 
 # --- Data protection --------------------------------------------------------------------
 - id: IN-DPDP-ACT-2023-8-6
@@ -298,7 +299,7 @@
   source: in-dpdp-act-2023
   verified: true
   verified_by: PDF opened 7 Nov 2026 (kb/sources, sha256 in sources.yaml)
-  notes: Enacted 11 Aug 2023 (checked in the PDF). Section 8 commences with DPDP Rules 2025 rule 1(4), about 13 May 2027; until then not in force.
+  notes: Enacted 11 Aug 2023 (checked in the PDF). Commencement per the Act's own footnote (PDF p. 5) - "Eighteen Months from 13th November, 2025" for ss. 7 to 17 (incl. s.8(6)), vide G.S.R. 843(E) of 13 Nov 2025; so 13 May 2027. (DPDP Rules Rule 1(4) sets the Rules' own dates.) Corrected 7 Nov 2026 after Goldfish review G1.
 
 - id: IN-DPDP-RULES-2025-R7
   jurisdiction: IN
@@ -397,20 +398,373 @@
   verified_by: null
   notes: Enacted 24 Dec 2023 (checked in the PDF). Commences in phases (s.1(3)); commencement notification not in our sources. Quote not yet extracted.
 
-- id: IN-TELACT-2023-24
+- id: IN-TELACT-2023-19
   jurisdiction: IN
   instrument: Telecommunications Act, 2023
-  clause: Section 24
+  clause: Section 19(d)-(f)
   authority: Parliament of India / DoT
   binding_status: binding
   issued: 2023-12-24
   in_force_from: null
-  topic: standards
-  topics: [standards]
-  quote: null
-  pinpoint: Section 24
-  summary: Standards, conformity assessment and certification for telecom equipment, networks and services. It contains no priority-routing order.
+  topic: standards_power
+  topics: [standards_power]
+  quote: "(e) cyber security for telecommunication services and telecommunication networks; and (f) encryption and data processing in telecommunication."
+  pinpoint: Section 19, PDF p. 9 ("The Central Government may notify standards and conformity assessment measures in respect of", incl. (d) telecommunication security)
+  summary: A power for the Central Government to notify standards on telecom security, cyber security and encryption. A power, not a standard.
   source: in-telact-2023
-  verified: false
-  verified_by: null
-  notes: Enacted 24 Dec 2023 (checked in the PDF). Commences in phases (s.1(3)); commencement notification not in our sources. Quote not yet extracted.
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026
+  notes: Replaces the mislabelled record IN-TELACT-2023-24 (s.24 is the Digital Bharat Nidhi, PDF p. 11; found by Goldfish G1 round 2). Commences in phases (s.1(3)); commencement notification not in our sources. Hook for GAP-IN-06.
+
+# ---------------------------------------------------------------------------------------------
+# Added 7 Nov 2026 (night) from the policy sweep. Each quote read by Claude in the PDF on disk.
+# ---------------------------------------------------------------------------------------------
+- id: IN-AUTHZ-2026-R59-4
+  jurisdiction: IN
+  instrument: Telecommunications (Authorisation for Provision of Principal Telecommunication Services) Rules, 2026
+  clause: Rule 59(4)(a)
+  authority: Department of Telecommunications
+  binding_status: binding
+  issued: 2026-06-23
+  in_force_from: 2026-06-23
+  topic: interference_reporting
+  topics: [interference_reporting]
+  quote: "unauthorised satellite signal that it may detect originating or terminating within India; and"
+  pinpoint: Rule 59(4)(a), PDF p. 112
+  summary: Satellite-network licensees must report unauthorised satellite signals they detect (and, under 59(4)(b), unauthorised access to their satellites). No deadline is set.
+  source: in-authz-rules-2026
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026 (sha256 matched an independent re-download)
+  notes: Applies to "new authorised entities" (authorised under these Rules). Rogue signals, not cyber incidents in general; jamming of the operator's own links is not named.
+
+- id: IN-AUTHZ-2026-R62-2
+  jurisdiction: IN
+  instrument: Telecommunications (Authorisation for Provision of Principal Telecommunication Services) Rules, 2026
+  clause: Rule 62(2)
+  authority: Department of Telecommunications
+  binding_status: binding
+  issued: 2026-06-23
+  in_force_from: 2026-06-23
+  topic: data_location
+  topics: [data_location]
+  quote: "The operation, maintenance and control facility for the satellite earth station gateway and user terminals connected with the satellite network of a new authorised entity shall be located in India."
+  pinpoint: Rule 62(2), PDF p. 114
+  summary: The control facility for satellite gateways and user terminals must be in India. Rule 59(3)(a) also requires each gateway to be located in India.
+  source: in-authz-rules-2026
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026
+  notes: A sovereignty and lawful-interception condition (Chapter VII). It does not set cyber-resilience controls for the gateway.
+
+- id: IN-AUTHZ-2026-R62-7
+  jurisdiction: IN
+  instrument: Telecommunications (Authorisation for Provision of Principal Telecommunication Services) Rules, 2026
+  clause: Rule 62(7) and 62(11)(a)
+  authority: Department of Telecommunications
+  binding_status: binding
+  issued: 2026-06-23
+  in_force_from: 2026-06-23
+  topic: terminal_control
+  topics: [terminal_control]
+  quote: "Every new authorised entity shall report to the Central Government on the portal, any attempt to access or use the satellite network by a user terminal not registered under sub-rule (6)"
+  pinpoint: Rule 62(7), PDF p. 114; 62(11)(a) bans location-spoofing tools in user terminals
+  summary: Satellite licensees must register user terminals, report access attempts by unregistered terminals, and keep location-spoofing tools out of terminals.
+  source: in-authz-rules-2026
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026
+  notes: Terminal control for security and sovereignty. No secure-boot, firmware-signing or terminal security baseline is set.
+
+- id: IN-AUTHZ-2026-R38-2-a
+  jurisdiction: IN
+  instrument: Telecommunications (Authorisation for Provision of Principal Telecommunication Services) Rules, 2026
+  clause: Rule 38(1) and 38(2)(a)
+  authority: Department of Telecommunications
+  binding_status: binding
+  issued: 2026-06-23
+  in_force_from: 2026-06-23
+  topic: public_alerts
+  topics: [public_alerts]
+  quote: "facilitate dissemination of alert messages through short message service, cell broadcast or any other means as may be directed by Central Government, State Government or any officer authorised in this behalf"
+  pinpoint: Rule 38(2)(a), PDF p. 101
+  summary: In disasters, licensees follow government directions (38(1)); access-service licensees must carry public alert messages when directed (38(2)(a)) and implement roaming per guidelines (38(2)(b)).
+  source: in-authz-rules-2026
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026
+  notes: Government-to-public alerts on direction. Not an operator duty to warn dependent services after a cyber incident (GAP-IN-02).
+
+- id: IN-TRAI-QOS-2024-4-1-3
+  jurisdiction: IN
+  instrument: TRAI Standards of Quality of Service of Access and Broadband Service Regulations, 2024
+  clause: Schedule, para 4.1.3(ii)
+  authority: Telecom Regulatory Authority of India
+  binding_status: binding
+  issued: 2024-08-02
+  in_force_from: 2024-10-01   # Reg. 1(2), PDF p. 99
+  topic: outage_reporting
+  topics: [outage_reporting]
+  obligation:
+    actor: access_service_provider
+    action: report_significant_network_outage
+    recipient: TRAI
+    deadline: PT24H
+    trigger: occurrence
+  quote: "All such SNOs shall be reported to the Authority within 24 Hrs. from the start of any such outage."
+  pinpoint: para 4.1.3(ii), PDF p. 113
+  summary: A significant network outage (services down in a district for a set period) must be reported to TRAI within 24 hours of its start, with a root-cause summary after restoration.
+  source: in-trai-qos-2024
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026 (sha256 matched an independent re-download)
+  notes: A fourth clock in the same event (outage, not security incident), to a fourth recipient (TRAI). Relevant to GAP-IN-01. In force 1 Oct 2024 (Reg. 1(2)).
+
+- id: IN-DOT-SOP-2017-3-1-3
+  jurisdiction: IN
+  instrument: DoT Standard Operating Procedure (SOP-2017) for Telecommunication Services for Responding to Disasters
+  clause: §3.1.3
+  authority: Department of Telecommunications
+  binding_status: not_stated
+  issued: null    # SOP-2017; exact date not stated on the cover
+  in_force_from: null
+  topic: backup_power
+  topics: [backup_power]
+  quote: "All the vulnerable critical network components should have sufficient redundancy including transmission links and power backups in terms of battery storage capacity and diesel / fuel availability."
+  pinpoint: §3.1.3, PDF p. 9 (§3.1.4 asks for UPS with "sufficient External Battery support")
+  summary: Asks operators for "sufficient" battery and fuel backup at vulnerable sites. Sets no minimum hours.
+  source: in-dot-disaster-sop-2017
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026 (sha256 matched an independent re-download)
+  notes: Nearest provision for GAP-IN-04. "should" + SOP of unstated status.
+
+- id: IN-DOT-SOP-2017-2-3-2
+  jurisdiction: IN
+  instrument: DoT Standard Operating Procedure (SOP-2017) for Telecommunication Services for Responding to Disasters
+  clause: §2.3.2
+  authority: Department of Telecommunications
+  binding_status: not_stated
+  issued: null    # SOP-2017; exact date not stated on the cover
+  in_force_from: null
+  topic: disaster_coordination
+  topics: [disaster_coordination]
+  quote: "At State or telecom circle level, all Disaster related activities will be coordinated and monitored by State Telecom Disaster Co-ordination Committee (STDCC)."
+  pinpoint: §2.3.2, PDF p. 7
+  summary: Disaster coordination for telecom runs through State Telecom Disaster Co-ordination Committees chaired by DoT field units.
+  source: in-dot-disaster-sop-2017
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026
+  notes: Natural-disaster coordination. Cyber incidents and satellite operators are not named. Nearest provision for GAP-IN-07.
+
+- id: IN-CEA-2020-8-11
+  jurisdiction: IN
+  instrument: CEA (Technical Standards for Communication System in Power System Operations) Regulations, 2020
+  clause: Regulation 8(11)
+  authority: Central Electricity Authority
+  binding_status: binding
+  issued: null    # 2020 regulations; Gazette date not read
+  in_force_from: null
+  topic: grid_comms_backup
+  topics: [grid_comms_backup]
+  quote: "Communication equipment for all the nodes shall be provided with at least ten hours battery backup and extended backup shall be provided depending upon the requirement."
+  pinpoint: Regulation 8(11), Gazette p. 304 (PDF p. 7, scanned; OCR)
+  summary: Power-grid communication nodes must have at least 10 hours of battery backup. This is India's own numeric floor, but for the power sector only.
+  source: in-cea-comm-2020
+  verified: true
+  verified_by: Read by Claude 7 Nov 2026 from macOS Vision OCR of the scanned page; regulation heading 8 confirmed on Gazette p. 303
+  notes: Domestic comparison for GAP-IN-04 (telecom sites have no numeric floor). Not telecom; do not tag backup_power.
+
+- id: IN-DOT-SOP-2017-3-2-5
+  jurisdiction: IN
+  instrument: DoT Standard Operating Procedure (SOP-2017) for Telecommunication Services for Responding to Disasters
+  clause: §3.2.5
+  authority: Department of Telecommunications
+  binding_status: not_stated
+  issued: null    # SOP-2017; exact date not stated on the cover
+  in_force_from: null
+  topic: capacity_priority
+  topics: [capacity_priority]
+  quote: "Priority is to be given to these groups for provisioning of additional communication facilities and restoration of telecom services, if required, for quick and efficient rescue and relief operations."
+  pinpoint: §3.2.5, PDF p. 12
+  summary: Operators should identify priority user groups (government agencies, police, fire, medical, civil defence, Red Cross, army, financial institutions, NGOs, restoration staff) and give them priority for extra facilities and restoration.
+  source: in-dot-disaster-sop-2017
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026
+  notes: Nearest provision for GAP-IN-03. Open list ("might include"), restoration and provisioning only, not a ranking for sharing scarce live capacity (e.g. satellite backhaul); 112 and payments not named as classes; SOP status not stated.
+
+# --- added 7 Nov 2026 night after Goldfish review round 1 (each quote read by Claude in the PDF) ---
+- id: IN-ITACT-2000-70B-4
+  jurisdiction: IN
+  instrument: Information Technology Act, 2000
+  clause: Section 70B(4)(a), (b), (d)
+  authority: Parliament of India / MeitY
+  binding_status: binding
+  issued: 2000-06-09
+  in_force_from: null
+  topic: cert_powers
+  topics: [cert_powers]
+  quote: "(d) coordination of cyber incidents response activities;"
+  pinpoint: Section 70B(4), PDF p. 30 (also (a) "collection, analysis and dissemination of information on cyber incidents" and (b) "forecast and alerts of cyber security incidents")
+  summary: CERT-In is the national agency for collecting and disseminating information on cyber incidents, issuing alerts, and coordinating incident response.
+  source: in-itact-2000
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026
+  notes: An agency function, not a duty on operators. Nearest existing structure for GAP-IN-07 (coordination, but no joint command or decision owner) and an existing alert channel for GAP-IN-02.
+
+- id: IN-AUTHZ-2026-R37-5
+  jurisdiction: IN
+  instrument: Telecommunications (Authorisation for Provision of Principal Telecommunication Services) Rules, 2026
+  clause: Rule 37(5)
+  authority: Department of Telecommunications
+  binding_status: binding
+  issued: 2026-06-23
+  in_force_from: 2026-06-23
+  topic: network_info_sharing
+  topics: [network_info_sharing]
+  quote: "Every new authorised entity shall not share any information relating to its telecommunication network with any other person except with the prior approval of the Central Government in writing"
+  pinpoint: Rule 37(5), PDF p. 101
+  summary: A licensee may not share information about its network with others without prior written government approval.
+  source: in-authz-rules-2026
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026
+  notes: A barrier to GAP-IN-02. A satellite operator warning dependent services about its network may need prior approval; the ask must address this.
+
+- id: IN-AUTHZ-2026-R54-1
+  jurisdiction: IN
+  instrument: Telecommunications (Authorisation for Provision of Principal Telecommunication Services) Rules, 2026
+  clause: Rule 54(1)(a) and (d); Rules 50, 53
+  authority: Department of Telecommunications
+  binding_status: binding
+  issued: 2026-06-23
+  in_force_from: 2026-06-23
+  topic: telecom_cyber_security
+  topics: [telecom_cyber_security]
+  quote: "be responsible for security of its telecommunications network and undertake measures"
+  pinpoint: Rule 54(1)(a), PDF p. 109; 54(1)(d) vendor "security checks and risk assessments at any time" (p. 109); Rule 50 trusted sources (p. 107); Rule 53 prior permission for remote access (p. 108)
+  summary: General binding security duties for every new authorised entity, satellite licensees included - own network security, vendor and supply-chain security checks, trusted products, and government permission for remote access.
+  source: in-authz-rules-2026
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026
+  notes: The general binding layer for GAP-IN-09. Not satellite-specific (no TT&C link protection, key management or segmentation). Rule 53 touches the KA-SAT vector (remote management access).
+
+- id: IN-TRAI-QOS-2024-3-2
+  jurisdiction: IN
+  instrument: TRAI Standards of Quality of Service of Access and Broadband Service Regulations, 2024
+  clause: Regulation 3(2)
+  authority: Telecom Regulatory Authority of India
+  binding_status: binding
+  issued: 2024-08-02
+  in_force_from: 2024-10-01   # Reg. 1(2), PDF p. 99
+  topic: network_redundancy
+  topics: [network_redundancy]
+  quote: "The quality management plan shall provide for required redundancies including power, transmission links, equipment, geo-redundancies in the core network and access network as per relevant standards to achieve end-to-end QoS as per the benchmarks specified in these regulations."
+  pinpoint: Regulation 3(2), PDF p. 101
+  summary: Access providers' quality plans must provide redundancy, including power, but no number of hours is set.
+  source: in-trai-qos-2024
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026
+  notes: Binding but non-numeric. Nearest binding provision for GAP-IN-04. Applies to access-service providers, not satellite operators as such.
+
+- id: IN-CTIR-2024-R7-1-i
+  jurisdiction: IN
+  instrument: Telecommunications (Critical Telecommunication Infrastructure) Rules, 2024
+  clause: Rule 7(1)(i)
+  authority: Department of Telecommunications
+  binding_status: binding
+  issued: 2024-11-22
+  in_force_from: 2024-11-22
+  topic: network_redundancy
+  topics: [network_redundancy]
+  quote: "implement standard operating procedures for security incident response systems, including disaster recovery and business continuity;"
+  pinpoint: Rule 7(1)(i), PDF p. 8
+  summary: Owners of designated Critical Telecommunication Infrastructure must have incident-response, disaster-recovery and business-continuity procedures.
+  source: in-ctir-2024
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026
+  notes: Designated CTI only. Asks for DR/BCP procedures, not a security check of the backup path (GAP-IN-08).
+
+- id: IN-SPACEFW-2026-SDLS
+  jurisdiction: IN
+  instrument: CERT-In / SIA-India Cyber Security Framework and Guidelines for Space including Satellite Communication
+  clause: Control on TT&C and payload link encryption
+  authority: CERT-In with SIA-India
+  binding_status: non_binding
+  issued: 2026-02-26
+  in_force_from: null
+  topic: standards
+  topics: [standards, space_cyber]
+  quote: "Adopt standardized and validated cryptographic protocols (e.g., FIPS 140-3, Consultative Committee for Space Data Systems Space Data Link Security (CCSDS SDLS), Advanced Encryption Standard (AES)-256)."
+  pinpoint: PDF p. 17 (CCSDS SDLS also named on pp. 19, 20, 22)
+  summary: The advisory space framework names CCSDS SDLS, FIPS 140-3 and AES-256 for satellite link protection.
+  source: in-space-fw-2026
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026
+  notes: Advisory (PIB 2233122). Nearest Indian provision for GAP-IN-06. Found by Goldfish review G1 (v3 wrongly said no Indian text names one).
+
+# --- added 7 Nov 2026 night after Goldfish review round 2 ---
+- id: IN-PIB-2026-SPACEFW-ADVISORY
+  jurisdiction: IN
+  instrument: PIB release 2233122 (MeitY), 26 Feb 2026
+  clause: Status statement on the CERT-In / SIA-India space guidelines
+  authority: Press Information Bureau / MeitY
+  binding_status: non_binding
+  issued: 2026-02-26
+  in_force_from: null
+  topic: space_cyber
+  topics: [space_cyber]
+  quote: "These guidelines are advisory in nature and are intended to advance cyber security preparedness across the space sector."
+  pinpoint: PIB release 2233122
+  summary: The Government states that the 2026 space cyber guidelines are advisory.
+  source: in-pib-space-fw-2026
+  verified: true
+  verified_by: pib.gov.in page fetched and read by Claude 7 Nov 2026
+  notes: Status evidence for every space-framework record (GAP-IN-02, -06, -08, -09). An official statement, not a rule.
+
+- id: IN-TCSR-2024-R7-2
+  jurisdiction: IN
+  instrument: Telecommunications (Telecom Cyber Security) Rules, 2024 (G.S.R. 720(E))
+  clause: Rule 7(2)
+  authority: Department of Telecommunications
+  binding_status: binding
+  issued: 2024-11-21
+  in_force_from: 2024-11-21
+  topic: public_alerts
+  topics: [public_alerts]
+  quote: "The Central Government may, where it determines that disclosure of the security incident is in the public interest, inform the public of such security incident, or require the affected telecommunication entity to do so."
+  pinpoint: Rule 7(2), PDF p. 5
+  summary: The government may tell the public about a security incident, or require the operator to.
+  source: in-tcsr-2024
+  verified: true
+  verified_by: Notified Gazette G.S.R. 720(E) opened by Claude 7 Nov 2026
+  notes: A government power to disclose to the public, not an operator duty to warn dependent services (GAP-IN-02).
+
+- id: IN-AUTHZ-2026-R60-1
+  jurisdiction: IN
+  instrument: Telecommunications (Authorisation for Provision of Principal Telecommunication Services) Rules, 2026
+  clause: Rule 60(1)(b) and (f)
+  authority: Department of Telecommunications
+  binding_status: binding
+  issued: 2026-06-23
+  in_force_from: 2026-06-23
+  topic: interference_reporting
+  topics: [interference_reporting, data_location]
+  quote: "provide any information of and conduct tests, for interference monitoring, and to take necessary steps, as directed by the Central Government, for its mitigation; and"
+  pinpoint: Rule 60(1)(f), PDF p. 113; 60(1)(b), p. 112 bars routing via gateways outside India "including during failure of satellite earth station gateway located in India"
+  summary: Satellite licensees must support interference monitoring and mitigate interference as directed, and may not fail over to foreign gateways.
+  source: in-authz-rules-2026
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026
+  notes: Binding satellite-specific text relevant to jamming (GAP-IN-09) and a binding limit on failover (GAP-IN-08, PB-06 must respect it). Applies to new authorised entities.
+
+- id: IN-SPACEFW-2026-7-3
+  jurisdiction: IN
+  instrument: CERT-In / SIA-India Cyber Security Framework and Guidelines for Space including Satellite Communication
+  clause: §7.3 (Recovery)
+  authority: CERT-In with SIA-India
+  binding_status: non_binding
+  issued: 2026-02-26
+  in_force_from: null
+  topic: failover_path_security
+  topics: [failover_path_security]
+  quote: "Affected systems shall be restored to a verified secure state through re-imaging, patching, and validation of integrity before resumption of full operations."
+  pinpoint: §7.3, PDF p. 34
+  summary: Advisory - verify integrity before resuming full operations after an incident.
+  source: in-space-fw-2026
+  verified: true
+  verified_by: PDF opened by Claude 7 Nov 2026
+  notes: Advisory (PIB 2233122). Nearest text for GAP-IN-08 - about restoring systems after an incident, not checking a backup path before failover during one.

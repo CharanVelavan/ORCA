@@ -1,0 +1,440 @@
+- id: SD-01
+  question: Must satellite gateways / earth stations meet specific cyber security requirements?
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 22
+    pinpoint: section 6.2
+    quote: The Ground Segment comprises mission control centres, ground stations, network gateways, data processing facilities,
+      teleport sites, launch control systems, and associated ICT infrastructure.
+  - source: in-space-fw-2026
+    page: 13
+    pinpoint: section 3.2.3
+    quote: Operators must conduct periodic security reviews for international gateways and ground stations located abroad.
+  searched:
+  - gateway
+  - earth station
+  - ground station
+  - ground segment
+  - teleport
+  - hub
+  reason: "Specific cyber security controls for ground stations and gateways are outlined in CERT-In space cyber framework\
+    \ \xA76.2, but the framework is guidance only with unstated legal status, and no binding statutory rule imposes them."
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: SD-02
+  question: Must satellite command and control (TT&C) links be encrypted or authenticated?
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 17
+    pinpoint: section 5.3
+    quote: Enforce end-to-end encryption for telemetry, tracking, command (TT&C), and data payload links.
+  - source: in-space-fw-2026
+    page: 28
+    pinpoint: section 6.3(b)
+    quote: Cryptographic message authentication (MACs, digital signatures) on telecommands and critical telemetry.
+  searched:
+  - telemetry
+  - telecommand
+  - TT&C
+  - command and control
+  - encrypt
+  - authentication
+  - uplink
+  reason: "TT&C encryption and telecommand authentication are specified in the CERT-In space cyber guidelines (\xA75.3, \xA7\
+    6.3), but the document has unstated legal status and no binding statutory provision mandates them."
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: SD-03
+  question: Must operators report RF jamming, interference or GNSS spoofing incidents?
+  result: UNCLEAR
+  evidence:
+  - source: in-tcsr-2024
+    page: 11
+    pinpoint: Rule 7(1)
+    quote: On the occurrence of any security incident affecting a telecommunication entity, such entity shall report the same
+      to the Central Government within six (6) hours of such occurrence
+  - source: in-space-fw-2026
+    page: 12
+    pinpoint: section 3.2.1
+    quote: All SatCom operators and service providers must report cybersecurity incidents, breaches, or anomalies within 6
+      hours of noticing the incident to CERT-In.
+  searched:
+  - jamming
+  - interference
+  - spoofing
+  - GNSS
+  - GPS
+  - harmful interference
+  reason: "General security incidents must be reported under TCSR 2024 Rule 7 and CERT-In directions, but RF jamming, interference\
+    \ and GNSS spoofing are not explicitly defined as reportable categories in binding rules; space framework \xA73.2.1 lists\
+    \ signal tampering but is guidance only."
+  related_gap: null
+  confidence: high
+- id: SD-04
+  question: Do satellite communication licences / authorisations carry cyber security conditions?
+  result: COVERED
+  evidence:
+  - source: in-tcsr-2024
+    page: 9
+    pinpoint: Rule 4(5)
+    quote: 'Each telecommunication entity shall ensure compliance with the following measures to ensure telecom cyber security:
+      (a) adopt a telecom cyber security policy'
+  - source: in-tcsr-2024
+    page: 8
+    pinpoint: Rule 2(1)(f)
+    quote: "\u201Ctelecommunication entity\" means any person providing telecommunication services, or establishing, operating,\
+      \ maintaining, or expanding telecommunication network, including an authorised entity holding an authorisation under\
+      \ sub-section (1) of section 3 of the Act"
+  - source: in-telact-2023
+    page: 3
+    pinpoint: Section 2(s)
+    quote: (s) "telecommunication network" means a system or series of systems of telecommunication equipment or infrastructure,
+      including terrestrial or satellite networks
+  searched:
+  - GMPCS
+  - satellite
+  - authorisation
+  - licence
+  - license
+  - VSAT
+  - satellite-based
+  reason: Under the Telecommunications Act 2023 and TCSR 2024 Rule 4(5), all authorised entities operating telecommunication
+    networks (including satellite networks) must comply with binding cyber security conditions, including adopting security
+    policies, testing, and audits.
+  related_gap: null
+  confidence: high
+- id: SD-05
+  question: Are there security standards or certification for satellite user terminals / modems?
+  result: UNCLEAR
+  evidence:
+  - source: in-telact-2023
+    page: 9
+    pinpoint: Section 19(a)
+    quote: (a) telecommunication equipment, telecommunication identifiers and telecommunication network;
+  - source: in-space-fw-2026
+    page: 29
+    pinpoint: section 6.4
+    quote: The User Segment includes end-user terminals, VSATs, modems, satellite phones, IoT gateways, and related equipment
+      that connect to satellite networks for communication or data services.
+  searched:
+  - terminal
+  - modem
+  - user equipment
+  - customer premises
+  - certification
+  - testing
+  - trusted source
+  reason: Telecommunications Act 2023 s.19 empowers the government to notify standards and conformity assessment for equipment,
+    and the space framework recommends terminal standards (EN 303 645, NIST SP 800-53), but no binding mandatory terminal
+    security certification standard is in force in these sources.
+  related_gap: null
+  confidence: high
+- id: SD-06
+  question: Are satellite / telecom equipment and components subject to supply-chain security checks?
+  result: COVERED
+  evidence:
+  - source: in-ctir-2024
+    page: 8
+    pinpoint: Rule 7(1)(e)
+    quote: maintain records of the supply chain of the telecommunication equipment and other equipment deployed in the Critical
+      Telecommunication Infrastructure till such infrastructure is in use, and provide such records
+  - source: in-ctir-2024
+    page: 7
+    pinpoint: Rule 4(b)
+    quote: National Security Directive on Telecommunication Sector (NSDTS) as issued by the Central Government;
+  - source: in-telact-2023
+    page: 10
+    pinpoint: Section 21(d)
+    quote: procurement of telecommunication equipment and telecommunication services only from trusted sources;
+  searched:
+  - trusted source
+  - trusted product
+  - supply chain
+  - procure
+  - vendor
+  - testing and certification
+  reason: CTIR 2024 Rules 4(b) and 7(1)(e) mandate supply-chain records and compliance with the National Security Directive
+    on Telecommunication Sector (NSDTS / trusted sources) for equipment deployed in Critical Telecommunication Infrastructure,
+    under Telecommunications Act 2023 s.21(d).
+  related_gap: null
+  confidence: high
+- id: SD-07
+  question: Must satellite services keep gateways, traffic or logs in India?
+  result: COVERED
+  evidence:
+  - source: in-certin-dir-2022
+    page: 3
+    pinpoint: paragraph (iv)
+    quote: maintain them securely for a rolling period of 180 days and the same shall be maintained within the Indian jurisdiction.
+  - source: in-space-fw-2026
+    page: 13
+    pinpoint: section 3.2.3
+    quote: International collaboration and data exchange including data localization within India, lawful interception capabilities,
+      restrictions on routing data through foreign gateways, and requirements to indigenize ground infrastructure must be
+      in compliance
+  searched:
+  - within India
+  - located in India
+  - India
+  - localis
+  - gateway in India
+  - store
+  - maintain logs
+  reason: CERT-In Directions 2022 paragraph (iv) legally mandates that logs of all ICT systems must be securely maintained
+    within Indian jurisdiction for a rolling period of 180 days.
+  related_gap: null
+  confidence: high
+- id: SD-08
+  question: Is there a sector body or duty for sharing threat information among operators?
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 33
+    pinpoint: section 7.1
+    quote: 'Shared Threat Intelligence: Establish mechanisms for sharing alerts and advisories via CERT-In or sectoral CERTs.'
+  - source: in-space-fw-2026
+    page: 36
+    pinpoint: section 9.1
+    quote: All SatCom entities must maintain communication channels with CERT-In and other relevant agencies & stakeholders
+      for threat intelligence, advisories, and incident coordination.
+  searched:
+  - information sharing
+  - share
+  - ISAC
+  - threat intelligence
+  - coordination
+  - advisory
+  reason: The space cyber framework recommends sharing threat intelligence via CERT-In/sectoral CERTs and references Space
+    ISAC, but the framework is guidance only and no binding statutory duty exists for threat sharing among operators.
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: SD-09
+  question: Is there a vulnerability disclosure route for satellite / telecom systems?
+  result: UNCLEAR
+  evidence:
+  - source: in-certin-faq-2022
+    page: 11
+    pinpoint: Question 15
+    quote: At present, the reporting of vulnerability as a standalone or in isolation, unconnected with the cyber security
+      incident is not mandatory.
+  - source: in-space-fw-2026
+    page: 51
+    pinpoint: section 12
+    quote: 'Alerts, advisories and Vulnerability notes: subscribe@cert-in.org.in'
+  searched:
+  - vulnerabilit
+  - disclosure
+  - report
+  - bug
+  - responsible
+  reason: A general vulnerability reporting channel to CERT-In exists under CERT-In Rules 2013, but reporting standalone vulnerabilities
+    remains voluntary rather than mandatory, and no sector-specific vulnerability disclosure framework exists for satellite/telecom.
+  related_gap: null
+  confidence: high
+- id: SD-10
+  question: Must failover / alternate paths be security-checked before traffic moves?
+  result: NOT_FOUND
+  evidence: []
+  searched:
+  - failover
+  - alternate
+  - backup path
+  - redundan
+  - resilien
+  - continuity
+  reason: "While space framework \xA75.9 asks operators to establish failover mechanisms, no provision in the checked Indian\
+    \ sources requires backup paths to be verified clean or security-checked before failover during an attack."
+  related_gap: GAP-IN-08-NO-CLEAN-PATH-CHECK
+  confidence: high
+- id: SD-11
+  question: Must an operator warn dependent customers / critical services after an incident?
+  result: UNCLEAR
+  evidence:
+  - source: in-tcsr-2024
+    page: 11
+    pinpoint: Rule 7(2)
+    quote: The Central Government may, where it determines that disclosure of the security incident is in the public interest,
+      inform the public of such security incident, or require the affected telecommunication entity to do so.
+  - source: in-space-fw-2026
+    page: 48
+    pinpoint: Annexure B, section 4.2
+    quote: 'Stakeholders: Establish procedures for notifying critical infrastructure partners, regulatory bodies, and customers,
+      especially when service disruption occurs.'
+  searched:
+  - notify
+  - inform
+  - customers
+  - users
+  - public
+  - disclosure
+  - stakeholder
+  reason: TCSR 2024 Rule 7(2) provides a discretionary government power to require public disclosure rather than an operator
+    duty, and space framework Annexure B item 4.2 recommends downstream notification procedures but is guidance only.
+  related_gap: GAP-IN-02-NO-DOWNSTREAM-WARNING
+  confidence: high
+- id: SD-12
+  question: Is there a standing priority order for emergency / critical services on scarce capacity?
+  result: UNCLEAR
+  evidence:
+  - source: in-telact-2023
+    page: 9
+    pinpoint: Section 20(1)(b)
+    quote: provide for appropriate mechanism to ensure that messages of a user or group of users authorised for response and
+      recovery during public emergency are routed on priority.
+  searched:
+  - priority
+  - emergency
+  - public emergency
+  - disaster
+  - critical service
+  - routed on priority
+  reason: Telecommunications Act 2023 s.20(1)(b) allows the government by notification during a public emergency to route
+    authorised responders' messages on priority, but it is a discretionary power exercisable during an emergency rather than
+    a standing priority order ranking critical services.
+  related_gap: GAP-IN-03-NO-PRIORITY-ORDER
+  confidence: high
+- id: SD-13
+  question: Is there a minimum backup power / battery duration for telecom sites?
+  result: NOT_FOUND
+  evidence: []
+  searched:
+  - battery
+  - backup power
+  - power backup
+  - UPS
+  - diesel
+  - generator
+  - hours of backup
+  reason: No rule or standard specifying a minimum battery runtime or backup power duration for telecom sites was found in
+    the checked Indian sources.
+  related_gap: GAP-IN-04-NO-BATTERY-FLOOR
+  confidence: high
+- id: SD-14
+  question: Is there a defined joint incident command across operators, CERT and regulators?
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 34
+    pinpoint: section 7.2
+    quote: Rapid coordination among the mission control, ground station operators, network administrators, and national cybersecurity
+      agencies shall be ensured for unified response actions.
+  - source: in-tcsr-2024
+    page: 11
+    pinpoint: Rule 6(3)
+    quote: The Chief Telecommunication Security Officer shall be responsible for coordinating with the Central Government
+      for the implementation of these rules, including compliance with any reporting requirements under these rules
+  searched:
+  - coordinat
+  - joint
+  - crisis management
+  - command
+  - committee
+  - nodal
+  reason: "Space framework \xA77.2 calls for rapid coordination and TCSR Rule 6 establishes CTSO coordination with government,\
+    \ but no single joint incident command structure across operators, CERT-In, and DoT is established."
+  related_gap: GAP-IN-07-NO-JOINT-PLAN
+  confidence: high
+- id: SD-15
+  question: Are incident reporting clocks and triggers consistent across regulators?
+  result: UNCLEAR
+  evidence:
+  - source: in-certin-dir-2022
+    page: 2
+    pinpoint: paragraph (ii)
+    quote: mandatorily report cyber incidents as mentioned in Annexure I to CERT-In within 6 hours of noticing such incidents
+      or being brought to notice about such incidents.
+  - source: in-tcsr-2024
+    page: 11
+    pinpoint: Rule 7(1)
+    quote: On the occurrence of any security incident affecting a telecommunication entity, such entity shall report the same
+      to the Central Government within six (6) hours of such occurrence
+  searched:
+  - six hours
+  - 6 hours
+  - report
+  - occurrence
+  - noticing
+  - aware
+  - within
+  reason: 'Reporting clocks are both 6 hours but their triggers conflict: CERT-In Directions 2022 trigger on ''noticing'',
+    while TCSR 2024 Rule 7(1) triggers on ''occurrence''.'
+  related_gap: GAP-IN-01-THREE-CLOCKS
+  confidence: high
+- id: SD-16
+  question: Is the space / satellite cyber framework binding, and who enforces it?
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 4
+    pinpoint: Executive Summary
+    quote: The document can be used as a baseline guiding document for assessing and auditing the cyber security posture of
+      the space ecosystem.
+  - source: in-space-fw-2026
+    page: 12
+    pinpoint: section 3.2.1
+    quote: All SatCom operators and service providers must report cybersecurity incidents, breaches, or anomalies within 6
+      hours of noticing the incident to CERT-In.
+  searched:
+  - advisory
+  - binding
+  - mandatory
+  - guideline
+  - shall
+  - comply
+  - enforce
+  reason: The 2026 space framework uses mandatory phrasing ('must', 'shall') but is described as a 'baseline guiding document'
+    without a stated statutory rule-making power or specified enforcement authority.
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: SD-17
+  question: Is satellite / space-segment compromise explicitly a reportable incident type?
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 33
+    pinpoint: section 7.1
+    quote: All confirmed or suspected cybersecurity incidents affecting satellite networks, ground control systems, or user
+      data shall be reported to CERT-In within 6 hours of noticing such incidents
+  - source: in-certin-dir-2022
+    page: 5
+    pinpoint: Annexure I
+    quote: 'Types of cyber security incidents mandatorily to be reported by service providers, intermediaries, data centres,
+      body corporate and Government organisations to CERT-In:'
+  searched:
+  - satellite
+  - space
+  - types of cyber security incidents
+  - Annexure
+  - reportable
+  reason: "Space segment cyber incidents are explicitly reportable under space framework \xA77.1, but that document is guidance\
+    \ only; the binding CERT-In Annexure I list does not explicitly include space or satellite compromise."
+  related_gap: GAP-IN-09-SPACE-FW-STATUS
+  confidence: high
+- id: SD-18
+  question: Do Indian rules reference security standards for NTN / satellite links (3GPP, ITU, CCSDS)?
+  result: UNCLEAR
+  evidence:
+  - source: in-space-fw-2026
+    page: 37
+    pinpoint: section 9.2(a)
+    quote: 'International Standards: ISO/IEC 27001 (ISMS), ISO/IEC 27019 (Industrial Control Systems), CCSDS 355.0-B-2 (Space
+      Link Security)'
+  - source: in-ctir-2024
+    page: 7
+    pinpoint: Rule 4(a)
+    quote: specifications, testing requirements, or conformity assessment, as applicable, issued by Telecommunication Engineering
+      Centre, National Centre for Communication Security
+  searched:
+  - 3GPP
+  - ITU
+  - CCSDS
+  - standard
+  - ISO
+  - TEC
+  - specification
+  reason: "CCSDS and ITU standards are cited in the space framework (\xA79.2, Table 10.3) and TEC/ITSAR standards in CTIR\
+    \ Rule 4(a), but 3GPP NTN security standards are not cited, and the space framework is guidance only."
+  related_gap: GAP-IN-06-STANDARDS
+  confidence: high

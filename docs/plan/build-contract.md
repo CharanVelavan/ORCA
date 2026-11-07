@@ -38,7 +38,7 @@ New fields: `kind` (`coverage | ambiguity | standards`), `topic`, `status` (`can
 
 | id | kind | topic |
 |---|---|---|
-| GAP-IN-01-THREE-CLOCKS | ambiguity | incident_reporting |
+| GAP-IN-01-REPORTING-CLOCKS | ambiguity | incident_reporting |
 | GAP-IN-02-NO-DOWNSTREAM-WARNING | coverage | downstream_warning |
 | GAP-IN-03-NO-PRIORITY-ORDER | coverage | capacity_priority |
 | GAP-IN-04-NO-BATTERY-FLOOR | coverage | backup_power |
@@ -46,7 +46,7 @@ New fields: `kind` (`coverage | ambiguity | standards`), `topic`, `status` (`can
 | GAP-IN-06-STANDARDS | standards | standards |
 | GAP-IN-07-NO-JOINT-PLAN | coverage | joint_command |
 | GAP-IN-08-NO-CLEAN-PATH-CHECK | coverage | failover_path_security |
-| GAP-IN-09-SPACE-FW-STATUS | ambiguity | space_cyber |
+| GAP-IN-09-SPACE-CYBER-ADVISORY | coverage | space_cyber | (v3: was SPACE-FW-STATUS, resolved by PIB 2233122)
 
 Topic coverage today (what the engine must find):
 - IN covered: `incident_reporting` (CERT-In ii, TCSR R7(1)), `point_of_contact` (iii),

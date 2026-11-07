@@ -53,7 +53,7 @@ Everyday approvals use the same mechanism with a longer expiry. A "maintenance w
 - **Outputs.** `{verdict, kb_ids[], clocks[{id, trigger, deadline, due_at}], gap_id?}`. The verdict is one of the six: COMPLIANT, VIOLATION, AMBIGUITY, CONFLICT, POTENTIAL_GAP, INSUFFICIENT_EVIDENCE.
 - **Verdict triggers.**
   - **COMPLIANT / VIOLATION:** a rule matches and the facts satisfy or break it.
-  - **AMBIGUITY:** two readings of the same clause give different clocks. Example [COUNTRY]: `IN-CERTIN-DIR-2022-ii` counts from *noticing*, `IN-TCSR-2024-R7-1` counts from *occurrence*.
+  - **AMBIGUITY:** two readings of the same clause give different clocks. Example [COUNTRY]: `IN-CERTIN-DIR-2022-ii` counts from *noticing*, `IN-CTIR-2024-R7-1-j` counts from *occurrence* (CTI owners). (Corrected 7 Nov: the notified TCSR Rule 7(1)(a) counts from *becoming aware*.)
   - **CONFLICT:** two rules or two agents' recommendations cannot both hold.
   - **POTENTIAL_GAP:** no rule covers the case. It returns a GAP id, such as `GAP-IN-03-NO-PRIORITY-ORDER`.
   - **INSUFFICIENT_EVIDENCE:** a required fact is missing. Example: time of occurrence unknown.
@@ -142,7 +142,7 @@ Playbook ownership: PB-01..05 satellite operator, PB-06/07/09 mobile operator. P
 - **Inputs.** Rule-engine compliance results, operator notices, gap drafts. **Outputs.** Compliance roll-up, clock status for DoT-bound reports, draft information request.
 - **Tools.** Same as the CERT agent. **No playbooks.**
 - **May alone.** Roll up, flag, draft. **May not:** find a licensee in violation (the rule engine returns the verdict, a human regulator decides what follows), set penalties, change a priority order, or amend rules. Reports to the regulator's compliance officer.
-- **Self-healing.** Coordinate/Report: tracks the second 6-hour clock (`IN-TCSR-2024-R7-1`, from occurrence), and shows the commander when the two clocks differ (`GAP-IN-01-THREE-CLOCKS`).
+- **Self-healing.** Coordinate/Report: tracks the DoT 6-hour clock (`IN-TCSR-2024-R7-1`, from becoming aware) and, for CTI owners, `IN-CTIR-2024-R7-1-j` (from occurrence), and shows the commander when the two clocks differ (`GAP-IN-01-REPORTING-CLOCKS`).
 - **Explains.** How the sector status was computed and the clauses used. It cannot say whether a rule is proportionate.
 - **Merge candidate:** see section 6.
 

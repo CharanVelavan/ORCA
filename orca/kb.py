@@ -24,6 +24,10 @@ TOPICS = {
     # added 7 Nov 2026 for topic-coverage gap detection
     "ntn_coverage", "downstream_warning", "capacity_priority", "failover_path_security",
     "backup_power", "joint_command",
+    # added 7 Nov 2026 night (policy sweep)
+    "data_location", "terminal_control", "interference_reporting", "public_alerts",
+    "outage_reporting", "disaster_coordination", "grid_comms_backup",
+    "network_info_sharing", "network_redundancy", "standards_power",
 }
 GAP_KINDS = {"coverage", "ambiguity", "standards"}
 GAP_STATUS = {"candidate", "confirmed"}
