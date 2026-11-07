@@ -111,9 +111,8 @@ def load(kb_dir: Path = KB_DIR) -> KB:
         for g in _load_list(p):
             g["_file"] = str(p.relative_to(kb_dir.parent))
             kb.gaps[g["id"]] = g
-    for p in sorted(kb_dir.glob("*/*.yaml")):
-        if p.parent.name == "gaps":
-            continue
+    # records live only in kb/<jurisdiction>/records.yaml; staging, manifest, vec_eval etc. are not records
+    for p in sorted(kb_dir.glob("*/records.yaml")):
         for r in _load_list(p):
             r["_file"] = str(p.relative_to(kb_dir.parent))
             if r["id"] in kb.records:
