@@ -1,0 +1,49 @@
+# EMULATED device configuration (ORCA-NTN sandbox). Not a real device. No secrets: credentials are
+# references to an emulated vault, never values.
+id: CHN-03
+kind: site
+owner: mobile_operator
+country: IN
+area: Adyar
+description: Cell-site router and power controller at Adyar, emulated
+firmware:
+  version: 2.8.0
+  signed: true
+backhaul:
+  active_path: A
+  paths:
+  - id: A
+    kind: microwave
+    gateway: GW-IN-1
+    failover_allowed: true
+  - id: B
+    kind: satellite
+    gateway: GW-IN-2
+    failover_allowed: true
+  - id: C
+    kind: satellite
+    gateway: GW-XX
+    failover_allowed: true
+power:
+  battery_kwh: 10
+  battery_saving:
+    configured: true
+    enabled: false
+    shed:
+    - general
+mgmt_interface:
+  exposure: mgmt_vlan_only
+  protocols:
+  - ssh
+auth:
+  mfa_required: true
+accounts:
+- user: site-ops
+  role: operator
+  enabled: true
+  mfa: true
+  credential_ref: vault:emulated/CHN-03/site-ops/v4
+  credential_age_days: 20
+  default_password: false
+monitoring:
+  reattack_watch: false

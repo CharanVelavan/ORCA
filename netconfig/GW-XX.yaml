@@ -1,0 +1,13 @@
+# EMULATED device configuration (ORCA-NTN sandbox). Not a real device. No secrets: credentials are
+# references to an emulated vault, never values.
+id: GW-XX
+kind: gateway
+owner: foreign_operator
+country: XX
+role: foreign
+description: 'Gateway outside India, emulated. Never to be used: Authz Rules 2026, Rule 60(1)(b) (including during
+  failure of a gateway located in India).'
+forbidden: true
+feeder_link:
+  band: Ka
+  encryption: unknown

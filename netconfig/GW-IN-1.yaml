@@ -1,0 +1,32 @@
+# EMULATED device configuration (ORCA-NTN sandbox). Not a real device. No secrets: credentials are
+# references to an emulated vault, never values.
+id: GW-IN-1
+kind: gateway
+owner: satellite_operator
+country: IN
+role: primary
+description: Satellite earth-station gateway (primary), emulated
+firmware:
+  version: 5.2.2
+  signed: true
+feeder_link:
+  band: Ka
+  uplink_GHz: 29.5
+  downlink_GHz: 19.7
+  encryption: none
+  key_ref: null
+  authentication: false
+mgmt_interface:
+  exposure: mgmt_vlan_only
+  protocols:
+  - ssh
+auth:
+  mfa_required: true
+accounts:
+- user: gw-ops
+  role: operator
+  enabled: true
+  mfa: true
+  credential_ref: vault:emulated/GW-IN-1/gw-ops/v2
+  credential_age_days: 45
+  default_password: false

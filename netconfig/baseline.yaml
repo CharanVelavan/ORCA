@@ -1,0 +1,26 @@
+# Security baseline the posture scanner checks against (ORCA-NTN, emulated). ASSUMED values,
+# informed by common hardening practice (MFA, no default credentials, no internet-exposed management).
+max_credential_age_days: 90
+min_firmware:
+  terminal: 3.2.0
+  gateway: 5.2.0
+  mgmt_system: 7.4.0
+  site: 2.8.0
+require_signed_firmware: true
+require_mfa: true
+allowed_vpn_exposure:
+- restricted
+- disabled
+allowed_mgmt_exposure:
+- mgmt_vlan_only
+- jump_host_only
+feeder_link_encryption:
+- AES-256-GCM
+allowed_gateway_countries:
+- IN
+battery_saving_required_for:
+- hospital
+- '112'
+firmware_target:
+  terminal: 3.2.4
+  gateway: 5.3.1

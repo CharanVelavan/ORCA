@@ -1,0 +1,19 @@
+# EMULATED device configuration (ORCA-NTN sandbox). Not a real device. No secrets: credentials are
+# references to an emulated vault, never values.
+id: TERM-CHN-01
+kind: terminal
+owner: satellite_operator
+country: IN
+site: CHN-01
+path: A
+gateway: GW-IN-1
+description: Satellite backhaul modem group at CHN-01 (4 modems), emulated
+firmware:
+  version: 3.0.9
+  signed: true
+  accept_unsigned_commands: false
+mgmt_interface:
+  exposure: mgmt_vlan_only
+  protocols:
+  - https
+managed_by: SAT-MGMT
