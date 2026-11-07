@@ -1,0 +1,34 @@
+# Retrieval test for the vector KB (docs/KBVEC.md). 30 natural-language questions.
+# gold: {record: <verified record id>}  or  {source: <source_id>, page: <PDF page>} from kb/*/records.yaml.
+# Questions are written from the record's clause, pinpoint and meaning, not from its quote wording.
+# Run: python -m orca.kbvec eval
+- {id: Q01, question: "What is the time limit for notifying India's national cyber emergency team after an organisation detects an incident from the listed categories?", gold: {record: IN-CERTIN-DIR-2022-ii}}
+- {id: Q02, question: "Which person must every organisation nominate to liaise with the national CERT?", gold: {record: IN-CERTIN-DIR-2022-iii}}
+- {id: Q03, question: "For how many days must ICT system logs be kept, and must they stay inside the country?", gold: {record: IN-CERTIN-DIR-2022-iv}}
+- {id: Q04, question: "Does an attack on SCADA systems or wireless networks count as a type of incident that has to be reported to CERT-In?", gold: {record: IN-CERTIN-DIR-2022-ANX1-ix}}
+- {id: Q05, question: "How long does a telecom operator have to tell the Central Government about a security incident on its network?", gold: {record: IN-TCSR-2024-R7-1}}
+- {id: Q06, question: "What is the notification clock for incidents affecting designated critical telecom infrastructure, and when does it start?", gold: {record: IN-CTIR-2024-R7-1-j}}
+- {id: Q07, question: "What do India's space and satellite communication cyber guidelines expect operators to do about incident reporting to CERT-In?", gold: {record: IN-SPACEFW-2026-3-2-1}}
+- {id: Q08, question: "After a personal data breach, who must the data fiduciary inform under the 2023 privacy statute?", gold: {record: IN-DPDP-ACT-2023-8-6}}
+- {id: Q09, question: "How long does an organisation have to send the detailed breach report to the Data Protection Board?", gold: {record: IN-DPDP-RULES-2025-R7}}
+- {id: Q10, question: "Is a satellite network legally a telecommunication network under the Telecommunications Act?", gold: {record: IN-TELACT-2023-2-s}}
+- {id: Q11, question: "Which section of the IT Act lets CERT-In demand information from service providers and give them directions?", gold: {record: IN-ITACT-2000-70B}}
+- {id: Q12, question: "Can the government have messages from disaster response personnel carried ahead of other traffic during a public emergency?", gold: {record: IN-TELACT-2023-20}}
+- {id: Q13, question: "In which country must satellite gateway and user terminal control facilities be situated?", gold: {record: IN-AUTHZ-2026-R62-2}}
+- {id: Q14, question: "Is a satellite operator allowed to switch Indian users to an earth station abroad when its domestic gateway breaks?", gold: {record: IN-AUTHZ-2026-R60-1-b}}
+- {id: Q15, question: "Which telecom licensees must carry emergency alert messages by SMS or cell broadcast when the government directs?", gold: {record: IN-AUTHZ-2026-R38-2-a}}
+- {id: Q16, question: "Within how many hours must a major service outage in a district be reported to the telecom regulator?", gold: {record: IN-TRAI-QOS-2024-4-1-3}}
+- {id: Q17, question: "What do the disaster management procedures say about spare power at vulnerable telecom sites?", gold: {record: IN-DOT-SOP-2017-3-1-3}}
+- {id: Q18, question: "How many hours of battery autonomy must power grid communication equipment have at each node?", gold: {record: IN-CEA-2020-8-11}}
+- {id: Q19, question: "Which encryption standards does the Indian space cybersecurity framework recommend for satellite telemetry and payload links?", gold: {record: IN-SPACEFW-2026-SDLS}}
+- {id: Q20, question: "Did the government say the space cybersecurity guidelines are compulsory or only recommended?", gold: {record: IN-PIB-2026-SPACEFW-ADVISORY}}
+- {id: Q21, question: "Which security test requirement asks for management traffic to be separated onto its own interface?", gold: {record: IN-NCCS-ITSAR-G4-2-12-10}}
+- {id: Q22, question: "How quickly must an EU essential entity send the first alert about a significant incident, and what must it say about a possible malicious cause?", gold: {record: EU-NIS2-2022-ART23-4-a}}
+- {id: Q23, question: "What is the European deadline for a controller to inform the supervisory authority about a personal data breach?", gold: {record: EU-GDPR-2016-ART33-1}}
+- {id: Q24, question: "How does the UAE regulator say emergency calls must be handled where operators' networks connect?", gold: {record: AE-TDRA-IC-2006-EMERGENCY}}
+- {id: Q25, question: "Which space sector operators are covered by the EU network and information security directive?", gold: {record: EU-NIS2-2022-ANNEX-I-SPACE}}
+- {id: Q26, question: "May a satellite licensee give information about its network to outside parties without asking the government?", gold: {record: IN-AUTHZ-2026-R37-5}}
+- {id: Q27, question: "Can the government itself announce a telecom security incident to the public?", gold: {record: IN-TCSR-2024-R7-2}}
+- {id: Q28, question: "Which rule makes satellite licensees report attempts by unregistered terminals to use their network?", gold: {source: in-authz-rules-2026, page: 114}}
+- {id: Q29, question: "Where does the recovery guidance say affected systems must be restored to a verified secure state before full operations resume?", gold: {source: in-space-fw-2026, page: 34}}
+- {id: Q30, question: "What must owners of designated critical telecom infrastructure have for incident response, disaster recovery and continuity?", gold: {source: in-ctir-2024, page: 8}}
