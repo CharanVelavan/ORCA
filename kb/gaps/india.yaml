@@ -1,8 +1,9 @@
 # Gap register v3.1 (7 Nov 2026, night). What the sources we checked do NOT contain, with the
 # search that shows it. Schema: kb/SCHEMA.md. Evidence standard: docs/sweep/gap-evidence-standard.md.
 #
-# Every gap is `status: candidate` until a human reads its search record and confirms it
-# (`status: confirmed`, `verified: true`, `verified_by: <name, date>`). Claude does not confirm gaps.
+# Every gap is `status: candidate` until a human reads its search record and confirms or rejects it
+# (`status: confirmed|rejected`, `verified: true`, `verified_by: <name, date>`). Claude does not decide gaps.
+# Human review 8 Nov 2026 (Charan Velavan): confirmed 01, 02, 03, 04, 06, 09; 08 confirmed as partial; rejected 05 and 07.
 # Wording rule: "not found in the sources we checked, as of 2026-11-07". Titles are short labels;
 # each finding carries the dated, scoped claim.
 #
@@ -40,7 +41,7 @@
   jurisdiction: IN
   kind: ambiguity
   topic: incident_reporting
-  status: candidate
+  status: confirmed
   title: Up to four reports to three bodies, with two different triggers
   finding: For one NTN incident a telecom entity reports to CERT-In within six hours of noticing it and to DoT within six hours of becoming aware of it (details within 24 hours). If it also owns designated Critical Telecommunication Infrastructure, it reports within six hours of the incident's occurrence. An access provider whose service is down in a district for more than four hours also files a quality-of-service outage report to TRAI within 24 hours of the outage start (a service-availability report, not a cyber report, but due in the same event). An outage first treated as a fault can pass the occurrence deadline before it is recognised as an attack. (Satellite licensees also report rogue signals and unregistered terminals under Authz Rules 59(4) and 62(7), with no deadline.) No text saying which clock governs, or allowing one joint report, was found in the sources we checked, as of 2026-11-07.
   evidence: [IN-CERTIN-DIR-2022-ii, IN-TCSR-2024-R7-1, IN-CTIR-2024-R7-1-j, IN-TRAI-QOS-2024-4-1-3]
@@ -67,15 +68,15 @@
   recommendation:
     regulator: [DoT, CERT-In, TRAI]
     ask: One trigger ("becoming aware") and one joint portal for NTN incident reports to CERT-In, DoT and TRAI.
-  verified: false
-  verified_by: null
+  verified: true
+  verified_by: Charan Velavan, 2026-11-08 (human review of nearest provision and reasoning)
   notes: Sweep SD-15, CL-16, CL-17. Corrected in v3.1 - external-review lead R1 was right (the notified TCSR counts from "becoming aware"). For a telecom entity that is not a CTI owner, the CERT-In and DoT clocks now start at about the same moment; the conflict is sharpest for CTI owners. The advisory space framework's 6 h line is not counted. The EU comparison shows one trigger and one recipient per incident (NIS2 Art. 23(4)); it is not a joint multi-regulator portal. The CTI case assumes the operator owns designated CTI.
 
 - id: GAP-IN-02-NO-DOWNSTREAM-WARNING
   jurisdiction: IN
   kind: coverage
   topic: downstream_warning
-  status: candidate
+  status: confirmed
   title: No binding duty for a satellite operator to warn the services that depend on it
   finding: Reports flow to CERT-In, DoT and TRAI. CERT-In's statutory role includes disseminating incident information and alerts, and the government may tell the public or require the operator to do so (TCSR Rule 7(2)). New authorised entities may not share network information with others without prior written government approval (Authz Rule 37(5)). The text on an operator warning its dependants is in the advisory space framework (Annexure B item 4.2; coordination in §6.5 and §9.2), with no deadline. No binding duty for a satellite operator to warn the mobile operators, utilities, hospitals or banks that use its ground network was found in the sources we checked, as of 2026-11-07.
   evidence: [IN-TCSR-2024-R7-2, IN-ITACT-2000-70B-4, IN-AUTHZ-2026-R37-5, IN-AUTHZ-2026-R38-2-a, IN-SPACEFW-2026-ANXB-IV, IN-PIB-2026-SPACEFW-ADVISORY]
@@ -102,15 +103,15 @@
   recommendation:
     regulator: [DoT, CERT-In]
     ask: A binding duty, with a deadline, for NTN operators to warn the services that depend on them, with a standing Rule 37(5) approval for such warnings; compare NIS2 Art. 23(1) and 23(2).
-  verified: false
-  verified_by: null
+  verified: true
+  verified_by: Charan Velavan, 2026-11-08 (human review of nearest provision and reasoning)
   notes: Sweep SD-11, CL-19. Sector regulators of the dependants (RBI for banks; CEA Reg. 14 for power users) are not in our sources; their own duties are out of scope here.
 
 - id: GAP-IN-03-NO-PRIORITY-ORDER
   jurisdiction: IN
   kind: ambiguity
   topic: capacity_priority
-  status: candidate
+  status: confirmed
   title: Priority callers exist for disaster restoration, but no ranking for sharing scarce backup capacity
   finding: The DoT disaster SOP names priority callers (emergency operation centres, police, fire, medical, financial institutions and others) for emergency communication and restoration. New licensees must follow government disaster guidelines (Authz Rule 38(1)), which may give the SOP force for them. TRAI asks that voice calls get end-to-end priority on IP interconnection, and Telecom Act s.20(1)(b) lets government order responder messages routed on priority. New licensees must also connect to emergency services and the State disaster platform (Authz Rules 67(1), 71(1)(h)). No standing rule that ranks 112 callers, hospitals, payments and ordinary traffic when satellite backhaul is too small for all of them was found in the sources we checked, as of 2026-11-07.
   evidence: [IN-DOT-SOP-2017-3-2-5, IN-AUTHZ-2026-R38-2-a, IN-TELACT-2023-20]
@@ -137,15 +138,15 @@
   recommendation:
     regulator: [DoT, TRAI]
     ask: Turn the SOP priority callers into a standing, ordered list for scarce backup capacity, including satellite backhaul.
-  verified: false
-  verified_by: null
+  verified: true
+  verified_by: Charan Velavan, 2026-11-08 (human review of nearest provision and reasoning)
   notes: Sweep SD-12, CL-28. No comparison claimed - the UAE TDRA rule (AE-TDRA-IC-2006-EMERGENCY) gives emergency calls top priority at interconnection points but ranks no other services, and India has comparable emergency-access duties (removed v3.2, Goldfish round 3). TRAI's IP voice-priority line (QoS 4.2.1(iii), "should") has no KB record yet.
 
 - id: GAP-IN-04-NO-BATTERY-FLOOR
   jurisdiction: IN
   kind: ambiguity
   topic: backup_power
-  status: candidate
+  status: confirmed
   title: Telecom sites must have power redundancy, but no minimum hours are set
   finding: TRAI requires access providers' quality plans to provide "required redundancies including power", and the DoT SOP asks for "sufficient" battery and fuel backup at vulnerable sites. Neither sets a number of hours. India already sets a 10-hour battery floor for power-grid communication nodes (CEA Reg. 8(11)). No numeric backup floor for telecom sites, including satellite gateways, was found in the sources we checked, as of 2026-11-07.
   evidence: [IN-TRAI-QOS-2024-3-2, IN-DOT-SOP-2017-3-1-3, IN-CEA-2020-8-11]
@@ -172,15 +173,15 @@
   recommendation:
     regulator: [DoT, TRAI]
     ask: A minimum backup-power autonomy for sites that carry emergency traffic; India's CEA 10-hour rule for grid communication nodes is a domestic model.
-  verified: false
-  verified_by: null
+  verified: true
+  verified_by: Charan Velavan, 2026-11-08 (human review of nearest provision and reasoning)
   notes: Sweep SD-13, CL-29. Comparison is domestic (CEA Reg. 8(11)); no EU or UAE numeric rule is in our sources. ORCA's M2 model forecasts battery run-out against the operator's threshold.
 
 - id: GAP-IN-05-NO-BREACH-CLOCK-TODAY
   jurisdiction: IN
   kind: coverage
   topic: personal_data_breach
-  status: candidate
+  status: rejected
   title: The DPDP breach notice is not in force until May 2027
   finding: DPDP Act s.8(6) and DPDP Rules Rule 7 (notice to affected people, and a report to the Data Protection Board within 72 hours) commence on 13 May 2027. Today CERT-In's six-hour report covers data breaches, but it goes to the agency, not to the people affected. No duty in force today to tell affected people about a personal-data breach was found in the sources we checked, as of 2026-11-07.
   evidence: [IN-DPDP-ACT-2023-8-6, IN-DPDP-RULES-2025-R7, IN-CERTIN-DIR-2022-ANX1-xi]
@@ -207,15 +208,15 @@
   recommendation:
     regulator: [MeitY, Data Protection Board]
     ask: Interim guidance on notifying affected people before May 2027; compare GDPR Art. 34(1).
-  verified: false
-  verified_by: null
+  verified: true
+  verified_by: Charan Velavan, 2026-11-08 - REJECTED. Reason (reviewer) - the law exists (DPDP Act 2023 and Rules 2025); only its start date is deferred to 13 May 2027, so it is a transition period, not a policy gap.
   notes: A transition-period gap, not an absence of law ("data principals" = the people whose data it is). Kept as coverage because no notice duty is in force today; reviewers G1 and G3 suggested another kind (contested, see goldfish-round1.md). Not NTN-specific; kept because subscriber data is in the demo scenario.
 
 - id: GAP-IN-06-STANDARDS
   jurisdiction: INTL
   kind: standards
   topic: standards
-  status: candidate
+  status: confirmed
   title: Feeder-link and inter-satellite-link security is left unspecified, and India has not used its standards power
   finding: 3GPP TR 33.700-29 says feeder links (gateway to satellite) and inter-satellite links "are not specified in 3GPP" and that generic IP security "can be used". In India, the Telecom Act s.19 lets the government notify telecom security, cyber-security and encryption standards, but no notified standard for satellite links was found in the sources we checked, as of 2026-11-07. The advisory space framework names CCSDS SDLS (see GAP-IN-09).
   evidence: [IN-TELACT-2023-19, IN-SPACEFW-2026-SDLS]
@@ -242,15 +243,15 @@
   recommendation:
     regulator: [DoT, TEC, 3GPP SA3, ITU-T SG17]
     ask: Notify a satellite-link security standard under s.19 (for example CCSDS SDLS); ask 3GPP and ITU-T to specify feeder-link and inter-satellite-link security.
-  verified: false
-  verified_by: null
+  verified: true
+  verified_by: Charan Velavan, 2026-11-08 (human review of nearest provision and reasoning)
   notes: Sweep SD-18, CL-07, CL-32. v3.2 narrowed (Goldfish G1, G3 round 2 - overlapped GAP-IN-09). TEC / ITSAR standards were not searched. No EU or UAE text in our KB names a feeder-link standard; this is a gap in international standards.
 
 - id: GAP-IN-07-NO-JOINT-PLAN
   jurisdiction: IN
   kind: ambiguity
   topic: joint_command
-  status: candidate
+  status: rejected
   title: Unclear who leads when one cyber incident spans satellite, telecom and power
   finding: CERT-In coordinates cyber-incident response and can give binding directions to service providers (IT Act s.70B(4)(d), 70B(6)). DoT's SOP makes DoT the lead agency for telecom in natural and manmade disasters, and operators "shall comply with the instructions of STDCC". These are separate chains, one under the IT Act and one under DoT's disaster SOP. No text was found in the sources we checked, as of 2026-11-07, that says which chain leads, or who decides, when one cyber incident hits a satellite operator, mobile operators and a power utility together.
   evidence: [IN-ITACT-2000-70B, IN-ITACT-2000-70B-4, IN-DOT-SOP-2017-2-3-2]
@@ -277,16 +278,16 @@
   recommendation:
     regulator: [CERT-In, DoT]
     ask: State which chain leads a cross-sector NTN cyber incident, and how CERT-In directions and STDCC instructions are reconciled.
-  verified: false
-  verified_by: null
+  verified: true
+  verified_by: Charan Velavan, 2026-11-08 - REJECTED. Reason (reviewer) - general cross-sector cyber coordination, not specific to satellite networks; CERT-In can direct providers (IT Act s.70B(6)) and the IT Act overrides conflicting law (s.81, PDF p. 33). The satellite-specific part (advisory coordination text) is covered by GAP-IN-09.
   notes: Sweep SD-14, CL-30, CL-31. v3.2 reframed coverage -> ambiguity after Goldfish G1 round 2 (Blockers - s.70B(6) direction power; SOP covers manmade disasters). Not searched - Disaster Management Act 2005, national CCMP, NCIIPC rules; a human must check them before confirming. No comparison found in our KB.
 
 - id: GAP-IN-08-NO-CLEAN-PATH-CHECK
   jurisdiction: IN
   kind: standards
   topic: failover_path_security
-  status: candidate
-  title: No technical baseline requires checking the backup path before failover during an attack
+  status: confirmed
+  title: Partial gap - no explicit check that the backup path is clean before failover during an attack
   finding: CTI owners must have disaster-recovery and business-continuity procedures (CTIR Rule 7(1)(i)). Satellite licensees may not fail over to gateways outside India (Authz Rule 60(1)(b)). The advisory space framework asks for failover mechanisms and for integrity checks before resuming operations after an incident. No rule or standard in the sources we checked requires the backup path to be verified uncompromised before traffic is moved during an attack, as of 2026-11-07, although jamming a link to force failover is a known attack path.
   evidence: [IN-CTIR-2024-R7-1-i, IN-AUTHZ-2026-R60-1, IN-SPACEFW-2026-7-3]
   affects: [mobile_operator, satellite_operator]
@@ -312,15 +313,15 @@
   recommendation:
     regulator: [DoT, TEC, ITU-T SG17]
     ask: A technical baseline that makes a clean-path check a precondition for failover on NTN backhaul.
-  verified: false
-  verified_by: null
+  verified: true
+  verified_by: Charan Velavan, 2026-11-08 - CONFIRMED AS PARTIAL. Continuity duties (CTIR 7(1)(i)) and the advisory secure-restoration line (space framework §7.3, p. 34) partly cover it; the gap is only the missing explicit pre-failover path check.
   notes: Sweep SD-10, CL-26, CL-27. A technical-baseline gap that ORCA-NTN's playbook PB-06 also fills; listed because the attack path is real and documented (jamming to force failover). Goldfish G3 (round 2) asked to park it as a playbook feature - contested, see goldfish-round2.md. No comparison found in our KB.
 
 - id: GAP-IN-09-SPACE-CYBER-ADVISORY
   jurisdiction: IN
   kind: coverage
   topic: space_cyber
-  status: candidate
+  status: confirmed
   title: No binding satellite-specific cyber-resilience baseline; the space framework is advisory
   finding: For licensees under the 2026 Authorisation Rules ("new authorised entities"), binding general security duties apply (TCSR Rule 4; Authz Rule 54 network security and vendor checks, Rule 50 trusted sources, Rule 53 remote-access permission). Their satellite chapter (Authz Rules 59 to 62) adds interception, gateway location, terminal registration, rogue-signal and rogue-terminal reports, and interference monitoring and mitigation on direction (Rule 60(1)(f)). Older GMPCS licensees are bound by licence conditions instead. Satellite-specific cyber controls - protecting command and control links, key management, ground-segment segmentation, telemetry monitoring - appear only in the CERT-In / SIA-India framework, which PIB states is "advisory in nature". No binding satellite-specific cyber-resilience baseline was found in the sources we checked, as of 2026-11-07.
   evidence: [IN-PIB-2026-SPACEFW-ADVISORY, IN-AUTHZ-2026-R54-1, IN-AUTHZ-2026-R60-1, IN-AUTHZ-2026-R62-2, IN-AUTHZ-2026-R62-7, IN-AUTHZ-2026-R59-4, IN-SPACEFW-2026-SDLS, IN-SPACEFW-2026-3-2-1]
@@ -347,6 +348,6 @@
   recommendation:
     regulator: [DoT, CERT-In]
     ask: Make a core set of the framework's satellite controls binding, for example as Authz Rule 62 security conditions or a standard notified under Telecom Act s.19.
-  verified: false
-  verified_by: null
+  verified: true
+  verified_by: Charan Velavan, 2026-11-08 (human review of nearest provision and reasoning)
   notes: Headline gap. Replaces v2 GAP-IN-09-SPACE-FW-STATUS (resolved by PIB 2233122). Comparison - NIS2 (EU-NIS2-2022-ANNEX-I-SPACE) brings space ground operators under binding general duties, which is parity with Authz Rule 54, not a satellite-specific baseline; the EU Space Act proposal COM(2025) 335 would add satellite-specific rules but is only a proposal (docs/sweep/checklist.yaml). So no binding comparator is claimed. Sub-points parked (Goldfish G3) - no space ISAC or binding threat-sharing duty (CL-20, SD-08); satellite compromise is not a named CERT-In Annexure I incident type (SD-17). Sweep CL-01..04, CL-06, CL-10, CL-11, CL-14, CL-15, CL-22, CL-35, SD-01, SD-02, SD-05, SD-16.

@@ -30,7 +30,7 @@ TOPICS = {
     "network_info_sharing", "network_redundancy", "standards_power",
 }
 GAP_KINDS = {"coverage", "ambiguity", "standards"}
-GAP_STATUS = {"candidate", "confirmed"}
+GAP_STATUS = {"candidate", "confirmed", "rejected"}   # confirmed / rejected only by a human
 JURISDICTIONS = {"IN", "EU", "US", "AE", "INTL"}
 DURATION = re.compile(r"^P(\d+D)?(T(\d+H)?(\d+M)?)?$")
 RECORD_FIELDS = {
@@ -89,7 +89,8 @@ class KB:
 
     def gaps_for(self, topic: str, jurisdiction: str) -> list[dict]:
         return [g for g in self.gaps.values()
-                if g.get("topic") == topic and g["jurisdiction"] in (jurisdiction, "INTL")]
+                if g.get("topic") == topic and g["jurisdiction"] in (jurisdiction, "INTL")
+                and g.get("status") != "rejected"]          # a human rejected it: never cite it
 
 
 def _load_list(path: Path) -> list[dict]:
@@ -177,10 +178,10 @@ def validate(kb: KB) -> list[str]:
             errs.append(f"{where}: bad topic {g.get('topic')}")
         if g.get("status") not in GAP_STATUS:
             errs.append(f"{where}: bad status {g.get('status')}")
-        if g.get("verified") and (g.get("status") != "confirmed" or not g.get("verified_by")):
-            errs.append(f"{where}: verified gap needs status confirmed and verified_by (a human)")
-        if g.get("status") == "confirmed" and not g.get("verified"):
-            errs.append(f"{where}: confirmed gap must be verified by a human")
+        if g.get("verified") and (g.get("status") not in ("confirmed", "rejected") or not g.get("verified_by")):
+            errs.append(f"{where}: verified gap needs status confirmed/rejected and verified_by (a human)")
+        if g.get("status") in ("confirmed", "rejected") and not (g.get("verified") and g.get("verified_by")):
+            errs.append(f"{where}: confirmed or rejected gap must be verified by a human (verified_by)")
         srch = g.get("search") or {}
         miss = SEARCH_REQUIRED - srch.keys()
         if miss:

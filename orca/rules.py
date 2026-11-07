@@ -339,6 +339,16 @@ class _Engine:
                          f"{label}: the matching {jur} record(s) {', '.join(ids(by('in_force')))} are in force but "
                          f"record unverified, so coverage is not asserted.")
                 continue
+            rejected = [g for g in self.kb.gaps.values() if g.get("topic") == topic
+                        and g["jurisdiction"] in (jur, "INTL") and g.get("status") == "rejected"]
+            if rejected:                  # a human ruled this is not a gap: state the facts, cite the decision
+                g = rejected[0]
+                cite = ids(recs) or [e for e in g.get("evidence", []) if e in self.kb.records]
+                self.add("INSUFFICIENT_EVIDENCE", rid, topic, cite,
+                         f"{label}: no in-force duty specific to this topic on {self.on}, but gap {g['id']} was "
+                         f"rejected by a human reviewer ({g.get('verified_by')}). Not reported as a gap.",
+                         notes=[f"rejected gap {g['id']}"], **({} if cite else {"gap_id": g["id"]}))
+                continue
             gap, st = find_gap(self.kb, topic, jur)
             if by("not_yet"):
                 starts = sorted({str(r["in_force_from"]) for r in by("not_yet") if r.get("in_force_from")})

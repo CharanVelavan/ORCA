@@ -233,7 +233,6 @@ def test_eu_space_cyber_covered():
 
 @pytest.mark.parametrize("topic,prefix", [
     ("failover_path_security", "GAP-IN-08"),
-    ("joint_command", "GAP-IN-07"),
 ])
 def test_potential_gap_registered(topic, prefix):
     v = question(topic)
@@ -241,9 +240,10 @@ def test_potential_gap_registered(topic, prefix):
 
 
 def test_personal_data_breach_not_yet_in_force():
+    # GAP-IN-05 was REJECTED by the human reviewer (8 Nov 2026): no gap is raised, the decision is cited
     v = question("personal_data_breach", on="2026-11-10")
-    assert v.verdict == "POTENTIAL_GAP" and v.gap_id.startswith("GAP-IN-05")
-    assert "2027-05-13" in v.explanation
+    assert v.verdict == "INSUFFICIENT_EVIDENCE" and v.gap_id is None
+    assert "GAP-IN-05" in v.explanation and "rejected" in v.explanation
     # after commencement (13 May 2027) the verified DPDP records cover the topic
     later = question("personal_data_breach", on="2027-06-01")
     assert later.verdict == "COMPLIANT" and later.gap_id is None
@@ -269,3 +269,16 @@ def test_rule_files_reference_real_records_and_gaps():
             assert d["record"] in KB.records and ("gap" not in d or d["gap"] in KB.gaps)
         for c in r["conflicts"]:
             assert all(x in KB.records for x in c["records"])
+
+
+def test_rejected_gap_is_not_reported():
+    # GAP-IN-07 rejected by the human reviewer (8 Nov 2026): cite its evidence, raise no gap
+    v = question("joint_command")
+    assert v.verdict == "INSUFFICIENT_EVIDENCE" and v.gap_id is None
+    assert "GAP-IN-07" in v.explanation and "IN-ITACT-2000-70B" in v.record_ids
+
+
+def test_confirmed_gaps_carry_a_human_name():
+    for g in KB.gaps.values():
+        if g["status"] in ("confirmed", "rejected"):
+            assert g["verified"] and g["verified_by"].startswith("Charan Velavan")
