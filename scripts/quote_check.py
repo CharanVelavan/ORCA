@@ -53,6 +53,13 @@ def check(repo: Path) -> dict:
         raw = txt.read_text(errors="replace") if txt else ""
         pages = [norm(p) for p in raw.split("\f")] if "\f" in raw else None
         full = norm(raw)
+        bb = norm(str(meta.get("binding_basis") or ""))
+        if bb and "not stated" not in bb and txt:
+            ok = len(bb) >= 15 and bb in full
+            out.setdefault("binding_basis", []).append({"doc": f"{jur}/{meta.get('id', f.stem)}",
+                "binding_status": meta.get("binding_status"), "result": "pass" if ok else "fail",
+                "binding_basis": meta.get("binding_basis")})
+            stats["binding_pass" if ok else "binding_fail"] = stats.get("binding_pass" if ok else "binding_fail", 0) + 1
         for i, q in enumerate(meta["candidate_quotes"]):
             quote = norm(str(q.get("quote", "")))
             row = {"doc": f"{jur}/{meta.get('id', f.stem)}", "n": i, "page": q.get("page"),
