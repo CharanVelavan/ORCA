@@ -1,0 +1,362 @@
+# India knowledge base (primary). Quotes marked verified: true were checked against the
+# official PDFs in charan/india-citation-check.md (5 Nov 2026). Everything else is a summary
+# with verified: false until someone checks the exact wording.
+
+# --- CERT-In Directions, 28 April 2022 -------------------------------------------------
+- id: IN-CERTIN-DIR-2022-ii
+  jurisdiction: IN
+  instrument: CERT-In Directions under section 70B(6) of the IT Act, 2000
+  clause: Direction (ii)
+  authority: CERT-In
+  binding_status: binding
+  issued: 2022-04-28
+  in_force_from: null
+  topic: incident_reporting
+  obligation:
+    actor: service_provider_intermediary_data_centre_body_corporate_government
+    action: report_cyber_incident
+    recipient: CERT-In
+    deadline: PT6H
+    trigger: noticing
+  quote: "shall mandatorily report cyber incidents as mentioned in Annexure I to CERT-In within 6 hours of noticing such incidents or being brought to notice about such incidents."
+  pinpoint: Direction (ii), PDF p. 2
+  summary: Annexure I incidents go to CERT-In within six hours of noticing them. The CERT-In FAQ explains severity and scale criteria for applying the deadline.
+  source: in-certin-dir-2022
+  verified: true
+  verified_by: charan/india-citation-check.md (5 Nov 2026)
+  notes: The effective date (in_force_from) has not been checked.
+
+- id: IN-CERTIN-DIR-2022-iii
+  jurisdiction: IN
+  instrument: CERT-In Directions under section 70B(6) of the IT Act, 2000
+  clause: Direction (iii)
+  authority: CERT-In
+  binding_status: binding
+  issued: 2022-04-28
+  in_force_from: null
+  topic: point_of_contact
+  obligation:
+    actor: service_provider_intermediary_data_centre_body_corporate_government
+    action: designate_point_of_contact
+    recipient: CERT-In
+    deadline: null
+    trigger: none
+  quote: "shall designate a Point of Contact to interface with CERT-In."
+  pinpoint: Direction (iii), PDF p. 2
+  summary: Each covered entity names a point of contact for CERT-In.
+  source: in-certin-dir-2022
+  verified: true
+  verified_by: charan/india-citation-check.md (5 Nov 2026)
+  notes: The source list (country-documents.md) wrongly calls this Direction (iv).
+
+- id: IN-CERTIN-DIR-2022-iv
+  jurisdiction: IN
+  instrument: CERT-In Directions under section 70B(6) of the IT Act, 2000
+  clause: Direction (iv)
+  authority: CERT-In
+  binding_status: binding
+  issued: 2022-04-28
+  in_force_from: null
+  topic: log_retention
+  obligation:
+    actor: service_provider_intermediary_data_centre_body_corporate_government
+    action: retain_ict_logs_in_india
+    recipient: null
+    deadline: P180D
+    trigger: none
+  quote: "maintain them securely for a rolling period of 180 days and the same shall be maintained within the Indian jurisdiction."
+  pinpoint: Direction (iv), PDF p. 2
+  summary: ICT system logs are kept securely for a rolling 180 days, inside India.
+  source: in-certin-dir-2022
+  verified: true
+  verified_by: charan/india-citation-check.md (5 Nov 2026)
+  notes: The source list wrongly calls this Direction (v). It matters for where an LLM or log store may run.
+
+- id: IN-CERTIN-DIR-2022-ANX1-ii
+  jurisdiction: IN
+  instrument: CERT-In Directions under section 70B(6) of the IT Act, 2000
+  clause: Annexure I, item (ii)
+  authority: CERT-In
+  binding_status: binding
+  issued: 2022-04-28
+  in_force_from: null
+  topic: incident_reporting
+  quote: "Compromise of critical systems/information"
+  pinpoint: Annexure I, item ii, PDF p. 4
+  summary: Compromise of critical systems is reportable. This covers wiping or commanding terminals through the operator's management network.
+  source: in-certin-dir-2022
+  verified: true
+  verified_by: CERT-In PDF fetched 7 Nov 2026 (sha256 202c2f39)
+  notes: Replaces the wrong Annexure quotes in charan/india-citation-check.md.
+
+- id: IN-CERTIN-DIR-2022-ANX1-iii
+  jurisdiction: IN
+  instrument: CERT-In Directions under section 70B(6) of the IT Act, 2000
+  clause: Annexure I, item (iii)
+  authority: CERT-In
+  binding_status: binding
+  issued: 2022-04-28
+  in_force_from: null
+  topic: incident_reporting
+  quote: "Unauthorised access of IT systems/data"
+  pinpoint: Annexure I, item iii, PDF p. 4
+  summary: Unauthorised access is reportable. This covers the login through the misconfigured VPN.
+  source: in-certin-dir-2022
+  verified: true
+  verified_by: CERT-In PDF fetched 7 Nov 2026 (sha256 202c2f39)
+  notes: null
+
+- id: IN-CERTIN-DIR-2022-ANX1-vi
+  jurisdiction: IN
+  instrument: CERT-In Directions under section 70B(6) of the IT Act, 2000
+  clause: Annexure I, item (vi)
+  authority: CERT-In
+  binding_status: binding
+  issued: 2022-04-28
+  in_force_from: null
+  topic: incident_reporting
+  quote: "Attack on servers such as Database, Mail and DNS and network devices such as Routers"
+  pinpoint: Annexure I, item vi, PDF p. 4
+  summary: Attacks on network devices such as routers are reportable.
+  source: in-certin-dir-2022
+  verified: true
+  verified_by: CERT-In PDF fetched 7 Nov 2026 (sha256 202c2f39)
+  notes: null
+
+- id: IN-CERTIN-DIR-2022-ANX1-ix
+  jurisdiction: IN
+  instrument: CERT-In Directions under section 70B(6) of the IT Act, 2000
+  clause: Annexure I, item (ix)
+  authority: CERT-In
+  binding_status: binding
+  issued: 2022-04-28
+  in_force_from: null
+  topic: incident_reporting
+  quote: "Attacks on Critical infrastructure, SCADA and operational technology systems and Wireless networks"
+  pinpoint: Annexure I, item ix, PDF p. 4
+  summary: Attacks on critical infrastructure, operational technology and wireless networks are reportable. This covers jamming-forced failover and utility OT.
+  source: in-certin-dir-2022
+  verified: true
+  verified_by: CERT-In PDF fetched 7 Nov 2026 (sha256 202c2f39)
+  notes: null
+
+- id: IN-CERTIN-DIR-2022-ANX1-xi
+  jurisdiction: IN
+  instrument: CERT-In Directions under section 70B(6) of the IT Act, 2000
+  clause: Annexure I, item (xi)
+  authority: CERT-In
+  binding_status: binding
+  issued: 2022-04-28
+  in_force_from: null
+  topic: incident_reporting
+  quote: "Data Breach"
+  pinpoint: Annexure I, item xi, PDF p. 4
+  summary: Data breaches are reportable.
+  source: in-certin-dir-2022
+  verified: true
+  verified_by: CERT-In PDF fetched 7 Nov 2026 (sha256 202c2f39)
+  notes: null
+
+- id: IN-CERTIN-DIR-2022-ANX1-xii
+  jurisdiction: IN
+  instrument: CERT-In Directions under section 70B(6) of the IT Act, 2000
+  clause: Annexure I, item (xii)
+  authority: CERT-In
+  binding_status: binding
+  issued: 2022-04-28
+  in_force_from: null
+  topic: incident_reporting
+  quote: "Data Leak"
+  pinpoint: Annexure I, item xii, PDF p. 4
+  summary: Data leaks are reportable.
+  source: in-certin-dir-2022
+  verified: true
+  verified_by: CERT-In PDF fetched 7 Nov 2026 (sha256 202c2f39)
+  notes: null
+
+# --- Telecom rules, 2024 ------------------------------------------------------------------
+- id: IN-TCSR-2024-R7-1
+  jurisdiction: IN
+  instrument: Telecommunications (Telecom Cyber Security) Rules, 2024
+  clause: Rule 7(1)
+  authority: Department of Telecommunications
+  binding_status: binding
+  issued: 2024-11-21
+  in_force_from: 2024-11-21
+  topic: incident_reporting
+  obligation:
+    actor: telecommunication_entity
+    action: report_security_incident
+    recipient: Central Government (DoT)
+    deadline: PT6H
+    trigger: occurrence
+  quote: "such entity shall report the same to the Central Government within six (6) hours of such occurrence"
+  pinpoint: Rule 7(1), PDF p. 11
+  summary: A security incident affecting a telecommunication entity is reported to the Central Government within six hours of occurrence.
+  source: in-tcsr-2024
+  verified: true
+  verified_by: charan/india-citation-check.md (5 Nov 2026)
+  notes: Counted from occurrence, not noticing, unlike CERT-In Direction (ii). A 2025 amendment exists and has not been checked.
+
+- id: IN-CTIR-2024-R7-1-j
+  jurisdiction: IN
+  instrument: Telecommunications (Critical Telecommunication Infrastructure) Rules, 2024
+  clause: Rule 7(1)(j)
+  authority: Department of Telecommunications
+  binding_status: binding
+  issued: 2024-11-22
+  in_force_from: 2024-11-22
+  topic: critical_infrastructure
+  obligation:
+    actor: critical_telecommunication_infrastructure_owner
+    action: intimate_incident
+    recipient: Central Government (DoT)
+    deadline: PT6H
+    trigger: occurrence
+  quote: "no later than six hours of occurrence of such incident"
+  pinpoint: Rule 7(1)(j), PDF p. 8
+  summary: Incidents affecting designated critical telecommunication infrastructure are intimated within six hours of occurrence. Notified as G.S.R. 723(E).
+  source: in-ctir-2024
+  verified: true
+  verified_by: charan/india-citation-check.md (5 Nov 2026)
+  notes: Applies only if the asset is designated as critical telecommunication infrastructure.
+
+# --- Space framework, 2026 ----------------------------------------------------------------
+- id: IN-SPACEFW-2026-3-2-1
+  jurisdiction: IN
+  instrument: CERT-In / SIA-India Cyber Security Framework and Guidelines for Space including Satellite Communication
+  clause: §3.2.1
+  authority: CERT-In with SIA-India
+  binding_status: not_stated
+  issued: 2026-02-26
+  in_force_from: null
+  topic: space_cyber
+  obligation:
+    actor: satcom_operator_or_service_provider
+    action: report_cyber_incident
+    recipient: CERT-In
+    deadline: PT6H
+    trigger: noticing
+  quote: "All SatCom operators and service providers must report cybersecurity incidents, breaches, or anomalies within 6 hours of noticing the incident to CERT-In."
+  pinpoint: §3.2.1, PDF p. 11
+  summary: Repeats the six-hour CERT-In clock for satellite operators; §7.1 (PDF p. 32) says the same.
+  source: in-space-fw-2026
+  verified: true
+  verified_by: charan/india-citation-check.md (5 Nov 2026)
+  notes: The PDF does not state its legal status, so don't call it binding or non-binding.
+
+# --- Data protection --------------------------------------------------------------------
+- id: IN-DPDP-ACT-2023-8-6
+  jurisdiction: IN
+  instrument: Digital Personal Data Protection Act, 2023
+  clause: Section 8(6)
+  authority: Parliament of India / MeitY
+  binding_status: binding_not_in_force
+  issued: 2023-08-11
+  in_force_from: null
+  topic: personal_data_breach
+  obligation:
+    actor: data_fiduciary
+    action: intimate_personal_data_breach
+    recipient: Data Protection Board and affected Data Principals
+    deadline: null
+    trigger: awareness
+  quote: null
+  pinpoint: Section 8(6)
+  summary: A Data Fiduciary intimates the Board and each affected Data Principal of a personal data breach, in the prescribed form and manner.
+  source: in-dpdp-act-2023
+  verified: false
+  verified_by: null
+  notes: Commences in phases, about May 2027. The enactment date (11 Aug 2023) is from memory and needs checking.
+
+- id: IN-DPDP-RULES-2025-R7
+  jurisdiction: IN
+  instrument: Digital Personal Data Protection Rules, 2025
+  clause: Rule 7
+  authority: MeitY
+  binding_status: binding_not_in_force
+  issued: 2025-11-13
+  in_force_from: 2027-05-13
+  topic: personal_data_breach
+  obligation:
+    actor: data_fiduciary
+    action: detailed_breach_intimation_to_board
+    recipient: Data Protection Board
+    deadline: PT72H
+    trigger: awareness
+  quote: null
+  pinpoint: Rule 7
+  summary: Initial intimation to the Board without delay; detailed intimation within 72 hours (or longer if the Board allows); affected Data Principals informed without delay.
+  source: in-dpdp-rules-2025
+  verified: false
+  verified_by: null
+  notes: Commences 18 months after Gazette publication (13 Nov 2025), so about 13 May 2027. No binding breach clock applies today.
+
+# --- Acts (summaries only) --------------------------------------------------------------
+- id: IN-ITACT-2000-70B
+  jurisdiction: IN
+  instrument: Information Technology Act, 2000
+  clause: Section 70B(4) and 70B(6)
+  authority: Parliament of India
+  binding_status: binding
+  issued: 2000-06-09
+  in_force_from: null
+  topic: cert_powers
+  quote: null
+  pinpoint: Section 70B(4), 70B(6)
+  summary: 70B(4) sets CERT-In's functions, including incident response and coordination; 70B(6) lets it call for information and issue directions. The Act itself sets no reporting deadline.
+  source: in-itact-2000
+  verified: false
+  verified_by: null
+  notes: The subjects were confirmed in the citation check; the wording was not quoted. The 2000 date is from memory and needs checking.
+
+- id: IN-TELACT-2023-20
+  jurisdiction: IN
+  instrument: Telecommunications Act, 2023
+  clause: Section 20
+  authority: Parliament of India / DoT
+  binding_status: binding
+  issued: 2023-12-24
+  in_force_from: null
+  topic: emergency_powers
+  quote: null
+  pinpoint: Section 20
+  summary: Central Government powers on public-emergency or public-safety grounds, including temporary possession and directions. It contains no priority-routing order.
+  source: in-telact-2023
+  verified: false
+  verified_by: null
+  notes: Commences in phases. The 24 Dec 2023 date is from memory and needs checking.
+
+- id: IN-TELACT-2023-22
+  jurisdiction: IN
+  instrument: Telecommunications Act, 2023
+  clause: Section 22(3)-(4)
+  authority: Parliament of India / DoT
+  binding_status: binding
+  issued: 2023-12-24
+  in_force_from: null
+  topic: telecom_cyber_security
+  quote: null
+  pinpoint: Section 22
+  summary: Telecom cyber-security measures and the power to make rules for critical telecommunication infrastructure. This is the parent provision of both 2024 rule sets.
+  source: in-telact-2023
+  verified: false
+  verified_by: null
+  notes: The 24 Dec 2023 date is from memory and needs checking.
+
+- id: IN-TELACT-2023-24
+  jurisdiction: IN
+  instrument: Telecommunications Act, 2023
+  clause: Section 24
+  authority: Parliament of India / DoT
+  binding_status: binding
+  issued: 2023-12-24
+  in_force_from: null
+  topic: standards
+  quote: null
+  pinpoint: Section 24
+  summary: Standards, conformity assessment and certification for telecom equipment, networks and services. It contains no priority-routing order.
+  source: in-telact-2023
+  verified: false
+  verified_by: null
+  notes: The 24 Dec 2023 date is from memory and needs checking.

@@ -1,0 +1,22 @@
+# One laptop runs the whole emulated sandbox. Pin image versions before submission.
+services:
+  mqtt:
+    image: eclipse-mosquitto:2
+    ports: ["1883:1883"]
+  chroma:
+    image: chromadb/chroma:latest
+    volumes: ["./chroma:/chroma/chroma"]
+    ports: ["8001:8000"]
+  ollama:            # local fallback LLM; not needed when LLM_BASE_URL points to Google Cloud
+    image: ollama/ollama:latest
+    volumes: ["ollama:/root/.ollama"]
+    ports: ["11434:11434"]
+    profiles: ["local-llm"]
+  orca:
+    build: .
+    env_file: .env
+    depends_on: [mqtt, chroma]
+    volumes: [".:/app"]
+    command: python run_demo.py --scenario C0
+volumes:
+  ollama:

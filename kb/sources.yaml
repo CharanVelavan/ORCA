@@ -1,0 +1,75 @@
+# Official sources only. `sha256` is filled in by `python tools/fetch_sources.py`,
+# which downloads each file into kb/sources/ (not committed) and records its hash.
+# All URLs come from charan/country-documents.md and charan/india-citation-check.md.
+
+- id: in-certin-dir-2022
+  title: Directions under sub-section (6) of section 70B of the Information Technology Act, 2000
+  authority: CERT-In
+  url: https://www.cert-in.org.in/PDF/CERT-In_Directions_70B_28.04.2022.pdf
+  sha256: 202c2f3953d792dcfb3ecb3634fc82ab75437ee596de89b8d59a211e8e42431f
+
+- id: in-certin-faq-2022
+  title: FAQs on Cyber Security Directions of 28 April 2022
+  authority: CERT-In
+  url: https://www.cert-in.org.in/PDF/FAQs_on_CyberSecurityDirections_May2022.pdf
+  sha256: 7c4ae9eab453db32a5feece63987f7606373d689755b5b2869bb367b5682d6af
+
+- id: in-itact-2000
+  title: The Information Technology Act, 2000 (as amended)
+  authority: Parliament of India / MeitY
+  url: https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf
+  sha256: null
+
+- id: in-telact-2023
+  title: The Telecommunications Act, 2023
+  authority: Parliament of India / DoT
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/Telecommunications-Act-2023.pdf
+  sha256: 81663bfba1915837df416dd99ec7b1b823de05ea16c4fafa30e8dc1c0616d503
+
+- id: in-tcsr-2024
+  title: Telecommunications (Telecom Cyber Security) Rules, 2024
+  authority: Department of Telecommunications
+  url: https://www.dot.gov.in/static/uploads/2025/07/7922e64b2a1ea70363e1b66970df52f5.pdf
+  sha256: null
+
+- id: in-ctir-2024
+  title: Telecommunications (Critical Telecommunication Infrastructure) Rules, 2024
+  authority: Department of Telecommunications
+  url: https://eservices.dot.gov.in/sites/default/files/circular-notifications/Critical%20Telecommunication%20Infrastructure%20Rules%2C%202024_0.pdf
+  sha256: 116466ec2799bb80750e9d810495fbfb1c0b041366dbb3625da03b2085199f4d
+
+- id: in-space-fw-2026
+  title: Cyber Security Framework and Guidelines for Space including Satellite Communication
+  authority: CERT-In with SIA-India
+  url: https://www.cert-in.org.in/PDF/CyberSecurityFrameworkGuideline_for_space.pdf
+  sha256: 6310ef527d43896777084d9c875e7b33b9ad176fa51e42c2027a36c70400e50a
+
+- id: in-dpdp-act-2023
+  title: The Digital Personal Data Protection Act, 2023
+  authority: Parliament of India / MeitY
+  url: https://www.meity.gov.in/digital-personal-data-protection-act-2023-4
+  sha256: null
+
+- id: in-dpdp-rules-2025
+  title: Digital Personal Data Protection Rules, 2025 (Gazette text)
+  authority: MeitY
+  url: https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf
+  sha256: null
+
+- id: eu-nis2-2022
+  title: Directive (EU) 2022/2555 (NIS2)
+  authority: European Parliament and Council
+  url: http://data.europa.eu/eli/dir/2022/2555/oj
+  sha256: 2f18a35716baa84e07d694e2dc3c69834607bdeeb92f6e815ee6a7e79019288f
+
+- id: eu-gdpr-2016
+  title: Regulation (EU) 2016/679 (GDPR)
+  authority: European Parliament and Council
+  url: http://data.europa.eu/eli/reg/2016/679/oj
+  sha256: 9569524e4e89f1519f956c74a1261ef2de767c727913b95bbc108dfcff847c85
+
+- id: ae-tdra-interconnection-2006
+  title: Interconnection Instructions, Version 1.2
+  authority: TDRA (UAE)
+  url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/Instruction-Interconnection-19Feb2006-EN-pdf.ashx
+  sha256: 2720bedb598ab88a685c83269de91b94d68b576a6d510c78bd2d3cc99b40660e

@@ -1,0 +1,7 @@
+pyyaml>=6.0
+pytest>=8.0
+# Added as each part is built:
+# lightgbm, scikit-learn, shap, scipy   (M1-M4)
+# paho-mqtt                             (telemetry bus)
+# chromadb, openai                      (retrieval, LLM client)
+# fastapi, uvicorn                      (commander console)

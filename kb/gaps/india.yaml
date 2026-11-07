@@ -1,0 +1,59 @@
+# Gap records: what the India knowledge base does NOT contain. These match the six gaps in
+# the report (section 6) plus the cross-institution plan gap from charan/country-documents.md.
+# The rule engine returns POTENTIAL_GAP with one of these ids.
+
+- id: GAP-IN-01-THREE-CLOCKS
+  jurisdiction: IN
+  title: Three six-hour reports to two bodies, with different triggers
+  finding: One incident can need a CERT-In report six hours from noticing and DoT reports six hours from occurrence. An outage first treated as a fault may already be past an occurrence deadline once it is recognised as an attack.
+  evidence: [IN-CERTIN-DIR-2022-ii, IN-TCSR-2024-R7-1, IN-CTIR-2024-R7-1-j]
+  affects: [mobile_operator, satellite_operator, cert_in, dot]
+  verified: true
+
+- id: GAP-IN-02-NO-DOWNSTREAM-WARNING
+  jurisdiction: IN
+  title: No duty for a satellite operator to warn the services that depend on it
+  finding: Reports flow to CERT-In and the Central Government. No source found makes the satellite operator warn mobile operators, utilities or banks on the same ground network.
+  evidence: [IN-CERTIN-DIR-2022-ii, IN-SPACEFW-2026-3-2-1]
+  affects: [satellite_operator, mobile_operator, power_utility, critical_service_customer]
+  verified: true
+
+- id: GAP-IN-03-NO-PRIORITY-ORDER
+  jurisdiction: IN
+  title: No priority order for scarce backup capacity
+  finding: No priority order across emergency, health, water, payments and ordinary traffic was found in Telecommunications Act sections 20, 22 or 24 or in the Telecom Cyber Security Rules 2024.
+  evidence: [IN-TELACT-2023-20, IN-TELACT-2023-22, IN-TELACT-2023-24, IN-TCSR-2024-R7-1]
+  affects: [mobile_operator, satellite_operator, dot]
+  verified: true
+
+- id: GAP-IN-04-NO-BATTERY-FLOOR
+  jurisdiction: IN
+  title: No national minimum battery or backup-power floor for towers
+  finding: No current instrument setting tower battery autonomy was found, so M2's run-out forecast works against an operator-set threshold, not a legal minimum.
+  evidence: []
+  affects: [mobile_operator, power_utility]
+  verified: true
+
+- id: GAP-IN-05-NO-BREACH-CLOCK-TODAY
+  jurisdiction: IN
+  title: No binding personal-data breach deadline applies today
+  finding: DPDP Act section 8(6) and DPDP Rules 2025 Rule 7 (72 hours) commence about May 2027.
+  evidence: [IN-DPDP-ACT-2023-8-6, IN-DPDP-RULES-2025-R7]
+  affects: [mobile_operator, satellite_operator]
+  verified: true
+
+- id: GAP-IN-06-STANDARDS
+  jurisdiction: INTL
+  title: Standards gaps
+  finding: 3GPP TR 33.700-29 leaves feeder links out of scope, and no standard machine-readable format for policy rules was found; ORCA-NTN uses YAML.
+  evidence: []
+  affects: [regulator, standards_bodies]
+  verified: true
+
+- id: GAP-IN-07-NO-JOINT-PLAN
+  jurisdiction: IN
+  title: No common cross-institution incident plan
+  finding: CERT-In, telecom cyber-security and data-protection duties are separate. No framework names one incident commander, evidence-sharing authority and decision owner for an incident spanning satellite operator, mobile operator, utility, CERT and regulator.
+  evidence: [IN-CERTIN-DIR-2022-ii, IN-TCSR-2024-R7-1, IN-DPDP-ACT-2023-8-6]
+  affects: [all]
+  verified: true

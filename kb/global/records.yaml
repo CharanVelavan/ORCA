@@ -1,0 +1,112 @@
+# Global comparisons (EU) and the one UAE example. Used by demo scenario 3 (swap the
+# knowledge base: India vs EU). Quotes checked on 7 Nov 2026 against the files fetched by
+# tools/fetch_sources.py (hashes in kb/sources.yaml).
+
+- id: EU-NIS2-2022-ART23-4-a
+  jurisdiction: EU
+  instrument: Directive (EU) 2022/2555 (NIS2)
+  clause: Article 23(4)(a)
+  authority: European Parliament and Council
+  binding_status: binding
+  issued: 2022-12-14
+  in_force_from: null
+  topic: incident_reporting
+  obligation:
+    actor: essential_or_important_entity
+    action: early_warning
+    recipient: CSIRT or competent authority
+    deadline: PT24H
+    trigger: awareness
+  quote: "without undue delay and in any event within 24 hours of becoming aware of the significant incident, an early warning, which, where applicable, shall indicate whether the significant incident is suspected of being caused by unlawful or malicious acts or could have a cross-border impact"
+  pinpoint: Article 23(4)(a)
+  summary: Early warning within 24 hours of becoming aware, saying whether the incident is suspected to be malicious.
+  source: eu-nis2-2022
+  verified: true
+  verified_by: EUR-Lex text, fetched 7 Nov 2026
+  notes: A directive, so it applies through national transposition. NIS2 space coverage includes ground infrastructure only. The issued date (14 Dec 2022) is from memory.
+
+- id: EU-NIS2-2022-ART23-4-b
+  jurisdiction: EU
+  instrument: Directive (EU) 2022/2555 (NIS2)
+  clause: Article 23(4)(b)
+  authority: European Parliament and Council
+  binding_status: binding
+  issued: 2022-12-14
+  in_force_from: null
+  topic: incident_reporting
+  obligation:
+    actor: essential_or_important_entity
+    action: incident_notification
+    recipient: CSIRT or competent authority
+    deadline: PT72H
+    trigger: awareness
+  quote: "without undue delay and in any event within 72 hours of becoming aware of the significant incident, an incident notification"
+  pinpoint: Article 23(4)(b)
+  summary: Incident notification within 72 hours of becoming aware, with an initial assessment and indicators of compromise.
+  source: eu-nis2-2022
+  verified: true
+  verified_by: EUR-Lex text, fetched 7 Nov 2026
+  notes: Second step after the 24-hour early warning.
+
+- id: EU-NIS2-2022-ART23-2
+  jurisdiction: EU
+  instrument: Directive (EU) 2022/2555 (NIS2)
+  clause: Article 23(2)
+  authority: European Parliament and Council
+  binding_status: binding
+  issued: 2022-12-14
+  in_force_from: null
+  topic: incident_reporting
+  obligation:
+    actor: essential_or_important_entity
+    action: inform_affected_service_recipients
+    recipient: recipients of the entity's services
+    deadline: null
+    trigger: awareness
+  quote: "essential and important entities communicate, without undue delay, to the recipients of their services that are potentially affected by a significant cyber threat any measures or remedies that those recipients are able to take in response to that threat"
+  pinpoint: Article 23(2)
+  summary: Tell potentially affected service recipients, without undue delay, what they can do about a significant cyber threat, and where appropriate about the threat itself.
+  source: eu-nis2-2022
+  verified: true
+  verified_by: EUR-Lex text, fetched 7 Nov 2026
+  notes: The EU has the downstream-warning duty that India lacks (GAP-IN-02). This is the key contrast for scenario 3.
+
+- id: EU-GDPR-2016-ART33-1
+  jurisdiction: EU
+  instrument: Regulation (EU) 2016/679 (GDPR)
+  clause: Article 33(1)
+  authority: European Parliament and Council
+  binding_status: binding
+  issued: 2016-04-27
+  in_force_from: 2018-05-25
+  topic: personal_data_breach
+  obligation:
+    actor: controller
+    action: notify_personal_data_breach
+    recipient: supervisory authority
+    deadline: PT72H
+    trigger: awareness
+  quote: "In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority competent in accordance with Article 55"
+  pinpoint: Article 33(1)
+  summary: Notify the supervisory authority within 72 hours of becoming aware, unless the breach is unlikely to risk people's rights and freedoms.
+  source: eu-gdpr-2016
+  verified: true
+  verified_by: EUR-Lex text, fetched 7 Nov 2026
+  notes: null
+
+- id: AE-TDRA-IC-2006-EMERGENCY
+  jurisdiction: AE
+  instrument: TDRA Interconnection Instructions, Version 1.2
+  clause: Emergency calls
+  authority: TDRA (UAE)
+  binding_status: binding
+  issued: 2006-02-19
+  in_force_from: null
+  topic: emergency_priority
+  quote: "All emergency calls must be treated with the highest priority within the Points of Interconnection."
+  pinpoint: PDF p. 21
+  summary: Emergency calls get the highest priority at points of interconnection; dedicated capacity should be provided if possible. It does not rank other services for scarce backup capacity.
+  source: ae-tdra-interconnection-2006
+  verified: true
+  verified_by: TDRA PDF, fetched 7 Nov 2026
+  notes: null

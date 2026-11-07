@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.pytest_cache/
+kb/sources/*
+!kb/sources/.gitkeep
+data/raw/
+models/*.pkl
+runs/
+chroma/
+.DS_Store
+*.log

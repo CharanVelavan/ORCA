@@ -1,0 +1,10 @@
+[project]
+name = "orca-ntn"
+version = "0.1.0"
+description = "Secure self-healing and cyber incident coordination for satellite-backed networks (ITU AI for Good Sandbox Hackathon, UAE)"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
