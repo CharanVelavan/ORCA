@@ -8,6 +8,8 @@ from __future__ import annotations
 import pytest
 import yaml
 
+pytest.importorskip("chromadb", reason="vector KB deps not installed (use .venv, see docs/KBVEC.md)")
+
 from orca.kbvec import chunk, config, evaluate, replay
 from orca.kbvec.retrieve import _allowed
 
