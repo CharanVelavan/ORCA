@@ -253,7 +253,7 @@ class Remediation:
         if self.w.audit.verify() is not None:
             return self._downgrade("audit chain integrity failure")
         for a in self.w.alerts:
-            if a.get("source") == "M3" and (a.get("label") == "abstain"
+            if a.get("source") == "M3" and (a.get("label") == "abstain" or a.get("abstained")
                                             or (a.get("confidence") is not None
                                                 and a["confidence"] < M3_DOUBT_CONFIDENCE)):
                 return self._downgrade(f"M3 doubt on {a.get('site')}")
