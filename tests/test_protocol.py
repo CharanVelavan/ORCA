@@ -163,3 +163,10 @@ def test_audit_chain_intact_after_mixed_traffic(env):
     send(proto, type="shout", sender="cert_in", recipients=["regulator"])
     assert kinds(w) == ["msg_sent", "msg_rejected"]
     assert w.audit.verify() is None
+
+
+def test_chunk_ids_in_free_text_are_seen():
+    # a vector-KB chunk id written in prose must be picked up, so a made-up one can be rejected
+    from orca.protocol import ID_RE
+    assert ID_RE.findall("see in-tcsr-2024:p5:c2 and IN-TCSR-2024-R7-1") == ["in-tcsr-2024:p5:c2", "IN-TCSR-2024-R7-1"]
+    assert ID_RE.findall("time 10:30 on p5") == []

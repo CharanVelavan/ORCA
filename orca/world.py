@@ -2,6 +2,9 @@
 
 The simulator and the scenario runner write into it; agents read it only through their tools.
 The clock is ``facts["now"]`` and nothing else (no wall clock), so a run replays exactly.
+
+Alert keys: t (scenario minute), actor, sites, signals, visible_to (list of roles; None = everyone,
+for simulator alerts that predate per-agent routing).
 """
 from __future__ import annotations
 

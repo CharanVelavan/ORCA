@@ -84,7 +84,8 @@ class LLMClient:
             m = data["choices"][0]["message"]
         except (KeyError, IndexError) as e:
             raise LLMError(f"unexpected LLM response: {str(data)[:300]}") from e
-        return {"role": "assistant", "content": m.get("content"), "tool_calls": m.get("tool_calls") or []}
+        return {"role": "assistant", "content": m.get("content"), "tool_calls": m.get("tool_calls") or [],
+                "reasoning_content": m.get("reasoning_content") or m.get("reasoning")}
 
 
 class ScriptedLLM:

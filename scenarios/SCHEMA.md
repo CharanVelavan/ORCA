@@ -130,3 +130,8 @@ heal:
 
 Gateways: `GW-IN-1` (India, primary), `GW-IN-2` (India, backup), `GW-XX` (outside India; forbidden by
 Authz Rule 60(1)(b), "including during failure of satellite earth station gateway located in India").
+
+## Event routing (agents, 8 Nov)
+- Optional event key `to: [roles]` is the explicit release list: only those roles see the event. Without it,
+  the event goes to its actor role, else to roles whose `sees` (agents/roles/*.yaml) matches its signals.
+- Attacker and environment events never reach agents as text: agents see only the observed signals.

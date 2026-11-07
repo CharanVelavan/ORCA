@@ -44,7 +44,8 @@ MAX_RECIPIENTS = 7
 # KB-looking ids (records, gaps) in free text. Rule ids (IN-R-...) also match and are known.
 # Lowercase is allowed after the first segment: record ids end in clause letters (-ii, -iv, -b, -j).
 ID_RE = re.compile(r"(?<![\w-])((?:IN|EU|AE|US|INTL)-[A-Z0-9][A-Za-z0-9-]*[A-Za-z0-9]"
-                   r"|GAP-(?:IN|EU|AE|US|INTL|CAND)-[A-Za-z0-9-]*[A-Za-z0-9])")
+                   r"|GAP-(?:IN|EU|AE|US|INTL|CAND)-[A-Za-z0-9-]*[A-Za-z0-9]"
+                   r"|[a-z]{2,4}-[a-z0-9][a-z0-9.-]*:p\d+:c\d+)")      # vector-KB chunk id (orca.kbvec)
 
 
 # ----------------------------------------------------------------------------- citations
@@ -100,7 +101,9 @@ def unknown_ids_in_text(text: str, kb, extra_known: set[str] | None = None) -> l
     """KB-looking ids in ``text`` that are neither a record, a non-rejected gap nor a rule id."""
     known = set(kb.records) | {g for g, v in kb.gaps.items() if v.get("status") != "rejected"} | rule_ids()
     known |= extra_known or set()
-    return sorted({m for m in ID_RE.findall(text or "") if m not in known})
+    vec = _kbvec()
+    return sorted({m for m in ID_RE.findall(text or "") if m not in known
+                   and not (":p" in m and vec is not None and vec.get_chunk(m) is not None)})
 
 
 # ----------------------------------------------------------------------------- message
