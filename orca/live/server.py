@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import mimetypes
+import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -38,6 +39,55 @@ def _replay_events(path: Path) -> list[dict]:
             event["audience"] = "control"
         out.append(event)
     return out
+
+
+STREAM_SUFFIX = ".stream.jsonl"
+
+
+def list_runs(runs: Path) -> dict:
+    """Audit recordings under ``runs/`` (newest first); a sidecar only sets ``stream: true``."""
+    rows = []
+    for path in runs.glob("*.jsonl"):
+        if path.name.endswith(STREAM_SUFFIX):
+            continue
+        scenario = None
+        try:
+            with path.open(encoding="utf-8") as fh:
+                first = json.loads(fh.readline() or "{}")
+            scenario = (first.get("payload") or {}).get("scenario")
+        except (OSError, ValueError):
+            pass
+        if not scenario and path.name.split("-")[0].isalnum() and path.name.split("-")[0].isupper():
+            scenario = path.name.split("-")[0]
+        stat = path.stat()
+        rows.append({"file": path.name, "scenario": str(scenario).upper() if scenario else None,
+                     "stream": (runs / f"{path.stem}{STREAM_SUFFIX}").is_file(),
+                     "size": stat.st_size, "mtime": stat.st_mtime})
+    rows.sort(key=lambda r: r["mtime"], reverse=True)
+    return {"ok": True, "runs": rows}
+
+
+def stream_chunks(session: LiveSession, since: int = 0, poll: float = 1.0, heartbeat: float = 15.0):
+    """Yield stream events (dicts) and ``None`` heartbeats, following a session restart.
+
+    A restart replaces ``session.bus`` with a fresh bus whose seq restarts at 1, so the cursor
+    is reset whenever the bus object changes. A short poll picks the switch up quickly.
+    """
+    bus, last = session.bus, time.monotonic()
+    while True:
+        if session.bus is not bus:
+            bus, since = session.bus, 0
+        events = bus.wait_since(since, poll)
+        if session.bus is not bus:
+            continue
+        if events:
+            for event in events:
+                since = event["seq"]
+                yield event
+            last = time.monotonic()
+        elif time.monotonic() - last >= heartbeat:
+            last = time.monotonic()
+            yield None
 
 
 def make_handler(session: LiveSession):
@@ -76,6 +126,8 @@ def make_handler(session: LiveSession):
                 return self._json(session.catalogue())
             if u.path == "/api/truth":
                 return self._json(session.truth())
+            if u.path == "/api/runs":
+                return self._json(list_runs(session.recording.parent))
             if u.path == "/api/replay":
                 return self._replay((q.get("file") or [""])[0])
             return self._static(u.path)
@@ -142,16 +194,11 @@ def make_handler(session: LiveSession):
             self.send_header("Access-Control-Allow-Origin", "http://localhost:5173")
             self.end_headers()
             try:
-                # Keep the connection open and re-check after every standard SSE heartbeat window.
-                while True:
-                    events = session.bus.wait_since(since, 15)
-                    if not events:
+                for event in stream_chunks(session, since):
+                    if event is None:
                         self.wfile.write(b": heartbeat\n\n")
-                        self.wfile.flush()
-                        continue
-                    for event in events:
+                    else:
                         self.wfile.write(b"data: " + json.dumps(event, default=str).encode() + b"\n\n")
-                        since = event["seq"]
                     self.wfile.flush()
             except (BrokenPipeError, ConnectionResetError):
                 return
@@ -163,11 +210,16 @@ def make_handler(session: LiveSession):
                 candidate = Path(*candidate.parts[1:])
             if len(candidate.parts) != 1 or candidate.suffix != ".jsonl":
                 return self._json({"ok": False, "error": "file must name a runs/*.jsonl recording"}, 400)
-            path = session.recording.parent / candidate.name
-            if not path.is_file():
-                return self._json({"ok": False, "error": "recording not found"}, 404)
+            runs = session.recording.parent
+            base = candidate.name[:-len(STREAM_SUFFIX)] if candidate.name.endswith(STREAM_SUFFIX) else candidate.stem
+            audit, sidecar = runs / f"{base}.jsonl", runs / f"{base}{STREAM_SUFFIX}"
             try:
-                return self._json({"ok": True, "events": _replay_events(path)})
+                if sidecar.is_file():
+                    lines = [json.loads(line) for line in sidecar.read_text(encoding="utf-8").splitlines() if line.strip()]
+                    return self._json({"ok": True, "events": lines, "source": "stream"})
+                if not audit.is_file():
+                    return self._json({"ok": False, "error": "recording not found"}, 404)
+                return self._json({"ok": True, "events": _replay_events(audit), "source": "audit"})
             except Exception as exc:
                 return self._json({"ok": False, "error": f"cannot parse recording: {exc}"}, 400)
 

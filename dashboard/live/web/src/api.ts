@@ -1,7 +1,7 @@
 export type SessionRequest = { scenario:string; llm:'mock'|'local'; rules:boolean; kb:'india'|'eu'; autoplay:boolean; sync:boolean };
 async function call<T>(path:string, body?:unknown, method='POST'): Promise<T> {
   const response = await fetch(`/api/${path}`, body === undefined && method === 'GET' ? undefined : { method, headers:{'Content-Type':'application/json'}, body:body === undefined ? undefined : JSON.stringify(body) });
-  if (!response.ok) throw new Error(`API ${response.status}: ${path}`);
+  if (!response.ok) { let msg = `API ${response.status}: ${path}`; try { const j = await response.json() as {error?:string}; if (j?.error) msg = j.error; } catch { /* non-JSON error body */ } throw new Error(msg); }
   return response.json() as Promise<T>;
 }
 export const api = {
@@ -17,5 +17,6 @@ export const api = {
   schedule: (body:{kind:string;target:string;at_t:number;duration_min:number;params?:Record<string,unknown>}) => call<Record<string, unknown>>('schedule', body),
   deleteSchedule: (id:string) => call<Record<string, unknown>>(`schedule/${encodeURIComponent(id)}`, undefined, 'DELETE'),
   truth: () => call<Record<string, unknown>>('truth', undefined, 'GET'),
+  runs: () => call<{ runs?: { file: string; scenario: string | null; stream: boolean; size: number; mtime: number }[] }>('runs', undefined, 'GET'),
   replay: (file:string) => call<Record<string, unknown>>(`replay?file=${encodeURIComponent(file)}`, undefined, 'GET'),
 };

@@ -3,12 +3,14 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import os
 import threading
 import time
+from collections import deque
 from pathlib import Path
 
 from orca import rules
-from orca.agents import Agent, EventFeed, PolicyMockLLM, load_agent_roles
+from orca.agents import Agent, EventFeed, PolicyMockLLM, _merge_facts, load_agent_roles
 from orca.llm import LLMClient
 from orca.audit import AuditLog
 from orca.remediation import Refused, Remediation
@@ -16,8 +18,9 @@ from orca.sim import attacks
 from orca.sim.engine import Simulator
 from orca.sim.netops import attach, check_path_clean
 from orca.sim.netstate import NetState
-from orca.sim.scenario import load_scenario
-from orca.sim.topology import GATEWAYS, SITES
+from orca.sim.engine import CLASS_OF
+from orca.sim.scenario import SCEN_DIR, ScenarioRun, load_scenario
+from orca.sim.topology import GATEWAYS, INDIAN_GATEWAYS, SITES
 from orca.world import World
 
 from .bus import EventBus
@@ -86,16 +89,48 @@ class LiveSession:
                 role.tools = [tool for tool in role.tools if tool != "run_rule_engine"]
         self.feed = EventFeed(self.scenario, self.roles)
         llm_client = PolicyMockLLM() if self.llm_mode == "mock" else LLMClient()   # local = LLM_BASE_URL / LLM_MODEL
+        self.llm_model = "mock" if self.llm_mode == "mock" else (getattr(llm_client, "model", None)
+                                                                  or os.environ.get("LLM_MODEL", "local"))
         self.agents = {name: Agent(role, self.world, llm_client, self.rem) for name, role in self.roles.items()}
+        # Scripted-scenario playback reuses the batch runner's signal -> simulator mapping on this sim.
+        self._scen = ScenarioRun(self.scenario, world=self.world, roles=self.roles, net=self.net)
+        self._scen.sim = self.sim
+        self._facts_done: set[int] = set()
+        self._model_last: dict[tuple, tuple] = {}
+        self._hist: dict[str, deque] = {}
+        self._audit_sites: dict[str, int] = {}
+        self._verdict_keys: set[tuple] = set()
+        self._route_offers: list[dict] = []
+        self._offer_sites = {sg["site"] for ev in self.scenario.get("events", []) for sg in ev.get("signals") or []
+                             if sg.get("signal") == "route_candidate"}
         self.impact, self.shadow = Impact(), Impact()
         self.recording = path
+        # Every event that goes through the bus is also appended to a sidecar, so a replay can
+        # play back exactly what the live SSE client saw (the audit log lacks ticks, models, ...).
+        self.stream_path = path.with_name(path.stem + ".stream.jsonl")
+        self.stream_path.parent.mkdir(parents=True, exist_ok=True)
+        self.stream_path.write_text("")
+        self._wrap_bus_emit()
         self.world.log("run_meta", "system", {"scenario": self.scenario_name, "rules": self.rules_enabled,
                                                  "kb": self.kb_name, "llm": self.llm_mode, "emulated": True})
         self._flush_audit()
         self.emit("session", scenario=self.scenario_name, title=self.scenario.get("title", ""),
-                  story=self.scenario.get("story", ""), start=str(self.scenario["start"]), llm=self.llm_mode,
+                  story=self.scenario.get("story", ""), start=str(self.scenario["start"]), llm=self.llm_mode, llm_model=self.llm_model,
                   rules=self.rules_enabled, kb=self.kb_name, autoplay=self.autoplay, sync=self.sync,
                   speed=self.speed, emulated=True)
+
+    def _wrap_bus_emit(self) -> None:
+        bus, sink, lock = self.bus, self.stream_path, threading.Lock()
+        original = bus.emit
+
+        def emit(event: dict) -> dict:
+            item = original(event)
+            with lock, sink.open("a", encoding="utf-8") as fh:
+                fh.write(json.dumps(item, default=str, separators=(",", ":")) + "\n")
+                fh.flush()
+            return item
+
+        bus.emit = emit
 
     def restart(self, **opts) -> dict:
         with self.lock:
@@ -108,7 +143,7 @@ class LiveSession:
                           rules_enabled=opts.get("rules", self.rules_enabled), kb=opts.get("kb", self.kb_name),
                           autoplay=opts.get("autoplay", self.autoplay), sync=opts.get("sync", self.sync),
                           speed=opts.get("speed", self.speed), runs_dir=old.parent)
-            return {"ok": True, "recording": str(self.recording), "previous_recording": str(old)}
+            return {"ok": True, "recording": str(self.recording), "stream": str(self.stream_path), "previous_recording": str(old)}
 
     def close(self) -> None:
         self.running = False
@@ -147,7 +182,7 @@ class LiveSession:
             if kind == "approval_requested":
                 event["status"] = "requested"
             elif kind == "approved":
-                event["status"] = "approved"
+                event["status"] = "auto" if str(entry["actor"]).startswith("autonomy:") else "approved"
             elif kind == "rejected":
                 event["status"] = "rejected"
             elif kind == "execute_refused":
@@ -169,7 +204,7 @@ class LiveSession:
                     "autonomy": self._autonomy_state(), "recording": str(self.recording), "last_seq": len(self.bus.all())}
 
     def _session_meta(self) -> dict:
-        return {"scenario": self.scenario_name, "llm": self.llm_mode, "rules": self.rules_enabled,
+        return {"scenario": self.scenario_name, "llm": self.llm_mode, "llm_model": self.llm_model, "rules": self.rules_enabled,
                 "kb": self.kb_name, "autoplay": self.autoplay, "sync": self.sync, "speed": self.speed,
                 "emulated": True}
 
@@ -248,12 +283,15 @@ class LiveSession:
             self.scheduled = [s for s in self.scheduled if s not in due]
             for s in due:
                 self.inject(s["kind"], s["target"], s["duration_min"], s["params"], by="schedule", start=s["at_t"])
+            self._apply_scenario_signals(self.sim.t + 1)
             recs = self.sim.step()
             self.world.facts["now"] = self.sim.ts(self.sim.t)
             sites = self._site_state(recs)
             self.emit("tick", sites=sites, gateways=self._gateways(), paths=self._paths())
             self._detect(recs)
-            self._run_due_scenario_events()
+            self._apply_scenario_facts(self.sim.t)
+            self._handle_route_offers(recs, sites)
+            self._model_status(recs, sites)
             self._update_impact(recs)
             if self.sim.t % 5 == 0:
                 self.world.log("net_state", "system", {"sites": sites, "gateways": self._gateways()})
@@ -274,7 +312,8 @@ class LiveSession:
             if old and self.sim.t - old[0] < 5 and confidence - old[1] <= .2:
                 continue
             self._detected[key] = (self.sim.t, confidence)
-            source = "M3" if label != "normal" else "M1"
+            # M1 sees a management system that disagrees with measured loss; M3 classifies the rest.
+            source = "M1" if label == "attack-management-plane" and r.get("telemetry_mismatch", 0) > .1 else "M3"
             signals = self._signals_for(label, r)
             visible = self.feed.route({"actor": source, "signals": signals})
             alert = {"id": f"LIVE-{source}-{r['site']}-{self.sim.t:04d}", "source": source, "site": r["site"],
@@ -282,8 +321,11 @@ class LiveSession:
                      "detail": f"{source} classifies an emulated {label} condition at {r['site']}",
                      "visible_to": visible, "explain": {"top_features": self._top_features(r)}}
             self.world.alerts.append(alert)
-            self.emit("model", model=source, site=r["site"], **{"class": label, "confidence": confidence,
+            extra = {"score": round(self._m1_score(r), 2), "threshold": self.M1_THRESHOLD} if source == "M1" else {}
+            self.emit("model", model=source, site=r["site"], state="flagged" if label.startswith("attack") else "fault",
+                      **extra, **{"class": label, "confidence": confidence,
                       "top_features": self._top_features(r), "text": alert["detail"]})
+            self._model_last[("M3", r["site"])] = ("flagged", label)
             self.emit("alert", id=alert["id"], source=source, site=r["site"], label=label,
                       visible_to=visible, text=alert["detail"])
             for inj in self.injections:
@@ -299,7 +341,9 @@ class LiveSession:
             self._run_rules()
             if label == "attack-management-plane":
                 self._request_plan("satellite_operator", "PB-01", ["noc-vendor-7"], {}, "Contain the emulated management intrusion")
-            elif label == "attack-jamming":
+            elif label == "attack-jamming" and not (self.autoplay and r["site"] in self._offer_sites):
+                # In a scripted run the scenario decides when a backup path is offered (see
+                # _handle_route_offers), so the heal follows its story instead of pre-empting it.
                 lure = any(c.kind == "jamming" and c.params.get("lure") for c in active)
                 path = "C" if lure else "B"
                 self._request_plan("mobile_operator", "PB-06", [r["site"]], {"path": path},
@@ -372,6 +416,10 @@ class LiveSession:
         try:
             for verdict in rules.evaluate(self.world.facts, self.world.kb):
                 v = verdict.to_dict()
+                vkey = (v["rule_id"], v["verdict"], v.get("gap_id"), v.get("topic"), v.get("deadline"))
+                if vkey in self._verdict_keys:
+                    continue
+                self._verdict_keys.add(vkey)
                 self.world.log("verdict", "rules", v)
                 self.emit("verdict", verdict=v["verdict"], rule=v["rule_id"], topic=v["topic"],
                           records=v["record_ids"], gap_id=v.get("gap_id"), explanation=v["explanation"])
@@ -382,18 +430,157 @@ class LiveSession:
         except Exception as exc:
             self.emit("error", where="rules", message=str(exc)[:240])
 
-    def _run_due_scenario_events(self) -> None:
+    M1_THRESHOLD = 0.6
+    M2_FLAG_MIN = 45
+    ALLOCATION = ["112", "hospital", "grid", "payments"]
+    SERVICE_SITE = {"hospital": "CHN-01", "payments": "CHN-02", "112": "CHN-03", "grid": "CHN-04"}
+
+    def _apply_scenario_signals(self, minute: int) -> None:
+        """Play the scenario's scripted signals at their minute (before that minute is simulated)."""
         if not self.autoplay:
             return
         for e in self.scenario.get("events", []):
-            if e.get("t") != self.sim.t:
+            if e.get("t") != minute:
                 continue
-            for signal in e.get("signals", []):
-                site, sig, value = signal.get("site"), signal.get("signal"), signal.get("value")
-                if sig == "vpn_login":
-                    self.sim.add("mgmt_intrusion", site, start=self.sim.t)
-                elif sig == "rain_mm_h" and value:
-                    self.sim.add("rain", site, start=self.sim.t, peak=float(value))
+            before, obs = len(self.sim.conditions), len(self._scen.observations)
+            self._scen._apply(e)
+            for sig in e.get("signals") or []:
+                if sig.get("signal") == "route_candidate":
+                    self._route_offers.append({"site": sig["site"], "path": sig["value"]["path"]})
+            for cond in self.sim.conditions[before:]:
+                self._record_scripted_threat(cond)
+            for o in self._scen.observations[obs:]:
+                if o["link_protection"] == "unprotected":
+                    first_m3 = min([x["t"] for x in self.scenario.get("events", []) if x.get("actor") == "M3"] or [minute])
+                    self._audit_sites[o["site"]] = max(minute, first_m3)
+                else:
+                    self._audit_sites.pop(o["site"], None)
+
+    def _handle_route_offers(self, recs: list[dict], sites: dict) -> None:
+        """A scenario offered a backup path: ask for PB-06 if the site is hurt (the guards judge the path).
+
+        A verified path through an Indian gateway also covers other hurt scenario sites that have the
+        same clean path.  A foreign, unverified or failed offer is requested for its own site only, so
+        the clean-path check refuses it where the commander can see it.
+        """
+        offers, self._route_offers = self._route_offers, []
+        by_site = {r["site"]: r for r in recs}
+
+        def hurt(site: str) -> bool:
+            return site in sites and (sites[site]["state"] in ("degraded", "down") or not by_site[site]["mains_power"])
+
+        def clean(site: str, path: str) -> bool:
+            route = self.sim.routes.get(site, {}).get(path) or {}
+            return route.get("integrity") == "verified" and route.get("gateway") in INDIAN_GATEWAYS
+
+        for off in offers:
+            site, path = off["site"], off["path"]
+            if site not in self.sim.state or not hurt(site) or self.sim.state[site].active_path == path:
+                continue
+            targets = [site]
+            if clean(site, path):
+                targets += [s for s in self.scenario.get("sites", []) if s != site and s in self.sim.state
+                            and hurt(s) and self.sim.state[s].active_path != path and clean(s, path)]
+            self._request_plan("mobile_operator", "PB-06", sorted(targets[:2]), {"path": path},
+                               f"Fail over to offered backup path {path} after the scenario offered it")
+
+    def _record_scripted_threat(self, cond) -> None:
+        """Ground truth of a scripted threat: control-audience only, like a free-play injection."""
+        iid = f"INJ-{len(self.injections) + 1:03d}"
+        inj = INJECTORS.get(cond.kind)
+        item = {"id": iid, "by": "scenario", "params": dict(cond.params), "kind": cond.kind,
+                "label": inj.label if inj else cond.kind.replace("_", " "), "target": cond.site or "",
+                "start": cond.start, "end": cond.end, "truth_class": CLASS_OF[cond.kind],
+                "sites": [cond.site] if cond.site else []}
+        self.injections.append(item)
+        self.contained_at[iid], self.healed_at[iid] = None, None
+        self.world.log("inject", "scenario", self._public_injection(item))
+
+    def _apply_scenario_facts(self, minute: int) -> None:
+        """Merge each due scenario ``facts`` block into the world facts and run the rule engine."""
+        if not self.autoplay:
+            return
+        due = [(i, e) for i, e in enumerate(self.scenario.get("events", []))
+               if e.get("t") == minute and e.get("facts") and i not in self._facts_done]
+        for i, e in due:
+            self._facts_done.add(i)
+            _merge_facts(self.world.facts, e["facts"])
+            if "applies" in e["facts"]:
+                self.world.facts["applies"] = list(dict.fromkeys(self.world.facts["applies"]))
+        if due:
+            self._run_rules()
+
+    # ---------------------------------------------------------------- model status (M1, M2, M3 state, M4)
+    @classmethod
+    def _m1_score(cls, r: dict) -> float:
+        parts = [min(1.0, r["packet_loss"] / .35),
+                 min(1.0, max(0.0, r["fade_residual_db"] - 3.0) / 6.0),
+                 min(1.0, r["mgmt_cmds"] / 4.0),
+                 .7 if r["mgmt_login_anomalous"] else 0.0,
+                 min(1.0, r["telemetry_mismatch"] / .25)]
+        return max(parts)
+
+    def _m2_horizon(self, site: str) -> tuple[float | None, str]:
+        """Minutes until the link margin reaches 0 dB or the battery reaches its cut-off, else None."""
+        h = list(self._hist[site])
+        r, n = h[-1], len(h) - 1
+        horizons = {}
+        if r["link_margin_db"] <= 0:
+            horizons["link_margin"] = 0.0
+        else:
+            # Least-squares slope over the recent window (dB per minute, positive = falling).
+            m = [x["link_margin_db"] for x in h]
+            mean_x, mean_m = (len(m) - 1) / 2, sum(m) / len(m)
+            den = sum((i - mean_x) ** 2 for i in range(len(m)))
+            rate = -sum((i - mean_x) * (v - mean_m) for i, v in enumerate(m)) / den if len(m) >= 4 else 0.0
+            if r["link_margin_db"] < 3:
+                rate = max(rate, .1)
+            if rate > .12:
+                horizons["link_margin"] = r["link_margin_db"] / rate
+        if not r["mains_power"]:
+            spec = SITES[site]
+            drain = (h[0]["battery_pct"] - r["battery_pct"]) / n if n else 0.0
+            if drain <= 0:
+                drain = spec["load_kw"] / spec["battery_kwh"] * 100 / 60
+            horizons["battery"] = max(0.0, (r["battery_pct"] - 5.0) / drain)
+        if not horizons:
+            return None, "link_margin"
+        metric = min(horizons, key=horizons.get)
+        return round(horizons[metric], 1), metric
+
+    def _emit_model(self, key: tuple, signature: tuple, heartbeat: bool, **payload) -> None:
+        if heartbeat or self._model_last.get(key) != signature:
+            self._model_last[key] = signature
+            self.emit("model", **payload)
+
+    def _model_status(self, recs: list[dict], sites: dict) -> None:
+        heartbeat = self.sim.t % 5 == 0
+        stressed = []
+        for r in recs:
+            site = r["site"]
+            self._hist.setdefault(site, deque(maxlen=8)).append(r)
+            score = self._m1_score(r)
+            state = "flagged" if score >= self.M1_THRESHOLD else "ok"
+            self._emit_model(("M1", site), (state,), heartbeat, model="M1", site=site, score=round(score, 2),
+                             threshold=self.M1_THRESHOLD, state=state)
+            horizon, metric = self._m2_horizon(site)
+            state = "flagged" if horizon is not None and horizon <= self.M2_FLAG_MIN else "ok"
+            self._emit_model(("M2", site), (state,), heartbeat, model="M2", site=site, horizon_min=horizon,
+                             metric=metric, state=state)
+            if site in self._audit_sites and self.sim.t >= self._audit_sites[site]:
+                self._emit_model(("M3", site), ("unsure",), heartbeat, model="M3", site=site,
+                                 **{"class": "abstain"}, state="unsure")
+            elif r["label"] == "normal":
+                self._emit_model(("M3", site), ("ok",), heartbeat, model="M3", site=site,
+                                 **{"class": "normal"}, state="ok")
+            if sites[site]["state"] in ("degraded", "down") or not r["mains_power"]:
+                stressed.append(site)
+        affected = [svc for svc, site in self.SERVICE_SITE.items() if site in stressed]
+        allocation = (["112"] + [s for s in self.ALLOCATION if s != "112" and s in affected]
+                      + [s for s in self.ALLOCATION if s != "112" and s not in affected]) if stressed else list(self.ALLOCATION)
+        state = "replan" if stressed else "ok"
+        self._emit_model(("M4",), (state, tuple(allocation)), heartbeat, model="M4", allocation=allocation,
+                         state=state, sites=stressed)
 
     # ---------------------------------------------------------------- commands
     def autonomy(self, mode: str, sites, playbooks, minutes: int, pin: str, by: str = "commander") -> dict:
@@ -463,9 +650,23 @@ class LiveSession:
 
     # ---------------------------------------------------------------- views
     def catalogue(self) -> dict:
-        return {"ok": True, "scenarios": [{"id": self.scenario_name, "title": self.scenario.get("title", "")}],
+        return {"ok": True, "scenarios": self._scenario_list(),
                 "sites": SITES, "gateways": GATEWAYS, "accounts": ["noc-vendor-7"],
                 "playbooks": list(self.rem.cat.values()), "injectors": injector_catalogue()}
+
+    @staticmethod
+    def _scenario_list() -> list[dict]:
+        order = ["s0", "s1", "s2", "s3", "n1", "n2", "n3", "n4", "n5", "cap"]
+        out = []
+        for name in order:
+            path = SCEN_DIR / f"{name}.yaml"
+            if not path.is_file():
+                continue
+            sc = load_scenario(path)
+            out.append({"id": str(sc["id"]), "title": sc.get("title", ""), "story": sc.get("story", ""),
+                        "kind": sc.get("kind", ""), "sites": sc.get("sites", []),
+                        "m3_expected": sc.get("m3_expected", ""), "start": str(sc.get("start", ""))})
+        return out
 
     def truth(self) -> dict:
         rows = []

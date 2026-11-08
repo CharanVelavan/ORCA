@@ -1,2 +1,86 @@
-:root { --bg:#F6F5F2; --surface:#FFF; --surface-2:#F0EEEA; --ink:#1B1F24; --ink-muted:#5B6470; --border:#E3E1DC; --accent:#2F5D8A; --ok:#3F7D58; --warn:#A86F12; --critical:#B5473A; --healing:#5E57A0; --info:#3F6E9E; --unknown:#8A8F98; --radius:8px; --control-radius:6px; --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:20px; --space-6:24px; --dur1:120ms; --dur2:180ms; --dur3:240ms; --dur4:300ms; --enter:cubic-bezier(.165,.84,.44,1); --morph:cubic-bezier(.645,.045,.355,1); }
-[data-theme="dark"] { --bg:#121417; --surface:#1A1D21; --surface-2:#22262B; --ink:#E7E9EC; --ink-muted:#9AA3AE; --border:#2A2E34; --accent:#7FA7CF; --ok:#74B08C; --warn:#D6A24E; --critical:#E07F72; --healing:#A39BDA; --info:#86ADD6; }
+/* ORCA live UI tokens. Dark is the default; light via [data-theme="light"].
+   Soft tints are declared inside each theme block so they follow the theme
+   they are used in (color-mix resolves at the element where it is declared). */
+
+:root {
+  --bg: #111316;
+  --surface: #1A1D21;
+  --surface-2: #22262B;
+  --ink: #E7E9EC;
+  --ink-muted: #9AA3AE;
+  --border: #2A2E34;
+  --accent: #7FA7CF;
+  --ok: #74B08C;
+  --warn: #D6A24E;
+  --critical: #E07F72;
+  --healing: #A39BDA;
+  --unknown: #8A8F98;
+
+  --accent-soft: color-mix(in srgb, var(--accent) 16%, transparent);
+  --ok-soft: color-mix(in srgb, var(--ok) 16%, transparent);
+  --warn-soft: color-mix(in srgb, var(--warn) 16%, transparent);
+  --critical-soft: color-mix(in srgb, var(--critical) 16%, transparent);
+  --healing-soft: color-mix(in srgb, var(--healing) 16%, transparent);
+
+  --font-sans: 'Geist Sans', 'Geist', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
+
+  --r-card: 8px;
+  --r-ctl: 6px;
+
+  --dur1: 120ms;
+  --dur2: 180ms;
+  --dur3: 240ms;
+  --dur4: 320ms;
+  --ease-out: cubic-bezier(.165, .84, .44, 1);
+  --ease-inout: cubic-bezier(.645, .045, .355, 1);
+}
+
+[data-theme="light"] {
+  --bg: #F4F5F7;
+  --surface: #FFFFFF;
+  --surface-2: #ECEEF1;
+  --ink: #16181C;
+  --ink-muted: #5B6470;
+  --border: #DDE0E4;
+  --accent: #2F5D8A;
+  --ok: #3F7D58;
+  --warn: #A86F12;
+  --critical: #B5473A;
+  --healing: #5E57A0;
+  --unknown: #8A8F98;
+
+  --accent-soft: color-mix(in srgb, var(--accent) 16%, transparent);
+  --ok-soft: color-mix(in srgb, var(--ok) 16%, transparent);
+  --warn-soft: color-mix(in srgb, var(--warn) 16%, transparent);
+  --critical-soft: color-mix(in srgb, var(--critical) 16%, transparent);
+  --healing-soft: color-mix(in srgb, var(--healing) 16%, transparent);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mono, code {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+.app-loading { display: grid; place-content: center; gap: 6px; height: 100dvh; text-align: center; color: var(--ink-muted); font-size: 13px; }
+.app-loading .mono { color: var(--ink); font-size: 15px; }

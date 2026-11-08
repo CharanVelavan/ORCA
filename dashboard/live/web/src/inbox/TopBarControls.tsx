@@ -1,0 +1,41 @@
+import { useCallback, useRef, useState } from 'react';
+import { Gauge, OctagonAlert, ShieldCheck } from 'lucide-react';
+import { Popover } from './Popover';
+import { AutonomyPanel, useAutonomy } from './autonomy';
+import { KillPanel, useKilled } from './KillPanel';
+import { ICON } from './parts';
+import './inbox.css';
+
+const MODE_TONE = { MANUAL: 'unknown', ASSISTED: 'accent', AUTO: 'warn' } as const;
+
+/** Compact top-bar badge: MANUAL / ASSISTED / AUTO. Click opens the autonomy popover. */
+export function AutonomyBadge() {
+  const { mode } = useAutonomy();
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLButtonElement>(null);
+  const close = useCallback(() => setOpen(false), []);
+  return (
+    <>
+      <button ref={ref} type="button" className={`inbox-topbtn inbox-topbtn--${MODE_TONE[mode]}`} aria-haspopup="dialog" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
+        <Gauge {...ICON} /><span className="inbox-topbtn__lbl">Autonomy</span><span className="mono">{mode}</span>
+      </button>
+      {open && <Popover anchor={ref} onClose={close} placement="below" label="Autonomy mode"><AutonomyPanel onDone={close} /></Popover>}
+    </>
+  );
+}
+
+/** Compact top-bar button: ARMED (ready) or ENGAGED. Click opens reason + PIN pad. */
+export function KillSwitchButton() {
+  const killed = useKilled();
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLButtonElement>(null);
+  const close = useCallback(() => setOpen(false), []);
+  return (
+    <>
+      <button ref={ref} type="button" className={`inbox-topbtn ${killed ? 'inbox-topbtn--critical' : 'inbox-topbtn--unknown'}`} aria-haspopup="dialog" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
+        {killed ? <OctagonAlert {...ICON} /> : <ShieldCheck {...ICON} />}<span className="inbox-topbtn__lbl">Kill switch</span><span className="mono">{killed ? 'ENGAGED' : 'ARMED'}</span>
+      </button>
+      {open && <Popover anchor={ref} onClose={close} placement="below" label="Kill switch"><KillPanel onDone={close} /></Popover>}
+    </>
+  );
+}

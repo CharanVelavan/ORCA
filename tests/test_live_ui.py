@@ -50,3 +50,24 @@ def test_live_ui_bundle_keeps_control_events_out_of_console_store() -> None:
     source = store.read_text(encoding="utf-8")
     assert "if (event.audience === 'control') return state" in source
     assert "addControl" in source
+
+
+def test_live_ui_console_never_receives_ground_truth() -> None:
+    """Plan 12: /console must never see inject/scheduled ground truth, in the store, the Pipeline or the 3D view."""
+    web = ROOT / "dashboard" / "live" / "web" / "src"
+    bridge = (web / "stage" / "DataBridge.tsx").read_text(encoding="utf-8")
+    assert "path === '/stage' || path === '/control' || path === '/review'" in bridge
+    assert "/console" not in bridge.split("truthRoute = ")[1].split("\n")[0]
+    pipeline = (web / "pipeline" / "pipelineStore.ts").read_text(encoding="utf-8")
+    assert "if (!truth && event.audience === 'control') return;" in pipeline
+    console = (web / "Console.tsx").read_text(encoding="utf-8")
+    assert "truth={false}" in console
+    scene = (web / "scenes" / "NetworkScene.tsx").read_text(encoding="utf-8")
+    assert "truth && isAttack && <Attacker" in scene
+
+
+def test_live_ui_has_stage_route_and_glb() -> None:
+    names = {path.name for path in (DIST / "assets").glob("*.js")}
+    assert any(name.startswith("Stage-") for name in names), "Missing built Stage route chunk"
+    glb = DIST / "models" / "orca-assets.glb"
+    assert glb.is_file() and glb.stat().st_size < 2_000_000

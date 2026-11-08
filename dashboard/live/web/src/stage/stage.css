@@ -1,0 +1,73 @@
+/* Stage shell. Owner: lead. */
+.st-app { display: flex; flex-direction: column; height: 100dvh; min-height: 0; background: var(--bg); color: var(--ink); }
+.st-top { flex: none; display: flex; align-items: center; gap: 10px; height: 56px; padding: 0 16px; border-bottom: 1px solid var(--border); background: var(--surface); font-size: 15.5px; }
+.st-brand { color: var(--ink); text-decoration: none; font-weight: 650; letter-spacing: -.01em; font-size: 17.5px; }
+.st-brand span { color: var(--ink-muted); font-weight: 500; }
+.st-sep { width: 1px; height: 18px; background: var(--border); }
+.st-title { display: inline-flex; gap: 8px; align-items: baseline; min-width: 0; max-width: 46ch; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: var(--ink); }
+.st-title b { color: var(--accent); font-weight: 600; }
+.st-title--muted { color: var(--ink-muted); }
+.st-tag { padding: 2px 7px; border: 1px solid var(--border); border-radius: 999px; font-size: 13px; letter-spacing: .06em; color: var(--ink-muted); }
+.st-grow { flex: 1; }
+.st-meta { font-size: 13.5px; color: var(--ink-muted); max-width: 22ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.st-clock { font-size: 15.5px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.st-seg { display: inline-flex; border: 1px solid var(--border); border-radius: var(--r-ctl); overflow: hidden; }
+.st-seg button { padding: 4px 8px; border: 0; background: none; color: var(--ink-muted); font: 500 14px var(--font-mono); cursor: pointer; transition: background-color var(--dur1) var(--ease-out), color var(--dur1); }
+.st-seg button + button { border-left: 1px solid var(--border); }
+.st-seg button.is-on { background: var(--accent-soft); color: var(--ink); }
+.st-ib { display: inline-grid; place-items: center; width: 30px; height: 30px; border: 1px solid transparent; border-radius: var(--r-ctl); background: none; color: var(--ink-muted); cursor: pointer; }
+.st-ib:hover { background: var(--surface-2); color: var(--ink); }
+.st-end { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 1px solid var(--border); border-radius: var(--r-ctl); background: var(--surface-2); color: var(--ink); font: 500 15px var(--font-sans); cursor: pointer; transition: transform var(--dur1) var(--ease-out); }
+.st-end:active, .st-ib:active, .st-seg button:active { transform: scale(.97); }
+:where(.st-app) button:focus-visible, :where(.st-app) a:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.st-main { --split: .6; flex: 1; min-height: 0; display: grid; transition: grid-template-columns var(--dur4) var(--ease-inout); }
+.st-main[data-dragging] { transition: none; }
+.st-main--control { grid-template-columns: clamp(420px, 40%, 680px) minmax(0, 1fr); }
+.st-setup { min-height: 0; overflow: hidden; border-right: 1px solid var(--border); background: var(--surface); display: flex; flex-direction: column; }
+.st-rail { min-height: 0; border-right: 1px solid var(--border); background: var(--surface); position: relative; z-index: 5; }
+.st-center { min-width: 0; min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr); }
+.st-main[data-running] .st-center { grid-template-rows: minmax(0, 60fr) minmax(0, 40fr); }
+.st-scene { position: relative; min-height: 0; }
+.st-scene-wait { display: grid; place-items: center; height: 100%; color: var(--ink-muted); font-size: 14px; }
+.st-inbox { min-height: 0; border-top: 1px solid var(--border); background: var(--surface); overflow: hidden; }
+.st-pipe { min-width: 0; min-height: 0; }
+.st-main[data-pipe='rail'] .st-pipe { border-right: 1px solid var(--border); }
+
+/* Draggable split between the Pipeline flowchart (left) and the 3D view + inbox (right). */
+.st-split { position: relative; z-index: 6; min-width: 0; cursor: col-resize; touch-action: none; outline: none; }
+.st-split::before { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; margin-left: -.5px; background: var(--border); transition: background-color var(--dur1) var(--ease-out); }
+.st-split::after { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; margin-left: -1.5px; background: var(--accent); border-radius: 2px; opacity: 0; transition: opacity var(--dur1) var(--ease-out); }
+.st-split:hover::after, .st-split:focus-visible::after, .st-main[data-dragging] .st-split::after { opacity: 1; }
+.st-split-grip { position: absolute; top: 50%; left: 50%; width: 12px; height: 30px; margin: -15px 0 0 -6px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface) radial-gradient(circle, var(--ink-muted) 1.2px, transparent 1.6px) center / 4px 8px repeat-y; opacity: 0; transition: opacity var(--dur1) var(--ease-out); pointer-events: none; }
+.st-split:hover .st-split-grip, .st-split:focus-visible .st-split-grip, .st-main[data-dragging] .st-split-grip { opacity: 1; }
+.st-main[data-pipe='rail'] .st-split { display: none; }
+
+@media (max-width: 1100px) {
+  .st-main[data-running] { grid-template-columns: 56px minmax(0, 1fr) !important; }
+  .st-split { display: none !important; }
+  .st-main .st-pipe { position: fixed; right: 0; top: 56px; bottom: 0; width: min(440px, 92vw); z-index: 30; border-right: 0 !important; animation-name: st-right; }
+  .st-meta { display: none; }
+}
+
+/* Panel entries as CSS keyframes: they always finish, even if a panel remounts mid-run. */
+.st-enter-up { animation: st-up var(--dur4) var(--ease-out) both; }
+.st-enter-left { animation: st-left var(--dur4) var(--ease-out) 120ms both; }
+.st-enter-right { animation: st-right var(--dur4) var(--ease-out) 120ms both; }
+@keyframes st-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes st-left { from { opacity: 0; transform: translateX(-24px); } to { opacity: 1; transform: none; } }
+@keyframes st-right { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
+.pf-band { animation: st-up var(--dur3) var(--ease-out) both; }
+
+/* Top bar never wraps; on laptop widths it drops the least useful items first. */
+.st-top > * { flex-shrink: 0; white-space: nowrap; }
+.st-top > .st-title, .st-top > .st-grow { flex-shrink: 1; min-width: 0; }
+.st-top button, .st-top a { white-space: nowrap; }
+@media (max-width: 1600px) {
+  .st-top { gap: 8px; padding: 0 12px; }
+  .st-meta { display: none; }
+  .st-title { max-width: 30ch; }
+}
+@media (max-width: 1480px) {
+  .st-title { max-width: 22ch; }
+}
