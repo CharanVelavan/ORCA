@@ -42,7 +42,10 @@ REQUIRED = {"id", "jurisdiction", "instrument", "clause", "authority", "binding_
             "topic", "topics", "summary", "source", "verified"}
 GAP_REQUIRED = {"id", "jurisdiction", "kind", "topic", "status", "title", "finding", "evidence",
                 "affects", "search", "verified"}
-GAP_FIELDS = GAP_REQUIRED | {"analysis", "interim_action", "recommendation", "verified_by", "notes"}
+GAP_FIELDS = GAP_REQUIRED | {"analysis", "interim_action", "recommendation", "verified_by", "notes",
+                             "global_examples"}
+GLOBAL_EX_REQUIRED = {"tier", "jurisdiction", "instrument", "clause", "binding_status", "quote", "shows", "relation"}
+GLOBAL_EX_RELATIONS = {"covered_abroad", "same_gap_abroad"}
 SEARCH_REQUIRED = {"date", "sources_checked", "terms", "nearest_provision", "why_not_covered"}
 
 
@@ -191,6 +194,24 @@ def validate(kb: KB) -> list[str]:
         for ev in g.get("evidence", []):
             if ev not in kb.records:
                 errs.append(f"{where}: evidence {ev} is not a record id")
+        for i, gx in enumerate(g.get("global_examples") or []):
+            w = f"{where}: global_examples[{i}]"
+            miss = GLOBAL_EX_REQUIRED - gx.keys()
+            if miss:
+                errs.append(f"{w} missing {sorted(miss)}")
+            if gx.get("relation") not in GLOBAL_EX_RELATIONS:
+                errs.append(f"{w} bad relation {gx.get('relation')}")
+            if gx.get("tier") == "verified":
+                rec = kb.records.get(gx.get("record"))
+                if not rec or not rec.get("verified"):
+                    errs.append(f"{w} tier verified needs a verified record id")
+                elif rec.get("quote") != gx.get("quote"):
+                    errs.append(f"{w} quote differs from record {gx.get('record')}")
+            elif gx.get("tier") == "auto_checked":
+                if not gx.get("staged"):
+                    errs.append(f"{w} auto_checked example needs its staged document id")
+            else:
+                errs.append(f"{w} bad tier {gx.get('tier')}")
     clash = kb.records.keys() & kb.gaps.keys()
     if clash:
         errs.append(f"ids used for both records and gaps: {sorted(clash)}")

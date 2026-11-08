@@ -21,3 +21,14 @@ def test_dpdp_breach_clock_not_in_force_today():
     kb = kbmod.load()
     assert not kb.in_force("IN-DPDP-RULES-2025-R7", dt.date(2026, 11, 10))
     assert kb.in_force("IN-DPDP-RULES-2025-R7", dt.date(2027, 6, 1))
+
+
+def test_confirmed_gaps_have_two_global_examples():
+    # Mission 9: each confirmed gap needs at least two global comparators, each labelled by evidence tier.
+    from orca import kb as kbmod
+    k = kbmod.load()
+    for gid, g in k.gaps.items():
+        if g["status"] == "confirmed":
+            ex = g.get("global_examples") or []
+            assert len(ex) >= 2, gid
+            assert all(e["tier"] in ("verified", "auto_checked") for e in ex), gid

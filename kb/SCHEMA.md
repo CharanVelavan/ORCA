@@ -45,6 +45,10 @@ Gap records (`kb/gaps/*.yaml`, v2 from 7 Nov 2026) use `id`, `jurisdiction`, `ki
 `nearest_provision{source, pinpoint, quote}`, `why_not_covered`), optional `analysis`
 (`impact`, `affected`, `comparison{EU, AE}`), `interim_action` (`playbook`, `owner`, `action`),
 `recommendation` (`regulator`, `ask`), `verified`, `verified_by`, `notes`.
+Optional `global_examples`: list of {`tier` (`verified` + `record` id, or `auto_checked` + `staged` doc id),
+`jurisdiction`, `instrument`, `authority`, `clause`, `page`, `binding_status`, `quote`, `shows`, `relation`
+(`covered_abroad` = another jurisdiction has the duty; `same_gap_abroad` = it lacks it too)}. `auto_checked`
+means the quote matched the PDF text automatically; it is not human-verified.
 A gap is `confirmed` with `verified: true` only after a **human** checks its search record and
 writes their name and date in `verified_by`. The validator enforces this.
 
