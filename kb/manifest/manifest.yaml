@@ -1,9 +1,9 @@
 # Corpus manifest written by kb/manifest/inventory.py. Do not edit by hand.
 # Re-run: python3 -I kb/manifest/inventory.py
 summary:
-  documents: 578
-  documents_with_problems: 310
-  skipped: 474
+  documents: 597
+  documents_with_problems: 331
+  skipped: 486
   warnings: 0
   by_jurisdiction:
     AE: 21
@@ -15,7 +15,7 @@ summary:
     IN-PY: 1
     IN-TG: 1
     IN-TN: 9
-    INTL: 74
+    INTL: 88
     International: 10
     JP: 10
     NZ: 8
@@ -24,43 +24,43 @@ summary:
     UK: 19
     US: 26
     US-CA: 2
-    unknown: 25
+    unknown: 30
   by_source:
-    corpus/global: 249
+    corpus/global: 268
     corpus/india: 281
     kb/sources: 48
   scanned:
-    'false': 362
-    not_applicable: 203
+    'false': 364
+    not_applicable: 220
     'true': 13
   language:
     bilingual: 16
-    en: 416
+    en: 432
     hi: 40
-    undetermined: 106
+    undetermined: 109
   official_domain:
-    'false': 184
-    'true': 394
+    'false': 187
+    'true': 410
   duplicates:
-    entries_with_duplicate_content: 82
-    entries_with_near_duplicate_title: 61
-  binding_status_stated: 528
+    entries_with_duplicate_content: 104
+    entries_with_near_duplicate_title: 77
+  binding_status_stated: 542
   problems:
-    duplicate_content: 82
-    duplicate_id: 25
+    duplicate_content: 104
+    duplicate_id: 39
     html_error_page: 7
     html_saved_as_pdf: 3
     invalid_pdf_magic: 4
-    missing_file: 87
-    near_duplicate_title: 61
-    no_metadata: 29
-    no_url: 35
-    non_official_domain: 97
+    missing_file: 85
+    near_duplicate_title: 77
+    no_metadata: 34
+    no_url: 40
+    non_official_domain: 102
     scanned_or_no_text_layer: 13
     sha256_mismatch_sources_yaml: 1
-    sha256_mismatch_staging: 15
+    sha256_mismatch_staging: 21
     sha256_staging_vs_sources_yaml_differ: 2
-    unsupported_file_type: 15
+    unsupported_file_type: 24
 official_domains:
 - gov.in
 - nic.in
@@ -93,22 +93,146 @@ official_domains:
 - un.org
 warnings: []
 documents:
-- id: 24501-i50
-  title: 24501-i50
+- id: 23003-i50
+  title: 23003-i50
   authority: null
   jurisdiction: unknown
   jurisdiction_source: null
   url: null
   url_host: null
   official_domain: false
-  local_path: corpus/raw/global/temp_24501/24501-i50.docx
+  local_path: corpus/raw/global/intl-3gpp-ts-23003/23003-i50.docx
   source: corpus/global
   metadata_origin: null
-  bytes: 4720425
-  sha256: f802e18878089ecfec91054b395be21ce78b7f8703d33662c89b0be95022578e
+  bytes: 871617
+  sha256: 6b0076878162c789f7d35153d0dad1358024671d8e8f03784636cfa094eb9896
   file_type: docx
   pages: null
-  text_chars: 3096523
+  text_chars: 345445
+  text_chars_per_page: null
+  scanned: null
+  language: en
+  devanagari_share: 0.0
+  companion_text: null
+  licence: null
+  binding_status: null
+  in_force_from: null
+  notes: null
+  duplicate_of: []
+  near_duplicate_of: []
+  problems:
+  - no_metadata
+  - no_url
+  - non_official_domain
+- id: 28541-i40_AnnexesA_D
+  title: 28541-i40_AnnexesA_D
+  authority: null
+  jurisdiction: unknown
+  jurisdiction_source: null
+  url: null
+  url_host: null
+  official_domain: false
+  local_path: corpus/raw/global/intl-3gpp-ts-28541/28541-i40_AnnexesA_D.docx
+  source: corpus/global
+  metadata_origin: null
+  bytes: 912496
+  sha256: 40bb38b00364a8ceb3e4c70ab605f64823d502d798f41150c334eb751f7c498b
+  file_type: docx
+  pages: null
+  text_chars: 51259
+  text_chars_per_page: null
+  scanned: null
+  language: en
+  devanagari_share: 0.0
+  companion_text: null
+  licence: null
+  binding_status: null
+  in_force_from: null
+  notes: null
+  duplicate_of: []
+  near_duplicate_of: []
+  problems:
+  - no_metadata
+  - no_url
+  - non_official_domain
+- id: 28541-i40_AnnexesE_G
+  title: 28541-i40_AnnexesE_G
+  authority: null
+  jurisdiction: unknown
+  jurisdiction_source: null
+  url: null
+  url_host: null
+  official_domain: false
+  local_path: corpus/raw/global/intl-3gpp-ts-28541/28541-i40_AnnexesE_G.docx
+  source: corpus/global
+  metadata_origin: null
+  bytes: 219639
+  sha256: 49c27f6c5b44ba2dbda2fc41e84c743bab47bed065cc9c29a630e559ca4347db
+  file_type: docx
+  pages: null
+  text_chars: 225034
+  text_chars_per_page: null
+  scanned: null
+  language: en
+  devanagari_share: 0.0
+  companion_text: null
+  licence: null
+  binding_status: null
+  in_force_from: null
+  notes: null
+  duplicate_of: []
+  near_duplicate_of: []
+  problems:
+  - no_metadata
+  - no_url
+  - non_official_domain
+- id: 28541-i40_AnnexesH_History
+  title: 28541-i40_AnnexesH_History
+  authority: null
+  jurisdiction: unknown
+  jurisdiction_source: null
+  url: null
+  url_host: null
+  official_domain: false
+  local_path: corpus/raw/global/intl-3gpp-ts-28541/28541-i40_AnnexesH_History.docx
+  source: corpus/global
+  metadata_origin: null
+  bytes: 811908
+  sha256: b273c7f6df0dff00b681e8749fcb705ce58b47109c231495dac144959821ea1b
+  file_type: docx
+  pages: null
+  text_chars: 215342
+  text_chars_per_page: null
+  scanned: null
+  language: en
+  devanagari_share: 0.0
+  companion_text: null
+  licence: null
+  binding_status: null
+  in_force_from: null
+  notes: null
+  duplicate_of: []
+  near_duplicate_of: []
+  problems:
+  - no_metadata
+  - no_url
+  - non_official_domain
+- id: 28541-i40_cover_c3
+  title: 28541-i40_cover_c3
+  authority: null
+  jurisdiction: unknown
+  jurisdiction_source: null
+  url: null
+  url_host: null
+  official_domain: false
+  local_path: corpus/raw/global/intl-3gpp-ts-28541/28541-i40_cover_c3.docx
+  source: corpus/global
+  metadata_origin: null
+  bytes: 113609
+  sha256: 8863b75843e0556f114823dfbc6bd77518bb12179ca72af9355be2e22302b4cc
+  file_type: docx
+  pages: null
+  text_chars: 53878
   text_chars_per_page: null
   scanned: null
   language: en
@@ -155,6 +279,38 @@ documents:
   - no_metadata
   - no_url
   - non_official_domain
+- id: 33512-i10
+  title: 33512-i10
+  authority: null
+  jurisdiction: unknown
+  jurisdiction_source: null
+  url: null
+  url_host: null
+  official_domain: false
+  local_path: corpus/raw/global/intl-3gpp-ts-33512/33512-i10.doc
+  source: corpus/global
+  metadata_origin: null
+  bytes: 324096
+  sha256: 5fddeb78f689f580534916f55273f237fb81cdbb3ff22d76677ecdef07a6ea72
+  file_type: other
+  pages: null
+  text_chars: null
+  text_chars_per_page: null
+  scanned: null
+  language: null
+  devanagari_share: null
+  companion_text: null
+  licence: null
+  binding_status: null
+  in_force_from: null
+  notes: null
+  duplicate_of: []
+  near_duplicate_of: []
+  problems:
+  - no_metadata
+  - no_url
+  - non_official_domain
+  - unsupported_file_type
 - id: 33700-29-j10
   title: 33700-29-j10
   authority: null
@@ -369,7 +525,10 @@ documents:
   binding_status: not stated
   in_force_from: unknown
   notes: "Download failed after two curl attempts:   Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--\
-    \ --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 403"
+    \ --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 403\nRetry on 2026-11-08: uaelegislation.gov.ae\
+    \ returned Cloudflare challenge (HTTP 403). Official landing page on u.ae (https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/policies/cyber-activities/Critical-Information-Infrastructure-Protection-Policy)\
+    \ links to csc.gov.ae (https://csc.gov.ae/documents/38662/1042755/CIIP+Policy+V2.0.pdf/6d227ad0-db8a-5b44-fb4e-3294d5638e25?t=1771617651256), which drops TLS connections from outside UAE (curl error\
+    \ 35, LibreSSL SSL_connect: SSL_ERROR_SYSCALL)."
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -399,7 +558,9 @@ documents:
   binding_status: not stated
   in_force_from: unknown
   notes: "Download failed after two curl attempts:   Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--\
-    \ --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\ncurl: (56) The requested URL returned error: 403"
+    \ --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\ncurl: (56) The requested URL returned error: 403\nRetry on 2026-11-08: uaelegislation.gov.ae\
+    \ returned Cloudflare challenge (HTTP 403). Official landing page on u.ae links to csc.gov.ae (https://csc.gov.ae/documents/38662/489552/National+Cloud+Security+Policy_V2.0.pdf/baaac57a-6276-9588-409a-8059b8f7cb3a?t=1758541950254),\
+    \ which drops TLS connections from outside UAE (curl error 35, SSL_ERROR_SYSCALL)."
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -429,7 +590,9 @@ documents:
   binding_status: not stated
   in_force_from: unknown
   notes: "Download failed after two curl attempts:   Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--\
-    \ --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 403"
+    \ --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 403\nRetry on 2026-11-08: uaelegislation.gov.ae\
+    \ returned Cloudflare challenge (HTTP 403). Official landing page on u.ae links to csc.gov.ae (https://csc.gov.ae/documents/38662/1042755/National+Data+Exchange+Security+Policy+v1.0.pdf/337d318d-c096-5e9a-ad7f-efcd44361f4e?t=1771617648149),\
+    \ which drops TLS connections from outside UAE (curl error 35, SSL_ERROR_SYSCALL)."
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -459,7 +622,9 @@ documents:
   binding_status: not stated
   in_force_from: unknown
   notes: "Download failed after two curl attempts:  Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:--\
-    \ --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 403"
+    \ --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 403\nRetry on 2026-11-08: uaelegislation.gov.ae\
+    \ returned Cloudflare challenge (HTTP 403). Official landing page on u.ae links to csc.gov.ae (https://csc.gov.ae/documents/38662/1042755/National+Encryption+Policy+v1.0.pdf/77ccb372-7e7b-5d68-ba6c-20e7e584037c?t=1771617648626),\
+    \ which drops TLS connections from outside UAE (curl error 35, SSL_ERROR_SYSCALL)."
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -489,7 +654,9 @@ documents:
   binding_status: not stated
   in_force_from: unknown
   notes: "Download failed after two curl attempts:   Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--\
-    \ --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 403"
+    \ --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 403\nRetry on 2026-11-08: uaelegislation.gov.ae\
+    \ returned Cloudflare challenge (HTTP 403). Official landing page on u.ae links to uaelegislation.gov.ae (https://uaelegislation.gov.ae/en/policy/details/lsy-s-lotny-lamn-ntrnt-lashy), which returned\
+    \ Cloudflare anti-bot challenge (HTTP 403)."
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -550,7 +717,8 @@ documents:
   binding_status: not stated
   in_force_from: unknown
   notes: "Download failed after two curl attempts: 0      0 --:--:--  0:01:14 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:01:15 --:--:--     0\n  0     0    0     0    0  \
-    \   0      0      0 --:--:--  0:01:15 --:--:--     0\ncurl: (28) Failed to connect to www.ncema.gov.ae port 443 after 75543 ms: Couldn't connect to server"
+    \   0      0      0 --:--:--  0:01:15 --:--:--     0\ncurl: (28) Failed to connect to www.ncema.gov.ae port 443 after 75543 ms: Couldn't connect to server\nRetry on 2026-11-08: www.ncema.gov.ae port\
+    \ 443 timed out (curl error 28) after repeated attempts; port 80 also timed out."
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -580,7 +748,8 @@ documents:
   binding_status: not stated
   in_force_from: unknown
   notes: "Download failed after two curl attempts: 0      0 --:--:--  0:01:13 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:01:14 --:--:--     0\n  0     0    0     0    0  \
-    \   0      0      0 --:--:--  0:01:15 --:--:--     0\ncurl: (28) Failed to connect to www.ncema.gov.ae port 443 after 75003 ms: Couldn't connect to server"
+    \   0      0      0 --:--:--  0:01:15 --:--:--     0\ncurl: (28) Failed to connect to www.ncema.gov.ae port 443 after 75003 ms: Couldn't connect to server\nRetry on 2026-11-08: www.ncema.gov.ae port\
+    \ 443 timed out (curl error 28) after repeated attempts; port 80 also timed out."
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -590,31 +759,29 @@ documents:
   authority: United Arab Emirates
   jurisdiction: AE
   jurisdiction_source: metadata
-  url: https://uaelegislation.gov.ae/en/legislations/1972/download
-  url_host: null
-  official_domain: false
-  local_path: null
+  url: https://assets.u.ae/api/public/content/954629a06cc64fd887771ce3273d6154?v=21d88839
+  url_host: assets.u.ae
+  official_domain: true
+  local_path: corpus/raw/global/ae-pdpl-decree-law-45-2021.pdf
   source: corpus/global
   metadata_origin: staging
-  bytes: null
-  sha256: null
-  file_type: null
-  pages: null
-  text_chars: null
-  text_chars_per_page: null
-  scanned: null
-  language: null
-  devanagari_share: null
-  companion_text: null
-  licence: unknown
-  binding_status: not stated
-  in_force_from: unknown
-  notes: "Download failed after two curl attempts:  Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:--\
-    \ --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 403"
+  bytes: 358663
+  sha256: 16741e65108040bc9ab5b1e982def19d75578205e446e7724dfcc0d8986b8441
+  file_type: pdf
+  pages: 17
+  text_chars: 31686
+  text_chars_per_page: 1864
+  scanned: false
+  language: en
+  devanagari_share: 0.0
+  companion_text: corpus/raw/global/ae-pdpl-decree-law-45-2021.txt
+  licence: Official Gazette / UAE Legislation
+  binding_status: binding
+  in_force_from: '2022-01-02'
+  notes: Retried and downloaded authentic official legislation publication from u.ae (assets.u.ae). Promulgated in Arabic as published by Dubai Judicial Institute / Official Gazette series 38.
   duplicate_of: []
   near_duplicate_of: []
-  problems:
-  - missing_file
+  problems: []
 - id: ae-space-agency-res-1969
   title: Cabinet Resolution No. 204 Regarding Space Sector Regulations
   authority: UAE Space Agency / UAE Cabinet
@@ -640,7 +807,8 @@ documents:
   binding_status: not stated
   in_force_from: unknown
   notes: "Download failed after two curl attempts:  Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:--\
-    \ --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 403"
+    \ --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 403\nRetry on 2026-11-08: uaelegislation.gov.ae\
+    \ returned Cloudflare challenge (HTTP 403); space.gov.ae also returned Cloudflare challenge."
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -670,7 +838,9 @@ documents:
   binding_status: not stated
   in_force_from: unknown
   notes: "Download failed after two curl attempts: --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--\
-    \  0:00:01 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0\ncurl: (22) The requested URL returned error: 404"
+    \  0:00:01 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0\ncurl: (22) The requested URL returned error: 404\nRetry on 2026-11-08: listed u.ae media link\
+    \ returned 404; official landing page on u.ae (https://u.ae/en/about-the-uae/science-and-technology/key-sectors-in-science-and-technology/space-science-and-technology/space-regulation) links to uaelegislation.gov.ae\
+    \ (https://uaelegislation.gov.ae/en/legislations/2129), which returned Cloudflare challenge (HTTP 403)."
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -700,7 +870,8 @@ documents:
   binding_status: not stated
   in_force_from: unknown
   notes: "Download failed after two curl attempts: --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--\
-    \  0:00:02 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0\ncurl: (22) The requested URL returned error: 404"
+    \  0:00:02 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0\ncurl: (22) The requested URL returned error: 404\nRetry on 2026-11-08: listed u.ae media link\
+    \ returned 404; uaelegislation.gov.ae returned Cloudflare challenge (HTTP 403)."
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -730,7 +901,8 @@ documents:
   binding_status: not stated
   in_force_from: unknown
   notes: "Download failed after two curl attempts: -:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n100   133  100   133    0     0     79      0  0:00:01 \
-    \ 0:00:01 --:--:--    79\n\n  0  1245    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\ncurl: (56) The requested URL returned error: 404"
+    \ 0:00:01 --:--:--    79\n\n  0  1245    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\ncurl: (56) The requested URL returned error: 404\nRetry on 2026-11-08: tdra.gov.ae URL returned\
+    \ 404; verified on TDRA Regulations and Rulings portal (https://tdra.gov.ae/en/About/regulations-and-ruling) where this framework is no longer published."
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -887,34 +1059,32 @@ documents:
   problems: []
 - id: ae-tdra-space-services-policy
   title: Policy on Space Services and Satellite Filing Regulations
-  authority: Telecommunications and Digital Government Regulatory Authority
+  authority: Telecommunications and Digital Government Regulatory Authority (TDRA)
   jurisdiction: AE
   jurisdiction_source: metadata
-  url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/Ultra-Wide-Band-and-Short-Range-Devices-Regulations.ashx
-  url_host: null
-  official_domain: false
-  local_path: null
+  url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/Space-Services-Policy-V1-0-pdf.ashx
+  url_host: tdra.gov.ae
+  official_domain: true
+  local_path: corpus/raw/global/ae-tdra-space-services-policy.pdf
   source: corpus/global
   metadata_origin: staging
-  bytes: null
-  sha256: null
-  file_type: null
-  pages: null
-  text_chars: null
-  text_chars_per_page: null
-  scanned: null
-  language: null
-  devanagari_share: null
-  companion_text: null
-  licence: unknown
-  binding_status: not stated
-  in_force_from: unknown
-  notes: "Download failed after two curl attempts:  Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   133  100   133    0     0    460      0 --:--:--\
-    \ --:--:-- --:--:--   461\n\n  0  1245    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 404"
+  bytes: 204740
+  sha256: a80b5b188e1f7cae3f77875a22dbe8f2d627169bf63387c82df21affb1eafd56
+  file_type: pdf
+  pages: 4
+  text_chars: 5339
+  text_chars_per_page: 1335
+  scanned: false
+  language: en
+  devanagari_share: 0.0
+  companion_text: corpus/raw/global/ae-tdra-space-services-policy.txt
+  licence: TDRA open publication
+  binding_status: advisory
+  in_force_from: '2019-03-20'
+  notes: Retried and downloaded authentic PDF from tdra.gov.ae via official u.ae space regulation directory link. Corrected URL from UWB/SRD to Space-Services-Policy-V1-0-pdf.ashx.
   duplicate_of: []
   near_duplicate_of: []
-  problems:
-  - missing_file
+  problems: []
 - id: au-acma-c525-emergency-code
   title: Handling of Emergency Calls by Carriage Service Providers Code (C525:2023)
   authority: Communications Alliance / ACMA
@@ -3181,9 +3351,9 @@ documents:
   devanagari_share: 0.0004
   companion_text: corpus/raw/india/in-cea-disaster-mgmt-plan-power-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: advisory
+  in_force_from: December, 2024
+  notes: 2024 edition of the CEA disaster management plan for the power sector covering emergency restoration procedures.
   duplicate_of: []
   near_duplicate_of:
   - in-cea-disaster-mgmt-plan-power-2025
@@ -3211,9 +3381,9 @@ documents:
   devanagari_share: 0.0004
   companion_text: corpus/raw/india/in-cea-disaster-mgmt-plan-power-2025.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: advisory
+  in_force_from: December, 2025
+  notes: Disaster management plan for the Indian power sector prepared by CEA under the Disaster Management Act 2005.
   duplicate_of: []
   near_duplicate_of:
   - in-cea-disaster-mgmt-plan-power-2024
@@ -3358,9 +3528,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-cerc-electricity-act-2003-amended.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: legislation
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Primary legislation governing the Indian electricity sector; contains no specific battery-backup floor for telecom facilities.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -3444,9 +3614,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-cert-in-application-security-guidelines.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Technical guidelines issued by CERT-In for secure application development and lifecycle management.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -3472,9 +3642,9 @@ documents:
   devanagari_share: 0.0003
   companion_text: corpus/raw/india/in-cert-in-govt-entities-cyber-guidelines.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: advisory
+  in_force_from: June 2022
+  notes: CERT-In cybersecurity guidelines for government entities prescribing incident notification and organizational security measures.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -5570,9 +5740,9 @@ documents:
   devanagari_share: 0.0003
   companion_text: corpus/raw/india/in-mha-disaster-management-act-2005.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: legislation
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Disaster Management (Amendment) Act 2025 amending the Disaster Management Act 2005 to mandate hazard early warning assignments.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -5742,7 +5912,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for eNodeB (4G Network Access Element) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security,
+    clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -5770,7 +5941,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Home Subscriber Server (HSS) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path
+    failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -5798,7 +5970,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Mobility Management Entity (MME) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security,
+    clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -5826,7 +5999,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Policy and Charging Rules Function (PCRF) - 4G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -5852,9 +6026,10 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-nccs-itsar-4g-pgw-2022.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: binding
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Packet Data Network Gateway (P-GW/PDN GW) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link
+    security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -5882,7 +6057,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for 4G - Serving Gateway (S-GW) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path
+    failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -5908,9 +6084,10 @@ documents:
   devanagari_share: 0.0025
   companion_text: corpus/raw/india/in-nccs-itsar-5g-af-2023.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: binding
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Application Function (AF) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security,
+    clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -5938,7 +6115,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Access and Mobility Management Function (AMF) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -5966,7 +6144,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Authentication Server Function (AuSF) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link
+    security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -5992,9 +6171,10 @@ documents:
   devanagari_share: 0.0018
   companion_text: corpus/raw/india/in-nccs-itsar-5g-disaggregated-ran-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: binding
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for 5G Disaggregated RAN (CU, DU, RU) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security,
+    clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6022,7 +6202,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Equipment Identity Register (EIR) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security,
+    clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6050,7 +6231,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for 5G Aggregated gNB NSA Option-3, 7 & 4 under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security,
+    clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6078,7 +6260,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for 5G Aggregated gNB SA Option-2 under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path
+    failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6106,7 +6289,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Location Management Function (LMF) and GMLC of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6134,7 +6318,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Non-3GPP Interworking Function (N3IWF) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link
+    security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6162,7 +6347,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Network Exposure Function (NEF) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security,
+    clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6190,7 +6376,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Network Repository Function (NRF) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security,
+    clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6218,7 +6405,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Network Slice Admission Control Function (NSACF) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6244,9 +6432,10 @@ documents:
   devanagari_share: 0.0025
   companion_text: corpus/raw/india/in-nccs-itsar-5g-nssf-2023.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: binding
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Network Slice Selection Function (NSSF) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6272,9 +6461,10 @@ documents:
   devanagari_share: 0.0015
   companion_text: corpus/raw/india/in-nccs-itsar-5g-open-ran-2026.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: binding
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: 'Specifies security assurance requirements for ITSAR for Open RAN (O-RAN) of 5G: O-RU, O-DU, O-CU under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link
+    security, clean-path failover, battery-hours floor, or incident reporting clocks).'
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6300,9 +6490,10 @@ documents:
   devanagari_share: 0.0023
   companion_text: corpus/raw/india/in-nccs-itsar-5g-pcf-2023.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: binding
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Policy Control Function (PCF) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security,
+    clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6328,9 +6519,10 @@ documents:
   devanagari_share: 0.0015
   companion_text: corpus/raw/india/in-nccs-itsar-5g-ric-2026.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: binding
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: 'Specifies security assurance requirements for ITSAR for Open RAN (O-RAN) of 5G: RAN Intelligent Controller (RIC) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).'
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6358,7 +6550,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Service Communication Proxy (SCP) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security,
+    clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6386,7 +6579,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Security Edge Protection Proxy (SEPP) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link
+    security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6413,8 +6607,9 @@ documents:
   companion_text: corpus/raw/india/in-nccs-itsar-5g-smf-2024.txt
   licence: Government of India open (GODL)
   binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  in_force_from: '2025-01-01'
+  notes: Specifies security assurance requirements for ITSAR for Session Management Function (SMF) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security,
+    clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6442,7 +6637,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Unified Data Management (UDM) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security,
+    clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6470,7 +6666,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Unified Data Repository (UDR) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security,
+    clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6498,7 +6695,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for User Plane Function (UPF) of 5G under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security,
+    clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6525,8 +6723,9 @@ documents:
   companion_text: corpus/raw/india/in-nccs-itsar-broadband-olt-2023.txt
   licence: Government of India open (GODL)
   binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  in_force_from: '2026-01-01'
+  notes: Specifies security assurance requirements for ITSAR for Optical Line Terminal (OLT) - PON Family Broadband Equipment under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of:
   - in-nccs-itsar-broadband-ont-2023
@@ -6555,8 +6754,9 @@ documents:
   companion_text: corpus/raw/india/in-nccs-itsar-broadband-ont-2023.txt
   licence: Government of India open (GODL)
   binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  in_force_from: '2026-01-01'
+  notes: Specifies security assurance requirements for ITSAR for Optical Network Terminal (ONT) - PON Family Broadband Equipment under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of:
   - in-nccs-itsar-broadband-olt-2023
@@ -6614,7 +6814,7 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Predecessor 2020 cryptographic control standard for telecom equipment security assurance.
   duplicate_of: []
   near_duplicate_of:
   - in-nccs-itsar-crypto-controls-v2-2024
@@ -6643,8 +6843,8 @@ documents:
   companion_text: corpus/raw/india/in-nccs-itsar-crypto-controls-v2-2024.txt
   licence: Government of India open (GODL)
   binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  in_force_from: '2026-01-01'
+  notes: Mandates cryptographic baseline algorithms across certified telecom equipment under MTCTE; provides technical context for telecom equipment security baselines.
   duplicate_of: []
   near_duplicate_of:
   - in-nccs-itsar-crypto-controls-v1-2020
@@ -6701,9 +6901,10 @@ documents:
   devanagari_share: 0.0018
   companion_text: corpus/raw/india/in-nccs-itsar-euicc-telecom-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: binding
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Embedded UICC (eUICC) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path
+    failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6731,7 +6932,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Network Next Generation Firewall including IDS and IPS under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -6759,7 +6961,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Group-I Devices (Common Security Requirements) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of:
   - in-nccs-itsar-group2-csr-2026
@@ -6792,7 +6995,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Group-II Devices (Common Security Requirements) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of:
   - in-nccs-itsar-group1-csr-2025
@@ -6825,7 +7029,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Group-III Devices (Common Security Requirements) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of:
   - in-nccs-itsar-group1-csr-2025
@@ -6858,7 +7063,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Group-V Devices (Common Security Requirements) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of:
   - in-nccs-itsar-group1-csr-2025
@@ -6891,7 +7097,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Group-VI Devices (Common Security Requirements) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of:
   - in-nccs-itsar-group1-csr-2025
@@ -6923,8 +7130,9 @@ documents:
   companion_text: corpus/raw/india/in-nccs-itsar-ip-router-v1-2024.txt
   licence: Government of India open (GODL)
   binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  in_force_from: '2024-07-01'
+  notes: Specifies security assurance requirements for ITSAR for IP Router (Version 1.0.1) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path
+    failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of:
   - in-nccs-itsar-ip-router-v2-2025
@@ -6954,7 +7162,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for IP Router (Version 2.0.0) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path
+    failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of:
   - in-nccs-itsar-ip-router-v1-2024
@@ -6984,7 +7193,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for L2 and/or L3 LAN Switch under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path
+    failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -7012,7 +7222,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Network Function Virtualization (NFV) for Mobile Networks under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -7040,7 +7251,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Mobile User Equipment under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path
+    failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -7066,9 +7278,10 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-nccs-itsar-sim-uicc-2020.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: binding
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Pluggable (U)ICC (SIM, USIM and UICC Applets) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -7096,7 +7309,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for IoT End Device - Smart Electricity Meter under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link
+    security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -7124,7 +7338,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Telecom Operating Systems (OS) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security,
+    clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -7150,9 +7365,10 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-nccs-itsar-transmission-dwdm-sdh-2022.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: binding
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Transmission Terminal Equipment (SDH, DWDM, DXC) under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -7180,7 +7396,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for IoT End Device - Vehicle Tracking Device under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link
+    security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -7207,8 +7424,9 @@ documents:
   companion_text: corpus/raw/india/in-nccs-itsar-wifi-cpe-v1-2024.txt
   licence: Government of India open (GODL)
   binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  in_force_from: '2024-07-01'
+  notes: Specifies security assurance requirements for ITSAR for Wi-Fi Customer Premises Equipment (Wi-Fi CPE) - Version 1.0.1 under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of:
   - in-nccs-itsar-wifi-cpe-v2-2025
@@ -7238,7 +7456,8 @@ documents:
   licence: Government of India open (GODL)
   binding_status: not stated
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Specifies security assurance requirements for ITSAR for Wi-Fi Customer Premises Equipment (Wi-Fi CPE) - Version 2.0.0 under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite
+    link security, clean-path failover, battery-hours floor, or incident reporting clocks).
   duplicate_of: []
   near_duplicate_of:
   - in-nccs-itsar-wifi-cpe-v1-2024
@@ -7322,9 +7541,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-ndma-compendium-disaster-management-laws.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Compendium of legislative enactments and regulatory rules governing disaster management in India.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -7350,9 +7569,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-ndma-cyclones-guidelines-2008.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: advisory
+  in_force_from: April 2008
+  notes: National Disaster Management Guidelines on Cyclone Management issued by NDMA; provides operational guidance on early warning.
   duplicate_of: []
   near_duplicate_of:
   - in-ndma-flood-guidelines-2008
@@ -7380,9 +7599,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-ndma-flood-guidelines-2008.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: advisory
+  in_force_from: January 2008
+  notes: National Disaster Management Guidelines on Management of Floods issued by NDMA.
   duplicate_of: []
   near_duplicate_of:
   - in-ndma-cyclones-guidelines-2008
@@ -7410,9 +7629,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-ndma-g20-drr-issue-note.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: G20 Disaster Risk Reduction Working Group Issue Note on multi-hazard early warning systems and resilient infrastructure.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -7438,9 +7657,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-ndma-hospital-safety-guidelines-2016.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: advisory
+  in_force_from: February 2016
+  notes: National Disaster Management Guidelines on Hospital Safety covering structural and operational emergency resilience.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -7496,9 +7715,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-ndma-sfdrr-midterm-review-report.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: National report on the implementation of the Sendai Framework for Disaster Risk Reduction 2015-2030.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -8239,9 +8458,9 @@ documents:
   devanagari_share: 0.0002
   companion_text: corpus/raw/india/in-sansad-scfin-17ls-59th-report-cyber-security-fraud.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Parliamentary standing committee report on cyber fraud in the financial sector; does not bear directly on telecom NTN gaps.
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -8268,9 +8487,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-sansad-scit-17ls-36th-report-5g-preparedness.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Parliamentary standing committee report on India 5G preparedness; consultative and policy review without statutory gap evidence.
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -8297,9 +8516,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-sansad-scit-17ls-37th-report-action-taken-suspension-services.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Parliamentary report on suspension of telecom services; reviews internet shutdown procedures; no clause bears on technical gaps.
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -8326,9 +8545,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-sansad-scit-17ls-43rd-report-demands-telecom-2023.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Parliamentary standing committee report on budgetary demands of DoT; no clause bears on specific technical gaps.
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -8355,9 +8574,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-sansad-scit-17ls-45th-report-demands-meity-2023.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Parliamentary standing committee report on MeitY budget allocations; no clause bears on technical network gaps.
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -8384,9 +8603,9 @@ documents:
   devanagari_share: 0.0001
   companion_text: corpus/raw/india/in-sansad-scit-18ls-14th-report-meity.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Parliamentary standing committee report reviewing Demands for Grants of MeitY; no clause bears directly on telecom/NTN gaps.
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -8413,9 +8632,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-sansad-scit-18ls-15th-report-telecom-networks.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Parliamentary standing committee report reviewing telecom network demands; no clause bears directly on specific gap evidence.
   duplicate_of: []
   near_duplicate_of: []
   problems:
@@ -8742,9 +8961,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-tdsat-telegraph-trai-bare-acts-compilation.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: legislation
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Compilation of bare acts governing Indian telecommunications and dispute resolution under TDSAT.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -8770,9 +8989,9 @@ documents:
   devanagari_share: 0.0116
   companion_text: corpus/raw/india/in-tec-ems-telecom-gr-2016.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: standard
+  in_force_from: August, 2016
+  notes: Generic requirements for Element Management Systems (EMS) in NGN architectures; provides context on telecom network element management.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -8827,9 +9046,9 @@ documents:
   devanagari_share: 0.0069
   companion_text: corpus/raw/india/in-tec-firewall-system-telecom-gr-2014.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: standard
+  in_force_from: March, 2014
+  notes: Generic requirements for telecom firewall systems; mandates automated VPN failover without clean-path checks before rerouting.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -8947,9 +9166,9 @@ documents:
   devanagari_share: 0.0089
   companion_text: corpus/raw/india/in-tec-li-ion-battery-planning-guide-2020.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: advisory
+  in_force_from: July, 2020
+  notes: Advisory planning guide for telecom energy storage and lithium-ion batteries; confirms absence of a mandatory minimum battery-hours floor.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9039,9 +9258,9 @@ documents:
   devanagari_share: 0.0053
   companion_text: corpus/raw/india/in-tec-mtcte-applicant-instructions.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: advisory
+  in_force_from: December, 2018
+  notes: User instructions for MTCTE applicant portal submission; administrative guidance without substantive technical standards.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9099,9 +9318,9 @@ documents:
   devanagari_share: 0.0075
   companion_text: corpus/raw/india/in-tec-mtcte-procedure-2023.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: binding
+  in_force_from: with immediate effect
+  notes: Operational procedure governing MTCTE testing and certification under the Indian Telegraph Rules; establishes AA role of TEC.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9127,9 +9346,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-tec-pppmii-telecom-order.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: binding
+  in_force_from: 29th August 2018
+  notes: Public procurement preference order specifying mandatory TEC Generic Requirements for telecom equipment procurement in India.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9187,9 +9406,9 @@ documents:
   devanagari_share: 0.0056
   companion_text: corpus/raw/india/in-tec-smps-power-plant-standard-2025.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: standard
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: Generic requirements standard for telecom SMPS power plants; specifies dual-battery compatibility rules relevant to site energy resilience.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9215,9 +9434,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-tec-vrla-battery-telecom-gr-2011.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: standard
+  in_force_from: March, 2011
+  notes: Generic technical requirements for VRLA gel batteries in telecom; mentions 6-72 hour operational back-up ranges without mandating a binding site floor.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9602,9 +9821,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-cp-ai-big-data-telecom-2022.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on leveraging AI and big data in the telecommunications sector.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9630,9 +9849,9 @@ documents:
   devanagari_share: 0.0006
   companion_text: corpus/raw/india/in-trai-cp-aircraft-ground-data-comm-2022.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on data communication services between aircraft and ground stations.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9658,9 +9877,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-cp-allocation-spectrum-bands-2017.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on spectrum auction in multiple access bands.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9686,9 +9905,9 @@ documents:
   devanagari_share: 0.0001
   companion_text: corpus/raw/india/in-trai-cp-auction-spectrum-access-bands-2025.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on auction of radio frequency spectrum in frequency bands identified for IMT.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9714,9 +9933,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-cp-critical-m2m-services-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on issues related to critical services in the machine-to-machine (M2M) sector.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9742,9 +9961,9 @@ documents:
   devanagari_share: 0.0001
   companion_text: corpus/raw/india/in-trai-cp-draft-amendments-qos-2026.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on draft amendments to QoS regulations for access and broadband services.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9770,9 +9989,9 @@ documents:
   devanagari_share: 0.0002
   companion_text: corpus/raw/india/in-trai-cp-ev-band-spectrum-2023.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on assignment of spectrum in E&V bands for microwave access and backbone.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9798,9 +10017,9 @@ documents:
   devanagari_share: 0.0005
   companion_text: corpus/raw/india/in-trai-cp-infrastructure-sharing-2023.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on telecom infrastructure sharing, spectrum sharing, and leasing.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9826,9 +10045,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-cp-interconnection-framework-2019.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on review of regulatory framework for interconnection.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9854,9 +10073,9 @@ documents:
   devanagari_share: 0.0002
   companion_text: corpus/raw/india/in-trai-cp-interconnection-review-2025.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on review of existing TRAI regulations on interconnection.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9882,9 +10101,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-cp-m2m-roaming-qos-2016.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on spectrum, roaming, and QoS requirements in M2M communications.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9910,9 +10129,9 @@ documents:
   devanagari_share: 0.0001
   companion_text: corpus/raw/india/in-trai-cp-microwave-spectrum-2025.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on assignment of microwave spectrum in 6 GHz, 7 GHz and 13 GHz bands.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9938,9 +10157,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-cp-net-neutrality-2017.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI comprehensive consultation paper on Net Neutrality.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9966,9 +10185,9 @@ documents:
   devanagari_share: 0.0002
   companion_text: corpus/raw/india/in-trai-cp-network-authorisations-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on terms and conditions of network authorisations under Telecommunications Act 2023.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -9994,9 +10213,9 @@ documents:
   devanagari_share: 0.0002
   companion_text: corpus/raw/india/in-trai-cp-qos-standards-review-2023.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on comprehensive review of quality-of-service standards for access and broadband.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10022,9 +10241,9 @@ documents:
   devanagari_share: 0.0007
   companion_text: corpus/raw/india/in-trai-cp-railways-additional-spectrum-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on additional spectrum assignment for Indian Railways mission-critical operations.
   duplicate_of: []
   near_duplicate_of:
   - in-trai-railways-mission-critical-spectrum-2024
@@ -10052,9 +10271,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-cp-railways-public-safety-2019.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on allotment of spectrum to Indian Railways for public safety.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10080,9 +10299,9 @@ documents:
   devanagari_share: 0.0007
   companion_text: corpus/raw/india/in-trai-cp-rrts-spectrum-requirements-2022.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on spectrum requirements of NCRTC for Regional Rapid Transit System.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10108,9 +10327,9 @@ documents:
   devanagari_share: 0.0001
   companion_text: corpus/raw/india/in-trai-cp-satcom-network-authorisation-2026.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on framework for satellite communication network authorisations.
   duplicate_of:
   - in-trai-scn-consultation-2026
   near_duplicate_of: []
@@ -10138,9 +10357,9 @@ documents:
   devanagari_share: 0.0004
   companion_text: corpus/raw/india/in-trai-cp-satellite-spectrum-assignment-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on terms and conditions for assignment of satellite spectrum.
   duplicate_of:
   - in-trai-satellite-spectrum-consultation-2024
   near_duplicate_of:
@@ -10170,9 +10389,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-cp-service-authorisations-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on framework for service authorisations under Telecommunications Act 2023.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10198,9 +10417,9 @@ documents:
   devanagari_share: 0.0002
   companion_text: corpus/raw/india/in-trai-cp-space-spectrum-assignment-2023.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on assignment of spectrum for space-based communication services.
   duplicate_of:
   - in-trai-space-spectrum-consultation-2023
   near_duplicate_of: []
@@ -10228,9 +10447,9 @@ documents:
   devanagari_share: 0.0005
   companion_text: corpus/raw/india/in-trai-cp-spectrum-37-43ghz-satellite-terrestrial-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on auction of spectrum in 37-43.5 GHz for IMT and satellite coexistence.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10256,9 +10475,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-cp-traffic-management-practices-2020.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on traffic management practices and multi-stakeholder body for net neutrality.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10284,9 +10503,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-cp-v2x-communication-2026.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on the regulatory framework for vehicle-to-everything (V2X) communications.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10312,9 +10531,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-cp-volte-csfb-voice-2018.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI consultation paper on voice services to LTE users including VoLTE and CS fallback.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10371,9 +10590,9 @@ documents:
   devanagari_share: 0.0003
   companion_text: corpus/raw/india/in-trai-critical-m2m-services-recs-2025.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on critical services in the M2M sector and machine-to-machine service provider obligations.
   duplicate_of:
   - in-trai-critical-m2m-recommendations-2025
   near_duplicate_of: []
@@ -10429,9 +10648,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-dcip-authorization-recs-2023.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on introducing Digital Connectivity Infrastructure Provider (DCIP) authorizations.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10457,9 +10676,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-direction-blacklisting-telecom-resources-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: binding
+  in_force_from: August 13, 2024
+  notes: Binding direction under TRAI Act Section 13 mandating disconnection and blacklisting of malicious telecom entities.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10513,9 +10732,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-direction-header-traceability-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: binding
+  in_force_from: October 28, 2024
+  notes: Binding direction under TRAI Act Section 13 establishing end-to-end header traceability requirements for telecom messaging.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10541,9 +10760,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-direction-latency-packet-loss-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: binding
+  in_force_from: 24th October 2024
+  notes: Binding direction under TRAI Act Section 13 mandating data submission for QoS latency and packet loss auditing.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10569,9 +10788,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-direction-pmr-submission-2026.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: binding
+  in_force_from: 27th Jan 2026
+  notes: Binding direction under TRAI Act Section 13 mandating periodic Performance Monitoring Report submissions.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10597,9 +10816,9 @@ documents:
   devanagari_share: 0.0046
   companion_text: corpus/raw/india/in-trai-direction-qos-publication-2025.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: binding
+  in_force_from: 09.09.2025
+  notes: Binding direction under TRAI QoS Regulations 2024 mandating public disclosure of access and broadband performance metrics.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10625,9 +10844,9 @@ documents:
   devanagari_share: 0.0061
   companion_text: corpus/raw/india/in-trai-direction-qos-standards-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: binding
+  in_force_from: 22nd November 2024
+  notes: Binding direction under TRAI Act Section 13 requiring publication of service-wise geospatial coverage maps.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10653,9 +10872,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-direction-sms-template-scrubbing-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: binding
+  in_force_from: 30th November, 2024
+  notes: Binding direction under TRAI Act Section 13 enforcing message content template scrubbing and sender authentication.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10681,9 +10900,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-direction-ucc-detect-system-2023.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: binding
+  in_force_from: July, 2023
+  notes: Binding direction under TRAI Act Section 13 requiring deployment of automated UCC Detect systems across access provider networks.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10709,9 +10928,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-direction-unauthorised-telecom-activities-2023.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
-  in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  binding_status: binding
+  in_force_from: 16th February, 2023
+  notes: Binding direction under TRAI Act Section 13 curbing unauthorized telecom activities and tightening codes of practice.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10794,9 +11013,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-internet-telephony-recs-2017.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on internet telephony, address allocation, and numbering resources.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10822,9 +11041,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-m2m-qos-recommendations-2017.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on spectrum, roaming, and QoS requirements for machine-to-machine communications.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10850,9 +11069,9 @@ documents:
   devanagari_share: 0.0001
   companion_text: corpus/raw/india/in-trai-microwave-spectrum-recs-2025.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on assignment of microwave backhaul spectrum in 6 GHz, 7 GHz and 13 GHz bands.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -10907,9 +11126,9 @@ documents:
   devanagari_share: 0.0001
   companion_text: corpus/raw/india/in-trai-network-authorisations-recs-2025.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on terms and conditions of network authorisations under the Telecommunications Act 2023.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -11022,9 +11241,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-pre-cp-net-neutrality-2016.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI pre-consultation paper on net neutrality initiating the regulatory consultation process.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -11142,9 +11361,9 @@ documents:
   devanagari_share: 0.0004
   companion_text: corpus/raw/india/in-trai-railways-mission-critical-spectrum-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on assignment of additional spectrum to Indian Railways and RRTS for mission-critical train operations.
   duplicate_of: []
   near_duplicate_of:
   - in-trai-cp-railways-additional-spectrum-2024
@@ -11172,9 +11391,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-railways-public-safety-spectrum-2019.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on allotment of dedicated spectrum to Indian Railways for public safety and mission-critical applications.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -11229,9 +11448,9 @@ documents:
   devanagari_share: 0.0003
   companion_text: corpus/raw/india/in-trai-sandbox-innovation-recs-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on establishing a regulatory sandbox framework for innovative telecom services and technologies.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -11257,9 +11476,9 @@ documents:
   devanagari_share: 0.0001
   companion_text: corpus/raw/india/in-trai-satcom-network-recommendations-2026.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI statutory recommendations on satellite communication network provider authorization and spectrum assignment.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -11315,9 +11534,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-satellite-low-bit-rate-recs-2021.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on licensing framework for satellite-based low-bit-rate connectivity for IoT and sensor networks.
   duplicate_of: []
   near_duplicate_of:
   - in-trai-satellite-low-bit-rate-recommendations
@@ -11376,9 +11595,9 @@ documents:
   devanagari_share: 0.0001
   companion_text: corpus/raw/india/in-trai-satellite-spectrum-terms-2025.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on terms and conditions for assignment of satellite spectrum for NGSO and GSO constellations.
   duplicate_of:
   - in-trai-space-spectrum-recommendations-2025
   near_duplicate_of:
@@ -11408,9 +11627,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-satellite-suc-recommendations-2018.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on methodology for levying spectrum charges on satellite-based telecommunication services.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -11496,9 +11715,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-service-authorisations-recs-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on the framework for service authorisations under the Telecommunications Act 2023.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -11524,9 +11743,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-sesg-licensing-recs-2022.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on establishing and operating satellite earth station gateways (SESG) under the Telegraph Act.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -11613,9 +11832,9 @@ documents:
   devanagari_share: 0.0001
   companion_text: corpus/raw/india/in-trai-spectrum-auction-recs-2026.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on auction of radio frequency spectrum in frequency bands identified for IMT.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -11697,9 +11916,9 @@ documents:
   devanagari_share: 0.0013
   companion_text: corpus/raw/india/in-trai-supp-cp-aircraft-ground-data-comm-2023.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI supplementary consultation paper on aeronautical data communications.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -11725,9 +11944,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-traffic-management-recommendations-2020.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on traffic management practices and multi-stakeholder body monitoring net neutrality.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -11753,9 +11972,9 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/india/in-trai-unbundling-layers-recs-2021.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations on unbundling network layers and service provision to enhance structural network efficiency.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -11781,9 +12000,9 @@ documents:
   devanagari_share: 0.0008
   companion_text: corpus/raw/india/in-trai-vno-multi-nso-recs-2024.txt
   licence: Government of India open (GODL)
-  binding_status: not stated
+  binding_status: advisory
   in_force_from: unknown
-  notes: Downloaded and text extracted; candidate clauses were not manually verified for this record, so no quotes are included.
+  notes: TRAI recommendations allowing virtual network operators to partner with multiple network operators for enhanced resilience.
   duplicate_of: []
   near_duplicate_of: []
   problems: []
@@ -11839,13 +12058,15 @@ documents:
   licence: 3GPP open report
   binding_status: advisory
   in_force_from: '2018-07-06'
-  notes: 3GPP Release 16 study report TR 22.822 V16.0.0 (22822-g00.doc inside zip archive). All NTN links in testbeds are emulated.
-  duplicate_of: []
+  notes: Unzipped into corpus/raw/global/intl-3gpp-tr-22822/ (22822-g00.doc) and extracted text to intl-3gpp-tr-22822.txt. Replaced contradicted binding basis with verbatim words from p1. All NTN links
+    in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-tr-22822#3
   near_duplicate_of:
   - intl-3gpp-tr-22822#2
   problems:
+  - duplicate_content
   - near_duplicate_title
-  - sha256_mismatch_staging
   - unsupported_file_type
 - id: intl-3gpp-tr-22822#2
   title: '3GPP TR 22.822 V16.0.0 (Release 16): Study on using Satellite Access in 5G'
@@ -11871,11 +12092,49 @@ documents:
   licence: 3GPP open report
   binding_status: advisory
   in_force_from: '2018-07-06'
-  notes: 3GPP Release 16 study report TR 22.822 V16.0.0 (22822-g00.doc inside zip archive). All NTN links in testbeds are emulated.
+  notes: Unzipped into corpus/raw/global/intl-3gpp-tr-22822/ (22822-g00.doc) and extracted text to intl-3gpp-tr-22822.txt. Replaced contradicted binding basis with verbatim words from p1. All NTN links
+    in testbeds are emulated.
   duplicate_of: []
   near_duplicate_of:
   - intl-3gpp-tr-22822
+  - intl-3gpp-tr-22822#3
   problems:
+  - duplicate_id
+  - near_duplicate_title
+  - sha256_mismatch_staging
+  - unsupported_file_type
+- id: intl-3gpp-tr-22822#3
+  title: '3GPP TR 22.822 V16.0.0 (Release 16): Study on using Satellite Access in 5G'
+  authority: 3GPP Technical Specification Group Services and System Aspects
+  jurisdiction: INTL
+  jurisdiction_source: metadata
+  url: https://www.3gpp.org/ftp/Specs/archive/22_series/22.822/22822-g00.zip
+  url_host: www.3gpp.org
+  official_domain: true
+  local_path: corpus/raw/global/intl-3gpp-tr-22822/22822-g00.doc
+  source: corpus/global
+  metadata_origin: staging
+  bytes: 1143296
+  sha256: 3e5c79caff093ced3e284aa4d52f7fe0eaa9489f16f80a70ea5568d4892b61ba
+  file_type: other
+  pages: null
+  text_chars: null
+  text_chars_per_page: null
+  scanned: null
+  language: null
+  devanagari_share: null
+  companion_text: null
+  licence: 3GPP open report
+  binding_status: advisory
+  in_force_from: '2018-07-06'
+  notes: Unzipped into corpus/raw/global/intl-3gpp-tr-22822/ (22822-g00.doc) and extracted text to intl-3gpp-tr-22822.txt. Replaced contradicted binding basis with verbatim words from p1. All NTN links
+    in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-tr-22822
+  near_duplicate_of:
+  - intl-3gpp-tr-22822#2
+  problems:
+  - duplicate_content
   - duplicate_id
   - near_duplicate_title
   - unsupported_file_type
@@ -11933,13 +12192,15 @@ documents:
   licence: 3GPP open report
   binding_status: advisory
   in_force_from: '2023-03-31'
-  notes: 3GPP Release 16 Technical Report TR 38.821 V16.2.0 (38821-g20.doc inside zip archive). All NTN links in testbeds are emulated.
-  duplicate_of: []
+  notes: Unzipped into corpus/raw/global/intl-3gpp-tr-38821/ (38821-g20.doc) and re-extracted text to intl-3gpp-tr-38821.txt. Replaced contradicted binding basis with verbatim words from p5. All NTN links
+    in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-tr-38821#3
   near_duplicate_of:
   - intl-3gpp-tr-38821#2
   problems:
+  - duplicate_content
   - near_duplicate_title
-  - sha256_mismatch_staging
   - unsupported_file_type
 - id: intl-3gpp-tr-38821#2
   title: '3GPP TR 38.821 V16.2.0 (Release 16): Solutions for NR to support non-terrestrial networks (NTN)'
@@ -11965,11 +12226,49 @@ documents:
   licence: 3GPP open report
   binding_status: advisory
   in_force_from: '2023-03-31'
-  notes: 3GPP Release 16 Technical Report TR 38.821 V16.2.0 (38821-g20.doc inside zip archive). All NTN links in testbeds are emulated.
+  notes: Unzipped into corpus/raw/global/intl-3gpp-tr-38821/ (38821-g20.doc) and re-extracted text to intl-3gpp-tr-38821.txt. Replaced contradicted binding basis with verbatim words from p5. All NTN links
+    in testbeds are emulated.
   duplicate_of: []
   near_duplicate_of:
   - intl-3gpp-tr-38821
+  - intl-3gpp-tr-38821#3
   problems:
+  - duplicate_id
+  - near_duplicate_title
+  - sha256_mismatch_staging
+  - unsupported_file_type
+- id: intl-3gpp-tr-38821#3
+  title: '3GPP TR 38.821 V16.2.0 (Release 16): Solutions for NR to support non-terrestrial networks (NTN)'
+  authority: 3GPP Technical Specification Group Radio Access Network
+  jurisdiction: INTL
+  jurisdiction_source: metadata
+  url: https://www.3gpp.org/ftp/Specs/archive/38_series/38.821/38821-g20.zip
+  url_host: www.3gpp.org
+  official_domain: true
+  local_path: corpus/raw/global/intl-3gpp-tr-38821/38821-g20.doc
+  source: corpus/global
+  metadata_origin: staging
+  bytes: 27065344
+  sha256: fd0fd1eb2a91bd0fbf7039e7dfae54d832c0f098a8fb3a875eb3cb3f14152ec2
+  file_type: other
+  pages: null
+  text_chars: null
+  text_chars_per_page: null
+  scanned: null
+  language: null
+  devanagari_share: null
+  companion_text: null
+  licence: 3GPP open report
+  binding_status: advisory
+  in_force_from: '2023-03-31'
+  notes: Unzipped into corpus/raw/global/intl-3gpp-tr-38821/ (38821-g20.doc) and re-extracted text to intl-3gpp-tr-38821.txt. Replaced contradicted binding basis with verbatim words from p5. All NTN links
+    in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-tr-38821
+  near_duplicate_of:
+  - intl-3gpp-tr-38821#2
+  problems:
+  - duplicate_content
   - duplicate_id
   - near_duplicate_title
   - unsupported_file_type
@@ -12025,13 +12324,15 @@ documents:
   licence: 3GPP open standard
   binding_status: advisory
   in_force_from: '2023-03-31'
-  notes: 3GPP Release 19 specification TS 22.261 V19.2.0 (22261-j20.doc inside zip archive). All NTN links in testbeds are emulated.
-  duplicate_of: []
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-22261/ (22261-j20.doc) and extracted text to intl-3gpp-ts-22261.txt. Updated binding_basis to verbatim approval clause from document text. All NTN links
+    in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-ts-22261#3
   near_duplicate_of:
   - intl-3gpp-ts-22261#2
   problems:
+  - duplicate_content
   - near_duplicate_title
-  - sha256_mismatch_staging
   - unsupported_file_type
 - id: intl-3gpp-ts-22261#2
   title: '3GPP TS 22.261 V19.2.0 (Release 19): Service requirements for the 5G system; Stage 1'
@@ -12057,11 +12358,49 @@ documents:
   licence: 3GPP open standard
   binding_status: advisory
   in_force_from: '2023-03-31'
-  notes: 3GPP Release 19 specification TS 22.261 V19.2.0 (22261-j20.doc inside zip archive). All NTN links in testbeds are emulated.
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-22261/ (22261-j20.doc) and extracted text to intl-3gpp-ts-22261.txt. Updated binding_basis to verbatim approval clause from document text. All NTN links
+    in testbeds are emulated.
   duplicate_of: []
   near_duplicate_of:
   - intl-3gpp-ts-22261
+  - intl-3gpp-ts-22261#3
   problems:
+  - duplicate_id
+  - near_duplicate_title
+  - sha256_mismatch_staging
+  - unsupported_file_type
+- id: intl-3gpp-ts-22261#3
+  title: '3GPP TS 22.261 V19.2.0 (Release 19): Service requirements for the 5G system; Stage 1'
+  authority: 3GPP Technical Specification Group Services and System Aspects
+  jurisdiction: INTL
+  jurisdiction_source: metadata
+  url: https://www.3gpp.org/ftp/Specs/archive/22_series/22.261/22261-j20.zip
+  url_host: www.3gpp.org
+  official_domain: true
+  local_path: corpus/raw/global/intl-3gpp-ts-22261/22261-j20.doc
+  source: corpus/global
+  metadata_origin: staging
+  bytes: 3022848
+  sha256: 5120a417f7783faf961a4045f05e1550c78357886e21cced89ef5d740df83730
+  file_type: other
+  pages: null
+  text_chars: null
+  text_chars_per_page: null
+  scanned: null
+  language: null
+  devanagari_share: null
+  companion_text: null
+  licence: 3GPP open standard
+  binding_status: advisory
+  in_force_from: '2023-03-31'
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-22261/ (22261-j20.doc) and extracted text to intl-3gpp-ts-22261.txt. Updated binding_basis to verbatim approval clause from document text. All NTN links
+    in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-ts-22261
+  near_duplicate_of:
+  - intl-3gpp-ts-22261#2
+  problems:
+  - duplicate_content
   - duplicate_id
   - near_duplicate_title
   - unsupported_file_type
@@ -12085,15 +12424,50 @@ documents:
   scanned: null
   language: en
   devanagari_share: 0.0
-  companion_text: null
+  companion_text: corpus/raw/global/intl-3gpp-ts-23003.txt
   licence: 3GPP open standard
   binding_status: advisory
   in_force_from: unknown
   notes: 'Downloaded type: Zip archive data, at least v2.0 to extract, compression method=deflate; text length 0; Downloaded content is not PDF or HTML: Zip archive data, at least v2.0 to extract, compression
     method=deflate'
-  duplicate_of: []
+  duplicate_of:
+  - intl-3gpp-ts-23003#2
   near_duplicate_of: []
-  problems: []
+  problems:
+  - duplicate_content
+- id: intl-3gpp-ts-23003#2
+  title: '3GPP TS 23.003 V18.5.0: Numbering, addressing and identification'
+  authority: 3GPP CT4
+  jurisdiction: INTL
+  jurisdiction_source: metadata
+  url: https://www.3gpp.org/ftp/Specs/archive/23_series/23.003/23003-i50.zip
+  url_host: www.3gpp.org
+  official_domain: true
+  local_path: corpus/raw/global/intl-3gpp-ts-23003.zip
+  source: corpus/global
+  metadata_origin: staging
+  bytes: 857012
+  sha256: 7a539f1abbf18c15bd3b2a22c43de2af733f86a9ce10ecae0023aea0eed60880
+  file_type: other
+  pages: null
+  text_chars: null
+  text_chars_per_page: null
+  scanned: null
+  language: en
+  devanagari_share: 0.0
+  companion_text: corpus/raw/global/intl-3gpp-ts-23003.txt
+  licence: 3GPP open standard
+  binding_status: advisory
+  in_force_from: unknown
+  notes: 'Downloaded type: Zip archive data, at least v2.0 to extract, compression method=deflate; text length 0; Downloaded content is not PDF or HTML: Zip archive data, at least v2.0 to extract, compression
+    method=deflate'
+  duplicate_of:
+  - intl-3gpp-ts-23003
+  near_duplicate_of: []
+  problems:
+  - duplicate_content
+  - duplicate_id
+  - unsupported_file_type
 - id: intl-3gpp-ts-23273
   title: '3GPP TS 23.273 V18.4.0 (Release 18): 5G System (5GS) Location Services (LCS); Stage 2'
   authority: 3GPP Technical Specification Group Services and System Aspects
@@ -12118,13 +12492,15 @@ documents:
   licence: 3GPP open standard
   binding_status: advisory
   in_force_from: '2023-12-19'
-  notes: 3GPP Release 18 specification TS 23.273 V18.4.0 (23273-i40.docx inside zip archive). All NTN links in testbeds are emulated.
-  duplicate_of: []
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-23273/ (23273-i40.docx) and extracted text to intl-3gpp-ts-23273.txt. Updated binding_basis to verbatim approval clause from document text. All NTN
+    links in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-ts-23273#3
   near_duplicate_of:
   - intl-3gpp-ts-23273#2
   problems:
+  - duplicate_content
   - near_duplicate_title
-  - sha256_mismatch_staging
 - id: intl-3gpp-ts-23273#2
   title: '3GPP TS 23.273 V18.4.0 (Release 18): 5G System (5GS) Location Services (LCS); Stage 2'
   authority: 3GPP Technical Specification Group Services and System Aspects
@@ -12149,14 +12525,51 @@ documents:
   licence: 3GPP open standard
   binding_status: advisory
   in_force_from: '2023-12-19'
-  notes: 3GPP Release 18 specification TS 23.273 V18.4.0 (23273-i40.docx inside zip archive). All NTN links in testbeds are emulated.
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-23273/ (23273-i40.docx) and extracted text to intl-3gpp-ts-23273.txt. Updated binding_basis to verbatim approval clause from document text. All NTN
+    links in testbeds are emulated.
   duplicate_of: []
   near_duplicate_of:
   - intl-3gpp-ts-23273
+  - intl-3gpp-ts-23273#3
   problems:
   - duplicate_id
   - near_duplicate_title
+  - sha256_mismatch_staging
   - unsupported_file_type
+- id: intl-3gpp-ts-23273#3
+  title: '3GPP TS 23.273 V18.4.0 (Release 18): 5G System (5GS) Location Services (LCS); Stage 2'
+  authority: 3GPP Technical Specification Group Services and System Aspects
+  jurisdiction: INTL
+  jurisdiction_source: metadata
+  url: https://www.3gpp.org/ftp/Specs/archive/23_series/23.273/23273-i40.zip
+  url_host: www.3gpp.org
+  official_domain: true
+  local_path: corpus/raw/global/intl-3gpp-ts-23273/23273-i40.docx
+  source: corpus/global
+  metadata_origin: staging
+  bytes: 3423348
+  sha256: de0544eaf5d44440b67a686d95034c42a2361d04d644af917b5fc10d4587cfe9
+  file_type: docx
+  pages: null
+  text_chars: 378003
+  text_chars_per_page: null
+  scanned: null
+  language: en
+  devanagari_share: 0.0
+  companion_text: null
+  licence: 3GPP open standard
+  binding_status: advisory
+  in_force_from: '2023-12-19'
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-23273/ (23273-i40.docx) and extracted text to intl-3gpp-ts-23273.txt. Updated binding_basis to verbatim approval clause from document text. All NTN
+    links in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-ts-23273
+  near_duplicate_of:
+  - intl-3gpp-ts-23273#2
+  problems:
+  - duplicate_content
+  - duplicate_id
+  - near_duplicate_title
 - id: intl-3gpp-ts-23501
   title: '3GPP TS 23.501 V18.5.0 (Release 18): System architecture for the 5G System (5GS); Stage 2'
   authority: 3GPP / ETSI (ETSI TS 123 501 V18.5.0)
@@ -12237,11 +12650,84 @@ documents:
   licence: 3GPP / ETSI IPR Policy
   binding_status: advisory
   in_force_from: '2024-03-27'
-  notes: Target list cited 24501-i51.zip which was not present on 3GPP ftp; downloaded authentic Release 18 archive 24501-i50.zip.
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-24501/ (24501-i50.docx) and extracted text to intl-3gpp-ts-24501.txt. Updated binding_basis to verbatim approval clause from document text. All NTN
+    links in testbeds are emulated.
   duplicate_of: []
-  near_duplicate_of: []
+  near_duplicate_of:
+  - intl-3gpp-ts-24501#2
+  - intl-3gpp-ts-24501#3
   problems:
+  - near_duplicate_title
+  - sha256_mismatch_staging
   - unsupported_file_type
+- id: intl-3gpp-ts-24501#2
+  title: '3GPP TS 24.501 V18.5.0: Non-Access-Stratum (NAS) protocol for 5G System (5GS); Stage 3'
+  authority: 3GPP CT1
+  jurisdiction: INTL
+  jurisdiction_source: metadata
+  url: https://www.3gpp.org/ftp/Specs/archive/24_series/24.501/24501-i50.zip
+  url_host: www.3gpp.org
+  official_domain: true
+  local_path: corpus/raw/global/intl-3gpp-ts-24501/24501-i50.docx
+  source: corpus/global
+  metadata_origin: staging
+  bytes: 4720425
+  sha256: f802e18878089ecfec91054b395be21ce78b7f8703d33662c89b0be95022578e
+  file_type: docx
+  pages: null
+  text_chars: 3096523
+  text_chars_per_page: null
+  scanned: null
+  language: en
+  devanagari_share: 0.0
+  companion_text: null
+  licence: 3GPP / ETSI IPR Policy
+  binding_status: advisory
+  in_force_from: '2024-03-27'
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-24501/ (24501-i50.docx) and extracted text to intl-3gpp-ts-24501.txt. Updated binding_basis to verbatim approval clause from document text. All NTN
+    links in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-ts-24501#3
+  near_duplicate_of:
+  - intl-3gpp-ts-24501
+  problems:
+  - duplicate_content
+  - duplicate_id
+  - near_duplicate_title
+- id: intl-3gpp-ts-24501#3
+  title: '3GPP TS 24.501 V18.5.0: Non-Access-Stratum (NAS) protocol for 5G System (5GS); Stage 3'
+  authority: 3GPP CT1
+  jurisdiction: INTL
+  jurisdiction_source: metadata
+  url: https://www.3gpp.org/ftp/Specs/archive/24_series/24.501/24501-i50.zip
+  url_host: www.3gpp.org
+  official_domain: true
+  local_path: corpus/raw/global/temp_24501/24501-i50.docx
+  source: corpus/global
+  metadata_origin: staging
+  bytes: 4720425
+  sha256: f802e18878089ecfec91054b395be21ce78b7f8703d33662c89b0be95022578e
+  file_type: docx
+  pages: null
+  text_chars: 3096523
+  text_chars_per_page: null
+  scanned: null
+  language: en
+  devanagari_share: 0.0
+  companion_text: null
+  licence: 3GPP / ETSI IPR Policy
+  binding_status: advisory
+  in_force_from: '2024-03-27'
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-24501/ (24501-i50.docx) and extracted text to intl-3gpp-ts-24501.txt. Updated binding_basis to verbatim approval clause from document text. All NTN
+    links in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-ts-24501#2
+  near_duplicate_of:
+  - intl-3gpp-ts-24501
+  problems:
+  - duplicate_content
+  - duplicate_id
+  - near_duplicate_title
 - id: intl-3gpp-ts-28541
   title: '3GPP TS 28.541 V18.4.0 (Release 18): Management and orchestration; 5G Network Resource Model (NRM); Stage 2 and stage 3'
   authority: 3GPP Technical Specification Group Services and System Aspects
@@ -12264,13 +12750,51 @@ documents:
   devanagari_share: 0.0
   companion_text: corpus/raw/global/intl-3gpp-ts-28541.txt
   licence: 3GPP open standard
-  binding_status: advisory
+  binding_status: not stated
   in_force_from: '2023-06-26'
-  notes: 3GPP Release 18 specification TS 28.541 V18.4.0 (multi-part .docx package inside zip archive). All NTN links in testbeds are emulated.
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-28541/ (multi-part .docx package, main specification body in 28541-i40_c04_c07.docx) and extracted text to intl-3gpp-ts-28541.txt. Legal status not
+    stated in text. All NTN links in testbeds are emulated.
   duplicate_of: []
-  near_duplicate_of: []
+  near_duplicate_of:
+  - intl-3gpp-ts-28541#2
   problems:
+  - near_duplicate_title
+  - sha256_mismatch_staging
   - unsupported_file_type
+- id: intl-3gpp-ts-28541#2
+  title: '3GPP TS 28.541 V18.4.0 (Release 18): Management and orchestration; 5G Network Resource Model (NRM); Stage 2 and stage 3'
+  authority: 3GPP Technical Specification Group Services and System Aspects
+  jurisdiction: INTL
+  jurisdiction_source: metadata
+  url: https://www.3gpp.org/ftp/Specs/archive/28_series/28.541/28541-i40.zip
+  url_host: www.3gpp.org
+  official_domain: true
+  local_path: corpus/raw/global/intl-3gpp-ts-28541/28541-i40_c04_c07.docx
+  source: corpus/global
+  metadata_origin: staging
+  bytes: 11356242
+  sha256: 76049cdd161926486bd9d7ff874e5a845f7a5601b5cff91ed4c0c36ab25124b8
+  file_type: docx
+  pages: null
+  text_chars: 420894
+  text_chars_per_page: null
+  scanned: null
+  language: en
+  devanagari_share: 0.0
+  companion_text: null
+  licence: 3GPP open standard
+  binding_status: not stated
+  in_force_from: '2023-06-26'
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-28541/ (multi-part .docx package, main specification body in 28541-i40_c04_c07.docx) and extracted text to intl-3gpp-ts-28541.txt. Legal status not
+    stated in text. All NTN links in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-ts-28541-c04_c07
+  near_duplicate_of:
+  - intl-3gpp-ts-28541
+  problems:
+  - duplicate_content
+  - duplicate_id
+  - near_duplicate_title
 - id: intl-3gpp-ts-28541-c04_c07
   title: intl-3gpp-ts-28541-c04_c07
   authority: null
@@ -12296,9 +12820,11 @@ documents:
   binding_status: null
   in_force_from: null
   notes: null
-  duplicate_of: []
+  duplicate_of:
+  - intl-3gpp-ts-28541#2
   near_duplicate_of: []
   problems:
+  - duplicate_content
   - no_metadata
   - no_url
   - non_official_domain
@@ -12322,15 +12848,86 @@ documents:
   scanned: null
   language: en
   devanagari_share: 0.0
+  companion_text: corpus/raw/global/intl-3gpp-ts-29573.txt
+  licence: 3GPP open standard
+  binding_status: advisory
+  in_force_from: '2023-09-18'
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-29573/ (29573-i40.docx) and extracted text to intl-3gpp-ts-29573.txt. Updated status from failed to ok. All NTN links in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-ts-29573#2
+  near_duplicate_of:
+  - intl-3gpp-ts-29573#3
+  problems:
+  - duplicate_content
+  - near_duplicate_title
+  - sha256_mismatch_staging
+- id: intl-3gpp-ts-29573#2
+  title: '3GPP TS 29.573 V18.4.0: 5G System; Public Land Mobile Network (PLMN) Interconnection; Stage 3'
+  authority: 3GPP CT4
+  jurisdiction: INTL
+  jurisdiction_source: metadata
+  url: https://www.3gpp.org/ftp/Specs/archive/29_series/29.573/29573-i40.zip
+  url_host: www.3gpp.org
+  official_domain: true
+  local_path: corpus/raw/global/intl-3gpp-ts-29573.zip
+  source: corpus/global
+  metadata_origin: staging
+  bytes: 1238796
+  sha256: 70b6c0022c9743df8ce7d58748f1e6da5bc819eff8b60b2af07df4f30eee7d68
+  file_type: other
+  pages: null
+  text_chars: null
+  text_chars_per_page: null
+  scanned: null
+  language: en
+  devanagari_share: 0.0
+  companion_text: corpus/raw/global/intl-3gpp-ts-29573.txt
+  licence: 3GPP open standard
+  binding_status: advisory
+  in_force_from: '2023-09-18'
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-29573/ (29573-i40.docx) and extracted text to intl-3gpp-ts-29573.txt. Updated status from failed to ok. All NTN links in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-ts-29573
+  near_duplicate_of:
+  - intl-3gpp-ts-29573#3
+  problems:
+  - duplicate_content
+  - duplicate_id
+  - near_duplicate_title
+  - sha256_mismatch_staging
+  - unsupported_file_type
+- id: intl-3gpp-ts-29573#3
+  title: '3GPP TS 29.573 V18.4.0: 5G System; Public Land Mobile Network (PLMN) Interconnection; Stage 3'
+  authority: 3GPP CT4
+  jurisdiction: INTL
+  jurisdiction_source: metadata
+  url: https://www.3gpp.org/ftp/Specs/archive/29_series/29.573/29573-i40.zip
+  url_host: www.3gpp.org
+  official_domain: true
+  local_path: corpus/raw/global/intl-3gpp-ts-29573/29573-i40.docx
+  source: corpus/global
+  metadata_origin: staging
+  bytes: 1354938
+  sha256: c576a8deb934ffede4a74017ca3e6081451c95a11e817e1a44a87fe3837a9a03
+  file_type: docx
+  pages: null
+  text_chars: 183286
+  text_chars_per_page: null
+  scanned: null
+  language: en
+  devanagari_share: 0.0
   companion_text: null
   licence: 3GPP open standard
   binding_status: advisory
-  in_force_from: unknown
-  notes: 'Downloaded type: Zip archive data, at least v2.0 to extract, compression method=deflate; text length 0; Downloaded content is not PDF or HTML: Zip archive data, at least v2.0 to extract, compression
-    method=deflate'
+  in_force_from: '2023-09-18'
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-29573/ (29573-i40.docx) and extracted text to intl-3gpp-ts-29573.txt. Updated status from failed to ok. All NTN links in testbeds are emulated.
   duplicate_of: []
-  near_duplicate_of: []
-  problems: []
+  near_duplicate_of:
+  - intl-3gpp-ts-29573
+  - intl-3gpp-ts-29573#2
+  problems:
+  - duplicate_id
+  - near_duplicate_title
 - id: intl-3gpp-ts-32541
   title: '3GPP TS 32.541 V18.0.0 (Release 18): Telecommunication management; Self-Organizing Networks (SON); Self-healing concepts and integration reference point (IRP)'
   authority: 3GPP / ETSI (ETSI TS 132 541 V18.0.0)
@@ -12482,13 +13079,15 @@ documents:
   licence: 3GPP open standard
   binding_status: advisory
   in_force_from: '2024-01-04'
-  notes: 3GPP Release 18 specification TS 33.511 V18.2.0 (33511-i20.doc inside zip archive). All NTN links in testbeds are emulated.
-  duplicate_of: []
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-33511/ (33511-i20.doc) and extracted text to intl-3gpp-ts-33511.txt. Updated binding_basis to verbatim approval clause from document text. All NTN links
+    in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-ts-33511#3
   near_duplicate_of:
   - intl-3gpp-ts-33511#2
   problems:
+  - duplicate_content
   - near_duplicate_title
-  - sha256_mismatch_staging
   - unsupported_file_type
 - id: intl-3gpp-ts-33511#2
   title: '3GPP TS 33.511 V18.2.0 (Release 18): Security Assurance Specification (SCAS) for the next generation Node B (gNodeB) network product class'
@@ -12514,11 +13113,49 @@ documents:
   licence: 3GPP open standard
   binding_status: advisory
   in_force_from: '2024-01-04'
-  notes: 3GPP Release 18 specification TS 33.511 V18.2.0 (33511-i20.doc inside zip archive). All NTN links in testbeds are emulated.
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-33511/ (33511-i20.doc) and extracted text to intl-3gpp-ts-33511.txt. Updated binding_basis to verbatim approval clause from document text. All NTN links
+    in testbeds are emulated.
   duplicate_of: []
   near_duplicate_of:
   - intl-3gpp-ts-33511
+  - intl-3gpp-ts-33511#3
   problems:
+  - duplicate_id
+  - near_duplicate_title
+  - sha256_mismatch_staging
+  - unsupported_file_type
+- id: intl-3gpp-ts-33511#3
+  title: '3GPP TS 33.511 V18.2.0 (Release 18): Security Assurance Specification (SCAS) for the next generation Node B (gNodeB) network product class'
+  authority: 3GPP Technical Specification Group Services and System Aspects
+  jurisdiction: INTL
+  jurisdiction_source: metadata
+  url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.511/33511-i20.zip
+  url_host: www.3gpp.org
+  official_domain: true
+  local_path: corpus/raw/global/intl-3gpp-ts-33511/33511-i20.doc
+  source: corpus/global
+  metadata_origin: staging
+  bytes: 305664
+  sha256: 4d9d533923ea6a024e9f90154589b98184209ee2e771fcf38460f93059fbf07e
+  file_type: other
+  pages: null
+  text_chars: null
+  text_chars_per_page: null
+  scanned: null
+  language: null
+  devanagari_share: null
+  companion_text: null
+  licence: 3GPP open standard
+  binding_status: advisory
+  in_force_from: '2024-01-04'
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-33511/ (33511-i20.doc) and extracted text to intl-3gpp-ts-33511.txt. Updated binding_basis to verbatim approval clause from document text. All NTN links
+    in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-ts-33511
+  near_duplicate_of:
+  - intl-3gpp-ts-33511#2
+  problems:
+  - duplicate_content
   - duplicate_id
   - near_duplicate_title
   - unsupported_file_type
@@ -12541,16 +13178,51 @@ documents:
   text_chars_per_page: null
   scanned: null
   language: en
-  devanagari_share: 0.0001
-  companion_text: null
+  devanagari_share: 0.0
+  companion_text: corpus/raw/global/intl-3gpp-ts-33512.txt
   licence: 3GPP open standard
   binding_status: advisory
   in_force_from: unknown
   notes: 'Downloaded type: Zip archive data, at least v2.0 to extract, compression method=deflate; text length 0; Downloaded content is not PDF or HTML: Zip archive data, at least v2.0 to extract, compression
     method=deflate'
-  duplicate_of: []
+  duplicate_of:
+  - intl-3gpp-ts-33512#2
   near_duplicate_of: []
-  problems: []
+  problems:
+  - duplicate_content
+- id: intl-3gpp-ts-33512#2
+  title: '3GPP TS 33.512 V18.1.0: Security Assurance Specification (SCAS) for the Access and Mobility Management Function (AMF)'
+  authority: 3GPP SA3
+  jurisdiction: INTL
+  jurisdiction_source: metadata
+  url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.512/33512-i10.zip
+  url_host: www.3gpp.org
+  official_domain: true
+  local_path: corpus/raw/global/intl-3gpp-ts-33512.zip
+  source: corpus/global
+  metadata_origin: staging
+  bytes: 111105
+  sha256: 3ce431a288c8cf859032520332479e8a682a947040c4852c5835b6c5add144f4
+  file_type: other
+  pages: null
+  text_chars: null
+  text_chars_per_page: null
+  scanned: null
+  language: en
+  devanagari_share: 0.0
+  companion_text: corpus/raw/global/intl-3gpp-ts-33512.txt
+  licence: 3GPP open standard
+  binding_status: advisory
+  in_force_from: unknown
+  notes: 'Downloaded type: Zip archive data, at least v2.0 to extract, compression method=deflate; text length 0; Downloaded content is not PDF or HTML: Zip archive data, at least v2.0 to extract, compression
+    method=deflate'
+  duplicate_of:
+  - intl-3gpp-ts-33512
+  near_duplicate_of: []
+  problems:
+  - duplicate_content
+  - duplicate_id
+  - unsupported_file_type
 - id: intl-3gpp-ts-38300
   title: '3GPP TS 38.300 V18.1.0 (Release 18): NR and NG-RAN overall description; Stage 2'
   authority: 3GPP / ETSI (ETSI TS 138 300 V18.1.0)
@@ -12580,7 +13252,7 @@ documents:
   near_duplicate_of: []
   problems: []
 - id: intl-3gpp-ts-38331
-  title: '3GPP TS 38.331 V18.1.0: Radio Resource Control (RRC) protocol specification'
+  title: '3GPP TS 38.331 V18.1.0: NR; Radio Resource Control (RRC) protocol specification'
   authority: 3GPP RAN2
   jurisdiction: INTL
   jurisdiction_source: metadata
@@ -12599,15 +13271,86 @@ documents:
   scanned: null
   language: en
   devanagari_share: 0.0
+  companion_text: corpus/raw/global/intl-3gpp-ts-38331.txt
+  licence: 3GPP open standard
+  binding_status: advisory
+  in_force_from: '2024-04-01'
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-38331/ (38331-i10.docx) and extracted text to intl-3gpp-ts-38331.txt. Updated status from failed to ok. All NTN links in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-ts-38331#2
+  near_duplicate_of:
+  - intl-3gpp-ts-38331#3
+  problems:
+  - duplicate_content
+  - near_duplicate_title
+  - sha256_mismatch_staging
+- id: intl-3gpp-ts-38331#2
+  title: '3GPP TS 38.331 V18.1.0: NR; Radio Resource Control (RRC) protocol specification'
+  authority: 3GPP RAN2
+  jurisdiction: INTL
+  jurisdiction_source: metadata
+  url: https://www.3gpp.org/ftp/Specs/archive/38_series/38.331/38331-i10.zip
+  url_host: www.3gpp.org
+  official_domain: true
+  local_path: corpus/raw/global/intl-3gpp-ts-38331.zip
+  source: corpus/global
+  metadata_origin: staging
+  bytes: 3943581
+  sha256: 1d6c6d7ec1986f6792a55475c2e8c1fc180edbd911905050b719bfa233ad3778
+  file_type: other
+  pages: null
+  text_chars: null
+  text_chars_per_page: null
+  scanned: null
+  language: en
+  devanagari_share: 0.0
+  companion_text: corpus/raw/global/intl-3gpp-ts-38331.txt
+  licence: 3GPP open standard
+  binding_status: advisory
+  in_force_from: '2024-04-01'
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-38331/ (38331-i10.docx) and extracted text to intl-3gpp-ts-38331.txt. Updated status from failed to ok. All NTN links in testbeds are emulated.
+  duplicate_of:
+  - intl-3gpp-ts-38331
+  near_duplicate_of:
+  - intl-3gpp-ts-38331#3
+  problems:
+  - duplicate_content
+  - duplicate_id
+  - near_duplicate_title
+  - sha256_mismatch_staging
+  - unsupported_file_type
+- id: intl-3gpp-ts-38331#3
+  title: '3GPP TS 38.331 V18.1.0: NR; Radio Resource Control (RRC) protocol specification'
+  authority: 3GPP RAN2
+  jurisdiction: INTL
+  jurisdiction_source: metadata
+  url: https://www.3gpp.org/ftp/Specs/archive/38_series/38.331/38331-i10.zip
+  url_host: www.3gpp.org
+  official_domain: true
+  local_path: corpus/raw/global/intl-3gpp-ts-38331/38331-i10.docx
+  source: corpus/global
+  metadata_origin: staging
+  bytes: 4002052
+  sha256: 58cdf26a2aa48c0c24e4f4bcf67fd969ce274d5f571b6418a90537fcc2e7659b
+  file_type: docx
+  pages: null
+  text_chars: 3360387
+  text_chars_per_page: null
+  scanned: null
+  language: en
+  devanagari_share: 0.0
   companion_text: null
   licence: 3GPP open standard
   binding_status: advisory
-  in_force_from: unknown
-  notes: 'Downloaded type: Zip archive data, at least v2.0 to extract, compression method=deflate; text length 0; Downloaded content is not PDF or HTML: Zip archive data, at least v2.0 to extract, compression
-    method=deflate'
+  in_force_from: '2024-04-01'
+  notes: Unzipped into corpus/raw/global/intl-3gpp-ts-38331/ (38331-i10.docx) and extracted text to intl-3gpp-ts-38331.txt. Updated status from failed to ok. All NTN links in testbeds are emulated.
   duplicate_of: []
-  near_duplicate_of: []
-  problems: []
+  near_duplicate_of:
+  - intl-3gpp-ts-38331
+  - intl-3gpp-ts-38331#2
+  problems:
+  - duplicate_id
+  - near_duplicate_title
 - id: intl-3gpp-ts-38401
   title: '3GPP TS 38.401 V18.1.0 (Release 18): NG-RAN; Architecture description'
   authority: 3GPP / ETSI (ETSI TS 138 401 V18.1.0)
@@ -17113,11 +17856,15 @@ skipped:
   reason: extracted text companion of a document in the same set
 - path: corpus/raw/global/ae-cybercrime-law-2021.txt
   reason: extracted text companion of a document in the same set
+- path: corpus/raw/global/ae-pdpl-decree-law-45-2021.txt
+  reason: extracted text companion of a document in the same set
 - path: corpus/raw/global/ae-tdra-iar-v1-1.txt
   reason: extracted text companion of a document in the same set
 - path: corpus/raw/global/ae-tdra-interconnection-2006.txt
   reason: extracted text companion of a document in the same set
 - path: corpus/raw/global/ae-tdra-resilience.txt
+  reason: extracted text companion of a document in the same set
+- path: corpus/raw/global/ae-tdra-space-services-policy.txt
   reason: extracted text companion of a document in the same set
 - path: corpus/raw/global/au-acma-emergency-call-determination-2019.txt
   reason: extracted text companion of a document in the same set
@@ -17211,6 +17958,8 @@ skipped:
   reason: extracted text companion of a document in the same set
 - path: corpus/raw/global/intl-3gpp-ts-22261.txt
   reason: extracted text companion of a document in the same set
+- path: corpus/raw/global/intl-3gpp-ts-23003.txt
+  reason: extracted text companion of a document in the same set
 - path: corpus/raw/global/intl-3gpp-ts-23273.txt
   reason: extracted text companion of a document in the same set
 - path: corpus/raw/global/intl-3gpp-ts-23501.txt
@@ -17221,13 +17970,25 @@ skipped:
   reason: extracted text companion of a document in the same set
 - path: corpus/raw/global/intl-3gpp-ts-28541.txt
   reason: extracted text companion of a document in the same set
+- path: corpus/raw/global/intl-3gpp-ts-29573.txt
+  reason: extracted text companion of a document in the same set
+- path: corpus/raw/global/intl-3gpp-ts-29573/TS29573_JOSEProtectedMessageForwarding.yaml
+  reason: metadata file (read as metadata, not a document)
+- path: corpus/raw/global/intl-3gpp-ts-29573/TS29573_N32_Handshake.yaml
+  reason: metadata file (read as metadata, not a document)
+- path: corpus/raw/global/intl-3gpp-ts-29573/TS29573_SeppTelescopicFqdnMapping.yaml
+  reason: metadata file (read as metadata, not a document)
 - path: corpus/raw/global/intl-3gpp-ts-32541.txt
   reason: extracted text companion of a document in the same set
 - path: corpus/raw/global/intl-3gpp-ts-33501.txt
   reason: extracted text companion of a document in the same set
 - path: corpus/raw/global/intl-3gpp-ts-33511.txt
   reason: extracted text companion of a document in the same set
+- path: corpus/raw/global/intl-3gpp-ts-33512.txt
+  reason: extracted text companion of a document in the same set
 - path: corpus/raw/global/intl-3gpp-ts-38300.txt
+  reason: extracted text companion of a document in the same set
+- path: corpus/raw/global/intl-3gpp-ts-38331.txt
   reason: extracted text companion of a document in the same set
 - path: corpus/raw/global/intl-3gpp-ts-38401.txt
   reason: extracted text companion of a document in the same set
@@ -18043,13 +18804,19 @@ skipped:
   reason: inside dot-folder '.text' (extraction or companion text, read only via companion lookup)
 - path: kb/staging/_quotecheck.yaml
   reason: staging note (not metadata, not a document)
+- path: kb/staging/_samplecheck.md
+  reason: staging note (not metadata, not a document)
 - path: kb/staging/global/_progress-codex.md
+  reason: staging note (not metadata, not a document)
+- path: kb/staging/global/_progress-gemini2.md
   reason: staging note (not metadata, not a document)
 - path: kb/staging/global/_progress-haiku.md
   reason: staging note (not metadata, not a document)
 - path: kb/staging/global/_progress.md
   reason: staging note (not metadata, not a document)
 - path: kb/staging/india/_progress-codex.md
+  reason: staging note (not metadata, not a document)
+- path: kb/staging/india/_progress-gemini-quotes.md
   reason: staging note (not metadata, not a document)
 - path: kb/staging/india/_progress-haiku.md
   reason: staging note (not metadata, not a document)
