@@ -1,0 +1,36 @@
+id: in-trai-railways-mission-critical-spectrum-2024
+title: Recommendations on Assignment of Additional Spectrum to Indian Railways for its Mission-Critical Operations
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2024-12/Recommendations_20122024_0.pdf
+landing_page: https://trai.gov.in/telecom/spectrum
+local_path: corpus/raw/india/in-trai-railways-mission-critical-spectrum-2024.pdf
+sha256: 32e5233a211189582a1680787019e3cb831edd067739f748cf78be9796e24fd7
+bytes: 2349164
+pages: 72
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2024-12-20'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+role: india_evidence
+candidate_quotes:
+- quote: 'Authority recommends that: (a) The frequency spectrum assigned to NCRTC may also be assigned to other RRTS/ Metro
+    rail networks, which are geographically separated and not likely to cause any interference to one another.'
+  clause: Chapter II
+  topic: priority_routing
+  gap: GAP-IN-03
+  supports: proves
+  why: Recommends sharing dedicated safety spectrum across geographically separated urban rail transit networks.
+  page: 21
+verified: false
+notes: TRAI recommendations on assignment of additional spectrum to Indian Railways and RRTS for mission-critical train operations.

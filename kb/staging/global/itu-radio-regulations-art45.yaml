@@ -1,0 +1,48 @@
+id: itu-radio-regulations-art45
+title: "ITU Radio Regulations (Edition of 2024) - Articles 44 & 45: Order of Priority and Communication Procedures"
+authority: International Telecommunication Union (ITU)
+jurisdiction: International
+doc_type: treaty_article
+url: https://www.itu.int/pub/R-REG-RR-2024
+landing_page: https://www.itu.int/pub/R-REG-RR-2024
+local_path: corpus/raw/global/itu-radio-regulations-art45.pdf
+sha256: a19db60201342f44443143c01c528abe725b93cf133602631edaa2b6c9ba6a8f
+bytes: 2496298
+pages: 464
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "Its decision shall be based on the priority in Article 44."
+issued: 2024-08-19
+in_force_from: 2025-01-01
+amends: []
+amended_by: []
+licence: copyright_itu
+language: en
+gaps: [GAP-IN-03, GAP-IN-06, GAP-IN-09]
+role: global_example
+candidate_quotes:
+  - quote: "When an aeronautical station receives calls in close succession from several aircraft stations, it decides on the order in which these stations may transmit their traffic. Its decision shall be based on the priority in Article 44."
+    page: 401
+    clause: "Article 45, No. 45.3 § 3"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Mandates capacity priority ordering for safety and emergency transmissions over satellite/aeronautical communication links."
+  - quote: "If an aeronautical station finds it necessary to intervene in communications between aircraft stations, these stations shall comply with the instructions given by the aeronautical station."
+    page: 401
+    clause: "Article 45, No. 45.4 § 4"
+    topic: emergency_powers
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Empowers controlling stations to intervene and preempt traffic in operational aeronautical/satellite communications."
+  - quote: "Categories 1 and 2 shall receive priority over all other communications irrespective of any agreement under the provisions of No. 35.1."
+    page: 399
+    clause: "Article 44, No. 44.2 § 2"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Guarantees absolute legal pre-eminence for distress and urgency traffic over any commercial agreements."
+verified: false
+notes: "Binding international treaty adopted at WRC-23; covers aeronautical and mobile-satellite priority communication procedures."

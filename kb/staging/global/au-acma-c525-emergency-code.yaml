@@ -1,0 +1,33 @@
+id: au-acma-c525-emergency-code
+title: Handling of Emergency Calls by Carriage Service Providers Code (C525:2023)
+authority: Communications Alliance / ACMA
+jurisdiction: AU
+doc_type: standard
+url: https://www.commsalliance.com.au/__data/assets/pdf_file/0019/84043/C525_2023.pdf
+landing_page: https://www.acma.gov.au
+local_path: corpus/raw/global/au-acma-c525-emergency-code.pdf
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: false
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2023
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-03
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts:  Left  Speed\n\n  0     0    0  \
+  \   0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   162    0\
+  \   162    0     0    334      0 --:--:-- --:--:-- --:--:--   335\n\n  0     0 \
+  \   0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56)\
+  \ The requested URL returned error: 404"

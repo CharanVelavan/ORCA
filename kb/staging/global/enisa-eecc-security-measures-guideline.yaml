@@ -1,0 +1,55 @@
+id: enisa-eecc-security-measures-guideline
+title: Guideline on Security Measures under the EECC (4th edition)
+authority: European Union Agency for Cybersecurity (ENISA)
+jurisdiction: EU
+doc_type: guideline
+url: https://www.enisa.europa.eu/sites/default/files/publications/ENISA%20-%20Guideline%20on%20Security%20Measures%20under%20the%20EECC-%204th%20edition.pdf
+landing_page: https://www.enisa.europa.eu/publications/guideline-on-security-measures-under-the-eecc
+local_path: corpus/raw/global/enisa-eecc-security-measures-guideline.pdf
+sha256: 1143f6db71bbafff0b0e192708e902c92197939b3e3bf02fda586766f34d1330
+bytes: 2402348
+pages: 60
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: Neither the high-level security objectives nor the detailed security measures should be seen as binding recommendations
+  about which are appropriate security measures for providers to take.
+issued: 2021-07-07
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Open access (ENISA / EU Publications Office reuse policy)
+language: en
+gaps:
+- GAP-IN-04
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes:
+- quote: Establish and maintain appropriate security of critical supplies (for example electric power, fuel, cooling etc.24).
+  page: 26
+  clause: SO10
+  topic: backup_power
+  gap: GAP-IN-04
+  supports: global_example
+  why: Mandates security of critical supplies including backup power and backup fuel for telecom facilities.
+- quote: Establish and maintain contingency plans and a strategy for ensuring continuity of networks and communication services
+    provided.
+  page: 35
+  clause: SO21
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: global_example
+  why: Requires providers to implement service continuity strategies and contingency plans for critical communication networks.
+- quote: Establish and maintain an appropriate disaster recovery capability for restoring network and communication services
+    in case of natural and/or major disasters.
+  page: 36
+  clause: SO22
+  topic: failover_path_security
+  gap: GAP-IN-08
+  supports: global_example
+  why: Requires disaster recovery capabilities including regional failover sites and remote backups to restore services after
+    disruptions.
+verified: false
+notes: Comprehensive baseline of 29 security objectives for electronic communications networks under EECC Article 40.

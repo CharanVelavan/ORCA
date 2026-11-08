@@ -1,0 +1,30 @@
+id: br-anatel-res-767-2024
+title: Resolução nº 767, de 7 de agosto de 2024 (Altera o Regulamento de Segurança Cibernética)
+authority: Agência Nacional de Telecomunicações
+jurisdiction: BR
+doc_type: regulation
+url: https://informacoes.anatel.gov.br/legislacao/resolucoes/2024/1990-resolucao-767
+landing_page: https://informacoes.anatel.gov.br/legislacao/resolucoes/2020/1497-resolucao-740
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2024-08-07'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-06
+- GAP-IN-08
+role: context
+candidate_quotes: []
+verified: false
+notes: Anatel URL returned a 3.5 KB placeholder page (same bytes and sha256 as the other Anatel URLs in this batch), not the resolution text. Not obtained.

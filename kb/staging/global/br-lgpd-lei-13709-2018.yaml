@@ -1,0 +1,29 @@
+id: br-lgpd-lei-13709-2018
+title: 'Lei nº 13.709, de 14 de agosto de 2018: Lei Geral de Proteção de Dados Pessoais (LGPD)'
+authority: Presidência da República
+jurisdiction: BR
+doc_type: act
+url: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm
+landing_page: https://www.gov.br/anpd
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2018-08-14'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+role: context
+candidate_quotes: []
+verified: false
+notes: Planalto.gov.br connection reset (TLS) from this environment on 3 attempts; HTTP 1.1 retry also failed. Not obtained; retry later from another network.

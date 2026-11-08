@@ -1,0 +1,29 @@
+id: br-decreto-10222-2020-eciber
+title: 'Decreto nº 10.222, de 5 de fevereiro de 2020: Aprova a Estratégia Nacional de Segurança Cibernética (E-Ciber)'
+authority: Presidência da República
+jurisdiction: BR
+doc_type: regulation
+url: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/decreto/d10222.htm
+landing_page: https://www.gov.br/gsi
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2020-02-05'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-09
+role: context
+candidate_quotes: []
+verified: false
+notes: Planalto.gov.br connection reset (TLS) from this environment on 3 attempts; HTTP 1.1 retry also failed. Not obtained; retry later from another network.

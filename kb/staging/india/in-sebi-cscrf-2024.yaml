@@ -1,0 +1,37 @@
+id: in-sebi-cscrf-2024
+title: Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs)
+authority: Securities and Exchange Board of India (SEBI)
+jurisdiction: IN
+doc_type: circular
+url: https://www.sebi.gov.in/sebi_data/attachdocs/aug-2024/1724326790365.pdf
+landing_page: https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html
+sha256: bd9ddb68bb49b9a92771ff01ed3138e01f0962b383e9ff643008b729290fc85d
+bytes: 3177522
+pages: 205
+local_path: corpus/raw/india/in-sebi-cscrf-2024.pdf
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '2024-08-20'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-04
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: All cybersecurity incidents shall be reported in a timely manner through the SEBI incident reporting portal.
+  page: 16
+  clause: 'Cybersecurity function: Respond, item a'
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: global_example
+  why: Securities-sector framework requires timely reporting through a portal, with no hour count in this sentence; a comparator for reporting clocks.
+verified: false
+notes: Read by keyword check (205 pages). Securities-sector cyber framework. Binding label not confirmed from the cover. The text requires timely reporting but gives no hour count in the sentence quoted. Comparison only; no NTN link.

@@ -1,0 +1,30 @@
+id: intl-ecss-q-st-80c
+title: Space product assurance – Software product assurance (ECSS-Q-ST-80C Rev.1)
+authority: European Cooperation for Space Standardization
+jurisdiction: INTL
+doc_type: standard
+url: https://ecss.nl/wp-content/uploads/2017/04/ECSS-Q-ST-80C-Rev.1%2815February2017%29.pdf
+landing_page: https://ecss.nl
+local_path: corpus/raw/global/intl-ecss-q-st-80c.pdf
+sha256: daf707f31e66b8746413af3fcd6bbc78e607008bd687e07ec2bab1a6371879eb
+bytes: 983608
+pages: 117
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: The word “shall” is used in this Standard to express requirements.
+issued: 2017-02-15 (Rev.1)
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: context
+candidate_quotes: []
+verified: false
+notes: Software product assurance standard, not a security standard. Downloaded from the ECSS PDF link on the listed landing page. Listed URL/status claim of 'binding' is not stated in the document; applicability
+  is by contract.

@@ -1,0 +1,34 @@
+id: in-trai-space-spectrum-recommendations-2025
+title: "TRAI Recommendations on Spectrum for Space-Based Communication Services (2025)"
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendations
+url: "https://www.trai.gov.in/sites/default/files/2025-05/Recommendtion_09052025.pdf"
+landing_page: https://www.trai.gov.in/
+local_path: corpus/raw/india/in-trai-space-spectrum-recommendations-2025.pdf
+sha256: a165aafb7702aa1ce38346236b3b3c91c183e0aff5c4ad627924636a715a1ff3
+bytes: 7658675
+pages: 203
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: 2025-05-09
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: india_evidence
+candidate_quotes:
+  - quote: "mobile satellite systems have started offering emergency SOS12 communication"
+    page: 47
+    clause: "Background section on emergency SOS (clause not identified)"
+    topic: disaster_coordination
+    gap: null
+    supports: context
+    why: "States that satellite operators already offer emergency SOS to handset users, a precedent for emergency traffic over satellite in the NTN scenario."
+verified: false
+notes: "Advisory TRAI recommendations (about 203 pages) on space-based services spectrum. Mentions of disaster and emergency are present. The quote is a background statement; the footnote marker SOS12 is kept as printed. No binding gap is closed."

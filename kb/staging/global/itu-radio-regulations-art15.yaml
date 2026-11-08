@@ -1,0 +1,48 @@
+id: itu-radio-regulations-art15
+title: "ITU Radio Regulations (Edition of 2024) - Article 15: Interferences"
+authority: International Telecommunication Union (ITU)
+jurisdiction: International
+doc_type: treaty_article
+url: https://www.itu.int/pub/R-REG-RR-2024
+landing_page: https://www.itu.int/pub/R-REG-RR-2024
+local_path: corpus/raw/global/itu-radio-regulations-art15.pdf
+sha256: a19db60201342f44443143c01c528abe725b93cf133602631edaa2b6c9ba6a8f
+bytes: 2496298
+pages: 464
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "All stations are forbidden to carry out unnecessary transmissions, or the transmission of superfluous signals, or the transmission of false or misleading signals"
+issued: 2024-08-19
+in_force_from: 2025-01-01
+amends: []
+amended_by: []
+licence: copyright_itu
+language: en
+gaps: [GAP-IN-06, GAP-IN-09]
+role: global_example
+candidate_quotes:
+  - quote: "All stations are forbidden to carry out unnecessary transmissions, or the transmission of superfluous signals, or the transmission of false or misleading signals, or the transmission of signals without identification (except as provided for in Article 19)."
+    page: 261
+    clause: "Article 15, No. 15.1 § 1"
+    topic: interference_reporting
+    gap: GAP-IN-09
+    supports: global_example
+    why: "Strict treaty prohibition against false, misleading, or superfluous radio signaling and spoofing."
+  - quote: "Recognizing that transmissions on distress and safety frequencies and frequencies used for the safety and regularity of flight (see Article 31 and Appendix 27) require absolute international protection and that the elimination of harmful interference to such transmissions is imperative, administrations undertake to act immediately when their attention is drawn to any such harmful interference. (WRC-07)"
+    page: 263
+    clause: "Article 15, No. 15.28 § 20"
+    topic: emergency_powers
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Mandates immediate sovereign state action to eliminate harmful interference on safety-of-life and flight frequencies."
+  - quote: "It is essential that Member States exercise the utmost goodwill and mutual assistance in the application of the provisions of Article 45 of the Constitution and of this Section to the settlement of problems of harmful interference."
+    page: 263
+    clause: "Article 15, No. 15.22 § 14"
+    topic: disaster_coordination
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Establishes international cooperation obligations for resolving cross-border radio interference."
+verified: false
+notes: "Binding international treaty adopted at WRC-23; extracted from Volume 1 (Articles)."

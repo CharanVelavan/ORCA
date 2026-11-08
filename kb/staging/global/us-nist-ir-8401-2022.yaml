@@ -1,0 +1,48 @@
+id: us-nist-ir-8401-2022
+title: "Satellite Ground Segment: Applying the Cybersecurity Framework to Satellite Command and Control (NIST IR 8401)"
+authority: National Institute of Standards and Technology (NIST)
+jurisdiction: US
+doc_type: technical_report
+url: https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8401.pdf
+landing_page: https://csrc.nist.gov/pubs/ir/8401/final
+local_path: corpus/raw/global/us-nist-ir-8401-2022.pdf
+sha256: 8821a67fce8553ca73a063edfb60245af2e12167a2a224f9b5c38e25525c853d
+bytes: 1920798
+pages: 67
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "The ground segment profile is voluntary and does not issue regulations, define mandatory practices, provide a checklist for compliance, or carry statutory authority."
+issued: 2022-12-30
+in_force_from: 2022-12-30
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+role: global_example
+candidate_quotes:
+  - quote: "The Profile defined in this report helps address SPD-5’s goals for securing space. It directly supports key principles such as developing and implementing cybersecurity plans to ensure space systems’ ability to verify the integrity, confidentiality, and availability of critical functions as well as retain or recover positive control of space vehicles."
+    page: 10
+    clause: "Executive Summary"
+    topic: space_cyber
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Aligns NIST ground segment profile directly with Presidential Space Policy Directive 5 for positive control of space vehicles."
+  - quote: "The ground segment profile is voluntary and does not issue regulations, define mandatory practices, provide a checklist for compliance, or carry statutory authority. It is intended to be a foundational set of guidelines."
+    page: 10
+    clause: "Executive Summary"
+    topic: space_cyber
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Clarifies legal character as voluntary advisory baseline rather than mandatory regulation."
+  - quote: "respond to confidentiality breaches of Telemetry, Tracking, and Command (TT&C) and a manipulation or loss of satellite commands or telemetry in a timely, effective, and resilient manner; and"
+    page: 12
+    clause: "Section 1.1"
+    topic: signalling_security
+    gap: GAP-IN-09
+    supports: global_example
+    why: "Targets detection and response to TT&C signaling manipulation and unauthorized satellite command injection."
+verified: false
+notes: "NIST cybersecurity profile tailoring CSF specifically to satellite mission operations centers and ground command and control architectures."

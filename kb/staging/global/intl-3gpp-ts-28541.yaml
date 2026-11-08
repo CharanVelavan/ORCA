@@ -1,0 +1,48 @@
+id: intl-3gpp-ts-28541
+title: "3GPP TS 28.541 V18.4.0 (Release 18): Management and orchestration; 5G Network Resource Model (NRM); Stage 2 and stage 3"
+authority: 3GPP Technical Specification Group Services and System Aspects
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/28_series/28.541/28541-i40.zip
+landing_page: https://www.3gpp.org/DynaReport/28541.htm
+local_path: corpus/raw/global/intl-3gpp-ts-28541/28541-i40_c04_c07.docx
+sha256: 76049cdd161926486bd9d7ff874e5a845f7a5601b5cff91ed4c0c36ab25124b8
+bytes: 11356242
+pages: 6
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: '2023-06-26'
+in_force_from: '2023-06-26'
+amends: []
+amended_by: []
+licence: 3GPP open standard
+language: en
+gaps: []
+role: global_example
+candidate_quotes:
+  - quote: "This IOC represents the properties of a network slice in a 5G network."
+    page: 2
+    clause: "6.3.1.1"
+    topic: standards
+    gap: null
+    supports: context
+    why: "Defines the Information Object Class representing network slice properties in 5G network resource models."
+  - quote: "An instance of NetworkSliceSubnet that represents top network slice subnet shall be associated with one NetworkSlice instance."
+    page: 2
+    clause: "6.3.2.1"
+    topic: standards
+    gap: null
+    supports: context
+    why: "Establishes structural modeling constraints associating top network slice subnet instances with network slice instances."
+  - quote: "This IOC represents the management capabilities of Distributed SON Energy Saving (ES) functions (see clause 6.2.3.0 in TS 28.310 [71]). This is provided for Energy Saving purposes."
+    page: 2
+    clause: "4.3.58.1"
+    topic: backup_power
+    gap: null
+    supports: context
+    why: "Specifies energy saving control objects for dynamically managing power states across base station nodes."
+verified: false
+notes: "Unzipped into corpus/raw/global/intl-3gpp-ts-28541/ (multi-part .docx package, main specification body in 28541-i40_c04_c07.docx) and extracted text to intl-3gpp-ts-28541.txt. Legal status not stated in text. All NTN links in testbeds are emulated."

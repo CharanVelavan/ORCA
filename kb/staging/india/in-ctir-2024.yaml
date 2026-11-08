@@ -1,0 +1,70 @@
+id: in-ctir-2024
+title: Telecommunications (Critical Telecommunication Infrastructure) Rules, 2024
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules
+url: https://eservices.dot.gov.in/sites/default/files/circular-notifications/Critical%20Telecommunication%20Infrastructure%20Rules%2C%202024_0.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-ctir-2024.pdf
+sha256: 116466ec2799bb80750e9d810495fbfb1c0b041366dbb3625da03b2085199f4d
+bytes: 1884476
+pages: 10
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: Now, therefore, in exercise of the powers conferred by sub-section (4) of section 22 read with clause (w) of
+  sub-section (2) of section 56 of the Telecommunications Act, 2023 (44 of 2023), the Central Government hereby makes the
+  following rules, namely:-
+issued: 2024-11-22
+in_force_from: 2024-11-22
+amends: []
+amended_by: []
+licence: Government of India open (terms not checked)
+language: bilingual
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: Every telecommunication entity shall ensure that Critical Telecommunication Infrastructure, including any spares,
+    hardware and software used in such Critical Telecommunication Infrastructure, are in compliance with the following standards,
+    namely:–
+  page: 7
+  clause: Rule 4
+  topic: standards
+  gap: GAP-IN-06
+  supports: answers_gap
+  why: Mandates that Critical Telecommunication Infrastructure and components comply with notified standards including ERs
+    and ITSARs.
+- quote: implement mechanisms to ensure intimation of security incident(s) to the Central Government, no later than six hours
+    of occurrence of such incident, in the form and manner as may be specified on the portal; and
+  page: 8
+  clause: Rule 7(1)(j)
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: proves_gap
+  why: Prescribes a six-hour security incident intimation clock to the Central Government for incidents affecting Critical
+    Telecommunication Infrastructure.
+- quote: preserve in a secure manner, for a minimum period of two years or such other period as may be determined by the Central
+    Government, logs and documentation of the telecommunication network architecture of Critical Telecommunication Infrastructure,
+    including changes in such telecommunication network architecture;
+  page: 8
+  clause: Rule 7(1)(c)
+  topic: log_retention
+  gap: null
+  supports: context
+  why: Imposes a minimum two-year log and architecture documentation preservation requirement for Critical Telecommunication
+    Infrastructure.
+- quote: implement standard operating procedures for security incident response systems, including disaster recovery and business
+    continuity;
+  page: 8
+  clause: Rule 7(1)(i)
+  topic: disaster_coordination
+  gap: GAP-IN-08
+  supports: answers_gap
+  why: Requires covered telecommunication entities to implement SOPs for security incident response, disaster recovery and
+    business continuity.
+verified: false
+notes: Notified under G.S.R. 723(E), 22 Nov 2024. Implements IT/telecom critical infrastructure obligations under Section
+  22(4) of the Telecommunications Act 2023.

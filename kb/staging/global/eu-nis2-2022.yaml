@@ -1,0 +1,64 @@
+id: eu-nis2-2022
+title: Directive (EU) 2022/2555 of the European Parliament and of the Council of 14 December 2022 on measures for a high common
+  level of cybersecurity across the Union
+authority: European Parliament and Council
+jurisdiction: EU
+doc_type: act
+url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj/eng
+landing_page: https://eur-lex.europa.eu/eli/dir/2022/2555/oj/eng
+local_path: corpus/raw/global/eu-nis2-2022.html
+sha256: 9db7fd2a42c8af6acc492c7bb867f8d801bb55b88c06b847cc5e6dc9eb006517
+bytes: 969302
+pages: null
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: This Directive shall enter into force on the twentieth day following that of its publication in the Official
+  Journal of the European Union.
+issued: 2022-12-14
+in_force_from: 2023-01-16
+amends: []
+amended_by: []
+licence: EUR-Lex reuse policy
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+- GAP-IN-06
+- GAP-IN-08
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: Where appropriate, entities concerned shall notify, without undue delay, the recipients of their services of significant
+    incidents that are likely to adversely affect the provision of those services.
+  page: null
+  clause: Article 23(1)
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: global_example
+  why: Imposes a direct duty on covered entities to notify downstream recipients of significant incidents likely to affect
+    services without undue delay.
+- quote: without undue delay and in any event within 24 hours of becoming aware of the significant incident, an early warning,
+    which, where applicable, shall indicate whether the significant incident is suspected of being caused by unlawful or malicious
+    acts or could have a cross-border impact;
+  page: null
+  clause: Article 23(4)(a)
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: global_example
+  why: Sets a 24-hour early warning notification trigger for significant incidents suspected of malicious origin or cross-border
+    impact.
+- quote: Member States shall ensure that essential and important entities take appropriate and proportionate technical, operational
+    and organisational measures to manage the risks posed to the security of network and information systems which those entities
+    use for their operations or for the provision of their services, and to prevent or minimise the impact of incidents on
+    recipients of their services and on other services.
+  page: null
+  clause: Article 21(1)
+  topic: standards
+  gap: GAP-IN-06
+  supports: global_example
+  why: Mandates risk management and technical measures to protect network infrastructure and prevent downstream impact.
+verified: false
+notes: Official OJ publication downloaded from EUR-Lex. Key European cybersecurity benchmark for incident reporting, downstream
+  warning, and risk management.

@@ -1,0 +1,34 @@
+id: in-trai-service-authorisations-reco-2025
+title: "TRAI Recommendations on the Framework for Service Authorisations under the Telecommunications Act, 2023 (response to back reference, 2025)"
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendations
+url: "https://www.trai.gov.in/sites/default/files/2025-02/Recommendation_28022025.pdf"
+landing_page: https://www.trai.gov.in/
+local_path: corpus/raw/india/in-trai-service-authorisations-reco-2025.pdf
+sha256: 70b43e31308b6405ed676a03e1e79bbc721d8da77cd670c5c4165aa1cb2ad1e9
+bytes: 27453957
+pages: 207
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: 2025-02-28
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: india_evidence
+candidate_quotes:
+  - quote: "security of the State, the Central Government should seek TRAI’s"
+    page: 9
+    clause: "Recommendation on service authorisation suspension or revocation (clause not identified)"
+    topic: emergency_powers
+    gap: null
+    supports: context
+    why: "TRAI's recommendation on when the government may act in the interest of State security, relevant to emergency and suspension powers for satellite services."
+verified: false
+notes: "TRAI recommendations (advisory), not binding in themselves. The file is about 207 pages with many satellite mentions. The quote covers government action in the interest of State security, and the rest of the recommendation is not read. The list's advisory label is supported by the document's nature. No gap is closed."

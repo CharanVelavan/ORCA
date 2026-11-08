@@ -1,0 +1,30 @@
+id: sa-cst-crf-ict
+title: Cybersecurity Regulatory Framework (CRF) for the Information and Communications Technology Sector
+authority: Communications, Space and Technology Commission
+jurisdiction: SA
+doc_type: regulation
+url: https://www.cst.gov.sa/en/regulations-and-licenses/regulations/Document-413
+landing_page: https://www.cst.gov.sa
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2021
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-06
+- GAP-IN-08
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed CST page returned an HTML landing page (about 2,000 characters of text), not the regulatory framework PDF. Not obtained.

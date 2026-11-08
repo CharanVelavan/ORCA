@@ -1,0 +1,38 @@
+id: in-trai-dcip-authorization-recs-2023
+title: Recommendations on Introduction of Digital Connectivity Infrastructure Provider (DCIP) Authorization
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2024-09/Recommendations_08082023_1.pdf
+landing_page: https://trai.gov.in/telecom/licensing
+local_path: corpus/raw/india/in-trai-dcip-authorization-recs-2023.pdf
+sha256: cb8294d2dfcd95475437e63c24f61516086b1d99e6e1d306ba6b7f6c1c3d2b5a
+bytes: 1578980
+pages: 72
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2023-08-08'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-04
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: Authority recommends that the new category of license be called ‘Digital Connectivity Infrastructure Provider (DCIP)
+    License’.
+  clause: Chapter II Paragraph 2.1
+  topic: infrastructure_sharing
+  gap: null
+  supports: context
+  why: Recommends introducing a dedicated Digital Connectivity Infrastructure Provider license for active and passive infrastructure
+    sharing.
+  page: 27
+verified: false
+notes: TRAI recommendations on introducing Digital Connectivity Infrastructure Provider (DCIP) authorizations.

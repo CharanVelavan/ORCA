@@ -1,0 +1,39 @@
+id: au-soci-incident-reporting-part2b
+title: 'Security of Critical Infrastructure Act 2018: Part 2B (Mandatory Cyber Incident
+  Reporting)'
+authority: Parliament of Australia
+jurisdiction: AU
+doc_type: act
+url: https://www.legislation.gov.au/C2018A00029/latest/text
+landing_page: https://www.legislation.gov.au/C2018A00029/latest/text
+local_path: corpus/raw/global/au-soci-incident-reporting-part2b.html
+sha256: d4174cd507429c5d5635c659e74bc00c568133cf010fb71ca6c0376d2d383a04
+bytes: 214817
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: 2021
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+role: global_example
+candidate_quotes:
+- quote: Security of Critical Infrastructure Act 2018 - Federal Register of Legislation
+    &lt;link rel="stylesheet" href="styles.84630ab4f3c563f3.css"&gt;
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-01
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long
+  lines (37342); extracted text length 15501'

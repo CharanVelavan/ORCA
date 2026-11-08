@@ -1,0 +1,57 @@
+id: in-telecom-network-rules-2026
+title: Telecommunications (Authorisation for Telecommunication Network) Rules, 2026
+authority: Department of Telecommunications, Ministry of Communications
+jurisdiction: IN
+doc_type: rules
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/network-services-rules-july-2026.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules?page=0
+local_path: corpus/raw/india/in-telecom-network-rules-2026.pdf
+sha256: 95f7627a2d095ffefbafc724ec60d2f851c4e05f408615dc32331d9c4a0e7e67
+bytes: 1317384
+pages: 53
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "Now, therefore, in exercise of the powers conferred by sub-section (1) and clauses (a) and (d) of sub-section (2) of section 56 read with clause (b) of sub-section (1) and sub-section (6) of section 3 of the Telecommunications Act, 2023 (44 of 2023), the Central Government hereby makes the following rules"
+issued: '2026-07-20'
+in_force_from: '2026-07-20'
+amends: []
+amended_by: []
+licence: government_open
+language: bilingual
+gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+role: india_evidence
+candidate_quotes:
+  - quote: "These rules may be called the Telecommunications (Authorisation for Telecommunication Network) Rules, 2026."
+    page: 32
+    clause: "Rule 1(1)"
+    topic: telecom_cyber_security
+    gap: GAP-IN-06
+    supports: context
+    why: "Defines the short title and regulatory scope for telecommunication network authorisations."
+  - quote: "Every new authorised entity shall for the purposes of disaster management, ensuring public safety or providing response to an emergency or a disaster as defined under the Disaster Management Act, 2005 (53 of 2005), adhere to such directions or guidelines issued by the Central Government in this regard."
+    page: 40
+    clause: "Rule 24(10)"
+    topic: disaster_coordination
+    gap: GAP-IN-08
+    supports: proves_gap
+    why: "Mandates adherence to disaster management and emergency response directions issued by the Central Government."
+  - quote: "Every new authorised entity shall ensure that all systems of its telecommunication network and the data, logs and information associated with its telecommunication network shall be stored within India and no copies of such data, logs and information shall be routed, shared or made available outside India."
+    page: 40
+    clause: "Rule 25(3)"
+    topic: data_location
+    gap: GAP-IN-06
+    supports: proves_gap
+    why: "Enforces strict data sovereignty requiring all network systems, logs, and information to be stored within India without foreign routing."
+  - quote: "Satellite earth station gateway provider authorisation consists of authorisation to establish, operate, maintain or expand the satellite earth station gateway for such satellite or space segment capacity which is authorised by the Department of Space in the Government of India, or any other designated agency specified for this purpose."
+    page: 46
+    clause: "Rule 50(1)"
+    topic: space_cyber
+    gap: GAP-IN-06
+    supports: proves_gap
+    why: "Defines authorisation conditions for satellite earth station gateways linked to Department of Space approvals."
+verified: false
+notes: "Published in Gazette of India Extraordinary as G.S.R. 644(E). Note: NTN links in Chennai deployment operate as emulated networks."

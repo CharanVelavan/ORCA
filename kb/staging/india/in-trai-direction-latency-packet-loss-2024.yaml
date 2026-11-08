@@ -1,0 +1,41 @@
+id: in-trai-direction-latency-packet-loss-2024
+title: Direction on Monitoring and Reporting of Network Availability, Latency and Packet Loss
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: direction
+url: https://trai.gov.in/sites/default/files/2024-11/Direction_25102024.pdf
+landing_page: https://trai.gov.in/telecom/qos
+local_path: corpus/raw/india/in-trai-direction-latency-packet-loss-2024.pdf
+sha256: 04a8f9250e3fa4d79ce54decb42de265a616675a8de4e7dbc218d588ece2d23c
+bytes: 649549
+pages: 15
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: under section 13, read with sub-clauses (i) and (v) of clause (b) of sub-section (1) of section 11, of the
+  Telecom Regulatory Authority of India Act, 1997
+issued: '2024-10-25'
+in_force_from: 24th October 2024
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: under section 13, read with sub-clauses (i) and (v) of clause (b) of sub-section (1) of section 11, of the Telecom
+    Regulatory Authority of India Act, 1997 (24 of 1997), hereby directs all service providers providing access service (wireless)
+    under a license or Authorisation under the Telecommunications Act, 2023, to - (i) submit to the Authority or the officers
+    or employees of the Authority or the audit agency appointed by the Authority, the required data for the purpose of audit
+  clause: Paragraph 8
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: context
+  why: Directs wireless service providers to submit latency, packet loss, and performance audit data to TRAI and its appointed
+    auditor.
+  page: 3
+verified: false
+notes: Binding direction under TRAI Act Section 13 mandating data submission for QoS latency and packet loss auditing.

@@ -1,0 +1,31 @@
+id: in-nccs-itsar-4g-pgw-2022
+title: ITSAR for Packet Data Network Gateway (P-GW/PDN GW)
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR102022212.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-4g-pgw-2022.pdf
+sha256: ca4cc645c3ab30fc5b4e9c86673f5db9767d596faee8894046a3115fa5f263df
+bytes: 1225300
+pages: 48
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: The requirements specified here are binding both on operators and network equipment providers.
+issued: '2022-12-01'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for Packet Data Network Gateway (P-GW/PDN GW) under MTCTE. No clause
+  bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours floor,
+  or incident reporting clocks).

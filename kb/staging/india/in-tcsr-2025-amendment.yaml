@@ -1,0 +1,55 @@
+id: in-tcsr-2025-amendment
+title: Telecommunications (Telecom Cyber Security) Amendment Rules, 2025
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules
+url: https://eservices.dot.gov.in/sites/default/files/circular-notifications/telecom-cyber-security-amendment-rules-2025_0.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-tcsr-2025-amendment.pdf
+sha256: fe249008ba43a70bd50da278f0150b61e3a42161f21899882afca5057d895363
+bytes: 1446131
+pages: 7
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "Now, therefore, in exercise of the powers conferred by clause (v) of sub section (2) of section 56 of the Telecommunications Act, 2023 (44 of 2023), the Central Government hereby makes the following rules"
+issued: 2025-10-22
+in_force_from: 2025-10-22
+amends: [in-tcsr-2024]
+amended_by: []
+licence: Government of India open (terms not checked)
+language: bilingual
+gaps: [GAP-IN-01, GAP-IN-02, GAP-IN-06]
+role: india_evidence
+candidate_quotes:
+  - quote: "These rules may be called the Telecommunications (Telecom Cyber Security) Amendment Rules, 2025"
+    page: 5
+    clause: "Rule 1(1)"
+    topic: telecom_cyber_security
+    gap: null
+    supports: context
+    why: "Enacts the Telecommunications (Telecom Cyber Security) Amendment Rules, 2025, amending the 2024 principal rules."
+  - quote: "The MNV platform shall transmit any request received under sub-rule (2) or sub-rule (3) to authorised entities and licensees for the purpose of validation, and such entities shall undertake such validation and provide their response to the MNV platform, as specified therein."
+    page: 6
+    clause: "Rule 6 (Rule 7A(4))"
+    topic: telecom_cyber_security
+    gap: GAP-IN-06
+    supports: answers_gap
+    why: "Specifies procedural mechanisms for Mobile Number Validation requests between authorized entities, licensees and the MNV platform."
+  - quote: "The Central Government shall, either directly or through an agency authorised by it, maintain a database of IMEIs which are tampered, or whose use has been restricted."
+    page: 6
+    clause: "Rule 7 (Rule 8(6))"
+    topic: standards
+    gap: GAP-IN-06
+    supports: answers_gap
+    why: "Mandates maintenance of a central database of tampered or restricted IMEIs to protect network and device security."
+  - quote: "Every manufacturer or importer of any telecommunication equipment that bears an International Mobile Equipment Identity (IMEI) number shall ensure compliance with the directions as may be issued by the Central Government for the purpose of giving effect to these rules."
+    page: 7
+    clause: "Rule 7 (Rule 8(8))"
+    topic: standards
+    gap: GAP-IN-06
+    supports: proves_gap
+    why: "Imposes compliance obligations on telecommunication equipment manufacturers and importers regarding IMEI integrity directives."
+verified: false
+notes: "Notified under G.S.R. 771(E), 22 Oct 2025. Introduces Mobile Number Validation (MNV) platform and IMEI restriction controls."

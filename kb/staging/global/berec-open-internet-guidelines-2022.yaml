@@ -1,0 +1,33 @@
+id: berec-open-internet-guidelines-2022
+title: BEREC Guidelines on the Implementation of the Open Internet Regulation (BoR
+  (22) 81)
+authority: Body of European Regulators for Electronic Communications (BEREC)
+jurisdiction: EU
+doc_type: guideline
+url: https://www.berec.europa.eu/en/document-store/berec-office/berec-guidelines/berec-guidelines-on-the-implementation-of-the-open-internet-regulation
+landing_page: https://www.berec.europa.eu
+local_path: corpus/raw/global/berec-open-internet-guidelines-2022.html
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2022-06-09
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: BEREC open access
+language: en
+gaps:
+- GAP-IN-03
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts:  Time  Current\n                \
+  \                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0\
+  \     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0   \
+  \ 0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56)\
+  \ The requested URL returned error: 404"

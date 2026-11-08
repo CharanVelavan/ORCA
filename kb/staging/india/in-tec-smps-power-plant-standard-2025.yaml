@@ -1,0 +1,38 @@
+id: in-tec-smps-power-plant-standard-2025
+title: Standard for High Frequency Switch Mode Power Supply (SMPS) Power Plant (TEC 66110:2025)
+authority: Telecommunication Engineering Centre (TEC)
+jurisdiction: IN
+doc_type: standard
+url: https://tec.gov.in/pdf/GRFA/SMPS_TEC_GR%2066110_2025_v02.pdf
+landing_page: https://www.tec.gov.in
+local_path: corpus/raw/india/in-tec-smps-power-plant-standard-2025.pdf
+sha256: 2215f0eb4393ad83c7edb405e924583a32f8037e0d36b9bc01a71f04ebfd80dc
+bytes: 1325581
+pages: 78
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: standard
+binding_basis: not stated in the document
+issued: 2025-01
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-04
+role: india_evidence
+candidate_quotes:
+- quote: However, at any point of time VRLA & Li-ion battery cannot work simultaneously with the SMPS power plant. Purchaser
+    may decide for power plant to be compatible with conventional Lead Acid batteries, if ordered.
+  clause: Clause 1.0 Scope
+  topic: backup_power
+  gap: GAP-IN-04
+  supports: context
+  why: Specifies operational constraints preventing simultaneous operation of VRLA and Li-ion battery banks on telecom SMPS
+    power plants.
+  page: 3
+verified: false
+notes: Generic requirements standard for telecom SMPS power plants; specifies dual-battery compatibility rules relevant to
+  site energy resilience.

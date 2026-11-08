@@ -1,0 +1,27 @@
+id: in-dot-telegraph-row-amendment-2022
+title: "Indian Telegraph (Right of Way) Amendment Rules, 2022"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification)
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/indian-telegraph-right-of-way-amendment-rules-2022.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-telegraph-row-amendment-2022.pdf
+sha256: c08e193a087a6a91121599f0c74d2bc1cc46aff5ec420c485f08af5f450ecc75
+bytes: 1569519
+pages: 8
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "the Central Government hereby makes the following rules further to amend the Indian Telegraph Right of Way Rules, 2016, namely"
+issued: 2022-08-17
+in_force_from: unknown
+amends: [Indian Telegraph Right of Way Rules, 2016]
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: bilingual (Hindi and English)
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Read in full by keyword check (satellite, emergency, disaster, cyber, security, incident, priority). No clause on cyber security, satellite, emergency or priority. Right-of-way rules only, so no candidate quotes. The list says binding; the notification says so in its own words, so this matches."

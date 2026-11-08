@@ -1,0 +1,61 @@
+id: in-space-policy-2023
+title: Indian Space Policy 2023
+authority: Government of India, Department of Space
+jurisdiction: IN
+doc_type: strategy
+url: https://www.isro.gov.in/media_isro/pdf/IndianSpacePolicy2023.pdf
+landing_page: https://www.isro.gov.in/IndianSpacePolicy.html
+local_path: corpus/raw/india/in-space-policy-2023.pdf
+sha256: b6f852a958d7dec07ecb5c10d8bc42857dd471f71c9070fc4a1aa0a95524755a
+bytes: 344087
+pages: 11
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: the reform vision approved by Cabinet
+issued: 2023-04-20
+in_force_from: 2023-04-20
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-09
+role: india_evidence
+candidate_quotes:
+- quote: NGEs shall be allowed to undertake end-to-end activities in space sector through establishment and operation of space
+    objects, ground-based assets and related services, such as communication, remote sensing, navigation, etc.
+  page: 6
+  clause: Section 4
+  topic: space_cyber
+  gap: GAP-IN-09
+  supports: answers_gap
+  why: Authorizes Non-Governmental Entities to provide end-to-end satellite communication and ground-station operations.
+- quote: IN-SPACe shall function as an autonomous Government organization, mandated to promote, hand-hold, guide and authorize
+    space activities in the country.
+  page: 7
+  clause: Section 5
+  topic: space_cyber
+  gap: GAP-IN-09
+  supports: answers_gap
+  why: Designates IN-SPACe as the single-window regulatory and authorization agency for non-governmental space activities.
+- quote: for telecommunication services shall be governed by the rules, regulations and policies of Department of Telecommunications
+    (DoT), Ministry of Communications.
+  page: 8
+  clause: Section 5, Clause 13.2
+  topic: space_cyber
+  gap: GAP-IN-09
+  supports: proves_gap
+  why: Subjects satellite telecommunication operations to DoT rules and policies, demonstrating regulatory fragmentation across
+    space and telecom domains.
+- quote: issue guidelines for meeting safety and security requirements for space objects.
+  page: 8
+  clause: Section 5, Clause 17
+  topic: space_cyber
+  gap: GAP-IN-09
+  supports: answers_gap
+  why: Empowers IN-SPACe to issue guidelines for safety and security requirements applicable to space objects.
+verified: false
+notes: Approved by Cabinet Committee on Security in April 2023; provides overall national space policy and IN-SPACe authorization
+  framework.

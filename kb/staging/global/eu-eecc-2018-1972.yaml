@@ -1,0 +1,60 @@
+id: eu-eecc-2018-1972
+title: Directive (EU) 2018/1972 of the European Parliament and of the Council of 11 December 2018 establishing the European
+  Electronic Communications Code
+authority: European Parliament and Council
+jurisdiction: EU
+doc_type: act
+url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32018L1972
+landing_page: https://eur-lex.europa.eu/eli/dir/2018/1972/oj/eng
+local_path: corpus/raw/global/eu-eecc-2018-1972.pdf
+sha256: ffddc8797eb5107db8b062f71b17fe1101e38cd9e44aae9fef30702f0276520b
+bytes: 2826416
+pages: 179
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: This Directive shall enter into force on the third day following that of its publication in the Official Journal
+  of the European Union.
+issued: 2018-12-11
+in_force_from: 2018-12-20
+amends: []
+amended_by: []
+licence: EUR-Lex reuse policy
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-03
+- GAP-IN-04
+role: global_example
+candidate_quotes:
+- quote: Member States shall take all necessary measures to ensure the fullest possible availability of voice communications
+    services and internet access services provided over public electronic communications networks in the event of catastrophic
+    network breakdown or in cases of force majeure.
+  page: 146
+  clause: Article 108
+  topic: disaster_coordination
+  gap: GAP-IN-03
+  supports: global_example
+  why: Mandates Member States ensure maximum possible availability of voice and internet services during catastrophic network
+    failures.
+- quote: Member States shall ensure that providers of voice communications services take all necessary measures to ensure
+    uninterrupted access to emergency services and uninterrupted transmission of public warnings.
+  page: 146
+  clause: Article 108
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: global_example
+  why: Prioritizes uninterrupted access to emergency services and emergency public warning transmissions during breakdowns.
+- quote: Member States shall ensure that, when public warning systems regarding imminent or developing major emergencies and
+    disasters are in place, public warnings are transmitted by providers of mobile number-based interpersonal communications
+    services to the end-users concerned.
+  page: 148
+  clause: Article 110(1)
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: global_example
+  why: Requires mobile providers to transmit emergency warnings to end-users in disaster situations.
+verified: false
+notes: European Electronic Communications Code provisions governing network breakdown resilience, priority access to emergency
+  services, and public warning systems.

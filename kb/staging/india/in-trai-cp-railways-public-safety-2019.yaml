@@ -1,0 +1,35 @@
+id: in-trai-cp-railways-public-safety-2019
+title: Consultation Paper on Allotment of Spectrum to Indian Railways for Public Safety and Security Services
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/CP_SIR_24062019_0.pdf
+landing_page: https://trai.gov.in/telecom/spectrum
+local_path: corpus/raw/india/in-trai-cp-railways-public-safety-2019.pdf
+sha256: 8ac609888b0356815673cd25574253c0f8740faff8b6e13ec57fa0fa551cc6e8
+bytes: 2863837
+pages: 83
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2019-06-24'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+role: context
+candidate_quotes:
+- quote: 'Consultation Paper: 8/2019'
+  clause: Title Page
+  topic: priority_routing
+  gap: GAP-IN-03
+  supports: context
+  why: Consults on dedicating radio spectrum to Indian Railways for public safety, signaling, and security services.
+  page: 1
+verified: false
+notes: TRAI consultation paper on allotment of spectrum to Indian Railways for public safety.

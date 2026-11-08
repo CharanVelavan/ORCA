@@ -1,0 +1,37 @@
+id: intl-etsi-tr-101985
+title: 'ETSI TR 101 985 V1.1.2: Satellite Earth Stations and Systems (SES); Broadband Satellite Multimedia (BSM); Security threats analysis'
+authority: European Telecommunications Standards Institute
+jurisdiction: INTL
+doc_type: report
+url: https://www.etsi.org/deliver/etsi_tr/101900_101999/101985/01.01.02_60/tr_101985v010102p.pdf
+landing_page: https://www.etsi.org
+local_path: corpus/raw/global/intl-etsi-tr-101985.pdf
+sha256: e6dde1cd10fc03ebbf2fc39b796e65824c7d3a3ad52969f7063602d63ca7572d
+bytes: 348444
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: v1.1.2 (Broadband Satellite Multimedia, ETSI TR)
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+- GAP-IN-09
+role: context
+candidate_quotes:
+- quote: Because of the rich content of data transiting on the network, security becomes a mandatory requirement.
+  page: 37
+  clause: 11.1.2
+  topic: standards
+  gap: null
+  supports: context
+  why: States that security is mandatory for broadband satellite networks carrying user and signalling data.
+verified: false
+notes: Technical report (not normative). Section 11 covers BSM security requirements (pp. 37-39). Pages are PDF pages.

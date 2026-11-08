@@ -1,0 +1,27 @@
+id: in-rbi-digital-payment-security-2021
+title: RBI Master Direction on Digital Payment Security Controls (2021)
+authority: Reserve Bank of India
+jurisdiction: IN
+doc_type: master direction
+url: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12032
+landing_page: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12032
+sha256: 6bcef4c5a997dcd7ef97ee2b06e919a7aec18d8c00279dba0007249ee40973f1
+bytes: 195298
+pages: null
+local_path: corpus/raw/india/in-rbi-digital-payment-security-2021.html
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '2021'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: HTML text extracted. Keyword search found no reporting clock. Payment security controls only. No candidate quotes; binding label not confirmed from the text.

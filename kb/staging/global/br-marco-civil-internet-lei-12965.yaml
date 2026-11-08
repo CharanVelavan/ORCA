@@ -1,0 +1,29 @@
+id: br-marco-civil-internet-lei-12965
+title: 'Lei nº 12.965, de 23 de abril de 2014: Marco Civil da Internet'
+authority: Presidência da República
+jurisdiction: BR
+doc_type: act
+url: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm
+landing_page: https://www.planalto.gov.br
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2014-04-23'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-06
+role: context
+candidate_quotes: []
+verified: false
+notes: Planalto.gov.br connection reset (TLS) from this environment on 3 attempts; HTTP 1.1 retry also failed. Not obtained; retry later from another network.

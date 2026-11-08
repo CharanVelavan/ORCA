@@ -1,0 +1,40 @@
+id: in-mha-disaster-management-act-2005
+title: The Disaster Management Act, 2005 (Act No. 53 of 2005)
+authority: Ministry of Home Affairs / Parliament of India
+jurisdiction: IN
+doc_type: act
+url: https://thc.nic.in/Central%20Governmental%20Acts/Disaster%20Management%20Act,%202005.pdf
+landing_page: https://ndma.gov.in
+local_path: corpus/raw/india/in-mha-disaster-management-act-2005.pdf
+sha256: f2b964b9f686731f0e53e117014d6e2b884f1817e9918cfbf3ff7044bab2179e
+bytes: 16064335
+pages: 55
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: legislation
+binding_basis: to amend the Disaster Management Act, 2005.
+issued: '2005-12-23'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-03
+role: india_evidence
+candidate_quotes:
+- quote: notify the Ministries or Departments of the Government of India which shall have the responsibility for monitoring,
+    early warning, prevention, mitigation, preparedness and capacity building with regard to disasters arising from various
+    hazards
+  clause: Section 18
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: context
+  why: Statutory provision empowering Central Government to designate ministries responsible for hazard monitoring and early
+    warnings.
+  page: 50
+verified: false
+notes: Disaster Management (Amendment) Act 2025 amending the Disaster Management Act 2005 to mandate hazard early warning
+  assignments.

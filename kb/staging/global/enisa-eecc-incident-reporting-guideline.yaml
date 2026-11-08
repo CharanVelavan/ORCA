@@ -1,0 +1,54 @@
+id: enisa-eecc-incident-reporting-guideline
+title: Technical Guideline on Incident Reporting under the EECC
+authority: European Union Agency for Cybersecurity (ENISA)
+jurisdiction: EU
+doc_type: guideline
+url: https://www.enisa.europa.eu/sites/default/files/publications/ENISA%20Technical%20Guideline%20on%20Incident%20Reporting%20under%20the%20EECC.pdf
+landing_page: https://www.enisa.europa.eu/publications/technical-guideline-on-incident-reporting-under-the-eecc
+local_path: corpus/raw/global/enisa-eecc-incident-reporting-guideline.pdf
+sha256: 870160449b37e6f2831d4ef0d43bed0bfa5f1d588cd0e02a60b2870349b40a00
+bytes: 1889960
+pages: 32
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: This publication should not be construed to be a legal action of ENISA
+issued: 2021-03-22
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Open access (ENISA / EU Publications Office reuse policy)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+role: global_example
+candidate_quotes:
+- quote: The CA should assess whether or not an incident is relevant for CAs in other countries and in this case make a crossborder
+    report.
+  page: 18
+  clause: Section 5.1
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: global_example
+  why: Provides technical guidance on cross-border telecom incident reporting between national regulatory authorities and
+    ENISA.
+- quote: There are different approaches in the different EU countries when it comes to defining what are the significant incidents
+    to be notified to the national authority.
+  page: 14
+  clause: Section 3.4
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: global_example
+  why: Analyzes member state threshold models for determining significant telecom incident triggers.
+- quote: Article 40 requires providers to report significant security incidents to the CA.
+  page: 15
+  clause: Section 4
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: global_example
+  why: Highlights statutory incident notification duties placed upon electronic communication providers under EECC Article
+    40.
+verified: false
+notes: Technical guideline on incident reporting under Article 40 of the European Electronic Communications Code (EECC).

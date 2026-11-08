@@ -1,0 +1,50 @@
+id: in-trai-space-spectrum-consultation-2023
+title: Consultation Paper on Assignment of Spectrum for Space-based Communication Services
+authority: Telecom Regulatory Authority of India
+jurisdiction: IN
+doc_type: consultation
+url: https://www.trai.gov.in/sites/default/files/2024-09/CP_06042023.pdf
+landing_page: https://www.trai.gov.in/consultation-paper-assignment-spectrum-space-based-communication-services
+local_path: corpus/raw/india/in-trai-space-spectrum-consultation-2023.pdf
+sha256: 060b1a19a0a46c560b13b9f695e4a525d3a1251ecafe6ee800fc409a110f44b4
+bytes: 10708091
+pages: 160
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "The Department of Telecommunications (DoT) sent a Reference through the letter No. L-14006/01/2021-NTG dated 13.09.2021 (Annexure-1) on the subject- ‘Seeking TRAI recommendations for the auction of spectrum in the frequency bands identified for International Mobile Telecommunications (IMT)/ 5G’ to TRAI"
+issued: '2023-04-06'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: government_open
+language: en
+gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+role: context
+candidate_quotes:
+  - quote: "However, the unique capabilities of non-terrestrial networks can help expand the reach of 5G technology in the realization of new use cases."
+    page: 31
+    clause: "Paragraph 2.53"
+    topic: standards
+    gap: GAP-IN-06
+    supports: context
+    why: "Acknowledges the role of non-terrestrial networks in expanding 5G reach and realizing new use cases."
+  - quote: "According to 3GPP15, for the service continuity between NTN and Terrestrial Networks (TN), 5G system shall support service continuity between 5G terrestrial access network and 5G satellite access networks owned by the same operator or owned by two different operators having an agreement."
+    page: 32
+    clause: "Paragraph 2.55"
+    topic: standards
+    gap: GAP-IN-06
+    supports: context
+    why: "References 3GPP TR 38.821 service continuity requirements between terrestrial networks and satellite NTN access networks."
+  - quote: "The required satellite capacity (space segment) shall be obtained by the Licensee from Department of Space (DoS)/NSIL or space segment provider duly authorized by DOS/ IN-SPACe on terms and conditions as applicable."
+    page: 31
+    clause: "Paragraph 2.52"
+    topic: space_cyber
+    gap: GAP-IN-09
+    supports: proves_gap
+    why: "Mandates procurement of satellite capacity exclusively from DoS, NSIL, or IN-SPACe authorized space segment providers."
+verified: false
+notes: "Consultation paper No. 6/2023. Discusses non-terrestrial networks (NTN) integration with 5G and satellite spectrum assignment mechanisms. All NTN links in the ORCA-NTN Chennai sandbox are emulated."

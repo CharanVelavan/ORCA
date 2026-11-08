@@ -1,0 +1,55 @@
+id: in-tec-li-ion-battery-planning-guide-2020
+title: Guideline on Energy Storage and Li-ion Battery Backup Solutions for Telecom (TEC/GL/FA/LIB-801/01/JUL-20)
+authority: Telecommunication Engineering Centre (TEC)
+jurisdiction: IN
+doc_type: guideline
+url: https://tec.gov.in/pdf/PlanningGuide/GL%20Li-ion%20battery%20TEC%20GL%20FA%20LIB%20801%2001%20JUL20.pdf
+landing_page: https://www.tec.gov.in
+local_path: corpus/raw/india/in-tec-li-ion-battery-planning-guide-2020.pdf
+sha256: 5515c8d1698174ba0fe21e669362a06147bb7237bd182cd80ddaf1ad6b7556c4
+bytes: 1028280
+pages: 36
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: The Objective of this document to act as guide for telecom network planners while planning for back-up and
+  energy storage solutions.
+issued: 2020-07
+in_force_from: July, 2020
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-04
+role: india_evidence
+candidate_quotes:
+- quote: The Objective of this document to act as guide for telecom network planners while planning for back-up and energy
+    storage solutions.
+  clause: ABSTRACT
+  topic: backup_power
+  gap: GAP-IN-04
+  supports: proves
+  why: Frames battery energy storage recommendations as an advisory planning guide for network planners rather than a mandatory
+    site runtime floor.
+  page: 3
+- quote: The back-up test is equivalent to a cycling test but with a long rest time at full charge level between charge and
+    discharge.
+  clause: 7.8. Back-up test
+  topic: backup_power
+  gap: GAP-IN-04
+  supports: context
+  why: Defines testing procedure for evaluating energy storage backup performance under constant current discharge.
+  page: 23
+- quote: The discharge is stopped when the battery voltage reaches the end of discharge voltage (or termination voltage) defined
+    by the manufacturer at this temperature or the low voltage limit defined by the user for the proper operation of its application.
+  clause: 7.8. Back-up test
+  topic: backup_power
+  gap: GAP-IN-04
+  supports: context
+  why: Leaves termination voltage and operational cutoff thresholds to manufacturer definition and user application.
+  page: 21
+verified: false
+notes: Advisory planning guide for telecom energy storage and lithium-ion batteries; confirms absence of a mandatory minimum
+  battery-hours floor.

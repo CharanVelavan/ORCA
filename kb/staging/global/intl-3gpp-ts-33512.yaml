@@ -1,0 +1,32 @@
+id: intl-3gpp-ts-33512
+title: '3GPP TS 33.512 V18.1.0: Security Assurance Specification (SCAS) for the Access
+  and Mobility Management Function (AMF)'
+authority: 3GPP SA3
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.512/33512-i10.zip
+landing_page: https://www.3gpp.org/ftp/Specs/archive/33_series/33.512/
+local_path: corpus/raw/global/intl-3gpp-ts-33512.html
+sha256: 3ce431a288c8cf859032520332479e8a682a947040c4852c5835b6c5add144f4
+bytes: 111105
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2024-03-28
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: 3GPP open standard
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes: []
+verified: false
+notes: 'Downloaded type: Zip archive data, at least v2.0 to extract, compression method=deflate;
+  text length 0; Downloaded content is not PDF or HTML: Zip archive data, at least
+  v2.0 to extract, compression method=deflate'

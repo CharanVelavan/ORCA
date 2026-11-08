@@ -1,0 +1,70 @@
+id: ca-bill-c26-ccspa-2024
+title: 'Bill C-26: An Act respecting cyber security, amending the Telecommunications
+  Act and making consequential amendments to other Acts'
+authority: Parliament of Canada
+jurisdiction: CA
+doc_type: act
+url: https://www.parl.ca/DocumentViewer/en/44-1/bill/C-26/third-reading
+landing_page: https://www.parl.ca/legisinfo/en/bill/44-1/c-26
+local_path: corpus/raw/global/ca-bill-c26-ccspa-2024.html
+sha256: 9aec5338cadccb22e3e93c6d188ab77e33f6d90c2793e24aaee29ff6b6d0d839
+bytes: 731116
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: false
+binding_status: draft
+binding_basis: not stated in the document
+issued: 2024-06-19
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Parliament of Canada open access
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes:
+- quote: Government Bill (House of Commons) C-26 (44-1) - Third Reading - An Act respecting
+    cyber security, amending the Telecommunications Act and making consequential amendments
+    to other Acts - Parliament of Canada Skip to main content Parliament of Canada
+    Visit Parliament Visit Français FR Senate House of Commons Bill C-26 If you have
+    any questions or comments regarding the accessibility of this publication, please
+    contact us at accessible@parl.gc.ca .
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-01
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: SUMMARY Part 1 amends the Telecommunications Act to add the promotion of
+    the security of the Canadian telecommunications system as an objective of the
+    Canadian telecommunications policy and to authorize the Governor in Council and
+    the Minister of Industry to direct telecommunications service providers to do
+    anything, or refrain from doing anything, that is necessary to secure the Canadian
+    telecommunications system.
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-01
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: Part 2 enacts the Critical Cyber Systems Protection Act to provide a framework
+    for the protection of the critical cyber systems of services and systems that
+    are vital to national security or public safety and that are delivered or operated
+    as part of a work, undertaking or business that is within the legislative authority
+    of Parliament.
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-01
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long
+  lines (3170), with CRLF, LF line terminators; extracted text length 179151'

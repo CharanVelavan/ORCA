@@ -1,0 +1,36 @@
+id: intl-ccsds-350-5-g-1
+title: Space Data Link Security Protocol—Summary of Concept and Rationale (CCSDS 350.5-G-1)
+authority: Consultative Committee for Space Data Systems
+jurisdiction: INTL
+doc_type: report
+url: https://ccsds.org/Pubs/350x5g1s.pdf
+landing_page: https://public.ccsds.org/Pubs/
+local_path: corpus/raw/global/intl-ccsds-350-5-g-1.pdf
+sha256: 16ad69d3d1f379e3e1fbfe768f2bab06b2885eaf4eb29b60b5e70f55754f507e
+bytes: 2266194
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: CCSDS 350.5-G-1
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: The Secure Space Data Link Protocol shall not introduce more than 50% overhead on
+  page: 117
+  clause: not stated
+  topic: space_cyber
+  gap: null
+  supports: global_example
+  why: Shows a design constraint for link security on satellite links (bandwidth overhead), relevant to emulated NTN links.
+verified: false
+notes: Green book (informational) on SDLS concept and rationale. The quote is a fragment of one sentence; the rest of the sentence is not captured in the layout text.

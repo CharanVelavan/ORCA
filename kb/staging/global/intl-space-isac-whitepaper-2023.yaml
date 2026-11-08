@@ -1,0 +1,31 @@
+id: intl-space-isac-whitepaper-2023
+title: Space Sector Cyber Threat Profile and Information Sharing Framework
+authority: Space Information Sharing and Analysis Center (Space ISAC)
+jurisdiction: INTL
+doc_type: report
+url: https://spaceisac.org/
+landing_page: https://spaceisac.org
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2023'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+- GAP-IN-09
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed URL https://spaceisac.org/ returned a connection reset (curl rc=56) on 3 attempts. The listed URL is the site homepage, not a direct link to the 2023 whitepaper; no document was obtained.
+  Not retried in the browser (low priority, context only).

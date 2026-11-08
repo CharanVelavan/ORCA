@@ -1,0 +1,31 @@
+id: in-nccs-itsar-5g-ric-2026
+title: 'ITSAR for Open RAN (O-RAN) of 5G: RAN Intelligent Controller (RIC)'
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR303102601.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-5g-ric-2026.pdf
+sha256: 4443a5f660c0815d19079eee5671acb5e1f861b0c70de1ed6143281ebc5e78e4
+bytes: 1174055
+pages: 84
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: requirements specified here are binding on network equipment providers i.
+issued: '2026-01-08'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: 'Specifies security assurance requirements for ITSAR for Open RAN (O-RAN) of 5G: RAN Intelligent Controller (RIC) under
+  MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover,
+  battery-hours floor, or incident reporting clocks).'

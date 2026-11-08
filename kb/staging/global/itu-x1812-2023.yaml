@@ -1,0 +1,61 @@
+id: itu-x1812-2023
+title: 'Recommendation ITU-T X.1812 (05/2022): Security framework based on trust relationships for the IMT-2020 ecosystem'
+authority: ITU-T Study Group 17
+jurisdiction: INTL
+doc_type: standard
+url: https://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-X.1812-202205-I!!PDF-E&type=items
+landing_page: https://www.itu.int/rec/T-REC-X.1812-202205-I/en
+local_path: corpus/raw/global/itu-x1812-2023.pdf
+sha256: 5b627346c6c2aac3a6ccf8e3cf22eb964fe0732249250319504327db1f38f482
+bytes: 1622132
+pages: 34
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: Compliance with this Recommendation is voluntary. However, the Recommendation may contain certain mandatory
+  provisions
+issued: 2022-05-13
+in_force_from: 2022-05-13
+amends: []
+amended_by: []
+licence: ITU open recommendation
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: Until now, the design principle for interconnection between public land mobile network (PLMN) operators assumed that
+    operators (at the service level) could completely trust each other, and the transmission of signalling and user data could
+    also be trusted.
+  page: 14
+  clause: Clause 8.3.1
+  topic: signalling_security
+  gap: GAP-IN-08
+  supports: global_example
+  why: Notes the legacy telecom assumption of inherent trust across carrier interconnects and highlights the risk in modern
+    multi-operator ecosystems.
+- quote: As a result, operators can only guarantee security for IPX connections directly connected to them, and not for links
+    between operators and all other links of operators.
+  page: 14
+  clause: Clause 8.3.1
+  topic: failover_path_security
+  gap: GAP-IN-06
+  supports: global_example
+  why: Highlights vulnerability of indirect and multi-operator interconnect paths when routing outside directly managed trust
+    boundaries.
+- quote: Supply chain risk management is the coordinated efforts of an organization to identify, monitor, detect and mitigate
+    threats to supply chain continuity and profitability.
+  page: 18
+  clause: Clause 8.6.1
+  topic: telecom_cyber_security
+  gap: GAP-IN-09
+  supports: global_example
+  why: Establishes baseline organizational requirements for supply chain threat monitoring and operational continuity in IMT-2020
+    deployments.
+verified: false
+notes: Target list described title as 'Security requirements and architecture for satellite communication networks' (03/2023);
+  authentic ITU-T X.1812 recommendation approved 05/2022 is 'Security framework based on trust relationships for the IMT-2020
+  ecosystem'.

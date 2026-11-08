@@ -1,0 +1,47 @@
+id: in-tec-vrla-battery-telecom-gr-2011
+title: Generic Requirements for Valve Regulated Lead Acid (VRLA) Batteries for Telecom (TEC-GR-PI-BAT-003-02-MAR-11)
+authority: Telecommunication Engineering Centre (TEC)
+jurisdiction: IN
+doc_type: standard
+url: https://tec.gov.in/pdf/GRFA/TEC-GR-PI-BAT-003-02-MAR-11.pdf
+landing_page: https://www.tec.gov.in
+local_path: corpus/raw/india/in-tec-vrla-battery-telecom-gr-2011.pdf
+sha256: 96379f99ae5c4b9cc053a9393703f2ace858c798a016a079ad1f63a275fbb729
+bytes: 657003
+pages: 47
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: standard
+binding_basis: not stated in the document
+issued: 2011-03
+in_force_from: March, 2011
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-04
+role: india_evidence
+candidate_quotes:
+- quote: 'Float and Cyclic Application: The batteries in Indian Telecom Network are used for Float and cyclic application
+    depending upon the requirement and location. The battery may be required to provide a back-up between 6 to 72 hours.'
+  clause: Clause 1.1.1.1
+  topic: backup_power
+  gap: GAP-IN-04
+  supports: proves
+  why: Recognizes site backup requirements ranging between 6 to 72 hours depending on location without establishing a mandatory
+    statutory floor.
+  page: 6
+- quote: 'Float Application: The battery is normally not allowed to discharge beyond 80% of C (rated capacity of the battery
+    at C/10 rate of discharge).'
+  clause: Clause 1.1.1.1
+  topic: backup_power
+  gap: GAP-IN-04
+  supports: context
+  why: Specifies depth of discharge limit of 80 percent for float applications under C/10 discharge rates in Indian telecom
+    networks.
+  page: 6
+verified: false
+notes: Generic technical requirements for VRLA gel batteries in telecom; mentions 6-72 hour operational back-up ranges without
+  mandating a binding site floor.

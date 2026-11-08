@@ -1,0 +1,29 @@
+id: jp-mic-telecom-cybersecurity-guidelines
+title: Guidelines for Information Security Measures in Telecommunications Businesses
+authority: Ministry of Internal Affairs and Communications
+jurisdiction: JP
+doc_type: guideline
+url: https://www.soumu.go.jp/main_content/000788392.pdf
+landing_page: https://www.tele.soumu.go.jp
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2021
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed URL failed with curl rc=22 (HTTP error) on 3 attempts.

@@ -1,0 +1,62 @@
+id: in-trai-ppdr-consultation-2017
+title: 'Consultation Paper No. 15/2017: Next Generation Public Protection and Disaster Relief (PPDR) communication networks'
+authority: Telecom Regulatory Authority of India
+jurisdiction: IN
+doc_type: consultation
+url: https://www.trai.gov.in/sites/default/files/2024-09/Consultation_Paper_PPDR%20_09102017%20%281%29.pdf
+landing_page: https://www.trai.gov.in/
+local_path: corpus/raw/india/in-trai-ppdr-consultation-2017.pdf
+sha256: 1a0cfceb5b052e432c5113333d32ebb81d9a1bf7bc7eea48a4381cf4b21906e4
+bytes: 1306087
+pages: 61
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: for public consultation as per Section 11(a) of TRAI Act, 1997.
+issued: '2017-10-09'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: government_open
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-04
+role: context
+candidate_quotes:
+- quote: One of the most significant impact of natural disasters is the breakdown or interruption of traditional communications
+    networks.
+  page: 4
+  clause: Paragraph 1.2
+  topic: disaster_coordination
+  gap: GAP-IN-03
+  supports: context
+  why: Highlights the critical breakdown and congestion of traditional communication networks during disasters.
+- quote: The communication networks get entirely or partially damaged by disasters or become congested with exceptionally
+    high levels of traffic.
+  page: 4
+  clause: Paragraph 1.2
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: context
+  why: Notes network congestion and physical damage impeding emergency responders during disaster relief.
+- quote: PPDR supports a wide range of public services such as the maintenance of law and order, protection of life and property,
+    disaster relief and emergency responses.
+  page: 6
+  clause: Paragraph 1.8
+  topic: joint_command
+  gap: GAP-IN-04
+  supports: context
+  why: Defines the scope of public protection and disaster relief communication systems.
+- quote: PPDR applications, such as transmission of high resolution images and real time video, requires much higher bit-rates
+    than what current narrowband PPDR technology can deliver.
+  page: 8
+  clause: Paragraph 1.14
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: context
+  why: Identifies broadband capacity needs for next-generation emergency multimedia transmission.
+verified: false
+notes: TRAI Consultation Paper No. 12/2017 examining spectrum requirements, network architecture, and operational models for
+  next-generation PPDR networks in India.

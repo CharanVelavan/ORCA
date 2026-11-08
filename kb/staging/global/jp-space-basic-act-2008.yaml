@@ -1,0 +1,28 @@
+id: jp-space-basic-act-2008
+title: Space Basic Act (Act No. 43 of 2008)
+authority: National Diet of Japan
+jurisdiction: JP
+doc_type: act
+url: https://www.japaneselawtranslation.go.jp/en/laws/view/2857/en
+landing_page: https://www.cao.go.jp
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2008-05-28'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-09
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed URL https://www.japaneselawtranslation.go.jp/en/laws/view/2857/en returns a different act (energy use rationalisation), not the Space Basic Act. Not used.

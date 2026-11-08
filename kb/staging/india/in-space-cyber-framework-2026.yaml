@@ -1,0 +1,55 @@
+id: in-space-cyber-framework-2026
+title: Cyber Security Framework and Guidelines for Space including Satellite Communication
+authority: CERT-In and SIA-India
+jurisdiction: IN
+doc_type: guideline
+url: https://www.cert-in.org.in/PDF/CyberSecurityFrameworkGuideline_for_space.pdf
+landing_page: https://www.cert-in.org.in/
+local_path: corpus/raw/india/in-space-cyber-framework-2026.pdf
+sha256: 6310ef527d43896777084d9c875e7b33b9ad176fa51e42c2027a36c70400e50a
+bytes: 595317
+pages: 51
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: 2026-02-26
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+role: india_evidence
+candidate_quotes:
+  - quote: "All SatCom operators and service providers must report cybersecurity incidents, breaches, or anomalies within 6 hours of noticing the incident to CERT-In."
+    page: 12
+    clause: "3.2.1"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: proves_gap
+    why: "Directs SatCom operators to report cybersecurity incidents within 6 hours to CERT-In, aligned with CERT-In directions."
+  - quote: "All mission systems, ground infrastructure, and communication networks must comply with Catalogue of Indian Standards for Space Industry, Norms, Guidelines and Procedures (NGP) released by the Department of Space."
+    page: 12
+    clause: "3.2.2"
+    topic: standards
+    gap: GAP-IN-06
+    supports: answers_gap
+    why: "Prescribes compliance with Department of Space standards catalogue and IN-SPACe NGP guidelines for space systems and ground infrastructure."
+  - quote: "Unified Incident Response: Ensure coordinated procedures among operators, ground stations, and service providers."
+    page: 32
+    clause: "6.5"
+    topic: disaster_coordination
+    gap: GAP-IN-02
+    supports: answers_gap
+    why: "Urges coordinated cross-segment incident response procedures spanning space operators, ground stations and downstream service providers."
+  - quote: "All confirmed or suspected cybersecurity incidents affecting satellite networks, ground control systems, or user data shall be reported to CERT-In within 6 hours of noticing such incidents or being brought to notice about such incidents as per the cybersecurity directions of CERT-In."
+    page: 33
+    clause: "7.1"
+    topic: space_cyber
+    gap: GAP-IN-09
+    supports: answers_gap
+    why: "Calls for 6-hour reporting of confirmed or suspected incidents affecting satellite networks, ground control or user data to CERT-In."
+verified: false
+notes: "Joint guidelines issued by CERT-In and SIA-India on 26 Feb 2026; binding legal character is not expressly stated in the document despite mandatory drafting language ('shall', 'must')."

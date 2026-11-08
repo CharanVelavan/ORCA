@@ -1,0 +1,30 @@
+id: in-trai-qos-fifth-amendment-regulations-2017
+title: The Standards of Quality of Service of Basic Telephone Service and Cellular
+  Mobile Telephone Service (Fifth Amendment) Regulations, 2017
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: regulation
+url: https://trai.gov.in/sites/default/files/2024-09/Fifth%20Amd_QOS_Reg_18082017%20%281%29.pdf
+landing_page: https://trai.gov.in/telecom/qos
+local_path: corpus/raw/india/in-trai-qos-fifth-amendment-regulations-2017.pdf
+sha256: e71530cf9fa9383ff70a398cc34e540d88ddc52df0928e68b4c67d33201d9da0
+bytes: 8939604
+pages: 33
+retrieved_at: '2026-11-08'
+status: scanned
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2017-08-18'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-04
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Text extraction yielded fewer than 200 characters per page; no quotes added.

@@ -1,0 +1,48 @@
+id: us-fcc-911-reliability-2013
+title: Improving 911 Reliability; Reliability and Continuity of Communications Networks, Including Broadband Technologies (FCC 13-158)
+authority: Federal Communications Commission (FCC)
+jurisdiction: US
+doc_type: regulatory_order
+url: https://docs.fcc.gov/public/attachments/FCC-13-158A1.pdf
+landing_page: https://www.fcc.gov/document/fcc-adopts-rules-improve-reliability-and-resiliency-911-networks
+local_path: corpus/raw/global/us-fcc-911-reliability-2013.pdf
+sha256: 2e315d763b0ceef57cc16b1137871330a25fa7ae238ad21b78fcb0134d4ce83f
+bytes: 643046
+pages: 83
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "In this Report and Order, the Federal Communications Commission (FCC or Commission) adopts rules to improve the reliability and resiliency of 911 communications networks nationwide"
+issued: 2013-12-12
+in_force_from: 2014-02-18
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-01, GAP-IN-02, GAP-IN-04, GAP-IN-08]
+role: global_example
+candidate_quotes:
+  - quote: "Provisions backup power through fixed generators, portable generators, batteries, fuel cells, or a combination of these or other such sources to maintain full-service functionality, including network monitoring capabilities, for at least 24 hours at full office load or, if the central office hosts a Selective Router, at least 72 hours at full office load; provided, however, that any such portable generators shall be readily available within the time it takes the batteries to drain, notwithstanding potential demand for such generators elsewhere in the service provider’s network."
+    page: 68
+    clause: "Appendix B, 47 CFR § 12.4(c)(2)(i)(C)"
+    topic: backup_power
+    gap: GAP-IN-04
+    supports: global_example
+    why: "Prescribes 24-hour backup power for central offices and 72-hour backup power for selective router facilities delivering 911 service."
+  - quote: "In addition to any other obligations imposed in this section, within thirty minutes of discovering an outage that potentially affects a 911 special facility (as defined in § 4.5), all Covered 911 Service Providers (as defined in § 12.4(a)(4)) shall notify as soon as possible but no later than thirty minutes after discovering the outage any official who has been designated by the affected 911 special facility as the provider’s contact person(s) for communications outages at that facility and convey all available information that may be useful in mitigating the effects of the outage, as well as a name, telephone number, and e-mail address at which the service provider can be reached for follow-up."
+    page: 64
+    clause: "Appendix B, 47 CFR § 4.9(h)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: global_example
+    why: "Imposes strict 30-minute downstream outage notification window to emergency answering points (PSAPs) during disruptions."
+  - quote: "Eliminated all single points of failure in Critical 911 Circuits or equivalent data paths serving each PSAP."
+    page: 67
+    clause: "Appendix B, 47 CFR § 12.4(c)(1)(i)(C)"
+    topic: failover_path_security
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Mandates circuit diversity auditing to eliminate single points of failure along critical emergency communication links."
+verified: false
+notes: "Landmark post-derecho FCC order establishing Part 12 annual certification and 30-minute PSAP outage notification rules."

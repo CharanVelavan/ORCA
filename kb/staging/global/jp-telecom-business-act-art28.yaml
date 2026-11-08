@@ -1,0 +1,41 @@
+id: jp-telecom-business-act-art28
+title: 'Telecommunications Business Act (Act No. 86 of 1984): Article 28 and Article
+  31 (Reporting and Technical Standards)'
+authority: Ministry of Internal Affairs and Communications (MIC, Japan)
+jurisdiction: JP
+doc_type: act
+url: https://www.japaneselawtranslation.go.jp/en/laws/view/4279/en
+landing_page: https://www.soumu.go.jp/english/
+local_path: corpus/raw/global/jp-telecom-business-act-art28.html
+sha256: 8faa1bf76891e40f1855c1bbe7728cb064027b06332ad2f40d6d3dd402e5f589
+bytes: 68925
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: false
+binding_status: binding
+binding_basis: not stated in the document
+issued: 1984-12-25
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Japanese Law Translation / Public Domain
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+- GAP-IN-04
+role: global_example
+candidate_quotes:
+- quote: Japanese Law Translation Database System Copyright &copy; 2026 Ministry of
+    Justice, Japan.
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-01
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long
+  lines (1171), with CRLF, LF line terminators; extracted text length 28634'

@@ -1,0 +1,30 @@
+id: in-nccs-itsar-5g-ausf-2022
+title: ITSAR for Authentication Server Function (AuSF) of 5G
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR111012209.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-5g-ausf-2022.pdf
+sha256: 67d07218ec07134f216b4a44e9b4cb9ace861818ca4b92d7512bb6ec924b5a60
+bytes: 748738
+pages: 60
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2022-09-01'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for Authentication Server Function (AuSF) of 5G under MTCTE. No
+  clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours
+  floor, or incident reporting clocks).

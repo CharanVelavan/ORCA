@@ -1,0 +1,37 @@
+id: in-tec-mtcte-phase3-phase4-notification
+title: Notification regarding Mandatory Testing and Certification of Telecom Equipment
+  (Phase-III and Phase-IV)
+authority: Telecommunication Engineering Centre (TEC)
+jurisdiction: IN
+doc_type: direction
+url: https://www.tec.gov.in/pdf/MTCTE/Notification_MTCTE_3_4.pdf
+landing_page: https://www.tec.gov.in
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2021-09-22'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: "failed: % Total    % Received % Xferd  Average Speed   Time    Time     Time\
+  \  Current\n                                 Dload  Upload   Total   Spent    Left\
+  \  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--\
+  \     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--\
+  \     0\ncurl: (60) SSL: no alternative certificate subject name matches target\
+  \ host name 'www.tec.gov.in'\nMore details here: https://curl.se/docs/sslcerts.html\n\
+  \ncurl failed to verify the legitimacy of the server and therefore could not\nestablish\
+  \ a secure connection to it. To learn more about this situation and\nhow to fix\
+  \ it, please visit the web page mentioned above."

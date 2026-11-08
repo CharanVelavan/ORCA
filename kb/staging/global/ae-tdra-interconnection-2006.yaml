@@ -1,0 +1,57 @@
+id: ae-tdra-interconnection-2006
+title: Interconnection Instructions, Version 1.2
+authority: Telecommunications and Digital Government Regulatory Authority
+jurisdiction: AE
+doc_type: instruction
+url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/Instruction-Interconnection-19Feb2006-EN-pdf.ashx
+landing_page: https://tdra.gov.ae/en/About/tdra-sectors/telecommunication
+local_path: corpus/raw/global/ae-tdra-interconnection-2006.html
+sha256: 2720bedb598ab88a685c83269de91b94d68b576a6d510c78bd2d3cc99b40660e
+bytes: 317567
+pages: 25
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2006
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-03
+role: global_example
+candidate_quotes:
+- quote: The Interconnection Instructions support the intention of the UAE Government
+    that the provisioning of a world-class competitive telecommunication infrastructure
+    is of critical importance to the economic development of the UAE.
+  page: 6
+  clause: not identified
+  topic: other
+  gap: GAP-IN-03
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: The principle underlying interoperability is that any two people within the
+    State of the UAE can call each other at any time.
+  page: 6
+  clause: not identified
+  topic: other
+  gap: GAP-IN-03
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: Authority (TRA) The General Authority for Regulating the Telecommunication
+    Sector Call(s) Calls are any demands to set up a connection to or from a Telecommunication
+    Network to utilize a Telecommunication Service.
+  page: 6
+  clause: not identified
+  topic: other
+  gap: GAP-IN-03
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: PDF document, version 1.4, 25 pages; text length 58601'

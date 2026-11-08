@@ -1,0 +1,27 @@
+id: in-certin-rules-2013
+title: Information Technology (The Indian Computer Emergency Response Team and Manner of Performing Functions and Duties) Rules, 2013
+authority: Ministry of Communications and Information Technology
+jurisdiction: IN
+doc_type: rules
+url: https://www.cert-in.org.in/PDF/G.S.R_20(E).pdf
+landing_page: https://www.cert-in.org.in/s2cMainServlet?pageid=AUTHORITY
+local_path: corpus/raw/india/in-certin-rules-2013.pdf
+sha256: 83d4aab32876ebb2162f2a8d627a565197eac9edcea498d508dfd34b5987e809
+bytes: 1913361
+pages: 6
+retrieved_at: 2026-11-08
+status: scanned
+official_domain: true
+binding_status: binding
+binding_basis: "not stated in the document"
+issued: 2014-01-16
+in_force_from: 2014-01-16
+amends: []
+amended_by: []
+licence: unknown
+language: bilingual
+gaps: [GAP-IN-01]
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: "Document is a scanned Gazette copy (G.S.R. 20(E)) with < 200 chars/page extracted. As per project rules, candidate_quotes are left empty pending OCR."

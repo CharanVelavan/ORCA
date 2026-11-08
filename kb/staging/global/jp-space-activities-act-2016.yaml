@@ -1,0 +1,28 @@
+id: jp-space-activities-act-2016
+title: Act on Launching of Spacecraft, etc. and Control of Spacecraft (Act No. 76 of 2016)
+authority: National Diet of Japan
+jurisdiction: JP
+doc_type: act
+url: https://www.japaneselawtranslation.go.jp/en/laws/view/3642/en
+landing_page: https://www.cao.go.jp
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2016-11-16'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-09
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed URL https://www.japaneselawtranslation.go.jp/en/laws/view/3642/en returns a different act (labour measures / employment stabilisation), not the Act on Launching of Spacecraft. Not used.

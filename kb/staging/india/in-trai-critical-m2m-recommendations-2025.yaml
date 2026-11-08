@@ -1,0 +1,34 @@
+id: in-trai-critical-m2m-recommendations-2025
+title: "TRAI Recommendations on Critical M2M Services (2025)"
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendations
+url: "https://www.trai.gov.in/sites/default/files/2025-04/Final_Reco_on_critical_M2M_services_22.04.2025_1250_0.pdf"
+landing_page: https://www.trai.gov.in/
+local_path: corpus/raw/india/in-trai-critical-m2m-recommendations-2025.pdf
+sha256: d4df7c12232eaff91eaeeb55c5a97e44bf6007551ef0ba741e852b7215d4532b
+bytes: 3078929
+pages: 87
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: 2025-04-22
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: india_evidence
+candidate_quotes:
+  - quote: "Critical M2M services may require robust, resilient, reliable, redundant and secure"
+    page: 16
+    clause: "Section on critical M2M service requirements (clause not identified)"
+    topic: critical_infrastructure
+    gap: null
+    supports: context
+    why: "TRAI recognises critical M2M services (for example emergency response) need resilient, redundant and secure connectivity, supporting the critical-service customer in the NTN scenario."
+verified: false
+notes: "TRAI recommendations on critical M2M (about 87 pages), advisory. Cyber, resilience and emergency-service mentions are present; the quote is the requirement sentence for critical M2M. No binding gap is closed."

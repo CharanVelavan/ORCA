@@ -1,0 +1,72 @@
+id: in-tcsr-2024
+title: Telecommunications (Telecom Cyber Security) Rules, 2024
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules
+url: https://thc.nic.in/Central%20Governmental%20Rules/Telecommunications%20(Telecom%20Cyber%20Security)%20Rules,%202024.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-tcsr-2024.pdf
+sha256: 16f93fbc5e1bbdbdee56b3b98a020e0d49e32f98b524ed8942ac8d6f7dc81494
+bytes: 953435
+pages: 9
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: the Central Government hereby makes the following rules, namely:- 1. Short title and commencement. — (1) These
+  rules may be called the Telecommunications (Telecom Cyber Security) Rules, 2024.
+issued: 2024-11-21
+in_force_from: 2024-11-21
+amends: []
+amended_by:
+- in-tcsr-2025-amendment
+licence: Government of India open (terms not checked)
+language: bilingual
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+- GAP-IN-06
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: within six hours of becoming aware of a security incident affecting its telecommunication network or telecommunication
+    service, report the same to the Central Government with relevant details of the affected system including the description
+    of such incident;
+  page: 5
+  clause: Rule 7(1)(a)
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: proves_gap
+  why: Imposes a six-hour security incident reporting duty to the Central Government upon becoming aware of an incident affecting
+    telecom networks or services.
+- quote: 'within twenty-four hours of becoming aware of such incident, furnish the following information, as applicable:'
+  page: 5
+  clause: Rule 7(1)(b)
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: answers_gap
+  why: Requires detailed impact reporting within 24 hours regarding affected users, duration, geographical area and remedial
+    measures.
+- quote: The Central Government may, where it determines that disclosure of the security incident is in the public interest,
+    inform the public of such security incident, or require the affected telecommunication entity to do so.
+  page: 5
+  clause: Rule 7(2)
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: proves_gap
+  why: Public disclosure of incidents is at the discretion of the Central Government, proving the lack of a mandatory operator
+    duty to warn downstream dependent services.
+- quote: Every telecommunication entity shall appoint a Chief Telecommunication Security Officer, whose details shall be provided
+    in writing to the Central Government in the form as may be specified on the portal and any replacement or change of such
+    officer shall be promptly intimated to the Central Government, in such form as may be specified on the portal by that
+    Government.
+  page: 5
+  clause: Rule 6(1)
+  topic: telecom_cyber_security
+  gap: null
+  supports: context
+  why: Mandates appointment of a Chief Telecommunication Security Officer responsible for coordinating cybersecurity implementation
+    and incident reporting.
+verified: false
+notes: Notified under G.S.R. 720(E), 21 Nov 2024; Gazette text is bilingual (Hindi/English). PDF includes 2025 amendment on
+  pp. 7-8.

@@ -1,0 +1,36 @@
+id: in-trai-supp-cp-aircraft-ground-data-comm-2023
+title: Supplementary Consultation Paper on Data Communication Services Between Aircraft and Ground Stations
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/CP_03082023.pdf
+landing_page: https://trai.gov.in/telecom/licensing
+local_path: corpus/raw/india/in-trai-supp-cp-aircraft-ground-data-comm-2023.pdf
+sha256: f46d9bfef68bfd5f0516965ec9f5e63af2ce46c4bb97d73aa37b5733abdd8434
+bytes: 2338254
+pages: 26
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2023-08-03'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: Consultation Paper No. 12/ 2023
+  clause: Title Page
+  topic: space_cyber
+  gap: GAP-IN-06
+  supports: context
+  why: Supplementary consultation paper on technical and regulatory frameworks for aeronautical ground-air communications.
+  page: 1
+verified: false
+notes: TRAI supplementary consultation paper on aeronautical data communications.

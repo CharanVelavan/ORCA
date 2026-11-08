@@ -1,0 +1,36 @@
+id: in-trai-cp-network-authorisations-2024
+title: Consultation Paper on The Terms and Conditions of Network Authorisations Under the Telecommunications Act, 2023
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-11/CP_22102024%20%281%29.pdf
+landing_page: https://trai.gov.in/telecom/licensing
+local_path: corpus/raw/india/in-trai-cp-network-authorisations-2024.pdf
+sha256: 46e3fa182b4359173d4529bc7400969349809862bc34c448ecbae533fa23f1f6
+bytes: 4977080
+pages: 169
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2024-10-22'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-06
+role: context
+candidate_quotes:
+- quote: Consultation Paper No. 16/2024
+  clause: Title Page
+  topic: licensing_framework
+  gap: GAP-IN-06
+  supports: context
+  why: Consults on terms and conditions for network authorisations under the Telecommunications Act 2023.
+  page: 1
+verified: false
+notes: TRAI consultation paper on terms and conditions of network authorisations under Telecommunications Act 2023.

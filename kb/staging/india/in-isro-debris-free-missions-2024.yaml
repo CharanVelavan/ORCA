@@ -1,0 +1,27 @@
+id: in-isro-debris-free-missions-2024
+title: "ISRO: Debris Free Space Missions (web page)"
+authority: Indian Space Research Organisation
+jurisdiction: IN
+doc_type: web page
+url: https://www.isro.gov.in/Debris_Free_Space_Missions.html
+landing_page: https://www.isro.gov.in/Debris_Free_Space_Missions.html
+local_path: corpus/raw/india/in-isro-debris-free-missions-2024.html
+sha256: 73de954f293bc706b44f1a13101f1ec4c53bd2220f06bfcdd771679c98b13da7
+bytes: 9290
+pages: null
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: unknown
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India website (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Web page (plain-text copy saved). It lists debris-mitigation guidance (avoid debris, post-mission disposal). Space sustainability, not cyber or NTN. Binding status is not stated on the page; the list's advisory label is an inference. No candidate quotes."

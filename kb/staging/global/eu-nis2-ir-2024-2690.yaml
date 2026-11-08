@@ -1,0 +1,48 @@
+id: eu-nis2-ir-2024-2690
+title: "Commission Implementing Regulation (EU) 2024/2690 of 17 October 2024 laying down rules for the application of Directive (EU) 2022/2555 as regards technical and methodological requirements of cybersecurity risk-management measures and further specification of the cases in which an incident is considered to be significant"
+authority: European Commission
+jurisdiction: EU
+doc_type: regulation
+url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32024R2690
+landing_page: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2690
+local_path: corpus/raw/global/eu-nis2-ir-2024-2690.pdf
+sha256: 8799b1a7c352060c4f155ddc56241b0b2679e2204645361b134bbda3199d7199
+bytes: 959920
+pages: 34
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "This Regulation shall be binding in its entirety and directly applicable in all Member States."
+issued: 2024-10-17
+in_force_from: 2024-11-07
+amends: []
+amended_by: []
+licence: "EUR-Lex reuse policy"
+language: en
+gaps: [GAP-IN-01, GAP-IN-06, GAP-IN-08]
+role: global_example
+candidate_quotes:
+  - quote: "the incident has caused or is capable of causing direct financial loss for the relevant entity that exceeds EUR 500 000 or 5 % of the relevant entity’s total annual turnover in the preceding financial year, whichever is lower;"
+    page: 9
+    clause: "Article 3(1)(a)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: global_example
+    why: "Specifies quantitative financial impact thresholds triggering mandatory significant incident reporting under NIS2."
+  - quote: "a managed service or managed security service is completely unavailable for more than 30 minutes;"
+    page: 11
+    clause: "Article 10(a)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: global_example
+    why: "Defines complete unavailability for more than 30 minutes as a significant incident threshold for managed service providers."
+  - quote: "the integrity, confidentiality or authenticity of stored, transmitted or processed data related to the provision of a managed service or managed security service is compromised as a result of a suspectedly malicious action;"
+    page: 11
+    clause: "Article 10(c)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: global_example
+    why: "Establishes that compromises resulting from suspected malicious action constitute a significant incident for service providers."
+verified: false
+notes: "Commission Implementing Regulation specifying technical cybersecurity measures and significant incident thresholds under NIS2."

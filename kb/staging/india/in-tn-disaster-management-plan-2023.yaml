@@ -1,0 +1,27 @@
+id: in-tn-disaster-management-plan-2023
+title: Tamil Nadu State Disaster Management Plan (2023)
+authority: Tamil Nadu State Disaster Management Authority
+jurisdiction: IN-TN
+doc_type: plan
+url: https://cdn.s3waas.gov.in/s342e7aaa88b48137a16a1acd04ed91125/uploads/2023/05/2023051136.pdf
+landing_page: https://pudukkottai.nic.in/tn-disaster-management-plan-2023/
+sha256: 00042c76c2a4e624a9e356221f55dbe2ccb1e0d8f70c5175a31df0ebfa344957
+bytes: 2979941
+pages: 272
+local_path: corpus/raw/india/in-tn-disaster-management-plan-2023.pdf
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2023-05
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: Read by keyword check (272 pages). State disaster plan. Binding label from the list is not confirmed by the text. Telecom-continuity clauses were not extracted in this pass. No candidate quotes.

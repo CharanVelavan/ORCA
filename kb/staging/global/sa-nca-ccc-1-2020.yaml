@@ -1,0 +1,3 @@
+id: sa-nca-ccc-1-2020
+status: failed
+notes: "curl failed (curl rc=28) for https://nca.gov.sa/ccc-en.pdf"

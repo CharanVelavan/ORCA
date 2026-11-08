@@ -1,0 +1,48 @@
+id: intl-3gpp-ts-33511
+title: "3GPP TS 33.511 V18.2.0 (Release 18): Security Assurance Specification (SCAS) for the next generation Node B (gNodeB) network product class"
+authority: 3GPP Technical Specification Group Services and System Aspects
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.511/33511-i20.zip
+landing_page: https://www.3gpp.org/DynaReport/33511.htm
+local_path: corpus/raw/global/intl-3gpp-ts-33511/33511-i20.doc
+sha256: 4d9d533923ea6a024e9f90154589b98184209ee2e771fcf38460f93059fbf07e
+bytes: 305664
+pages: 6
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "The present document has not been subject to any approval process by the 3GPP Organizational Partners and shall not be implemented."
+issued: '2024-01-04'
+in_force_from: '2024-01-04'
+amends: []
+amended_by: []
+licence: 3GPP open standard
+language: en
+gaps: []
+role: global_example
+candidate_quotes:
+  - quote: "The gNB supports integrity protection and replay protection of RRC-signalling as specified in TS 33.501 [2], clause 5.3.3."
+    page: 5
+    clause: "4.2.2.1.1"
+    topic: signalling_security
+    gap: null
+    supports: context
+    why: "Specifies requirements for base stations to support RRC signaling integrity and replay protection."
+  - quote: "The gNB network product shall be connected in emulated/real network environments."
+    page: 5
+    clause: "4.2.2.1.1"
+    topic: standards
+    gap: null
+    supports: context
+    why: "Establishes test environment configuration requirements for security assurance evaluation of base stations."
+  - quote: "According to clause 4.4.4 of TS 33.117 [3], the transport protocols available on the interfaces providing IP-based protocols need to be robustness tested."
+    page: 5
+    clause: "4.4.4"
+    topic: telecom_cyber_security
+    gap: null
+    supports: context
+    why: "Prescribes robustness and fuzz testing requirements across IP transport interfaces for base station security certification."
+verified: false
+notes: "Unzipped into corpus/raw/global/intl-3gpp-ts-33511/ (33511-i20.doc) and extracted text to intl-3gpp-ts-33511.txt. Updated binding_basis to verbatim approval clause from document text. All NTN links in testbeds are emulated."

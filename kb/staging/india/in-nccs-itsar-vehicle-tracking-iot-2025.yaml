@@ -1,0 +1,30 @@
+id: in-nccs-itsar-vehicle-tracking-iot-2025
+title: ITSAR for IoT End Device - Vehicle Tracking Device
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR309072504.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-vehicle-tracking-iot-2025.pdf
+sha256: 07e1969199fcd1a75b76df526d6dd4fe0010fa8cfccf5a347a9806c6aa6c9107
+bytes: 801293
+pages: 76
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2025-04-21'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for IoT End Device - Vehicle Tracking Device under MTCTE. No clause
+  bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours floor,
+  or incident reporting clocks).

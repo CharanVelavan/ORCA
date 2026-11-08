@@ -1,0 +1,41 @@
+id: in-dot-network-services-rules-2026
+title: "Telecommunications (Network Services) Rules, 2026 (file: network-services-rules-july-2026); includes disaster, emergency and telecom-cyber-security duties"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification)
+url: "https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/network-services-rules-july-2026.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-network-services-rules-2026.pdf
+sha256: 95f7627a2d095ffefbafc724ec60d2f851c4e05f408615dc32331d9c4a0e7e67
+bytes: 1317384
+pages: 53
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "the Central Government hereby makes the following rules, namely"
+issued: 2026-07
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: india_evidence
+candidate_quotes:
+  - quote: "Every new authorised entity shall for the purposes of disaster management, ensuring public safety or providing response to an emergency or a disaster as defined under the Disaster Management Act, 2005 (53 of 2005), adhere to such directions or guidelines issued by the Central Government in this regard."
+    page: 40
+    clause: "Sub-rule (10)"
+    topic: disaster_coordination
+    gap: null
+    supports: context
+    why: "Obliges every new authorised entity to follow government directions for disasters and emergencies. It is a duty to comply with directions, not a joint plan (see GAP-IN-07)."
+  - quote: "and any threat to telecom cyber security."
+    page: 41
+    clause: "Sub-rule (3) (end of sentence; full clause begins 'Every new authorised entity shall, on receiving a request')"
+    topic: telecom_cyber_security
+    gap: null
+    supports: context
+    why: "Requires providers to give information and support to government on any threat to telecom cyber security when requested, a cooperation duty for incident coordination."
+verified: false
+notes: "Read by keyword and clause check. Binding by the 'hereby makes' wording. Sub-rule (3) and sub-rule (10) are the only clauses found on cyber threats and disasters. The file also has security-vetting duties for foreign nationals (security conditions section). No gap is linked. The sub-rule (3) quote is a partial clause, kept as found in the text; the full clause is in the file. The list's relevance is confirmed."

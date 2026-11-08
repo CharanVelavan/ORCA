@@ -1,0 +1,34 @@
+id: in-parl-it-report-48-data-security
+title: "Standing Committee on Communications and IT, Report No. 48 (data security)"
+authority: Parliament of India, Standing Committee on Communications and Information Technology
+jurisdiction: IN
+doc_type: parliamentary committee report
+url: "https://sansad.in/getFile/lsscommittee/Communications%20and%20Information%20Technology/17_Communications_and_Information_Technology_48.pdf?source=loksabhadocs"
+landing_page: https://sansad.in/
+local_path: corpus/raw/india/in-parl-it-report-48-data-security.pdf
+sha256: 0fe674e7572be522e1768fffa8b6a30100048ff74a8c284d336f84d8e32ed291
+bytes: 4772855
+pages: 88
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: unknown
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes:
+  - quote: "CERT-In issues alerts and advisories regarding latest cyber threats/vulnerabilities"
+    page: 19
+    clause: "Committee report (section not identified)"
+    topic: incident_reporting
+    gap: null
+    supports: context
+    why: "Shows CERT-In's alert and advisory role in the committee's view, a body that would receive and distribute incident warnings."
+verified: false
+notes: "Parliamentary committee report (88 pages) on data security. Cyber and CERT-In mentions are frequent. The quote is a factual description of CERT-In's role, not a recommendation. Report number and date are from the file name; the cover was not read. Binding status: committee report, not binding."

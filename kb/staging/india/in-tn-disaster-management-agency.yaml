@@ -1,0 +1,50 @@
+id: in-tn-disaster-management-agency
+title: Tamil Nadu State Disaster Management Agency
+authority: Tamil Nadu State Disaster Management Authority, Government of Tamil Nadu
+jurisdiction: IN-TN
+doc_type: guideline
+url: https://cra.tn.gov.in/disaster_t.php
+landing_page: https://cra.tn.gov.in/disaster_t.php
+local_path: corpus/raw/india/in-tn-disaster-management-agency.html
+sha256: 0882647877a76baf678a6d881648488ae14e1afa4421a518d8bdf3dfd5f591f1
+bytes: 16245
+pages: null
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "இந்த சட்டத்தின் பிரிவு 14(2)-ன் படி மாநில அளவில், தமிழ்நாடு மாநில பேரிடர் மேலாண்மை ஆணையம், மாண்புமிகு முதலமைச்சர் தலைமையின் கீழ் ஏற்படுத்தப்பட்டுள்ளது."
+issued: '2021'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: government_open
+language: ta
+gaps:
+  - GAP-IN-02
+  - GAP-IN-03
+role: context
+candidate_quotes:
+  - quote: "Commissionerate of Revenue Administration and Disaster Management - Government of Tamil Nadu"
+    page: null
+    clause: "Header"
+    topic: disaster_coordination
+    gap: GAP-IN-03
+    supports: context
+    why: "Official header of the Commissionerate of Revenue Administration and Disaster Management, Tamil Nadu."
+  - quote: "இந்த சட்டத்தின் பிரிவு 14(2)-ன் படி மாநில அளவில், தமிழ்நாடு மாநில பேரிடர் மேலாண்மை ஆணையம், மாண்புமிகு முதலமைச்சர் தலைமையின் கீழ் ஏற்படுத்தப்பட்டுள்ளது."
+    page: null
+    clause: "Section 14(2)"
+    topic: disaster_coordination
+    gap: GAP-IN-03
+    supports: context
+    why: "Describes establishment of Tamil Nadu State Disaster Management Authority under Section 14(2) of the Disaster Management Act 2005 headed by the Chief Minister."
+  - quote: "இவ்வாணையமானது பல்வகை பேரிடர் மேலாண்மை தொடர்பான கொள்கை உருவாக்கத்திற்கு வழிகாட்டுதல், மாநில பேரிடர் மேலாண்மை திட்டத்திற்கு ஒப்புதல் அளித்தல் மற்றும் பேரிடர் அபாய குறைப்பு நடவடிக்கைகள் தொடர்பான அனைத்து முக்கிய செயல்பாடுகளை கண்காணித்தல் போன்ற பணிகளை மேற்கொண்டு வருகின்றது."
+    page: null
+    clause: "Functions"
+    topic: disaster_coordination
+    gap: GAP-IN-02
+    supports: context
+    why: "Outlines the statutory functions of TNSDMA including disaster management policy guidance, state plan approval, and risk reduction monitoring."
+verified: false
+notes: "Official institutional page (Tamil) of the Commissionerate of Revenue Administration and Disaster Management governing state disaster coordination in Tamil Nadu."

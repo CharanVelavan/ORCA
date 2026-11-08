@@ -1,0 +1,27 @@
+id: in-dot-telegraph-2nd-amendment-2022
+title: "Indian Telegraph (Second Amendment) Rules, 2022"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification)
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/theindiantelegraph2ndamendmentrules2022nw_repaired_0.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-telegraph-2nd-amendment-2022.pdf
+sha256: bf45a9cd2987fbe704e4369222fd3232e6b0bbbfd160508f842ceac653a8e63d
+bytes: 1026283
+pages: 2
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "Telegraph Rules, 1951, namely: -"
+issued: 2022-10-21
+in_force_from: unknown
+amends: [Indian Telegraph Rules, 1951 (rule 525)]
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: bilingual (Hindi and English)
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Read in full by keyword check. The amendment changes a bandwidth-rental entry in rule 525 for Agartala internet connectivity (Bangladesh submarine cable). Not about cyber security, satellite or emergency services, so no candidate quotes."

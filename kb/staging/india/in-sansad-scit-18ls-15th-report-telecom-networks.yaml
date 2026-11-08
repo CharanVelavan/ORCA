@@ -1,0 +1,31 @@
+id: in-sansad-scit-18ls-15th-report-telecom-networks
+title: 'Standing Committee on Communications and Information Technology (18th Lok Sabha) 15th Report: Action Taken on Demands
+  for Grants (2024-25) of Department of Telecommunications'
+authority: Standing Committee on Communications and Information Technology, Lok Sabha
+jurisdiction: IN
+doc_type: report
+url: https://sansad.in/getFile/lsscommittee/Communications%20and%20Information%20Technology/18_Communications_and_Information_Technology_15.pdf?source=loksabhadocs
+landing_page: https://sansad.in
+local_path: corpus/raw/india/in-sansad-scit-18ls-15th-report-telecom-networks.pdf
+sha256: 26d9fde639024be1dbf912abedab062e3c3e73556c00440de5a3b174825cac38
+bytes: 1068568
+pages: 118
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: false
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2024-12
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-04
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Parliamentary standing committee report reviewing telecom network demands; no clause bears directly on specific gap
+  evidence.

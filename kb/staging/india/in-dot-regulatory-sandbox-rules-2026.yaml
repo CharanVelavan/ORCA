@@ -1,0 +1,27 @@
+id: in-dot-regulatory-sandbox-rules-2026
+title: "Regulatory Sandbox Rules, 2026"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification)
+url: "https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/regulatory-sandbox-rule-2026.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-regulatory-sandbox-rules-2026.pdf
+sha256: 06cb3f597d8596659fb54d7f9e75ddd62d9629245cb859325ba69cc3ec97a529
+bytes: 828738
+pages: 11
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "the Central Government hereby makes the following rules"
+issued: 2026
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Sandbox for testing new telecom services under DoT supervision. Security is mentioned, but no satellite or incident-reporting clause was found. No candidate quotes."

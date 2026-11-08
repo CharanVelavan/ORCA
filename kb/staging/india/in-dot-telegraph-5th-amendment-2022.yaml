@@ -1,0 +1,27 @@
+id: in-dot-telegraph-5th-amendment-2022
+title: "Indian Telegraph (Fifth Amendment) Rules, 2022"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification)
+url: "https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/Indian%20Telegraph%20%285th%20Amendment%29%20Rules%2C%202022.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-telegraph-5th-amendment-2022.pdf
+sha256: a9bb166d5e2ee74ba6d02373c35cfa24de7216cfa36a7f9d40453f6730fd79db
+bytes: 1204009
+pages: 4
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "Telegraph Rules, 1951, namely: -"
+issued: 2022-12-29
+in_force_from: unknown
+amends: [Indian Telegraph Rules, 1951 (rule 525)]
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: bilingual (Hindi and English)
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Read in full by keyword check. Changes rule 525 operating-expense entries, which mention satellite bandwidth and carriage charges for very small aperture terminals in cost terms only. No cyber, security or emergency clause, so no candidate quotes."

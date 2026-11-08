@@ -1,0 +1,37 @@
+id: eu-easa-sib-2022-02r4-gnss
+title: 'Safety Information Bulletin SIB 2022-02R4: Global Navigation Satellite System (GNSS) Outages and Alterations Leading to Navigation/Surveillance Degradation'
+authority: European Union Aviation Safety Agency
+jurisdiction: EU
+doc_type: guideline
+url: https://www.easa.europa.eu/en/newsroom-and-events/news/easa-updates-safety-information-bulletin-gnss-interference
+landing_page: https://www.easa.europa.eu
+local_path: corpus/raw/global/eu-easa-sib-2022-02r4-gnss.html
+sha256: 7c0cd143e7a5e1dd98dea6235dbaa792bc9be149831bd7d1ffe3e49aafa8d2cc
+bytes: 280343
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: Stakeholders are encouraged to implement the recommended measures as soon as possible
+issued: 2026-07-03 (Rev 4; SIB 2022-02 first published 2022-03-17)
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-06
+role: context
+candidate_quotes:
+- quote: Stakeholders are encouraged to implement the recommended measures as soon as possible so as to mitigate the impact of GNSS jamming and spoofing on aviation safety.
+  page: 1
+  clause: not stated
+  topic: gnss_interference
+  gap: null
+  supports: context
+  why: Shows the regulator's advisory (not mandatory) stance on GNSS jamming and spoofing mitigation for aviation.
+verified: false
+notes: Listed URL is the EASA news page announcing SIB 2022-02R4; the SIB itself is linked at ad.easa.europa.eu/sib-docs (not downloaded). Quotes are from the news page. Listed binding status 'advisory'
+  is consistent with the words used.

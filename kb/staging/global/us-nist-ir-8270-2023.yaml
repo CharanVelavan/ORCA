@@ -1,0 +1,48 @@
+id: us-nist-ir-8270-2023
+title: "Introduction to Cybersecurity for Commercial Satellite Operations (NIST IR 8270)"
+authority: National Institute of Standards and Technology (NIST)
+jurisdiction: US
+doc_type: technical_report
+url: https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8270.pdf
+landing_page: https://csrc.nist.gov/pubs/ir/8270/final
+local_path: corpus/raw/global/us-nist-ir-8270-2023.pdf
+sha256: 5fc8757a5c88a64b20ed0b2d3ff81e378d127181821a213f2fe928d73b0782d5
+bytes: 2596902
+pages: 45
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "NIST asks the commercial satellite operations community to use this document as an informative reference to assist in managing cybersecurity risks"
+issued: 2023-07-24
+in_force_from: 2023-07-24
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-06, GAP-IN-09]
+role: global_example
+candidate_quotes:
+  - quote: "Command and control operations are generated on the ground and can be transmitted to the vehicle in several ways. The commands can be sent via a fiber link to a remote ground station, which then transmits the commands via a direct radio frequency (RF) or optical link to the satellite from the ground."
+    page: 12
+    clause: "Section 2.1.2"
+    topic: space_cyber
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Analyzes satellite command and control signaling delivery paths from ground stations over RF and optical links."
+  - quote: "Internal vehicle cybersecurity refers to the cybersecurity capabilities of the satellite vehicle itself, including its ability to protect itself against cybersecurity threats, detect threat actions, respond to cybersecurity attacks, and recover when necessary."
+    page: 12
+    clause: "Section 2.1.2"
+    topic: space_cyber
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Defines on-board space vehicle cybersecurity capabilities and lifecycle protection requirements."
+  - quote: "Communications between operational satellites for mission functions – such as command and control, networking of compute capabilities, redundancy of operations and mission functions, tracking, and communications – are known as inter-vehicle communications. Therefore, the integrity, availability, and confidentiality of these communications are critical."
+    page: 12
+    clause: "Section 2.1.2"
+    topic: signalling_security
+    gap: GAP-IN-09
+    supports: global_example
+    why: "Emphasizes the strict integrity, confidentiality, and availability needs for inter-satellite inter-vehicle communications."
+verified: false
+notes: "NIST foundational technical guidance applying CSF to commercial satellite operations pursuant to SPD-5."

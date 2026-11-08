@@ -1,0 +1,35 @@
+id: in-trai-cp-volte-csfb-voice-2018
+title: Consultation Paper on Voice Services to LTE Users (Including VoLTE and CS Fallback)
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-11/Consultation_Paper_VoLTE_CSFB_26022018.pdf
+landing_page: https://trai.gov.in/telecom/qos
+local_path: corpus/raw/india/in-trai-cp-volte-csfb-voice-2018.pdf
+sha256: 6be271d1b8c6a31eb18856de56bf453a0dcf48fdc46ed2fa5da8e318095d5cbf
+bytes: 188517
+pages: 27
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2018-02-26'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-08
+role: context
+candidate_quotes:
+- quote: 'Stakeholders are requested to send their comments, preferably in electronic form to the following address:'
+  clause: Preface
+  topic: failover
+  gap: GAP-IN-08
+  supports: context
+  why: Consults on voice service continuity to LTE users including VoLTE and circuit-switched fallback mechanisms.
+  page: 2
+verified: false
+notes: TRAI consultation paper on voice services to LTE users including VoLTE and CS fallback.

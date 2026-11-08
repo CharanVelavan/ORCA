@@ -1,0 +1,30 @@
+id: in-nccs-itsar-wifi-cpe-v1-2024
+title: ITSAR for Wi-Fi Customer Premises Equipment (Wi-Fi CPE) - Version 1.0.1
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR402122401.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-wifi-cpe-v1-2024.pdf
+sha256: b9212ba4c650d1165827995b2c20162c9c8a802e4516e83d8a9e3efd99a76a75
+bytes: 1080346
+pages: 21
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2024-01-03'
+in_force_from: '2024-07-01'
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for Wi-Fi Customer Premises Equipment (Wi-Fi CPE) - Version 1.0.1
+  under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover,
+  battery-hours floor, or incident reporting clocks).

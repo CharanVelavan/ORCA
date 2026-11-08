@@ -1,0 +1,27 @@
+id: in-tec-er-ip-terminal
+title: "Essential Requirements ER No. TEC67472407: IP Terminal (2024), issued under MTCTE"
+authority: Telecommunication Engineering Centre (TEC), Department of Telecommunications
+jurisdiction: IN
+doc_type: essential requirements (standard under MTCTE)
+url: "https://www.mtcte.tec.gov.in/filedownload?name=TEC67472407.pdf"
+landing_page: https://www.mtcte.tec.gov.in/er_inst
+local_path: corpus/raw/india/in-tec-er-ip-terminal.pdf
+sha256: 7ff166db3a7fbc2bda12f20deb01877c4b40735704bffea7e47ec1b9bc8e5b6c
+bytes: 327555
+pages: 3
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: 2024
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "The list says binding. The document says only that the ER is issued under MTCTE and gives test parameters (EMC, IP layer). It does not state legal force in its own words, so the list's binding label is not confirmed. Contains no security, satellite or incident clause, so no candidate quotes. Text extracted; 3 pages."

@@ -1,0 +1,69 @@
+id: inspace-ngp-2024
+title: Norms, Guidelines and Procedures for Implementation of Indian Space Policy 2023
+authority: Indian National Space Promotion and Authorisation Centre (IN-SPACe)
+jurisdiction: IN
+doc_type: guideline
+url: https://www.inspace.gov.in/sys_attachment.do?sys_id=5d532e37877102503b0f0d060cbb35cf
+landing_page: https://www.inspace.gov.in/
+local_path: corpus/raw/india/inspace-ngp-2024.pdf
+sha256: 0d2d94868af9cdc1b86d7e5f7226c2e534a2d1243fa7fc443c18459043877adf
+bytes: 1736974
+pages: 155
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: the decisions of IN-SPACe shall be binding on the operators of such facilities
+issued: 2024-05-03
+in_force_from: 2024-05-03
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+- GAP-IN-09
+role: india_evidence
+candidate_quotes:
+- quote: Where specific standards for Space Activities are not explicitly mentioned in this document or any other applicable
+    law of India, the Applicant shall adhere to globally recognized best practices prevailing in the industry.
+  page: 20
+  clause: Chapter II, Clause 9
+  topic: standards
+  gap: GAP-IN-06
+  supports: proves_gap
+  why: Explicitly establishes that where Indian standards for space activities are absent, operators must rely on global industry
+    best practices.
+- quote: IN-SPACe may impose control on operations of the Authorized Space Objects & Space Activities or terminate/suspend
+    the Authorization, during national emergencies or in the interest of national security, such as situation arising out
+    of or due to conflicts or natural disasters or times of emergency as declared or specified by Government of India or other
+    such contingencies as may be specified by IN-SPACe or the Government of India.
+  page: 22
+  clause: Chapter II, Clause 21
+  topic: emergency_powers
+  gap: GAP-IN-09
+  supports: answers_gap
+  why: Empowers IN-SPACe to assume operational control or suspend authorizations during emergencies or national security contingencies.
+- quote: In case of any accident, malfunction, emergency or any other incident which impacts the operation of an Authorized
+    Space Object that poses a threat to the national security, public order, safety of people or their property, national
+    intelligence and security operations, or the environment of India, the Applicant shall immediately carry out appropriate
+    measures to prevent or minimise the consequences of such accident or emergency or incident.
+  page: 22
+  clause: Chapter II, Clause 24
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: answers_gap
+  why: Mandates immediate preventive measures and 24-hour incident notification to IN-SPACe for space object accidents or
+    malfunctions.
+- quote: Assure cyber security including encryptions at design level and prevent unauthorized commandeering of satellite through
+    adequate data security.
+  page: 71
+  clause: Chapter XI, Guidelines for Satellites, Clause B(v)
+  topic: space_cyber
+  gap: GAP-IN-09
+  supports: answers_gap
+  why: Prescribes design-level cybersecurity, encryption and controls to prevent unauthorized commandeering of satellites.
+verified: false
+notes: 'Document No: IN:ISP2023:NGP2024/V1.0 released in May 2024. Comprehensive regulatory authorization code for all space
+  activities in India.'

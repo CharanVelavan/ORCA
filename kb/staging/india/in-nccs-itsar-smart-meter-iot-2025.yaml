@@ -1,0 +1,31 @@
+id: in-nccs-itsar-smart-meter-iot-2025
+title: ITSAR for IoT End Device - Smart Electricity Meter
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR309052504.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-smart-meter-iot-2025.pdf
+sha256: 61f092c85f4cda8c711ce460f1ff1bc72bbbc50c4f5b8a8d88b2f68d1d42a449
+bytes: 811723
+pages: 75
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2025-04-21'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-04
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for IoT End Device - Smart Electricity Meter under MTCTE. No clause
+  bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours floor,
+  or incident reporting clocks).

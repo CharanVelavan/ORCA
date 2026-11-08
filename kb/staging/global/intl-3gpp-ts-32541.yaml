@@ -1,0 +1,54 @@
+id: intl-3gpp-ts-32541
+title: '3GPP TS 32.541 V18.0.0 (Release 18): Telecommunication management; Self-Organizing Networks (SON); Self-healing concepts
+  and integration reference point (IRP)'
+authority: 3GPP / ETSI (ETSI TS 132 541 V18.0.0)
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/32_series/32.541/32541-i00.zip
+landing_page: https://www.etsi.org/deliver/etsi_ts/132500_132599/132541/18.00.00_60/ts_132541v180000p.pdf
+local_path: corpus/raw/global/intl-3gpp-ts-32541.pdf
+sha256: 3c355a34240fede22ad77b4bc42be30294c2149400802cd057c722ea23bb97f4
+bytes: 184873
+pages: 23
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: unclear
+binding_basis: not stated in the document (3GPP technical specification; legal status as voluntary consensus standard not
+  stated in the text)
+issued: 2024-05-17
+in_force_from: 2024-05-17
+amends: []
+amended_by: []
+licence: 3GPP open standard
+language: en
+gaps:
+- GAP-IN-07
+role: global_example
+candidate_quotes:
+- quote: The purpose of Self-healing is to solve or mitigate the faults which could be solved automatically by triggering
+    appropriate recovery actions.
+  page: 8
+  clause: Clause 4.1.1
+  topic: disaster_coordination
+  gap: GAP-IN-07
+  supports: global_example
+  why: Defines automated self-healing principles for network fault mitigation and autonomous recovery.
+- quote: In this case, the Self-healing functionality monitors the alarms, and when it finds alarm/s which could be solved
+    automatically, it gathers more necessary information (e.g. measurements, testing result, etc) and does deep analysis,
+    and then according to the analysis result, if necessary, it triggers appropriate recovery actions to solve the fault automatically.
+  page: 8
+  clause: Clause 4.1.1
+  topic: joint_command
+  gap: GAP-IN-07
+  supports: global_example
+  why: Specifies closed-loop alarm monitoring, root cause analysis, and automated corrective recovery triggers.
+- quote: Isolate and remove the faulty resource from service so that it does not disturb other working resources;
+  page: 9
+  clause: Clause 4.1.2
+  topic: critical_infrastructure
+  gap: GAP-IN-07
+  supports: global_example
+  why: Outlines containment and fault isolation procedures to prevent cascading outages across telecommunications infrastructure.
+verified: false
+notes: 3GPP Release 18 specification TS 32.541 V18.0.0 transposed by ETSI as ETSI TS 132 541 V18.0.0.

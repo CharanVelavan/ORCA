@@ -1,0 +1,55 @@
+id: in-rbi-psos-cyber-resilience-2024
+title: Master Directions on Cyber Resilience and Digital Payment Security Controls for non-bank Payment System Operators
+authority: Reserve Bank of India
+jurisdiction: IN
+doc_type: direction
+url: https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12715
+landing_page: https://www.rbi.org.in/Scripts/BS_ViewMasterDirections.aspx?did=344
+local_path: corpus/raw/india/in-rbi-psos-cyber-resilience-2024.html
+sha256: 668064507b2d029de019d9b1ac2b2fddaff2836e7876105631761766e99bd1ff
+bytes: 173041
+pages: null
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "In exercise of the powers conferred under Section 10 (2) read with Section 18 of the Payment and Settlement Systems Act, 2007 (PSS Act), the Reserve Bank of India (RBI, Bank) being satisfied that it is necessary and expedient in the public interest so to do, issues the Master Directions hereinafter specified"
+issued: 2024-07-30
+in_force_from: 2024-07-30
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps: [GAP-IN-01, GAP-IN-03, GAP-IN-08]
+role: india_evidence
+candidate_quotes:
+  - quote: "The PSO shall put in place a Board approved incident response mechanism, which shall include provisions to promptly notify its senior management, relevant employees and regulatory, supervisory and relevant public authorities, of cyber incidents."
+    page: null
+    clause: "Paragraph 22"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: answers_gap
+    why: "Mandates documented incident response frameworks notifying senior management, regulatory and public authorities of cyber incidents."
+  - quote: "Any cyber security incident shall also be reported to CERT-In."
+    page: null
+    clause: "Paragraph 22"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: answers_gap
+    why: "Explicitly cross-references mandatory cyber incident reporting to CERT-In alongside sectoral reporting to RBI."
+  - quote: "The PSO shall develop a BCP based on different cyber threat scenarios, including extreme but plausible events to which it may be exposed."
+    page: null
+    clause: "Paragraph 23"
+    topic: disaster_coordination
+    gap: GAP-IN-08
+    supports: answers_gap
+    why: "Requires business continuity plans modeled on extreme cyber threat scenarios and incident recovery pathways."
+  - quote: "The PSO shall set up a Disaster Recovery (DR) facility in a different seismic zone than the Primary Data Centre (PDC)."
+    page: null
+    clause: "Paragraph 23"
+    topic: disaster_coordination
+    gap: GAP-IN-08
+    supports: answers_gap
+    why: "Mandates geographic and seismic separation between Primary Data Centre and Disaster Recovery facilities for payment system operators."
+verified: false
+notes: "Issued under Section 10(2) read with Section 18 of PSS Act 2007; phased implementation schedule by PSO category."

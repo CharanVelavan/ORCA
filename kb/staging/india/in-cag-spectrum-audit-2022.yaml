@@ -1,0 +1,27 @@
+id: in-cag-spectrum-audit-2022
+title: "CAG Report No. 2 of 2022: Management of Spectrum assigned on the administrative basis to government departments and agencies"
+authority: Comptroller and Auditor General of India
+jurisdiction: IN
+doc_type: audit report
+url: "https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2022/Report-No.-2-of-the-yera-2022,-Union-Government-Ministry-of-Communications-(Performance-Audit)-068b1666b2d1899.38993675.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-cag-spectrum-audit-2022.pdf
+sha256: ec287b2c744a179ec36c5b6608954abe9d01932970bca07fc2693b096583194c
+bytes: 2487013
+pages: 116
+retrieved_at: 2026-11-08
+status: ok
+official_domain: false
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: 2022-04-01
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "CAG audit report (116 pages) on government spectrum use. Satellite and disaster mentions in the spectrum context. The URL is a CloudFront host, not a gov.in domain, so official_domain should be checked; the cover says CAG Report No. 2 of 2022. Audit findings are not binding rules. No candidate quotes."

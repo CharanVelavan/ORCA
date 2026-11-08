@@ -1,0 +1,27 @@
+id: us-fcc-space-cyber-notice-2023
+title: "Public Notice: Space Bureau Reminds Satellite and Earth Station Licensees of Cybersecurity Responsibilities"
+authority: Federal Communications Commission (FCC)
+jurisdiction: US
+doc_type: guideline
+url: https://docs.fcc.gov/public/attachments/DA-23-456A1.pdf
+landing_page: https://www.fcc.gov/space
+local_path: corpus/raw/global/us-fcc-space-cyber-notice-2023.pdf
+sha256: 05301dd51156bd94a9130dc0f5e70ac96d0c1940ccf6593dcdbdd9457f0d8f51
+bytes: 86522
+pages: 3
+retrieved_at: 2026-11-08
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: 2023-05-30
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-06, GAP-IN-09]
+role: context
+candidate_quotes: []
+verified: false
+notes: "Failed verification: DA-23-456 is an unrelated telecommunications slamming complaint order (Telplex Communications, Complaint 6211539) rather than a Space Bureau cybersecurity notice; target list claims were erroneous."

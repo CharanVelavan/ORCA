@@ -1,0 +1,29 @@
+id: intl-hybrid-coe-wp21-space-war
+title: 'Hybrid CoE Working Paper 21: Space and the Ukraine War: The Role of Space in Hybrid Warfare and Modern Conflict'
+authority: European Centre of Excellence for Countering Hybrid Threats
+jurisdiction: INTL
+doc_type: report
+url: https://www.hybridcoe.fi/wp-content/uploads/2023/01/20230109-Hybrid-CoE-Working-Paper-21-Space-and-the-Ukraine-war-WEB.pdf
+landing_page: https://www.hybridcoe.fi
+local_path: corpus/raw/global/intl-hybrid-coe-wp21-space-war.pdf
+sha256: 25dcc622b955e28a43bf84ea358b2dc11f5957f3909e1ce80c1542edb054b70f
+bytes: 2415734
+pages: 28
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2023-01
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+role: context
+candidate_quotes: []
+verified: false
+notes: Hybrid CoE working paper (non-binding analysis). Two-column layout makes pdftotext -layout output hard to quote reliably, so no quotes were taken; candidate lines were checked but cut across columns.
+  Use only as context on satellite jamming and ground segment threats (pp. 10-11, 15).

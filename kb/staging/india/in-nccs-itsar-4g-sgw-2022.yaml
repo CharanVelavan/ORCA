@@ -1,0 +1,31 @@
+id: in-nccs-itsar-4g-sgw-2022
+title: ITSAR for 4G - Serving Gateway (S-GW)
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR102012203.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-4g-sgw-2022.pdf
+sha256: 15ea4f58e3017834ef61f47e1600f10944391e3db8669287ffc6ee7a3d802f54
+bytes: 1243954
+pages: 62
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2022-03-25'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for 4G - Serving Gateway (S-GW) under MTCTE. No clause bears directly
+  on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours floor, or incident
+  reporting clocks).

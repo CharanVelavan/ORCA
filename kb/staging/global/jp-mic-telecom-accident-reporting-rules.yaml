@@ -1,0 +1,29 @@
+id: jp-mic-telecom-accident-reporting-rules
+title: 'Regulations for Enforcement of the Telecommunications Business Act: Incident Reporting Standards'
+authority: Ministry of Internal Affairs and Communications
+jurisdiction: JP
+doc_type: regulation
+url: https://www.tele.soumu.go.jp/e/adm/infra/index.htm
+landing_page: https://www.tele.soumu.go.jp
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 1985
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed URL failed with curl rc=56 on 3 attempts; the listed MIC page is an index page, not a rules text.

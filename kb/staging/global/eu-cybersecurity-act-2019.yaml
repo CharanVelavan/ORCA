@@ -1,0 +1,48 @@
+id: eu-cybersecurity-act-2019
+title: "Regulation (EU) 2019/881 of the European Parliament and of the Council of 17 April 2019 on ENISA (the European Union Agency for Cybersecurity) and on information and communications technology cybersecurity certification and repealing Regulation (EU) No 526/2013 (Cybersecurity Act)"
+authority: European Parliament and Council
+jurisdiction: EU
+doc_type: act
+url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R0881
+landing_page: https://eur-lex.europa.eu/eli/reg/2019/881/oj/eng
+local_path: corpus/raw/global/eu-cybersecurity-act-2019.pdf
+sha256: a78a34d01193d56266f6a317823e81464c2381fc876fc5e15457978ebcbf32e6
+bytes: 885350
+pages: 55
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "This Regulation shall be binding in its entirety and directly applicable in all Member States."
+issued: 2019-04-17
+in_force_from: 2019-06-27
+amends: []
+amended_by: []
+licence: "EUR-Lex reuse policy"
+language: en
+gaps: [GAP-IN-06]
+role: global_example
+candidate_quotes:
+  - quote: "to restore the availability and access to data, services and functions in a timely manner in the event of a physical or technical incident;"
+    page: 42
+    clause: "Article 51(h)"
+    topic: standards
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Defines core security objectives for European cybersecurity certification including timely restoration of data and service availability after an incident."
+  - quote: "that ICT products, ICT services and ICT processes are secure by default and by design;"
+    page: 42
+    clause: "Article 51(i)"
+    topic: standards
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Mandates security by design and security by default as fundamental cybersecurity certification principles."
+  - quote: "A European cybersecurity certification scheme may specify one or more of the following assurance levels for ICT products, ICT services and ICT processes: ‘basic’, ‘substantial’ or ‘high’."
+    page: 42
+    clause: "Article 52(1)"
+    topic: standards
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Establishes a tiered assurance framework (basic, substantial, high) proportionate to incident probability and impact."
+verified: false
+notes: "European Cybersecurity Act establishing ENISA's permanent mandate and the European cybersecurity certification framework."

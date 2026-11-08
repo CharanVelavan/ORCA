@@ -1,0 +1,30 @@
+id: ca-cccs-itsg-33
+title: 'IT Security Risk Management: A Lifecycle Approach (ITSG-33)'
+authority: Canadian Centre for Cyber Security
+jurisdiction: CA
+doc_type: guideline
+url: https://www.cyber.gc.ca/sites/default/files/2022-06/itsg-33-eng.pdf
+landing_page: https://www.cyber.gc.ca/en/guidance/it-security-risk-management-lifecycle-approach-itsg-33
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2012
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-04
+- GAP-IN-06
+- GAP-IN-08
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed URL failed with curl rc=56 on 3 attempts.

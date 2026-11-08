@@ -1,0 +1,45 @@
+id: intl-esa-cyber-resilience-framework
+title: ESA Cyber Resilience Policy and C-SOC Operations
+authority: European Space Agency
+jurisdiction: INTL
+doc_type: policy
+url: https://www.esa.int/Space_Safety/Cyber_resilience/Cyber_resilience2
+landing_page: https://www.esa.int
+local_path: corpus/raw/global/intl-esa-cyber-resilience-framework.html
+sha256: dbba97f2d834fea1647e1f784ef5ac52fbe579af4172018eb938443f1b3a2a38
+bytes: 177404
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: not stated
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-06
+- GAP-IN-09
+role: context
+candidate_quotes:
+- quote: Satellites may be far from Earth, but they are still vulnerable to being hacked.
+  page: 1
+  clause: not stated
+  topic: space_cyber
+  gap: null
+  supports: context
+  why: ESA public statement that satellites are vulnerable to cyber attack, context for space cyber risk.
+- quote: ESA is creating a new centre for cyber-security which will safeguard all Agency systems against outside interference, extending from ESA infrastructure around the globe to satellites in orbit.
+  page: 1
+  clause: not stated
+  topic: space_cyber
+  gap: null
+  supports: context
+  why: Describes ESA's cyber-security centre scope, covering ground infrastructure and satellites in orbit.
+verified: false
+notes: ESA public web page (not a policy text). Cyber resilience statements only; no binding clauses. Listed title 'Cyber Resilience Policy and C-SOC Operations' does not match the page content, which is
+  a general page.

@@ -1,0 +1,48 @@
+id: itu-x1051-2023
+title: "Information security, cybersecurity and privacy protection — Information security controls based on ISO/IEC 27002 for telecommunications organizations (ITU-T Recommendation X.1051 / ISO/IEC 27011)"
+authority: International Telecommunication Union (ITU-T) & ISO/IEC
+jurisdiction: International
+doc_type: technical_standard
+url: https://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-X.1051-202306-I!!PDF-E&type=items
+landing_page: https://www.itu.int/rec/T-REC-X.1051-202306-I/en
+local_path: corpus/raw/global/itu-x1051-2023.pdf
+sha256: a7bab5aef7fa33ddc615e2655ca98161a722e661ddb0ff5aceefe6a636f28bbc
+bytes: 595825
+pages: 38
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "Compliance with this Recommendation is voluntary. However, the Recommendation may contain certain mandatory provisions"
+issued: 2023-06-13
+in_force_from: 2023-06-13
+amends: []
+amended_by: []
+licence: copyright_itu
+language: en
+gaps: [GAP-IN-04, GAP-IN-06, GAP-IN-08]
+role: global_example
+candidate_quotes:
+  - quote: "In particular, power supply facilities in isolated areas, such as mobile base stations, should preferably provide an uninterruptible power supply with capacity for all loading and capable of withstanding primary power supply failures for the duration of likely outages. If that is impossible, a mechanism to provide uninterruptible power to critical equipment should be installed. Batteries can be augmented with a private electric generator, especially in isolated areas."
+    page: 26
+    clause: "Clause 7.11"
+    topic: backup_power
+    gap: GAP-IN-04
+    supports: global_example
+    why: "Prescribes uninterruptible power supply and generator backup capacity for remote and isolated telecommunications stations."
+  - quote: "Telecommunications facilities for providing essential communications and supporting critical infrastructure (see 5.43 TEL) should have sufficient redundancies to ensure that a loss of availability does not impact the provision of the service."
+    page: 31
+    clause: "Clause 8.14"
+    topic: failover_path_security
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Mandates equipment and link redundancy for critical infrastructure communication facilities to guarantee service continuity."
+  - quote: "Telecommunications organizations should set the appropriate retention time period for retaining telecommunications data (e.g., accounting, billing, attending to complaints, as well as protection from abuse and lawful access by the authorities) and to delete the data at the end of the retention period or at the attainment of the purposes without any delay."
+    page: 31
+    clause: "Clause 8.15"
+    topic: log_retention
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Establishes structured retention schedules and prompt post-period deletion requirements for telecommunications and security logs."
+verified: false
+notes: "Joint ITU-T X.1051 and ISO/IEC 27011 standard defining telecommunications-specific information security controls."

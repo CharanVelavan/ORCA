@@ -1,0 +1,36 @@
+id: in-trai-cp-spectrum-37-43ghz-satellite-terrestrial-2024
+title: TRAI Consultation Paper No. 04/2024 on Auction of Frequency Spectrum in 37-37.5 GHz, 37.5-40 GHz, and 42.5-43.5 GHz
+  Bands Identified for IMT and Satellite Coexistence
+authority: Telecom Regulatory Authority of India
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/CP_04042024.pdf
+landing_page: https://trai.gov.in
+local_path: corpus/raw/india/in-trai-cp-spectrum-37-43ghz-satellite-terrestrial-2024.pdf
+sha256: 74377261c8938dc44afa96b8a579d2328aed2bdef1eb44534ee968b08df6169b
+bytes: 1461532
+pages: 66
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2024-04-04'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: Consultation Paper No. 4/ 2024
+  clause: Title Page
+  topic: space_cyber
+  gap: GAP-IN-06
+  supports: context
+  why: Consults on auction of millimeter-wave spectrum in 37-43.5 GHz for terrestrial IMT and satellite coexistence.
+  page: 1
+verified: false
+notes: TRAI consultation paper on auction of spectrum in 37-43.5 GHz for IMT and satellite coexistence.

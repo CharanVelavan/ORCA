@@ -1,0 +1,35 @@
+id: in-trai-cp-interconnection-framework-2019
+title: Consultation Paper on Review of the Regulatory Framework for Interconnection
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/CP_Interconnection_30052019.pdf
+landing_page: https://trai.gov.in/telecom/interconnection
+local_path: corpus/raw/india/in-trai-cp-interconnection-framework-2019.pdf
+sha256: 5c7c83d17fb6d84c0401d544d9d5f41b259e74b7d2f43698b1291519816a1bc4
+bytes: 315471
+pages: 26
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2019-05-30'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-08
+role: context
+candidate_quotes:
+- quote: Stakeholders are requested to furnish their comments to the Advisor (Broadband and Policy Analysis), TRAI by 27.06.2019.
+  clause: Preface
+  topic: failover
+  gap: GAP-IN-08
+  supports: context
+  why: Consults on regulatory framework for interconnection and reciprocal interconnection arrangements.
+  page: 2
+verified: false
+notes: TRAI consultation paper on review of regulatory framework for interconnection.

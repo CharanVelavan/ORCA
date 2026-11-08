@@ -1,0 +1,3 @@
+id: sg-telecom-act-1999
+status: failed
+notes: "curl failed (curl rc=56) for https://sso.agc.gov.sg/Act/TA1999"

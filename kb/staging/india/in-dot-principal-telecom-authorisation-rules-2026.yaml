@@ -1,0 +1,58 @@
+id: in-dot-principal-telecom-authorisation-rules-2026
+title: Telecommunications (Authorisation for Provision of Principal Telecommunication Services) Rules, 2026
+authority: Department of Telecommunications, Ministry of Communications
+jurisdiction: IN
+doc_type: rules
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/principal-telecom-services-rule-2026.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules?page=0
+local_path: corpus/raw/india/in-dot-principal-telecom-authorisation-rules-2026.pdf
+sha256: 52608d4a74075233add8acfa9f75c880212916b8117bd085e2e76e8548d3d6c5
+bytes: 1513464
+pages: 133
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "Now, therefore, in exercise of the powers conferred by sub-section (1) and clause (a) of sub-section (2) of section 56 read with clause (a) of sub-section (1) and sub-section (6) of section 3 of the Telecommunications Act, 2023 (44 of 2023), the Central Government hereby makes the following rules"
+issued: '2026-06-23'
+in_force_from: '2026-06-23'
+amends: []
+amended_by: []
+licence: government_open
+language: bilingual
+gaps:
+  - GAP-IN-01
+  - GAP-IN-02
+  - GAP-IN-06
+role: india_evidence
+candidate_quotes:
+  - quote: "These rules may be called the Telecommunications (Authorisation for Provision of Principal Telecommunication Services) Rules, 2026."
+    page: 78
+    clause: "Rule 1(1)"
+    topic: telecom_cyber_security
+    gap: GAP-IN-06
+    supports: context
+    why: "Defines the short title and regulatory scope for provision of principal telecommunication services."
+  - quote: "Every new authorised entity shall for the purposes of disaster management, ensuring public safety or providing response to an emergency or a disaster as defined under the Disaster Management Act, 2005 (53 of 2005), adhere to such directions or guidelines issued by the Central Government in this regard."
+    page: 101
+    clause: "Rule 38(1)"
+    topic: disaster_coordination
+    gap: GAP-IN-02
+    supports: proves_gap
+    why: "Mandates compliance with directions and guidelines issued by Central Government for emergency response and disaster management."
+  - quote: "Notwithstanding anything stated in sub-rule (2), the new authorised entity shall, on receiving a direction from the Central Government in the public interest for the purpose of ensuring telecom cybersecurity, enable the Central Government to access and utilise the data as it may require for the performance of any function in accordance with the applicable law."
+    page: 101
+    clause: "Rule 37(4)"
+    topic: telecom_cyber_security
+    gap: GAP-IN-06
+    supports: proves_gap
+    why: "Authorises government data access and utilization in the public interest to ensure telecom cybersecurity."
+  - quote: "maintain a record of all software updates and changes, and provide to the Central Government details of such category of software updates and changes within fifteen days of completion of such updates and changes as decided by the Central Government from time to time:"
+    page: 106
+    clause: "Rule 42(1)(b)"
+    topic: critical_infrastructure
+    gap: GAP-IN-01
+    supports: proves_gap
+    why: "Requires recording software updates and providing update details to Central Government within 15 days."
+verified: false
+notes: "Published in Gazette of India Extraordinary as G.S.R. 513(E). Replaces earlier licensing regimes for principal telecommunications services under Telecommunications Act 2023."

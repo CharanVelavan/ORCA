@@ -1,0 +1,48 @@
+id: itu-e106-2003
+title: "International Emergency Preference Scheme (IEPS) for Disaster Relief Operations (ITU-T Recommendation E.106)"
+authority: International Telecommunication Union (ITU-T)
+jurisdiction: International
+doc_type: technical_standard
+url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-E.106-200310-I!!PDF-E&lang=e&type=items
+landing_page: https://www.itu.int/rec/T-REC-E.106/en
+local_path: corpus/raw/global/itu-e106-2003.pdf
+sha256: f1afd0e50a8429cc374e0d1cfb8252b1d0833cf82974689b4fcafd8cb49d56e0
+bytes: 232223
+pages: 16
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "Compliance with this Recommendation is voluntary. However, the Recommendation may contain certain mandatory provisions"
+issued: 2003-10-31
+in_force_from: 2003-10-31
+amends: []
+amended_by: []
+licence: copyright_itu
+language: en
+gaps: [GAP-IN-03]
+role: global_example
+candidate_quotes:
+  - quote: "The primary goal for IEPS is to support crisis management arrangements. IEPS should significantly increase the ability of IEPS users to initiate and complete their communications (voice and data) via the PSTN, ISDN or PLMN irrespective of the bearer technology."
+    page: 7
+    clause: "Clause 5"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Establishes bearer-independent preferential access for crisis management and emergency personnel across communication networks."
+  - quote: "Calls originated by IEPS users should be given priority through the networks involved when IEPS is enabled."
+    page: 8
+    clause: "Clause 5"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Mandates queue and bandwidth prioritization for emergency priority scheme calls during disaster congestion."
+  - quote: "In order to ensure that an IEPS user can reliably call any other telecommunications user, any restrictions to call completion should be overridden. This does not include pre-emption of any existing calls."
+    page: 8
+    clause: "Clause 5"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Overrides network congestion throttling and call completion blocks for registered emergency priority callers."
+verified: false
+notes: "International standard establishing technical mechanisms for priority telecommunication treatment during disaster operations."

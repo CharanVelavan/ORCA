@@ -1,0 +1,59 @@
+id: eu-cer-2022-2557
+title: Directive (EU) 2022/2557 of the European Parliament and of the Council of 14 December 2022 on the resilience of critical
+  entities and repealing Council Directive 2008/114/EC
+authority: European Parliament and Council
+jurisdiction: EU
+doc_type: act
+url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2557
+landing_page: https://eur-lex.europa.eu/eli/dir/2022/2557/oj/eng
+local_path: corpus/raw/global/eu-cer-2022-2557.pdf
+sha256: 3eb32b248e66a91aa6c7281dc1006e6cc3d673d53624fa3fd1541d1cfa2485f1
+bytes: 833734
+pages: 35
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: This Directive shall enter into force on the twentieth day following that of its publication in the Official
+  Journal of the European Union.
+issued: 2022-12-14
+in_force_from: 2023-01-16
+amends: []
+amended_by: []
+licence: EUR-Lex reuse policy
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-04
+- GAP-IN-06
+role: global_example
+candidate_quotes:
+- quote: 'Member States shall ensure that critical entities take appropriate and proportionate technical, security and organisational
+    measures to ensure their resilience, based on the relevant information provided by Member States on the Member State risk
+    assessment and on the outcomes of the critical entity risk assessment, including measures necessary to:'
+  page: 20
+  clause: Article 13(1)
+  topic: critical_infrastructure
+  gap: GAP-IN-06
+  supports: global_example
+  why: Requires critical infrastructure operators to adopt technical, security, and organizational resilience measures.
+- quote: recover from incidents, duly considering business continuity measures and the identification of alternative supply
+    chains, in order to resume the provision of the essential service;
+  page: 20
+  clause: Article 13(1)(d)
+  topic: backup_power
+  gap: GAP-IN-04
+  supports: global_example
+  why: Mandates business continuity, resilience, and recovery mechanisms to maintain essential service delivery.
+- quote: Member States shall ensure that, unless operationally unable to do so, critical entities submit an initial notification
+    no later than 24 hours after becoming aware of an incident, followed, where relevant, by a detailed report no later than
+    one month thereafter.
+  page: 22
+  clause: Article 15(1)
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: global_example
+  why: Establishes a 24-hour mandatory initial incident reporting window for critical entities disrupting essential services.
+verified: false
+notes: Directive on the resilience of critical entities (CER) establishing risk assessments, business continuity baselines,
+  and a 24-hour notification clock.

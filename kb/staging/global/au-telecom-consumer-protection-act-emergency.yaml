@@ -1,0 +1,60 @@
+id: au-telecom-consumer-protection-act-emergency
+title: Telecommunications (Consumer Protection and Service Standards) Act 1999, Part
+  8—Provision of emergency call services
+authority: Parliament of Australia
+jurisdiction: AU
+doc_type: act
+url: https://www.legislation.gov.au/C2004A00441/2025-10-31/2025-10-31/text/original/pdf
+landing_page: https://www.legislation.gov.au/C2004A00441/2025-10-31/2025-10-31/text/original/pdf
+local_path: corpus/raw/global/au-telecom-consumer-protection-act-emergency.html
+sha256: cc901797f86df36ffdb4542c515419a064ff6b3fd882d28eb3bd03f28efc44df
+bytes: 948642
+pages: 274
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: 1999
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-03
+role: global_example
+candidate_quotes:
+- quote: Custodian means the Triple Zero Custodian established under section 151J.
+    data call has the meaning generally accepted within the telecommunications industry.
+  page: 17
+  clause: not identified
+  topic: other
+  gap: GAP-IN-03
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: Clause 1 of Schedule 1 to the Telecommunications Act 1997 does not apply
+    to a breach of a standard (10) Clause 1 of Schedule 1 to the Telecommunications
+    Act 1997 does not apply to a contravention of a standard in force under subsection
+    (1).
+  page: 43
+  clause: not identified
+  topic: other
+  gap: GAP-IN-03
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: Clause 1 of Schedule 2 to the Telecommunications Act 1997 does not apply
+    to a breach of a standard (11) Clause 1 of Schedule 2 to the Telecommunications
+    Act 1997 does not apply to a contravention of a standard in force under subsection
+    (1).
+  page: 43
+  clause: not identified
+  topic: other
+  gap: GAP-IN-03
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: PDF document, version 1.7, 274 pages; text length 650778'

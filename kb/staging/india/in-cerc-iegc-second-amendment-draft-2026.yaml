@@ -1,0 +1,34 @@
+id: in-cerc-iegc-second-amendment-draft-2026
+title: "Draft Central Electricity Regulatory Commission (Indian Electricity Grid Code) (Second Amendment) Regulations, 2026"
+authority: Central Electricity Regulatory Commission (CERC)
+jurisdiction: IN
+doc_type: draft regulation (explanatory memorandum)
+url: https://www.cercind.gov.in/2026/draft_reg/EM_IEGC-2ndAmnd.pdf
+landing_page: https://cercind.gov.in/
+local_path: corpus/raw/india/in-cerc-iegc-second-amendment-draft-2026.pdf
+sha256: 32ca09177de36866beb0b046f6d318416b04cb27316969641ff211910c95bcd1
+bytes: 790730
+pages: 50
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: draft
+binding_basis: "not stated in the document"
+issued: 2026-06
+in_force_from: unknown
+amends: [Indian Electricity Grid Code (IEGC) 2023]
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes:
+  - quote: "Energy Storage Systems (ESS), particularly Battery Energy Storage Systems (BESS) and Pumped Storage Plants (PSP), are critical for delivering PRAS due to their fast-ramping capabilities, high efficiency, and ability to store and dispatch energy on demand."
+    page: 19
+    clause: "Explanatory memorandum, PRAS section (clause not identified)"
+    topic: backup_power
+    gap: null
+    supports: context
+    why: "Shows regulators treat battery storage as grid resilience, a point of comparison for battery autonomy in backup power. It is grid storage, not telecom site backup, so GAP-IN-04 is not closed."
+verified: false
+notes: "Explanatory memorandum to a draft (not final) grid code amendment. The list's claim about battery autonomy and emergency reserve response is only partly supported: the text covers ESS for primary reserve (PRAS), and no battery-autonomy floor was found. Draft status per the list is confirmed by the document's status as a draft. The 2023 grid code is also in the list (rank 235)."

@@ -1,0 +1,28 @@
+id: in-dot-tn-row-order-2024
+title: Tamil Nadu State right-of-way order (DoT), per list title; not confirmed
+authority: Department of Telecommunications (per list)
+jurisdiction: IN-TN
+doc_type: order
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/go-tn-state_row-rules-2024.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+sha256: bdba519b89662ed7e39b2586c02d24e49b91ee0f7ab767a8d5db5851b8e93347
+bytes: 603316
+pages: 2
+local_path: corpus/raw/india/in-dot-tn-row-order-2024.pdf
+retrieved_at: '2026-11-08'
+status: scanned
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2024'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: 'No text layer: pdftotext returned 0 characters from 2 pages, so this is a scanned PDF. OCR is needed before any quote. Title and binding status not confirmed.'
+scanned: true

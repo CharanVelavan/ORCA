@@ -1,0 +1,30 @@
+id: in-nccs-itsar-5g-gnb-sa-2023
+title: ITSAR for 5G Aggregated gNB SA Option-2
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR303012304.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-5g-gnb-sa-2023.pdf
+sha256: e47e95d25bfa947efd56b410747c14aa9c6ab5b64a4d938a69f6b65bbd2f3ebf
+bytes: 1221136
+pages: 54
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2023-04-26'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for 5G Aggregated gNB SA Option-2 under MTCTE. No clause bears
+  directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours floor, or
+  incident reporting clocks).

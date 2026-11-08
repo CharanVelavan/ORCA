@@ -1,0 +1,28 @@
+id: itu-e110-2020
+title: "Recommendation ITU-T E.110: Hierarchical disaster emergency communications scheme"
+authority: ITU-T Study Group 2
+jurisdiction: INTL
+doc_type: standard
+url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-E.110-202008-I!!PDF-E&lang=e&type=items
+landing_page: https://www.itu.int/rec/T-REC-E.110/en
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: 2026-11-08
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: 2020-08-13
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: ITU open recommendation
+language: en
+gaps:
+  - GAP-IN-03
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Document not found: ITU-T Recommendation E.110 exists only as an 11/1988 standard titled 'Organization of the international telephone network'. No 2020 edition or 'Hierarchical disaster emergency communications scheme' recommendation exists under E.110. Target URL returns 404 (Document Not Found)."

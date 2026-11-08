@@ -1,0 +1,29 @@
+id: nz-ticsa-2013
+title: Telecommunications (Interception Capability and Security) Act 2013
+authority: Parliament of New Zealand
+jurisdiction: NZ
+doc_type: act
+url: https://www.legislation.govt.nz/act/public/2013/0091/latest/whole.html
+landing_page: https://www.legislation.govt.nz/act/public/2013/0091/latest/DLM5170701.html
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2013-11-11'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed legislation.govt.nz URL returned an empty body (curl rc=0) on 3 attempts.

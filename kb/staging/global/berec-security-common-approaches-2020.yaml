@@ -1,0 +1,34 @@
+id: berec-security-common-approaches-2020
+title: BEREC Guidelines on Common Approaches to the Security of Network and Services
+  (BoR (20) 107)
+authority: Body of European Regulators for Electronic Communications (BEREC)
+jurisdiction: EU
+doc_type: guideline
+url: https://www.berec.europa.eu/en/document-store/berec-office/berec-guidelines/berec-guidelines-on-common-approaches-to-the-security-of-network-and-services
+landing_page: https://www.berec.europa.eu
+local_path: corpus/raw/global/berec-security-common-approaches-2020.html
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2020-06-12
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: BEREC open access
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts:  Time  Current\n                \
+  \                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0\
+  \     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0   \
+  \ 0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56)\
+  \ The requested URL returned error: 404"

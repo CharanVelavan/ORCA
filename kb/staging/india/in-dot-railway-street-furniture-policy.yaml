@@ -1,0 +1,27 @@
+id: in-dot-railway-street-furniture-policy
+title: "Implementation of Telecommunications (Right of Way) Rules, 2024: guidelines on telecom infrastructure on Railway land and buildings (Railway Board letter)"
+authority: Ministry of Railways, Railway Board (letter), implementing DoT Telecommunications (Right of Way) Rules, 2024
+jurisdiction: IN
+doc_type: administrative letter / guidelines amendment
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/railway-policy-for-usage-of-street-furniture.pdf
+landing_page: https://www.eservices.dot.gov.in/
+local_path: corpus/raw/india/in-dot-railway-street-furniture-policy.pdf
+sha256: eefd8892fa76a66f2022b5132b81d288d5b1a7102ec78b418608365cf679f451
+bytes: 5234301
+pages: 4
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: 2023-01-16
+in_force_from: unknown
+amends: [Railway Board letter No. 2003/Tele/RCIL/1Pt.(Contd.)(3332182) dated 19.12.2022]
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "The list says binding and calls it a policy on street furniture and small cells. The document is a Railway Board letter amending earlier guidelines for telecom infrastructure on railway land and buildings, so the list's title and binding label are not confirmed. Right-of-way and tariff content only; no cyber, emergency or backup-power clause. No candidate quotes."

@@ -1,0 +1,38 @@
+id: in-trai-direction-header-traceability-2024
+title: Direction on Mandatory Traceability and Whitelisting of Message URLs and APK Links
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: direction
+url: https://trai.gov.in/sites/default/files/2024-11/Direction_28102024_0.pdf
+landing_page: https://trai.gov.in/telecom/consumer-initiatives/unsolicited-commercial-communication
+local_path: corpus/raw/india/in-trai-direction-header-traceability-2024.pdf
+sha256: 96caf54af17abd57bb387e5699a38013fe81858ca7012b20eea8c2eddcdad56c
+bytes: 2113900
+pages: 4
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: under section 13, read with sub-clauses (i) and (v) of clause (b) of subsection (1) of section 11, of the Telecom
+  Regulatory Authority of India Act
+issued: '2024-10-28'
+in_force_from: October 28, 2024
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: Direction under section 13, read with sub-clauses (i) and (v) of clause (b) of subsection (1) of section 11, of the
+    Telecom Regulatory Authority of India Act, 1997 (24 of 1997) regarding measures to curb misuse of Headers and Content
+    Templates under Telecom Commercial Communications Customer Preference
+  clause: Subject
+  topic: telecom_security
+  gap: null
+  supports: context
+  why: Directs telecommunication providers to ensure end-to-end traceability of SMS headers and message originators.
+  page: 1
+verified: false
+notes: Binding direction under TRAI Act Section 13 establishing end-to-end header traceability requirements for telecom messaging.

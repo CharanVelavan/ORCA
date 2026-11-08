@@ -1,0 +1,29 @@
+id: nz-cdem-act-2002
+title: 'Civil Defence Emergency Management Act 2002 (Part 5: Lifeline Utilities)'
+authority: Parliament of New Zealand
+jurisdiction: NZ
+doc_type: act
+url: https://www.legislation.govt.nz/act/public/2002/0033/latest/whole.html
+landing_page: https://www.legislation.govt.nz/act/public/2002/0033/latest/DLM149789.html
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2002-10-16'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-04
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed URL returned an empty body (curl rc=0, 0 bytes) on 3 attempts.

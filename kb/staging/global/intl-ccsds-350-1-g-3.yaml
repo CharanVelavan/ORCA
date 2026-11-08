@@ -1,0 +1,29 @@
+id: intl-ccsds-350-1-g-3
+title: Security Threats against Space Missions (CCSDS 350.1-G-3)
+authority: Consultative Committee for Space Data Systems
+jurisdiction: INTL
+doc_type: report
+url: https://ccsds.org/Pubs/350x1g3.pdf
+landing_page: https://public.ccsds.org/Pubs/
+local_path: corpus/raw/global/intl-ccsds-350-1-g-3.pdf
+sha256: a2da2aafe37c698c53ab8dbc2fabdac8d2405b1cec7d8186915e0b1faff4df19
+bytes: 1491984
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: CCSDS 350.1-G-3
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-09
+role: context
+candidate_quotes: []
+verified: false
+notes: Informational report on security threats for space missions; threat selection guidance (p. 24) only sampled. No quote taken.

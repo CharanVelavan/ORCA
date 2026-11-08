@@ -1,0 +1,62 @@
+id: eu-space-act-proposal-2025
+title: Proposal for a Regulation of the European Parliament and of the Council on the safety, resilience and sustainability
+  of space activities in the Union (EU Space Act)
+authority: European Commission
+jurisdiction: EU
+doc_type: proposal
+url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+landing_page: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+local_path: corpus/raw/global/eu-space-act-proposal-2025.html
+sha256: 44d36b057bd5ef0f5849e1601701d216d065ae00c6bd1e6f823899dceb945067
+bytes: 1103493
+pages: null
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: draft
+binding_basis: Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL
+issued: 2025-06-25
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: EUR-Lex reuse policy
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-06
+- GAP-IN-08
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: Union space operators shall take all the necessary measures to manage the risks posed to the security of network
+    and information systems and the security of the physical infrastructure and environment, in accordance with the principle
+    of proportionality, taking into account their risk profile and size, as well as the nature, scale and complexity of their
+    space activities.
+  page: null
+  clause: Article 76(1)
+  topic: space_cyber
+  gap: GAP-IN-09
+  supports: global_example
+  why: Imposes mandatory cybersecurity risk-management requirements across all space segments and physical infrastructure.
+- quote: To date, the cybersecurity of the space sector has been only partly addressed at Union level through a general applicable
+    framework as laid down by Directive (EU) 2022/2555. The current cybersecurity regime does not comprehensively cover all
+    types of actors and services which are relevant for the space sector.
+  page: null
+  clause: Recital (68)
+  topic: space_cyber
+  gap: GAP-IN-09
+  supports: global_example
+  why: Acknowledges the policy gap in general cyber legislation for satellite and space assets, establishing the rationale
+    for dedicated space cyber rules.
+- quote: Without prejudice to paragraph 3, Union space operators shall report to the competent authorities referred to in
+    Article 28(1) the significant incidents affecting the assets referred to in Article 5, first paragraph, point (21).
+  page: null
+  clause: Article 93(2)
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: global_example
+  why: Establishes dedicated space-incident notification duties to competent authorities for significant space infrastructure
+    disruptions.
+verified: false
+notes: European Commission legislative proposal for the EU Space Act (COM/2025/335 final), establishing space sector cybersecurity
+  baselines and incident reporting.

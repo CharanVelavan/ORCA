@@ -1,0 +1,42 @@
+id: sg-imda-tccop-2021
+title: Telecommunications Cybersecurity Code of Practice (TCCoP)
+authority: Infocomm Media Development Authority (IMDA Singapore)
+jurisdiction: SG
+doc_type: direction
+url: https://www.imda.gov.sg/-/media/imda/files/regulation-licensing-and-consultations/codes-of-practice/codes-of-practice-telecommunication-services/tccop.pdf
+landing_page: https://www.imda.gov.sg/regulations-and-licensing-listing/telecommunications-cybersecurity-code-of-practice
+local_path: corpus/raw/global/sg-imda-tccop-2021.pdf
+sha256: 1887e9ddab73566c50f7aa8cd2de1faa76c0b9c07a36af34eed8335dd94e204c
+bytes: 88974
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: 2021-04-01
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of Singapore open access
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes:
+- quote: 'Back to top Close Infocomm Media Development Authority About IMDA Careers
+    at IMDA Contact us Feedback FAQs Sitemap Subscribe to Newsletter IMDA LinkedIn
+    IMDA Facebook IMDA Instagram IMDA YouTube Report Vulnerability Privacy Statement
+    Terms of Use Reach Close Architects of SG&#x27;s Digital Future Page Not Found
+    Stay tuned for our newsletter Subscribe now LAST UPDATED: 25 May 2026 Share:'
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-06
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long
+  lines (62115); extracted text length 2394'

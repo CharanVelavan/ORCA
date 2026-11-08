@@ -1,0 +1,67 @@
+id: itu-d-netp-guidelines-2020
+title: ITU Guidelines for National Emergency Telecommunication Plans
+authority: ITU Telecommunication Development Bureau (ITU-D)
+jurisdiction: INTL
+doc_type: guideline
+url: https://www.itu.int/en/ITU-D/Emergency-Telecommunications/Documents/2020/NETP-guidelines.pdf
+landing_page: https://www.itu.int/en/ITU-D/Emergency-Telecommunications/Pages/National-Emergency-Telecommunication-Plans.aspx
+local_path: corpus/raw/global/itu-d-netp-guidelines-2020.pdf
+sha256: 4c765c9c919dd5f092a9421f155806a1e630c1b32962f66b5f83854f7396a12c
+bytes: 3734737
+pages: 106
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: This guide is intended primarily for national authorities responsible for the development and implementation
+  of the NETP
+issued: 2020-05-15
+in_force_from: 2020-05-15
+amends: []
+amended_by: []
+licence: ITU open guideline
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+- GAP-IN-03
+- GAP-IN-04
+role: global_example
+candidate_quotes:
+- quote: Regulations could be put in place to establish priority call routing on both mobile and fixed networks for people
+    engaged in response and recovery activities during emergencies, as well as other entities and institutions involved in
+    such activities.
+  page: 35
+  clause: Section I.b
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: global_example
+  why: Recommends establishing regulatory mandates for priority call routing across terrestrial mobile and fixed networks
+    during emergency response.
+- quote: Thus, a comprehensive EWS strategy should use both terrestrial and satellite services to monitor possible disasters
+    and provide accurate and timely warnings and alerts.
+  page: 40
+  clause: Section I.c
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: global_example
+  why: Emphasizes multi-domain alerting strategies combining terrestrial and satellite networks for downstream emergency warnings.
+- quote: Are outage reporting requirements of carriers exercised? Do carriers follow a uniform reporting process, and know
+    which contacts to report outages to and how?
+  page: 59
+  clause: Section I.d
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: global_example
+  why: Highlights the necessity of regular exercises to verify standardized carrier outage reporting processes to authorities.
+- quote: What backup power resources are available for operators, governments, responders and citizens, and how are these
+    resources prioritized for restorations?
+  page: 60
+  clause: Section I.d
+  topic: backup_power
+  gap: GAP-IN-04
+  supports: global_example
+  why: Identifies backup power preparedness and fuel restoration prioritization as critical components of telecommunications
+    resilience.
+verified: false
+notes: Published by ITU Telecommunication Development Bureau (ITU-D) in May 2020.

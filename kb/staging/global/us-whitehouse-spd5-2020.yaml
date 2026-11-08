@@ -1,0 +1,48 @@
+id: us-whitehouse-spd5-2020
+title: "Space Policy Directive-5: Cybersecurity Principles for Space Systems"
+authority: Executive Office of the President of the United States
+jurisdiction: US
+doc_type: presidential_memorandum
+url: https://www.federalregister.gov/documents/2020/09/10/2020-20150/cybersecurity-principles-for-space-systems
+landing_page: https://www.federalregister.gov/documents/2020/09/10/2020-20150/cybersecurity-principles-for-space-systems
+local_path: corpus/raw/global/us-whitehouse-spd5-2020.pdf
+sha256: 84dce15d6759f113842da39deae6b26ed94fbb8d521d5ac074daef61c452f44c
+bytes: 184526
+pages: 4
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "Agencies are directed to work with the commercial space industry and other non-government space operators, consistent with these principles and with applicable law, to further define best practices, establish cybersecurity-informed norms, and promote improved cybersecurity behaviors throughout the Nation’s industrial base for space systems."
+issued: 2020-09-04
+in_force_from: 2020-09-04
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+role: global_example
+candidate_quotes:
+  - quote: "Space systems and their supporting infrastructure, including software, should be developed and operated using risk-based, cybersecurity-informed engineering."
+    page: 2
+    clause: "Sec. 4(a)"
+    topic: space_cyber
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Establishes top-level national cybersecurity principles mandating risk-based engineering for space vehicles and supporting ground infrastructure."
+  - quote: "These plans should also ensure the ability to verify the integrity, confidentiality, and availability of critical functions and the missions, services, and data they enable and provide."
+    page: 3
+    clause: "Sec. 4(b)"
+    topic: space_cyber
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Directs space operators to verify CIA triad for critical satellite telemetry, tracking, and control functions."
+  - quote: "They should also share threat, warning, and incident information within the space industry, using venues such as Information Sharing and Analysis Centers to the greatest extent possible, consistent with applicable law."
+    page: 3
+    clause: "Sec. 4(d)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: global_example
+    why: "Mandates voluntary cross-industry threat, warning, and incident data sharing through Space ISAC."
+verified: false
+notes: "Target list cited 2020-20160, but the correct Federal Register citation for SPD-5 is 2020-20150 (85 FR 56155)."

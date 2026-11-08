@@ -1,0 +1,34 @@
+id: in-trai-net-neutrality-recommendations-2017
+title: "TRAI Recommendations on Net Neutrality (28 Nov 2017)"
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendations
+url: "https://www.trai.gov.in/sites/default/files/2024-09/Recommendations_NN_2017_11_28.pdf"
+landing_page: https://www.trai.gov.in/
+local_path: corpus/raw/india/in-trai-net-neutrality-recommendations-2017.pdf
+sha256: f44ad439a758eae1508f7521438cc58ab1d13e9a156c8962efb0d0b88be133fd
+bytes: 1070585
+pages: 55
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: 2017-11-28
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes:
+  - quote: "Emergency situations and services;"
+    page: 27
+    clause: "List of permitted exceptions (clause not identified)"
+    topic: emergency_powers
+    gap: null
+    supports: context
+    why: "Net neutrality rules allow emergency services as an exception, a precedent for priority handling of emergency traffic on an NTN link."
+verified: false
+notes: "TRAI recommendations (advisory). The emergency-services exception is one of several permitted specialised services. The quote is the list item. The net neutrality rules themselves are not checked here. The list's advisory label is supported by the document's nature."

@@ -1,0 +1,28 @@
+id: in-dot-telangana-row-order
+title: "State Right of Way and Infrastructure Safety Implementation Order (Telangana), per list title; not confirmed"
+authority: Department of Telecommunications (per list; issuer not confirmed from text)
+jurisdiction: IN-TG
+doc_type: order
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/telangana-order.pdf
+landing_page: https://www.eservices.dot.gov.in/
+local_path: corpus/raw/india/in-dot-telangana-row-order.pdf
+sha256: 2487b1182b2e01dc206875eeccac0af175fcfee58e76af36d8e1048f26160624
+bytes: 1035832
+pages: 2
+retrieved_at: 2026-11-08
+status: scanned
+official_domain: true
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: 2024-05-20
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+scanned: true
+notes: "No text layer: pdftotext returned 0 characters over 2 pages, so this is a scanned or image PDF. OCR is needed before any quote. The list's binding label, the title and the issue date are not checked against the text. The list says it covers emergency right-of-way disruptions, which could not be read."

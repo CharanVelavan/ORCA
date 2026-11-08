@@ -1,0 +1,48 @@
+id: itu-constitution-art40
+title: "Constitution of the International Telecommunication Union - Article 40: Priority of Telecommunications Concerning Safety of Life"
+authority: International Telecommunication Union (ITU)
+jurisdiction: International
+doc_type: treaty_article
+url: https://www.itu.int/pub/S-CONF-PLEN-2019
+landing_page: https://www.itu.int/pub/S-CONF-PLEN-2019
+local_path: corpus/raw/global/itu-constitution-art40.pdf
+sha256: 8ef2be6b4f0b384415836f982766caf81cbd01b9c0917d33693c17d6f6e23447
+bytes: 4034263
+pages: 962
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "International telecommunication services must give absolute priority to all telecommunications concerning safety of life at sea, on land, in the air or in outer space"
+issued: 2019-03-07
+in_force_from: 1994-07-01
+amends: []
+amended_by: []
+licence: copyright_itu
+language: en
+gaps: [GAP-IN-03]
+role: global_example
+candidate_quotes:
+  - quote: "International telecommunication services must give absolute priority to all telecommunications concerning safety of life at sea, on land, in the air or in outer space, as well as to epidemiological telecommunications of exceptional urgency of the World Health Organization."
+    page: 84
+    clause: "Article 40, Provision 191"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Top-level international treaty requirement giving absolute preemption and capacity priority to safety-of-life communications, including in outer space."
+  - quote: "Subject to the provisions of Articles 40 and 46 of this Constitution, government telecommunications (see Annex to this Constitution, No. 1014) shall enjoy priority over other telecommunications to the extent practicable upon specific request by the originator."
+    page: 85
+    clause: "Article 41, Provision 192"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Subordinates government traffic priority to safety-of-life telecommunications while maintaining preemption over commercial traffic."
+  - quote: "Radio stations shall be obliged to accept, with absolute priority, distress calls and messages regardless of their origin, to reply in the same manner to such messages, and immediately to take such action in regard thereto as may be required."
+    page: 88
+    clause: "Article 46, Provision 200"
+    topic: emergency_powers
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Obligates radio stations to accept distress traffic with absolute priority regardless of origin or network boundaries."
+verified: false
+notes: "Foundational ITU constitutional treaty provisions establishing mandatory international priority for safety-of-life and distress traffic."

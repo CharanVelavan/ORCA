@@ -1,0 +1,28 @@
+id: intl-un-spider-res-61-110
+title: 'United Nations General Assembly Resolution 61/110: UN-SPIDER'
+authority: United Nations General Assembly
+jurisdiction: INTL
+doc_type: resolution
+url: https://www.unoosa.org/pdf/gadocs/A_RES_61_110E.pdf
+landing_page: https://www.unoosa.org/oosa/en/ourwork/un-spider/index.html
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2006'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-02
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed URL https://www.unoosa.org/pdf/gadocs/A_RES_61_110E.pdf returned HTTP error (curl rc=22) on 3 attempts.

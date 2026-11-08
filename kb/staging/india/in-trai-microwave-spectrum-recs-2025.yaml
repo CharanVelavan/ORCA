@@ -1,0 +1,36 @@
+id: in-trai-microwave-spectrum-recs-2025
+title: Recommendations on Assignment of the Microwave Spectrum in 6 GHz (Lower), 7 GHz and 13 GHz Bands
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2025-12/Recommendation_10122025.pdf
+landing_page: https://trai.gov.in/telecom/spectrum
+local_path: corpus/raw/india/in-trai-microwave-spectrum-recs-2025.pdf
+sha256: 577ccd5247598edf25d774b7dd5bc19354be4260e25115b36f5138749d5aed19
+bytes: 5381955
+pages: 376
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2025-12-10'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: Authority recommends a uniform spectrum charge of 0
+  clause: Chapter II Paragraph 2.1
+  topic: priority_routing
+  gap: GAP-IN-03
+  supports: context
+  why: Recommends uniform spectrum charging principles for backhaul microwave links supporting mobile networks.
+  page: 262
+verified: false
+notes: TRAI recommendations on assignment of microwave backhaul spectrum in 6 GHz, 7 GHz and 13 GHz bands.

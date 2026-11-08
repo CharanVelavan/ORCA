@@ -1,0 +1,29 @@
+id: sa-nca-incident-management-controls
+title: Cybersecurity Incident Management Controls (CIMC-1:2021)
+authority: National Cybersecurity Authority
+jurisdiction: SA
+doc_type: standard
+url: https://nca.gov.sa/cimc-en.pdf
+landing_page: https://nca.gov.sa/en/regulatory-documents/controls-list/
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2021
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed NCA URL timed out (curl rc=28) on 3 attempts. Not obtained.

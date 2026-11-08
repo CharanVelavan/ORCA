@@ -1,0 +1,36 @@
+id: in-trai-sandbox-innovation-recs-2024
+title: Recommendations on Encouraging Innovative Technologies, Services, Use Cases and Business Models through Regulatory
+  Sandbox
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2024-09/Recommendation_12042024_0.pdf
+landing_page: https://trai.gov.in/telecom/licensing
+local_path: corpus/raw/india/in-trai-sandbox-innovation-recs-2024.pdf
+sha256: 1fafce782402c482ddce083e22cec3029f025f805dcdd4f00abece293e047054
+bytes: 1723310
+pages: 78
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2024-04-12'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: Authority recommends the following text to be adopted under section I
+  clause: Chapter II
+  topic: regulatory_sandbox
+  gap: null
+  supports: context
+  why: Recommends regulatory sandbox framework for live testing of innovative telecommunication technologies and networks.
+  page: 28
+verified: false
+notes: TRAI recommendations on establishing a regulatory sandbox framework for innovative telecom services and technologies.

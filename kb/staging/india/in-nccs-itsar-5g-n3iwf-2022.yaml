@@ -1,0 +1,31 @@
+id: in-nccs-itsar-5g-n3iwf-2022
+title: ITSAR for Non-3GPP Interworking Function (N3IWF) of 5G
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR111202209.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-5g-n3iwf-2022.pdf
+sha256: 76e487b85975f02ce4a517aeffd1f3156570bcbffd753523cf3693a5f5bcc415
+bytes: 615204
+pages: 57
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2022-09-01'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for Non-3GPP Interworking Function (N3IWF) of 5G under MTCTE. No
+  clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours
+  floor, or incident reporting clocks).

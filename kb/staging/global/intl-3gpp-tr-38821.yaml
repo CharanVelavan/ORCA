@@ -1,0 +1,52 @@
+id: intl-3gpp-tr-38821
+title: '3GPP TR 38.821 V16.2.0 (Release 16): Solutions for NR to support non-terrestrial networks (NTN)'
+authority: 3GPP Technical Specification Group Radio Access Network
+jurisdiction: INTL
+doc_type: report
+url: https://www.3gpp.org/ftp/Specs/archive/38_series/38.821/38821-g20.zip
+landing_page: https://www.3gpp.org/DynaReport/38821.htm
+local_path: corpus/raw/global/intl-3gpp-tr-38821/38821-g20.doc
+sha256: fd0fd1eb2a91bd0fbf7039e7dfae54d832c0f098a8fb3a875eb3cb3f14152ec2
+bytes: 27065344
+pages: 5
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: The present document has not been subject to any approval process by the 3GPP Organizational Partners and shall
+  not be implemented. This Specification is provided for future development work within 3GPP only.
+issued: '2023-03-31'
+in_force_from: '2023-03-31'
+amends: []
+amended_by: []
+licence: 3GPP open report
+language: en
+gaps: []
+role: global_example
+candidate_quotes:
+- quote: The satellite payload implements frequency conversion and a Radio Frequency amplifier in both up link and down link
+    direction.
+  page: 10
+  clause: 5.1.1
+  topic: standards
+  gap: null
+  supports: context
+  why: Describes the RF frequency conversion and amplification characteristics of transparent satellite payloads.
+- quote: Hence the satellite repeats the NR-Uu radio interface from the feeder link (between the NTN gateway and the satellite)
+    to the service link (between the satellite and the UE) and vice versa.
+  page: 10
+  clause: 5.1.1
+  topic: standards
+  gap: null
+  supports: context
+  why: Defines the repeating of NR-Uu radio interfaces across satellite feeder and service links in non-terrestrial networks.
+- quote: The satellite payload implements regeneration of the signals received from Earth.
+  page: 10
+  clause: 5.2.1.1
+  topic: standards
+  gap: null
+  supports: context
+  why: Contrasts transparent transponders with regenerative payload processing architectures on satellite platforms.
+verified: false
+notes: Unzipped into corpus/raw/global/intl-3gpp-tr-38821/ (38821-g20.doc) and re-extracted text to intl-3gpp-tr-38821.txt.
+  Replaced contradicted binding basis with verbatim words from p5. All NTN links in testbeds are emulated.

@@ -1,0 +1,48 @@
+id: intl-3gpp-ts-29573
+title: "3GPP TS 29.573 V18.4.0: 5G System; Public Land Mobile Network (PLMN) Interconnection; Stage 3"
+authority: 3GPP CT4
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/29_series/29.573/29573-i40.zip
+landing_page: https://www.3gpp.org/DynaReport/29573.htm
+local_path: corpus/raw/global/intl-3gpp-ts-29573/29573-i40.docx
+sha256: c576a8deb934ffede4a74017ca3e6081451c95a11e817e1a44a87fe3837a9a03
+bytes: 1354938
+pages: 5
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "The present document has not been subject to any approval process by the 3GPP Organizational Partners and shall not be implemented."
+issued: '2023-09-18'
+in_force_from: '2023-09-18'
+amends: []
+amended_by: []
+licence: 3GPP open standard
+language: en
+gaps: []
+role: global_example
+candidate_quotes:
+  - quote: "The N32-f interface shall be used to forward the HTTP/2 messages of the NF service producers and the NF service consumers in different PLMN, through the SEPPs of the respective PLMN."
+    page: 3
+    clause: "4.2.3"
+    topic: signalling_security
+    gap: null
+    supports: context
+    why: "Specifies inter-PLMN signaling message forwarding through Security Edge Protection Proxies (SEPP)."
+  - quote: "For the security protection at the transport layer, the SEPPs shall support TLS as specified in clause 13.1.2 of 3GPP TS 33.501 [6]."
+    page: 3
+    clause: "4.3.1"
+    topic: signalling_security
+    gap: null
+    supports: context
+    why: "Mandates TLS support at the transport layer for secure inter-PLMN interconnect between SEPPs."
+  - quote: "When the receiving SEPP receives HTTP requests over N32-f with purpose, marked using 3gpp-Sbi-Interplmn-Purpose header as specified in 3GPP TS 29.500 [4], that does not match with any of the purposes exchanged via the Security Capability Negotiation procedure, then the \"cause\" attribute shall be set to \"REQUESTED_PURPOSE_NOT_ALLOWED\"."
+    page: 3
+    clause: "6.1.7"
+    topic: signalling_security
+    gap: null
+    supports: context
+    why: "Requires rejection of inter-PLMN requests whose purpose does not match negotiated security capabilities."
+verified: false
+notes: "Unzipped into corpus/raw/global/intl-3gpp-ts-29573/ (29573-i40.docx) and extracted text to intl-3gpp-ts-29573.txt. Updated status from failed to ok. All NTN links in testbeds are emulated."

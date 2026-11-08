@@ -1,0 +1,55 @@
+id: in-itact-2000
+title: The Information Technology Act, 2000 (as amended)
+authority: Parliament of India
+jurisdiction: IN
+doc_type: act
+url: https://indiacode.gov.in/server/api/core/bitstreams/770a7d02-48f2-4274-bab9-10d0f48ee264/content
+landing_page: https://www.indiacode.gov.in/
+local_path: corpus/raw/india/in-itact-2000.pdf
+sha256: 003b3218fe399b293c73f6aef9ca52e5c1d080388c43fb0523572c1dc5f3d529
+bytes: 838383
+pages: 44
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "An Act to provide legal recognition for transactions carried out by means of electronic data interchange and other means of electronic communication, commonly referred to as \"electronic commerce\""
+issued: 2000-06-09
+in_force_from: 2000-10-17
+amends: []
+amended_by: []
+licence: Government of India open (terms not checked)
+language: en
+gaps: [GAP-IN-01, GAP-IN-06, GAP-IN-09]
+role: india_evidence
+candidate_quotes:
+  - quote: "The appropriate Government may, by notification in the Official Gazette, declare any computer resource which directly or indirectly affects the facility of Critical Information Infrastructure, to be a protected system."
+    page: 29
+    clause: "Section 70(1)"
+    topic: critical_infrastructure
+    gap: GAP-IN-06
+    supports: answers_gap
+    why: "Empowers the government to declare computer resources affecting critical information infrastructure as protected systems."
+  - quote: "The Central Government may, by notification published in the Official Gazette, designate any organisation of the Government as the national nodal agency in respect of Critical Information Infrastructure Protection."
+    page: 29
+    clause: "Section 70A(1)"
+    topic: critical_infrastructure
+    gap: GAP-IN-06
+    supports: answers_gap
+    why: "Provides statutory foundation for designating NCIIPC as the national nodal agency for critical information infrastructure protection."
+  - quote: "The Indian Computer Emergency Response Team shall serve as the national agency for performing the following functions in the area of cyber security,–"
+    page: 30
+    clause: "Section 70B(4)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: answers_gap
+    why: "Establishes CERT-In as the statutory national agency for cyber incident response, alerts, emergency measures and coordination."
+  - quote: "For carrying out the provisions of sub-section (4), the agency referred to in sub-section (1) may call for information and give direction to the service providers, intermediaries, data centres, body corporate and any other person."
+    page: 30
+    clause: "Section 70B(6)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: answers_gap
+    why: "Statutory authority for CERT-In to call for information and issue binding directions to service providers, data centres and bodies corporate."
+verified: false
+notes: "Act No. 21 of 2000 as amended, including major amendments by the Information Technology (Amendment) Act, 2008 (Act 10 of 2009)."

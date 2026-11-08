@@ -1,0 +1,30 @@
+id: in-nccs-itsar-euicc-telecom-2024
+title: ITSAR for Embedded UICC (eUICC)
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR409022411.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-euicc-telecom-2024.pdf
+sha256: 80b9111072c1ef688d1ba4fe235d40afaf21fe66d0698b5f0a0140ff6916fd48
+bytes: 1097971
+pages: 79
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: The requirements specified here are binding both on operators and eUICC manufacturers.
+issued: '2024-11-28'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for Embedded UICC (eUICC) under MTCTE. No clause bears directly
+  on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours floor, or incident
+  reporting clocks).

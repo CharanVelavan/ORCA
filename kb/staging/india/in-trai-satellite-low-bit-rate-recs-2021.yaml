@@ -1,0 +1,36 @@
+id: in-trai-satellite-low-bit-rate-recs-2021
+title: Recommendations on Licensing Framework for Satellite-based Connectivity for Low Bit Rate Applications
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2024-09/Recommendations_26082021.pdf
+landing_page: https://trai.gov.in/telecom/licensing
+local_path: corpus/raw/india/in-trai-satellite-low-bit-rate-recs-2021.pdf
+sha256: ac76af432445a4101b4ceb62024ff03713eb3eee7a73b52664fd1dfdfb70a566
+bytes: 2444917
+pages: 82
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2021-08-26'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: The Service Providers should be allowed to use any of the permitted satellite frequency bands for providing satellite-based
+    low-bit-rate connectivity.
+  clause: Chapter II Paragraph 2.2
+  topic: space_cyber
+  gap: GAP-IN-06
+  supports: context
+  why: Recommends allowing satellite connectivity providers to use any permitted frequency bands for low-bit-rate IoT services.
+  page: 26
+verified: false
+notes: TRAI recommendations on licensing framework for satellite-based low-bit-rate connectivity for IoT and sensor networks.

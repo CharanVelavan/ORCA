@@ -1,0 +1,31 @@
+id: intl-etsi-en-302186
+title: 'ETSI EN 302 186 V2.1.1: Satellite Earth Stations and Systems (SES); Harmonised
+  Standard for satellite mobile aircraft stations'
+authority: European Telecommunications Standards Institute (ETSI)
+jurisdiction: INTL
+doc_type: standard
+url: https://www.etsi.org/deliver/etsi_en/302100_302199/302186/02.01.01_60/en_302186v020101p.pdf
+landing_page: https://www.etsi.org/standards-search
+local_path: corpus/raw/global/intl-etsi-en-302186.pdf
+sha256: 65e547f5dfa69165d6aef9b5b8137b6445753a50c43348807fcd540665c059bc
+bytes: 323416
+pages: 59
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2016-03-10
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: ETSI open standard
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-09
+role: global_example
+candidate_quotes: []
+verified: false
+notes: 'Downloaded type: PDF document, version 1.7 (zip deflate encoded); text length
+  204487'

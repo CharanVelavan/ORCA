@@ -1,0 +1,30 @@
+id: in-sansad-scit-17ls-43rd-report-demands-telecom-2023
+title: 'Standing Committee on Communications and Information Technology (17th Lok Sabha) 43rd Report: Demands for Grants (2023-24)
+  of Department of Telecommunications'
+authority: Standing Committee on Communications and Information Technology, Lok Sabha
+jurisdiction: IN
+doc_type: report
+url: https://sansad.in/getFile/lsscommittee/Communications%20and%20Information%20Technology/17_Communications_and_Information_Technology_43.pdf?source=loksabhadocs
+landing_page: https://sansad.in
+local_path: corpus/raw/india/in-sansad-scit-17ls-43rd-report-demands-telecom-2023.pdf
+sha256: e9df4acb2fc73ffec9527b3dfdf45d9a740163211f7a72f8a2e6fa3da49bf236
+bytes: 701947
+pages: 89
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: false
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2023-03
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-04
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Parliamentary standing committee report on budgetary demands of DoT; no clause bears on specific technical gaps.

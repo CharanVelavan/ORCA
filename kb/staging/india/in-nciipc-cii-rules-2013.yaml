@@ -1,0 +1,55 @@
+id: in-nciipc-cii-rules-2013
+title: Information Technology (National Critical Information Infrastructure Protection Centre and Manner of Performing Functions and Duties) Rules, 2013
+authority: Ministry of Communications and Information Technology
+jurisdiction: IN
+doc_type: rules
+url: https://dit.py.gov.in/sites/default/files/NCIIPC-MPF-D-Rules.pdf
+landing_page: https://www.meity.gov.in/documents/act-and-policies
+local_path: corpus/raw/india/in-nciipc-cii-rules-2013.pdf
+sha256: b295548981d5c194a8243e74d425254db5539f935c0b9080649eeee4524d4e93
+bytes: 433078
+pages: 6
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "In exercise of the powers conferred by clause (zc) of sub-section (2) of Section 87, read with sub-section (3) of section 70A of the Information Technology Act, 2000 (21 of 2000), the Central Government hereby makes the following rules"
+issued: 2014-01-16
+in_force_from: 2014-01-16
+amends: []
+amended_by: []
+licence: unknown
+language: bilingual
+gaps: [GAP-IN-06, GAP-IN-09]
+role: india_evidence
+candidate_quotes:
+  - quote: "National Critical Information Infrastructure Protection Centre (hereinafter referred to as NCIIPC) shall be the national nodal agency designated under section 70A of the Act in respect of Critical Information Infrastructure Protection and shall function at the address to be notified."
+    page: 3
+    clause: "Rule 3(1)"
+    topic: critical_infrastructure
+    gap: GAP-IN-06
+    supports: answers_gap
+    why: "Designates NCIIPC as the national nodal agency under Section 70A of the Information Technology Act for Critical Information Infrastructure protection."
+  - quote: "Coordinating, sharing, monitoring, collecting, analysing and forecasting, national-level threats to critical information infrastructure for policy guidance, expertise-sharing and situational awareness for early warning or alerts."
+    page: 3
+    clause: "Rule 4(5)"
+    topic: downstream_warning
+    gap: GAP-IN-02
+    supports: answers_gap
+    why: "Assigns NCIIPC responsibility for threat monitoring, analysis and early warning dissemination across critical infrastructure."
+  - quote: "Exchanging cyber incidents and other information relating to attacks and vulnerabilities with Indian Computer Emergency Response Team and other concerned organisations in the field."
+    page: 4
+    clause: "Rule 4(12)"
+    topic: disaster_coordination
+    gap: GAP-IN-01
+    supports: answers_gap
+    why: "Mandates institutional cyber incident and vulnerability exchange between NCIIPC and CERT-In."
+  - quote: "In the event of any threat to critical information infrastructure the National Critical Information Infrastructure Protection Centre may call for information and give directions to the critical sectors or persons serving or having a critical impact on Critical Information Infrastructure."
+    page: 4
+    clause: "Rule 4(13)"
+    topic: emergency_powers
+    gap: GAP-IN-06
+    supports: answers_gap
+    why: "Empowers NCIIPC to call for information and give directions to critical sectors during threats to critical information infrastructure."
+verified: false
+notes: "Notified vide G.S.R. 19(E) dated 16 Jan 2014 under Section 87(2)(zc) read with Section 70A(3) of IT Act 2000."

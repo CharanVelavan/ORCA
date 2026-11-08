@@ -1,0 +1,57 @@
+id: in-meity-it-rules-index
+title: Rules for Information Technology Act, 2000
+authority: Ministry of Electronics and Information Technology
+jurisdiction: IN
+doc_type: rules
+url: https://www.meity.gov.in/static/uploads/2025/01/2f404d4d2894b0e313fadd93a54d9086.pdf
+landing_page: https://www.meity.gov.in/documents/act-and-policies/rules-for-information-technology-act-2000-YDO5AjMtQWa
+local_path: corpus/raw/india/in-meity-it-rules-index.pdf
+sha256: 91f7e814b63ec7df9e5561d4aa3cd81896c09ec136a472438650ebaff5121726
+bytes: 822343
+pages: 99
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "In exercise of the powers conferred by section 87 of the Information Technology Act, 2000 (21 of 2000), the Central Government hereby makes the following rules regulating the application and other guidelines for Certifying Authorities"
+issued: '2000-10-17'
+in_force_from: '2000-10-17'
+amends: []
+amended_by: []
+licence: government_open
+language: en
+gaps:
+  - GAP-IN-01
+  - GAP-IN-06
+role: india_evidence
+candidate_quotes:
+  - quote: "These Rules may be called Information Technology (Certifying Authorities) Rules, 2000."
+    page: 1
+    clause: "Rule 1(1)"
+    topic: telecom_cyber_security
+    gap: GAP-IN-06
+    supports: context
+    why: "Defines the short title for the initial Information Technology Certifying Authorities Rules 2000."
+  - quote: "In exercise of the powers conferred by section 87 of the Information Technology Act, 2000 (21 of 2000), the Central Government hereby makes the following rules regulating the application and other guidelines for Certifying Authorities, namely:-"
+    page: 1
+    clause: "Preamble"
+    topic: standards
+    gap: GAP-IN-06
+    supports: context
+    why: "Invokes Section 87 rule-making powers under IT Act 2000 for Certifying Authorities regulation."
+  - quote: "The Information Technology (IT) architecture for Certifying Authorities may support open standards and accepted de facto standards; the most important standards that may be considered for different activities associated with the Certifying Authority’s functions are as under:"
+    page: 4
+    clause: "Rule 6"
+    topic: standards
+    gap: GAP-IN-06
+    supports: proves_gap
+    why: "Specifies architectural and encryption standards for Certifying Authorities under the IT Act."
+  - quote: "These rules may be called the Cyber Regulations Appellate Tribunal (Procedure) Rules, 2000."
+    page: 88
+    clause: "Rule 1(1)"
+    topic: telecom_cyber_security
+    gap: GAP-IN-06
+    supports: context
+    why: "Defines the short title for the Cyber Regulations Appellate Tribunal Procedure Rules 2000."
+verified: false
+notes: "Official MeitY compilation document comprising original subordinate rules notified under Sections 87 and 88 of the Information Technology Act 2000."

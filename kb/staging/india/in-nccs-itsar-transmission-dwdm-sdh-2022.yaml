@@ -1,0 +1,32 @@
+id: in-nccs-itsar-transmission-dwdm-sdh-2022
+title: ITSAR for Transmission Terminal Equipment (SDH, DWDM, DXC)
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR203082209.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-transmission-dwdm-sdh-2022.pdf
+sha256: 6d0dcd063dd9e31b8936a64701fb83441bf3809f854dbf59ca49a0bebfa025c4
+bytes: 1305593
+pages: 44
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: The requirements specified here are binding both on operators (aka Telecommunication Service Provider- TSP)
+  and network equipment providers (aka OEMs-Original Equipment Manufacturer).
+issued: '2022-09-01'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for Transmission Terminal Equipment (SDH, DWDM, DXC) under MTCTE.
+  No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours
+  floor, or incident reporting clocks).

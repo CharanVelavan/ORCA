@@ -1,0 +1,38 @@
+id: au-space-general-rules-2019
+title: Space (Launches and Returns) (General) Rules 2019
+authority: Australian Space Agency
+jurisdiction: AU
+doc_type: rules
+url: https://www.legislation.gov.au/F2019L01118/latest/text
+landing_page: https://www.legislation.gov.au/F2019L01118/latest
+local_path: corpus/raw/global/au-space-general-rules-2019.html
+sha256: 6b559bc4e7d75a8680a042022ad8d8d0c4c4d9ed7e5ae134b6e0d5a8d7d441cd
+bytes: 148440
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '2019-08-28'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: Space (Launches and Returns) (General) Rules 2019 - Federal Register of Legislation
+    &lt;link rel="stylesheet" href="styles.84630ab4f3c563f3.css"&gt;
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-09
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long
+  lines (37376); extracted text length 7391'

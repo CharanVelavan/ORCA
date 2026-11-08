@@ -1,0 +1,50 @@
+id: in-tec-itsar-index
+title: Essential Requirements and List of ITSAR Annexures to Essential Requirements
+authority: Telecommunication Engineering Centre, Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://www.mtcte.tec.gov.in/er_inst
+landing_page: https://www.mtcte.tec.gov.in/er_inst
+local_path: corpus/raw/india/in-tec-itsar-index.html
+sha256: 663d60b5f1a0a4be56045ae1443b985cf9f38432762509bda8dacca27bceab80
+bytes: 32523
+pages: null
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "MANDATORY TESTING & CERTIFICATION OF TELECOMMUNICATION EQUIPMENT PORTAL"
+issued: '2024'
+in_force_from: '2024'
+amends: []
+amended_by: []
+licence: government_open
+language: en
+gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+role: india_evidence
+candidate_quotes:
+  - quote: "MANDATORY TESTING & CERTIFICATION OF TELECOMMUNICATION EQUIPMENT PORTAL"
+    page: null
+    clause: "Header"
+    topic: standards
+    gap: GAP-IN-06
+    supports: context
+    why: "Portal header indicating Mandatory Testing and Certification of Telecommunication Equipment framework."
+  - quote: "Download Amended MTCTE Procedure v3.0 (TEC 93009:2024)"
+    page: null
+    clause: "Downloads"
+    topic: standards
+    gap: GAP-IN-06
+    supports: proves_gap
+    why: "Designates the governing MTCTE procedure TEC 93009:2024 under Telecommunication Engineering Centre."
+  - quote: "© Content Owned by Telecommunication Engineering Centre, Government of India."
+    page: null
+    clause: "Footer"
+    topic: telecom_cyber_security
+    gap: GAP-IN-06
+    supports: context
+    why: "Attribution showing official Telecommunication Engineering Centre ownership."
+verified: false
+notes: "HTML index page for MTCTE portal essential requirements and Indian Telecom Security Assurance Requirements (ITSAR)."

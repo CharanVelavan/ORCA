@@ -1,0 +1,46 @@
+id: in-nccs-itsar-crypto-controls-v1-2020
+title: ITSAR for Cryptographic Controls (Version 1.0.0)
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR001962009.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-crypto-controls-v1-2020.pdf
+sha256: 65fc7fdaff028af7dfbe45a2b5a6ea43063806fc9b58503222db3b5274826905
+bytes: 249368
+pages: 7
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2020-09-20'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: This document provides a list of the prescribed cryptographic controls applicable to Indian Telecom Security Assurance
+    Requirements (ITSAR).
+  page: 5
+  clause: 1. Scope
+  topic: space_cyber
+  gap: null
+  supports: context
+  why: Defines initial 2020 cryptographic baseline for telecom network elements undergoing MTCTE certification.
+- quote: In order to ensure that the Network Element is safe to connect in the Indian telecom Network, National Centre for
+    Communication Security (NCCS), a unit of Department of Telecommunications (DOT) under Ministry of Communications, Government
+    of India specifies the Indian specific Telecom security requirements called Indian Telecom Security Assurance Requirements
+    (ITSAR), for every Telecom Network Element.
+  page: 5
+  clause: 2. Introduction
+  topic: space_cyber
+  gap: null
+  supports: context
+  why: Establishes foundational NCCS remit for security assurance of equipment connecting to the Indian telecom network.
+verified: false
+notes: Predecessor 2020 cryptographic control standard for telecom equipment security assurance.

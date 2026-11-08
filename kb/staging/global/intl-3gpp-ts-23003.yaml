@@ -1,0 +1,30 @@
+id: intl-3gpp-ts-23003
+title: '3GPP TS 23.003 V18.5.0: Numbering, addressing and identification'
+authority: 3GPP CT4
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/23_series/23.003/23003-i50.zip
+landing_page: https://www.3gpp.org/ftp/Specs/archive/23_series/23.003/
+local_path: corpus/raw/global/intl-3gpp-ts-23003.html
+sha256: 7a539f1abbf18c15bd3b2a22c43de2af733f86a9ce10ecae0023aea0eed60880
+bytes: 857012
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2024-03-27
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: 3GPP open standard
+language: en
+gaps:
+- GAP-IN-06
+role: global_example
+candidate_quotes: []
+verified: false
+notes: 'Downloaded type: Zip archive data, at least v2.0 to extract, compression method=deflate;
+  text length 0; Downloaded content is not PDF or HTML: Zip archive data, at least
+  v2.0 to extract, compression method=deflate'

@@ -1,0 +1,30 @@
+id: in-nccs-itsar-group3-csr-2026
+title: ITSAR for Group-III Devices (Common Security Requirements)
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR002032601.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-group3-csr-2026.pdf
+sha256: 6554f6f00a043eee374cf585f49c6fca495b9fca1a62a10efed4fd51601635f5
+bytes: 712087
+pages: 48
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2026-01-29'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for Group-III Devices (Common Security Requirements) under MTCTE.
+  No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours
+  floor, or incident reporting clocks).

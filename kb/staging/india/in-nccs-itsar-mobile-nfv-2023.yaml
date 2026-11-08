@@ -1,0 +1,31 @@
+id: in-nccs-itsar-mobile-nfv-2023
+title: ITSAR for Network Function Virtualization (NFV) for Mobile Networks
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR404042308.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-mobile-nfv-2023.pdf
+sha256: f9037bb01cba76e685d9db9a11e05a4cb24d679f8e1f6a5971c0305807572b2d
+bytes: 1312560
+pages: 122
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2023-08-28'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for Network Function Virtualization (NFV) for Mobile Networks under
+  MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover,
+  battery-hours floor, or incident reporting clocks).

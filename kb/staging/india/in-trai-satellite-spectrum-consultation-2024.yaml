@@ -1,0 +1,34 @@
+id: in-trai-satellite-spectrum-consultation-2024
+title: "TRAI Consultation Paper No. 13/2024: Terms and Conditions for the Assignment of Spectrum for Certain Satellite-Based Commercial Communication Services"
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation paper
+url: "https://www.trai.gov.in/sites/default/files/2024-10/CP_27092024_0.pdf"
+landing_page: https://www.trai.gov.in/
+local_path: corpus/raw/india/in-trai-satellite-spectrum-consultation-2024.pdf
+sha256: 74280ba65bb253bf8c5f9bf9a1ef56dc77aefff11576a15ea25c89c9ecfe6368
+bytes: 10166245
+pages: 91
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: draft
+binding_basis: "Consultation Paper"
+issued: 2024-09-27
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: india_evidence
+candidate_quotes:
+  - quote: "Non-geostationary-satellite systems shall not cause unacceptable interference"
+    page: 23
+    clause: "Quoted draft condition (clause not identified in the text read)"
+    topic: interference_reporting
+    gap: null
+    supports: context
+    why: "Shows the regulator's draft interference rule for satellite systems, relevant to the jamming scenario. It is a draft consultation, not binding."
+verified: false
+notes: "Consultation paper (draft). The list's draft label is confirmed by the title. Satellite spectrum terms are the context for the NTN link; the document has many satellite mentions and one incident mention. No binding gap is closed. Quote is a draft condition, not a rule."

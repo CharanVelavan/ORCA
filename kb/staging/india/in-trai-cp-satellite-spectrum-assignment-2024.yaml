@@ -1,0 +1,36 @@
+id: in-trai-cp-satellite-spectrum-assignment-2024
+title: Consultation Paper on Terms and Conditions for the Assignment of Spectrum for Certain Satellite-based Services
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-10/CP_27092024_0.pdf
+landing_page: https://trai.gov.in/telecom/spectrum
+local_path: corpus/raw/india/in-trai-cp-satellite-spectrum-assignment-2024.pdf
+sha256: 74280ba65bb253bf8c5f9bf9a1ef56dc77aefff11576a15ea25c89c9ecfe6368
+bytes: 10166245
+pages: 91
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2024-09-27'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-06
+role: context
+candidate_quotes:
+- quote: Consultation Paper No. 13/2024
+  clause: Title Page
+  topic: space_cyber
+  gap: GAP-IN-06
+  supports: context
+  why: Consults on terms and conditions for assignment of spectrum for satellite-based telecommunication services.
+  page: 1
+verified: false
+notes: TRAI consultation paper on terms and conditions for assignment of satellite spectrum.

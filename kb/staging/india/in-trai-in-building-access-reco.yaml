@@ -1,0 +1,27 @@
+id: in-trai-in-building-access-reco
+title: "TRAI Recommendations on In-Building Access (IBS) (2018)"
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendations
+url: "https://www.trai.gov.in/sites/default/files/2024-11/Recommendation_IBS_0932018.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-trai-in-building-access-reco.pdf
+sha256: 4aaf2502d5630d9876cac11415e0e739d2661e678ed5210f0cf516ecd3dbf219
+bytes: 2269978
+pages: 14
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: 2018
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Keyword check: no satellite, cyber or emergency term found. In-building mobile infrastructure access only. No candidate quotes."

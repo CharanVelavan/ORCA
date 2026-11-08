@@ -1,0 +1,27 @@
+id: in-trai-submarine-cable-recommendations-2023
+title: "TRAI Recommendations on Submarine Cables (2023)"
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendations
+url: "https://www.trai.gov.in/sites/default/files/2024-09/Recommendation_19062023_0.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-trai-submarine-cable-recommendations-2023.pdf
+sha256: d6050e6197a5f9466e57d330e7a5caee612f2673cc7b3f7f00fd58f9e44ef264
+bytes: 1687633
+pages: 94
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: 2023-06-19
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Keyword check: security and emergency mentions; submarine cable deployment rules. No satellite-security or incident-reporting clause found. No candidate quotes."

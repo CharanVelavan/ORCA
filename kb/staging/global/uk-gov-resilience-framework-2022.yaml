@@ -1,0 +1,33 @@
+id: uk-gov-resilience-framework-2022
+title: The UK Government Resilience Framework
+authority: Cabinet Office
+jurisdiction: UK
+doc_type: strategy
+url: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1125824/UK_Government_Resilience_Framework_Final.pdf
+landing_page: https://www.gov.uk/government/publications/the-uk-government-resilience-framework
+local_path: corpus/raw/global/uk-gov-resilience-framework-2022.pdf
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: false
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2022-12-19'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Open Government Licence v3.0
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-04
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts:  Time  Current\n                \
+  \                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0\
+  \     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0    41   \
+  \ 0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56)\
+  \ The requested URL returned error: 404"

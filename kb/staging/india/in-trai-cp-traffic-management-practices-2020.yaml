@@ -1,0 +1,36 @@
+id: in-trai-cp-traffic-management-practices-2020
+title: Consultation Paper on Traffic Management Practices (TMPs) and Multi-Stakeholder Body for Net Neutrality
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/CP_02012020_0.pdf
+landing_page: https://trai.gov.in/telecom/internet-broadband
+local_path: corpus/raw/india/in-trai-cp-traffic-management-practices-2020.pdf
+sha256: 9c101ca3265d241204f1ab4bb35e61e963b4cf2eee90b21f0b02fa7314e2c566
+bytes: 2356113
+pages: 38
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2020-01-02'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-08
+role: context
+candidate_quotes:
+- quote: 'Stakeholders are requested to send their comments, preferably in electronic form to the following address:'
+  clause: Preface
+  topic: priority_routing
+  gap: GAP-IN-03
+  supports: context
+  why: Consults on defining reasonable traffic management practices (TMPs) and priority routing exceptions under net neutrality.
+  page: 2
+verified: false
+notes: TRAI consultation paper on traffic management practices and multi-stakeholder body for net neutrality.

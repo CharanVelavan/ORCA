@@ -1,0 +1,29 @@
+id: ca-remote-sensing-space-systems-act
+title: Remote Sensing Space Systems Act (S.C. 2005, c. 45)
+authority: Parliament of Canada
+jurisdiction: CA
+doc_type: act
+url: https://laws-lois.justice.gc.ca/PDF/R-5.4.pdf
+landing_page: https://laws-lois.justice.gc.ca/eng/acts/r-5.4/
+local_path: corpus/raw/global/ca-remote-sensing-space-systems-act.pdf
+sha256: f272fd658fd4e6f3da7a9b31c2adbda5ee4db23d5d21ad23832f6019200fc413
+bytes: 423212
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '2005'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-09
+role: global_example
+candidate_quotes: []
+verified: false
+notes: 'Remote Sensing Space Systems Act: licensing of remote sensing satellite operators. Bilingual PDF (English/French columns); no quote taken in this pass.'

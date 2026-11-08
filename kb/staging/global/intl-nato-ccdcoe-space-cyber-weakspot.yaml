@@ -1,0 +1,37 @@
+id: intl-nato-ccdcoe-space-cyber-weakspot
+title: Space – NATO's Cyber Security Weak Spot
+authority: NATO Cooperative Cyber Defence Centre of Excellence (CCDCOE)
+jurisdiction: INTL
+doc_type: report
+url: https://ccdcoe.org/incyder-articles/chatham-house-report-space-nato-cyber-securitys-weak-spot/
+landing_page: https://ccdcoe.org
+local_path: corpus/raw/global/intl-nato-ccdcoe-space-cyber-weakspot.html
+sha256: 5c1848325ad40d2bc23925c9a5641e9079f11045db432af09263294254cf9964
+bytes: 89570
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2019-10
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+- GAP-IN-09
+role: context
+candidate_quotes:
+- quote: NATO owns satellite communications (SATCOM) ground stations, but no satellites; it is therefore highly reliant on allies to provide space-sourced data, information and services.
+  page: 1
+  clause: not stated
+  topic: space_cyber
+  gap: null
+  supports: context
+  why: Describes the dependence of a defence alliance on member-state space services and ground stations, a supply-chain and ground-segment vulnerability.
+verified: false
+notes: Chatham House research paper summary hosted on the CCDCOE site (NATO-accredited centre, not NATO itself). Downloaded as HTML page; no full paper text used. Context only.

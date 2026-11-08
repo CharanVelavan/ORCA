@@ -1,0 +1,50 @@
+id: fcc-wea-rules-47cfr10
+title: 47 CFR Part 10 Wireless Emergency Alerts (WEA)
+authority: Federal Communications Commission
+jurisdiction: US
+doc_type: regulation
+url: https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-10
+landing_page: https://www.fcc.gov/wireless-emergency-alerts-wea
+local_path: corpus/raw/global/fcc-wea-rules-47cfr10.html
+sha256: 0bef0232635e638b7fc2229408b8a944644eff9585a35efaa57c09cc2758f681
+bytes: 10596
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: 2008-08-07
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: public domain (US Gov)
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-03
+role: global_example
+candidate_quotes:
+- quote: You may occassionally be asked to complete the CAPTCHA again, this is normal
+    and part of our security measures. unblock#handleSubmit"> Request Access An official
+    website of the United States government.
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-02
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: Please do not provide confidential information or personal data. * Your Name
+    * Email * How can we help you? Upload Attachment * I am requesting technical help.
+    site-feedback#openModal" aria-label="Open site help form"> Site Help
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-02
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long
+  lines (468); extracted text length 1182'

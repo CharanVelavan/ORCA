@@ -1,0 +1,55 @@
+id: in-dot-suspension-rules-2024
+title: Telecommunications (Temporary Suspension of Services) Rules, 2024
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/temporary-suspension-of-services-rules-2024.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-suspension-rules-2024.pdf
+sha256: f60ca6db4d91b116b8ef9bf543faff095d019a6bb631da553c695bf020f07735
+bytes: 1830337
+pages: 5
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "Now, therefore, in exercise of the powers conferred by clause (b) of sub-section (2) and sub-section (4) of section 20 read with clauses (t) and (u) of sub-section (2) of section 56 of the Telecommunications Act, 2023 (44 of 2023)"
+issued: 2024-11-22
+in_force_from: 2024-11-22
+amends: []
+amended_by: []
+licence: Government of India open (terms not checked)
+language: bilingual
+gaps: [GAP-IN-03]
+role: india_evidence
+candidate_quotes:
+  - quote: "These rules may be called the Telecommunications (Temporary Suspension of Services) Rules, 2024."
+    page: 4
+    clause: "Rule 1(1)"
+    topic: emergency_powers
+    gap: GAP-IN-03
+    supports: answers_gap
+    why: "Enacts the statutory rules governing temporary suspension of telecommunication services under Section 20(2)(b)."
+  - quote: "The directions to suspend any telecommunication service or any class of telecommunication services under clause (b) of sub-section (2) of section 20, shall only be issued by suspension order, and for reasons to be recorded in writing by a competent authority:"
+    page: 4
+    clause: "Rule 3(1)"
+    topic: emergency_powers
+    gap: GAP-IN-03
+    supports: answers_gap
+    why: "Requires written suspension orders from the designated competent authority recording specific statutory grounds."
+  - quote: "No suspension order under sub-rule (1) shall be made, unless the authority issuing such order has considered that the objectives set forth under sub-section (2) of section 20, cannot be achieved by any other reasonable means."
+    page: 5
+    clause: "Rule 3(4)"
+    topic: emergency_powers
+    gap: GAP-IN-03
+    supports: answers_gap
+    why: "Imposes a statutory proportionality requirement that objectives cannot be achieved by any other reasonable means prior to suspension."
+  - quote: "Each authorised entity shall designate a nodal officer for every service area, or State or Union territory, to receive and implement the suspension order."
+    page: 5
+    clause: "Rule 4(1)"
+    topic: disaster_coordination
+    gap: GAP-IN-03
+    supports: answers_gap
+    why: "Requires telecommunication entities to maintain designated nodal officers across all service areas to execute emergency suspension orders."
+verified: false
+notes: "Notified vide G.S.R. 724(E) dated 22 Nov 2024 in supersession of the 2017 temporary suspension rules."

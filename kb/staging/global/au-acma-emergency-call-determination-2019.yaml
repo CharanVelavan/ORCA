@@ -1,0 +1,39 @@
+id: au-acma-emergency-call-determination-2019
+title: Telecommunications (Emergency Call Service) Determination 2019
+authority: Australian Communications and Media Authority
+jurisdiction: AU
+doc_type: determination
+url: https://www.legislation.gov.au/F2019L01509/latest/text
+landing_page: https://www.legislation.gov.au/F2019L01509/latest/text
+local_path: corpus/raw/global/au-acma-emergency-call-determination-2019.html
+sha256: 7e999c9f744212a173ce68a6a8bdd8655ea8126aa233b2c28c8ad8ef22b9f9ec
+bytes: 133077
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '2019-11-25'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-03
+role: global_example
+candidate_quotes:
+- quote: Telecommunications (Emergency Call Service) Determination 2019 - Federal
+    Register of Legislation &lt;link rel="stylesheet" href="styles.84630ab4f3c563f3.css"&gt;
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-02
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long
+  lines (27252); extracted text length 8342'

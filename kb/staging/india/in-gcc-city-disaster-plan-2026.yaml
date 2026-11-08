@@ -1,0 +1,55 @@
+id: in-gcc-city-disaster-plan-2026
+title: "City Disaster Management Perspective Plan 2026"
+authority: "Greater Chennai Corporation"
+jurisdiction: IN-TN
+doc_type: strategy
+url: https://chennaicorporation.gov.in/gcc/cdmp/
+landing_page: https://chennaicorporation.gov.in/gcc/cdmp/
+local_path: corpus/raw/india/in-gcc-city-disaster-plan-2026.pdf
+sha256: 9bb34068bffb756610530879b0eeb6c8e4e70cd919a099cb02508deee005142c
+bytes: 205281467
+pages: 800
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: 2026
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: copyright_government
+language: en
+gaps: [GAP-IN-02, GAP-IN-03]
+role: context
+candidate_quotes:
+  - quote: "The Control Room at the Greater Chennai Corporation serves as Chennai’s Emergency Operations Centre."
+    page: 9
+    clause: "Preface"
+    topic: joint_command
+    gap: GAP-IN-02
+    supports: context
+    why: "Identifies the GCC Control Room as Chennai's central emergency operations centre for inter-agency disaster response."
+  - quote: "In case of breakdown of telephone and other communication networks, wireless network of GCC will be largely used for continuity."
+    page: 45
+    clause: "3.2.1"
+    topic: disaster_coordination
+    gap: GAP-IN-03
+    supports: context
+    why: "Specifies failover to GCC wireless network when primary telephone and cellular communication networks fail during floods."
+  - quote: "The Government of Tamil Nadu has provided support to GCC to ensure that operations will be disaster proof by adding wireless communication sets, internet telephony, Ham radios, satellite radio etc., so that communication is uninterrupted even during power outages."
+    page: 156
+    clause: "6.2"
+    topic: backup_power
+    gap: GAP-IN-03
+    supports: answers_gap
+    why: "Details multi-modal resilient communication and backup power requirements across Chennai municipal disaster operations."
+  - quote: "Satellite connections do not depend on land-based telephone wires or cellular towers and are capable of providing a full range of communications services, including voice, video and broadband data."
+    page: 157
+    clause: "6.2.2"
+    topic: disaster_coordination
+    gap: GAP-IN-03
+    supports: context
+    why: "Recognizes the unique resilience of satellite communication links during terrestrial infrastructure outages in Chennai."
+verified: false
+notes: "Comprehensive perspective disaster management plan published by Greater Chennai Corporation."

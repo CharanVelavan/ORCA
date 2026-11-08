@@ -1,0 +1,45 @@
+id: in-tec-firewall-system-telecom-gr-2014
+title: Generic Requirements for Firewall System in Telecom/IT Infrastructure (TEC/GR/IT/FRW-001/04/MAR-14)
+authority: Telecommunication Engineering Centre (TEC)
+jurisdiction: IN
+doc_type: standard
+url: https://tec.gov.in/pdf/GRs/TEC-GR-IT-FWS-001-04-Mar-14.pdf
+landing_page: https://www.tec.gov.in
+local_path: corpus/raw/india/in-tec-firewall-system-telecom-gr-2014.pdf
+sha256: e2c459b1cb7aa144764d84a8c2fd5f823ddd5de5c269176fb9e8d568de7396d3
+bytes: 850819
+pages: 50
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: standard
+binding_basis: not stated in the document
+issued: 2014-03
+in_force_from: March, 2014
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: The Firewall shall support VPN failover for redundancy where more than one connections are in group & if one connection
+    goes down it automatically switch over to another.
+  clause: Clause 2.1 VPN Features
+  topic: failover
+  gap: GAP-IN-08
+  supports: proves
+  why: Mandates automatic VPN failover to alternative connections upon link failure without requiring a clean-path verification
+    check.
+  page: 18
+- quote: It shall provide a stateful transition during failover to prevent session losses.
+  clause: Clause 3.5 High Availability
+  topic: failover
+  gap: GAP-IN-08
+  supports: context
+  why: Requires stateful failover across firewalls to preserve active sessions during link failover transitions.
+  page: 18
+verified: false
+notes: Generic requirements for telecom firewall systems; mandates automated VPN failover without clean-path checks before
+  rerouting.

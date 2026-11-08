@@ -1,0 +1,53 @@
+id: intl-3gpp-ts-38300
+title: '3GPP TS 38.300 V18.1.0 (Release 18): NR and NG-RAN overall description; Stage 2'
+authority: 3GPP / ETSI (ETSI TS 138 300 V18.1.0)
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/38_series/38.300/38300-i10.zip
+landing_page: https://www.etsi.org/deliver/etsi_ts/138300_138399/138300/18.01.00_60/ts_138300v180100p.pdf
+local_path: corpus/raw/global/intl-3gpp-ts-38300.pdf
+sha256: 058188999eb469ae95097a3b29b3abd24e65470a10f60d9d8965f7610c0de8f1
+bytes: 2896189
+pages: 267
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: unclear
+binding_basis: not stated in the document (3GPP technical specification; legal status as voluntary consensus standard not
+  stated in the text)
+issued: 2024-05-03
+in_force_from: 2024-05-03
+amends: []
+amended_by: []
+licence: 3GPP open standard
+language: en
+gaps:
+- GAP-IN-05
+- GAP-IN-06
+role: global_example
+candidate_quotes:
+- quote: In this release, the UE supporting NTN is GNSS-capable.
+  page: 208
+  clause: Clause 16.14.1
+  topic: standards
+  gap: GAP-IN-05
+  supports: global_example
+  why: Mandates GNSS capability for user equipment operating over non-terrestrial (emulated NTN) networks.
+- quote: The NTN payload transparently forwards the radio protocol received from the UE (via the service link) to the NTN
+    Gateway (via the feeder link) and vice-versa.
+  page: 208
+  clause: Clause 16.14.1
+  topic: failover_path_security
+  gap: GAP-IN-06
+  supports: global_example
+  why: Defines transparent payload forwarding across service and feeder links in non-terrestrial (emulated NTN) architectures.
+- quote: The UE shall have valid GNSS position as well as ephemeris and Common TA before connecting to an NTN cell.
+  page: 210
+  clause: Clause 16.14.2.2
+  topic: standards
+  gap: GAP-IN-05
+  supports: global_example
+  why: Establishes timing advance and GNSS position requirements for user terminals connecting to an emulated NTN cell.
+verified: false
+notes: 3GPP Release 18 specification TS 38.300 V18.1.0 transposed by ETSI as ETSI TS 138 300 V18.1.0. All NTN links in testbeds
+  are emulated.

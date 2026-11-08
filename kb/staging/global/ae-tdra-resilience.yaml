@@ -1,0 +1,30 @@
+id: ae-tdra-resilience
+title: Business Resilience and Continuity in the Telecom Sector
+authority: Telecommunications and Digital Government Regulatory Authority (TDRA)
+jurisdiction: AE
+doc_type: strategy
+url: https://tdra.gov.ae/en/initiatives/business-resilience-and-continuity-in-the-telecom
+landing_page: https://tdra.gov.ae/en/initiatives/business-resilience-and-continuity-in-the-telecom
+local_path: corpus/raw/global/ae-tdra-resilience.html
+sha256: b4352d6cd42127d4ee81a72d0eec10be71953dc440de3320f304ef39db1528d5
+bytes: 149927
+pages: null
+retrieved_at: 2026-11-08
+status: skipped
+official_domain: true
+binding_status: not stated
+binding_basis: 'not stated in the document: out of scope (UAE host only, decided 8 Nov)'
+issued: 2026-01-26
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: TDRA Terms and Conditions
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-04
+role: global_example
+candidate_quotes: []
+verified: false
+notes: TDRA institutional emergency and crisis management framework and simulation drills for telecom continuity.
+skipped: out of scope (UAE host only, decided 8 Nov)

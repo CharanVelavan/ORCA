@@ -1,0 +1,38 @@
+id: intl-ecss-e-st-80c
+title: Space engineering – Security in space systems lifecycles (ECSS-E-ST-80C)
+authority: European Cooperation for Space Standardization
+jurisdiction: INTL
+doc_type: standard
+url: https://ecss.nl/wp-content/uploads/2024/07/ECSS-E-ST-80C%281July2024%29.pdf
+landing_page: https://ecss.nl
+local_path: corpus/raw/global/intl-ecss-e-st-80c.pdf
+sha256: 90fc6d4b53adfdb612d1f3e1a53e976f72830e0705db5d6f9c32cc1c88fb5d23
+bytes: 1284930
+pages: 59
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: The word “shall” is used in this Standard to express requirements.
+issued: '2024-07-01'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: The word “shall” is used in this Standard to express requirements.
+  page: 19
+  clause: Introduction (conventions)
+  topic: space_cyber
+  gap: null
+  supports: context
+  why: Confirms the requirement language used throughout the space security lifecycle standard.
+verified: false
+notes: Downloaded from the ECSS PDF link on the standard landing page (listed URL is the landing page). Standard applies to space projects where adopted by contract or agency rules; applicability is not
+  stated in the document itself. Covers security in the space segment lifecycle; not NTN-specific.

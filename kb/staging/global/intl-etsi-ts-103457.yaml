@@ -1,0 +1,29 @@
+id: intl-etsi-ts-103457
+title: 'ETSI TS 103 457 V1.2.1: CYBER; Interface to secure cryptographic hardware'
+authority: European Telecommunications Standards Institute (ETSI)
+jurisdiction: INTL
+doc_type: standard
+url: https://www.etsi.org/deliver/etsi_ts/103400_103499/103457/01.02.01_60/ts_103457v010201p.pdf
+landing_page: https://www.etsi.org/standards-search
+local_path: corpus/raw/global/intl-etsi-ts-103457.pdf
+sha256: 3ea892c6e71440ac9076e61cf05dae51ec3469d6433b79430f4ded3b8919e031
+bytes: 1537836
+pages: 49
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2020-03-31
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: ETSI open standard
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes: []
+verified: false
+notes: 'Downloaded type: PDF document, version 1.7, 63 pages; text length 125870'

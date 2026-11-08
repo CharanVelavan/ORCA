@@ -1,0 +1,28 @@
+id: intl-rescue-agreement-1968
+title: Agreement on the Rescue of Astronauts, the Return of Astronauts and the Return of Objects Launched into Outer Space
+authority: United Nations General Assembly
+jurisdiction: INTL
+doc_type: treaty
+url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/rescueagreement.html
+landing_page: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/rescueagreement.html
+local_path: corpus/raw/global/intl-rescue-agreement-1968.html
+sha256: 42ae6450c59c79ae978fa981eb929bdba5f01ca45ccb64058f669705d8f51db4
+bytes: 56140
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '1968'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-09
+role: context
+candidate_quotes: []
+verified: false
+notes: UN treaty text from UNOOSA HTML page. Rescue and return of astronauts and objects; no cyber or telecom clause relevant to the gap list. No quote taken.

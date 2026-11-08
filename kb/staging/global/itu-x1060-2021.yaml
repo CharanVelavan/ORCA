@@ -1,0 +1,59 @@
+id: itu-x1060-2021
+title: 'Recommendation ITU-T X.1060 (06/2021): Framework for the creation and operation of a cyber defence centre'
+authority: ITU-T Study Group 17
+jurisdiction: INTL
+doc_type: standard
+url: https://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-X.1060-202106-S!!PDF-E&type=items
+landing_page: https://www.itu.int/rec/T-REC-X.1060-202106-S/en
+local_path: corpus/raw/global/itu-x1060-2021.pdf
+sha256: 44ba6c581fb5b51306a151799acb26edcff835a63a082d16ab0b8da3dcfd0d0a
+bytes: 1358006
+pages: 28
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: Compliance with this Recommendation is voluntary. However, the Recommendation may contain certain mandatory
+  provisions
+issued: 2021-06-29
+in_force_from: 2021-06-29
+amends: []
+amended_by: []
+licence: ITU open recommendation
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-07
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: Regardless of its format, it should exist as an entity in the organization, and have the authority and resources
+    to implement security services to enable the organization to be secured.
+  page: 8
+  clause: Clause 7
+  topic: joint_command
+  gap: GAP-IN-07
+  supports: global_example
+  why: Mandates establishing a dedicated cyber defence entity endowed with organizational authority and resources to execute
+    security operations.
+- quote: The incident notification service is to communicate the occurrence of an incident to incident response teams and
+    other concerned groups.
+  page: 21
+  clause: Clause A.4.6
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: global_example
+  why: Specifies formal incident notification mechanisms within cyber defence centre operations to alert response teams and
+    stakeholders.
+- quote: The security vendor collaboration service is to build a direct line of communication with the provider of a security
+    product or service purchased, requests a response to any deficiencies found in the security response and exchanges positive
+    feedback on areas for improvement.
+  page: 24
+  clause: Clause A.9.4
+  topic: telecom_cyber_security
+  gap: GAP-IN-09
+  supports: global_example
+  why: Establishes structured vendor engagement channels for reporting equipment security deficiencies and coordinating remediations.
+verified: false
+notes: Target list cited publication code with suffix '-I'; authentic ITU-T document code is 'T-REC-X.1060-202106-S' (superseded
+  by 2026 edition).

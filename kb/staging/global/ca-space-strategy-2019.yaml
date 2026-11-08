@@ -1,0 +1,28 @@
+id: ca-space-strategy-2019
+title: 'Exploration, Imagination, Innovation: A New Space Strategy for Canada'
+authority: Canadian Space Agency
+jurisdiction: CA
+doc_type: strategy
+url: https://www.asc-csa.gc.ca/pdf/eng/publications/space-strategy-for-canada.pdf
+landing_page: https://www.asc-csa.gc.ca
+local_path: corpus/raw/global/ca-space-strategy-2019.pdf
+sha256: fe0c6f8fb793bcaca2239b42c49ccb57aa8272b799a3d600dabb1b445dcb9f29
+bytes: 1700483
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2019'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-09
+role: context
+candidate_quotes: []
+verified: false
+notes: Canadian space strategy (policy, not binding). Bilingual text; no gap quote taken.

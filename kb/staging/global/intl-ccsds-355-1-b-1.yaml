@@ -1,0 +1,29 @@
+id: intl-ccsds-355-1-b-1
+title: Space Data Link Security over CCSDS Telecommand Space Data Link Protocol (CCSDS 355.1-B-1)
+authority: Consultative Committee for Space Data Systems
+jurisdiction: INTL
+doc_type: standard
+url: https://ccsds.org/Pubs/355x1b1.pdf
+landing_page: https://public.ccsds.org/Pubs/
+local_path: corpus/raw/global/intl-ccsds-355-1-b-1.pdf
+sha256: 5864d866e9c66fc2e644225d6e61724bc6f2c140359e444377e74ceb1a722483
+bytes: 935515
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: CCSDS 355.1-B-1
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: context
+candidate_quotes: []
+verified: false
+notes: Blue book on SDLS over telecommand. Clauses on log status and dump procedures (p. 95) only sampled; no quote taken for the gap list.

@@ -1,0 +1,27 @@
+id: in-meity-cloud-empanelment-guidelines
+title: Guidelines for Empanelment of Cloud Service Providers (MeitY)
+authority: Ministry of Electronics and Information Technology (MeitY)
+jurisdiction: IN
+doc_type: guidelines
+url: https://www.meity.gov.in/static/uploads/2024/02/f228f03f173a0e320758a504295f3a1f.pdf
+landing_page: https://www.meity.gov.in/content/gi-Cloud-meghraj
+sha256: e3a67fbb9d309dbbb067f9dcdc0e4b1443b4117b356c7f3a7a2df38666c9d217
+bytes: 578201
+pages: 76
+local_path: corpus/raw/india/in-meity-cloud-empanelment-guidelines.pdf
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: which Government Organizations in India can refer to
+issued: 2024-02
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: Read by keyword check (76 pages). The text says government bodies "can refer to" the guidelines, so the list binding label is not supported. No data-location or incident clause found by keyword search. No candidate quotes.

@@ -1,0 +1,50 @@
+id: in-sebi-cscrf-implementation-extension-2025
+title: Extension towards Adoption and Implementation of Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs)
+authority: Securities and Exchange Board of India
+jurisdiction: IN
+doc_type: circular
+url: https://www.sebi.gov.in/sebi_data/attachdocs/jun-2025/1751286353420.pdf
+landing_page: https://www.sebi.gov.in/
+local_path: corpus/raw/india/in-sebi-cscrf-implementation-extension-2025.pdf
+sha256: 1cfe435dc21149027bad0ddb0ed7c156dbe000b01b29e72faa05935c71561465
+bytes: 388099
+pages: 2
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "This circular is being issued in exercise of powers conferred under Section 11 (1) of the Securities and Exchange of India Act, 1992, to protect the interests of investors in securities and to promote the development of, and to regulate the securities market."
+issued: '2025-06-30'
+in_force_from: '2025-06-30'
+amends:
+  - in-sebi-cscrf-2024
+amended_by: []
+licence: government_open
+language: en
+gaps:
+  - GAP-IN-01
+role: india_evidence
+candidate_quotes:
+  - quote: "Recognising the need for robust cybersecurity measures and protection of data and IT infrastructure, Securities and Exchange Board of India (SEBI) has issued ‘Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs)’ vide circular SEBI/HO/ ITD-1/ITD_CSC_EXT/P/CIR/2024/113 dated August 20, 2024."
+    page: 2
+    clause: "Paragraph 1"
+    topic: telecom_cyber_security
+    gap: GAP-IN-01
+    supports: context
+    why: "References the principal CSCRF circular issued for SEBI regulated entities."
+  - quote: "Therefore, it has been decided to extend the compliance timelines by two (2) months, i.e., till August 31, 2025 to all REs, except Market Infrastructure Institutions (MIIs), KYC Registration Agencies (KRAs), and Qualified Registrars to an Issue and Share Transfer Agents (QRTAs)."
+    page: 2
+    clause: "Paragraph 2"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: proves_gap
+    why: "Extends compliance timelines for CSCRF adoption till August 31, 2025 for eligible regulated entities."
+  - quote: "This circular is being issued in exercise of powers conferred under Section 11 (1) of the Securities and Exchange of India Act, 1992, to protect the interests of investors in securities and to promote the development of, and to regulate the securities market."
+    page: 2
+    clause: "Paragraph 5"
+    topic: telecom_cyber_security
+    gap: GAP-IN-01
+    supports: context
+    why: "Invokes statutory powers under Section 11(1) of the SEBI Act 1992 for extending framework compliance."
+verified: false
+notes: "Circular SEBI/HO/ITD-1/ITD_CSC_EXT/P/CIR/2025/96 extending CSCRF compliance timelines."

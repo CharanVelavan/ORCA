@@ -1,0 +1,39 @@
+id: in-ndma-hospital-safety-guidelines-2016
+title: National Disaster Management Guidelines on Hospital Safety (2016)
+authority: National Disaster Management Authority
+jurisdiction: IN
+doc_type: guideline
+url: https://ndma.gov.in/sites/default/files/PDF/Guidelines/Guidelines-Hospital-Safety.pdf
+landing_page: https://ndma.gov.in/Governance/Guidelines
+local_path: corpus/raw/india/in-ndma-hospital-safety-guidelines-2016.pdf
+sha256: 9e1385d2a9b6038e47f0d54692e1c8d5e81963ea227279f3c7ec6b890bf643cf
+bytes: 3375390
+pages: 140
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2016-02
+in_force_from: February 2016
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-03
+role: india_evidence
+candidate_quotes:
+- quote: 'Disaster Management Guidelines—Hospital Safety A publication of: National Disaster Management Authority Government
+    of India NDMA Bhawan A-1, Safdarjung Enclave New Delhi – 110 029 ISBN : 978-93-84792-03-9 978-93-80440-13-2 February,
+    2016 When citing these guidelines the following citation should be used: National Disaster Management Guidelines: Hospital
+    Safety.'
+  clause: Foreword
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: context
+  why: Guidelines for disaster safety and emergency communication protocols in hospital facilities during crises.
+  page: 4
+verified: false
+notes: National Disaster Management Guidelines on Hospital Safety covering structural and operational emergency resilience.

@@ -1,0 +1,30 @@
+id: in-nccs-itsar-5g-open-ran-2026
+title: 'ITSAR for Open RAN (O-RAN) of 5G: O-RU, O-DU, O-CU'
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR303042601.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-5g-open-ran-2026.pdf
+sha256: 3d1845ef2b54551e242ae9d2d2b1080f109695ee4d081dc77882eaa3f49fa5ef
+bytes: 978799
+pages: 83
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: requirements specified here are binding on network equipment providers i.
+issued: '2026-01-08'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: 'Specifies security assurance requirements for ITSAR for Open RAN (O-RAN) of 5G: O-RU, O-DU, O-CU under MTCTE. No clause
+  bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours floor,
+  or incident reporting clocks).'

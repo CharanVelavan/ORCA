@@ -1,0 +1,29 @@
+id: ca-radiocommunication-act-1985
+title: Radiocommunication Act (R.S.C., 1985, c. R-2)
+authority: Parliament of Canada
+jurisdiction: CA
+doc_type: act
+url: https://laws-lois.justice.gc.ca/PDF/R-2.pdf
+landing_page: https://laws-lois.justice.gc.ca/eng/acts/r-2/
+local_path: corpus/raw/global/ca-radiocommunication-act-1985.pdf
+sha256: ed1e68267a35f8b47e608acc3f1af75b7410f2767869278e9a155f0c530e8a40
+bytes: 489743
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '1985'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-09
+role: context
+candidate_quotes: []
+verified: false
+notes: Bilingual federal Radiocommunication Act (PDF). Spectrum licensing; no quote taken in this pass.

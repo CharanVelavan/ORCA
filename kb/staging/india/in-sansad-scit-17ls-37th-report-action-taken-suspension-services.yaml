@@ -1,0 +1,31 @@
+id: in-sansad-scit-17ls-37th-report-action-taken-suspension-services
+title: 'Standing Committee on Communications and Information Technology (17th Lok Sabha) 37th Report: Action Taken on 26th
+  Report on Suspension of Telecom Services/Internet and its impact'
+authority: Standing Committee on Communications and Information Technology, Lok Sabha
+jurisdiction: IN
+doc_type: report
+url: https://sansad.in/getFile/lsscommittee/Communications%20and%20Information%20Technology/17_Communications_and_Information_Technology_37.pdf?source=loksabhadocs
+landing_page: https://sansad.in
+local_path: corpus/raw/india/in-sansad-scit-17ls-37th-report-action-taken-suspension-services.pdf
+sha256: 18f145446d3e6afa080da49346b8a353e3d4869dfd2f2fa740e9e931701d3701
+bytes: 535280
+pages: 53
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: false
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2022-12
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-03
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Parliamentary report on suspension of telecom services; reviews internet shutdown procedures; no clause bears on technical
+  gaps.

@@ -1,0 +1,27 @@
+id: in-rbi-nbfc-it-framework-2017
+title: 'RBI Master Direction: IT Framework for the NBFC Sector (2017)'
+authority: Reserve Bank of India
+jurisdiction: IN
+doc_type: master direction
+url: https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=10999
+landing_page: https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=10999
+sha256: 06d4559ff1cca79402a44160afd106e855a7fad94c57cf5ae08e7f8d548d73b5
+bytes: 150733
+pages: null
+local_path: corpus/raw/india/in-rbi-nbfc-it-framework-2017.html
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '2017'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: HTML text extracted. Keyword check found a template for reporting cyber incidents but no reporting clock in the text read. Binding label from the list is not confirmed by the text. No candidate quotes.

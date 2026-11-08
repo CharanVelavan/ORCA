@@ -1,0 +1,64 @@
+id: uk-dsit-space-ground-cloud-cyber
+title: Cyber risks of cloud computing in the ground segment of the space sector
+authority: Department for Science, Innovation and Technology / UK Space Agency
+jurisdiction: UK
+doc_type: report
+url: https://www.gov.uk/government/publications/cyber-risks-of-cloud-computing-in-the-ground-segment-of-the-space-sector/cyber-risks-of-cloud-computing-in-the-ground-segment-of-the-space-sector
+landing_page: https://www.gov.uk/government/publications/cyber-risks-of-cloud-computing-in-the-ground-segment-of-the-space-sector
+local_path: corpus/raw/global/uk-dsit-space-ground-cloud-cyber.html
+sha256: ca9a311656f3145eada6f888bf178bee5bbd770364af3949cef1c73f8129f3c6
+bytes: 413814
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2024-04-18'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Open Government Licence v3.0
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: Cyber risks of cloud computing in the ground segment of the space sector
+    - GOV.UK Cookies on GOV.UK We use some essential cookies to make this website
+    work.
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-06
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: Search GOV.UK Search Search GOV.UK Search Home Government Cyber security
+    Cyber risks of cloud computing in the ground segment of the space sector Department
+    for Science, Innovation & Technology Research and analysis Cyber risks of cloud
+    computing in the ground segment of the space sector Published 8 August 2025 Contents
+    Executive summary 1.
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-06
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: 'Conclusion Appendix A: glossary Appendix B: topic guide for interviews Appendix
+    C: organisations contacted Appendix D: reference bibliography Appendix E: Data
+    Flow Diagram Print this page © Crown copyright 2025 This publication is licensed
+    under the terms of the Open Government Licence v3.0 except where otherwise stated.'
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-06
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long
+  lines (26963); extracted text length 110425'

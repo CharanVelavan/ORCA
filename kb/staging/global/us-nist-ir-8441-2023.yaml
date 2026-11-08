@@ -1,0 +1,48 @@
+id: us-nist-ir-8441-2023
+title: "Cybersecurity Framework Profile for Hybrid Satellite Networks (HSN) (NIST IR 8441)"
+authority: National Institute of Standards and Technology (NIST)
+jurisdiction: US
+doc_type: technical_report
+url: https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8441.pdf
+landing_page: https://csrc.nist.gov/pubs/ir/8441/final
+local_path: corpus/raw/global/us-nist-ir-8441-2023.pdf
+sha256: f611c973a031d74eae6e43ba9236dcb88d59bb74053c8b0ece6fbe8622d6dee0
+bytes: 1978224
+pages: 54
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "The HSN Profile is voluntary and does not issue regulations, define mandatory practices, provide a checklist for compliance, nor does it carry statutory authority."
+issued: 2023-09-22
+in_force_from: 2023-09-22
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+role: global_example
+candidate_quotes:
+  - quote: "The space sector is transitioning towards Hybrid Satellite Networks (HSN) which is an aggregation of independently owned and operated terminals, antennas, satellites, payloads, or other components that comprise a satellite system."
+    page: 4
+    clause: "Abstract"
+    topic: space_cyber
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Defines hybrid satellite networks comprising multi-vendor terminals, space relays, and payloads operating with disparate trust levels."
+  - quote: "The components within an HSN are likely to have varying levels of trust among different components, requiring frameworks for establishing confidentiality and integrity of individual components while still enabling availability of required shared services."
+    page: 9
+    clause: "Section 1"
+    topic: failover_path_security
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Addresses varying trust boundaries and zero-trust segmentation requirements across hybrid multi-operator satellite paths."
+  - quote: "The HSN Profile is voluntary and does not issue regulations, define mandatory practices, provide a checklist for compliance, nor does it carry statutory authority. It is intended to be a foundational set of guidelines."
+    page: 9
+    clause: "Section 1"
+    topic: standards
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Identifies the regulatory status of the NIST hybrid satellite network cybersecurity profile as voluntary guidance."
+verified: false
+notes: "NIST cybersecurity framework profile specifically covering hybrid multi-segment satellite networks and hosted payload environments."

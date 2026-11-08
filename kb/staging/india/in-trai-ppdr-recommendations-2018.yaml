@@ -1,0 +1,34 @@
+id: in-trai-ppdr-recommendations-2018
+title: "TRAI Recommendations on Public Protection and Disaster Relief (PPDR) Communications (2018)"
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendations
+url: "https://www.trai.gov.in/sites/default/files/2024-09/RecommendationsPPDR04062018.pdf"
+landing_page: https://www.trai.gov.in/
+local_path: corpus/raw/india/in-trai-ppdr-recommendations-2018.pdf
+sha256: a80275e743b7d18e1b768c5f8db273d7ee47257e1cd34706cfa0cfd627e16052
+bytes: 792194
+pages: 52
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: 2018-06-04
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: india_evidence
+candidate_quotes:
+  - quote: "During disasters, terrestrial communication network gets destroyed and affect relief and rescue operations of PPDR agencies."
+    page: 23
+    clause: "Section on disaster communications (paragraph 2.50)"
+    topic: disaster_coordination
+    gap: null
+    supports: context
+    why: "Records that terrestrial networks are destroyed in disasters and hamper PPDR relief, and that operators must set up a dedicated deployable system at the disaster site. This supports a satellite or deployable backup for disaster recovery."
+verified: false
+notes: "TRAI recommendations on PPDR communications (advisory, 52 pages). Disaster and emergency communications are the core topic. The 2018 text predates the 2023 Act. The gap field lists GAP-IN-05 by mistake from the list and is not linked to the quote; GAP-IN-05 concerns breach clocks, which PPDR does not address. The quote is paragraph 2.50 (page break inside it). A later sentence in the same section says a satellite backup network was already in place; it is not quoted here because it needs context."

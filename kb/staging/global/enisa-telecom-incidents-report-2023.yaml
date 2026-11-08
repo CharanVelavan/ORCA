@@ -1,0 +1,33 @@
+id: enisa-telecom-incidents-report-2023
+title: 'Telecom Security Incidents 2023: Annual Analysis of Article 40 EECC Reports'
+authority: European Union Agency for Cybersecurity (ENISA)
+jurisdiction: EU
+doc_type: report
+url: https://www.enisa.europa.eu/sites/default/files/publications/Telecom%20Security%20Incidents%202023.pdf
+landing_page: https://www.enisa.europa.eu/publications/telecom-security-incidents-2023
+local_path: corpus/raw/global/enisa-telecom-incidents-report-2023.pdf
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2024-06-25
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: EUR-Lex reuse policy
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-04
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts:  Time  Current\n                \
+  \                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0\
+  \     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0   \
+  \ 0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56)\
+  \ The requested URL returned error: 404"

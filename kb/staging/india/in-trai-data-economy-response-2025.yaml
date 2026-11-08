@@ -1,0 +1,27 @@
+id: in-trai-data-economy-response-2025
+title: "TRAI Response on the Data Economy (17 Nov 2025)"
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: response
+url: "https://www.trai.gov.in/sites/default/files/2025-11/TRAI_Response_17112025.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-trai-data-economy-response-2025.pdf
+sha256: 30821a6c823080c7e36fb2c55c20cf6f5fce983acf25a6e5c970731c3956967a
+bytes: 716319
+pages: 14
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: 2025-11-17
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Keyword check: a few cyber and incident mentions in a data-economy policy context. No telecom incident-reporting clock or satellite rule found. No candidate quotes."

@@ -1,0 +1,30 @@
+id: au-acma-service-continuity-rules
+title: Telecommunications (Service Provider — Customer Authorisation and Identity
+  Checks) Determination
+authority: Australian Communications and Media Authority
+jurisdiction: AU
+doc_type: determination
+url: https://www.legislation.gov.au/F2022L00810/latest/text
+landing_page: https://www.legislation.gov.au/F2022L00810/latest/text
+local_path: corpus/raw/global/au-acma-service-continuity-rules.html
+sha256: 57990ac66af857a5799100c9c529df4842f2dfe252bd56520e5810ab0e28dbce
+bytes: 79509
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: 2022
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+role: global_example
+candidate_quotes: []
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long
+  lines (38068); text length 1572'

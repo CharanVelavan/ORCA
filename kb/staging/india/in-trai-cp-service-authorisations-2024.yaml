@@ -1,0 +1,36 @@
+id: in-trai-cp-service-authorisations-2024
+title: Consultation Paper on the Framework for Service Authorisations to be Granted Under the Telecommunications Act, 2023
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/CP_11072024.pdf
+landing_page: https://trai.gov.in/telecom/licensing
+local_path: corpus/raw/india/in-trai-cp-service-authorisations-2024.pdf
+sha256: c908e41ac92c8eb44c66c172ead857d0190646756a378c4224992bd3ee32ee78
+bytes: 4146611
+pages: 282
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2024-07-11'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-06
+role: context
+candidate_quotes:
+- quote: Consultation Paper No. 7/2024
+  clause: Title Page
+  topic: licensing_framework
+  gap: GAP-IN-03
+  supports: context
+  why: Consults on service authorisation categories, eligibility, and migration under the Telecommunications Act 2023.
+  page: 1
+verified: false
+notes: TRAI consultation paper on framework for service authorisations under Telecommunications Act 2023.

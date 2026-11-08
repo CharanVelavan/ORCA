@@ -1,0 +1,34 @@
+id: ae-csc-cloud-security-policy
+title: National Cloud Security Policy
+authority: UAE Cyber Security Council
+jurisdiction: AE
+doc_type: policy
+url: https://uaelegislation.gov.ae/en/policy/details/national-cloud-security-policy
+landing_page: https://uaelegislation.gov.ae
+local_path: corpus/raw/global/ae-csc-cloud-security-policy.html
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: skipped
+official_domain: true
+binding_status: not stated
+binding_basis: 'not stated in the document: out of scope (UAE host only, decided 8 Nov)'
+issued: 2023
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts:   Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:--\
+  \ --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0 \
+  \   0     0      0      0 --:--:--  0:00:01 --:--:--     0\ncurl: (56) The requested URL returned error: 403\nRetry on 2026-11-08:\
+  \ uaelegislation.gov.ae returned Cloudflare challenge (HTTP 403). Official landing page on u.ae links to csc.gov.ae (https://csc.gov.ae/documents/38662/489552/National+Cloud+Security+Policy_V2.0.pdf/baaac57a-6276-9588-409a-8059b8f7cb3a?t=1758541950254),\
+  \ which drops TLS connections from outside UAE (curl error 35, SSL_ERROR_SYSCALL)."
+skipped: out of scope (UAE host only, decided 8 Nov)

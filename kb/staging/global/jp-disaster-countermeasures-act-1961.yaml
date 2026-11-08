@@ -1,0 +1,29 @@
+id: jp-disaster-countermeasures-act-1961
+title: Disaster Countermeasures Basic Act (Act No. 223 of 1961)
+authority: National Diet of Japan
+jurisdiction: JP
+doc_type: act
+url: https://www.japaneselawtranslation.go.jp/en/laws/view/1953/en
+landing_page: https://www.bousai.go.jp
+local_path: corpus/raw/global/jp-disaster-countermeasures-act-1961.html
+sha256: 1e3538bdfca1577807447d43fd75332494ba169720988f9a8406064d3345c777
+bytes: 164825
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '1961'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-04
+role: context
+candidate_quotes: []
+verified: false
+notes: Japanese English translation of the Disaster Countermeasures Basic Act. Article text checked only for structure; no gap quote taken.

@@ -1,0 +1,48 @@
+id: us-cisa-satcom-advisory-2022
+title: "Strengthening Cybersecurity of SATCOM Network Providers and Customers (Alert AA22-076A)"
+authority: Cybersecurity and Infrastructure Security Agency (CISA) & Federal Bureau of Investigation (FBI)
+jurisdiction: US
+doc_type: cybersecurity_advisory
+url: https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-076a
+landing_page: https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-076a
+local_path: corpus/raw/global/us-cisa-satcom-advisory-2022.html
+sha256: ef073c7f55fd0c534241dfa32aa7a5c00f99e7f6556aacc7c7cb206e28f190bf
+bytes: 62005
+pages: null
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "CISA and FBI strongly encourages critical infrastructure organizations and other organizations that are either SATCOM network providers or customers to review and implement the mitigations"
+issued: 2022-03-17
+in_force_from: 2022-03-17
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-02, GAP-IN-06, GAP-IN-08, GAP-IN-09]
+role: global_example
+candidate_quotes:
+  - quote: "Given the current geopolitical situation, CISA’s Shields Up initiative requests that all organizations significantly lower their threshold for reporting and sharing indications of malicious cyber activity."
+    page: null
+    clause: "Summary"
+    topic: downstream_warning
+    gap: GAP-IN-02
+    supports: global_example
+    why: "Urges lower threshold for incident and anomaly reporting across satellite communication provider networks."
+  - quote: "The presence of insecure remote access tools—such as Teletype Network Protocol (Telnet), File Transfer Protocol (FTP), Secure Shell Protocol (SSH), Secure Copy Protocol (SCP), and Virtual Network Computing (VNC)—facilitating communications to and from SATCOM terminals."
+    page: null
+    clause: "Mitigations for SATCOM Network Providers"
+    topic: signalling_security
+    gap: GAP-IN-09
+    supports: global_example
+    why: "Highlights insecure management protocols and anomalous remote access traffic targeting satellite terminals."
+  - quote: "Review existing trust relationships with IT service providers. Threat actors are known to exploit trust relationships between providers and their customers to gain access to customer networks and data."
+    page: null
+    clause: "Mitigations for SATCOM Network Providers and Customers"
+    topic: failover_path_security
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Warns against unsegmented trust relationships connecting third-party IT service providers with SATCOM operational infrastructure."
+verified: false
+notes: "Joint CISA-FBI advisory issued following Russian state-sponsored attacks against commercial satellite ground and terminal networks."

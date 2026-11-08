@@ -1,0 +1,27 @@
+id: in-niti-ai-strategy-2018
+title: "National Strategy for Artificial Intelligence (NITI Aayog, 2018)"
+authority: NITI Aayog
+jurisdiction: IN
+doc_type: strategy
+url: "https://www.niti.gov.in/sites/default/files/2023-03/National-Strategy-for-Artificial-Intelligence.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-niti-ai-strategy-2018.pdf
+sha256: da5404dbb584c8956aae707dfcfe324dc1df11a179bc8288af0e898f4e37dcc5
+bytes: 4615281
+pages: 114
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: 2018
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "National AI strategy (114 pages), a policy paper. The file was downloaded from a 2023 path on the NITI site; the cover is dated 2018. Mentions cyber and satellite in passing. No binding statement; no candidate quotes."

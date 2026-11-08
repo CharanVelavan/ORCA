@@ -1,0 +1,32 @@
+id: in-nccs-itsar-5g-nssf-2023
+title: ITSAR for Network Slice Selection Function (NSSF) of 5G
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR111072312.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-5g-nssf-2023.pdf
+sha256: d73ddc114cb48e91bb9018706e46e252025a27c34e3caf590163cf8d811e7b84
+bytes: 724280
+pages: 55
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: The requirements specified here are binding both on operators TSPs (Telecommunication Service Provider) and
+  network equipment providers OEMs (Original Equipment Manufacturer).
+issued: '2023-12-29'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for Network Slice Selection Function (NSSF) of 5G under MTCTE.
+  No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours
+  floor, or incident reporting clocks).

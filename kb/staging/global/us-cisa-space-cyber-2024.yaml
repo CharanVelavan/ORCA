@@ -1,0 +1,48 @@
+id: us-cisa-space-cyber-2024
+title: "Recommendations to Space System Operators for Improving Cybersecurity"
+authority: Cybersecurity and Infrastructure Security Agency (CISA)
+jurisdiction: US
+doc_type: technical_guidance
+url: https://www.cisa.gov/sites/default/files/2024-06/Recommendations%20to%20Space%20System%20Operators%20for%20Improving%20Cybersecurity%20%28508%29.pdf
+landing_page: https://www.cisa.gov/resources-tools/resources/recommendations-space-system-operators-improving-cybersecurity
+local_path: corpus/raw/global/us-cisa-space-cyber-2024.pdf
+sha256: fe450df3b740c325500623dd748a39edf8721a6448f3601d05d828acc6e82fe8
+bytes: 619488
+pages: 20
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "The SSCIWG recommends for this document to be used in conjunction with the NIST Framework for Improving Critical Infrastructure Cybersecurity"
+issued: 2024-04-01
+in_force_from: 2024-04-01
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-06, GAP-IN-09]
+role: global_example
+candidate_quotes:
+  - quote: "Securing ground segment technologies and infrastructure has traditionally been, and remains, one of the most effective ways to protect assets in space."
+    page: 6
+    clause: "Section III.C"
+    topic: space_cyber
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Highlights ground segment security as the primary control mechanism protecting orbital space systems."
+  - quote: "As space segment assets begin to include new methods of communication, the attack surface for these devices increases and integrating new cybersecurity protections becomes increasingly necessary."
+    page: 7
+    clause: "Section III.C"
+    topic: space_cyber
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Notes expanded attack surface as satellite constellations adopt multi-hop and direct-to-device IP communications."
+  - quote: "Additionally, space system operators should use encrypted communication and ground segment-based protection measures, where possible, to mitigate and prevent unauthorized communication with space platforms and traffic scanning."
+    page: 11
+    clause: "Section III.E"
+    topic: signalling_security
+    gap: GAP-IN-09
+    supports: global_example
+    why: "Prescribes link-layer encryption and RF ground protections to defeat uplink/downlink jamming and spoofing."
+verified: false
+notes: "Corrected URL in target list by removing errant period before Improving in filename."

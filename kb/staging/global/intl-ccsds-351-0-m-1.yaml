@@ -1,0 +1,37 @@
+id: intl-ccsds-351-0-m-1
+title: Security Architecture for Space Data Systems (CCSDS 351.0-M-1)
+authority: Consultative Committee for Space Data Systems
+jurisdiction: INTL
+doc_type: standard
+url: https://ccsds.org/Pubs/351x0m1.pdf
+landing_page: https://public.ccsds.org/Pubs/
+local_path: corpus/raw/global/intl-ccsds-351-0-m-1.pdf
+sha256: 4bdcf457ce941678283e1464feced248cd7e2f966674e16b92c5066b742c5a4a
+bytes: 416713
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: CCSDS 351.0-M-1 (magenta book)
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: Data Link Layer security may be used to compliment or replace upper-layer security for certain missions.
+  page: 40
+  clause: not stated
+  topic: space_cyber
+  gap: null
+  supports: global_example
+  why: Shows that link-layer security is an optional choice in the space security architecture, relevant to the satellite link security design.
+verified: false
+notes: CCSDS magenta book on security architecture for space data systems. Quotes from the data link security discussion (p. 40).

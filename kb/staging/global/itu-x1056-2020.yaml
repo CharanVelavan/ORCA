@@ -1,0 +1,56 @@
+id: itu-x1056-2020
+title: 'Recommendation ITU-T X.1056 (01/2009): Security incident management guidelines for telecommunications organizations'
+authority: ITU-T Study Group 17
+jurisdiction: INTL
+doc_type: standard
+url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-X.1056-200901-I!!PDF-E&lang=e&type=items
+landing_page: https://www.itu.int/rec/T-REC-X.1056-200901-I/en
+local_path: corpus/raw/global/itu-x1056-2020.pdf
+sha256: ce170556e266df8ad0fb4a6ab1cfe061a5b0094ba05a69d85409f6309163a587
+bytes: 1080485
+pages: 40
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: Compliance with this Recommendation is voluntary. However, the Recommendation may contain certain mandatory
+  provisions
+issued: 2009-01-13
+in_force_from: 2009-01-13
+amends: []
+amended_by: []
+licence: ITU open recommendation
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+role: global_example
+candidate_quotes:
+- quote: Incident handling involves receiving, triaging, and responding to requests and reports, and analysing incidents and
+    events.
+  page: 21
+  clause: Clause 7.3.1.2
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: global_example
+  why: Defines the core reactive workflow of telecommunication ISIRTs for incident triage, analysis, and response.
+- quote: The alert, warning, or advisory is sent as a reaction to the current problem to notify constituents of the activity
+    and to provide guidance for protecting their systems or recovering any systems that were affected.
+  page: 21
+  clause: Clause 7.3.1.1
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: global_example
+  why: Establishes proactive downstream warning and advisory dissemination procedures to protect constituent networks and
+    systems.
+- quote: As security incidents need to be typically accountable to individuals, information of a personal nature may therefore
+    need to be recorded and consequently need to be addressed.
+  page: 13
+  clause: Clause 5.3.3
+  topic: personal_data_breach
+  gap: GAP-IN-01
+  supports: global_example
+  why: Highlights the necessity of balancing incident recordkeeping with personal data protection and privacy regulations.
+verified: false
+notes: Target list cited publication code with approval date 202003-I; authentic ITU-T recommendation code is 'T-REC-X.1056-200901-I'
+  approved 2009-01-13.

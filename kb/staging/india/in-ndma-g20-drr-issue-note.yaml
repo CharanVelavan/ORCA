@@ -1,0 +1,37 @@
+id: in-ndma-g20-drr-issue-note
+title: G20 Disaster Risk Reduction Working Group Issue Note on Early Warning and Resilient Infrastructure
+authority: National Disaster Management Authority
+jurisdiction: IN
+doc_type: report
+url: https://www.ndma.gov.in/sites/default/files/PDF/issue_note_g20.pdf
+landing_page: https://ndma.gov.in
+local_path: corpus/raw/india/in-ndma-g20-drr-issue-note.pdf
+sha256: b7e73b63fbc47102e8d54456ddfd929b0ac8ccbbaa348ab434d7cde2b7648778
+bytes: 641060
+pages: 13
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2023-03
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-02
+role: global_example
+candidate_quotes:
+- quote: Warning Systems is a mechanism that funds Least Developed Countries (LDC) and Small Island Developing States (SIDS)
+    for risk informed early warning systems.
+  clause: Section 2
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: context
+  why: G20 Disaster Risk Reduction Working Group paper emphasizing global early warning system financing and infrastructure
+    resilience.
+  page: 6
+verified: false
+notes: G20 Disaster Risk Reduction Working Group Issue Note on multi-hazard early warning systems and resilient infrastructure.

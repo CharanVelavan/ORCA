@@ -1,0 +1,41 @@
+id: in-dot-lawful-interception-rules-2024
+title: "Procedures and Safeguards for Lawful Interception of Messages Rules, 2024"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification)
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/procedures-and-safeguards-for-lawful-interception-of-messages-rules-2024.pdf
+landing_page: https://www.eservices.dot.gov.in/
+local_path: corpus/raw/india/in-dot-lawful-interception-rules-2024.pdf
+sha256: cd0a0f7d8e5deb8bd2c9338f3b7a3001594064176dc8db6544b8703a233557ea
+bytes: 1892833
+pages: 9
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "the Central Government hereby makes the following rules"
+issued: 2024-06-25
+in_force_from: "on the date of their publication in the Official Gazette"
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: india_evidence
+candidate_quotes:
+  - quote: "shall be submitted to the relevant review committee at the Central or State level within a period of seven working days from the date of issuance or confirmation, as the case may be."
+    page: 7
+    clause: "Rule 5(5) (interception orders)"
+    topic: emergency_powers
+    gap: null
+    supports: context
+    why: "Sets the review-committee timetable for interception orders; relevant to who must be told about lawful access to satellite-backed traffic."
+  - quote: "(a) within two hours of receiving the communication under sub-rule (5), send an acknowledgement of such receipt to the authorised agency; and"
+    page: 8
+    clause: "Rule 6(6)(a) (nodal officer)"
+    topic: other
+    gap: null
+    supports: context
+    why: "Sets a two-hour acknowledgement duty for a nodal officer of the telecom entity, a fast-response clock in the same rules."
+verified: false
+notes: "Read in part (keyword check of clauses on orders, review committee and records). Concerns lawful interception of messages, not NTN outage or failover. The list's binding label is confirmed. No gap is linked. The rules are one of several interception and surveillance regimes and are a context source for data access and oversight."

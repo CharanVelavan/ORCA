@@ -1,0 +1,30 @@
+id: in-sansad-scit-18ls-14th-report-meity
+title: 'Standing Committee on Communications and Information Technology (18th Lok Sabha) 14th Report: Action Taken on Demands
+  for Grants (2024-25) of MeitY'
+authority: Standing Committee on Communications and Information Technology, Lok Sabha
+jurisdiction: IN
+doc_type: report
+url: https://sansad.in/getFile/lsscommittee/Communications%20and%20Information%20Technology/18_Communications_and_Information_Technology_14.pdf?source=loksabhadocs
+landing_page: https://sansad.in
+local_path: corpus/raw/india/in-sansad-scit-18ls-14th-report-meity.pdf
+sha256: c5b00634b2569ae41eb0fd299ca3dd71fb7431e4bbd79a31239ed491849dfe8f
+bytes: 1033115
+pages: 72
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: false
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2024-12
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-01
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Parliamentary standing committee report reviewing Demands for Grants of MeitY; no clause bears directly on telecom/NTN
+  gaps.

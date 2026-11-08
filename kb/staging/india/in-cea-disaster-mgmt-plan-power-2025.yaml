@@ -1,0 +1,37 @@
+id: in-cea-disaster-mgmt-plan-power-2025
+title: Disaster Management Plan for Power Sector (December 2025)
+authority: Central Electricity Authority, Ministry of Power
+jurisdiction: IN
+doc_type: sop
+url: https://cea.nic.in/api/dashboardReports/download-pdf/en/0a8ff4c2-7df4-4a46-b49a-6d018abb5f89
+landing_page: https://cea.nic.in/?lang=en
+local_path: corpus/raw/india/in-cea-disaster-mgmt-plan-power-2025.pdf
+sha256: c84866eea0797aa8e9c2048fde759ae405466f96e2681ac69e8b9a35ba98bc06
+bytes: 6647389
+pages: 241
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2025-12
+in_force_from: December, 2025
+amends: replaces 2024 edition
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-04
+role: india_evidence
+candidate_quotes:
+- quote: power supply, restoration of transmission/distribution line, use of Emergency Restoration Systems (ERS), restoration
+    of Sub-Stations, restoration of load despatch centres (LDCs), Media Management etc.
+  clause: Chapter 1
+  topic: backup_power
+  gap: GAP-IN-04
+  supports: context
+  why: Specifies standard emergency procedures for power restoration and rapid emergency restoration systems following major
+    grid outages.
+  page: 13
+verified: false
+notes: Disaster management plan for the Indian power sector prepared by CEA under the Disaster Management Act 2005.

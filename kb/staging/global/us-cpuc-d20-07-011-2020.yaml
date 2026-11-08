@@ -1,0 +1,48 @@
+id: us-cpuc-d20-07-011-2020
+title: Decision Adopting Wireless Provider Resiliency Strategies (D.20-07-011)
+authority: California Public Utilities Commission (CPUC)
+jurisdiction: US-CA
+doc_type: regulatory_decision
+url: https://docs.cpuc.ca.gov/PublishedDocs/Published/G000/M344/K021/344021480.PDF
+landing_page: https://docs.cpuc.ca.gov/SearchRes.aspx?DocFormat=ALL&DocID=344021480
+local_path: corpus/raw/global/us-cpuc-d20-07-011-2020.pdf
+sha256: 87563b092a44c802955ecc1faf5fbab5c6a921481739c86f5ed24f9479f827a9
+bytes: 4537313
+pages: 150
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "IT IS ORDERED that: 1. Facilities-based wireless providers shall file a Communications Resiliency Plan"
+issued: 2020-07-16
+in_force_from: 2020-07-16
+amends: []
+amended_by: [us-cpuc-d21-02-029-2021]
+licence: open_government
+language: en
+gaps: [GAP-IN-04]
+role: global_example
+candidate_quotes:
+  - quote: "Facilities-based wireless providers shall, in their Communications Resiliency Plan pursuant to Section 6.5.2 of this decision, demonstrate their ability to meet the 72-hour backup power requirement, in Tier 2 and Tier 3 High Fire Threat Districts"
+    page: 148
+    clause: "Ordering Paragraph 2"
+    topic: backup_power
+    gap: GAP-IN-04
+    supports: global_example
+    why: "Mandates 72-hour backup power capability for facilities-based wireless providers in high fire-threat districts to ensure emergency continuity."
+  - quote: "Facilities-based wireless providers shall file a Communications Resiliency Plan pursuant to Section 6.5.2 of this decision, within six (6) months of the effective date of this decision, to the Communications Division via Tier 2 Advice Letter that describes how the wireless provider shall maintain a minimum level of service and coverage to preserve access to 9-1-1 and 2-1-1, maintain the ability to receive emergency notifications, and maintain access to internet browsing for emergency notices for their customers in the event of a power outage."
+    page: 146
+    clause: "Ordering Paragraph 1"
+    topic: backup_power
+    gap: GAP-IN-04
+    supports: global_example
+    why: "Requires wireless providers to file detailed resiliency plans demonstrating minimum service coverage for 9-1-1 and emergency notifications during outages."
+  - quote: "Facilities-based wireless providers shall file emergency operations plans pursuant to Section 6.8.2 of this decision, on an annual basis, with the first due within 60 days of the effective date of this decision to the Director of the Communications Division, the California Governor’s Office of Emergency Services, and local emergency response agencies, as an information only filing"
+    page: 149
+    clause: "Ordering Paragraph 3"
+    topic: disaster_coordination
+    gap: GAP-IN-04
+    supports: global_example
+    why: "Requires annual emergency operations plan filing with public safety and disaster response agencies."
+verified: false
+notes: "Precedent decision establishing the California 72-hour wireless backup power requirement following catastrophic wildfire outages."

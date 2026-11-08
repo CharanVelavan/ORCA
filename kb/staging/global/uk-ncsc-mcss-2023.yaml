@@ -1,0 +1,30 @@
+id: uk-ncsc-mcss-2023
+title: Minimum Cyber Security Standard (MCSS) Version 2.0
+authority: Cabinet Office / NCSC
+jurisdiction: UK
+doc_type: standard
+url: https://www.gov.uk/government/publications/the-minimum-cyber-security-standard
+landing_page: https://www.gov.uk
+local_path: corpus/raw/global/uk-ncsc-mcss-2023.html
+sha256: b92990f0661eb59f97504331750537f3a7551de839f055422b721ecb731fe454
+bytes: 72050
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: 2023
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Open Government Licence v3.0
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes: []
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long
+  lines (2000); text length 4335'

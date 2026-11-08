@@ -1,0 +1,29 @@
+id: intl-unoosa-lts-guidelines-2019
+title: Guidelines for the Long-term Sustainability of Outer Space Activities (A/74/20, Annex II)
+authority: United Nations Committee on the Peaceful Uses of Outer Space (COPUOS)
+jurisdiction: INTL
+doc_type: guideline
+url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/guidelines-long-term-sustainability-outer-space-activities.html
+landing_page: https://www.unoosa.org
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2019'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-09
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed URL failed with curl rc=22 (HTTP error) on 3 attempts. Not obtained.

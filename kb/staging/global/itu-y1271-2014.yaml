@@ -1,0 +1,48 @@
+id: itu-y1271-2014
+title: "Framework(s) on Network Requirements and Capabilities to Support Emergency Telecommunications (ITU-T Recommendation Y.1271)"
+authority: International Telecommunication Union (ITU-T)
+jurisdiction: International
+doc_type: technical_standard
+url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-Y.1271-201407-I!!PDF-E&lang=e&type=items
+landing_page: https://www.itu.int/rec/T-REC-Y.1271/en
+local_path: corpus/raw/global/itu-y1271-2014.pdf
+sha256: e76729e421735a3699622ce19d05c66a2155373326a285608bf05df070686e30
+bytes: 559637
+pages: 28
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "Compliance with this Recommendation is voluntary. However, the Recommendation may contain certain mandatory provisions"
+issued: 2014-07-18
+in_force_from: 2014-07-18
+amends: []
+amended_by: []
+licence: copyright_itu
+language: en
+gaps: [GAP-IN-03, GAP-IN-08]
+role: global_example
+candidate_quotes:
+  - quote: "Emergency telecommunication traffic needs assured capabilities regardless of the networks traversed. A prime component of assured capabilities is enhanced priority treatment."
+    page: 12
+    clause: "Clause 7.1"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Mandates enhanced priority treatment and bearer-independent assured delivery for emergency communication flows."
+  - quote: "Whenever possible, admission control or network policy can increase the probability of successful telecommunications by providing a preferential treatment to emergency telecommunications."
+    page: 19
+    clause: "Clause 7.15"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Prescribes dynamic admission control and policy routing prioritizing emergency calls during congestion."
+  - quote: "Key network infrastructure supporting emergency telecommunications needs to be as robust as possible so as to endure throughout the disaster."
+    page: 16
+    clause: "Clause 7.9"
+    topic: failover_path_security
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Establishes survivability and endurability baselines for core physical and transport network links."
+verified: false
+notes: "Comprehensive ITU-T framework specifying requirements for circuit and packet-switched emergency telecommunications."

@@ -1,0 +1,30 @@
+id: eu-declaration-digital-rights-2023
+title: European Declaration on Digital Rights and Principles for the Digital Decade
+  (2023/C 23/01)
+authority: European Parliament, Council and European Commission
+jurisdiction: EU
+doc_type: strategy
+url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023C0123(01)
+landing_page: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023C0123(01)
+local_path: corpus/raw/global/eu-declaration-digital-rights-2023.html
+sha256: 9bf3caf8ea2be13f27f1e376eea9d39e9664c308234a20db0a7fb61f873cb32c
+bytes: 549354
+pages: 7
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2023-01-23
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: EUR-Lex reuse policy
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-08
+role: context
+candidate_quotes: []
+verified: false
+notes: 'Downloaded type: PDF document, version 1.7, 1 pages; text length 26368'

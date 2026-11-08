@@ -1,0 +1,37 @@
+id: in-tdsat-telegraph-trai-bare-acts-compilation
+title: Telecom Disputes Settlement and Appellate Tribunal Compilation of Telecom Bare Acts (Indian Telegraph Act 1885, TRAI
+  Act 1997, Cable Television Networks Act 1995)
+authority: Telecom Disputes Settlement and Appellate Tribunal (TDSAT)
+jurisdiction: IN
+doc_type: act
+url: https://tdsat.gov.in/admin/introduction/uploads/bare%20acts.pdf
+landing_page: https://tdsat.gov.in
+local_path: corpus/raw/india/in-tdsat-telegraph-trai-bare-acts-compilation.pdf
+sha256: dd6c098b3d91bbfbf90bd95ff21c28c18d0751f0b4be3c30dcdf316c29362739
+bytes: 294743
+pages: 109
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: legislation
+binding_basis: not stated in the document
+issued: '2020'
+in_force_from: unknown
+amends: subject to Telecommunications Act 2023 transition
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: TELECOM REGULATORY AUTHORITY OF INDIA ACT, 1997 CHAPTER I PRELIMINARY 1.
+  clause: TRAI Act Chapter I
+  topic: telecom_security
+  gap: GAP-IN-06
+  supports: context
+  why: Statutory compilation of primary Indian telecommunication statutes including the TRAI Act 1997 and Indian Telegraph
+    Act 1885.
+  page: 2
+verified: false
+notes: Compilation of bare acts governing Indian telecommunications and dispute resolution under TDSAT.

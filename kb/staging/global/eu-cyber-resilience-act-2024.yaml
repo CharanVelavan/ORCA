@@ -1,0 +1,48 @@
+id: eu-cyber-resilience-act-2024
+title: "Regulation (EU) 2024/2847 of the European Parliament and of the Council of 23 October 2024 on horizontal cybersecurity requirements for products with digital elements and amending Regulations (EU) No 168/2013 and (EU) No 2019/1020 and Directive (EU) 2020/1828 (Cyber Resilience Act)"
+authority: European Parliament and Council
+jurisdiction: EU
+doc_type: act
+url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32024R2847
+landing_page: https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng
+local_path: corpus/raw/global/eu-cyber-resilience-act-2024.pdf
+sha256: e3ecaabddf6e321fa04097d15dfcccc7309d0fe5896240ab7625a27d74ab1b0a
+bytes: 1782351
+pages: 81
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "This Regulation shall be binding in its entirety and directly applicable in all Member States."
+issued: 2024-10-23
+in_force_from: 2024-12-10
+amends: []
+amended_by: []
+licence: "EUR-Lex reuse policy"
+language: en
+gaps: [GAP-IN-01, GAP-IN-06, GAP-IN-08]
+role: global_example
+candidate_quotes:
+  - quote: "A manufacturer shall notify any actively exploited vulnerability contained in the product with digital elements that it becomes aware of simultaneously to the CSIRT designated as coordinator, in accordance with paragraph 7 of this Article, and to ENISA."
+    page: 38
+    clause: "Article 14(1)"
+    topic: telecom_cyber_security
+    gap: GAP-IN-01
+    supports: global_example
+    why: "Requires manufacturers of digital products to notify actively exploited vulnerabilities simultaneously to national CSIRTs and ENISA."
+  - quote: "an early warning notification of an actively exploited vulnerability, without undue delay and in any event within 24 hours of the manufacturer becoming aware of it, indicating, where applicable, the Member States on the territory of which the manufacturer is aware that their product with digital elements has been made available;"
+    page: 38
+    clause: "Article 14(2)(a)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: global_example
+    why: "Establishes a 24-hour mandatory early warning deadline for actively exploited vulnerabilities in digital devices and software."
+  - quote: "A manufacturer shall notify any severe incident having an impact on the security of the product with digital elements that it becomes aware of simultaneously to the CSIRT designated as coordinator, in accordance with paragraph 7 of this Article, and to ENISA."
+    page: 39
+    clause: "Article 14(3)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: global_example
+    why: "Mandates reporting of severe security incidents impacting products with digital elements to CSIRTs and ENISA."
+verified: false
+notes: "Cyber Resilience Act (CRA) establishing security-by-design requirements, vulnerability reporting timelines, and device security baselines."

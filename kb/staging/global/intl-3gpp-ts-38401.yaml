@@ -1,0 +1,51 @@
+id: intl-3gpp-ts-38401
+title: '3GPP TS 38.401 V18.1.0 (Release 18): NG-RAN; Architecture description'
+authority: 3GPP / ETSI (ETSI TS 138 401 V18.1.0)
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/38_series/38.401/38401-i10.zip
+landing_page: https://www.etsi.org/deliver/etsi_ts/138400_138499/138401/18.01.00_60/ts_138401v180100p.pdf
+local_path: corpus/raw/global/intl-3gpp-ts-38401.pdf
+sha256: bb0ef15b71c5b1b519b08fa5004c39cbc5024e59312ade610b59414a6b11df41
+bytes: 1962847
+pages: 159
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: unclear
+binding_basis: not stated in the document (3GPP technical specification; legal status as voluntary consensus standard not
+  stated in the text)
+issued: 2024-05-27
+in_force_from: 2024-05-27
+amends: []
+amended_by: []
+licence: 3GPP open standard
+language: en
+gaps:
+- GAP-IN-06
+role: global_example
+candidate_quotes:
+- quote: A gNB may consist of a gNB-CU and one or more gNB-DU(s). A gNB-CU and a gNB-DU is connected via F1 interface.
+  page: 16
+  clause: Clause 6.1.1
+  topic: failover_path_security
+  gap: GAP-IN-06
+  supports: global_example
+  why: Defines the disaggregated NG-RAN architecture splitting centralized and distributed units across the F1 logical interface.
+- quote: For resiliency, a gNB-DU may be connected to multiple gNB-CUs by appropriate implementation.
+  page: 16
+  clause: Clause 6.1.1 NOTE 3
+  topic: failover_path_security
+  gap: GAP-IN-06
+  supports: global_example
+  why: Specifies multi-CU failover connectivity for distributed units to enhance radio access network architectural resiliency.
+- quote: F1 needs to be security-protected as described in TS 33.501.
+  page: 19
+  clause: Clause 6.1.4 NOTE
+  topic: failover_path_security
+  gap: GAP-IN-06
+  supports: global_example
+  why: Mandates cryptographic security protection across F1 backhaul links connecting disaggregated base station units.
+verified: false
+notes: 3GPP Release 18 specification TS 38.401 V18.1.0 transposed by ETSI as ETSI TS 138 401 V18.1.0. All NTN links in testbeds
+  are emulated.

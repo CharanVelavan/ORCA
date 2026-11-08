@@ -1,0 +1,48 @@
+id: in-dot-telecom-cyber-security-amendment-rules-2025
+title: "Telecommunications (Telecom Cyber Security) Amendment Rules, 2025"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification, G.S.R. 771(E))
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/telecom-cyber-security-amendment-rules-2025.pdf
+landing_page: https://www.eservices.dot.gov.in/
+local_path: corpus/raw/india/in-dot-telecom-cyber-security-amendment-rules-2025.pdf
+sha256: fe249008ba43a70bd50da278f0150b61e3a42161f21899882afca5057d895363
+bytes: 1446131
+pages: 7
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "in exercise of the powers conferred by clause (v) of sub section (2) of section 56 of the Telecommunications Act, 2023"
+issued: 2025-11-21
+in_force_from: "on the date of their publication in the Official Gazette"
+amends: [Telecommunications (Telecom Cyber Security) Rules, 2024]
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: india_evidence
+candidate_quotes:
+  - quote: "Where the Central Government considers that immediate action under sub-rule (5) is necessary or expedient in the public interest, it shall without issuing a notice under sub-rule (2), pass an order recording the reasons thereof, with appropriate direction"
+    page: 5
+    clause: "Rule 7(6) as substituted"
+    topic: emergency_powers
+    gap: null
+    supports: context
+    why: "Lets the Central Government order immediate temporary suspension of a telecom identifier in the public interest, without prior notice; an emergency power that a fault-or-attack playbook must anticipate."
+  - quote: "to temporarily suspend use of the relevant telecommunication identifier"
+    page: 6
+    clause: "Rule 7(6)(a) and (b) as substituted"
+    topic: telecom_cyber_security
+    gap: null
+    supports: context
+    why: "Lets the Central Government direct a telecom entity or TIUE to suspend an identifier, the kind of direction an incident response must be ready to receive."
+  - quote: "for ensuring telecom cyber security and preventing security incidents, shall either by itself, or through an agency authorised by it, establish a MNV platform and issue directions to authorised entities and licensees to participate on such platform."
+    page: 6
+    clause: "Rule 7A (inserted)"
+    topic: telecom_cyber_security
+    gap: null
+    supports: context
+    why: "Creates a mobile number validation platform for telecom cyber security and incident prevention, the first explicit security-incident hook in the 2025 amendment."
+verified: false
+notes: "The list says this amends incident reporting workflows and technical standards via the ICDR portal. Keyword search found no change to incident-reporting clocks or to ICDR. The amendment adds a mobile number validation platform (Rule 7A) and emergency identifier suspension (Rule 7(6)). It also says the rules come into force on publication in the Official Gazette. The list's why field is not supported. The 2024 Telecom Cyber Security Rules (Rule 7(1)(a), six-hour clock) are not amended here. Quotes are context only; no gap is proved."

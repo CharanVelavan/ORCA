@@ -1,0 +1,29 @@
+id: ae-tdra-space-services-policy
+title: Policy on Space Services and Satellite Filing Regulations
+authority: Telecommunications and Digital Government Regulatory Authority (TDRA)
+jurisdiction: AE
+doc_type: policy
+url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/Space-Services-Policy-V1-0-pdf.ashx
+landing_page: https://u.ae/en/about-the-uae/science-and-technology/key-sectors-in-science-and-technology/space-science-and-technology/space-regulation
+local_path: corpus/raw/global/ae-tdra-space-services-policy.pdf
+sha256: a80b5b188e1f7cae3f77875a22dbe8f2d627169bf63387c82df21affb1eafd56
+bytes: 204740
+pages: 4
+retrieved_at: '2026-11-08'
+status: skipped
+official_domain: true
+binding_status: not stated
+binding_basis: 'not stated in the document: out of scope (UAE host only, decided 8 Nov)'
+issued: '2019-03-20'
+in_force_from: '2019-03-20'
+amends: []
+amended_by: []
+licence: TDRA open publication
+language: en
+gaps: []
+role: global_example
+candidate_quotes: []
+verified: false
+notes: Retried and downloaded authentic PDF from tdra.gov.ae via official u.ae space regulation directory link. Corrected
+  URL from UWB/SRD to Space-Services-Policy-V1-0-pdf.ashx.
+skipped: out of scope (UAE host only, decided 8 Nov)

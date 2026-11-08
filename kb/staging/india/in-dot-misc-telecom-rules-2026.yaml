@@ -1,0 +1,41 @@
+id: in-dot-misc-telecom-rules-2026
+title: "Telecommunications (Miscellaneous Telecom Services) Rules, 2026 (file: misc-telecom-services-rules-2026); includes trusted-source and satellite-gateway provisions"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification)
+url: "https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/misc-telecom-services-rules-2026.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-misc-telecom-rules-2026.pdf
+sha256: 65239e3403e89d0e4c58936630856381746e4e303af41d3e5b662ddc2a8b5d34
+bytes: 1135768
+pages: 73
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "the Central Government hereby makes the following rules, namely"
+issued: 2026
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: india_evidence
+candidate_quotes:
+  - quote: "the designated authority shall be the National Cyber Security Coordinator of the Central Government, who shall determine the categories of telecommunication equipment for which the security requirements related to trusted sources and trusted products are applicable"
+    page: 54
+    clause: "Trusted sources and trusted products rule (rule 36 in the file text)"
+    topic: telecom_cyber_security
+    gap: null
+    supports: context
+    why: "Names the National Cyber Security Coordinator as the designated authority for trusted-source equipment, the supply-chain control behind the 2022 satellite-equipment risk."
+  - quote: "shall ensure that the requisite satellite-based connectivity is obtained from the entities authorised to provide satellite-based connectivity, having satellite earth station gateway in India."
+    page: 70
+    clause: "Satellite-based in-flight and maritime connectivity sub-rule (2)"
+    topic: space_cyber
+    gap: null
+    supports: context
+    why: "Requires satellite connectivity for in-flight and maritime services to come from providers with an Indian gateway, a jurisdiction and routing constraint for satellite traffic."
+verified: false
+notes: "Read by keyword and clause check. The list's binding label is supported by the 'hereby makes' wording. The file covers miscellaneous telecom services, including trusted sources (rule 36 in the file text) and satellite connectivity for aircraft and ships. The gateway duty is in the satellite part of the file. No GAP is linked here; these are context and comparison points for GAP-IN-08 and GAP-IN-09. Quotes are verbatim and checked."

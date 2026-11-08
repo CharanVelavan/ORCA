@@ -1,0 +1,38 @@
+id: in-trai-direction-unauthorised-telecom-activities-2023
+title: Direction on Measures to Curb Unauthorised Activities Using Telecommunication Resources
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: direction
+url: https://trai.gov.in/sites/default/files/2024-09/Direction_16022023.pdf
+landing_page: https://trai.gov.in/telecom/consumer-initiatives/unsolicited-commercial-communication
+local_path: corpus/raw/india/in-trai-direction-unauthorised-telecom-activities-2023.pdf
+sha256: 3f7ce6197cc85ce35a2e6791e1440960b5684e82620bc5605d171260ab6953db
+bytes: 1867358
+pages: 7
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: under section 13, read with sub-clauses (i) and (v) of clause (b) of sub-section (1) of section 11, of the
+  Telecom Regulatory Authority of India Act
+issued: '2023-02-16'
+in_force_from: 16th February, 2023
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: Direction under section 13, read with sub-clauses (i) and (v) of clause (b) of sub-section (1) of section 11, of
+    the Telecom Regulatory Authority of India Act 1997 (24 of 1997), regarding measures to curb unauthorised activities using
+    telecom resources and amendment in Codes of Practice under
+  clause: Subject
+  topic: telecom_security
+  gap: null
+  supports: context
+  why: Directs access service providers to implement stringent subscriber verification and prevent misuse of telecom resources.
+  page: 1
+verified: false
+notes: Binding direction under TRAI Act Section 13 curbing unauthorized telecom activities and tightening codes of practice.

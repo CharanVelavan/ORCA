@@ -1,0 +1,37 @@
+id: in-trai-cp-draft-amendments-qos-2026
+title: Consultation Paper on Draft Amendments in The Standards of Quality of Service of Access and Broadband Service Regulations,
+  2024
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2026-08/CP_05082026.pdf
+landing_page: https://trai.gov.in/telecom/qos
+local_path: corpus/raw/india/in-trai-cp-draft-amendments-qos-2026.pdf
+sha256: 1482e4b82d822709a93f4bb613114ab4cc1780a43d7fae8c1ee0cc0bc6666f3b
+bytes: 2621863
+pages: 203
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2026-08-05'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-04
+role: context
+candidate_quotes:
+- quote: 'The document seeking comments from stakeholders contains following information:'
+  clause: Preface
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: context
+  why: Consults on draft amendments to QoS regulations governing network downtime reporting and benchmarks.
+  page: 2
+verified: false
+notes: TRAI consultation paper on draft amendments to QoS regulations for access and broadband services.

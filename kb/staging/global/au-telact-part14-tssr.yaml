@@ -1,0 +1,30 @@
+id: au-telact-part14-tssr
+title: 'Telecommunications Act 1997: Part 14 (Telecommunications Sector Security Reforms)'
+authority: Parliament of Australia
+jurisdiction: AU
+doc_type: act
+url: https://www.legislation.gov.au/C2004A05145/latest/text
+landing_page: https://www.legislation.gov.au/C2004A05145/latest/details
+local_path: corpus/raw/global/au-telact-part14-tssr.html
+sha256: 226aded2529dff993bee36df5a490d7c278c7d8410f7b81bf4d8e2431eef9bfc
+bytes: 734199
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: 2017-09-18
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Australian Commonwealth Open
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes: []
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long
+  lines (27182); text length 67852'

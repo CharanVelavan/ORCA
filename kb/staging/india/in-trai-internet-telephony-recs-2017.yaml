@@ -1,0 +1,37 @@
+id: in-trai-internet-telephony-recs-2017
+title: Recommendations on Regulatory Framework for Internet Telephony
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2024-09/Recommendations_24_10_2017_0.pdf
+landing_page: https://trai.gov.in/telecom/interconnection
+local_path: corpus/raw/india/in-trai-internet-telephony-recs-2017.pdf
+sha256: bf112a6d6a5f8f5d1b2a3a30a8230247be2db7c896164e71f23f398e1fe804cc
+bytes: 1668470
+pages: 66
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2017-10-24'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: The mobile numbering series should be used for providing Internet Telephony by a service provider.
+  clause: Chapter II Paragraph 2.2
+  topic: emergency_services
+  gap: GAP-IN-02
+  supports: context
+  why: Recommends assigning mobile numbering series to internet telephony to facilitate subscriber identification and emergency
+    calling.
+  page: 38
+verified: false
+notes: TRAI recommendations on internet telephony, address allocation, and numbering resources.

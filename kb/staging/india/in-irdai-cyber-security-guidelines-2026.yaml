@@ -1,0 +1,28 @@
+id: in-irdai-cyber-security-guidelines-2026
+title: IRDAI Information and Cyber Security Guidelines (revised, April 2026)
+authority: Insurance Regulatory and Development Authority of India (IRDAI)
+jurisdiction: IN
+doc_type: guidelines
+url: https://avantiscdnprodstorage.blob.core.windows.net/legalupdatedocs/54551/IRDAI-issued-the-revised-guidelines-on-Information-and-Cyber-Security-for-Regulated-Entities-April082026.pdf
+landing_page: https://irdai.gov.in/
+sha256: 3d1ba38cfd05f4d89fe4c46213e31c5e458dec3b6b85e2d7c84b1a4e576ec5af
+bytes: 50029
+pages: 1
+local_path: corpus/raw/india/in-irdai-cyber-security-guidelines-2026.pdf
+retrieved_at: '2026-11-08'
+status: scanned
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2026-04
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: 'No text layer: pdftotext returned 0 characters from 1 page, so this is a scanned PDF. OCR is needed before any quote. The list gives binding status; not confirmed.'
+scanned: true

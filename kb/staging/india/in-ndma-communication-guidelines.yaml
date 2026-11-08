@@ -1,0 +1,63 @@
+id: in-ndma-communication-guidelines
+title: 'National Disaster Management Guidelines: National Disaster Management Information and Communication System (NDMICS)'
+authority: National Disaster Management Authority
+jurisdiction: IN
+doc_type: guideline
+url: https://www.trai.gov.in/sites/default/files/2024-11/INCOIS_CP_PPDR.pdf
+landing_page: https://www.ndma.gov.in/
+local_path: corpus/raw/india/in-ndma-communication-guidelines.pdf
+sha256: 81df2bffa09cbf3948c1dad1f8d2c3e1d25706f9e891b487061bf653c15ebe39
+bytes: 4535260
+pages: 218
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: unclear
+binding_basis: not stated in the document (national guidelines issued by NDMA; Disaster Management Act 2005 cited as context,
+  not statutory rule-making power)
+issued: 2012-02
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-03
+- GAP-IN-04
+role: india_evidence
+candidate_quotes:
+- quote: voice packets are given higher priority than the data packets at each node of the network to ensure minimum/ constant
+    delay and sent to destination.
+  page: 187
+  clause: Appendix 20
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: answers_gap
+  why: Recommends packet-level priority queues giving voice packets higher priority than data packets at every network node.
+- quote: During network busy periods, priority call service allows access to network resources in order of user terminals
+    call priority status.
+  page: 193
+  clause: Appendix 24
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: answers_gap
+  why: Describes priority call service mechanisms allocating constrained network resources by user terminal priority status.
+- quote: This call service, of which the highest priority is the emergency call, provides the highest uplink priority and
+    highest priority access to network resources.
+  page: 193
+  clause: Appendix 24
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: answers_gap
+  why: Affirms that emergency calls receive highest priority access and uplink transmission during network congestion.
+- quote: If a network is busy, the lowest priority communication is dropped to handle the emergency call.
+  page: 193
+  clause: Appendix 24
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: answers_gap
+  why: Articulates load shedding logic where lowest priority traffic is dropped to accommodate emergency communications.
+verified: false
+notes: Comprehensive NDMA guidelines on disaster communication networks, published as an annexure to TRAI PPDR consultation
+  records.

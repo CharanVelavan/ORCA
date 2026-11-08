@@ -1,0 +1,27 @@
+id: in-tn-ethical-ai-policy-2020
+title: Tamil Nadu Policy for Safe and Ethical AI (2020)
+authority: Government of Tamil Nadu
+jurisdiction: IN-TN
+doc_type: policy
+url: https://www.tnebnet.org/awp/resource/TN_Policy_for_Safe_and_Ethical_AI.pdf
+landing_page: https://www.tn.gov.in/
+sha256: 2f8764cef6e7e0fabef25231e74cdafa6603d7ad511e5dce0cda2ca679be70d0
+bytes: 606324
+pages: 26
+local_path: corpus/raw/india/in-tn-ethical-ai-policy-2020.pdf
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2020'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: Read by keyword check (26 pages). State AI policy, not telecom or NTN. No candidate quotes.

@@ -1,0 +1,35 @@
+id: intl-outer-space-treaty-1967
+title: Treaty on Principles Governing the Activities of States in the Exploration and Use of Outer Space, including the Moon and Other Celestial Bodies
+authority: United Nations General Assembly
+jurisdiction: INTL
+doc_type: treaty
+url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/outerspacetreaty.html
+landing_page: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/outerspacetreaty.html
+local_path: corpus/raw/global/intl-outer-space-treaty-1967.html
+sha256: 7b6beba90cdbcb80f22d7e17441f2c22627e84fba6a7084502fa682d69518070
+bytes: 65090
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: States Parties to the Treaty shall bear international responsibility for national activities in outer space
+issued: '1967'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: States Parties to the Treaty shall bear international responsibility for national activities in outer space
+  page: 1
+  clause: Article VI
+  topic: space_cyber
+  gap: GAP-IN-09
+  supports: global_example
+  why: Makes states responsible for national space activities, including private operators, relevant to licensing and oversight of satellite operators.
+verified: false
+notes: UN treaty text fetched from UNOOSA HTML page (not PDF). Binding on States Parties. Quote is Article VI.

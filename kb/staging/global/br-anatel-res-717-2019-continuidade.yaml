@@ -1,0 +1,30 @@
+id: br-anatel-res-717-2019-continuidade
+title: 'Resolução nº 717, de 23 de dezembro de 2019: Regulamento de Continuidade dos Serviços de Telecomunicações'
+authority: Agência Nacional de Telecomunicações
+jurisdiction: BR
+doc_type: regulation
+url: https://informacoes.anatel.gov.br/legislacao/resolucoes/2019/1359-resolucao-717
+landing_page: https://informacoes.anatel.gov.br
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2019-12-23'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-04
+- GAP-IN-08
+role: context
+candidate_quotes: []
+verified: false
+notes: Anatel URL returned a 3.5 KB placeholder page (same bytes and sha256 as the other Anatel URLs in this batch), not the resolution text. Not obtained.

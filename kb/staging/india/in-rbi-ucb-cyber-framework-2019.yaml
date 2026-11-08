@@ -1,0 +1,27 @@
+id: in-rbi-ucb-cyber-framework-2019
+title: RBI Cyber Security Framework for Urban Cooperative Banks (2019)
+authority: Reserve Bank of India
+jurisdiction: IN
+doc_type: circular
+url: https://rbi.org.in/Scripts/NotificationUser.aspx?Id=11792
+landing_page: https://rbi.org.in/Scripts/NotificationUser.aspx?Id=11792
+sha256: cbda1ec2965dcef457dd10f37310c7bc7d34f6ac304f8fb0da02c4b61e8bb8f6
+bytes: 116480
+pages: null
+local_path: corpus/raw/india/in-rbi-ucb-cyber-framework-2019.html
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '2019'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: HTML text extracted. No incident-reporting clock found by keyword search. No candidate quotes; binding label not confirmed from the text.

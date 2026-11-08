@@ -1,0 +1,48 @@
+id: itu-x805-2003
+title: "Security Architecture for Systems Providing End-to-End Communications (ITU-T Recommendation X.805)"
+authority: International Telecommunication Union (ITU-T)
+jurisdiction: International
+doc_type: technical_standard
+url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-X.805-200310-I!!PDF-E&lang=e&type=items
+landing_page: https://www.itu.int/rec/T-REC-X.805/en
+local_path: corpus/raw/global/itu-x805-2003.pdf
+sha256: 4564cfeb2ed5289a7e486bb216ad2dc642ce21ad60c260551480ed575fbe5cfc
+bytes: 339557
+pages: 28
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "Compliance with this Recommendation is voluntary. However, the Recommendation may contain certain mandatory provisions"
+issued: 2003-10-29
+in_force_from: 2003-10-29
+amends: []
+amended_by: []
+licence: copyright_itu
+language: en
+gaps: [GAP-IN-06, GAP-IN-08]
+role: global_example
+candidate_quotes:
+  - quote: "A security dimension is a set of security measures designed to address a particular aspect of the network security. This Recommendation identifies eight such sets that protect against all major security threats."
+    page: 9
+    clause: "Section 6"
+    topic: standards
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Introduces the eight fundamental security dimensions of the ITU-T end-to-end security architecture."
+  - quote: "The communication security dimension ensures that information flows only between the authorized end points (the information is not diverted or intercepted as it flows between these end points)."
+    page: 9
+    clause: "Section 6.5"
+    topic: signalling_security
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Defines communications security preventing diversion, interception, or unauthorized tap of signaling and user traffic."
+  - quote: "The availability security dimension ensures that there is no denial of authorized access to network elements, stored information, information flows, services and applications due to events impacting the network."
+    page: 10
+    clause: "Section 6.7"
+    topic: failover_path_security
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Mandates availability safeguards preventing denial-of-service and preserving access across impacted network links."
+verified: false
+notes: "Foundational ITU-T security reference architecture defining the 3 layers, 3 planes, and 8 security dimensions."

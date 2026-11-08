@@ -1,0 +1,48 @@
+id: in-nccs-itsar-cell-broadcast-centre-2022
+title: ITSAR for Cell Broadcast Centre (CBC)
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR103062209.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-cell-broadcast-centre-2022.pdf
+sha256: 7d6951524f0a40c2ae8c8df59f846a3eb27152453989925253b913c4db94510f
+bytes: 1066845
+pages: 43
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2022-09-01'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: The Emergency Alert/Public Warning is one of the established use cases for
+    Cell Broadcast service.
+  page: 5
+  clause: A) Outline
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: context
+  why: Identifies public warning as a Cell Broadcast use case relevant to emergency
+    warning delivery.
+- quote: In India, National Disaster Monitoring Authority is working on a project
+    which will use Cell Broadcast as one of the channels for sending alerts in an
+    emergency situation.
+  page: 5
+  clause: A) Outline
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: context
+  why: Describes Cell Broadcast as a channel for sending emergency alerts.
+verified: false
+notes: Downloaded and text extracted. Candidate clauses not yet manually verified;
+  no quotes entered.

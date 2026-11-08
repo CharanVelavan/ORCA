@@ -1,0 +1,30 @@
+id: in-nccs-itsar-group1-csr-2025
+title: ITSAR for Group-I Devices (Common Security Requirements)
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR002012504.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-group1-csr-2025.pdf
+sha256: 39ec7c9f5e574e78b7a4933644e00c49fbb22f771c0ab8065142196463cb51ad
+bytes: 698440
+pages: 51
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2025-04-21'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for Group-I Devices (Common Security Requirements) under MTCTE.
+  No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours
+  floor, or incident reporting clocks).

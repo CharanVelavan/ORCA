@@ -1,0 +1,39 @@
+id: in-trai-service-authorisations-recs-2024
+title: Recommendations on Framework for Service Authorisations to be Granted Under the Telecommunications Act, 2023
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2024-11/Recommendation_18092024.pdf
+landing_page: https://trai.gov.in/telecom/licensing
+local_path: corpus/raw/india/in-trai-service-authorisations-recs-2024.pdf
+sha256: b3a63c4f4bd8cee1735e5bb8ac0beb924e2ff287923444f872203f9cdda70558
+bytes: 14072114
+pages: 837
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2024-09-18'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-06
+- GAP-IN-09
+role: india_evidence
+candidate_quotes:
+- quote: Authority recommends that- (a) The Central Government should grant Service Authorisation under section 3(1) of the
+    Telecommunications Act, 2023 instead of entering into an agreement with the entity.
+  clause: Chapter II
+  topic: licensing_framework
+  gap: null
+  supports: context
+  why: Recommends transitioning telecom licensing to statutory service authorisations under Section 3(1) of the Telecommunications
+    Act 2023.
+  page: 28
+verified: false
+notes: TRAI recommendations on the framework for service authorisations under the Telecommunications Act 2023.

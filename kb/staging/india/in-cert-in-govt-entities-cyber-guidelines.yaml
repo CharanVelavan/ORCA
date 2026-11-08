@@ -1,0 +1,39 @@
+id: in-cert-in-govt-entities-cyber-guidelines
+title: Cyber Security Guidelines for Government Entities (2022)
+authority: CERT-In, Ministry of Electronics and Information Technology
+jurisdiction: IN
+doc_type: guideline
+url: https://www.cert-in.org.in/PDF/guidelinesgovtentities.pdf
+landing_page: https://www.cert-in.org.in
+local_path: corpus/raw/india/in-cert-in-govt-entities-cyber-guidelines.pdf
+sha256: bca0e5b8ac45f20fd5f41977634dbdaf6c0b7d7185feddabda0d8170e1a513d5
+bytes: 1416712
+pages: 76
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: false
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2022-06
+in_force_from: June 2022
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: Nominate a Chief Information Security Officer (CISO) for IT Security and provide the details of this CISO (Point
+    of Contact) to CERT-In as per Cyber Security Directions of 28 April 2022.
+  clause: Clause 3.1
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: proves
+  why: Directs government entities to nominate a designated CISO contact person to CERT-In pursuant to the 28 April 2022 cybersecurity
+    directions.
+  page: 8
+verified: false
+notes: CERT-In cybersecurity guidelines for government entities prescribing incident notification and organizational security
+  measures.

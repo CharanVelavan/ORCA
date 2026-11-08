@@ -1,0 +1,28 @@
+id: in-isro-is4om-brochure
+title: "ISRO System for Safe and Sustainable Space Operations Management (IS4OM) brochure"
+authority: Indian Space Research Organisation (ISRO), DSSAM
+jurisdiction: IN
+doc_type: brochure
+url: https://www.isro.gov.in/media_isro/pdf/sssom_brochure.pdf
+landing_page: https://www.isro.gov.in/media_isro/pdf/sssom_brochure.pdf
+local_path: corpus/raw/india/in-isro-is4om-brochure.pdf
+sha256: a20ccc3ce477e44724aa4a38e32e8000d73864b0826719d8d5e81a5063e9f15c
+bytes: 4374005
+pages: 12
+retrieved_at: 2026-11-08
+status: scanned
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: unknown
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Extracted text is under 200 characters per page (about 757 non-space characters over 12 pages), so it is treated as scanned. No quotes; OCR is needed later. The visible text covers space-object re-entry and debris monitoring, not cyber or NTN. Binding status is not stated; the list's advisory label is an inference."
+scanned: true

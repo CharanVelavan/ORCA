@@ -1,0 +1,28 @@
+id: sg-imda-emergency-calling-guidelines
+title: Advisory Guidelines on Emergency Call Services (995 and 999)
+authority: Infocomm Media Development Authority
+jurisdiction: SG
+doc_type: guideline
+url: https://www.imda.gov.sg/-/media/imda/files/regulation-licensing-and-consultations/frameworks-and-policies/emergency-services/advisory-guidelines-emergency-services.pdf
+landing_page: https://www.imda.gov.sg
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2019
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-03
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed IMDA URL returned a 'Page Not Found' page (same bytes as sg-imda-iot-cyber-guide). Not obtained.

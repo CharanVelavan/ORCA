@@ -1,0 +1,27 @@
+id: in-rbi-cyber-security-banks-2016
+title: RBI Cyber Security Framework in Banks (2016)
+authority: Reserve Bank of India
+jurisdiction: IN
+doc_type: circular
+url: https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=10462
+landing_page: https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=10462
+sha256: 1828491df1c464a9f15712b816f57c7a4dd28295c5e6243218bf60d89a8588d1
+bytes: 113741
+pages: null
+local_path: corpus/raw/india/in-rbi-cyber-security-banks-2016.html
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '2016'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: HTML text extracted. Keyword search found no reporting clock in the text read. Likely relevant to incident response for banks, but no quotes were taken. Binding label not confirmed from the text.

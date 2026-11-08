@@ -1,0 +1,48 @@
+id: us-cisa-circia-nprm-2024
+title: "Cyber Incident Reporting for Critical Infrastructure Act (CIRCIA) Reporting Requirements (Proposed Rule 89 FR 23644)"
+authority: Cybersecurity and Infrastructure Security Agency (CISA) & Department of Homeland Security (DHS)
+jurisdiction: US
+doc_type: proposed_rule
+url: https://www.federalregister.gov/documents/2024/04/04/2024-06526/cyber-incident-reporting-for-critical-infrastructure-act-of-2022-circia-reporting-requirements
+landing_page: https://www.cisa.gov/circia
+local_path: corpus/raw/global/us-cisa-circia-nprm-2024.pdf
+sha256: e84d993b1458d9ffe27e25b5bdaa83701b60cf9a81a3171b7d8911c3f7ba51eb
+bytes: 1678275
+pages: 133
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: draft
+binding_basis: "the Department of Homeland Security proposes to add chapter II, consisting of part 226 to title 6 of the Code of Regulations"
+issued: 2024-04-04
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-01, GAP-IN-02]
+role: global_example
+candidate_quotes:
+  - quote: "A covered entity must submit a Covered Cyber Incident Report to CISA no later than 72 hours after the covered entity reasonably believes the covered cyber incident has occurred."
+    page: 127
+    clause: "Proposed 6 CFR § 226.5(a)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: global_example
+    why: "Mandates 72-hour reporting timeline to CISA for covered cyber incidents affecting critical infrastructure."
+  - quote: "A covered entity must submit a Ransom Payment Report to CISA no later than 24 hours after the ransom payment has been disbursed."
+    page: 127
+    clause: "Proposed 6 CFR § 226.5(b)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: global_example
+    why: "Imposes strict 24-hour reporting deadline for any extortion or ransomware payment."
+  - quote: "A covered entity must promptly submit supplemental reports to CISA."
+    page: 127
+    clause: "Proposed 6 CFR § 226.5(d)"
+    topic: downstream_warning
+    gap: GAP-IN-02
+    supports: global_example
+    why: "Requires ongoing updates and supplemental disclosures as incident investigation and remediation progresses."
+verified: false
+notes: "CIRCIA Notice of Proposed Rulemaking creating 6 CFR Part 226 with 72h cyber incident and 24h ransom payment reporting mandates."

@@ -1,0 +1,35 @@
+id: in-trai-cp-interconnection-review-2025
+title: Consultation Paper on Review of Existing TRAI Regulations on Interconnection
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2025-11/CP_10112025.pdf
+landing_page: https://trai.gov.in/telecom/interconnection
+local_path: corpus/raw/india/in-trai-cp-interconnection-review-2025.pdf
+sha256: 38870245fb055ed102d90802777936452662cd71fadaea1ca827ee6f96f7f452
+bytes: 27148286
+pages: 263
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2025-11-10'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-08
+role: context
+candidate_quotes:
+- quote: Consultation Paper No. 11/2025
+  clause: Title Page
+  topic: failover
+  gap: GAP-IN-08
+  supports: context
+  why: Consults on interconnection regulations, points of interconnection provisioning, and traffic routing resilience.
+  page: 1
+verified: false
+notes: TRAI consultation paper on review of existing TRAI regulations on interconnection.

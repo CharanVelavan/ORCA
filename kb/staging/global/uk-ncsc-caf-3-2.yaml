@@ -1,0 +1,60 @@
+id: uk-ncsc-caf-3-2
+title: NCSC Cyber Assessment Framework (CAF) Version 3.2
+authority: National Cyber Security Centre (UK)
+jurisdiction: UK
+doc_type: guideline
+url: https://www.ncsc.gov.uk/collection/caf
+landing_page: https://www.ncsc.gov.uk/collection/caf
+local_path: corpus/raw/global/uk-ncsc-caf-3-2.html
+sha256: 7d840ea0f03fcddcf5d9f06f1d7f51ab6344311d1e3c6a1abcc9ceca7c99a11b
+bytes: 253484
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2023-10-10
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Open Government Licence v3.0
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes:
+- quote: Cyber Assessment Framework | National Cyber Security Centre icons/chevron/16px/black
+    Skip to main content Please enable JavaScript in your web browser to get the best
+    experience.
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-06
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: Home Utility navigation About NCSC Report an incident Contact us Open Search
+    Menu Main navigation Advice & guidance Back Advice & guidance Our advice & guidance
+    covers a broad range of topics Find information for...
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-06
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: Developed by the National Cyber Security Centre (NCSC), it provides a common
+    structure for assessing cyber resilience, helping organisations understand whether
+    they are managing cyber risk appropriately and identify where improvement is needed.
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-06
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long
+  lines (37917); extracted text length 12434'

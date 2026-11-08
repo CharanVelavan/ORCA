@@ -1,0 +1,38 @@
+id: in-trai-direction-pmr-submission-2026
+title: Direction Regarding Submission of Performance Monitoring Report (PMR) to the Authority
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: direction
+url: https://trai.gov.in/sites/default/files/2026-01/Direction_27012026.pdf
+landing_page: https://trai.gov.in/telecom/qos
+local_path: corpus/raw/india/in-trai-direction-pmr-submission-2026.pdf
+sha256: 14cba31ee958fdaa34afe5129695bd947efc410168407397934ed10c441fb47a
+bytes: 14972714
+pages: 21
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: under section 13, read with sub-clauses (i) and (v) of clause (b) of sub section (1) of section 11, of the
+  Telecom Regulatory Authority of India Act, 1997
+issued: '2026-01-27'
+in_force_from: 27th Jan 2026
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-01
+role: india_evidence
+candidate_quotes:
+- quote: Direction under section 13, read with sub-clauses (i) and (v) of clause (b) of sub-section (1) of section 11, of
+    the Telecom Regulatory Authority of India Act, 1997 (24of1997), regarding submission of Performance Monitoring Report
+    to the Authority under the Telecom Commercial Communications Customer Preference Regulations, 2018 (6 of 2018).
+  clause: Subject
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: context
+  why: Directs access providers to submit periodic performance monitoring reports to TRAI under customer preference regulations.
+  page: 1
+verified: false
+notes: Binding direction under TRAI Act Section 13 mandating periodic Performance Monitoring Report submissions.

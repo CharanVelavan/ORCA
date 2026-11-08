@@ -1,0 +1,48 @@
+id: us-fcc-backup-power-rule-920
+title: 47 CFR § 9.20 Backup Power Obligations
+authority: Federal Communications Commission (FCC)
+jurisdiction: US
+doc_type: regulation
+url: https://www.ecfr.gov/current/title-47/part-9/section-9.20
+landing_page: https://www.ecfr.gov/current/title-47/part-9/section-9.20
+local_path: corpus/raw/global/us-fcc-backup-power-rule-920.xml
+sha256: 6434969052e923911c30f7c1a45652de7a202f0dea8d1c6ca1825b586016c2af
+bytes: 5083
+pages: null
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "Providers of a Covered Service shall, at the point of sale for a Covered Service, offer subscribers the option to purchase backup power"
+issued: 2015-08-07
+in_force_from: 2016-02-16
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-04]
+role: global_example
+candidate_quotes:
+  - quote: "Providers of a Covered Service shall, at the point of sale for a Covered Service, offer subscribers the option to purchase backup power for the Covered Service as follows: (1) Eight hours. Providers shall offer for sale at least one option with a minimum of eight hours of standby backup power. (2) Twenty-four hours. By February 13, 2019, providers of a Covered Service shall offer for sale also at least one option that provides a minimum of twenty-four hours of standby backup power."
+    page: null
+    clause: "47 CFR § 9.20(b)"
+    topic: backup_power
+    gap: GAP-IN-04
+    supports: global_example
+    why: "Prescribes commercial customer backup power offering requirements (8 hours and 24 hours options) for non-line-powered voice services."
+  - quote: "The backup power offered for purchase under paragraph (b) of this section must include power for all provider-furnished equipment and devices installed and operated on the customer premises that must remain powered in order for the service to provide 911 access."
+    page: null
+    clause: "47 CFR § 9.20(c)"
+    topic: backup_power
+    gap: GAP-IN-04
+    supports: global_example
+    why: "Specifies that customer premises backup power must cover all provider-furnished devices essential for 911 emergency call delivery."
+  - quote: "The requirements of this section shall no longer be in effect as of September 1, 2025."
+    page: null
+    clause: "47 CFR § 9.20(g)"
+    topic: backup_power
+    gap: GAP-IN-04
+    supports: global_example
+    why: "Records the statutory sunset date for residential premises backup power offering mandates under 47 CFR Part 9."
+verified: false
+notes: "Official federal regulation under 47 CFR Part 9 specifying residential CPE backup power obligations; includes sunset provision."

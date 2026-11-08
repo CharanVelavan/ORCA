@@ -1,0 +1,36 @@
+id: in-trai-cp-ai-big-data-telecom-2022
+title: Consultation Paper on Leveraging Artificial Intelligence and Big Data in Telecom Sector
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/CP_05082022.pdf
+landing_page: https://trai.gov.in/telecom/internet-broadband
+local_path: corpus/raw/india/in-trai-cp-ai-big-data-telecom-2022.pdf
+sha256: 486fc608492c964685ab5f734072555afa91c0619b4deb586b5955c316baee59
+bytes: 1307047
+pages: 173
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2022-08-05'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: context
+candidate_quotes:
+- quote: Written comments on the consultation paper are invited from the stakeholders by September 16, 2022.
+  clause: Preface
+  topic: telecom_security
+  gap: GAP-IN-08
+  supports: context
+  why: Consults on leveraging artificial intelligence and big data for telecom network operations and security automation.
+  page: 2
+verified: false
+notes: TRAI consultation paper on leveraging AI and big data in the telecommunications sector.

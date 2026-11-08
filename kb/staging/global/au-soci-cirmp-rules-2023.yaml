@@ -1,0 +1,41 @@
+id: au-soci-cirmp-rules-2023
+title: Security of Critical Infrastructure (Critical infrastructure risk management
+  program) Rules (LIN 23/006) 2023
+authority: Minister for Home Affairs (Australia)
+jurisdiction: AU
+doc_type: rules
+url: https://www.legislation.gov.au/F2023L00128/latest/text
+landing_page: https://www.legislation.gov.au/F2023L00128/latest/details
+local_path: corpus/raw/global/au-soci-cirmp-rules-2023.html
+sha256: 9c41630db7b6fc64ab756accd867dfb476e3be8c210122335c2e89a825e7c2ff
+bytes: 81919
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: 2023-02-16
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Australian Commonwealth Open
+language: en
+gaps:
+- GAP-IN-04
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes:
+- quote: Emergency Response Fund Investment Mandate Amendment (Disaster Ready Fund)
+    Direction 2023 - Federal Register of Legislation &lt;link rel="stylesheet" href="styles.84630ab4f3c563f3.css"&gt;
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-04
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long
+  lines (38142); extracted text length 1703'

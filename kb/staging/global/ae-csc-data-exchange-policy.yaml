@@ -1,0 +1,34 @@
+id: ae-csc-data-exchange-policy
+title: National Data Exchange Security Policy
+authority: UAE Cyber Security Council
+jurisdiction: AE
+doc_type: policy
+url: https://uaelegislation.gov.ae/en/policy/details/national-data-exchange-security-policy
+landing_page: https://uaelegislation.gov.ae
+local_path: corpus/raw/global/ae-csc-data-exchange-policy.html
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: skipped
+official_domain: true
+binding_status: not stated
+binding_basis: 'not stated in the document: out of scope (UAE host only, decided 8 Nov)'
+issued: 2023
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-06
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts:   Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:--\
+  \ --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0 \
+  \   0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 403\nRetry on 2026-11-08:\
+  \ uaelegislation.gov.ae returned Cloudflare challenge (HTTP 403). Official landing page on u.ae links to csc.gov.ae (https://csc.gov.ae/documents/38662/1042755/National+Data+Exchange+Security+Policy+v1.0.pdf/337d318d-c096-5e9a-ad7f-efcd44361f4e?t=1771617648149),\
+  \ which drops TLS connections from outside UAE (curl error 35, SSL_ERROR_SYSCALL)."
+skipped: out of scope (UAE host only, decided 8 Nov)

@@ -1,0 +1,35 @@
+id: in-trai-cp-m2m-roaming-qos-2016
+title: Consultation Paper on Spectrum, Roaming and QoS Related Requirements in Machine-to-Machine Communications
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/Consultation_Paper_M2M%20_18_October_2016.pdf
+landing_page: https://trai.gov.in/telecom/spectrum
+local_path: corpus/raw/india/in-trai-cp-m2m-roaming-qos-2016.pdf
+sha256: bca02c82982083f4c6d769e02cf76cd25d5ec53d31fb5fe201204b93c28bbddc
+bytes: 2053927
+pages: 74
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2016-10-18'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: context
+candidate_quotes:
+- quote: Consultation Paper No. 21/2016
+  clause: Title Page
+  topic: telecom_security
+  gap: GAP-IN-06
+  supports: context
+  why: Consults on spectrum, international roaming, and QoS requirements in machine-to-machine communications.
+  page: 1
+verified: false
+notes: TRAI consultation paper on spectrum, roaming, and QoS requirements in M2M communications.

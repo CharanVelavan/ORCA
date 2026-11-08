@@ -1,0 +1,35 @@
+id: ae-tdra-emergency-telecom-framework
+title: TDRA Regulatory Framework for Emergency Telecommunications
+authority: Telecommunications and Digital Government Regulatory Authority (TDRA)
+jurisdiction: AE
+doc_type: regulation
+url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/Regulatory-Framework-for-Emergency-Telecommunications.ashx
+landing_page: https://tdra.gov.ae/en/regulations-and-rulings
+local_path: corpus/raw/global/ae-tdra-emergency-telecom-framework.html
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: skipped
+official_domain: true
+binding_status: not stated
+binding_basis: 'not stated in the document: out of scope (UAE host only, decided 8 Nov)'
+issued: 2020
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: TDRA open publication
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-03
+- GAP-IN-04
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts: -:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01\
+  \ --:--:--     0\n100   133  100   133    0     0     79      0  0:00:01  0:00:01 --:--:--    79\n\n  0  1245    0     0\
+  \    0     0      0      0 --:--:--  0:00:01 --:--:--     0\ncurl: (56) The requested URL returned error: 404\nRetry on\
+  \ 2026-11-08: tdra.gov.ae URL returned 404; verified on TDRA Regulations and Rulings portal (https://tdra.gov.ae/en/About/regulations-and-ruling)\
+  \ where this framework is no longer published."
+skipped: out of scope (UAE host only, decided 8 Nov)

@@ -1,0 +1,34 @@
+id: in-sansad-nsdts-lok-sabha-statement
+title: "Lok Sabha Unstarred Question No. 2910 (answered 6 August 2025): National Cyber Security Coordinator, chipsets in SIM cards, NSDTS"
+authority: Ministry of Communications, Department of Telecommunications (answer to Parliament)
+jurisdiction: IN
+doc_type: parliamentary answer
+url: "https://sansad.in/getFile/loksabhaquestions/annex/185/AU2910_hYU9b8.pdf?source=pqals"
+landing_page: https://sansad.in/getFile/loksabhaquestions/annex/185/AU2910_hYU9b8.pdf?source=pqals
+local_path: corpus/raw/india/in-sansad-nsdts-lok-sabha-statement.pdf
+sha256: 42a8eb1d5564e2ada3732b20367edcd1fc55ff4d62237a9f85f8c466d73ca278
+bytes: 538840
+pages: 2
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: 2025-08-06
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: india_evidence
+candidate_quotes:
+  - quote: "The inputs, deliberations and the basis for the conclusions are classified as secret and have national security implications."
+    page: 1
+    clause: "Lok Sabha Unstarred Question No. 2910, answer (a)"
+    topic: telecom_cyber_security
+    gap: null
+    supports: context
+    why: "Official confirmation that the security assessments behind the National Security Directive for the Telecom Sector are classified, so the binding telecom security rules that apply to operators are not public in full."
+verified: false
+notes: "Parliamentary answer, not a rule. It names the NSDTS (National Security Directive for Telecom Sector) and says it applies after evaluation by the National Security Committee on Telecom. It does not state the directive's text, so no gap is linked. The list says binding status not stated, and the document agrees. Ministry answer cites NSCS."

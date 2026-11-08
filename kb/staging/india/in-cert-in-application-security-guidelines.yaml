@@ -1,0 +1,35 @@
+id: in-cert-in-application-security-guidelines
+title: Application Security Guidelines for Web and Mobile Applications
+authority: CERT-In, Ministry of Electronics and Information Technology
+jurisdiction: IN
+doc_type: guideline
+url: https://www.cert-in.org.in/PDF/Application_Security_Guidelines.pdf
+landing_page: https://www.cert-in.org.in
+local_path: corpus/raw/india/in-cert-in-application-security-guidelines.pdf
+sha256: 89acd6b83672443a9e094a95e2fb5ba8fd60634e3c85f21590baf390304a308d
+bytes: 517135
+pages: 15
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: false
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2020-05
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: Guidelines for Secure Application Design, Development, Implementation & Operations
+  clause: Title
+  topic: telecom_security
+  gap: GAP-IN-08
+  supports: context
+  why: Prescribes technical best practices for secure web and mobile application development, deployment, and testing.
+  page: 1
+verified: false
+notes: Technical guidelines issued by CERT-In for secure application development and lifecycle management.

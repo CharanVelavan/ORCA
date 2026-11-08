@@ -1,0 +1,38 @@
+id: in-tec-ems-telecom-gr-2016
+title: Generic Requirements for Element Management System (EMS) for Next Generation Networks (TEC/GR/IT/NMS-001/02/AUG-16)
+authority: Telecommunication Engineering Centre (TEC)
+jurisdiction: IN
+doc_type: standard
+url: https://tec.gov.in/pdf/GRs/TEC-GR-IT-NMS-001-02-AUG-16.pdf
+landing_page: https://www.tec.gov.in
+local_path: corpus/raw/india/in-tec-ems-telecom-gr-2016.pdf
+sha256: e119fa4184107e8e9e33ace7d5877e1da61138568f0f562259f7c267c6d5b64a
+bytes: 820177
+pages: 32
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: standard
+binding_basis: not stated in the document
+issued: 2016-08
+in_force_from: August, 2016
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: Element Management System (eMS) for Next Generation Network (NGN) described in this document shall manage all the
+    elements of NGN.
+  clause: Clause 1.0 Scope
+  topic: network_management
+  gap: null
+  supports: context
+  why: Establishes technical requirements for Element Management Systems supervising Next Generation Network components.
+  page: 3
+verified: false
+notes: Generic requirements for Element Management Systems (EMS) in NGN architectures; provides context on telecom network
+  element management.

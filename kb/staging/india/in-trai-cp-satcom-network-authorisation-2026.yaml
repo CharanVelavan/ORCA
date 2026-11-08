@@ -1,0 +1,37 @@
+id: in-trai-cp-satcom-network-authorisation-2026
+title: Consultation Paper on the Framework for Satellite Communication Network Authorisation and Assignment of Spectrum
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2026-04/CP_08042026.pdf
+landing_page: https://trai.gov.in/telecom/licensing
+local_path: corpus/raw/india/in-trai-cp-satcom-network-authorisation-2026.pdf
+sha256: fa9d9c6846abc09bab0a88dfa4af1386ec0c1a1d18a74674ddfde5e2d3042a12
+bytes: 4936792
+pages: 271
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2026-04-08'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-09
+role: context
+candidate_quotes:
+- quote: Consultation Paper No. 06/2026
+  clause: Title Page
+  topic: space_cyber
+  gap: GAP-IN-06
+  supports: context
+  why: Consults on regulatory frameworks for satellite communication network authorisations, spectrum assignment, and gateway
+    security.
+  page: 1
+verified: false
+notes: TRAI consultation paper on framework for satellite communication network authorisations.

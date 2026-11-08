@@ -1,0 +1,36 @@
+id: in-trai-cp-auction-spectrum-access-bands-2025
+title: TRAI Consultation Paper No. 08/2025 on Auction of Radio Frequency Spectrum in Frequency Bands Identified for IMT and
+  Telecom Services
+authority: Telecom Regulatory Authority of India
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2025-09/CP_30092025.pdf
+landing_page: https://trai.gov.in
+local_path: corpus/raw/india/in-trai-cp-auction-spectrum-access-bands-2025.pdf
+sha256: 9e036afef9378719c3a863a38f600bcd3b230df8e7cf67196ddc5d0ae5fffd6b
+bytes: 17205647
+pages: 285
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2025-09-30'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+role: india_evidence
+candidate_quotes:
+- quote: Consultation Paper No. 8/ 2025
+  clause: Title Page
+  topic: priority_routing
+  gap: GAP-IN-03
+  supports: context
+  why: Consults on reserve prices and auction design for radio frequency spectrum across commercial access bands.
+  page: 1
+verified: false
+notes: TRAI consultation paper on auction of radio frequency spectrum in frequency bands identified for IMT.

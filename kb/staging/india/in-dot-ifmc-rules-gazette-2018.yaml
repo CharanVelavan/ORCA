@@ -1,0 +1,27 @@
+id: in-dot-ifmc-rules-gazette-2018
+title: "Flight and Maritime Connectivity (Amendment) Rules, 2018, gazette publication"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification)
+url: "https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/publication-of-gazette-notification-for-amendment-in-flight-and-maritime-connectivity-rules-2018.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-ifmc-rules-gazette-2018.pdf
+sha256: 8dccca0a5036aede541a2a5de5b79c467c323ba5c01ffc8240ca9d33d1559d66
+bytes: 1823769
+pages: 2
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "the Central Government hereby makes the following rules further to amend the"
+issued: 2018
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Gazette publication of an amendment to the Flight and Maritime Connectivity Rules, 2018. Its only substantive clause concerns Wi-Fi in aircraft. Satellite connectivity for aircraft and ships is the context, but no security or incident clause was found. No candidate quotes."

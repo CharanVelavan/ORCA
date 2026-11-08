@@ -1,0 +1,36 @@
+id: in-cea-disaster-mgmt-plan-power-2024
+title: Disaster Management Plan for Power Sector (December 2024)
+authority: Central Electricity Authority, Ministry of Power
+jurisdiction: IN
+doc_type: sop
+url: https://cea.nic.in/api/dashboardReports/download-pdf/en/9bc25608-f88b-4f41-9935-612e544a652c
+landing_page: https://cea.nic.in/?lang=en
+local_path: corpus/raw/india/in-cea-disaster-mgmt-plan-power-2024.pdf
+sha256: aa48282545abac69d6a15f5d5e0974cc3585261a549d99861f9c4d70bc4a39d8
+bytes: 11144298
+pages: 242
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2024-12
+in_force_from: December, 2024
+amends: updated by December 2025 edition
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-04
+role: context
+candidate_quotes:
+- quote: power supply, restoration of transmission/distribution line, use of Emergency Restoration Systems (ERS), restoration
+    of Sub-Stations, restoration of load despatch centres (LDCs), Media Management etc.
+  clause: Chapter 1
+  topic: backup_power
+  gap: GAP-IN-04
+  supports: context
+  why: Establishes technical restoration protocols for transmission lines and sub-stations during disaster emergencies.
+  page: 13
+verified: false
+notes: 2024 edition of the CEA disaster management plan for the power sector covering emergency restoration procedures.

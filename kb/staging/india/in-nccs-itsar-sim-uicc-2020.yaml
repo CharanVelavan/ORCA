@@ -1,0 +1,30 @@
+id: in-nccs-itsar-sim-uicc-2020
+title: ITSAR for Pluggable (U)ICC (SIM, USIM and UICC Applets)
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR409012009.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-sim-uicc-2020.pdf
+sha256: cd337d3987748211742156e59245871259e249bf8d3b4f5c50a87ca51813f68e
+bytes: 1292207
+pages: 45
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: requirements specified here are binding both on operators and (U)ICC manufacturers.
+issued: '2020-09-01'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for Pluggable (U)ICC (SIM, USIM and UICC Applets) under MTCTE.
+  No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours
+  floor, or incident reporting clocks).

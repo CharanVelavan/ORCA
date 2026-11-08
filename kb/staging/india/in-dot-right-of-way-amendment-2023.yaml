@@ -1,0 +1,58 @@
+id: in-dot-right-of-way-amendment-2023
+title: Indian Telegraph Right of Way (Amendment) Rules, 2023
+authority: Department of Telecommunications, Ministry of Communications
+jurisdiction: IN
+doc_type: rules
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/Indian%20Telegraph%20Right%20of%20Way%20%28Amendment%29%20Rules%2C%202023.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules?page=0
+local_path: corpus/raw/india/in-dot-right-of-way-amendment-2023.pdf
+sha256: 0bd85bff6ce270cb07a4888b18491ce9745f0630cc3b054ed688f8c4ec5e6620
+bytes: 1427432
+pages: 6
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "In exercise of the powers conferred by sub-section (1) and clause (e) of sub-section (2) of section 7 read with sections 10, 12 and 15 of the Indian Telegraph Act, 1885(13 of 1885), the Central Government hereby makes the following rules further to amend the Indian Telegraph Right of Way Rules, 2016"
+issued: '2023-08-07'
+in_force_from: '2023-08-07'
+amends:
+  - in-dot-row-rules-2016
+amended_by:
+  - in-dot-row-rules-2024
+licence: government_open
+language: bilingual
+gaps:
+  - GAP-IN-04
+role: context
+candidate_quotes:
+  - quote: "These rules may be called the Indian Telegraph Right of Way (Amendment) Rules, 2023."
+    page: 4
+    clause: "Rule 1(1)"
+    topic: critical_infrastructure
+    gap: GAP-IN-04
+    supports: context
+    why: "Defines the short title for the 2023 right of way amendment rules."
+  - quote: "In case of damage of any existing underground telegraph infrastructure for any reason, the licensee, whose existing underground telegraph infrastructure is damaged, may temporarily establish the overground telegraph infrastructure, in lieu of the damaged underground telegraph infrastructure, to restore the telegraph service for the period of sixty days from the date of reporting of damage of the infrastructure to the appropriate authority."
+    page: 4
+    clause: "Rule 2 (Rule 9A(1))"
+    topic: critical_infrastructure
+    gap: GAP-IN-04
+    supports: proves_gap
+    why: "Permits temporary establishment of overground telegraph infrastructure for 60 days to restore damaged underground services."
+  - quote: "No fee or compensation shall be charged by the appropriate authority for the establishment of temporary overground telegraph infrastructure under this rule"
+    page: 4
+    clause: "Rule 2 (Rule 9A(2))"
+    topic: critical_infrastructure
+    gap: GAP-IN-04
+    supports: proves_gap
+    why: "Exempts temporary overground restoration infrastructure from fees or compensation."
+  - quote: "The appropriate central authorities shall permit deployment of small cells and shall charge no administrative fees or compensation for deployment of small cells on buildings and structures vested in or under their control as per Part-I or Part-III of the Schedule:"
+    page: 5
+    clause: "Rule 4(b) (Rule 10A(5))"
+    topic: critical_infrastructure
+    gap: GAP-IN-04
+    supports: proves_gap
+    why: "Mandates central authorities to permit small cell deployments without administrative fees on buildings under their control."
+verified: false
+notes: "Published in Gazette of India Extraordinary as G.S.R. 594(E). Amends Indian Telegraph Right of Way Rules 2016 (later superseded by Telecommunications (Right of Way) Rules 2024)."

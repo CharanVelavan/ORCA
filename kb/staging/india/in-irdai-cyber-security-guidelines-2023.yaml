@@ -1,0 +1,42 @@
+id: in-irdai-cyber-security-guidelines-2023
+title: IRDAI Information and Cyber Security Guidelines, 2023
+authority: Insurance Regulatory and Development Authority of India (IRDAI)
+jurisdiction: IN
+doc_type: guidelines
+url: https://avantiscdnprodstorage.blob.core.windows.net/legalupdatedocs/23219/IRDAI_Information_and_Cyber_Security_Guidelines_2023_April242023.pdf
+landing_page: https://irdai.gov.in/
+sha256: 4f92b32e337d5cc49b705ff62cca4d42005ffea79b53c7f2971094fe0a2bb2a9
+bytes: 3081705
+pages: 287
+local_path: corpus/raw/india/in-irdai-cyber-security-guidelines-2023.pdf
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: The timelines prescribed for reporting incidents to external organizations shall be strictly adhered to.
+issued: '2023-04-24'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps:
+- GAP-IN-01
+role: india_evidence
+candidate_quotes:
+- quote: Organization shall mandatorily report cyber incidents to Cert-In within 6 hours of noticing or being brought to notice about such incidents with a copy to IRDAI
+  page: 95
+  clause: Clause 3 (incident reporting)
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: global_example
+  why: 'Sector regulator clock: six hours to CERT-In from noticing, a comparator for the India reporting-clock ambiguity (GAP-IN-01).'
+- quote: The timelines prescribed for reporting incidents to external organizations shall be strictly adhered to.
+  page: 95
+  clause: Clause 2
+  topic: incident_reporting
+  gap: null
+  supports: context
+  why: Makes the reporting timelines mandatory for insurers, which shows sector regulators set binding clocks where the telecom rules do not state one for all incidents.
+verified: false
+notes: Read by keyword check (287 pages). The list says binding; the text makes the reporting timelines strictly binding, which supports the label. Six-hour clock is from noticing, not from becoming aware. Insurance sector; comparison only.

@@ -1,0 +1,33 @@
+id: uk-space-industry-regs-2021
+title: The Space Industry Regulations 2021 (SI 2021/792)
+authority: Secretary of State for Transport (UK)
+jurisdiction: UK
+doc_type: regulation
+url: https://www.legislation.gov.uk/uksi/2021/792/made/data.pdf
+landing_page: https://www.legislation.gov.uk/uksi/2021/792/contents/made
+local_path: corpus/raw/global/uk-space-industry-regs-2021.pdf
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2021-07-07
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Open Government Licence v3.0
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-09
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts: eceived % Xferd  Average Speed  \
+  \ Time    Time     Time  Current\n                                 Dload  Upload\
+  \   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0     \
+  \ 0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0   \
+  \   0 --:--:-- --:--:-- --:--:--     0"

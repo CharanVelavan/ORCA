@@ -1,0 +1,55 @@
+id: in-dot-cell-broadcast-amendment-2024
+title: Cell Broadcasting Service for Disaster Alerts (Amendment) Rules, 2024
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/indian-wireless-telegraphy-cell-broadcasting-service-for-disaster-alerts-amendment-rules-2024.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-cell-broadcast-amendment-2024.pdf
+sha256: 284f3307a5ea819afd41d76aef5e6fef5e3dd5c49863bf5114ec8d7b369e7ef3
+bytes: 1849787
+pages: 3
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "In exercise of the powers conferred by sub-section (1) read with clause (v) of sub-section (2) of section 10 of the Indian Wireless Telegraphy Act, 1933 (17 of 1933), the Central Government hereby makes the following rules to amend the Indian Wireless Telegraphy (Cell Broadcasting Services for Disaster Alerts) Rules, 2023"
+issued: 2024-09-17
+in_force_from: 2024-09-17
+amends: [in-dot-cell-broadcast-rules-2023]
+amended_by: []
+licence: Government of India open (terms not checked)
+language: bilingual
+gaps: [GAP-IN-02, GAP-IN-03]
+role: india_evidence
+candidate_quotes:
+  - quote: "These rules may be called the Indian Wireless Telegraphy (Cell Broadcasting Service for Disaster Alerts) (Amendment) Rules, 2024."
+    page: 3
+    clause: "Rule 1(1)"
+    topic: downstream_warning
+    gap: GAP-IN-02
+    supports: answers_gap
+    why: "Amends the Indian Wireless Telegraphy (Cell Broadcasting Service for Disaster Alerts) Rules, 2023."
+  - quote: "alert sound, vibration, and light duration shall be maintained for a minimum period of thirty seconds under standard circumstances, and for fifteen seconds when the device auto-reads the message, or until acknowledgment by the user or for such duration as may be specified from time to time; and"
+    page: 3
+    clause: "Rule 3(a)"
+    topic: downstream_warning
+    gap: GAP-IN-02
+    supports: answers_gap
+    why: "Prescribes alert duration, sound and vibration standards for disaster warnings on handsets."
+  - quote: "mandatory receipt of cell broadcast alert messages on the channels as may be specified from time to time; and"
+    page: 3
+    clause: "Rule 3(b)"
+    topic: downstream_warning
+    gap: GAP-IN-02
+    supports: answers_gap
+    why: "Imposes mandatory handset receipt of cell broadcast alert messages on specified disaster alert channels."
+  - quote: "No smartphone or feature phone shall be sold in India without mandatory support to receive cell broadcast messages in all Indian languages as per the Eighth Schedule to the Constitution of India;"
+    page: 3
+    clause: "Rule 3(c)"
+    topic: downstream_warning
+    gap: GAP-IN-02
+    supports: answers_gap
+    why: "Prohibits phone sales without mandatory support for receiving disaster alerts in all official Eighth Schedule languages."
+verified: false
+notes: "Notified vide G.S.R. 574(E) dated 17 Sep 2024. Updates 2023 rules with multilingual auto-readout and channel requirements."

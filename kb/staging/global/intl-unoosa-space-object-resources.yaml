@@ -1,0 +1,28 @@
+id: intl-unoosa-space-object-resources
+title: Resources on space object registration
+authority: United Nations Office for Outer Space Affairs
+jurisdiction: INTL
+doc_type: guideline
+url: https://www.unoosa.org/oosa/spaceobjectregister/resources/index.html
+landing_page: https://www.unoosa.org/oosa/spaceobjectregister/resources/index.html
+local_path: corpus/raw/global/intl-unoosa-space-object-resources.html
+sha256: 8b9144c0ba9e6dbada832ef4689c8dbbde3c57bcf44c797fe01038e456a12ef7
+bytes: 59399
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: not stated
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-09
+role: context
+candidate_quotes: []
+verified: false
+notes: UNOOSA web page on space object registration resources, not a legal text. No quote taken.

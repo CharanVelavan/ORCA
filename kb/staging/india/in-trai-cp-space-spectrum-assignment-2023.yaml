@@ -1,0 +1,36 @@
+id: in-trai-cp-space-spectrum-assignment-2023
+title: Consultation Paper on Assignment of Spectrum for Space-based Communication Services
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/CP_06042023.pdf
+landing_page: https://trai.gov.in/telecom/spectrum
+local_path: corpus/raw/india/in-trai-cp-space-spectrum-assignment-2023.pdf
+sha256: 060b1a19a0a46c560b13b9f695e4a525d3a1251ecafe6ee800fc409a110f44b4
+bytes: 10708091
+pages: 160
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2023-04-06'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-09
+role: context
+candidate_quotes:
+- quote: Consultation Paper No. 6/2023
+  clause: Title Page
+  topic: space_cyber
+  gap: GAP-IN-06
+  supports: context
+  why: Consults on spectrum assignment models for space-based communications including NGSO and GSO satellite networks.
+  page: 1
+verified: false
+notes: TRAI consultation paper on assignment of spectrum for space-based communication services.

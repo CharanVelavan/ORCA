@@ -1,0 +1,63 @@
+id: in-national-cyber-security-policy-2013
+title: National Cyber Security Policy - 2013
+authority: Ministry of Communications and Information Technology (Department of Electronics and Information Technology)
+jurisdiction: IN
+doc_type: policy
+url: https://www.meity.gov.in/static/uploads/2024/02/National_cyber_security_policy-2013_0.pdf
+landing_page: https://www.meity.gov.in/
+local_path: corpus/raw/india/in-national-cyber-security-policy-2013.pdf
+sha256: eaf3dbcde254bad4739d687680cab2fcb741c417ca7c166f9991bc54a8276b5b
+bytes: 298856
+pages: 9
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: unclear
+binding_basis: not stated in the document (non-statutory national policy without parent Act citation)
+issued: '2013-07-02'
+in_force_from: '2013-07-02'
+amends: []
+amended_by: []
+licence: government_open
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-06
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: To build a secure and resilient cyberspace for citizens, businesses and Government
+  page: 3
+  clause: Section I (Vision)
+  topic: telecom_cyber_security
+  gap: GAP-IN-06
+  supports: context
+  why: Articulates the overarching national vision for building a secure and resilient cyberspace.
+- quote: To enable implementation of global security best practices in formal risk assessment and risk management processes,
+    business continuity management and cyber crisis management plan by all entities within Government and in critical sectors,
+    to reduce the risk of disruption and improve the security posture.
+  page: 5
+  clause: Strategy B(3)
+  topic: critical_infrastructure
+  gap: GAP-IN-08
+  supports: proves_gap
+  why: Mandates formal risk assessment, business continuity management, and cyber crisis management plans in critical sectors.
+- quote: To mandate periodic audit and evaluation of the adequacy and effectiveness of security of information infrastructure
+    as may be appropriate, with respect to regulatory framework.
+  page: 6
+  clause: Strategy D(2)
+  topic: standards
+  gap: GAP-IN-06
+  supports: proves_gap
+  why: Requires periodic audit and evaluation of information infrastructure security against regulatory frameworks.
+- quote: To operate a 24x7 National Level Computer Emergency Response Team (CERT-In) to function as a Nodal Agency for coordination
+    of all efforts for cyber security emergency response and crisis management.
+  page: 6
+  clause: Strategy E(2)
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: proves_gap
+  why: Designates CERT-In as the 24x7 national nodal agency for cybersecurity incident response and crisis management.
+verified: false
+notes: National policy framework approved by the Union Cabinet and notified by DeitY on 2 July 2013 outlining baseline cybersecurity
+  strategies and CERT-In nodal functions.

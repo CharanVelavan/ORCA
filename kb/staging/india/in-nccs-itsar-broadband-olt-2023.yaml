@@ -1,0 +1,30 @@
+id: in-nccs-itsar-broadband-olt-2023
+title: ITSAR for Optical Line Terminal (OLT) - PON Family Broadband Equipment
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR307072311.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-broadband-olt-2023.pdf
+sha256: e48b75ecd034c216c8579c944831fa7c92bca0c855b73440c7a37bd11b3ef764
+bytes: 1537385
+pages: 38
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2023-11-24'
+in_force_from: '2026-01-01'
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for Optical Line Terminal (OLT) - PON Family Broadband Equipment
+  under MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover,
+  battery-hours floor, or incident reporting clocks).

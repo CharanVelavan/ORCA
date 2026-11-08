@@ -1,0 +1,27 @@
+id: in-ndma-plan-2019
+title: "National Disaster Management Plan, 2019 (NDMA)"
+authority: National Disaster Management Authority (NDMA)
+jurisdiction: IN
+doc_type: national plan
+url: "https://cdnbbsr.s3waas.gov.in/s36143cc48107351648de16d8367dc5db4/uploads/2025/03/20250313721922077.pdf"
+landing_page: https://ndma.gov.in/
+local_path: corpus/raw/india/in-ndma-plan-2019.pdf
+sha256: f28f31bbc9b11d87bcb0e0ccd8304c7dcd3a998eca4f089e646b925e10a97338
+bytes: 7791893
+pages: 384
+retrieved_at: 2026-11-08
+status: ok
+official_domain: false
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: 2019
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Domain check: the URL is on an S3 storage host (cdnbbsr.s3waas.gov.in) used by Indian government sites, not an ndma.gov.in address, so official_domain is set to false until the host is confirmed as NDMA's. The list says binding; a national plan under the Disaster Management Act is advisory guidance for ministries, but the document itself is not checked for a binding statement. About 384 pages with heavy disaster and resilience content and 2 backup mentions. Telecom continuity clauses were not extracted in this pass, so no quotes."

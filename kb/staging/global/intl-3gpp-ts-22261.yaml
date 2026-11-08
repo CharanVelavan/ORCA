@@ -1,0 +1,49 @@
+id: intl-3gpp-ts-22261
+title: "3GPP TS 22.261 V19.2.0 (Release 19): Service requirements for the 5G system; Stage 1"
+authority: 3GPP Technical Specification Group Services and System Aspects
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/22_series/22.261/22261-j20.zip
+landing_page: https://www.3gpp.org/DynaReport/22261.htm
+local_path: corpus/raw/global/intl-3gpp-ts-22261/22261-j20.doc
+sha256: 5120a417f7783faf961a4045f05e1550c78357886e21cced89ef5d740df83730
+bytes: 3022848
+pages: 14
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "The present document has not been subject to any approval process by the 3GPP Organizational Partners and shall not be implemented."
+issued: '2023-03-31'
+in_force_from: '2023-03-31'
+amends: []
+amended_by: []
+licence: 3GPP open standard
+language: en
+gaps:
+  - GAP-IN-03
+role: global_example
+candidate_quotes:
+  - quote: "The 5G system shall allow flexible mechanisms to establish and enforce priority policies among the different services (e.g. MPS, Emergency, medical, Public Safety) and users."
+    page: 5
+    clause: "6.7.2"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Specifies technical requirements for enforcing priority policies across emergency, public safety, and other communication services."
+  - quote: "A 5G system with satellite access shall be able to determine a UE's location in order to provide service (e.g. route traffic, support emergency calls) in accordance with the governing national or regional regulatory requirements applicable to that UE."
+    page: 5
+    clause: "6.3.2.3"
+    topic: standards
+    gap: null
+    supports: context
+    why: "Requires location determination capabilities in satellite access networks to support regulatory emergency call routing."
+  - quote: "Subject to regulatory requirements or operator's policy, 3GPP system shall be able to enable a UE of a given PLMN to obtain connectivity service (e.g. voice call, mobile data service) from another PLMN for the area where a Disaster Condition applies."
+    page: 5
+    clause: "6.31.2.1"
+    topic: disaster_coordination
+    gap: null
+    supports: context
+    why: "Specifies disaster roaming requirements enabling user equipment to obtain connectivity from alternate networks during disaster conditions."
+verified: false
+notes: "Unzipped into corpus/raw/global/intl-3gpp-ts-22261/ (22261-j20.doc) and extracted text to intl-3gpp-ts-22261.txt. Updated binding_basis to verbatim approval clause from document text. All NTN links in testbeds are emulated."

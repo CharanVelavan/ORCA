@@ -1,0 +1,54 @@
+id: itu-radio-regulations-app10
+title: 'ITU Radio Regulations (2024 Edition) — Appendix 10 (Rev. WRC-07): Report of harmful interference'
+authority: International Telecommunication Union (ITU) / World Radiocommunication Conference
+jurisdiction: INTL
+doc_type: treaty
+url: https://www.itu.int/pub/R-REG-RR-2024
+landing_page: https://www.itu.int/pub/R-REG-RR-2024
+local_path: corpus/raw/global/itu-radio-regulations-app10.pdf
+sha256: 49e283a5c22e57b44b5e0220eee94df4a7d2055418662bf83c125475d98f3abf
+bytes: 7200340
+pages: 810
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: This revision of the Radio Regulations, complementing the Constitution and the Convention of the International
+  Telecommunication Union
+issued: 2024-08-27
+in_force_from: 2025-01-01
+amends: []
+amended_by: []
+licence: ITU treaty publication
+language: en
+gaps:
+- GAP-IN-05
+role: global_example
+candidate_quotes:
+- quote: The class of emission shall contain the basic characteristics listed in Appendix 1.
+  page: 285
+  clause: Appendix 10 footnote 1
+  topic: interference_reporting
+  gap: GAP-IN-05
+  supports: global_example
+  why: Mandates reporting standardized emission characteristics when logging radio frequency interference incidents.
+- quote: For convenience and brevity, telegraphic reports shall be in the format above, using the letters in the order listed
+    in lieu of the explanatory titles, but only those letters for which information is provided should be used.
+  page: 288
+  clause: Appendix 10 NOTE
+  topic: interference_reporting
+  gap: GAP-IN-05
+  supports: global_example
+  why: Prescribes standard structured format for transmitting harmful interference incident reports across administrations.
+- quote: However, sufficient information shall be provided to the administration receiving the report, so that an appropriate
+    investigation can be conducted.
+  page: 288
+  clause: Appendix 10 NOTE
+  topic: interference_reporting
+  gap: GAP-IN-05
+  supports: global_example
+  why: Requires providing sufficient technical detail in interference reports to enable actionable investigations by recipient
+    administrations.
+verified: false
+notes: Target list described title as 'Report of an irregularity or infringement of the Radio Regulations' (which is Appendix
+  9); authentic title of Appendix 10 is 'Report of harmful interference (See Article 15, Section VI)'.

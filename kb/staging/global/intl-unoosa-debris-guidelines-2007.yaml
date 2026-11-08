@@ -1,0 +1,35 @@
+id: intl-unoosa-debris-guidelines-2007
+title: Space Debris Mitigation Guidelines of the Committee on the Peaceful Uses of Outer Space
+authority: United Nations General Assembly / COPUOS
+jurisdiction: INTL
+doc_type: guideline
+url: https://www.unoosa.org/pdf/publications/st_space_49E.pdf
+landing_page: https://www.unoosa.org/oosa/en/ourwork/topics/space-debris/index.html
+local_path: corpus/raw/global/intl-unoosa-debris-guidelines-2007.pdf
+sha256: 8587ba4b9efd0a1a59f5ae6c7afb3108cd5025cc8bc74d477f22ae2b1c986177
+bytes: 733123
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: voluntary debris mitigation measures
+issued: '2007'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-09
+role: context
+candidate_quotes:
+- quote: international adoption of voluntary debris mitigation measures
+  page: 5
+  clause: not stated
+  topic: other
+  gap: null
+  supports: context
+  why: States the guidelines are voluntary, a contrast to binding space law.
+verified: false
+notes: COPUOS debris mitigation guidelines (PDF). Voluntary; no security content. Context only.

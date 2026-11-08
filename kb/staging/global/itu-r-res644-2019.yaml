@@ -1,0 +1,58 @@
+id: itu-r-res644-2019
+title: 'ITU Radio Regulations (2024 Edition) — Resolution 647 (Rev. WRC-19) & Resolution 646 (Rev. WRC-19): Radiocommunications
+  for Early Warning, PPDR and Disaster Relief'
+authority: International Telecommunication Union (ITU) / World Radiocommunication Conference
+jurisdiction: INTL
+doc_type: standard
+url: https://www.itu.int/pub/R-REG-RR-2024
+landing_page: https://www.itu.int/pub/R-REG-RR-2024
+local_path: corpus/raw/global/itu-r-res644-2019.pdf
+sha256: a08159f6efe34c5ea71db5c698fc30bd27167a94b05dafdbe9a86196d6cdc492
+bytes: 5431837
+pages: 846
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: This revision of the Radio Regulations, complementing the Constitution and the Convention of the International
+  Telecommunication Union
+issued: 2024-08-27
+in_force_from: 2025-01-01
+amends: []
+amended_by: []
+licence: ITU treaty publication
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-07
+role: global_example
+candidate_quotes:
+- quote: that in times of disasters, if most terrestrial-based networks are destroyed or impaired, amateur, satellite and
+    other non-ground-based networks may be available to provide communication services to assist in PPDR efforts;
+  page: 565
+  clause: Resolution 646 (Rev. WRC-19) considering m)
+  topic: emergency_powers
+  gap: GAP-IN-07
+  supports: global_example
+  why: Recognizes the role of satellite and non-terrestrial networks as critical failover communication paths when ground
+    networks are impaired.
+- quote: that natural disasters have underscored the importance of utilizing effective measures to mitigate their effects,
+    including prediction, detection and alerting through coordinated and effective use of the radio-frequency spectrum;
+  page: 569
+  clause: Resolution 647 (Rev. WRC-19) considering a)
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: global_example
+  why: Affirms that early warning alerting requires coordinated spectrum allocation and management.
+- quote: that there is a critical requirement to perform immediate spectrum-management actions, including frequency coordination,
+    sharing and spectrum reuse, within a disaster area;
+  page: 571
+  clause: Resolution 647 (Rev. WRC-19) noting c)
+  topic: emergency_powers
+  gap: GAP-IN-07
+  supports: global_example
+  why: Mandates dynamic spectrum management actions and frequency reuse within disaster zones.
+verified: false
+notes: Target list cited Resolution 644 (Rev. WRC-19) with a URL resolving to Resolution 654 (WRC-12 automotive radar); Resolution
+  644 was formally suppressed at WRC-15 and its provisions incorporated into Resolution 647 (Rev. WRC-19) in Radio Regulations
+  Volume 3.

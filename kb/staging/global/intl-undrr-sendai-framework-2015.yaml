@@ -1,0 +1,30 @@
+id: intl-undrr-sendai-framework-2015
+title: Sendai Framework for Disaster Risk Reduction 2015–2030
+authority: United Nations General Assembly / UNDRR
+jurisdiction: INTL
+doc_type: framework
+url: https://www.preventionweb.net/files/43291_sendaiframeworkfordrren.pdf
+landing_page: https://www.undrr.org/publication/sendai-framework-disaster-risk-reduction-2015-2030
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2015'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-03
+- GAP-IN-04
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed PDF URL returned an interstitial download page (about 5.7 KB, no document text). No Sendai text obtained.

@@ -1,0 +1,48 @@
+id: eu-net-neutrality-2015-2120
+title: "Regulation (EU) 2015/2120 of the European Parliament and of the Council of 25 November 2015 laying down measures concerning open internet access and amending Directive 2002/22/EC on universal service and users' rights relating to electronic communications networks and services and Regulation (EU) No 531/2012 on roaming on public mobile communications networks within the Union"
+authority: European Parliament and Council
+jurisdiction: EU
+doc_type: act
+url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32015R2120
+landing_page: https://eur-lex.europa.eu/eli/reg/2015/2120/oj/eng
+local_path: corpus/raw/global/eu-net-neutrality-2015-2120.pdf
+sha256: 475dd148d3b5c5874d791c85bd5cf7975b618f9c8bd0758cbd8620dd7a8ed33b
+bytes: 832029
+pages: 18
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "This Regulation shall be binding in its entirety and directly applicable in all Member States."
+issued: 2015-11-25
+in_force_from: 2016-04-30
+amends: []
+amended_by: []
+licence: "EUR-Lex reuse policy"
+language: en
+gaps: [GAP-IN-03]
+role: global_example
+candidate_quotes:
+  - quote: "Providers of internet access services shall treat all traffic equally, when providing internet access services, without discrimination, restriction or interference, and irrespective of the sender and receiver, the content accessed or distributed, the applications or services used or provided, or the terminal equipment used."
+    page: 8
+    clause: "Article 3(3)"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Sets general net neutrality baseline requiring equal treatment of internet traffic without discrimination."
+  - quote: "preserve the integrity and security of the network, of services provided via that network, and of the terminal equipment of end-users;"
+    page: 9
+    clause: "Article 3(3)(b)"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Permits reasonable traffic management exceptions specifically to preserve network security and integrity during incidents."
+  - quote: "prevent impending network congestion and mitigate the effects of exceptional or temporary network congestion, provided that equivalent categories of traffic are treated equally."
+    page: 9
+    clause: "Article 3(3)(c)"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Explicitly allows traffic prioritization to prevent impending congestion and mitigate exceptional network congestion."
+verified: false
+notes: "EU Open Internet Access Regulation defining net neutrality rules and specific statutory exceptions for network security and emergency traffic management."

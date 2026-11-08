@@ -1,0 +1,35 @@
+id: in-trai-cp-railways-additional-spectrum-2024
+title: Consultation Paper on Assignment of Additional Spectrum to Indian Railways for its Mission-Critical Operations
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/CP_07022024.pdf
+landing_page: https://trai.gov.in/telecom/spectrum
+local_path: corpus/raw/india/in-trai-cp-railways-additional-spectrum-2024.pdf
+sha256: 657f6e4b57f9e97abe849db8399e4ea8b01a2f01b097b9232bdf9abeb82c6898
+bytes: 1747965
+pages: 61
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2024-02-07'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+role: context
+candidate_quotes:
+- quote: Consultation Paper No. 01/2024
+  clause: Title Page
+  topic: priority_routing
+  gap: GAP-IN-03
+  supports: context
+  why: Consults on assigning additional radio spectrum to Indian Railways for mission-critical operations and train protection.
+  page: 1
+verified: false
+notes: TRAI consultation paper on additional spectrum assignment for Indian Railways mission-critical operations.

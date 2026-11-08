@@ -1,0 +1,41 @@
+id: intl-3gpp-ts-23273
+title: "3GPP TS 23.273 V18.4.0 (Release 18): 5G System (5GS) Location Services (LCS); Stage 2"
+authority: 3GPP Technical Specification Group Services and System Aspects
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/23_series/23.273/23273-i40.zip
+landing_page: https://www.3gpp.org/DynaReport/23273.htm
+local_path: corpus/raw/global/intl-3gpp-ts-23273/23273-i40.docx
+sha256: de0544eaf5d44440b67a686d95034c42a2361d04d644af917b5fc10d4587cfe9
+bytes: 3423348
+pages: 8
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "The present document has not been subject to any approval process by the 3GPP Organizational Partners and shall not be implemented."
+issued: '2023-12-19'
+in_force_from: '2023-12-19'
+amends: []
+amended_by: []
+licence: 3GPP open standard
+language: en
+gaps: []
+role: global_example
+candidate_quotes:
+  - quote: "With a Network Induced Location Request (NI-LR), a serving AMF for a UE initiates localization of the UE for a regulatory service (e.g. an emergency call from the UE) or for verification of a UE location (country or international area) for NR satellite access."
+    page: 4
+    clause: "4.1a.1"
+    topic: emergency_powers
+    gap: null
+    supports: context
+    why: "Specifies AMF network-induced positioning procedures for emergency calls and satellite location verification."
+  - quote: "In the case of using Broadcast of Assistance Data by an LMF, the LMF may provision one or more of GNSS assistance data to RAN."
+    page: 4
+    clause: "5.11"
+    topic: standards
+    gap: null
+    supports: context
+    why: "Defines Location Management Function procedures for provisioning GNSS assistance data to radio access networks."
+verified: false
+notes: "Unzipped into corpus/raw/global/intl-3gpp-ts-23273/ (23273-i40.docx) and extracted text to intl-3gpp-ts-23273.txt. Updated binding_basis to verbatim approval clause from document text. All NTN links in testbeds are emulated."

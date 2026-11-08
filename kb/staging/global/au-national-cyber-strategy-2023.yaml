@@ -1,0 +1,30 @@
+id: au-national-cyber-strategy-2023
+title: 2023-2030 Australian Cyber Security Strategy
+authority: Department of Home Affairs
+jurisdiction: AU
+doc_type: strategy
+url: https://www.homeaffairs.gov.au/cyber-security-subsite/files/2023-cyber-security-strategy.pdf
+landing_page: https://www.homeaffairs.gov.au
+local_path: corpus/raw/global/au-national-cyber-strategy-2023.pdf
+sha256: b05c7163490f77e12162fc0c4b0b62bcb6e11e840589065636f9fe7a397b9c81
+bytes: 14059177
+pages: 64
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2023-11-22'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+- GAP-IN-09
+role: global_example
+candidate_quotes: []
+verified: false
+notes: 'Downloaded type: PDF document, version 1.4; text length 135589'

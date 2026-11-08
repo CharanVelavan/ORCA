@@ -1,0 +1,48 @@
+id: us-whitehouse-nsm22-2024
+title: "National Security Memorandum on Critical Infrastructure Security and Resilience (NSM-22)"
+authority: Executive Office of the President of the United States
+jurisdiction: US
+doc_type: presidential_memorandum
+url: https://bidenwhitehouse.archives.gov/briefing-room/presidential-actions/2024/04/30/national-security-memorandum-on-critical-infrastructure-security-and-resilience/
+landing_page: https://www.cisa.gov/topics/critical-infrastructure-security-and-resilience/national-security-memorandum-critical-infrastructure-security-and-resilience
+local_path: corpus/raw/global/us-whitehouse-nsm22-2024.html
+sha256: c6cf5096704d3963157180a1b93e007a0e52a9c1d63e49d87aaa0ece0f1eeb68
+bytes: 216777
+pages: null
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "In accordance with applicable law and policy, Federal departments and agencies with regulatory authorities shall utilize regulation, drawing on existing voluntary consensus standards as appropriate, to establish minimum requirements"
+issued: 2024-04-30
+in_force_from: 2024-04-30
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-09]
+role: global_example
+candidate_quotes:
+  - quote: "Critical infrastructure comprises the physical and virtual assets and systems so vital to the Nation that their incapacity or destruction would have a debilitating impact on national security, national economic security, or national public health or safety."
+    page: null
+    clause: "Preamble"
+    topic: critical_infrastructure
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Re-defines vital critical infrastructure scope across physical and cyber-virtual assets."
+  - quote: "The Federal Communications Commission will, to the extent permitted by law and in coordination with DHS and other Federal departments and agencies: (1) identify and prioritize communications infrastructure by collecting information regarding communications networks; (2) assess communications sector risks and work to mitigate those risks by requiring, as appropriate, regulated entities to take specific actions to protect communications networks and infrastructure; and (3) collaborate with communications sector industry members, foreign governments, international organizations, and other stakeholders to identify best practices and impose corresponding regulations."
+    page: null
+    clause: "Policy Principles and Objectives"
+    topic: emergency_powers
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Explicitly coordinates FCC regulatory mandates and communications sector risk management with DHS and CISA."
+  - quote: "In accordance with applicable law and policy, Federal departments and agencies with regulatory authorities shall utilize regulation, drawing on existing voluntary consensus standards as appropriate, to establish minimum requirements and effective accountability mechanisms for the security and resilience of critical infrastructure."
+    page: null
+    clause: "Policy Principles and Objectives"
+    topic: standards
+    gap: GAP-IN-09
+    supports: global_example
+    why: "Directs federal regulatory agencies to turn voluntary consensus standards into mandatory minimum resilience requirements."
+verified: false
+notes: "Presidential directive replacing PPD-21 and designating CISA as national critical infrastructure coordinator; whitehouse.gov path archived to bidenwhitehouse.archives.gov."

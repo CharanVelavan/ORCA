@@ -1,0 +1,27 @@
+id: in-dot-telegraph-4th-amendment-2022
+title: "Indian Telegraph (Fourth Amendment) Rules, 2022"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification)
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/indian-telegraph-4th-amendment-rules-2022.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-telegraph-4th-amendment-2022.pdf
+sha256: 85630cbef95ab36b1b6e71d34c1991b396ebf2f6c27b51171ae83cfbe9fe460c
+bytes: 1976050
+pages: 3
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "the Central Government hereby makes the following rules further to amend the Indian Telegraph Rules, 1951"
+issued: 2022-11-18
+in_force_from: unknown
+amends: [Indian Telegraph Rules, 1951 (rule 525)]
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: bilingual (Hindi and English)
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Read in full by keyword check. Changes rule 525 (international bandwidth and operating expense entries). No cyber security, satellite-operations or emergency clause, so no candidate quotes."

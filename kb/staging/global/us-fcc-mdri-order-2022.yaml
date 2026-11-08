@@ -1,0 +1,63 @@
+id: us-fcc-mdri-order-2022
+title: 'Report and Order and Further Notice of Proposed Rulemaking: Resilient Networks; Amendments to Part 4 of the Commission''s
+  Rules Concerning Disruptions to Communications (Mandatory Disaster Response Initiative, FCC 22-50)'
+authority: Federal Communications Commission
+jurisdiction: US
+doc_type: order
+url: https://docs.fcc.gov/public/attachments/FCC-22-50A1.pdf
+landing_page: https://www.fcc.gov/document/fcc-adopts-rules-improve-communications-reliability-during-disasters
+local_path: corpus/raw/global/us-fcc-mdri-order-2022.pdf
+sha256: 031f0ab6401a44973af791146bd2cca565b956903bc86b87fab3b5111a9426c2
+bytes: 315226
+pages: 48
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: 'Adopted: June 27, 2022 Released: July 6, 2022'
+issued: 2022-07-06
+in_force_from: 2022-10-28
+amends: []
+amended_by: []
+licence: Public domain (US Government Work)
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-08
+role: global_example
+candidate_quotes:
+- quote: 'Facilities-based mobile wireless providers are required to perform, or have established, the following procedures
+    when: (1) Any entity authorized to declare Emergency Support Function 2 (ESF-2) activates ESF-2 for a given emergency
+    or disaster; (2) The Commission activates the Disaster Information Reporting System (DIRS); or (3) The Commission’s Chief
+    of the Public Safety and Homeland Security Bureau issues a Public Notice activating the Mandatory Disaster Response Initiative
+    in response to a state request to do so, where the state has also either activated its Emergency Operations Center, activated
+    mutual aid or proclaimed a local state of emergency:'
+  page: 23
+  clause: 47 CFR § 4.17(a)
+  topic: disaster_coordination
+  gap: GAP-IN-03
+  supports: global_example
+  why: Codifies mandatory triggers activating disaster cooperation protocols among telecommunication providers.
+- quote: 'Provide for reasonable roaming under disaster arrangements (RuDs) when technically feasible, where: (A) A requesting
+    provider’s network has become inoperable and the requesting provider has taken all appropriate steps to attempt to restore
+    its own network; and (B) The provider receiving the request (home provider) has determined that roaming is technically
+    feasible and will not adversely affect service to the home provider’s own subscribers'
+  page: 23
+  clause: 47 CFR § 4.17(a)(3)(i)
+  topic: failover_path_security
+  gap: GAP-IN-08
+  supports: global_example
+  why: Mandates bilateral disaster roaming (RuDs) when a provider's network becomes inoperable and technical feasibility is
+    verified.
+- quote: Against this backdrop, we leverage the industry-developed Wireless Network Resiliency Cooperative Framework (Framework)
+    as a starting point for introducing today’s Mandatory Disaster Response Initiative (MDRI) and, in doing so, renew our
+    efforts to ensure that the nation’s communications networks are more available in the midst of disasters and other emergencies.
+  page: 2
+  clause: Paragraph 2
+  topic: disaster_coordination
+  gap: GAP-IN-03
+  supports: global_example
+  why: Transforms voluntary industry disaster response cooperative framework into mandatory enforceable requirements.
+verified: false
+notes: FCC order establishing the Mandatory Disaster Response Initiative (MDRI) codifying inter-carrier disaster roaming and
+  mutual aid under 47 CFR § 4.17.

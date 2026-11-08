@@ -1,0 +1,27 @@
+id: in-tn-disaster-management-policy-2023
+title: Tamil Nadu State Disaster Management Policy (2023)
+authority: Tamil Nadu State Disaster Management Authority
+jurisdiction: IN-TN
+doc_type: policy
+url: https://cdn.s3waas.gov.in/s342e7aaa88b48137a16a1acd04ed91125/uploads/2023/05/2023051129.pdf
+landing_page: https://pudukkottai.nic.in/tn-disaster-management-plan-2023/
+sha256: 95258649d615291e04b2d1ada0450943af212306170eac3769ee812409b6e0ca
+bytes: 2541811
+pages: 76
+local_path: corpus/raw/india/in-tn-disaster-management-policy-2023.pdf
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2023-05
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: Read by keyword check (76 pages). State disaster policy with heavy disaster content. No satellite or telecom-continuity clause found in keyword search. No candidate quotes.

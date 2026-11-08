@@ -1,0 +1,35 @@
+id: in-trai-spectrum-auction-recs-2026
+title: Recommendations on The Auction of Radio Frequency Spectrum in Frequency Bands Identified for IMT/5G
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2026-02/Recommendation_24022026.pdf
+landing_page: https://trai.gov.in/telecom/spectrum
+local_path: corpus/raw/india/in-trai-spectrum-auction-recs-2026.pdf
+sha256: dc872c08bea8dea9bef7393f948434aab471dc8664a3867063ca28168727a9d1
+bytes: 5608375
+pages: 454
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2026-02-24'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+role: india_evidence
+candidate_quotes:
+- quote: Entire available spectrum in the existing frequency bands
+  clause: Chapter II Paragraph 2.1
+  topic: spectrum_assignment
+  gap: GAP-IN-03
+  supports: context
+  why: Recommends auction rules and allocation methodologies for radio frequency spectrum across telecom access bands.
+  page: 53
+verified: false
+notes: TRAI recommendations on auction of radio frequency spectrum in frequency bands identified for IMT.

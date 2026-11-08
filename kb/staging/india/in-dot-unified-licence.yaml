@@ -1,0 +1,67 @@
+id: in-dot-unified-licence
+title: Unified Licence Agreement
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: licence
+url: https://www.eservices.dot.gov.in/sites/default/files/2024-11/Unified%20License%20Agreement.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-unified-licence.pdf
+sha256: 9ec9bdbc18af400376edecb0c6b72e4e670e1f72c386c36648ab413d0dc2e8f3
+bytes: 1646540
+pages: 195
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: Any order passed under these statutes shall be binding on the licensee.
+issued: 2024-11-01
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India open (terms not checked)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+- GAP-IN-03
+- GAP-IN-04
+- GAP-IN-06
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: The Licensee shall also facilitate the priority routing of emergency/public utility or any other type of user calls
+    as per guidelines /directions as may be prescribed by Licensor.
+  page: 29
+  clause: Part I, Condition 28
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: proves_gap
+  why: Requires licensees to facilitate priority routing of emergency calls as directed, but leaves specific multi-sector
+    priority ladders for scarce backup bandwidth unspecified.
+- quote: The operation and maintenance centre of the GMPCS Gateway shall also be located in India.
+  page: 107
+  clause: Chapter XII, Condition 7.1
+  topic: data_location
+  gap: GAP-IN-08
+  supports: answers_gap
+  why: Mandates that the operation and maintenance centre of the satellite (GMPCS) gateway be physically located in India.
+- quote: All calls originating or terminating from Mobile Terminals in India shall pass through the GMPCS Gateway Switch located
+    in India.
+  page: 110
+  clause: Chapter XII, Condition 7.15
+  topic: data_location
+  gap: GAP-IN-08
+  supports: answers_gap
+  why: Mandates that all satellite communication traffic originating or terminating in India must traverse an Indian-located
+    gateway switch.
+- quote: Domestic traffic should not be hauled/ routed to any place outside India.
+  page: 110
+  clause: Chapter XII, Condition 7.15
+  topic: failover_path_security
+  gap: GAP-IN-08
+  supports: answers_gap
+  why: Prohibits routing or hauling domestic Indian traffic outside India, establishing a critical routing constraint for
+    NTN failover.
+verified: false
+notes: Updated Unified Licence template published by DoT in Nov 2024, containing Part I General Conditions and Chapter XII
+  GMPCS Authorization.

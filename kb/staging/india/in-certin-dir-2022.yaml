@@ -1,0 +1,55 @@
+id: in-certin-dir-2022
+title: Directions under sub-section (6) of section 70B of the Information Technology Act, 2000
+authority: Indian Computer Emergency Response Team (CERT-In)
+jurisdiction: IN
+doc_type: direction
+url: https://www.cert-in.org.in/PDF/CERT-In_Directions_70B_28.04.2022.pdf
+landing_page: https://www.cert-in.org.in/Directions70B.jsp
+local_path: corpus/raw/india/in-certin-dir-2022.pdf
+sha256: 202c2f3953d792dcfb3ecb3634fc82ab75437ee596de89b8d59a211e8e42431f
+bytes: 434961
+pages: 8
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "CERT-In is empowered and competent to call for information and give directions to the service providers, intermediaries, data centres, body corporate and any other person for carrying out the activities enshrined in sub-section (4) of section 70B of the IT Act, 2000"
+issued: 2022-04-28
+in_force_from: 2022-06-27
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps: [GAP-IN-01]
+role: india_evidence
+candidate_quotes:
+  - quote: "Any service provider, intermediary, data centre, body corporate and Government organisation shall mandatorily report cyber incidents as mentioned in Annexure I to CERT-In within 6 hours of noticing such incidents or being brought to notice about such incidents."
+    page: 2
+    clause: "(ii)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: proves_gap
+    why: "Mandates reporting of listed incidents within 6 hours of noticing or being informed, with no separate trigger for suspected incidents or backhaul outages."
+  - quote: "The service providers, intermediaries, data centres, body corporate and Government organisations shall designate a Point of Contact to interface with CERT-In."
+    page: 3
+    clause: "(iii)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: answers_gap
+    why: "Requires covered entities to designate a dedicated Point of Contact for reporting and compliance communications with CERT-In."
+  - quote: "All service providers, intermediaries, data centres, body corporate and Government organisations shall mandatorily enable logs of all their ICT systems and maintain them securely for a rolling period of 180 days and the same shall be maintained within the Indian jurisdiction."
+    page: 3
+    clause: "(iv)"
+    topic: log_retention
+    gap: null
+    supports: context
+    why: "Mandates rolling 180-day retention of ICT system logs within Indian jurisdiction."
+  - quote: "Attacks on Critical infrastructure, SCADA and operational technology systems and Wireless networks"
+    page: 5
+    clause: "Annexure I (ix)"
+    topic: critical_infrastructure
+    gap: null
+    supports: context
+    why: "Classifies attacks on critical infrastructure and wireless networks as mandatorily reportable cyber security incidents."
+verified: false
+notes: "Issued under IT Act 2000 Section 70B(6); effective 60 days from issuance."

@@ -1,0 +1,34 @@
+id: uk-telecoms-security-act-2021
+title: Telecommunications (Security) Act 2021 (c. 31)
+authority: Parliament of the United Kingdom
+jurisdiction: UK
+doc_type: act
+url: https://www.legislation.gov.uk/ukpga/2021/31/enacted/data.pdf
+landing_page: https://www.legislation.gov.uk/ukpga/2021/31/contents
+local_path: corpus/raw/global/uk-telecoms-security-act-2021.pdf
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2021-11-17
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Open Government Licence v3.0
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts: eceived % Xferd  Average Speed  \
+  \ Time    Time     Time  Current\n                                 Dload  Upload\
+  \   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0     \
+  \ 0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0   \
+  \   0 --:--:-- --:--:-- --:--:--     0"

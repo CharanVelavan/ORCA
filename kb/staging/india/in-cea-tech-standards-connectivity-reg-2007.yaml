@@ -1,0 +1,29 @@
+id: in-cea-tech-standards-connectivity-reg-2007
+title: Central Electricity Authority (Technical Standards for Connectivity to the
+  Grid) Regulations, 2007
+authority: Central Electricity Authority
+jurisdiction: IN
+doc_type: regulation
+url: https://thc.nic.in/Central%20Governmental%20Regulations/Central%20Electricity%20Authority(Technical%20Standarads%20for%20Connectivity%20to%20the%20Grid)%20Regulations,%202007.pdf
+landing_page: https://cea.nic.in
+local_path: corpus/raw/india/in-cea-tech-standards-connectivity-reg-2007.pdf
+sha256: dc90a9e0afaf4c1cebe916d416676771a7e34e9775329cb62f4fc5d5f879cb6d
+bytes: 6715399
+pages: 16
+retrieved_at: '2026-11-08'
+status: scanned
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2007-02-21'
+in_force_from: unknown
+amends: amended 2013, 2019
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-04
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Text extraction yielded fewer than 200 characters per page; no quotes added.

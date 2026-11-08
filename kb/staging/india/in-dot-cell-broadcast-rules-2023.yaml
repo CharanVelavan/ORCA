@@ -1,0 +1,55 @@
+id: in-dot-cell-broadcast-rules-2023
+title: Indian Wireless Telegraphy (Cell Broadcasting Service for Disaster Alerts) Rules, 2023
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/indian-wireless-telegraphy-cell-broadcasting-service-for-disaster-alerts-rules-2023.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-cell-broadcast-rules-2023.pdf
+sha256: f26f3aaf10cbf26e36d1668a3957b88080e98ce8dd2c3511215663756d09cb7e
+bytes: 1649507
+pages: 3
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "In exercise of the powers conferred by sub-section (1) read with clause (v) of sub- section (2) of section 10 of the Indian Wireless Telegraphy Act, 1933 (17 of 1933), the Central Government hereby makes the following rules"
+issued: 2023-04-06
+in_force_from: 2023-04-10
+amends: []
+amended_by: [in-dot-cell-broadcast-amendment-2024]
+licence: Government of India open (terms not checked)
+language: bilingual
+gaps: [GAP-IN-02, GAP-IN-03]
+role: india_evidence
+candidate_quotes:
+  - quote: "These rules may be called the Indian Wireless Telegraphy (Cell Broadcasting Service for Disaster Alerts) Rules, 2023."
+    page: 2
+    clause: "Rule 1(1)"
+    topic: downstream_warning
+    gap: GAP-IN-02
+    supports: answers_gap
+    why: "Promulgates mandatory cell broadcasting disaster alert rules under the Indian Wireless Telegraphy Act."
+  - quote: "\"cell broadcast\" means a method of sending messages to multiple mobile telephone users in a defined area at the same time in a broadcast manner."
+    page: 3
+    clause: "Rule 2(c)"
+    topic: downstream_warning
+    gap: GAP-IN-02
+    supports: answers_gap
+    why: "Statutory definition of cell broadcast as sending messages to multiple mobile users in a defined area simultaneously in broadcast mode."
+  - quote: "no manufacturer shall manufacture or sell in India, any smart phone or feature phone without having following facilities, namely:-"
+    page: 3
+    clause: "Rule 3(1)"
+    topic: downstream_warning
+    gap: GAP-IN-02
+    supports: answers_gap
+    why: "Mandates that all mobile handsets manufactured or sold in India incorporate cell broadcast disaster alert capabilities."
+  - quote: "maintaining cell broadcast messages on the screen until acknowledged by the user;"
+    page: 3
+    clause: "Rule 3(1)(c)"
+    topic: downstream_warning
+    gap: GAP-IN-02
+    supports: answers_gap
+    why: "Requires cell broadcast emergency warnings to remain displayed on handset screens until actively acknowledged by the user."
+verified: false
+notes: "Notified vide G.S.R. 278(E) dated 6 Apr 2023; Gazette published 10 Apr 2023. Listed in target list as Cell Broadcasting Service for Disaster Rules, 2023."

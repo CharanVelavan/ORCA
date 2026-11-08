@@ -1,0 +1,57 @@
+id: intl-etsi-en-303645
+title: 'ETSI EN 303 645 V2.1.1: CYBER; Cyber Security for Consumer Internet of Things:
+  Baseline Requirements'
+authority: European Telecommunications Standards Institute (ETSI)
+jurisdiction: INTL
+doc_type: standard
+url: https://www.etsi.org/deliver/etsi_en/303600_303699/303645/02.01.01_60/en_303645v020101p.pdf
+landing_page: https://www.etsi.org/standards-search
+local_path: corpus/raw/global/intl-etsi-en-303645.pdf
+sha256: 4a484c2e3a7c746cd1d655ae39b617f970696f34860266598b2b1b775d7a7bd3
+bytes: 887793
+pages: 34
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2020-06-29
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: ETSI open standard
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes:
+- quote: ETSI EN 303 645 V2.1.1 (2020-06) EUROPEAN STANDARD CYBER;
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-06
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: Foreword This European Standard (EN) has been produced by ETSI Technical
+    Committee Cyber Security (CYBER).
+  page: 4
+  clause: not identified
+  topic: other
+  gap: GAP-IN-06
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: Introduction As more devices in the home connect to the Internet, the cyber
+    security of the Internet of Things (IoT) becomes a growing concern.
+  page: 4
+  clause: not identified
+  topic: other
+  gap: GAP-IN-06
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: PDF document, version 1.7 (zip deflate encoded); text length
+  106407'

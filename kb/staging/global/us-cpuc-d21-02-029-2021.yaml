@@ -1,0 +1,59 @@
+id: us-cpuc-d21-02-029-2021
+title: Decision Adopting Wireline Provider Resiliency Strategies (D.21-02-029)
+authority: California Public Utilities Commission (CPUC)
+jurisdiction: US-CA
+doc_type: regulatory_decision
+url: https://www.cpuc.ca.gov/-/media/cpuc-website/divisions/communications-division/documents/network-resiliency/d2102029-february-18-2021.pdf
+landing_page: https://www.cpuc.ca.gov/industries-and-topics/internet-and-phone/telecommunications-outage-and-network-resiliency
+local_path: corpus/raw/global/us-cpuc-d21-02-029-2021.pdf
+sha256: 07127d29be45f4fb7592d6c16e2203426261215d1a89896736eabdbbecb399bf
+bytes: 3371973
+pages: 107
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: 'IT IS ORDERED that: 1. Facilities-based wireline providers shall each file a Communications Resiliency Plan'
+issued: 2021-02-11
+in_force_from: 2021-02-11
+amends:
+- us-cpuc-d20-07-011-2020
+amended_by: []
+licence: open_government
+language: en
+gaps:
+- GAP-IN-04
+role: global_example
+candidate_quotes:
+- quote: 'Facilities-based wireline providers shall, in their Communications Resiliency Plan pursuant to Section 5.6.2 of
+    this decision, demonstrate their ability to: (a) meet the 72-hour backup power requirement, in Tier 2 and Tier 3 High
+    Fire Threat Districts'
+  page: 106
+  clause: Ordering Paragraph 4
+  topic: backup_power
+  gap: GAP-IN-04
+  supports: global_example
+  why: Extends California 72-hour backup power requirements from wireless to facilities-based wireline providers in fire-threat
+    zones.
+- quote: Facilities-based wireline providers shall each file a Communications Resiliency Plan pursuant to Section 5.6.2 of
+    this decision, within six months of the effective date of this decision, to the Communications Division via Tier 2 Advice
+    Letter that describes how the wireline provider shall maintain a minimum level of service and coverage to preserve access
+    to 9-1-1 and 2-1-1, maintain the ability to receive emergency notifications, and maintain access to internet browsing
+    for emergency notices for their customers in the event of a power outage.
+  page: 104
+  clause: Ordering Paragraph 1
+  topic: backup_power
+  gap: GAP-IN-04
+  supports: global_example
+  why: Requires wireline carriers to submit resiliency plans ensuring emergency continuity during extended power outages.
+- quote: Facilities-based wireline providers shall file information only emergency operations plans pursuant to Section 5.9.2
+    of this decision, on an annual basis, with the first due within 60 days of the effective date of this decision to the
+    Director of the Communications Division
+  page: 107
+  clause: Ordering Paragraph 5
+  topic: disaster_coordination
+  gap: GAP-IN-04
+  supports: global_example
+  why: Mandates annual emergency operations plan coordination between wireline operators and state disaster authorities.
+verified: false
+notes: Phase II companion decision extending 72-hour resiliency obligations to wireline networks.

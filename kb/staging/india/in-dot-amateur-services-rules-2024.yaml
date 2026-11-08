@@ -1,0 +1,34 @@
+id: in-dot-amateur-services-rules-2024
+title: "Amateur Services Rules, 2024"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification)
+url: "https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/amateur-services-rules-2024.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-amateur-services-rules-2024.pdf
+sha256: 63d31e444b1fea70f719a526d85903cb2a2ed4dfc2388965018355f8beb85b85
+bytes: 1980455
+pages: 15
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "the Central Government hereby makes the following rules, namely"
+issued: 2024
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes:
+  - quote: "at the request of the Central Government, or a State Government, or any officer specially authorised in this behalf by the Central Government or a State Government, during natural calamities and disasters, without any fees or charge."
+    page: 11
+    clause: "Rule (amateur station obligations), sub-rule (7) of the ASOC holder provision"
+    topic: disaster_coordination
+    gap: null
+    supports: context
+    why: "Amateur radio operators must provide communication services in disasters when government asks, a non-satellite emergency fallback that a disaster plan could use."
+verified: false
+notes: "Read by keyword check. The emergency-communication duty is a volunteer radio obligation, not telecom failover, so no gap is linked. The clause numbering is not confirmed; the quote is verbatim and checked. No cyber clause found."

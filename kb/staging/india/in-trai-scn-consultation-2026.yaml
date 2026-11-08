@@ -1,0 +1,34 @@
+id: in-trai-scn-consultation-2026
+title: "TRAI Consultation Paper No. 06/2026: Framework for Satellite Communication Network Authorisation, and Assignment of Spectrum to Satellite Communication Network Providers"
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation paper
+url: "https://www.trai.gov.in/sites/default/files/2026-04/CP_08042026.pdf"
+landing_page: https://www.trai.gov.in/
+local_path: corpus/raw/india/in-trai-scn-consultation-2026.pdf
+sha256: fa9d9c6846abc09bab0a88dfa4af1386ec0c1a1d18a74674ddfde5e2d3042a12
+bytes: 4936792
+pages: 271
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: draft
+binding_basis: "Consultation Paper"
+issued: 2026-04-08
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: [GAP-IN-09]
+role: india_evidence
+candidate_quotes:
+  - quote: "provision obligating the space segment provider to report any incident such as:"
+    page: 56
+    clause: "Draft incident-reporting provision (clause not identified in the text read)"
+    topic: space_cyber
+    gap: GAP-IN-09
+    supports: context
+    why: "A draft satellite-specific incident-reporting obligation for the space segment provider. It is a consultation proposal and not binding, so it does not close GAP-IN-09."
+verified: false
+notes: "Consultation paper No. 06/2026 on satellite communication network authorisation (about 271 pages). The draft proposes an incident-reporting duty for the space segment provider (the quote), which is relevant to GAP-IN-09 but is not binding. The 2026 network rules (captive and misc files) already contain similar satellite incident reporting. The list's draft label is confirmed."

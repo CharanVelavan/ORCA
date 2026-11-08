@@ -1,0 +1,29 @@
+id: br-anatel-portaria-2899-2024
+title: Portaria Anatel nº 2899, de 16 de setembro de 2024 (Identificação de Prestadoras Sujeitas ao R-Ciber)
+authority: Agência Nacional de Telecomunicações
+jurisdiction: BR
+doc_type: order
+url: https://informacoes.anatel.gov.br/legislacao/portarias-de-fiscalizacao/2024/1995-portaria-2899
+landing_page: https://informacoes.anatel.gov.br
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2024-09-16'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-09
+role: context
+candidate_quotes: []
+verified: false
+notes: Anatel URL returned a 3.5 KB placeholder page (same bytes and sha256 as the other Anatel URLs in this batch), not the resolution text. Not obtained.

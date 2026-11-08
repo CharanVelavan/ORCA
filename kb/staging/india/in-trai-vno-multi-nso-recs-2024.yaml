@@ -1,0 +1,37 @@
+id: in-trai-vno-multi-nso-recs-2024
+title: Recommendations on Connectivity to Access Service VNOs From More Than One NSO
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2024-11/Recommendation_13092024.pdf
+landing_page: https://trai.gov.in/telecom/licensing
+local_path: corpus/raw/india/in-trai-vno-multi-nso-recs-2024.pdf
+sha256: 1c87035a6ec10d07f26a53bda15a16c9e26758b3822e967f441441e96672a6a5
+bytes: 862038
+pages: 33
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2024-09-13'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: Authority recommends that VNOs will be allowed to have agreements with more than one NSO for all services other than
+    access services and such services which need numbering and unique identity of the customers.
+  clause: Chapter II Paragraph 2.1
+  topic: failover
+  gap: GAP-IN-08
+  supports: context
+  why: Recommends permitting virtual network operators to enter into multi-homing agreements with multiple network service
+    operators.
+  page: 18
+verified: false
+notes: TRAI recommendations allowing virtual network operators to partner with multiple network operators for enhanced resilience.

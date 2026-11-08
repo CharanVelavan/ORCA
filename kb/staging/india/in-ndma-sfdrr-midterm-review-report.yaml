@@ -1,0 +1,36 @@
+id: in-ndma-sfdrr-midterm-review-report
+title: India Midterm Review Report on Sendai Framework for Disaster Risk Reduction 2015-2030
+authority: National Disaster Management Authority
+jurisdiction: IN
+doc_type: report
+url: https://ndma.gov.in/sites/default/files/PDF/India-SFDRR-Midterm-Review-Report.pdf
+landing_page: https://ndma.gov.in
+local_path: corpus/raw/india/in-ndma-sfdrr-midterm-review-report.pdf
+sha256: 817945da39c3f1ebcec45c4406307d7febcdd1b9f46927fd5be545b1c257ae97
+bytes: 7906337
+pages: 86
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2023-02
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-02
+role: india_evidence
+candidate_quotes:
+- quote: disaster management plans, which is examples of measures to prevent hazards legislated as a mandate of the DM Act
+    2005 and improve for response and recovery in of India.
+  clause: Section 1
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: context
+  why: Voluntary national review of disaster risk reduction progress under the Sendai Framework in India.
+  page: 18
+verified: false
+notes: National report on the implementation of the Sendai Framework for Disaster Risk Reduction 2015-2030.

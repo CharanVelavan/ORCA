@@ -1,0 +1,58 @@
+id: in-rbi-it-governance-directions-2023
+title: Reserve Bank of India (Information Technology Governance, Risk, Controls and Assurance Practices) Directions, 2023
+authority: Reserve Bank of India
+jurisdiction: IN
+doc_type: guideline
+url: https://www.rbi.org.in/Scripts/BS_ViewMasterDirections.aspx?id=12562
+landing_page: https://www.rbi.org.in/Scripts/BS_ViewMasterDirections.aspx?id=12562
+local_path: corpus/raw/india/in-rbi-it-governance-directions-2023.html
+sha256: e047aada1be6f5c8fc6f7691cca5d1cea988ee9255712d3c32b58a25346e1b9a
+bytes: 219630
+pages: null
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "Master Direction on Information Technology Governance, Risk, Controls and Assurance Practices RBI/2023-24/107 DoS.CO.CSITEG/SEC.7/31.01.015/2023-24"
+issued: '2023-11-07'
+in_force_from: '2024-04-01'
+amends: []
+amended_by: []
+licence: government_open
+language: en
+gaps:
+  - GAP-IN-01
+  - GAP-IN-04
+  - GAP-IN-08
+role: india_evidence
+candidate_quotes:
+  - quote: "The key focus areas of IT Governance shall include strategic alignment, risk management, resource management, performance management and Business Continuity/ Disaster Recovery Management"
+    page: null
+    clause: "Section 4(a)"
+    topic: critical_infrastructure
+    gap: GAP-IN-08
+    supports: proves_gap
+    why: "Defines the key focus areas of IT governance including Business Continuity and Disaster Recovery Management."
+  - quote: "REs shall define suitable metrics for system performance, recovery and business resumption, including Recovery Point Objective (RPO) and Recovery Time Objective (RTO), for all critical information systems"
+    page: null
+    clause: "Section 15(a)"
+    topic: critical_infrastructure
+    gap: GAP-IN-08
+    supports: proves_gap
+    why: "Mandates defined RTO and RPO metrics for all critical information systems."
+  - quote: "REs shall have clear communication plans for escalation and reporting the incidents to the Board and Senior Management as well as to customers, as required"
+    page: null
+    clause: "Section 26(d)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: proves_gap
+    why: "Requires clear communication plans for escalating and reporting cyber incidents to senior management, board, and customers."
+  - quote: "REs shall ensure that DR architecture and procedures are robust, meeting the defined RTO and RPO for any recovery operations in case of contingency"
+    page: null
+    clause: "Section 30(f)"
+    topic: backup_power
+    gap: GAP-IN-04
+    supports: proves_gap
+    why: "Mandates robust DR architecture and procedures meeting defined RTO and RPO parameters in contingencies."
+verified: false
+notes: "Master Direction RBI/2023-24/107 establishing mandatory IT governance, cyber incident management, and BCP/DR operational resilience standards for banks and regulated financial entities."

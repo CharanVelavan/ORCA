@@ -1,0 +1,48 @@
+id: us-fcc-dirs-rules-2024
+title: "Resilient Networks; Amendments to Part 4 of the Commission’s Rules Concerning Disruptions to Communications (Second Report and Order, FCC 24-5)"
+authority: Federal Communications Commission (FCC)
+jurisdiction: US
+doc_type: regulatory_order
+url: https://docs.fcc.gov/public/attachments/FCC-24-5A1.pdf
+landing_page: https://www.fcc.gov/document/fcc-mandates-disaster-information-reporting-system-dirs-reporting
+local_path: corpus/raw/global/us-fcc-dirs-rules-2024.pdf
+sha256: 530861da347e2a51822f09df08479376bd63dcc319646d402cfdcffa757c91aa
+bytes: 507907
+pages: 82
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "Cable Communications, Wireline, Wireless, and Interconnected VoIP providers shall be required to report their infrastructure status information each day in the Disaster Information Reporting System (DIRS)"
+issued: 2024-01-26
+in_force_from: 2025-02-20
+amends: [us-fcc-part-4-outage]
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-01, GAP-IN-02, GAP-IN-04]
+role: global_example
+candidate_quotes:
+  - quote: "Cable Communications, Wireline, Wireless, and Interconnected VoIP providers shall be required to report their infrastructure status information each day in the Disaster Information Reporting System (DIRS) when the Commission activates DIRS in geographic areas in which they provide service, even when their reportable infrastructure has not changed compared to the prior day."
+    page: 40
+    clause: "Appendix A, 47 CFR § 4.18(a)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: global_example
+    why: "Transitions DIRS from voluntary reporting to mandatory daily operational reporting during declared emergencies."
+  - quote: "provide a single, final report to the Commission within 24 hours of the Commission’s deactivation of DIRS and the termination of required daily reporting, detailing the state of their infrastructure at the time of DIRS deactivation and an estimated date of resolution of any remaining outages."
+    page: 40
+    clause: "Appendix A, 47 CFR § 4.18(a)(2)"
+    topic: disaster_coordination
+    gap: GAP-IN-01
+    supports: global_example
+    why: "Requires comprehensive final post-disaster infrastructure recovery report within 24 hours of DIRS deactivation."
+  - quote: "Cable Communications, Wireline, Wireless, and Interconnected VoIP providers who provide a DIRS report pursuant to paragraph (a) of this section are not required to make submissions in the Network Outage Reporting System (NORS) under this chapter pertaining to any incidents arising during the DIRS activation and that are timely reported in DIRS."
+    page: 40
+    clause: "Appendix A, 47 CFR § 4.18(b)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: global_example
+    why: "Codifies regulatory de-duplication exempting providers from duplicate NORS filings for incidents reported in DIRS."
+verified: false
+notes: "Corrected document citation: target list had FCC-24-10A1 (unrelated forfeiture), whereas the true DIRS Second Report and Order is FCC-24-5A1."

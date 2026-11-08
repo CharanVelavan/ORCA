@@ -1,0 +1,31 @@
+id: in-sansad-scfin-17ls-59th-report-cyber-security-fraud
+title: 'Standing Committee on Finance (17th Lok Sabha) 59th Report: Cyber Security and Rising Incidence of Cyber/White Collar
+  Crimes'
+authority: Standing Committee on Finance, Lok Sabha
+jurisdiction: IN
+doc_type: report
+url: https://sansad.in/getFile/lsscommittee/Finance/17_Finance_59.pdf?source=loksabhadocs
+landing_page: https://sansad.in
+local_path: corpus/raw/india/in-sansad-scfin-17ls-59th-report-cyber-security-fraud.pdf
+sha256: 49b2360c0f9389f834fc074df08d8fdb279ab55c822bb696a508fd39a856a2e2
+bytes: 744847
+pages: 101
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: false
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2023-07
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-08
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Parliamentary standing committee report on cyber fraud in the financial sector; does not bear directly on telecom NTN
+  gaps.

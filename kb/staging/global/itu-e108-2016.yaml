@@ -1,0 +1,57 @@
+id: itu-e108-2016
+title: 'Recommendation ITU-T E.108 (01/2016): Requirements for a disaster relief mobile message service'
+authority: ITU-T Study Group 2
+jurisdiction: INTL
+doc_type: standard
+url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-E.108-201601-I!!PDF-E&lang=e&type=items
+landing_page: https://www.itu.int/rec/T-REC-E.108-201601-I/en
+local_path: corpus/raw/global/itu-e108-2016.pdf
+sha256: cc8e89c8c50e52d998f0d3c422bea29d58d5ee2f61d839d91410e54d08ccaaef
+bytes: 964347
+pages: 18
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: Compliance with this Recommendation is voluntary. However, the Recommendation may contain certain mandatory
+  provisions
+issued: 2016-01-28
+in_force_from: 2016-01-28
+amends: []
+amended_by: []
+licence: ITU open recommendation
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-03
+role: global_example
+candidate_quotes:
+- quote: In contrast, the characteristics of Internet protocol (IP) packet networks are such that, although localized congestion
+    may occur, the user does not experience blocking to the extent that communication is fully cut off, but still has the
+    ability to transfer information, although with possibly reduced throughput.
+  page: 7
+  clause: Clause 1
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: global_example
+  why: Contrasts circuit-switched blocking with packet network resilience for disaster message transfer during severe network
+    congestion.
+- quote: However, call attempts may fail due to heavy congestion caused by the sudden increase of traffic and the possible
+    drop of network capacity if the network itself is damaged by the disaster.
+  page: 8
+  clause: Clause 6.1
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: global_example
+  why: Identifies disaster traffic surge and physical capacity degradation as the root cause of telecommunications call failure.
+- quote: This condition should be satisfied even if the message-generating user and other users subscribe to different network
+    operators.
+  page: 12
+  clause: Clause 8.4
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: global_example
+  why: Requires inter-operator message delivery interoperability so disaster relief communications reach subscribers across
+    different mobile carriers.
+verified: false
+notes: Approved by ITU-T Study Group 2 under Recommendation A.8 procedure on 2016-01-28.

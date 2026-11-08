@@ -1,0 +1,35 @@
+id: intl-etsi-ts-103246-1
+title: 'ETSI TS 103 246-1 V1.2.1: Satellite Earth Stations and Systems (SES); GNSS based location systems; Part 1: Functional requirements'
+authority: European Telecommunications Standards Institute
+jurisdiction: INTL
+doc_type: standard
+url: https://www.etsi.org/deliver/etsi_ts/103200_103299/10324601/01.02.01_60/ts_10324601v010201p.pdf
+landing_page: https://www.etsi.org
+local_path: corpus/raw/global/intl-etsi-ts-103246-1.pdf
+sha256: 91db691d26975c7d19b15f8fb24542abcd46bb4b405896087a4b73c5f1c5dc5a
+bytes: 268879
+pages: 29
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2024 (v1.2.1)
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+role: context
+candidate_quotes:
+- quote: The GBLS shall implement security policy enabling the protection of sensitive information against unwanted disclosure or alteration.
+  page: 16
+  clause: not stated
+  topic: standards
+  gap: null
+  supports: context
+  why: Shows a normative security-policy requirement for a satellite-based location service; a standards example for protecting sensitive data.
+verified: false
+notes: ETSI standard for GNSS-based location services (Satellite Earth Stations and Systems). Relevant only for location privacy, authorisation and security policy requirements. Not an NTN backhaul document.

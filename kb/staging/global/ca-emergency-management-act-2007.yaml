@@ -1,0 +1,29 @@
+id: ca-emergency-management-act-2007
+title: Emergency Management Act (S.C. 2007, c. 15)
+authority: Parliament of Canada
+jurisdiction: CA
+doc_type: act
+url: https://laws-lois.justice.gc.ca/PDF/E-4.56.pdf
+landing_page: https://laws-lois.justice.gc.ca/eng/acts/e-4.56/
+local_path: corpus/raw/global/ca-emergency-management-act-2007.pdf
+sha256: 97632a581e57d26c2ee20bf0de55d8c2d8ba5a3c779d9be67d79bcfc9a3fa8b1
+bytes: 339392
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '2007'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-03
+role: context
+candidate_quotes: []
+verified: false
+notes: Bilingual federal emergency management act. No quote taken in this pass.

@@ -1,0 +1,28 @@
+id: in-certin-ccmp-framework
+title: "CERT-In Cyber Crisis Management Plan (CCMP) framework (list title)"
+authority: CERT-In
+jurisdiction: IN
+doc_type: web page (menu)
+url: https://cert-in.org.in/s2cMainServlet?pageid=CCMP
+landing_page: https://www.cert-in.org.in/
+local_path: corpus/raw/india/in-certin-ccmp-framework.html
+sha256: 265720b00a5ed6d559400ce6f01f63346a075c691798f6bb95e73c8ecb238996
+bytes: 65881
+pages: null
+retrieved_at: 2026-11-08
+status: failed
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: unknown
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India website (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+failure_reason: "The listed URL returns a CERT-In site menu page, not the CCMP document. The page links to other CERT-In PDFs (AI-assisted vulnerability blueprint, MSME controls, SBOM, smart city, space framework) but no CCMP PDF. The space framework is already staged as in-space-cyber-framework-2026. A CCMP PDF on the official CERT-In site was not searched for in this pass."
+notes: "Failed: wrong page. Next step: find the CCMP PDF on cert-in.org.in (official site only) and re-run. Binding status and content unknown. No quotes."

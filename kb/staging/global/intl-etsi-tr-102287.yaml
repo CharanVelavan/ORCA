@@ -1,0 +1,36 @@
+id: intl-etsi-tr-102287
+title: 'ETSI TR 102 287 V1.1.1: Satellite Earth Stations and Systems (SES); Broadband Satellite Multimedia (BSM); Security framework'
+authority: European Telecommunications Standards Institute
+jurisdiction: INTL
+doc_type: report
+url: https://www.etsi.org/deliver/etsi_tr/102200_102299/102287/01.01.01_60/tr_102287v010101p.pdf
+landing_page: https://www.etsi.org
+local_path: corpus/raw/global/intl-etsi-tr-102287.pdf
+sha256: aa9486a29e6beb26cad8de1fb541fe9bb2541443bb8a6793771be3a50e957da8
+bytes: 610041
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: v1.1.1 (Broadband Satellite Multimedia, ETSI TR)
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: context
+candidate_quotes:
+- quote: Managing security can go from "do not care" (i.e. full transparency) to full capabilities for managing security and
+  page: 51
+  clause: '9.2'
+  topic: standards
+  gap: null
+  supports: context
+  why: Describes the security management range for a satellite broadband system, relevant to failover path security design.
+verified: false
+notes: Technical report (not normative). Security manager and recommended security specifications at pp. 51-52. Quotes limited to clear single-line clauses.

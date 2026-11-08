@@ -1,0 +1,30 @@
+id: intl-ccsds-355-0-b-2
+title: Space Data Link Security Protocol (CCSDS 355.0-B-2)
+authority: Consultative Committee for Space Data Systems
+jurisdiction: INTL
+doc_type: standard
+url: https://ccsds.org/Pubs/355x0b2.pdf
+landing_page: https://public.ccsds.org/Pubs/
+local_path: corpus/raw/global/intl-ccsds-355-0-b-2.pdf
+sha256: 86717aedd33886013333054355b92d2d32ffaf84a4a3eb63b7b6ffc6f17d5818
+bytes: 764682
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: CCSDS 355.0-B-2
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+- GAP-IN-09
+role: global_example
+candidate_quotes: []
+verified: false
+notes: Blue book Space Data Link Security Protocol (SDLS). Security functions in Annex A7 (p. 61) sampled only; no quote taken.

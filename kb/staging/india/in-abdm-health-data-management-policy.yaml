@@ -1,0 +1,57 @@
+id: in-abdm-health-data-management-policy
+title: Health Data Management Policy
+authority: National Health Authority, Ministry of Health and Family Welfare
+jurisdiction: IN
+doc_type: guideline
+url: https://abdm.gov.in/strapicms/uploads/Draft_HDM_Policy_April2022_e38c82eee5.pdf
+landing_page: https://abdm.gov.in/publications/policies_regulations/health_data_management_policy
+local_path: corpus/raw/india/in-abdm-health-data-management-policy.pdf
+sha256: fe6c1647c494c5b2acb69b32770342a93ca3b45a6d35591bc51cf0cb5dad0baa
+bytes: 423655
+pages: 29
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "All individuals and entities who are covered by this Policy must comply with its requirements, and where requested demonstrate such compliance."
+issued: '2022-04'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: government_open
+language: en
+gaps:
+  - GAP-IN-02
+  - GAP-IN-08
+role: india_evidence
+candidate_quotes:
+  - quote: "The data fiduciaries will implement reasonable security practices and standards and have a comprehensive documented information security programme and information security policy that contain managerial, technical, operational and physical security control measures that are commensurate with the data/information assets being protected by them."
+    page: 23
+    clause: "Clause 27.1(a)"
+    topic: telecom_cyber_security
+    gap: GAP-IN-08
+    supports: proves_gap
+    why: "Mandates comprehensive documented information security programme and security control measures for data fiduciaries."
+  - quote: "In the event of a data/information security breach, the data fiduciary shall be required to demonstrate, as and when called upon to do so by any agency mandated under the law, that they have implemented security control measures as per their documented information security programme and information security policies."
+    page: 23
+    clause: "Clause 27.1(b)"
+    topic: personal_data_breach
+    gap: GAP-IN-02
+    supports: proves_gap
+    why: "Requires data fiduciaries to demonstrate implementation of security control measures upon a data security breach."
+  - quote: "The data fiduciary shall formulate and implement a personal data breach management procedure, which will be publicly displayed."
+    page: 28
+    clause: "Clause 33.1"
+    topic: personal_data_breach
+    gap: GAP-IN-02
+    supports: proves_gap
+    why: "Requires formulation, implementation, and public display of personal data breach management procedures."
+  - quote: "The data fiduciary shall notify any incidents referred to in Clause 33.1 and the actions taken pursuant to such incidents, to the data principal and NHA as soon as possible and within such period as may be specified by NHA from time to time, as well as any applicable law."
+    page: 29
+    clause: "Clause 33.2"
+    topic: downstream_warning
+    gap: GAP-IN-02
+    supports: proves_gap
+    why: "Mandates downstream notification of data breach incidents and remedial actions to data principals and NHA."
+verified: false
+notes: "Ayushman Bharat Digital Mission (ABDM) Draft Health Data Management Policy April 2022 Version 02 issued by National Health Authority."

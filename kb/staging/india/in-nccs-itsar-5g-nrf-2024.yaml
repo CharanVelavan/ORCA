@@ -1,0 +1,30 @@
+id: in-nccs-itsar-5g-nrf-2024
+title: ITSAR for Network Repository Function (NRF) of 5G
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR111062401.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-5g-nrf-2024.pdf
+sha256: c8526eab70e3235027660abef4bc760e76f79905536f944f17c5cf321562ffb7
+bytes: 764836
+pages: 52
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2024-01-19'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for Network Repository Function (NRF) of 5G under MTCTE. No clause
+  bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours floor,
+  or incident reporting clocks).

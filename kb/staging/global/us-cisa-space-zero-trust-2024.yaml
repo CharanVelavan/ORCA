@@ -1,0 +1,48 @@
+id: us-cisa-space-zero-trust-2024
+title: "Space Systems Security and Resilience Landscape: Zero Trust in the Space Environment"
+authority: Cybersecurity and Infrastructure Security Agency (CISA)
+jurisdiction: US
+doc_type: technical_guidance
+url: https://www.cisa.gov/sites/default/files/2024-06/Space%20Systems%20Security%20and%20Resilience%20Landscape%20-%20Zero%20Trust%20in%20the%20Space%20Environment%20%28508%29.pdf
+landing_page: https://www.cisa.gov/resources-tools/resources/space-systems-security-and-resilience-landscape-zero-trust-space-environment
+local_path: corpus/raw/global/us-cisa-space-zero-trust-2024.pdf
+sha256: e679947174b87d4c8a449a2da3b5049a80c024828ddd175bbe64fd4aeeafd0b7
+bytes: 697195
+pages: 18
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "The findings of this white paper, found below, represent the thoughts and recommendations developed by public and private sector members of the SSCIWG."
+issued: 2024-04-01
+in_force_from: 2024-04-01
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+role: global_example
+candidate_quotes:
+  - quote: "The working group is a public-private, cross-sector body organized and co-chaired by government and industry partners to assess and manage risks associated with space systems security and resiliency."
+    page: 3
+    clause: "Section I"
+    topic: space_cyber
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Documents public-private governance structure under CISA assessing space systems security and resiliency risks."
+  - quote: "Once an entity is authorized (and that entity can be a person, or a non-person such as an artificial intelligence agent or another software process), the communications are secured. One way to secure communications is via encryption or segmentation."
+    page: 6
+    clause: "Section IV"
+    topic: failover_path_security
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Explicitly recognizes AI agents and non-person entities under Zero Trust micro-segmentation and encrypted session controls."
+  - quote: "Because credentials are compromised often by threat actors (see MITRE ATT&CK 25 for more details), the zero trust tenets make it harder for a single compromise to spread across the network."
+    page: 6
+    clause: "Section IV"
+    topic: signalling_security
+    gap: GAP-IN-09
+    supports: global_example
+    why: "Emphasizes zero trust containment across satellite command, control, and payload network boundaries."
+verified: false
+notes: "Corrected URL in target list by removing errant period before Landscape in filename."

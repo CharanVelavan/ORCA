@@ -1,0 +1,29 @@
+id: intl-ccsds-350-7-g-1
+title: Spacecraft On-Board Interface Security (CCSDS 350.7-G-1)
+authority: Consultative Committee for Space Data Systems
+jurisdiction: INTL
+doc_type: guideline
+url: https://ccsds.org/Pubs/350x7g1.pdf
+landing_page: https://ccsds.org/publications/allpubs/entry/3136/
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: CCSDS 350.7-G-1
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed URL https://ccsds.org/Pubs/350x7g1.pdf failed with curl rc=56 (connection reset) on 3 attempts. No document obtained.

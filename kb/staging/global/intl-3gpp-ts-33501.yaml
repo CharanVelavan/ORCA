@@ -1,0 +1,55 @@
+id: intl-3gpp-ts-33501
+title: '3GPP TS 33.501 V18.5.0 (Release 18): Security architecture and procedures for 5G system'
+authority: 3GPP / ETSI (ETSI TS 133 501 V18.5.0)
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.501/33501-i50.zip
+landing_page: https://www.etsi.org/deliver/etsi_ts/133500_133599/133501/18.05.00_60/ts_133501v180500p.pdf
+local_path: corpus/raw/global/intl-3gpp-ts-33501.pdf
+sha256: d491f7e819d07d9017041f96dc2748f29110e0f8feb5dede176f19c722c6dbb7
+bytes: 3594739
+pages: 330
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: unclear
+binding_basis: not stated in the document (3GPP technical specification; legal status as voluntary consensus standard not
+  stated in the text)
+issued: 2024-05-24
+in_force_from: 2024-05-24
+amends: []
+amended_by: []
+licence: 3GPP open standard
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: 'N32-c connection: A TLS based connection between a SEPP in one PLMN and a SEPP in another PLMN.'
+  page: 25
+  clause: Clause 3.1
+  topic: failover_path_security
+  gap: GAP-IN-06
+  supports: global_example
+  why: Defines TLS-secured control plane connectivity across Security Edge Protection Proxies (SEPP) between interconnected
+    carriers.
+- quote: If the 3gpp-Sbi-Originating-Network-Id header does not match with any of the PLMN IDs or SNPN IDs belonging to the
+    peer sending SEPP, the receving SEPP shall discard the received signaling message.
+  page: 41
+  clause: Clause 5.9.3.2
+  topic: signalling_security
+  gap: GAP-IN-08
+  supports: global_example
+  why: Enforces strict validation of originating network identity headers to block spoofed or unauthorized inter-operator
+    signalling.
+- quote: Integrity protection shall be applied to all attributes transferred over the N32-f interface.
+  page: 42
+  clause: Clause 5.9.3.3
+  topic: signalling_security
+  gap: GAP-IN-08
+  supports: global_example
+  why: Mandates universal cryptographic integrity protection for all attributes traversing inter-carrier roaming interfaces.
+verified: false
+notes: 3GPP Release 18 specification TS 33.501 V18.5.0 transposed by ETSI as ETSI TS 133 501 V18.5.0.

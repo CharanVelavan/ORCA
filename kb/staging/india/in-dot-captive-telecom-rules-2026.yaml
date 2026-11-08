@@ -1,0 +1,41 @@
+id: in-dot-captive-telecom-rules-2026
+title: "Telecommunications (Captive Telecom Services) Rules, 2026 (file: captive-telecom-services-rules-2026); contains satellite-authorisation provisions for new authorised entities"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification)
+url: "https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/captive-telecom-services-rules-2026.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-captive-telecom-rules-2026.pdf
+sha256: 4abb772a15cfbc0ad3a64e151602169d8cb82e727cc56d47ff7f09334739f9f4
+bytes: 972832
+pages: 52
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "the Central Government hereby makes the following rules, namely"
+issued: 2026
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: [GAP-IN-09]
+role: india_evidence
+candidate_quotes:
+  - quote: "Every new authorised entity shall report the following incidents to the Central Government, and shall adhere to such directions that the Central Government may issue in this behalf, namely:—"
+    page: 50
+    clause: "Sub-rule (9) of the satellite provisions (rule number not confirmed in this file)"
+    topic: space_cyber
+    gap: GAP-IN-09
+    supports: answers_gap
+    why: "Partial answer to GAP-IN-09: satellite entities must report specified satellite incidents to government. It covers rogue signals and unauthorised access, not a full satellite cyber baseline."
+  - quote: "unauthorised access from India of any satellite that may be under its control or operation which is being used to provide service outside India"
+    page: 50
+    clause: "Sub-rule (9)(b)"
+    topic: space_cyber
+    gap: GAP-IN-09
+    supports: answers_gap
+    why: "Requires reporting of unauthorised access to satellites under the entity's control, a satellite-specific incident duty. It is a reporting duty only; no control-protection baseline is set."
+verified: false
+notes: "Read by keyword and clause check. The file contains the satellite provisions (incident reporting, rogue signals, gateway in India) for new authorised entities. Rule numbers are not stated in this file, so the staging text cites the sub-rule only. Check the numbering against the principal authorisation rules staging (in-dot-principal-telecom-authorisation-rules-2026). The list's binding label is supported by the 'hereby makes' wording. Quotes are verbatim and checked."

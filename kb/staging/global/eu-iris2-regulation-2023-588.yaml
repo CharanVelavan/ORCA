@@ -1,0 +1,48 @@
+id: eu-iris2-regulation-2023-588
+title: "Regulation (EU) 2023/588 of the European Parliament and of the Council of 15 March 2023 establishing the Union Secure Connectivity Programme for the period 2023-2027 (IRIS2)"
+authority: European Parliament and Council
+jurisdiction: EU
+doc_type: act
+url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0588
+landing_page: https://eur-lex.europa.eu/eli/reg/2023/588/oj/eng
+local_path: corpus/raw/global/eu-iris2-regulation-2023-588.pdf
+sha256: 526f8ffe3101784831ce7d3d13fa8a4927ab5d3d35f9e71926b4c55cf70ebd58
+bytes: 964899
+pages: 39
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "This Regulation shall be binding in its entirety and directly applicable in all Member States."
+issued: 2023-03-15
+in_force_from: 2023-03-20
+amends: []
+amended_by: []
+licence: "EUR-Lex reuse policy"
+language: en
+gaps: [GAP-IN-03, GAP-IN-06, GAP-IN-08, GAP-IN-09]
+role: global_example
+candidate_quotes:
+  - quote: "ensure the provision and long-term availability within the Union’s territory and worldwide uninterrupted access to secure, autonomous, high-quality, reliable and cost-effective satellite governmental communication services to government-authorised users, by establishing a multi-orbital, secure connectivity system under civil control and by supporting the protection of critical infrastructures"
+    page: 15
+    clause: "Article 3(1)(a)"
+    topic: critical_infrastructure
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Mandates uninterrupted satellite connectivity for government-authorized users to protect critical infrastructures and support crisis response."
+  - quote: "increase the robustness of the Union’s and the Member States’ communication services and the cyber resilience of the Union, by developing redundancy, passive, proactive and reactive cyber protection and operational cybersecurity and protective measures against cyber threats and other measures against electromagnetic threats;"
+    page: 15
+    clause: "Article 3(2)(e)"
+    topic: space_cyber
+    gap: GAP-IN-09
+    supports: global_example
+    why: "Requires satellite communication networks to deploy redundancy, proactive cyber defense, and resilience against electromagnetic and cyber threats."
+  - quote: "improve the resilience, security and autonomy of the Union’s and Member States’ communication services;"
+    page: 15
+    clause: "Article 3(2)(b)"
+    topic: standards
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Sets core statutory objectives to enhance communication resilience, security, and strategic autonomy across satellite constellations."
+verified: false
+notes: "Regulation establishing the EU secure satellite constellation (IRIS2), providing redundant sovereign satellite connectivity for critical infrastructure."

@@ -1,0 +1,27 @@
+id: in-dot-433mhz-rf-rules-2022
+title: "Use of low power radio frequency devices in the frequency band 433.05 to 434.79 MHz: exemption from licence rules, 2022"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification)
+url: "https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/the-use-of-low-power-radio-frequency-devices-in-the-frequency-band-433.05-to-434.79-mhz-exemption-from-license-rules-2022.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-433mhz-rf-rules-2022.pdf
+sha256: 37155a1a0a8ffe2c7d79fe6935766073695bd215b42b61009a855162a91f906f
+bytes: 1336406
+pages: 8
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "the Central Government hereby makes the following rules"
+issued: 2022-05-09
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: bilingual (Hindi and English)
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Read by keyword check. Licence exemption for low-power RF devices with a non-interference rule (clause 4 defines harmful interference and a direction to relocate or reduce equipment). Relates to spectrum interference, not NTN backhaul or jamming reports, so no gap is linked and no candidate quotes are given. Basis phrase to re-check against the text."

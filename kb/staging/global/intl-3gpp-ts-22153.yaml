@@ -1,0 +1,55 @@
+id: intl-3gpp-ts-22153
+title: '3GPP TS 22.153 V18.2.0 (Release 18): Multimedia Priority Service'
+authority: 3GPP / ETSI (ETSI TS 122 153 V18.2.0)
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/22_series/22.153/22153-i20.zip
+landing_page: https://www.etsi.org/deliver/etsi_ts/122100_122199/122153/18.02.00_60/ts_122153v180200p.pdf
+local_path: corpus/raw/global/intl-3gpp-ts-22153.pdf
+sha256: 18a7e6797cf7727b71665627e3a7fc150ccf9a3367a620a5f713b2f9efb62c58
+bytes: 224679
+pages: 30
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: unclear
+binding_basis: not stated in the document (3GPP technical specification; legal status as voluntary consensus standard not
+  stated in the text)
+issued: 2024-05-21
+in_force_from: 2024-05-21
+amends: []
+amended_by: []
+licence: 3GPP open standard
+language: en
+gaps:
+- GAP-IN-03
+role: global_example
+candidate_quotes:
+- quote: Upon invocation of MPS, the system shall provide preferential treatment for access and core network resources associated
+    with the session (i.e., signalling and media bearer related resources within a domain and across domains), including,
+    when applicable, priority treatment towards an enterprise network supporting MPS.
+  page: 9
+  clause: Clause 5.1
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: global_example
+  why: Mandates end-to-end preferential resource allocation for signalling and media bearers during Multimedia Priority Service
+    sessions.
+- quote: A Service User is assigned a priority level by a regional/national authority i.e., agency authorised to issue priority
+    levels.
+  page: 9
+  clause: Clause 5.1
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: global_example
+  why: Affirms that priority levels are authoritative assignments governed by designated national regulatory and emergency
+    management agencies.
+- quote: Pre-emption of active sessions shall be subject to regional/national regulatory requirements.
+  page: 9
+  clause: Clause 5.1
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: global_example
+  why: Conditions session pre-emption upon national telecommunications regulatory frameworks and emergency priority rules.
+verified: false
+notes: 3GPP Release 18 specification TS 22.153 V18.2.0 transposed by ETSI as ETSI TS 122 153 V18.2.0.

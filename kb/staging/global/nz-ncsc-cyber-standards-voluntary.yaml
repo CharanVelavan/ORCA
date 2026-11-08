@@ -1,0 +1,29 @@
+id: nz-ncsc-cyber-standards-voluntary
+title: Voluntary Cyber Security Standards for Critical National Infrastructure
+authority: National Cyber Security Centre (NCSC New Zealand)
+jurisdiction: NZ
+doc_type: guideline
+url: https://www.ncsc.govt.nz/assets/NCSC-Documents/NCSC-Cyber-Security-Governance.pdf
+landing_page: https://www.ncsc.govt.nz
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2022
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed URL failed with curl rc=56 (connection reset) on 3 attempts.

@@ -1,0 +1,48 @@
+id: us-nist-sp800-160v2-2021
+title: "Developing Cyber-Resilient Systems: A Systems Security Engineering Approach (NIST SP 800-160 Vol. 2 Rev. 1)"
+authority: National Institute of Standards and Technology (NIST)
+jurisdiction: US
+doc_type: technical_standard
+url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v2r1.pdf
+landing_page: https://csrc.nist.gov/pubs/sp/800/160/v2/r1/final
+local_path: corpus/raw/global/us-nist-sp800-160v2-2021.pdf
+sha256: d3e9830faadfd1e7a43392194320c5203935c3d7f30f78896b55a8a53e0f0b15
+bytes: 5201396
+pages: 310
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "Organizations can select, adapt, and use some or all of the cyber resiliency constructs (i.e., goals, objectives, techniques, approaches, and design principles) described in this publication"
+issued: 2021-12-09
+in_force_from: 2021-12-09
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-08, GAP-IN-09]
+role: global_example
+candidate_quotes:
+  - quote: "The four cyber resiliency goals, which are common to many resilience definitions, are included in the definition and the cyber resiliency engineering framework to provide linkage between risk management decisions at the system level, the mission and business process level, and the organizational level."
+    page: 25
+    clause: "Section 2.1.1"
+    topic: standards
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Links high-level organizational cyber resiliency goals (anticipate, withstand, recover, adapt) directly to engineering architecture."
+  - quote: "Adverse conditions can include natural disasters and structural failures (e.g., power failures). Stresses can include unexpectedly high-performance loads."
+    page: 26
+    clause: "Section 2.1.1 (Table 2)"
+    topic: backup_power
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Explicitly includes structural grid power failures and disaster stresses within the scope of cyber-resiliency adversity."
+  - quote: "The following 14 techniques are part of the cyber resiliency engineering framework: 1. Adaptive Response: Implement agile courses of action to manage risks. 2. Analytic Monitoring: Monitor and analyze a wide range of properties and behaviors on an ongoing basis and in a coordinated way."
+    page: 29
+    clause: "Section 2.1.3"
+    topic: failover_path_security
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Details standard systems security engineering techniques for active failover, dynamic response, and coordinated monitoring."
+verified: false
+notes: "Definitive NIST engineering handbook for designing cyber-resilient systems across adverse and contested environments."

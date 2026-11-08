@@ -1,0 +1,30 @@
+id: ca-cccs-itsp-10-020-cii
+title: Cyber Security Guidance for Critical Infrastructure (ITSP.10.020)
+authority: Canadian Centre for Cyber Security
+jurisdiction: CA
+doc_type: guideline
+url: https://www.cyber.gc.ca/sites/default/files/2023-01/ITSP.10.020-eng.pdf
+landing_page: https://www.cyber.gc.ca
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2023-01-10'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-06
+- GAP-IN-08
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed URL failed with curl rc=56 on 3 attempts.

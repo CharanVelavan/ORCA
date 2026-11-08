@@ -1,0 +1,58 @@
+id: uk-space-agency-cyber-toolkit
+title: Cyber Security Toolkit for Space
+authority: UK Space Agency
+jurisdiction: UK
+doc_type: guideline
+url: https://www.gov.uk/government/publications/cyber-security-toolkit
+landing_page: https://www.gov.uk/government/publications/cyber-security-toolkit
+local_path: corpus/raw/global/uk-space-agency-cyber-toolkit.html
+sha256: df3a9e899c03417b683c3c18f25576b6c9b25a385dd66e79d40aa2675b26c128
+bytes: 69111
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2023
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Open Government Licence v3.0
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: Cyber Security Toolkit - GOV.UK Cookies on GOV.UK We use some essential cookies
+    to make this website work.
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-06
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: Search GOV.UK Search Search GOV.UK Search Home Business and industry Science
+    and innovation Guidance Cyber Security Toolkit Guidance on cyber security for
+    space assets.
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-06
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: 'From: UK Space Agency Published: 19 May 2020 Last updated: 9 February 2021
+    &#8212;'
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-06
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long
+  lines (2000), with CRLF, LF line terminators; extracted text length 4310'

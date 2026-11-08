@@ -1,0 +1,34 @@
+id: in-tn-cyber-security-policy-2020
+title: Tamil Nadu Cyber Security Policy (2020)
+authority: Government of Tamil Nadu (CERT-TN)
+jurisdiction: IN-TN
+doc_type: policy
+url: https://www.karuvoolam.tn.gov.in/documents/45087/23785221/TN_Cyber_Security_policy_2020.pdf/6323367f-1608-1d6e-d70e-e811fba9c61b?t=1703084786652
+landing_page: https://www.tn.gov.in/
+sha256: 082994fd981e2f51e1a1cb93ad3fe8371c138a629d4dd93a324f3ca42914379b
+bytes: 3115236
+pages: 40
+local_path: corpus/raw/india/in-tn-cyber-security-policy-2020.pdf
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2020'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: india_evidence
+candidate_quotes:
+- quote: The helpdesk shall intake report for Incident, Artifact or Vulnerability only through the approved channels of CERT-TN.
+  page: 30
+  clause: Clause 3.2
+  topic: incident_reporting
+  gap: null
+  supports: context
+  why: Shows the state CERT channel for incident intake, the state-level counterpart to CERT-In reporting.
+verified: false
+notes: Read by keyword check (40 pages). State policy with a CERT-TN helpdesk for incidents. Advisory per the list; binding not stated. Joint-command and state coordination are only partly covered and are not linked to GAP-IN-07 here.

@@ -1,0 +1,48 @@
+id: itu-tampere-convention-1998
+title: "Tampere Convention on the Provision of Telecommunication Resources for Disaster Mitigation and Relief Operations (1998)"
+authority: United Nations & International Telecommunication Union (ITU)
+jurisdiction: International
+doc_type: treaty
+url: https://treaties.un.org/doc/Publication/UNTS/Volume%202296/v2296.pdf
+landing_page: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXV-4&chapter=25&clang=_en
+local_path: corpus/raw/global/itu-tampere-convention-1998.pdf
+sha256: 7d3fc88ae299ec112255749186998a97de8dc089061c387996050d4f23403118
+bytes: 5283847
+pages: 364
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "The States Parties shall cooperate among themselves and with non-State entities and intergovernmental organizations"
+issued: 1998-06-18
+in_force_from: 2005-01-08
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-03, GAP-IN-04]
+role: global_example
+candidate_quotes:
+  - quote: "The States Parties shall cooperate among themselves and with non-State entities and intergovernmental organizations, in accordance with the provisions of this Convention, to facilitate the use of telecommunication resources for disaster mitigation and relief."
+    page: 57
+    clause: "Article 3.1"
+    topic: disaster_coordination
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Mandates international state cooperation with private and intergovernmental entities for emergency disaster telecommunication deployment."
+  - quote: "the deployment of terrestrial and satellite telecommunication equipment to predict, monitor and provide information concerning natural hazards, health hazards and disasters;"
+    page: 57
+    clause: "Article 3.2(a)"
+    topic: emergency_powers
+    gap: GAP-IN-03
+    supports: global_example
+    why: "Explicitly authorizes rapid operational deployment of satellite and terrestrial communication infrastructure for hazard monitoring."
+  - quote: "The States Parties shall, when possible, and in conformity with their national law, reduce or remove regulatory barriers to the use of telecommunication resources for disaster mitigation and relief, including to the provision of telecommunication assistance."
+    page: 62
+    clause: "Article 9.1"
+    topic: backup_power
+    gap: GAP-IN-04
+    supports: global_example
+    why: "Obligates signatory nations to waive customs, licensing, and spectrum barriers impeding emergency relief communications."
+verified: false
+notes: "Target list cited UNTS Volume 2299; authentic registration is UNTS Volume 2296, Registration No. 40906, entering into force 8 January 2005."

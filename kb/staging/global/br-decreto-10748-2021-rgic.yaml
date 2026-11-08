@@ -1,0 +1,29 @@
+id: br-decreto-10748-2021-rgic
+title: 'Decreto nº 10.748, de 16 de julho de 2021: Institui a Rede Federal de Gestão de Incidentes Cibernéticos'
+authority: Presidência da República
+jurisdiction: BR
+doc_type: regulation
+url: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/decreto/d10748.htm
+landing_page: https://www.gov.br/gsi
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2021-07-16'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+role: context
+candidate_quotes: []
+verified: false
+notes: Planalto.gov.br connection reset (TLS) from this environment on 3 attempts; HTTP 1.1 retry also failed. Not obtained; retry later from another network.

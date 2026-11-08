@@ -1,0 +1,29 @@
+id: au-space-launches-returns-act-2018
+title: Space (Launches and Returns) Act 2018
+authority: Parliament of Australia
+jurisdiction: AU
+doc_type: act
+url: https://www.legislation.gov.au/C2018A00109/latest/text
+landing_page: https://www.legislation.gov.au/C2018A00109/latest/text
+local_path: corpus/raw/global/au-space-launches-returns-act-2018.html
+sha256: b076e6ad49ec01e527df075b61d2372a1ff45ca8de344e03578878f71b9bac33
+bytes: 78560
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '2018-08-31'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-09
+role: global_example
+candidate_quotes: []
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long
+  lines (37467); text length 1524'

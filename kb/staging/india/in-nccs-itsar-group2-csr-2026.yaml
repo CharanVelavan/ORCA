@@ -1,0 +1,30 @@
+id: in-nccs-itsar-group2-csr-2026
+title: ITSAR for Group-II Devices (Common Security Requirements)
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR002022601.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-group2-csr-2026.pdf
+sha256: 480f37be9a5d67425347e03b68839b41aa1d3775d742022e3ba5d9307adacb74
+bytes: 783343
+pages: 55
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2026-01-29'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for Group-II Devices (Common Security Requirements) under MTCTE.
+  No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours
+  floor, or incident reporting clocks).

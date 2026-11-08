@@ -1,0 +1,32 @@
+id: uk-dsit-iot-code-practice
+title: Code of Practice for Consumer IoT Security
+authority: Department for Digital, Culture, Media & Sport
+jurisdiction: UK
+doc_type: guideline
+url: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/778158/Code_of_Practice_for_Consumer_IoT_Security_October_2018.pdf
+landing_page: https://www.gov.uk/government/publications/code-of-practice-for-consumer-iot-security
+local_path: corpus/raw/global/uk-dsit-iot-code-practice.pdf
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: false
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2018-10-14'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Open Government Licence v3.0
+language: en
+gaps:
+- GAP-IN-06
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts:  Time  Current\n                \
+  \                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0\
+  \     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0    41   \
+  \ 0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56)\
+  \ The requested URL returned error: 404"

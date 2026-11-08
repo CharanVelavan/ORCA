@@ -1,0 +1,54 @@
+id: intl-3gpp-ts-23502
+title: '3GPP TS 23.502 V18.5.0 (Release 18): Procedures for the 5G System (5GS); Stage 2'
+authority: 3GPP / ETSI (ETSI TS 123 502 V18.5.0)
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/23_series/23.502/23502-i50.zip
+landing_page: https://www.etsi.org/deliver/etsi_ts/123500_123599/123502/18.05.00_60/ts_123502v180500p.pdf
+local_path: corpus/raw/global/intl-3gpp-ts-23502.pdf
+sha256: 142cd76186d31c24923b24cda57d91ae1132676caeec4ca2f134a3ab7607b30b
+bytes: 8281580
+pages: 926
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: unclear
+binding_basis: not stated in the document (3GPP technical specification; legal status as voluntary consensus standard not
+  stated in the text)
+issued: 2024-05-22
+in_force_from: 2024-05-22
+amends: []
+amended_by: []
+licence: 3GPP open standard
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-05
+- GAP-IN-06
+role: global_example
+candidate_quotes:
+- quote: With NR satellite access, more than one TAC can be indicated to a UE for each PLMN in any cell.
+  page: 32
+  clause: Clause 4.2.2.2.1 NOTE 1
+  topic: standards
+  gap: GAP-IN-05
+  supports: global_example
+  why: Specifies tracking area configuration rules for user terminals connected via satellite (emulated NTN) cells.
+- quote: Disaster Roaming Initial Registration, as specified in clause 5.40 of TS 23.501 [2]; or
+  page: 32
+  clause: Clause 4.2.2.2.1
+  topic: failover_path_security
+  gap: GAP-IN-06
+  supports: global_example
+  why: Defines registration procedures enabling terminals in a disaster-affected network to establish connectivity on an alternate
+    PLMN.
+- quote: Disaster Roaming Mobility Registration Update, as specified in clause 5.40 of TS 23.501 [2]; or
+  page: 32
+  clause: Clause 4.2.2.2.1
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: global_example
+  why: Specifies mobility tracking update mechanisms for subscribers roaming onto backup carriers during disaster conditions.
+verified: false
+notes: 3GPP Release 18 specification TS 23.502 V18.5.0 transposed by ETSI as ETSI TS 123 502 V18.5.0. All NTN links in testbeds
+  are emulated.

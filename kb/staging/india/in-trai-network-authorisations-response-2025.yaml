@@ -1,0 +1,34 @@
+id: in-trai-network-authorisations-response-2025
+title: "TRAI Recommendations on the Terms and Conditions of Network Authorisations under the Telecommunications Act, 2023 (response to back-reference, 2025)"
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendations
+url: "https://www.trai.gov.in/sites/default/files/2025-08/Response_13082025.pdf"
+landing_page: https://www.trai.gov.in/
+local_path: corpus/raw/india/in-trai-network-authorisations-response-2025.pdf
+sha256: bf9145a22035726172726a7f8f48d59afbfe21bbb3501661751c125c7b140c36
+bytes: 6629467
+pages: 132
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: 2025-08-13
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: india_evidence
+candidate_quotes:
+  - quote: "interest of the security of the State, the Central Government should seek TRAI’s"
+    page: 12
+    clause: "Recommendation on network authorisation conditions (clause not identified)"
+    topic: emergency_powers
+    gap: null
+    supports: context
+    why: "TRAI recommends the government consult it before acting on network authorisations in the interest of State security, a consultation step in emergency powers."
+verified: false
+notes: "TRAI recommendations in response to a 2025 back-reference (about 132 pages), advisory. Satellite and security mentions are heavy but mostly network-authorisation terms. The quote covers the consultation step for State-security actions. No gap is closed."

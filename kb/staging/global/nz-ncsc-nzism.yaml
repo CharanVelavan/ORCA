@@ -1,0 +1,30 @@
+id: nz-ncsc-nzism
+title: New Zealand Information Security Manual (NZISM)
+authority: Government Communications Security Bureau / NCSC
+jurisdiction: NZ
+doc_type: standard
+url: https://www.nzism.gcsb.govt.nz/assets/Uploads/NZISM-PDF/NZISM-Full-Document-v3.8.pdf
+landing_page: https://www.nzism.gcsb.govt.nz/
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2023
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-04
+- GAP-IN-06
+- GAP-IN-08
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed URL returned a 212-byte response with no text (after 3 attempts). Not obtained.

@@ -1,0 +1,61 @@
+id: uk-ofcom-backup-power-emergency-guidance
+title: Guidance on measures to protect access to emergency organisations when there
+  is a power cut at the customer's premises
+authority: Office of Communications
+jurisdiction: UK
+doc_type: guideline
+url: https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/114208-emergency-access-during-power-cuts/associated-documents/guidance-emergency-access-power-cut.pdf
+landing_page: https://www.ofcom.org.uk
+local_path: corpus/raw/global/uk-ofcom-backup-power-emergency-guidance.pdf
+sha256: 6390af8890939de90f3240efa01b6df977fabaea45d92af67488ee60b8a19802
+bytes: 1027906
+pages: 55
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2018-10-24'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Open Government Licence v3.0
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-04
+role: global_example
+candidate_quotes:
+- quote: 'Protecting access to emergency organisations when there is a power cut at
+    the customer’s premises Guidance on General Condition A3.2(b) Publication Date:
+    10 October 2018 About this document A critically important function of the telephone
+    network is to allow people to contact the emergency services.'
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-03
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: For this reason, there is a regulatory obligation on communications providers
+    (providers) in General Condition A3 to take all necessary measures to ensure uninterrupted
+    access to emergency organisations for their customers.
+  page: 2
+  clause: not identified
+  topic: other
+  gap: GAP-IN-03
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: Instead, the guidance sets out Ofcom’s expectations on the measures they
+    should have in place to ensure customers making calls over broadband are able
+    to make emergency calls in the event of a power cut at their premises.
+  page: 2
+  clause: not identified
+  topic: other
+  gap: GAP-IN-03
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: PDF document, version 1.7, 55 pages; text length 171212'

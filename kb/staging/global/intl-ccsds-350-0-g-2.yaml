@@ -1,0 +1,30 @@
+id: intl-ccsds-350-0-g-2
+title: The Application of CCSDS Protocols to Secure Systems (CCSDS 350.0-G-2)
+authority: Consultative Committee for Space Data Systems
+jurisdiction: INTL
+doc_type: guideline
+url: https://ccsds.org/Pubs/350x0g2s.pdf
+landing_page: https://public.ccsds.org/Pubs/
+local_path: corpus/raw/global/intl-ccsds-350-0-g-2.pdf
+sha256: 9181aab44b1d1e85ee9614952c40d4cf4e537474ee22446ace552e8da6220912
+bytes: 961374
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: CCSDS 350.0-G-2
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+- GAP-IN-09
+role: context
+candidate_quotes: []
+verified: false
+notes: Informational guide on applying CCSDS protocols to secure systems (p. 39 sampled). No quote taken.

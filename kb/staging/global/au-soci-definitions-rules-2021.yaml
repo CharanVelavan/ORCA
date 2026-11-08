@@ -1,0 +1,30 @@
+id: au-soci-definitions-rules-2021
+title: Security of Critical Infrastructure (Definitions) Rules (LIN 21/039) 2021
+authority: Minister for Home Affairs
+jurisdiction: AU
+doc_type: rules
+url: https://www.legislation.gov.au/F2021L01708/latest/text
+landing_page: https://www.legislation.gov.au/F2021L01708/latest/text
+local_path: corpus/raw/global/au-soci-definitions-rules-2021.html
+sha256: 72b62543ba12f0e37dba2ccbaa584ca691261b66c8f7cf33d2db9ff3110d68ed
+bytes: 83260
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '2021-12-02'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-06
+role: global_example
+candidate_quotes: []
+verified: false
+notes: 'Downloaded type: HTML document text, ASCII text, with very long lines (38196);
+  text length 1982'

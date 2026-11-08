@@ -1,0 +1,37 @@
+id: in-trai-cp-qos-standards-review-2023
+title: Consultation Paper on Review of Quality-of-Service Standards for Access Services and Broadband Services
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/CP_18082023_0.pdf
+landing_page: https://trai.gov.in/telecom/qos
+local_path: corpus/raw/india/in-trai-cp-qos-standards-review-2023.pdf
+sha256: 86093e35ce832a3eb094959aed13b85a8d5037dd70640c1e7cf7b09b64a400af
+bytes: 2084551
+pages: 149
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2023-08-18'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-04
+role: context
+candidate_quotes:
+- quote: Stakeholders are requested to submit their comments, preferably in electronic form, on TRAI website in the specified
+    template
+  clause: Preface
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: context
+  why: Consults on revising quality-of-service standards, reporting timelines, and network availability thresholds.
+  page: 2
+verified: false
+notes: TRAI consultation paper on comprehensive review of quality-of-service standards for access and broadband.

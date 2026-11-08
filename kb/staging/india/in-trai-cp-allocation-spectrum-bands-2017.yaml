@@ -1,0 +1,36 @@
+id: in-trai-cp-allocation-spectrum-bands-2017
+title: TRAI Consultation Paper No. 10/2017 on Auction of Spectrum in 700 MHz, 800 MHz, 900 MHz, 1800 MHz, 2100 MHz, 2300 MHz,
+  2500 MHz, 3300-3400 MHz and 3400-3600 MHz Bands
+authority: Telecom Regulatory Authority of India
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/Spectrum_CP_28082017.pdf
+landing_page: https://trai.gov.in
+local_path: corpus/raw/india/in-trai-cp-allocation-spectrum-bands-2017.pdf
+sha256: eefd700c69ef791c22dea5483d07c1de68dd23dbd75f98a74443c61b134b9a49
+bytes: 3201245
+pages: 81
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2017-08-28'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+role: india_evidence
+candidate_quotes:
+- quote: Consultation Paper No. 10/2017
+  clause: Title Page
+  topic: priority_routing
+  gap: GAP-IN-03
+  supports: context
+  why: Consults on spectrum auction across 700 MHz, 800 MHz, 1800 MHz, 2100 MHz, 2300 MHz, and 3300-3600 MHz bands.
+  page: 1
+verified: false
+notes: TRAI consultation paper on spectrum auction in multiple access bands.

@@ -1,0 +1,60 @@
+id: eu-commission-reg-2023-894
+title: Commission Delegated Regulation (EU) 2023/894 supplementing Directive (EU)
+  2018/1972 on measures to ensure effective access to emergency services
+authority: European Commission
+jurisdiction: EU
+doc_type: regulation
+url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0894
+landing_page: https://eur-lex.europa.eu/eli/reg_del/2023/894/oj/eng
+local_path: corpus/raw/global/eu-commission-reg-2023-894.html
+sha256: f3d972c7d23e15408388558a22fc268ce555e99ef9a9879fddac5a9cfa0a82d8
+bytes: 13215558
+pages: 1596
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: 2022-12-16
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: EUR-Lex reuse policy
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-03
+role: global_example
+candidate_quotes:
+- quote: To this end, supervisors need to receive meaningful data within reasonable
+    timelines.
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-02
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: In order to ensure that the reporting requirements stay up to date and reflect
+    emerging risks and evolving practices, it is necessary to substantially revise
+    reporting templates provided by Implementing Regulation (EU) 2015/2450.
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-02
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+- quote: Given the extent of the changes, it is appropriate to repeal Implementing
+    Regulation (EU) 2015/2450. (2) Cross border business is not intrinsically riskier
+    but it adds another layer of complexity.
+  page: 1
+  clause: not identified
+  topic: other
+  gap: GAP-IN-02
+  supports: global_example
+  why: Relevant wording located in extracted text; confirm clause and legal effect
+    against the document.
+verified: false
+notes: 'Downloaded type: PDF document, version 1.7 (zip deflate encoded); text length
+  5436651'

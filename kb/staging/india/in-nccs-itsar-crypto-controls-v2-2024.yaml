@@ -1,0 +1,48 @@
+id: in-nccs-itsar-crypto-controls-v2-2024
+title: ITSAR for Cryptographic Controls (Version 2.0.0)
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR001962411.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-crypto-controls-v2-2024.pdf
+sha256: dbf83b0c5e739d347c13791c32879ff19dcd58accc08396ffb47424a9400d240
+bytes: 252769
+pages: 15
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2024-11-21'
+in_force_from: '2026-01-01'
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: Telecom network element that complies with the specific ITSAR must adopt the various categories of cryptographic
+    controls.
+  page: 5
+  clause: A) Outline
+  topic: space_cyber
+  gap: null
+  supports: context
+  why: Mandates that all telecom network elements certified under ITSAR adopt specified cryptographic baseline controls.
+- quote: In order to ensure that the Network Element is safe to connect to the Indian telecom Network, National Centre for
+    Communication Security (NCCS), a unit of Department of Telecommunications (DOT) under Ministry of Communications, Government
+    of India specifies the Indian specific Telecom security requirements called Indian Telecom Security Assurance Requirements
+    (ITSAR), for every Telecom Network Element.
+  page: 6
+  clause: Chapter 1 - Overview
+  topic: space_cyber
+  gap: null
+  supports: context
+  why: Articulates NCCS statutory objective to formulate security requirements for connecting network elements to Indian telecom
+    networks.
+verified: false
+notes: Mandates cryptographic baseline algorithms across certified telecom equipment under MTCTE; provides technical context
+  for telecom equipment security baselines.

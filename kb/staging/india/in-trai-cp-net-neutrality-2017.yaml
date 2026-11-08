@@ -1,0 +1,36 @@
+id: in-trai-cp-net-neutrality-2017
+title: Consultation Paper on Net Neutrality
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/CP_NetNeutrality2017_01_04_1.pdf
+landing_page: https://trai.gov.in/telecom/internet-broadband
+local_path: corpus/raw/india/in-trai-cp-net-neutrality-2017.pdf
+sha256: bebac216a99dc9cd97c032e0b01227a22b5ec8b33ec9afa5fa56bfdf75630cfd
+bytes: 456049
+pages: 65
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2017-01-04'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-08
+role: context
+candidate_quotes:
+- quote: Stakeholders are requested to send their written comments, preferably in electronic form, by 15th of February 2017
+  clause: Preface
+  topic: priority_routing
+  gap: GAP-IN-03
+  supports: context
+  why: Consults on core net neutrality principles, non-discriminatory traffic treatment, and emergency service prioritization.
+  page: 2
+verified: false
+notes: TRAI comprehensive consultation paper on Net Neutrality.

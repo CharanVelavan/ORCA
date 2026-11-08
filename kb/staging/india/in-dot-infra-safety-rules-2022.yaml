@@ -1,0 +1,27 @@
+id: in-dot-infra-safety-rules-2022
+title: "Indian Telegraph (Infrastructure Safety) Rules, 2022"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification)
+url: "https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/Indian%20Telegraph%20%28Infrastructure%20Safety%29%20Rules%2C%202022.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-infra-safety-rules-2022.pdf
+sha256: 6756ebf5b34b638e1bd16e36bcb17fe924ef050d2c25bea348af69d57c5b04b1
+bytes: 1493535
+pages: 3
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "the Central Government hereby makes the following rules, namely"
+issued: 2022
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Physical safety of telecom infrastructure works (keyword check: no cyber, satellite or emergency clause). No candidate quotes."

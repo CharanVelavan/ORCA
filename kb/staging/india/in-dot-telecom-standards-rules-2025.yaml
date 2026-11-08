@@ -1,0 +1,72 @@
+id: in-dot-telecom-standards-rules-2025
+title: Telecommunications (Framework to Notify Standards, Conformity Assessment and Certification) Rules, 2025
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/downloaddocument_mtcte_standards-may25-1.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-telecom-standards-rules-2025.pdf
+sha256: 1cb4dff8a48c2b35857c1b9020093bef1d5440d16b2dfedf1963d40857402912
+bytes: 1993616
+pages: 9
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: the Central Government hereby makes the following rules, namely:– 1. Short title and commencement.– (1) These
+  rules may be called the Telecommunications (Framework to Notify Standards, Conformity Assessment and Certification) Rules,
+  2025.
+issued: 2025-05-16
+in_force_from: 2025-05-16
+amends: []
+amended_by: []
+licence: Government of India open (terms not checked)
+language: bilingual
+gaps:
+- GAP-IN-06
+- GAP-IN-09
+role: india_evidence
+candidate_quotes:
+- quote: These rules may be called the Telecommunications (Framework to Notify Standards, Conformity Assessment and Certification)
+    Rules, 2025.
+  page: 6
+  clause: Rule 1(1)
+  topic: standards
+  gap: GAP-IN-06
+  supports: answers_gap
+  why: Promulgates the framework rules for notifying telecommunication standards, conformity assessment and equipment certification
+    under Section 19.
+- quote: No telecommunication equipment to which a standard applies, shall be sold or deployed in any telecommunication network,
+    or otherwise be used in India, unless it has a valid Certificate of Conformity Assessment.
+  page: 8
+  clause: Rule 8(2)
+  topic: standards
+  gap: GAP-IN-06
+  supports: answers_gap
+  why: Mandates that no telecommunication equipment subject to standards may be sold, deployed or used in India without valid
+    certification.
+- quote: An authorised entity or a licensee shall, upon becoming aware that a user of its telecommunication services is using
+    telecommunication equipment that does not have a valid Certificate of Conformity Assessment, issue a notice in writing
+    to such user seeking discontinuance by the user of such telecommunication equipment within a period of seven days from
+    the date of issuance of the notice.
+  page: 9
+  clause: Rule 10(1)
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: answers_gap
+  why: Requires licensees to serve written notice requiring discontinuance within seven days upon discovering uncertified
+    equipment.
+- quote: Where a user, upon receipt of a notice under sub-rule (1), does not discontinue the use of the uncertified telecommunication
+    equipment within seven days from the date of issuance of such notice, the authorised entity or licensee, shall suspend
+    the telecommunication service or connectivity to the telecommunication network of such user and inform the Central Government
+    in writing of such discontinuance.
+  page: 9
+  clause: Rule 10(2)
+  topic: emergency_powers
+  gap: GAP-IN-06
+  supports: answers_gap
+  why: Directs service suspension for persistent operation of uncertified telecommunication equipment and written notification
+    to the Central Government.
+verified: false
+notes: Notified vide G.S.R. 315(E) on 16 May 2025 under Section 19 read with Section 56(2)(zj) of the Telecommunications Act
+  2023.

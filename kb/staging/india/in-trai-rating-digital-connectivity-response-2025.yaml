@@ -1,0 +1,34 @@
+id: in-trai-rating-digital-connectivity-response-2025
+title: "TRAI Response to Back-Reference on Recommendations on Rating of Buildings or Areas for Digital Connectivity"
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: regulator response (recommendations)
+url: https://trai.gov.in/sites/default/files/2025-05/TRAI_Response_22052025.pdf
+landing_page: https://trai.gov.in/trais-response-back-reference-dated-19032025-received-dot-recommendations-rating-buildings-or-areas
+local_path: corpus/raw/india/in-trai-rating-digital-connectivity-response-2025.pdf
+sha256: 4981e8bbcef74fd919f47ec5503423e4e3fbb497b3160862fb074dfbda3064d7
+bytes: 2985452
+pages: 50
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: 2025-05-22
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes:
+  - quote: "including terrestrial or satellite networks or submarine networks,"
+    page: 11
+    clause: "not identified"
+    topic: other
+    gap: null
+    supports: context
+    why: "Shows TRAI treats satellite networks as part of the connectivity that building ratings cover. The list's claim of power-backup specifications was not found by keyword search."
+verified: false
+notes: "Text extracted (50 pages). Regulator response to a DoT back-reference on rating buildings for digital connectivity. The list's claims of power-backup specifications and non-discriminatory satellite access were not confirmed; only the satellite-networks wording above was found, so it is listed as context. The list's binding label is not supported by the document, so advisory is used."

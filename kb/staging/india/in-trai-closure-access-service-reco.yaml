@@ -1,0 +1,27 @@
+id: in-trai-closure-access-service-reco
+title: "TRAI Recommendations on Closure of Access Service (2017)"
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendations
+url: "https://www.trai.gov.in/sites/default/files/2024-09/Rec_Closure_%20Access_Serv_31072017.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-trai-closure-access-service-reco.pdf
+sha256: 7dc9c0453a5347426f4e87bf5638a354d1c75de2daa59a44d10b1d36aebc3d46
+bytes: 548764
+pages: 22
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: 2017-07-31
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Keyword check: emergency and security mentions only (services closure process). No satellite or cyber-incident clause. No candidate quotes. Advisory to DoT, so the list's advisory label is kept."

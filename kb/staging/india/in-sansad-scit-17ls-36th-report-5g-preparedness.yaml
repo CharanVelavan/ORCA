@@ -1,0 +1,31 @@
+id: in-sansad-scit-17ls-36th-report-5g-preparedness
+title: 'Standing Committee on Communications and Information Technology (17th Lok Sabha) 36th Report: Action Taken on 21st
+  Report on India''s Preparedness for 5G'
+authority: Standing Committee on Communications and Information Technology, Lok Sabha
+jurisdiction: IN
+doc_type: report
+url: https://sansad.in/getFile/lsscommittee/Communications%20and%20Information%20Technology/17_Communications_and_Information_Technology_36.pdf?source=loksabhadocs
+landing_page: https://sansad.in
+local_path: corpus/raw/india/in-sansad-scit-17ls-36th-report-5g-preparedness.pdf
+sha256: f175735ba9b1465526b54f5c7751732bb95b8aebc0d4e388801ec6c4c0e16bd0
+bytes: 582801
+pages: 69
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: false
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2022-03
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Parliamentary standing committee report on India 5G preparedness; consultative and policy review without statutory
+  gap evidence.

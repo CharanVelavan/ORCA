@@ -1,0 +1,28 @@
+id: in-cea-grid-standards-reg-2010
+title: Central Electricity Authority (Grid Standards) Regulations, 2010
+authority: Central Electricity Authority
+jurisdiction: IN
+doc_type: regulation
+url: https://thc.nic.in/Central%20Governmental%20Regulations/Central%20Electricity%20Authority%20(Grid%20Standards)%20Regulations,%202010.pdf
+landing_page: https://cea.nic.in
+local_path: corpus/raw/india/in-cea-grid-standards-reg-2010.pdf
+sha256: 351a8bdd1ec4b0c4ec48d291b162ca4d85381ee01b01aba0d1b499d74a98888e
+bytes: 4610211
+pages: 14
+retrieved_at: '2026-11-08'
+status: scanned
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2010-06-26'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-04
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Text extraction yielded fewer than 200 characters per page; no quotes added.

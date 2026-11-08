@@ -1,0 +1,39 @@
+id: in-trai-direction-ucc-detect-system-2023
+title: Direction on Implementation of UCC Detect System Using AI/ML Technologies
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: direction
+url: https://trai.gov.in/sites/default/files/2024-09/Direction_19072023.pdf
+landing_page: https://trai.gov.in/telecom/consumer-initiatives/unsolicited-commercial-communication
+local_path: corpus/raw/india/in-trai-direction-ucc-detect-system-2023.pdf
+sha256: 130adf62f7346ca9c216cbd756570e1de84498d9239d6e2bf9a84bf26ef573b9
+bytes: 1314623
+pages: 3
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: under section 13, read with sub-clauses (i) and (v) of clause (b) of sub-section (1) of section 11, of the
+  Telecom Regulatory Authority of India Act, 1997
+issued: '2023-07-19'
+in_force_from: July, 2023
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: Direction under section 13, read with sub-clauses (i) and (v) of clause (b) of sub-section (1) of section 11, of
+    the Telecom Regulatory Authority of India Act, 1997 (24 of 1997) regarding implementation of UCC Detect System under Telecom
+    Commercial Communications Customer Preference Regulations, 2018 (6 of 2018).
+  clause: Subject
+  topic: telecom_security
+  gap: null
+  supports: context
+  why: Directs telecom providers to deploy automated AI/ML UCC detection systems to identify rogue spam and cyber fraud.
+  page: 1
+verified: false
+notes: Binding direction under TRAI Act Section 13 requiring deployment of automated UCC Detect systems across access provider
+  networks.

@@ -1,0 +1,39 @@
+id: in-trai-direction-qos-standards-2024
+title: Direction on Standards of Quality of Service of Access and Broadband Service Regulations
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: direction
+url: https://trai.gov.in/sites/default/files/2024-11/Direction_22112024.pdf
+landing_page: https://trai.gov.in/telecom/qos
+local_path: corpus/raw/india/in-trai-direction-qos-standards-2024.pdf
+sha256: c03a9c624424cccd8d0b8d173d75f5cd1c223c009207b45be97cfcd8dfba3fc4
+bytes: 402335
+pages: 8
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: under section 13, read with sub-clauses (i) and (v) of clause (b) of sub-section (1) of section 11, of the
+  Telecom Regulatory Authority of India Act, 1997
+issued: '2024-11-22'
+in_force_from: 22nd November 2024
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-04
+role: india_evidence
+candidate_quotes:
+- quote: under section 13, read with sub-clauses (i) and (v) of clause (b) of sub-section (1) of section 11, of the Telecom
+    Regulatory Authority of India Act, 1997 (24 of 1997), hereby directs all service providers providing access service (wireless),
+    to publish on their website the service wise (2G/ 3G/ 4G/ 5G) geospatial coverage maps
+  clause: Paragraph 9
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: context
+  why: Mandates wireless access service providers to publish geospatial coverage maps for transparency on actual network availability.
+  page: 3
+verified: false
+notes: Binding direction under TRAI Act Section 13 requiring publication of service-wise geospatial coverage maps.

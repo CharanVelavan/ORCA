@@ -1,0 +1,50 @@
+id: in-trai-satellite-low-bit-rate-recommendations
+title: Recommendations on Licensing Framework for Satellite Based Connectivity for Low Bit Rate Applications
+authority: Telecom Regulatory Authority of India
+jurisdiction: IN
+doc_type: consultation
+url: https://www.trai.gov.in/sites/default/files/2024-08/PR_No.38of2021.pdf
+landing_page: https://www.trai.gov.in/node/747
+local_path: corpus/raw/india/in-trai-satellite-low-bit-rate-recommendations.pdf
+sha256: 62c08a5bd37534d218a82f8b1f1142cb99c627029f0d4fe8cdddcdd99a334edc
+bytes: 1374520
+pages: 3
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "The Department of Telecommunications (DoT), through its letter dated 23rd November 2020, has requested TRAI, under section 11(1)(a) of the TRAI Act, to furnish recommendations on Licensing framework to enable the provisioning of Satellite based connectivity for low bit-rate applications for both commercial and captive usage."
+issued: '2021-08-26'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: government_open
+language: en
+gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+role: india_evidence
+candidate_quotes:
+  - quote: "All types of satellite viz. Geo Stationary Orbit (GSO) and Non-GSO (NGSO) satellites and any of the permitted satellite frequency bands may be used for providing satellite-based low-bit-rate connectivity."
+    page: 2
+    clause: "Paragraph 7(b)"
+    topic: space_cyber
+    gap: GAP-IN-09
+    supports: proves_gap
+    why: "Permits both GSO and NGSO satellites across authorized frequency bands for satellite-based connectivity."
+  - quote: "The relevant existing authorizations under Unified Licensing framework may be suitably amended for enabling satellite-based low-bit-rate connectivity."
+    page: 2
+    clause: "Paragraph 7(c)"
+    topic: space_cyber
+    gap: GAP-IN-06
+    supports: proves_gap
+    why: "Recommends amending Unified Licensing framework authorizations to enable satellite-based low-bit-rate connectivity."
+  - quote: "Scope of authorizations of GMPCS service, Commercial VSAT CUG service and NLD service under Unified License and Captive VSAT CUG service license may be suitably amended to include provision of satellite-based low-bit-rate connectivity for IoT devices."
+    page: 2
+    clause: "Paragraph 7(d)"
+    topic: space_cyber
+    gap: GAP-IN-06
+    supports: proves_gap
+    why: "Recommends amending GMPCS, Commercial VSAT, and NLD license scopes for satellite IoT connectivity."
+verified: false
+notes: "Recommendations issued under Section 11(1)(a) of TRAI Act 1997 covering low bit rate satellite IoT and M2M applications."

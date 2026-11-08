@@ -1,0 +1,31 @@
+id: in-nccs-itsar-ip-router-v1-2024
+title: ITSAR for IP Router (Version 1.0.1)
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR201012401.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-ip-router-v1-2024.pdf
+sha256: 15de2fb1a0d177211042cd84546ef1529b29a9aef2a75c54157d3001a9be48f7
+bytes: 1294790
+pages: 41
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2024-01-03'
+in_force_from: '2024-07-01'
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for IP Router (Version 1.0.1) under MTCTE. No clause bears directly
+  on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours floor, or incident
+  reporting clocks).

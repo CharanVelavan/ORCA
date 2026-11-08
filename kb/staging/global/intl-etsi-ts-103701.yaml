@@ -1,0 +1,29 @@
+id: intl-etsi-ts-103701
+title: 'ETSI TS 103 701 V2.1.1: Cyber Security for Consumer Internet of Things: Conformance Assessment of Baseline Requirements'
+authority: European Telecommunications Standards Institute
+jurisdiction: INTL
+doc_type: standard
+url: https://www.etsi.org/deliver/etsi_ts/103700_103799/103701/02.01.01_60/ts_103701v020101p.pdf
+landing_page: https://www.etsi.org
+local_path: corpus/raw/global/intl-etsi-ts-103701.pdf
+sha256: 25afe7ad6273bbf1df96522a1a6f94b6ba4308d01201bef6f1ed134e91c78797
+bytes: 1388145
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: v2.1.1
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+role: context
+candidate_quotes: []
+verified: false
+notes: Conformance assessment test specification for consumer IoT baseline requirements (ETSI TS). Annex-level IXIT tables only; no clause on satellite links or incident reporting found in the sampled pages.
+  No quotes taken.

@@ -1,0 +1,53 @@
+id: eu-5g-cybersecurity-toolbox-2020
+title: 'Cybersecurity of 5G networks: EU Toolbox of risk mitigating measures'
+authority: NIS Cooperation Group (European Commission and Member States)
+jurisdiction: EU
+doc_type: guideline
+url: https://ec.europa.eu/newsroom/dae/document.cfm?doc_id=64468
+landing_page: https://digital-strategy.ec.europa.eu/en/library/cybersecurity-5g-networks-eu-toolbox-risk-mitigating-measures
+local_path: corpus/raw/global/eu-5g-cybersecurity-toolbox-2020.pdf
+sha256: 35166c0a1c00b9e5ab29e22b8ff320d8ec7d557eccd0f6d600b38c0a8a24a5c9
+bytes: 675306
+pages: 45
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: unclear
+binding_basis: not stated in the document (document does not state its legal status; sets out a non-binding coordinated European
+  approach based on Commission Recommendation 2019/534)
+issued: 2020-01-29
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: European Commission reuse policy
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes:
+- quote: Assessing the risk profile of suppliers and applying restrictions for suppliers considered to be high risk - including
+    necessary exclusions to effectively mitigate risks- for key assets;
+  page: 12
+  clause: SM03
+  topic: standards
+  gap: GAP-IN-06
+  supports: global_example
+  why: Recommends assessing supplier risk profiles and imposing exclusions or restrictions on high-risk vendors for critical
+    network assets.
+- quote: Ensuring the application of baseline security requirements (secure network design and architecture);
+  page: 12
+  clause: TM01
+  topic: standards
+  gap: GAP-IN-06
+  supports: global_example
+  why: Requires implementation of baseline network security requirements and secure architectural design.
+- quote: Reinforcing resilience and continuity plans.
+  page: 13
+  clause: TM11
+  topic: failover_path_security
+  gap: GAP-IN-08
+  supports: global_example
+  why: Calls for reinforcing network resilience and continuity plans across electronic communications providers.
+verified: false
+notes: EU Toolbox of risk mitigating measures for 5G networks, addressing high-risk vendor restrictions and network resilience.

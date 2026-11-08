@@ -1,0 +1,27 @@
+id: in-dot-rtr-rules-2025
+title: "Radio Telephone Operator (Restricted) Certificate and Licence Rules, 2025 (under the Bharatiya Vayuyan Adhiniyam, 2024)"
+authority: Central Government (rule-making under the Bharatiya Vayuyan Adhiniyam, 2024; ministry not confirmed from text)
+jurisdiction: IN
+doc_type: rules (gazette notification)
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/rtr-rules-2025.pdf
+landing_page: https://www.eservices.dot.gov.in/
+local_path: corpus/raw/india/in-dot-rtr-rules-2025.pdf
+sha256: eadafed30910817367cd54b32148475a7afde6d57d42ca75b13ecb9b295dd801
+bytes: 953776
+pages: 17
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "the Central Government hereby makes the following rules, namely"
+issued: 2025-06-25
+in_force_from: "on the date of their final publication in the Official Gazette"
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: bilingual (Hindi and English)
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "The list calls this the Telecommunications (Right of Terminal Redirection) Rules, 2025. That is wrong. The document is radio telephone operator certification under the Bharatiya Vayuyan Adhiniyam, 2024 (aviation), with no terminal redirection, routing or cyber-event content. The list's why field is also not supported. No candidate quotes. The title above is from the text and the list's title is not used."

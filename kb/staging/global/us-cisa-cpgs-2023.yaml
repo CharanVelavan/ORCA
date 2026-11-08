@@ -1,0 +1,48 @@
+id: us-cisa-cpgs-2023
+title: "Cross-Sector Cybersecurity Performance Goals (CPGs) Version 2.0"
+authority: Cybersecurity and Infrastructure Security Agency (CISA)
+jurisdiction: US
+doc_type: technical_guidance
+url: https://www.cisa.gov/sites/default/files/2025-12/CPG_Report_2.0_508c.pdf
+landing_page: https://www.cisa.gov/cross-sector-cybersecurity-performance-goals
+local_path: corpus/raw/global/us-cisa-cpgs-2023.pdf
+sha256: 44ace92a275468d1946868855c44cb9d914ef0ce3d6656ebca5c9b9fa879f85e
+bytes: 3720416
+pages: 36
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "The CPGs are streamlined and outcome-driven cybersecurity protections for information technology (IT) and OT environments."
+issued: 2025-12-10
+in_force_from: 2025-12-10
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-06, GAP-IN-08]
+role: global_example
+candidate_quotes:
+  - quote: "The CPGs are streamlined and outcome-driven cybersecurity protections for information technology (IT) and OT environments."
+    page: 3
+    clause: "Background and Context"
+    topic: telecom_cyber_security
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Defines the core purpose of CISA cross-sector performance goals for securing IT and operational technology."
+  - quote: "Simply put, the CPGs are a prioritized subset of IT and OT cybersecurity practices aimed at meaningfully reducing risks to both critical infrastructure operations and the American people."
+    page: 5
+    clause: "What are the CPGs?"
+    topic: critical_infrastructure
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Highlights prioritized, high-impact cybersecurity baseline practices across all critical infrastructure sectors."
+  - quote: "Implement an organization-wide policy that requires changing default manufacturer passwords for all hardware, software, and firmware before connecting them to any internal or external network."
+    page: 19
+    clause: "Goal 3.A (Change Default Passwords)"
+    topic: standards
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Prescribes mandatory changing of default passwords on all hardware, software, and firmware assets."
+verified: false
+notes: "Superseded target list v1.0.1 link with current CPG 2.0 release published by CISA."

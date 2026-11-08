@@ -1,0 +1,27 @@
+id: in-dot-mtcte-procedure
+title: "Mandatory Testing and Certification of Telecommunication Equipment (MTCTE): procedure"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: procedure
+url: "https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/mandatory-testing-and-certification-of-telecommunication-equipment-mtcte.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-mtcte-procedure.pdf
+sha256: 33df0a16f6bf0825566ddecbcb7b77704063cf3a5e0c84417f37f85260d61db9
+bytes: 1257982
+pages: 2
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: unknown
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Read by keyword check only (2 pages). Equipment certification procedure with no satellite, cyber-incident or emergency clause found. The list's binding label is not confirmed: the text states no legal force. No candidate quotes."

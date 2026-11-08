@@ -1,0 +1,36 @@
+id: in-trai-cp-ev-band-spectrum-2023
+title: Consultation Paper on Assignment of Spectrum in E&V Bands, and Spectrum for Microwave Access and Microwave Backbone
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/Consultation_Paper_27092023.pdf
+landing_page: https://trai.gov.in/telecom/spectrum
+local_path: corpus/raw/india/in-trai-cp-ev-band-spectrum-2023.pdf
+sha256: ab2d8ffadd77b9adf7ddfeb602a9bc0a1a487ca2142d6cc05f0fa744f3353676
+bytes: 3036014
+pages: 143
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2023-09-27'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-06
+role: context
+candidate_quotes:
+- quote: Consultation Paper No. 22/ 2023
+  clause: Title Page
+  topic: priority_routing
+  gap: GAP-IN-03
+  supports: context
+  why: Consults on spectrum assignment in E-band and V-band for microwave backhaul connectivity.
+  page: 1
+verified: false
+notes: TRAI consultation paper on assignment of spectrum in E&V bands for microwave access and backbone.

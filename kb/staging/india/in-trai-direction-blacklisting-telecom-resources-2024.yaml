@@ -1,0 +1,38 @@
+id: in-trai-direction-blacklisting-telecom-resources-2024
+title: Direction on Immediate Disconnection and Blacklisting of Entities Sending Malicious Traffic
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: direction
+url: https://trai.gov.in/sites/default/files/2024-09/Direction_13082024.pdf
+landing_page: https://trai.gov.in/telecom/consumer-initiatives/unsolicited-commercial-communication
+local_path: corpus/raw/india/in-trai-direction-blacklisting-telecom-resources-2024.pdf
+sha256: 706c150da3c4f30a6eaf42044084008bf57a55922107e49129f17a012cabe2f8
+bytes: 2554883
+pages: 4
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: under section 13, read with sub clauses (i) and (v) of clause (b) of subsection (1) of section 11, of the Telecom
+  Regulatory Authority of India Act
+issued: '2024-08-13'
+in_force_from: August 13, 2024
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: Direction under section 13, read with sub clauses (i) and (v) of clause (b) of subsection (1) of section 11, of the
+    Telecom Regulatory Authority of India Act, 1997 (24 of 1997) regarding disconnection of all telecom resources and blacklisting
+    of the sender under Telecom Commercial Communications Customer Preference
+  clause: Subject
+  topic: telecom_security
+  gap: null
+  supports: context
+  why: Directs disconnection of telecom resources and blacklisting of entities engaging in unauthorized commercial communications.
+  page: 1
+verified: false
+notes: Binding direction under TRAI Act Section 13 mandating disconnection and blacklisting of malicious telecom entities.

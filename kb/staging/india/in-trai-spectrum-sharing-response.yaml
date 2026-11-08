@@ -1,0 +1,27 @@
+id: in-trai-spectrum-sharing-response
+title: "TRAI Response on Spectrum Sharing"
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: response to back-reference
+url: "https://www.trai.gov.in/sites/default/files/2024-09/Response%20-%20Spectrum%20Sharing%3DFinal.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-trai-spectrum-sharing-response.pdf
+sha256: 551710bbb46880d4da7381fdafdfb637ee179843e29801cf22cd32313ee97509
+bytes: 446691
+pages: 21
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "not stated in the document"
+issued: unknown
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Keyword check: one disaster and two security mentions. Spectrum sharing policy, not an incident or satellite-security rule. No candidate quotes. The issue date is not read from the file."

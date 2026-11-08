@@ -1,0 +1,60 @@
+id: eu-cer-article-13-guidelines-2026
+title: 'Communication from the Commission: Guidelines on the application of Article 13(5) of Directive (EU) 2022/2557 on the
+  resilience of critical entities (C/2026/3712)'
+authority: European Commission
+jurisdiction: EU
+doc_type: guideline
+url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52026XC03712
+landing_page: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52026XC03712
+local_path: corpus/raw/global/eu-cer-article-13-guidelines-2026.pdf
+sha256: db093d8ab18c3c188ad1f28a4849893230d3611e1b90d9ad3bbfae0f54339443
+bytes: 640632
+pages: 13
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: This Communication is not legally binding and does not affect the interpretation of EU law by the Court of
+  Justice of the European Union.
+issued: 2026-07-13
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: EUR-Lex reuse policy
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-03
+- GAP-IN-04
+- GAP-IN-08
+role: global_example
+candidate_quotes:
+- quote: To ensure the continuity of operations, critical entities are encouraged to consider redundancy measures ensuring
+    that essential services continue to be provided when primary systems fail.
+  page: 10
+  clause: Paragraph 66
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: global_example
+  why: Recommends redundancy measures to ensure continuity of essential services during primary system failures.
+- quote: Such measures may include identifying which specific sub-services are most critical so that they are the first to
+    be restored (service prioritisation), maintaining the ability to operate hardware manually if the automated or AI-driven
+    systems fail or are tampered with, and workforce recovery in case of a disruptive incident.
+  page: 10
+  clause: Paragraph 66
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: global_example
+  why: Explicitly recommends service prioritization ladders and maintaining manual overrides when automated or AI-driven systems
+    fail.
+- quote: Alternative sites for disaster recovery can be hot sites (fully equipped for immediate use), warm sites (partially
+    equipped), or cold sites (requiring post-disruption setup).
+  page: 10
+  clause: Paragraph 67
+  topic: failover_path_security
+  gap: GAP-IN-08
+  supports: global_example
+  why: Provides guidance on disaster recovery alternative sites including hot, warm, and cold backup locations.
+verified: false
+notes: European Commission guidance on resilience measures under the CER Directive, addressing service prioritization, AI
+  manual override, and backup sites.

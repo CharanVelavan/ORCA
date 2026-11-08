@@ -1,0 +1,55 @@
+id: in-dot-row-rules-2024
+title: Telecommunications (Right of Way) Rules, 2024
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules
+url: https://eservices.dot.gov.in/sites/default/files/2024-11/Notified_RoW_Rules_18_09.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-row-rules-2024.pdf
+sha256: 12a3e727a063ed389218b0a9e13a2d7a6340ee928859c935d35cbde7ac19485b
+bytes: 2996529
+pages: 33
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "Now, therefore, in exercise of the powers conferred by sub-section (3) of section 11, read with sub-sections (5) and (6) of section 12, read with sub-section (2) of section 15, read with sub-sections (1) and (2) of section 17, read with clauses (n), (o), (p), (q), (r), and (s) of sub-section (2) of section 56 of the Telecommunications Act, 2023 (44 of 2023)"
+issued: 2024-09-17
+in_force_from: 2025-01-01
+amends: []
+amended_by: []
+licence: Government of India open (terms not checked)
+language: bilingual
+gaps: [GAP-IN-04, GAP-IN-08]
+role: india_evidence
+candidate_quotes:
+  - quote: "These rules may be called the Telecommunications (Right of Way) Rules, 2024."
+    page: 20
+    clause: "Rule 1(1)"
+    topic: telecom_cyber_security
+    gap: null
+    supports: context
+    why: "Enacts the Telecommunications (Right of Way) Rules, 2024 under the Telecommunications Act 2023."
+  - quote: "They shall come into force on the 1st day of January, 2025."
+    page: 20
+    clause: "Rule 1(2)"
+    topic: other
+    gap: null
+    supports: context
+    why: "Prescribes 1 January 2025 as the effective commencement date for the Right of Way Rules."
+  - quote: "Where any damage is caused to any existing overground or underground telecommunication network, operated and maintained by a facility provider due to any reason, such facility provider may temporarily establish overground telecommunication network on the public property with a view to prompt restoration of the telecommunication service, by providing in writing, the details of the damage, through the portal, to the relevant public entity which has ownership, control or management over such public property:"
+    page: 26
+    clause: "Rule 10(1)"
+    topic: disaster_coordination
+    gap: GAP-IN-08
+    supports: answers_gap
+    why: "Permits emergency temporary deployment of overground networks on public property without prior consent to ensure prompt restoration."
+  - quote: "The facility provider shall ensure restoration of the affected overground or underground telecommunication network within a period of sixty days, but no later than ninety days from the date of reporting of the damage to the public entity."
+    page: 26
+    clause: "Rule 10(2)"
+    topic: disaster_coordination
+    gap: GAP-IN-08
+    supports: answers_gap
+    why: "Mandates 60 to 90 day final restoration timeline following emergency temporary network establishment."
+verified: false
+notes: "Notified vide G.S.R. 576(E) dated 17 Sep 2024; supersedes the Indian Telegraph Right of Way Rules 2016 from 1 Jan 2025."

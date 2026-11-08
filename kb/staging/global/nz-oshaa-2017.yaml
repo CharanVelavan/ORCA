@@ -1,0 +1,28 @@
+id: nz-oshaa-2017
+title: Outer Space and High-altitude Activities Act 2017
+authority: Parliament of New Zealand
+jurisdiction: NZ
+doc_type: act
+url: https://www.legislation.govt.nz/act/public/2017/0029/latest/whole.html
+landing_page: https://www.legislation.govt.nz/act/public/2017/0029/latest/DLM6966602.html
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2017-07-10'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-09
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed legislation.govt.nz URL returned an empty body (curl rc=0) on 3 attempts.

@@ -1,0 +1,41 @@
+id: intl-3gpp-ts-38331
+title: "3GPP TS 38.331 V18.1.0: NR; Radio Resource Control (RRC) protocol specification"
+authority: 3GPP RAN2
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/38_series/38.331/38331-i10.zip
+landing_page: https://www.3gpp.org/DynaReport/38331.htm
+local_path: corpus/raw/global/intl-3gpp-ts-38331/38331-i10.docx
+sha256: 58cdf26a2aa48c0c24e4f4bcf67fd969ce274d5f571b6418a90537fcc2e7659b
+bytes: 4002052
+pages: 4
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "The present document has not been subject to any approval process by the 3GPP Organizational Partners and shall not be implemented."
+issued: '2024-04-01'
+in_force_from: '2024-04-01'
+amends: []
+amended_by: []
+licence: 3GPP open standard
+language: en
+gaps: []
+role: global_example
+candidate_quotes:
+  - quote: "Upon receiving SIB15, the UE shall:\n1>\tforward the applicable disaster roaming information for each PLMN sharing the cell to upper layers."
+    page: 3
+    clause: "5.2.2.4.17"
+    topic: disaster_coordination
+    gap: null
+    supports: context
+    why: "Specifies terminal behavior upon receiving disaster roaming system information broadcasts from serving cells."
+  - quote: "SIB15 contains configurations of disaster roaming information."
+    page: 3
+    clause: "6.3.1"
+    topic: disaster_coordination
+    gap: null
+    supports: context
+    why: "Defines the System Information Block dedicated to disaster roaming broadcast configurations."
+verified: false
+notes: "Unzipped into corpus/raw/global/intl-3gpp-ts-38331/ (38331-i10.docx) and extracted text to intl-3gpp-ts-38331.txt. Updated status from failed to ok. All NTN links in testbeds are emulated."

@@ -1,0 +1,32 @@
+id: ae-tdra-iar-v1-1
+title: UAE Information Assurance Regulation, Version 1.1
+authority: Telecommunications and Digital Government Regulatory Authority
+jurisdiction: AE
+doc_type: regulation
+url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/UAE-Information-Assurance-Regulation-v1-1-pdf.ashx
+landing_page: https://tdra.gov.ae/en/About/tdra-sectors/telecommunication
+local_path: corpus/raw/global/ae-tdra-iar-v1-1.html
+sha256: 636990f28c97d7f7a2d6816cf1130223472e82d9ccda523a622aa64e0d8f5f41
+bytes: 1197412
+pages: 247
+retrieved_at: '2026-11-08'
+status: skipped
+official_domain: true
+binding_status: not stated
+binding_basis: 'not stated in the document: out of scope (UAE host only, decided 8 Nov)'
+issued: '2020'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-04
+- GAP-IN-06
+- GAP-IN-08
+- GAP-IN-09
+role: global_example
+candidate_quotes: []
+verified: false
+notes: 'Downloaded type: PDF document, version 1.7, 0 pages; text length 698170'
+skipped: out of scope (UAE host only, decided 8 Nov)

@@ -1,0 +1,27 @@
+id: in-parl-it-report-54-digital-payments
+title: "Standing Committee on Communications and IT, Report No. 54 (digital payments)"
+authority: Parliament of India, Standing Committee on Communications and Information Technology
+jurisdiction: IN
+doc_type: parliamentary committee report
+url: "https://sansad.in/getFile/lsscommittee/Communications%20and%20Information%20Technology/17_Communications_and_Information_Technology_54.pdf?source=loksabhadocs"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-parl-it-report-54-digital-payments.pdf
+sha256: 7bec0c11ccf0459b8e574f663ccf3435fc8c08d79c8d005e5bc8381bb23b63c4
+bytes: 1517829
+pages: 60
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: unknown
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Committee report on digital payments. Keyword scan: many cyber and incident mentions, a payments-fraud context rather than telecom. Not binding. No candidate quotes; not checked against the list's claims."

@@ -1,0 +1,58 @@
+id: in-cea-cyber-power-guidelines-2021
+title: Guidelines on Cyber Security in Power Sector 2021
+authority: Central Electricity Authority, Ministry of Power
+jurisdiction: IN
+doc_type: guideline
+url: https://cea.nic.in/whats-new/file?path=%2Fhome%2Fcea_website%2Freports%2Fgeneral%2Fen%2FGuidelines_on_Cyber_Security_in_Power_Sector_2021-1.pdf&mode=view
+landing_page: https://cea.nic.in/
+local_path: corpus/raw/india/in-cea-cyber-power-guidelines-2021.pdf
+sha256: 2f10934e848680cb9854a168414053eb7c18ab137c55bf4cc712a728962a2dbb
+bytes: 567765
+pages: 24
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "The Guidelines on Cyber Security, in the form of Articles written below, requires mandatory Compliance by all Responsible Entities."
+issued: '2021-10-07'
+in_force_from: '2021-10-07'
+amends: []
+amended_by: []
+licence: government_open
+language: en
+gaps:
+  - GAP-IN-01
+  - GAP-IN-02
+  - GAP-IN-08
+role: india_evidence
+candidate_quotes:
+  - quote: "The Guidelines on Cyber Security, in the form of Articles written below, requires mandatory Compliance by all Responsible Entities."
+    page: 3
+    clause: "Section 1.6"
+    topic: standards
+    gap: GAP-IN-06
+    supports: proves_gap
+    why: "Mandates compliance with cybersecurity guidelines for all responsible entities in the power sector."
+  - quote: "The requester and the user shall comply with cyber security guidelines issued by the Central Government, from time to time, and the technical standards for communication system in Power Sector laid down by the Authority."
+    page: 3
+    clause: "Section 2.0"
+    topic: telecom_cyber_security
+    gap: GAP-IN-06
+    supports: proves_gap
+    why: "Requires requesters and users to comply with technical standards and cyber security guidelines for power communication systems."
+  - quote: "The CISO shall ensure that each cyber incident is handled strictly as per Cyber Security Incident Response Plan detailed in the latest C-CMP approved by the Board of Directors."
+    page: 14
+    clause: "Article 10(f)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: proves_gap
+    why: "Mandates handling of cyber incidents strictly in accordance with approved incident response plan."
+  - quote: "The Responsible Entity shall ensure that the CISO compiles details of incident detection, incident handling, learnings from each incident and damage claims made if any and shall report to CERT-In as well as upload information on ISAC-Power Portal."
+    page: 14
+    clause: "Article 10(h)"
+    topic: incident_reporting
+    gap: GAP-IN-01
+    supports: proves_gap
+    why: "Requires incident compiling and reporting to CERT-In and upload to ISAC-Power portal."
+verified: false
+notes: "Document issued under Regulation 10 of CEA Technical Standards for Connectivity to the Grid Amendment Regulations 2019."

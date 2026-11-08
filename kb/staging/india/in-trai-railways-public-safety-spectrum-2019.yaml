@@ -1,0 +1,36 @@
+id: in-trai-railways-public-safety-spectrum-2019
+title: Recommendations on Allotment of Spectrum to Indian Railways for Public Safety and Security
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2024-09/Recommendations_25102019.pdf
+landing_page: https://trai.gov.in/telecom/spectrum
+local_path: corpus/raw/india/in-trai-railways-public-safety-spectrum-2019.pdf
+sha256: 0dd35cc146f12f954a7cb4f9edfaa9e637ccd703b679aed8e227a7f068a22c42
+bytes: 8959808
+pages: 76
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2019-10-25'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+role: india_evidence
+candidate_quotes:
+- quote: Authority recommends that a) Spectrum may be assigned to Indian Railways on administrative basis for captive use
+    only and not to offer any commercial services such as Wi-Fi onboard.
+  clause: Chapter III
+  topic: priority_routing
+  gap: GAP-IN-03
+  supports: proves
+  why: Recommends dedicated administrative spectrum allotment to Indian Railways for mission-critical safety and signaling.
+  page: 47
+verified: false
+notes: TRAI recommendations on allotment of dedicated spectrum to Indian Railways for public safety and mission-critical applications.

@@ -1,0 +1,36 @@
+id: in-trai-cp-v2x-communication-2026
+title: Consultation Paper on the Regulatory Framework for Vehicle-to-Everything (V2X) Communication
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2026-04/CP_30042026.pdf
+landing_page: https://trai.gov.in/telecom/licensing
+local_path: corpus/raw/india/in-trai-cp-v2x-communication-2026.pdf
+sha256: 75fe4291b60f1b3bd688c138ebdcf72d751bc4a05b447368c730d5d13a244966
+bytes: 26312792
+pages: 263
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2026-04-30'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-06
+role: context
+candidate_quotes:
+- quote: Consultation Paper No. 08/2026
+  clause: Title Page
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: context
+  why: Consults on regulatory framework and spectrum allocation for vehicle-to-everything (V2X) safety and emergency communications.
+  page: 1
+verified: false
+notes: TRAI consultation paper on the regulatory framework for vehicle-to-everything (V2X) communications.

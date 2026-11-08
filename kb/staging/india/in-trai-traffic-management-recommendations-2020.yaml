@@ -1,0 +1,38 @@
+id: in-trai-traffic-management-recommendations-2020
+title: Recommendations on Traffic Management Practices (TMPs) and Multi-Stakeholder Body for Net Neutrality
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2024-11/Recommendations_22092020.pdf
+landing_page: https://trai.gov.in/telecom/internet-broadband
+local_path: corpus/raw/india/in-trai-traffic-management-recommendations-2020.pdf
+sha256: 2d6db4c894de6d55a49c292ecce563a4aceca0886731083fe3ad04ccc4114100
+bytes: 513674
+pages: 55
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2020-09-22'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: Authority recommends that the DoT may define the process for creation and maintenance of a repository of reasonable
+    TMPs (Traffic Management Practices).
+  clause: Chapter III
+  topic: priority_routing
+  gap: GAP-IN-03
+  supports: proves
+  why: Recommends establishing a regulatory repository of reasonable traffic management practices governing prioritization
+    and congestion.
+  page: 43
+verified: false
+notes: TRAI recommendations on traffic management practices and multi-stakeholder body monitoring net neutrality.

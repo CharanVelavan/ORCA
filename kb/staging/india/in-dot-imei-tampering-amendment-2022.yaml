@@ -1,0 +1,27 @@
+id: in-dot-imei-tampering-amendment-2022
+title: "Prevention of Tampering of the Mobile Device Equipment Identification Number (Amendment) Rules, 2022"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification)
+url: "https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/the-prevention-of-tampering-of-the-mobile-device-equipment-identification-number-amendment-rules-2022.pdf"
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-imei-tampering-amendment-2022.pdf
+sha256: c08fcea2fbff3e94f5e6438032c0db7629b84cf0bbed85e170badada38d56e5e
+bytes: 1059163
+pages: 2
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "the Central Government hereby makes the following rules"
+issued: 2022
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: "Adds a rule on IMEI tampering. Device identity, not network security or NTN. Keyword check found no satellite or emergency clause. No candidate quotes."

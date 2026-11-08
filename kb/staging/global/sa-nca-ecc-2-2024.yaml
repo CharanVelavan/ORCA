@@ -1,0 +1,3 @@
+id: sa-nca-ecc-2-2024
+status: failed
+notes: "curl failed (curl rc=28) for https://nca.gov.sa/ecc-en.pdf"

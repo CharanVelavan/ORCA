@@ -1,0 +1,36 @@
+id: in-tec-mtcte-applicant-instructions
+title: Instructions for Applicant for MTCTE Certification
+authority: Telecommunication Engineering Centre (TEC)
+jurisdiction: IN
+doc_type: guideline
+url: https://mtcte.tec.gov.in/images/UserInstructions.pdf
+landing_page: https://mtcte.tec.gov.in
+local_path: corpus/raw/india/in-tec-mtcte-applicant-instructions.pdf
+sha256: 47b5178b3d5a61887281ed4c76bb2979304acf3c15a6e3bc20d2596d4144d56b
+bytes: 2405240
+pages: 30
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2022'
+in_force_from: December, 2018
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: The objective of this document is to describe the functioning of MTCTE portal and facilitate the manufacturers/ importers/
+    dealers, who intend to get their telecom equipment certified, in submitting their application for certification.
+  clause: 1.0 Scope
+  topic: certification_procedure
+  gap: null
+  supports: context
+  why: Defines portal guidance for equipment vendors seeking MTCTE certification from TEC.
+  page: 3
+verified: false
+notes: User instructions for MTCTE applicant portal submission; administrative guidance without substantive technical standards.

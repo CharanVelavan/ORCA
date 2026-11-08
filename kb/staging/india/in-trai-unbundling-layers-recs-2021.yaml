@@ -1,0 +1,37 @@
+id: in-trai-unbundling-layers-recs-2021
+title: Recommendations on Enabling Unbundling of Different Layers Through Differential Licensing
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2024-09/Recommendation_19082021.pdf
+landing_page: https://trai.gov.in/telecom/licensing
+local_path: corpus/raw/india/in-trai-unbundling-layers-recs-2021.pdf
+sha256: 167c7d7d07d18135561246c101cd7472b98fb86fe99a4a40718fee83d0adf32b
+bytes: 1116915
+pages: 73
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2021-08-19'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: A separate authorization under Unified License should be created for Access Network Provider (network layer) to provide
+    network services on wholesale basis.
+  clause: Chapter II Paragraph 2.1
+  topic: unbundling
+  gap: null
+  supports: context
+  why: Recommends structural unbundling by creating a distinct Access Network Provider authorization for wholesale network
+    layers.
+  page: 27
+verified: false
+notes: TRAI recommendations on unbundling network layers and service provision to enhance structural network efficiency.

@@ -1,0 +1,30 @@
+id: uk-ncsc-annual-review-space-2023
+title: 'NCSC Annual Review 2023: Case Study on Russia and Space/Satellite Infrastructure'
+authority: National Cyber Security Centre
+jurisdiction: UK
+doc_type: report
+url: https://www.ncsc.gov.uk/collection/annual-review-2023/threats-risks/case-study-russia
+landing_page: https://www.ncsc.gov.uk
+local_path: corpus/raw/global/uk-ncsc-annual-review-space-2023.html
+sha256: 185f8cf4d667d5463b74bb90184a5a861bf82e136902d78e940f49a3778e3d8f
+bytes: 240667
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2023-11-14'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Open Government Licence v3.0
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-09
+role: context
+candidate_quotes: []
+verified: false
+notes: 'Downloaded type: HTML document text, ASCII text, with very long lines (37917);
+  text length 15200'

@@ -1,0 +1,37 @@
+id: in-cerc-electricity-act-2003-amended
+title: The Electricity Act, 2003 (Act No. 36 of 2003 with Amendments)
+authority: Central Electricity Regulatory Commission / Ministry of Power
+jurisdiction: IN
+doc_type: act
+url: https://cercind.gov.in/Act-with-amendment.pdf
+landing_page: https://cercind.gov.in
+local_path: corpus/raw/india/in-cerc-electricity-act-2003-amended.pdf
+sha256: 22f6769405804bfb1aab22e54a2a6e14e9f85807916abe3a7d5fd489bf5733db
+bytes: 411771
+pages: 134
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: legislation
+binding_basis: An Act to consolidate the laws relating to generation, transmission, distribution, trading and use of electricity
+issued: '2003-05-26'
+in_force_from: unknown
+amends: amended 2007
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-04
+role: india_evidence
+candidate_quotes:
+- quote: An Act to consolidate the laws relating to generation, transmission, distribution, trading and use of electricity
+    and generally for taking measures conducive to development of electricity industry
+  clause: Long Title
+  topic: backup_power
+  gap: GAP-IN-04
+  supports: context
+  why: Primary statutory enactment regulating power generation, transmission, and supply across India.
+  page: 1
+verified: false
+notes: Primary legislation governing the Indian electricity sector; contains no specific battery-backup floor for telecom
+  facilities.

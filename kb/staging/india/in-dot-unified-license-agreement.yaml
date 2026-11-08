@@ -1,0 +1,48 @@
+id: in-dot-unified-license-agreement
+title: "Unified License Agreement (Unified License, DoT, Nov 2024 version)"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: licence agreement
+url: https://www.eservices.dot.gov.in/sites/default/files/2024-11/Unified_License_Agreement.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-unified-license-agreement.pdf
+sha256: 006096afdb535561320827410698ff58bf6335f574c709461a23c012b017f91d
+bytes: 1103512
+pages: 176
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "between the President of India acting through"
+issued: 2024-11
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: [GAP-IN-01, GAP-IN-03]
+role: india_evidence
+candidate_quotes:
+  - quote: "the Licensor has the right to revoke/suspend the License or any authorized service under this License, in whole or in part, without any notice period."
+    page: 15
+    clause: "Clause 10.4 (proviso; numbering inferred from clause 10.5)"
+    topic: emergency_powers
+    gap: null
+    supports: context
+    why: "The licensor can suspend the licence or any service without notice in an emergency, which an operator's response plan must account for."
+  - quote: "The Licensor reserves the right to take over the services, equipment and networks of the Licensee in the interest of national security or in the event of national emergency/war or low intensity conflict or similar type of situations in full or in part in the Service area."
+    page: 15
+    clause: "Clause 10.5"
+    topic: emergency_powers
+    gap: null
+    supports: context
+    why: "The licensor can take over a licensee's services, equipment and networks in an emergency, a state-control path for a satellite-backed network."
+  - quote: "The Licensee shall also facilitate the priority routing of emergency/public utility or any other type of user calls as per guidelines /directions as may be prescribed by"
+    page: 28
+    clause: "Clause 29.6"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: proves_gap
+    why: "Requires priority routing of emergency and public-utility calls only as later prescribed, so no fixed priority order exists in the licence itself."
+verified: false
+notes: "This is a 2024 Unified License Agreement (176 pages). The A-list entry in-dot-unified-licence is a different document (195 pages), so the two may be different versions and both are recorded. Clause numbers here are 10.4 to 10.5 and 29.6, not the Part I Condition 28 numbering in the other file. The licence's satellite (GMPCS) chapter is Chapter XII; not quoted here. The list's binding label is supported by the licence form ('between the President of India acting through' Department of Telecommunications; the file is a template with blanks)."

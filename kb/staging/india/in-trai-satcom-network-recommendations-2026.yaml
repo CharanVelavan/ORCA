@@ -1,0 +1,47 @@
+id: in-trai-satcom-network-recommendations-2026
+title: Recommendations on Framework for Satellite Communication Network Provider Authorisation and Assignment of Spectrum
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2026-11/Recommendation_05112026.pdf
+landing_page: https://trai.gov.in/telecom/spectrum
+local_path: corpus/raw/india/in-trai-satcom-network-recommendations-2026.pdf
+sha256: 9b7ee08ab7f210a70384ef399343db4554722aa01f15ba42b6d50cd348f2315e
+bytes: 5982600
+pages: 372
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2026-11-05'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-06
+- GAP-IN-09
+role: india_evidence
+candidate_quotes:
+- quote: Authority recommends that – (a) The Central Government should introduce a new authorisation for satellite communication
+    network under section 3(1)(b) of the Telecommunications Act, 2023.
+  clause: Chapter II
+  topic: space_cyber
+  gap: GAP-IN-09
+  supports: proves
+  why: Recommends introducing a dedicated satellite communication network authorization under Section 3(1)(b) of the Telecommunications
+    Act 2023.
+  page: 30
+- quote: Authority recommends that FSS, MSS, D2D service via satellite using MSS spectrum, and D2D service via satellite using
+    IMT spectrum should be permitted to be provided by using the SCNs established by SCN provider authorised entities.
+  clause: Chapter II
+  topic: space_cyber
+  gap: GAP-IN-06
+  supports: context
+  why: Recommends permitting direct-to-device and satellite communication networks across FSS, MSS, and IMT spectrum bands.
+  page: 74
+verified: false
+notes: TRAI statutory recommendations on satellite communication network provider authorization and spectrum assignment.

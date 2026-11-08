@@ -1,0 +1,31 @@
+id: ae-pdpl-decree-law-45-2021
+title: Federal Decree-Law No. 45 of 2021 Regarding the Protection of Personal Data
+authority: United Arab Emirates
+jurisdiction: AE
+doc_type: act
+url: https://assets.u.ae/api/public/content/954629a06cc64fd887771ce3273d6154?v=21d88839
+landing_page: https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws
+local_path: corpus/raw/global/ae-pdpl-decree-law-45-2021.pdf
+sha256: 16741e65108040bc9ab5b1e982def19d75578205e446e7724dfcc0d8986b8441
+bytes: 358663
+pages: 17
+retrieved_at: '2026-11-08'
+status: skipped
+official_domain: true
+binding_status: not stated
+binding_basis: 'not stated in the document: out of scope (UAE host only, decided 8 Nov)'
+issued: '2021-09-20'
+in_force_from: '2022-01-02'
+amends: []
+amended_by: []
+licence: Official Gazette / UAE Legislation
+language: ar
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+role: global_example
+candidate_quotes: []
+verified: false
+notes: Retried and downloaded authentic official legislation publication from u.ae (assets.u.ae). Promulgated in Arabic as
+  published by Dubai Judicial Institute / Official Gazette series 38.
+skipped: out of scope (UAE host only, decided 8 Nov)

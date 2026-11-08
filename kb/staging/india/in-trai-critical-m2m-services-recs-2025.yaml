@@ -1,0 +1,39 @@
+id: in-trai-critical-m2m-services-recs-2025
+title: Recommendations on Issues Related to Critical Services in the M2M Sector
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2025-04/Final_Reco_on_critical_M2M_services_22.04.2025_1250_0.pdf
+landing_page: https://trai.gov.in/telecom/licensing
+local_path: corpus/raw/india/in-trai-critical-m2m-services-recs-2025.pdf
+sha256: d4df7c12232eaff91eaeeb55c5a97e44bf6007551ef0ba741e852b7215d4532b
+bytes: 3078929
+pages: 87
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2025-04-22'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-03
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: Authority recommends that the transferee M2MSP entity should maintain the updated details of physical custodians
+    of machines fitted with M2M SIMs obtained from the transferor entity and provide the same to the concerned access service
+    provider(s).
+  clause: Chapter II Paragraph 2.3
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: context
+  why: Recommends custodian verification rules for machines with M2M SIMs to ensure downstream device identification.
+  page: 70
+verified: false
+notes: TRAI recommendations on critical services in the M2M sector and machine-to-machine service provider obligations.

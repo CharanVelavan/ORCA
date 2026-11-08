@@ -1,0 +1,30 @@
+id: in-cea-power-cyber-security-guidelines-amendment-2022
+title: Amendment to Guidelines on Cyber Security in Power Sector
+authority: Central Electricity Authority, Ministry of Power
+jurisdiction: IN
+doc_type: guideline
+url: https://cea.nic.in/whats-new/file?path=%2Fhome%2Fcea_website%2Freports%2Fgeneral%2Fen%2FAmendment_in_CEA_Guidelines-1.pdf&mode=view
+landing_page: https://cea.nic.in/
+local_path: corpus/raw/india/in-cea-power-cyber-security-guidelines-amendment-2022.pdf
+sha256: f48eebed10f9cbe5103a7192bef6a63791aa691c6134e043dc5573f6136e62b7
+bytes: 352379
+pages: 1
+retrieved_at: 2026-11-08
+status: scanned
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '2022-09-22'
+in_force_from: '2022-09-22'
+amends:
+  - in-cea-power-cyber-security-guidelines-2021
+amended_by: []
+licence: government_open
+language: en
+gaps:
+  - GAP-IN-01
+  - GAP-IN-04
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: "Document is a scanned single-page PDF with no embedded fonts (< 200 characters per page). Candidate quotes left empty per project rules (OCR done later)."

@@ -1,0 +1,48 @@
+id: in-mha-erss
+title: Emergency Response Support System (ERSS)
+authority: Ministry of Home Affairs
+jurisdiction: IN
+doc_type: report
+url: https://www.mha.gov.in/emergency-response-support-system-erss
+landing_page: https://www.mha.gov.in/emergency-response-support-system-erss
+local_path: corpus/raw/india/in-mha-erss.html
+sha256: e7cbd71a27fbae13dae72c3ff5dbc6a8d9088be0c389c81bc05abd708d1e428c
+bytes: 55489
+pages: null
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: 2023
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India open (terms not checked)
+language: en
+gaps: [GAP-IN-03]
+role: context
+candidate_quotes:
+  - quote: "Emergency Response Support System (ERSS) has been the vision of Ministry of Home Affairs (MHA), Govt. of India, to launch ‘ONE INDIA ONE EMERGENCY NUMBER 112’, as a nationwide, unified emergency response system with a single emergency number ‘112’, for reporting and addressing all kinds of emergencies from across the country."
+    page: null
+    clause: "Overview"
+    topic: downstream_warning
+    gap: GAP-IN-02
+    supports: context
+    why: "Describes the national vision of ERSS-112 as a unified emergency reporting system with a single emergency number 112."
+  - quote: "ERSS-112 is successfully deployed as the State-centric system, receiving distress calls from citizen over 10 different channels (Voice Call, SMS, SOS, Email, Web Request, Chatbot, Media Crawler, IoT-based Signals, WhatsApp and External Signals), on a common platform (hardware + software) setup in the ‘Public Safety Answering Point (PSAP)’ of the State / UT."
+    page: null
+    clause: "Deployment"
+    topic: disaster_coordination
+    gap: GAP-IN-03
+    supports: context
+    why: "Documents multi-channel emergency distress ingestion across 10 distinct communication channels into State/UT PSAPs."
+  - quote: "Genuine, actionable calls from citizen on the ‘Call-Taking System’ are forwarded with complete incident data to a ‘Dispatcher’ of Police / Health / Fire / Disaster / Women / Children / Railways helpline system for further actions."
+    page: null
+    clause: "Call-Taking"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: context
+    why: "Outlines dispatch triage routing actionable distress calls across emergency, health, fire and disaster relief authorities."
+verified: false
+notes: "Official MHA informational portal page for ERSS-112. HTML saved and plain text extracted."

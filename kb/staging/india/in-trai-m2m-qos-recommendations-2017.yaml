@@ -1,0 +1,36 @@
+id: in-trai-m2m-qos-recommendations-2017
+title: Recommendations on Spectrum, Roaming and QoS Related Requirements in Machine-to-Machine Communications
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2024-09/Recommendations_M2M_05092017_0.pdf
+landing_page: https://trai.gov.in/telecom/qos
+local_path: corpus/raw/india/in-trai-m2m-qos-recommendations-2017.pdf
+sha256: 7c15c2ddbaad16eae0e5554defa07bbf10d0ca70cc9fa90e6e6327e320c9820e
+bytes: 2601387
+pages: 152
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2017-09-05'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: 'Authority recommends that: a) M2M Service Providers (MSPs) should register as M2M service provider as envisaged
+    by DoT.'
+  clause: Chapter II
+  topic: downstream_warning
+  gap: null
+  supports: context
+  why: Recommends establishing formal registration requirements for M2M service providers operating in India.
+  page: 41
+verified: false
+notes: TRAI recommendations on spectrum, roaming, and QoS requirements for machine-to-machine communications.

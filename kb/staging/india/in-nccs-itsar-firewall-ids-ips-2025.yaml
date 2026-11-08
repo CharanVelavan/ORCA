@@ -1,0 +1,31 @@
+id: in-nccs-itsar-firewall-ids-ips-2025
+title: ITSAR for Network Next Generation Firewall including IDS and IPS
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR112062503.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-firewall-ids-ips-2025.pdf
+sha256: 11a29b11fb8ef9d8f53421b1b83ee466fe511deae217c4f2573b126142b2cf04
+bytes: 572315
+pages: 66
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2025-03-05'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for Network Next Generation Firewall including IDS and IPS under
+  MTCTE. No clause bears directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover,
+  battery-hours floor, or incident reporting clocks).

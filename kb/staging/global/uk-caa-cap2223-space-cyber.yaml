@@ -1,0 +1,33 @@
+id: uk-caa-cap2223-space-cyber
+title: 'CAP 2223: Cyber Security for Spaceflight Activities'
+authority: Civil Aviation Authority
+jurisdiction: UK
+doc_type: guideline
+url: https://publicapps.caa.co.uk/docs/33/CAP2223%20Cyber%20Security%20for%20Spaceflight%20Activities.pdf
+landing_page: https://www.caa.co.uk
+local_path: corpus/raw/global/uk-caa-cap2223-space-cyber.pdf
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: false
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2021-07-29'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Open Government Licence v3.0
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-09
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts:   Left  Speed\n\n  0     0    0 \
+  \    0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0\
+  \     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0  2989   \
+  \ 0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (22)\
+  \ The requested URL returned error: 404"

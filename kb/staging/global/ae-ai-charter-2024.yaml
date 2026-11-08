@@ -1,0 +1,31 @@
+id: ae-ai-charter-2024
+title: The UAE Charter for the Development and Use of Artificial Intelligence
+authority: UAE Artificial Intelligence, Digital Economy and Remote Work Applications Office
+jurisdiction: AE
+doc_type: guideline
+url: https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/policies/Ai/The-UAE-Charter-for-the-Development-and-Use-of-Artificial-Intelligence
+landing_page: https://ai.gov.ae/
+local_path: corpus/raw/global/ae-ai-charter-2024.html
+sha256: 9329e395fe66b83cb0881b94ee0ac07a0a21233cc1cf39974dcc85628c4670a8
+bytes: 73366
+pages: null
+retrieved_at: '2026-11-08'
+status: skipped
+official_domain: false
+binding_status: not stated
+binding_basis: 'not stated in the document: out of scope (UAE host only, decided 8 Nov)'
+issued: 2024
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes: []
+verified: false
+notes: 'Downloaded type: HTML document text, Unicode text, UTF-8 text, with very long lines (2275), with CRLF, LF line terminators;
+  extracted text length 6576'
+skipped: out of scope (UAE host only, decided 8 Nov)

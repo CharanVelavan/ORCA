@@ -1,0 +1,46 @@
+id: in-trai-sesg-licensing-recs-2022
+title: Recommendations on Licensing Framework for Establishing and Operating Satellite Earth Station Gateway (SESG)
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2024-09/Recommendation_29112022.pdf
+landing_page: https://trai.gov.in/telecom/licensing
+local_path: corpus/raw/india/in-trai-sesg-licensing-recs-2022.pdf
+sha256: 44cc316cb449ee43a80cf3fb8002956617a19ceb12298b4e31b1f446adfb6019
+bytes: 1475317
+pages: 85
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2022-11-29'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-09
+role: india_evidence
+candidate_quotes:
+- quote: There shall be a separate Satellite Earth Station Gateway (SESG) License under the Section 4 of Indian Telegraph
+    Act.
+  clause: Chapter II Paragraph 2.1
+  topic: space_cyber
+  gap: GAP-IN-06
+  supports: proves
+  why: Recommends establishing a separate Satellite Earth Station Gateway license under Section 4 of the Indian Telegraph
+    Act.
+  page: 25
+- quote: For establishing SESGs, the SESG Licensee shall utilize any type of equipment and product that meets TEC standards,
+    wherever made mandatory by the Licensor from time to time.
+  clause: Chapter II Paragraph 2.4
+  topic: space_cyber
+  gap: GAP-IN-09
+  supports: proves
+  why: Recommends mandating compliance with TEC equipment standards for satellite earth station gateways when prescribed.
+  page: 35
+verified: false
+notes: TRAI recommendations on establishing and operating satellite earth station gateways (SESG) under the Telegraph Act.

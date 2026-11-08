@@ -1,0 +1,47 @@
+id: sg-imda-cop-tsr
+title: Code of Practice for Telecommunication Service Resiliency (CoP TSR)
+authority: Infocomm Media Development Authority
+jurisdiction: SG
+doc_type: standard
+url: https://www.imda.gov.sg/assets/3ada6ed2-9110-4419-baa0-bc1966c510df.pdf
+landing_page: https://www.imda.gov.sg
+local_path: corpus/raw/global/sg-imda-cop-tsr.pdf
+sha256: fecd6f29568d5008be464e17f8d968f9ee91af2247e2aa6e0b6f3abd6ddd271f
+bytes: 155538
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: IDA may impose financial penalties for breach of the Service Resiliency Code
+issued: '2008'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+- GAP-IN-04
+role: global_example
+candidate_quotes:
+- quote: The objective of the Service Resiliency Code is to ensure that telecommunication service providers providing key services to a large number of end users adopt proactive measures to invest in and
+    improve the resilience of their telecommunication networks to prevent widespread service disruptions, and in the event such service disruptions occur, to ensure that these service providers take all
+    measures to restore services as quickly as possible.
+  page: 1
+  clause: not stated
+  topic: capacity_priority
+  gap: null
+  supports: global_example
+  why: Shows a regulator-enforced duty to prevent widespread disruption and restore service quickly, a benchmark for failover and recovery obligations.
+- quote: IDA may impose financial penalties for breach of the Service Resiliency Code
+  page: 1
+  clause: not stated
+  topic: telecom_cyber_security
+  gap: null
+  supports: global_example
+  why: Shows enforcement by financial penalty, relevant to whether resilience duties are binding.
+verified: false
+notes: IMDA fact sheet (PDF) on the Code of Practice for Telecommunication Service Resiliency. The Code itself is binding on licensees per the fact sheet; the fact sheet is a summary, so the Code text should
+  be checked before citing clauses. Quotes are from the fact sheet.

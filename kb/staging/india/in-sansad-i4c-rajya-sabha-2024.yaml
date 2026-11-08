@@ -1,0 +1,34 @@
+id: in-sansad-i4c-rajya-sabha-2024
+title: "Rajya Sabha Unstarred Question No. 1188 (answered 29 July 2026): Cyber Crime Coordination Centre (I4C)"
+authority: Ministry of Home Affairs (answer to Parliament)
+jurisdiction: IN
+doc_type: parliamentary answer
+url: "https://sansad.in/getFile/annex/271/AU1188_15JzHp.pdf?source=pqars"
+landing_page: https://sansad.in/
+local_path: corpus/raw/india/in-sansad-i4c-rajya-sabha-2024.pdf
+sha256: 2a42d3be3a4dc32b4060240ff2a2d785425561608c6c3aafe646002640785b6f
+bytes: 44640
+pages: 4
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: 2026-07-29
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes:
+  - quote: "I4C has been set up as an Attached Office of MHA with effect from 1st July, 2024."
+    page: 1
+    clause: "Answer to Rajya Sabha Unstarred Question No. 1188"
+    topic: other
+    gap: null
+    supports: context
+    why: "Confirms I4C's legal and organisational status as an attached office of MHA, the body that coordinates cyber-crime response across law enforcement."
+verified: false
+notes: "The list gives the date as 2024-07-31 and calls the item a report. The document is a Rajya Sabha answer dated 29 July 2026 that mentions I4C's attached-office status from 1 July 2024. The list's title and date are corrected here. It is about cybercrime, not telecom incident reporting, so no gap is linked."

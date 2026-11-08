@@ -1,0 +1,67 @@
+id: in-rbi-it-outsourcing-directions-2023
+title: Reserve Bank of India (Outsourcing of Information Technology Services) Directions, 2023
+authority: Reserve Bank of India
+jurisdiction: IN
+doc_type: guideline
+url: https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12486
+landing_page: https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12486
+local_path: corpus/raw/india/in-rbi-it-outsourcing-directions-2023.html
+sha256: 31c994db8cbadc0b42a4cdacb7f8ca8cfdb583309ffa037fd13a94cea75d9262
+bytes: 179143
+pages: null
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: the finalised Reserve Bank of India (Outsourcing of Information Technology Services) Directions, 2023 are enclosed
+  herewith
+issued: '2023-04-10'
+in_force_from: '2023-10-01'
+amends: []
+amended_by: []
+licence: government_open
+language: en
+gaps:
+- GAP-IN-04
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: The RE shall ensure that cyber incidents are reported to the RE by the service provider without undue delay, so that
+    the incident is reported by the RE to the RBI within 6 hours of detection by the TPSP
+  page: null
+  clause: Paragraph 17
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: proves_gap
+  why: Mandates that outsourced service providers report cyber incidents without undue delay so RE can report to RBI within
+    6 hours.
+- quote: REs shall require their service providers to develop and establish a robust framework for documenting, maintaining
+    and testing Business Continuity Plan (BCP) and Disaster Recovery Plan (DRP) commensurate with the nature and scope of
+    the outsourced activity as per extant instructions issued by RBI from time to time on BCP/ DR requirements
+  page: null
+  clause: Paragraph 18
+  topic: backup_power
+  gap: GAP-IN-04
+  supports: proves_gap
+  why: Requires IT service providers to establish, maintain, and test robust BCP and DRP frameworks.
+- quote: The RE’s business continuity framework shall ensure that, in the event of a disaster affecting its cloud services
+    or failure of the CSP, the RE can continue its critical operations with minimal disruption of services while ensuring
+    integrity and security
+  page: null
+  clause: Paragraph 22(d)
+  topic: critical_infrastructure
+  gap: GAP-IN-08
+  supports: proves_gap
+  why: Requires cloud business continuity frameworks ensuring critical operations continue with minimal disruption during
+    disasters or CSP failures.
+- quote: The Outsourcing of IT Services policy shall contain a clear exit strategy with regard to outsourced IT activities/
+    IT enabled services, while ensuring business continuity during and after exit
+  page: null
+  clause: Paragraph 19
+  topic: critical_infrastructure
+  gap: GAP-IN-08
+  supports: proves_gap
+  why: Mandates clear exit strategies in IT outsourcing policies ensuring business continuity during and after vendor exit.
+verified: false
+notes: Master Direction RBI/2023-24/102 issued on April 10, 2023, governing outsourcing of IT and cloud services by regulated
+  entities. Targets listed URL was Id=4690 (draft banking channels); corrected to official Master Direction notification Id=12486.

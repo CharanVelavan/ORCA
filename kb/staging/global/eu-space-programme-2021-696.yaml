@@ -1,0 +1,48 @@
+id: eu-space-programme-2021-696
+title: "Regulation (EU) 2021/696 of the European Parliament and of the Council of 28 April 2021 establishing the Union Space Programme and the European Union Agency for the Space Programme and repealing Regulations (EU) No 912/2010, (EU) No 1285/2013 and (EU) No 377/2014 and Decision No 541/2014/EU"
+authority: European Parliament and Council
+jurisdiction: EU
+doc_type: act
+url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R0696
+landing_page: https://eur-lex.europa.eu/eli/reg/2021/696/oj/eng
+local_path: corpus/raw/global/eu-space-programme-2021-696.pdf
+sha256: 960792357bf6ceaab33f689e844b8b5af984eaa5f72d78699b8182385e2f8c6a
+bytes: 1669728
+pages: 80
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "This Regulation shall be binding in its entirety and directly applicable in all Member States."
+issued: 2021-04-28
+in_force_from: 2021-01-01
+amends: []
+amended_by: []
+licence: "EUR-Lex reuse policy"
+language: en
+gaps: [GAP-IN-06, GAP-IN-09]
+role: global_example
+candidate_quotes:
+  - quote: "the protection of infrastructure, both ground and space, and of the provision of services, particularly against physical or cyber-attacks, including interference with data streams;"
+    page: 42
+    clause: "Article 34(1)(a)"
+    topic: space_cyber
+    gap: GAP-IN-09
+    supports: global_example
+    why: "Mandates security of ground and space infrastructure and services against cyber-attacks and interference with data streams."
+  - quote: "For the purpose of paragraph 1 of this Article, the Commission shall ensure that a risk and threat analysis is performed for each of the Programme’s components."
+    page: 42
+    clause: "Article 34(2)"
+    topic: space_cyber
+    gap: GAP-IN-09
+    supports: global_example
+    why: "Requires risk and threat analysis for each space programme component, accounting for cybersecurity risks."
+  - quote: "to use the security rules of the Council and of the Commission, which provide, inter alia, for a separation between operational functions and those associated with accreditation."
+    page: 41
+    clause: "Article 33(b)"
+    topic: standards
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Establishes institutional separation between operational security functions and security accreditation for space infrastructure."
+verified: false
+notes: "Regulation establishing the Union Space Programme and EUSPA, governing security governance of European space and ground infrastructure."

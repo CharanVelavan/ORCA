@@ -1,0 +1,36 @@
+id: in-trai-satellite-suc-recommendations-2018
+title: Recommendations on Methodology for Levy of Spectrum Charges for Provision of Satellite-based Services
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: recommendation
+url: https://trai.gov.in/sites/default/files/2024-09/RecommendationsSUC27122018_0.pdf
+landing_page: https://trai.gov.in/telecom/spectrum
+local_path: corpus/raw/india/in-trai-satellite-suc-recommendations-2018.pdf
+sha256: 6b6b372be88f84622b7674ae85a8395be7a87fb6f63facd07202f64abd172240
+bytes: 3346811
+pages: 42
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2018-12-27'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: Authority recommends that the spectrum charges should be levied at 1% of the AGR of BSNL’s satellite based services
+    under ‘sui-generis’ category.
+  clause: Chapter II
+  topic: space_cyber
+  gap: null
+  supports: context
+  why: Recommends spectrum usage charges of 1 percent of AGR for satellite-based services provided under sui-generis category.
+  page: 21
+verified: false
+notes: TRAI recommendations on methodology for levying spectrum charges on satellite-based telecommunication services.

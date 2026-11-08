@@ -1,0 +1,36 @@
+id: in-trai-cp-aircraft-ground-data-comm-2022
+title: Consultation Paper on Data Communication Services Between Aircraft and Ground Stations for Air Traffic Management
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/Consultation_10122022.pdf
+landing_page: https://trai.gov.in/telecom/licensing
+local_path: corpus/raw/india/in-trai-cp-aircraft-ground-data-comm-2022.pdf
+sha256: 0d73a269c5aebc9704c02820ab1e085c9a32795a048e93836fcbc4739c14e617
+bytes: 5937892
+pages: 71
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2022-12-10'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: Consultation Paper No. 14/ 2022
+  clause: Title Page
+  topic: space_cyber
+  gap: GAP-IN-06
+  supports: context
+  why: Consults on aeronautical data communications between aircraft and ground stations using terrestrial and satellite links.
+  page: 1
+verified: false
+notes: TRAI consultation paper on data communication services between aircraft and ground stations.

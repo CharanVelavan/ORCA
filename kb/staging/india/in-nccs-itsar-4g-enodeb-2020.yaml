@@ -1,0 +1,30 @@
+id: in-nccs-itsar-4g-enodeb-2020
+title: ITSAR for eNodeB (4G Network Access Element)
+authority: National Centre for Communication Security (NCCS), Department of Telecommunications
+jurisdiction: IN
+doc_type: standard
+url: https://nccs.gov.in/public/itsar/ITSAR302012011.pdf
+landing_page: https://nccs.gov.in/home/itsars
+local_path: corpus/raw/india/in-nccs-itsar-4g-enodeb-2020.pdf
+sha256: 2bd848a9eedd8a6db4487d6cad9148bef8c502b99548275100736587d1911a7f
+bytes: 1084168
+pages: 46
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2020-11-01'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Specifies security assurance requirements for ITSAR for eNodeB (4G Network Access Element) under MTCTE. No clause bears
+  directly on project gaps (no satellite feeder/inter-satellite link security, clean-path failover, battery-hours floor, or
+  incident reporting clocks).

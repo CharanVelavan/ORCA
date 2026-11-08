@@ -1,0 +1,35 @@
+id: intl-registration-convention-1975
+title: Convention on Registration of Objects Launched into Outer Space
+authority: United Nations General Assembly
+jurisdiction: INTL
+doc_type: treaty
+url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/registration-convention.html
+landing_page: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/registration-convention.html
+local_path: corpus/raw/global/intl-registration-convention-1975.html
+sha256: 6850961a4f04bdff2c520013019b0808f30ea06e4de94903dc2052bbba8cef8c
+bytes: 62676
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: the launching State shall register the space object by means of an entry in an appropriate registry which it shall maintain
+issued: '1975'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: When a space object is launched into earth orbit or beyond, the launching State shall register the space object by means of an entry in an appropriate registry which it shall maintain.
+  page: 1
+  clause: Article II
+  topic: other
+  gap: null
+  supports: context
+  why: Registration duty for space objects; context for identifying operators of satellite assets.
+verified: false
+notes: UN treaty text from UNOOSA HTML page. Registration duty of launching states (Article II). Not a cyber clause.

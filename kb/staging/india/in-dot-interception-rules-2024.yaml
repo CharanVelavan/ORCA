@@ -1,0 +1,55 @@
+id: in-dot-interception-rules-2024
+title: Procedures and Safeguards for Lawful Interception of Messages Rules, 2024
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/procedures-and-safeguards-for-lawful-interception-of-messages-rules-2024.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-dot-interception-rules-2024.pdf
+sha256: cd0a0f7d8e5deb8bd2c9338f3b7a3001594064176dc8db6544b8703a233557ea
+bytes: 1892833
+pages: 9
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "Now, therefore, in exercise of the powers conferred by clause (a) of sub-section (2) and sub-section (4) of section 20 read with clauses (t) and (u) of sub-section (2) of section 56 of the Telecommunications Act, 2023 (44 of 2023)"
+issued: 2024-12-06
+in_force_from: 2024-12-06
+amends: []
+amended_by: []
+licence: Government of India open (terms not checked)
+language: bilingual
+gaps: []
+role: context
+candidate_quotes:
+  - quote: "These rules may be called the Telecommunications (Procedures and Safeguards for Lawful Interception of Messages) Rules, 2024."
+    page: 6
+    clause: "Rule 1(1)"
+    topic: emergency_powers
+    gap: null
+    supports: context
+    why: "Enacts the statutory procedural rules and safeguards for lawful interception of messages under Section 20(2)(a)."
+  - quote: "The Central Government may, by an order, specify one or more authorised agencies to intercept or receive any message or class of messages pursuant to an interception order, for the reasons specified under sub-section (2) of section 20 of the Act."
+    page: 6
+    clause: "Rule 3(1)"
+    topic: emergency_powers
+    gap: null
+    supports: context
+    why: "Authorizes designated law enforcement and security agencies to execute interception orders."
+  - quote: "a copy of such interception order shall be submitted within three working days of the date of its issuance to the competent authority, and the competent authority shall, if it considers appropriate, confirm such order within a period of seven working days from the date of issue;"
+    page: 7
+    clause: "Rule 3(3)(a)"
+    topic: emergency_powers
+    gap: null
+    supports: context
+    why: "Establishes strict oversight and confirmation deadlines for emergency interception orders issued in operational circumstances."
+  - quote: "In case of non-confirmation of interception orders by the competent authority under sub-rule (3), the same message or class of messages shall not be intercepted by the authorised agency, without an interception order by the competent authority."
+    page: 7
+    clause: "Rule 3(4)"
+    topic: emergency_powers
+    gap: null
+    supports: context
+    why: "Mandates cessation of interception and evidence destruction if emergency interception orders are not confirmed."
+verified: false
+notes: "Notified vide G.S.R. 754(E) dated 6 Dec 2024 under Section 20(2)(a) and 20(4) of the Telecommunications Act 2023."

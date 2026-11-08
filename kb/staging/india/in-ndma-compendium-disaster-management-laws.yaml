@@ -1,0 +1,35 @@
+id: in-ndma-compendium-disaster-management-laws
+title: Compendium of Laws on Disaster Management in India
+authority: National Disaster Management Authority
+jurisdiction: IN
+doc_type: report
+url: https://ndma.gov.in/sites/default/files/PDF/COMPENDIUM-OF-LAWS-ON-DISASTER-MANAGEMENT.pdf
+landing_page: https://ndma.gov.in
+local_path: corpus/raw/india/in-ndma-compendium-disaster-management-laws.pdf
+sha256: ce9a2b2d80c95590cd698f99ceb498eb758087d1d1e04b0bdde17fa80db4d8a9
+bytes: 3158656
+pages: 652
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2015'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-01
+role: context
+candidate_quotes:
+- quote: Disaster management has therefore emerged as a high priority for the country.
+  clause: Introduction
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: context
+  why: Compiles statutory provisions and disaster response frameworks across Indian central and state legislation.
+  page: 15
+verified: false
+notes: Compendium of legislative enactments and regulatory rules governing disaster management in India.

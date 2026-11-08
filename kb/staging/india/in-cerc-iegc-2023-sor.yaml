@@ -1,0 +1,34 @@
+id: in-cerc-iegc-2023-sor
+title: "Statement of Reasons for the Indian Electricity Grid Code (IEGC) Regulations, 2023 (CERC)"
+authority: Central Electricity Regulatory Commission (CERC)
+jurisdiction: IN
+doc_type: statement of reasons
+url: https://www.cercind.gov.in/regulations/180-SOR.pdf
+landing_page: https://www.cercind.gov.in/regulations/180-SOR.pdf
+local_path: corpus/raw/india/in-cerc-iegc-2023-sor.pdf
+sha256: c29cb694b2b3a8a9c0492cdc2d29cf4c41ee198e9305e4a69ddc2b392651a7e8
+bytes: 1816919
+pages: 273
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: "not stated in the document"
+issued: 2023
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes:
+  - quote: "Cyber Security Code deals with measures to be taken to safeguard the national grid from spyware, malware, cyber-attacks, network hacking, procedures for"
+    page: 3
+    clause: "Statement of reasons, grid code chapter list (Cyber Security Code and Monitoring and Compliance Code)"
+    topic: critical_infrastructure
+    gap: null
+    supports: global_example
+    why: "Shows the power-sector grid code has a cyber security code with named threats (malware, network hacking) for a critical national infrastructure. A comparison for a telecom cyber code; the telecom equivalent is not found."
+verified: false
+notes: "Statement of reasons for the 2023 grid code (273 pages). The grid code has a Cyber Security Code and a Monitoring and Compliance Code. The quote is the Cyber Security Code definition; it is a power-sector example, not telecom. Its binding status is the code itself, which the list does not state. The regulation text is not checked here. The list's not stated label is kept."

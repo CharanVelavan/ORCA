@@ -1,0 +1,27 @@
+id: in-tnerc-grid-code-2026
+title: Tamil Nadu Electricity Regulatory Commission grid code (2026)
+authority: Tamil Nadu Electricity Regulatory Commission (TNERC)
+jurisdiction: IN-TN
+doc_type: grid code
+url: https://cdnbbsr.s3waas.gov.in/s3716e1b8c6cd17b771da77391355749f3/uploads/2026/03/202603131939222810.pdf
+landing_page: https://www.tnerc.tn.gov.in/
+sha256: 9890f89ef2f28801028b89071f39b076a730d26c3bbe237ae66dbbc10e2fce21
+bytes: 340574
+pages: 5
+local_path: corpus/raw/india/in-tnerc-grid-code-2026.pdf
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: 2026-03
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: context
+candidate_quotes: []
+verified: false
+notes: Read by keyword check (5 pages). Grid code for Tamil Nadu. No cyber, backup-power or emergency clause found. Binding label not confirmed from the text. No candidate quotes.

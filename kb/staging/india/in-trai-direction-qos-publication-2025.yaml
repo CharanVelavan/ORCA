@@ -1,0 +1,39 @@
+id: in-trai-direction-qos-publication-2025
+title: Direction to Service Providers Regarding Publication of Performance with Respect to QoS Parameters
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: direction
+url: https://trai.gov.in/sites/default/files/2025-09/Direction_09092025.pdf
+landing_page: https://trai.gov.in/telecom/qos
+local_path: corpus/raw/india/in-trai-direction-qos-publication-2025.pdf
+sha256: b5b124201f39d9b2837847d3b454f94a2c451ffbf5ee4c9436e946210288f76d
+bytes: 704024
+pages: 16
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: regulation 15 of the Standards of Quality of Service of Access (Wireline and Wireless) and Broadband (Wireline
+  and Wireless) Service Regulations, 2024
+issued: '2025-09-09'
+in_force_from: 09.09.2025
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+role: india_evidence
+candidate_quotes:
+- quote: Now, therefore, the Authority, in exercise of the powers conferred upon it under regulation 15 of the Standards of
+    Quality of Service of Access (Wireline and Wireless) and Broadband (Wireline and Wireless) Service Regulations, 2024 (06
+    of 2024), hereby directs all service providers
+  clause: Paragraph 4
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: context
+  why: Directs service providers to publish QoS performance compliance reports on their websites pursuant to TRAI QoS regulations.
+  page: 1
+verified: false
+notes: Binding direction under TRAI QoS Regulations 2024 mandating public disclosure of access and broadband performance metrics.

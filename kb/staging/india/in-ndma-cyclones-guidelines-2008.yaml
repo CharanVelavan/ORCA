@@ -1,0 +1,37 @@
+id: in-ndma-cyclones-guidelines-2008
+title: 'National Disaster Management Guidelines: Management of Cyclones (2008)'
+authority: National Disaster Management Authority
+jurisdiction: IN
+doc_type: guideline
+url: https://ndma.gov.in/sites/default/files/PDF/Guidelines/cyclones.pdf
+landing_page: https://ndma.gov.in/Governance/Guidelines
+local_path: corpus/raw/india/in-ndma-cyclones-guidelines-2008.pdf
+sha256: 1993299df4a1fd72ce26e9ef3737ec6f7e233223f339b0adce6d438596e47b27
+bytes: 4744510
+pages: 190
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: 2008-04
+in_force_from: April 2008
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-04
+role: india_evidence
+candidate_quotes:
+- quote: Disaster Management Departments of reduction strategies on priority.
+  clause: Executive Summary
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: context
+  why: Recommends priority risk reduction strategies across disaster management authorities during cyclone preparedness.
+  page: 29
+verified: false
+notes: National Disaster Management Guidelines on Cyclone Management issued by NDMA; provides operational guidance on early
+  warning.

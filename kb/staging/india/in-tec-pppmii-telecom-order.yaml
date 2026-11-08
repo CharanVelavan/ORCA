@@ -1,0 +1,37 @@
+id: in-tec-pppmii-telecom-order
+title: Public Procurement (Preference to Make in India) Order - Telecom Equipment List
+authority: Telecommunication Engineering Centre (TEC) / Department of Telecommunications
+jurisdiction: IN
+doc_type: order
+url: https://tec.gov.in/PPPMII/assets/circular/list_pppmii.pdf
+landing_page: https://www.tec.gov.in
+local_path: corpus/raw/india/in-tec-pppmii-telecom-order.pdf
+sha256: a24a591773408f1edba376fb59197857da917d6a62d2b9fa2e6eed414c9d74cc
+bytes: 599801
+pages: 13
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: List of TEC Generic Requirements (GRs) with reference to para 9 of Notification No. 18-10/2017-IP dated 29th
+  August 2018
+issued: '2018-08-29'
+in_force_from: 29th August 2018
+amends: amended 2021
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: Encryption/UTM platforms (TDM and IP)                 Unified Threat Management (TEC/GR/IT/UTM-010/02 MAR-18)
+  clause: Table Sl. No. 1
+  topic: procurement_security
+  gap: null
+  supports: context
+  why: Lists mandatory TEC generic requirements for encryption and UTM platforms under public procurement preference orders.
+  page: 1
+verified: false
+notes: Public procurement preference order specifying mandatory TEC Generic Requirements for telecom equipment procurement
+  in India.

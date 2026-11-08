@@ -1,0 +1,35 @@
+id: intl-liability-convention-1972
+title: Convention on International Liability for Damage Caused by Space Objects
+authority: United Nations General Assembly
+jurisdiction: INTL
+doc_type: treaty
+url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/liability-convention.html
+landing_page: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/introliability-convention.html
+local_path: corpus/raw/global/intl-liability-convention-1972.html
+sha256: 8ba8c9f0b7cc8a8ca1367b5feb1356932a191eb52527c417b940e72a1521c08e
+bytes: 73223
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: A launching State shall be absolutely liable to pay compensation for damage caused by its space object on the surface of the earth or to aircraft flight.
+issued: '1972'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: A launching State shall be absolutely liable to pay compensation for damage caused by its space object on the surface of the earth or to aircraft flight.
+  page: 1
+  clause: Article II
+  topic: other
+  gap: null
+  supports: context
+  why: Absolute liability of the launching State for ground damage; context for who answers for satellite-caused harm.
+verified: false
+notes: UN treaty text from UNOOSA HTML page. Liability for damage by space objects; not a cyber clause. Relevant only as context for liability when a satellite failure harms ground users.

@@ -1,0 +1,63 @@
+id: us-fcc-part-4-outage
+title: '47 CFR Part 4: Disruptions to Communications (Network Outage Reporting System - NORS)'
+authority: Federal Communications Commission
+jurisdiction: US
+doc_type: regulation
+url: https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-4
+landing_page: https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-4
+local_path: corpus/raw/global/us-fcc-part-4-outage.xml
+sha256: 7fc8e3042ea328cec74b642ca465d33d5eb40d114322d1f6ed3ddacb8c1d6287
+bytes: 55816
+pages: null
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: the Federal Communications Commission is setting forth requirements pertinent to the reporting of disruptions
+issued: 2004-12-03
+in_force_from: 2005-01-03
+amends: []
+amended_by: []
+licence: Public domain (US Government Work)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-02
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: 'All satellite operators shall submit electronically a Notification to the Commission within 120 minutes of discovering
+    that they have experienced on any facilities that they own, operate, lease, or otherwise utilize, of an outage of at least
+    30 minutes duration that manifests itself as a failure of any of the following key system elements: One or more satellite
+    transponders, satellite beams, inter-satellite links, or entire satellites.'
+  page: null
+  clause: 47 CFR § 4.9(c)(1)
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: global_example
+  why: Imposes a strict 120-minute notification window on satellite operators for outages of 30+ minutes affecting satellite
+    transponders, beams, or inter-satellite links.
+- quote: In addition, all Mobile-Satellite Service (“MSS”) satellite operators shall submit electronically a Notification
+    to the Commission within 120 minutes of discovering that they have experienced on any facilities that they own, operate,
+    lease, or otherwise utilize, of an outage of at least 30 minutes duration that manifests itself as a failure of any gateway
+    earth station, except in the case where other earth stations at the gateway location are used to continue gateway operations
+    within 30 minutes of the onset of the failure.
+  page: null
+  clause: 47 CFR § 4.9(c)(1)
+  topic: space_cyber
+  gap: GAP-IN-09
+  supports: global_example
+  why: Mandates 120-minute notification for gateway earth station failures unless redundant earth stations maintain operations
+    within 30 minutes.
+- quote: A loss of a satellite communications link that potentially affects at least 900,000 user-minutes (as defined in §
+    4.7(d)) of either telephony service or paging service; or
+  page: null
+  clause: 47 CFR § 4.9(c)(2)(ii)
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: global_example
+  why: Establishes a quantitative threshold of 900,000 user-minutes triggering mandatory outage reporting for satellite service
+    providers.
+verified: false
+notes: Official FCC Part 4 outage reporting regulations for telecommunications and satellite providers, establishing a 120-minute
+  reporting clock.

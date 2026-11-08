@@ -1,0 +1,65 @@
+id: in-mha-ners-guidelines-2015
+title: 'Nationwide Emergency Response System (NERS) Guidelines: Emergency Number 112'
+authority: Ministry of Home Affairs
+jurisdiction: IN
+doc_type: guideline
+url: https://www.mha.gov.in/files/policies_guidelines_document/NERSGuideline_2100815.pdf
+landing_page: https://www.mha.gov.in/emergency-response-support-system-erss
+local_path: corpus/raw/india/in-mha-ners-guidelines-2015.pdf
+sha256: 391f998169214ac33549e5c3fc167657e66b7bd7f279bdf97b0997f5129f9998
+bytes: 279951
+pages: 29
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: These guidelines would provide clarity to the State Governments/UT Administrations on the implementation aspect
+  of the entire project.
+issued: 2015-08-21
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India open (terms not checked)
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-03
+role: india_evidence
+candidate_quotes:
+- quote: The Committee had recommended setting up of a public emergency response system which will have the ability to dispatch
+    an Emergency Response (ER) unit to respond and close the ER calls.
+  page: 3
+  clause: Section 1
+  topic: disaster_coordination
+  gap: GAP-IN-03
+  supports: answers_gap
+  why: Articulates the core mandate for creating a nationwide integrated emergency response dispatch architecture.
+- quote: Telecommunications has allotted the emergency number ‘112’ for this project.
+  page: 3
+  clause: Section 1
+  topic: downstream_warning
+  gap: GAP-IN-02
+  supports: answers_gap
+  why: Records the allocation of single national emergency telephone number 112 by the Department of Telecommunications.
+- quote: A state/UT Public Safety Answering Point (PSAP) is the State/UT call centre responsible for answering calls to an
+    emergency telephone number for police, firefighting, ambulance and other services.
+  page: 4
+  clause: Section 2, Clause 1
+  topic: disaster_coordination
+  gap: GAP-IN-03
+  supports: answers_gap
+  why: Defines the 24/7 operating model of State/UT Public Safety Answering Points (PSAPs) receiving and dispatching multi-service
+    emergency requests.
+- quote: In case of special requirement of the State/UT to scale up, such as religious gathering, natural disaster or any
+    such unforeseen event, the State/UT may partner with neighboring State/UTs to attend to the incoming calls from distressed
+    citizens.
+  page: 24
+  clause: Section 9, Clause 2
+  topic: disaster_coordination
+  gap: GAP-IN-03
+  supports: answers_gap
+  why: Authorizes mutual assistance and disaster failover partnerships between neighboring States to handle emergency call
+    surges.
+verified: false
+notes: Target list URL (sites/default/files/2022-12/NERSGuidelines_09112022[1].pdf) returned 404; retrieved directly from
+  official MHA repository at files/policies_guidelines_document/NERSGuideline_2100815.pdf.

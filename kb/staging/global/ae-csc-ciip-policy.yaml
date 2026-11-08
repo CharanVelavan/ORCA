@@ -1,0 +1,37 @@
+id: ae-csc-ciip-policy
+title: Critical Information Infrastructure Protection (CIIP) Policy
+authority: UAE Cyber Security Council
+jurisdiction: AE
+doc_type: policy
+url: https://uaelegislation.gov.ae/en/policy/details/critical-information-infrastructure-protection-policy
+landing_page: https://uaelegislation.gov.ae
+local_path: corpus/raw/global/ae-csc-ciip-policy.html
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: skipped
+official_domain: true
+binding_status: not stated
+binding_basis: 'not stated in the document: out of scope (UAE host only, decided 8 Nov)'
+issued: 2023
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-06
+- GAP-IN-08
+- GAP-IN-09
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts:   Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:--\
+  \ --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0 \
+  \   0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 403\nRetry on 2026-11-08:\
+  \ uaelegislation.gov.ae returned Cloudflare challenge (HTTP 403). Official landing page on u.ae (https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/policies/cyber-activities/Critical-Information-Infrastructure-Protection-Policy)\
+  \ links to csc.gov.ae (https://csc.gov.ae/documents/38662/1042755/CIIP+Policy+V2.0.pdf/6d227ad0-db8a-5b44-fb4e-3294d5638e25?t=1771617651256),\
+  \ which drops TLS connections from outside UAE (curl error 35, LibreSSL SSL_connect: SSL_ERROR_SYSCALL)."
+skipped: out of scope (UAE host only, decided 8 Nov)

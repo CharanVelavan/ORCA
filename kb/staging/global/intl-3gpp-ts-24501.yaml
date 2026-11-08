@@ -1,0 +1,48 @@
+id: intl-3gpp-ts-24501
+title: "3GPP TS 24.501 V18.5.0: Non-Access-Stratum (NAS) protocol for 5G System (5GS); Stage 3"
+authority: 3GPP CT1
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/24_series/24.501/24501-i50.zip
+landing_page: https://www.3gpp.org/DynaReport/24501.htm
+local_path: corpus/raw/global/intl-3gpp-ts-24501/24501-i50.docx
+sha256: f802e18878089ecfec91054b395be21ce78b7f8703d33662c89b0be95022578e
+bytes: 4720425
+pages: 11
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "The present document has not been subject to any approval process by the 3GPP Organizational Partners and shall not be implemented."
+issued: '2024-03-27'
+in_force_from: '2024-03-27'
+amends: []
+amended_by: []
+licence: 3GPP / ETSI IPR Policy
+language: en
+gaps: []
+role: global_example
+candidate_quotes:
+  - quote: "For the UE, integrity protected signalling is mandatory for the 5GMM NAS messages once a valid 5G NAS security context exists and has been taken into use."
+    page: 5
+    clause: "4.4.4.1"
+    topic: signalling_security
+    gap: null
+    supports: context
+    why: "Mandates NAS integrity protection for 5G mobility management messages once a valid security context exists."
+  - quote: "Initial registration for disaster roaming services: A registration performed with 5GS registration type \"disaster roaming initial registration\" in the REGISTRATION REQUEST message."
+    page: 4
+    clause: "3.1"
+    topic: disaster_coordination
+    gap: null
+    supports: context
+    why: "Defines disaster roaming initial registration procedures within the 5G NAS protocol."
+  - quote: "Mobility registration for disaster roaming services: A registration performed with 5GS registration type \"disaster roaming mobility registration updating\" in the REGISTRATION REQUEST message."
+    page: 4
+    clause: "3.1"
+    topic: disaster_coordination
+    gap: null
+    supports: context
+    why: "Defines mobility registration updating procedures for user terminals during disaster roaming."
+verified: false
+notes: "Unzipped into corpus/raw/global/intl-3gpp-ts-24501/ (24501-i50.docx) and extracted text to intl-3gpp-ts-24501.txt. Updated binding_basis to verbatim approval clause from document text. All NTN links in testbeds are emulated."

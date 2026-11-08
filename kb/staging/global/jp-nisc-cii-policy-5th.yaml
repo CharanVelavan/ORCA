@@ -1,0 +1,30 @@
+id: jp-nisc-cii-policy-5th
+title: The 5th Cybersecurity Policy for Critical Infrastructure Protection
+authority: National center of Incident readiness and Strategy for Cybersecurity (NISC)
+jurisdiction: JP
+doc_type: policy
+url: https://www.nisc.go.jp/eng/pdf/actionplan_cip_5th_eng.pdf
+landing_page: https://www.nisc.go.jp/eng/
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2022-06-17'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-06
+- GAP-IN-08
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed English PDF URL returned an HTML page (929 non-space characters, Japanese-language page) rather than the English policy PDF. Not obtained.

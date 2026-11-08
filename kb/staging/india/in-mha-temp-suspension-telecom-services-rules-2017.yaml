@@ -1,0 +1,30 @@
+id: in-mha-temp-suspension-telecom-services-rules-2017
+title: Temporary Suspension of Telecom Services (Public Emergency or Public Safety)
+  Rules, 2017
+authority: Ministry of Communications / Ministry of Home Affairs
+jurisdiction: IN
+doc_type: rules
+url: https://thc.nic.in/Central%20Governmental%20Rules/Temporary%20Suspension%20Of%20Telecom%20Services%20Rules,%202017.pdf
+landing_page: https://dot.gov.in
+local_path: corpus/raw/india/in-mha-temp-suspension-telecom-services-rules-2017.pdf
+sha256: 05d9c953934b2e31e5940308fb536879a9e6eedf8d7117e59c39b444770ff342
+bytes: 1869225
+pages: 4
+retrieved_at: '2026-11-08'
+status: scanned
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2017-08-07'
+in_force_from: unknown
+amends: amended 2020
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-03
+role: india_evidence
+candidate_quotes: []
+verified: false
+notes: Text extraction yielded fewer than 200 characters per page; no quotes added.

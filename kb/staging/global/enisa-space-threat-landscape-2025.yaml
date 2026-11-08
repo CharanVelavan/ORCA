@@ -1,0 +1,56 @@
+id: enisa-space-threat-landscape-2025
+title: Space Threat Landscape 2025
+authority: European Union Agency for Cybersecurity (ENISA)
+jurisdiction: EU
+doc_type: report
+url: https://www.enisa.europa.eu/sites/default/files/2025-03/Space_Threat_Landscape_Report_fin.pdf
+landing_page: https://www.enisa.europa.eu/publications/enisa-space-threat-landscape-2025
+local_path: corpus/raw/global/enisa-space-threat-landscape-2025.pdf
+sha256: d076b53c3a2f7b3a9bf428a3b0b8e5544cf7c93ae750b1880b09c713f3a01c01
+bytes: 3157916
+pages: 122
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: It does not endorse a regulatory obligation of ENISA or of ENISA bodies pursuant to the Regulation (EU) No
+  2019/881.
+issued: 2025-03-26
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Open access (ENISA / EU Publications Office reuse policy)
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+- GAP-IN-09
+role: global_example
+candidate_quotes:
+- quote: At the same time, the growing body of EU frameworks regulating network and information security as well as resilience
+    of critical and important sectors, recognises the space sector among essential entities, thus subjecting it to strict
+    cybersecurity requirements that will be applicable from January 2025.
+  page: 6
+  clause: Executive Summary
+  topic: space_cyber
+  gap: GAP-IN-09
+  supports: global_example
+  why: Recognizes space sector entities as essential infrastructure subject to strict mandatory cybersecurity requirements.
+- quote: Deployment of validated and tested cryptographic technologies measures into space systems;
+  page: 7
+  clause: Executive Summary
+  topic: standards
+  gap: GAP-IN-06
+  supports: global_example
+  why: Recommends mandatory cryptographic verification and testing for satellite and space communication systems.
+- quote: Cyber-attacks on satellites can be executed from the ground and the attackers do not necessarily need to be spacefaring
+    nations.
+  page: 9
+  clause: Section 1.1
+  topic: space_cyber
+  gap: GAP-IN-09
+  supports: global_example
+  why: Highlights ground-segment vulnerability vectors enabling hostile takeovers of satellite assets.
+verified: false
+notes: Comprehensive threat landscape and security control framework for commercial satellites, ground stations, and space
+  infrastructure.

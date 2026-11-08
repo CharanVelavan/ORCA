@@ -1,0 +1,29 @@
+id: ca-telecom-act-1993
+title: Telecommunications Act (S.C. 1993, c. 38)
+authority: Parliament of Canada
+jurisdiction: CA
+doc_type: act
+url: https://laws-lois.justice.gc.ca/PDF/T-3.4.pdf
+landing_page: https://laws-lois.justice.gc.ca/eng/acts/t-3.4/
+local_path: corpus/raw/global/ca-telecom-act-1993.pdf
+sha256: 63b5cb3f814db5e42b8fa3f543b99a513c1ac0bfd1a39cc54c92780a2ac7944f
+bytes: 892982
+pages: null
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: not stated in the document
+issued: '1993'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-06
+role: context
+candidate_quotes: []
+verified: false
+notes: Bilingual federal Telecommunications Act (PDF). Relevant to emergency-call and priority provisions; not searched in this pass. No quote taken.

@@ -1,0 +1,35 @@
+id: sg-csa-ccop-2-0
+title: Cybersecurity Code of Practice for Critical Information Infrastructure (CCoP
+  2.0)
+authority: Cyber Security Agency of Singapore (CSA)
+jurisdiction: SG
+doc_type: direction
+url: https://www.csa.gov.sg/-/media/csa/documents/legislation/ccop/cybersecurity-code-of-practice-second-edition.pdf
+landing_page: https://www.csa.gov.sg/legislation/cybersecurity-act/codes-of-practice
+local_path: corpus/raw/global/sg-csa-ccop-2-0.pdf
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2022-07-01
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of Singapore open access
+language: en
+gaps:
+- GAP-IN-04
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts:  Time  Current\n                \
+  \                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0\
+  \     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0  383k   \
+  \ 0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56)\
+  \ The requested URL returned error: 404"

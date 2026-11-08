@@ -1,0 +1,55 @@
+id: in-telact-2023
+title: The Telecommunications Act, 2023
+authority: Parliament of India
+jurisdiction: IN
+doc_type: act
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/Telecommunications-Act-2023.pdf
+landing_page: https://www.eservices.dot.gov.in/act-and-rules
+local_path: corpus/raw/india/in-telact-2023.pdf
+sha256: 81663bfba1915837df416dd99ec7b1b823de05ea16c4fafa30e8dc1c0616d503
+bytes: 206752
+pages: 26
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "An Act to amend and consolidate the law relating to development, expansion and operation of telecommunication services and telecommunication networks; assignment of spectrum; and for matters connected therewith or incidental thereto."
+issued: 2023-12-24
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: Government of India open (terms not checked)
+language: en
+gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-04, GAP-IN-06, GAP-IN-08]
+role: india_evidence
+candidate_quotes:
+  - quote: "provide for appropriate mechanism to ensure that messages of a user or group of users authorised for response and recovery during public emergency are routed on priority."
+    page: 9
+    clause: "Section 20(1)(b)"
+    topic: capacity_priority
+    gap: GAP-IN-03
+    supports: proves_gap
+    why: "Empowers the government to ensure priority message routing for authorized response users during emergencies, but establishes no automatic multi-tier capacity priority rule across dependent sectors."
+  - quote: "take temporary possession of any telecommunication service or telecommunication network from an authorised entity;"
+    page: 9
+    clause: "Section 20(1)(a)"
+    topic: emergency_powers
+    gap: GAP-IN-03
+    supports: answers_gap
+    why: "Provides statutory emergency power to temporarily take possession of telecommunication services or networks during public emergency."
+  - quote: "The Central Government may by rules provide for the standards, security practices, upgradation requirements and procedures to be implemented for such Critical Telecommunication Infrastructure."
+    page: 10
+    clause: "Section 22(4)"
+    topic: standards
+    gap: GAP-IN-06
+    supports: proves_gap
+    why: "Authorizes the Central Government to prescribe rules for standards, security practices and upgradation requirements for Critical Telecommunication Infrastructure."
+  - quote: "The Central Government may, by notification in the Official Gazette, declare any telecommunication network, or part thereof, as Critical Telecommunication Infrastructure, disruption of which shall have debilitating impact on national security, economy, public health or safety."
+    page: 10
+    clause: "Section 22(3)"
+    topic: critical_infrastructure
+    gap: GAP-IN-06
+    supports: answers_gap
+    why: "Authorizes the Central Government to notify telecommunication networks or parts thereof as Critical Telecommunication Infrastructure."
+verified: false
+notes: "Act No. 44 of 2023; phased commencement under Section 1(3)."

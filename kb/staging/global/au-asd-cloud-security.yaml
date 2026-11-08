@@ -1,0 +1,33 @@
+id: au-asd-cloud-security
+title: Cloud Security Guidance
+authority: Australian Cyber Security Centre / ASD
+jurisdiction: AU
+doc_type: guideline
+url: https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism/cyber-security-guidelines/guidelines-cloud-services
+landing_page: https://www.cyber.gov.au
+local_path: corpus/raw/global/au-asd-cloud-security.html
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2023
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-06
+- GAP-IN-08
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts:                        Dload  Upload\
+  \   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0     \
+  \ 0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0   \
+  \   0 --:--:-- --:--:-- --:--:--     0\ncurl: (92) HTTP/2 stream 1 was not closed\
+  \ cleanly: INTERNAL_ERROR (err 2)"

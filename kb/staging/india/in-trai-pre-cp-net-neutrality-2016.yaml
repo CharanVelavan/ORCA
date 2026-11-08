@@ -1,0 +1,37 @@
+id: in-trai-pre-cp-net-neutrality-2016
+title: TRAI Pre-Consultation Paper on Net Neutrality (30 May 2016)
+authority: Telecom Regulatory Authority of India
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/Net_Neutality_Preconsultation_30_may_2016.pdf
+landing_page: https://trai.gov.in
+local_path: corpus/raw/india/in-trai-pre-cp-net-neutrality-2016.pdf
+sha256: 6e8609bf4aa0171d7b4d96de8b391bcc4efa3c29fc0c797794de456ce3620412
+bytes: 382867
+pages: 13
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2016-05-30'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-08
+role: india_evidence
+candidate_quotes:
+- quote: Stakeholders are requested to send their comments, preferably in electronic form, by 21st June 2016 on email id advqos@trai.gov.in.
+  clause: Preface
+  topic: priority_routing
+  gap: GAP-IN-03
+  supports: context
+  why: Pre-consultation paper initiating the national consultative review on internet non-discrimination, traffic shaping,
+    and emergency prioritization.
+  page: 2
+verified: false
+notes: TRAI pre-consultation paper on net neutrality initiating the regulatory consultation process.

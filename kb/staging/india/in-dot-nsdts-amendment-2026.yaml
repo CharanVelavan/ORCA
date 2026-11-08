@@ -1,0 +1,41 @@
+id: in-dot-nsdts-amendment-2026
+title: "DoT letter (File No. 20-1236/2021-AS-I, dated 30 March 2021) to licensees: National Security Directive on Telecom Sector (NSDTS), trusted sources and nodal officer"
+authority: Department of Telecommunications (Access Services Wing)
+jurisdiction: IN
+doc_type: administrative letter with annexures
+url: https://www.dot.gov.in/static/uploads/2026/05/c7396429754934254ff7d55e5640ccca.pdf
+landing_page: https://www.dot.gov.in/
+local_path: corpus/raw/india/in-dot-nsdts-amendment-2026.pdf
+sha256: d95b0eacbdeda3ac50ed2d5acc74e5467ceaebe6fe8f8200b06d47f65266a261
+bytes: 91924
+pages: 3
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "all Licensees are hereby directed to follow the instructions as attached in"
+issued: 2021-03-30
+in_force_from: "effective 15 June 2021 for the licence amendment (as stated in the letter)"
+amends: [Telecom licences (trusted sources amendment, March 2021)]
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: india_evidence
+candidate_quotes:
+  - quote: "all Licensees are hereby directed to follow the instructions as attached in"
+    page: 1
+    clause: "Para 2 (letter)"
+    topic: telecom_cyber_security
+    gap: null
+    supports: context
+    why: "Shows operators are directed by letter to follow NSDTS trusted-source instructions and appoint a nodal officer to the national cyber coordinator's portal."
+  - quote: "The licensee, shall only connect Trusted Products in ijs network and also seek"
+    page: 2
+    clause: "Licence amendment, point (c) (as printed; text is OCR-degraded)"
+    topic: telecom_cyber_security
+    gap: null
+    supports: context
+    why: "States the licence condition that operators connect only trusted products and need permission from the designated authority for upgrades, a supply-chain control relevant to satellite ground equipment."
+verified: false
+notes: "The list gives this as an NSDTS amendment dated 2026-05. The document is a DoT letter dated 30 March 2021 with annexures (trusted-sources licence amendments and a nodal-officer authorisation form). The list's title and date are corrected here. The text layer is OCR-degraded in places, so the quote keeps the printed wording and the notes flag this. The letter does not contain the NSDTS text itself. The list's binding label is supported by the letter's direction to licensees."

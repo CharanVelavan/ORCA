@@ -1,0 +1,48 @@
+id: itu-y3172-2019
+title: "Architectural Framework for Machine Learning in Future Networks including IMT-2020 (ITU-T Recommendation Y.3172)"
+authority: International Telecommunication Union (ITU-T)
+jurisdiction: International
+doc_type: technical_standard
+url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-Y.3172-201906-I!!PDF-E&lang=e&type=items
+landing_page: https://www.itu.int/rec/T-REC-Y.3172/en
+local_path: corpus/raw/global/itu-y3172-2019.pdf
+sha256: e42f9a3be3f951d3e19b9007f876f0b389c81b4693f0d8576e18185a1acfe67b
+bytes: 1145173
+pages: 34
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "Compliance with this Recommendation is voluntary. However, the Recommendation may contain certain mandatory provisions"
+issued: 2019-06-22
+in_force_from: 2019-06-22
+amends: []
+amended_by: []
+licence: copyright_itu
+language: en
+gaps: [GAP-IN-08]
+role: global_example
+candidate_quotes:
+  - quote: "An ML sandbox is an isolated domain which allows the hosting of separate ML pipelines to train, test and evaluate them before deploying them in a live network. For training or testing, the ML sandbox can use data generated from simulated ML underlay networks and/or live networks."
+    page: 21
+    clause: "Clause 8.1"
+    topic: standards
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Defines the architectural ML sandbox isolated domain for simulated underlay network experimentation and training before live deployment."
+  - quote: "It is required to prevent from unauthorized access to, and data leaking from, an ML pipeline, whether or not they have a malicious intention, with implementation of mechanisms regarding authentication and authorization, external attack protection, etc."
+    page: 26
+    clause: "Clause 9"
+    topic: failover_path_security
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Prescribes authentication, authorization, and data leakage protections across distributed telecom machine learning pipelines."
+  - quote: "machine learning function orchestrator (MLFO): A logical node with functionalities that manage and orchestrate the nodes in a machine learning pipeline."
+    page: 8
+    clause: "Clause 3.2.2"
+    topic: standards
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Establishes the MLFO logical controller role coordinating machine learning nodes and policies across telecommunications underlays."
+verified: false
+notes: "Foundational ITU-T architectural standard defining ML pipeline, ML sandbox, and MLFO orchestration for future networks."

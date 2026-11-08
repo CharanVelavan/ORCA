@@ -1,0 +1,33 @@
+id: cpuc-pub-util-code-776
+title: California Public Utilities Code Section 776 (Backup Power Regulations for
+  Telecommunications Systems)
+authority: California State Legislature
+jurisdiction: US
+doc_type: act
+url: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=776.&lawCode=PUC
+landing_page: https://leginfo.legislature.ca.gov
+local_path: corpus/raw/global/cpuc-pub-util-code-776.html
+sha256: ''
+bytes: 0
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: 2006
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: public domain (US State Gov)
+language: en
+gaps:
+- GAP-IN-04
+role: global_example
+candidate_quotes: []
+verified: false
+notes: "Download failed after two curl attempts:  Time  Current\n                \
+  \                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0\
+  \     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0  5680   \
+  \ 0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56)\
+  \ The requested URL returned error: 403"

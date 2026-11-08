@@ -1,0 +1,48 @@
+id: in-dot-suspension-services-rules-2024
+title: "Telecommunications (Temporary Suspension of Services) Rules, 2024"
+authority: Department of Telecommunications
+jurisdiction: IN
+doc_type: rules (gazette notification, G.S.R. 724(E))
+url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/temporary-suspension-of-services-rules-2024.pdf
+landing_page: https://www.eservices.dot.gov.in/
+local_path: corpus/raw/india/in-dot-suspension-services-rules-2024.pdf
+sha256: f60ca6db4d91b116b8ef9bf543faff095d019a6bb631da553c695bf020f07735
+bytes: 1830337
+pages: 5
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: "the Central Government hereby makes the"
+issued: 2024-06-25
+in_force_from: "on the date of their publication in the Official Gazette"
+amends: [Temporary Suspension of Telecom Services (Public Emergency or Public Safety) Rules, 2017 (superseded)]
+amended_by: []
+licence: Government of India publication (terms not checked)
+language: en
+gaps: []
+role: india_evidence
+candidate_quotes:
+  - quote: "The directions to suspend any telecommunication service or any class of telecommunication services under clause (b) of sub-section (2) of section 20, shall only be issued by suspension order, and for reasons to be recorded in writing by a competent authority:"
+    page: 4
+    clause: "Rule 3(1)"
+    topic: emergency_powers
+    gap: null
+    supports: context
+    why: "Sets the legal test for any shutdown or suspension of telecom service: a written suspension order with reasons from a competent authority, which an NTN outage response must follow."
+  - quote: "to its confirmation by the competent authority, within twenty-four hours of issuance of such order, failing which the suspension order shall cease to exist."
+    page: 4
+    clause: "Rule 3(1), second proviso"
+    topic: emergency_powers
+    gap: null
+    supports: context
+    why: "An emergency suspension by a delegated officer lapses unless the competent authority confirms it within 24 hours, a time limit an incident playbook must respect."
+  - quote: "A copy of the suspension order issued under sub-rule (1) shall be forwarded to the concerned review committee within a period of twenty-four hours from the issuance of such order."
+    page: 5
+    clause: "Rule 3(3)"
+    topic: emergency_powers
+    gap: null
+    supports: context
+    why: "Requires oversight by a review committee within 24 hours of any suspension order, a check on emergency shutdowns."
+verified: false
+notes: "Read in full (keyword check). Replaces the 2017 suspension rules for emergency shutdowns under section 20 of the Telecommunications Act, 2023. It covers suspension of services (for example, a whole-network shutdown), not hybrid failover, so no gap is linked. The list's binding label is confirmed by the notification's own wording."

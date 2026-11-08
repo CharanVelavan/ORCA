@@ -1,0 +1,41 @@
+id: in-tec-mtcte-procedure-2023
+title: Procedure for Mandatory Testing and Certification of Telecommunication Equipment (MTCTE)
+authority: Telecommunication Engineering Centre (TEC)
+jurisdiction: IN
+doc_type: sop
+url: https://www.mtcte.tec.gov.in/filedownload?name=downloadDocument_MTCTEProcedure.pdf
+landing_page: https://mtcte.tec.gov.in
+local_path: corpus/raw/india/in-tec-mtcte-procedure-2023.pdf
+sha256: 7f3368b4010dde82dfcf866169d7df457d1b59bc85ec6fd908e66d3093e54c88
+bytes: 1602613
+pages: 52
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: binding
+binding_basis: With the notification of Indian Telegraph (Amendment) Rules 2017 enabling Mandatory Testing and Certification
+  of Telecom Equipment (MTCTE), TEC has been designated as the Appropriate Authority (AA) for the purpose of administration
+  of MTCTE procedure, and for formulation of Essential Requirements (ER) under MTCTE.
+issued: 2023-01
+in_force_from: with immediate effect
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-06
+role: india_evidence
+candidate_quotes:
+- quote: With the notification of Indian Telegraph (Amendment) Rules 2017 enabling Mandatory Testing and Certification of
+    Telecom Equipment (MTCTE), TEC has been designated as the Appropriate Authority (AA) for the purpose of administration
+    of MTCTE procedure, and for formulation of Essential Requirements (ER) under MTCTE.
+  clause: FOREWORD
+  topic: telecom_security
+  gap: GAP-IN-06
+  supports: context
+  why: Establishes the statutory mandate under the Indian Telegraph Rules for mandatory security and technical testing of
+    telecom equipment.
+  page: 6
+verified: false
+notes: Operational procedure governing MTCTE testing and certification under the Indian Telegraph Rules; establishes AA role
+  of TEC.

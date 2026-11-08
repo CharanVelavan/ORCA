@@ -1,0 +1,56 @@
+id: intl-3gpp-ts-23501
+title: '3GPP TS 23.501 V18.5.0 (Release 18): System architecture for the 5G System (5GS); Stage 2'
+authority: 3GPP / ETSI (ETSI TS 123 501 V18.5.0)
+jurisdiction: INTL
+doc_type: standard
+url: https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-i50.zip
+landing_page: https://www.etsi.org/deliver/etsi_ts/123500_123599/123501/18.05.00_60/ts_123501v180500p.pdf
+local_path: corpus/raw/global/intl-3gpp-ts-23501.pdf
+sha256: 960f4f8a188571a2b759dd5a3b4343f4385dad57c4e7dd4a0fee319a3bc5e5b8
+bytes: 5993398
+pages: 718
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: unclear
+binding_basis: not stated in the document (3GPP technical specification; legal status as voluntary consensus standard not
+  stated in the text)
+issued: 2024-05-22
+in_force_from: 2024-05-22
+amends: []
+amended_by: []
+licence: 3GPP open standard
+language: en
+gaps:
+- GAP-IN-03
+- GAP-IN-06
+role: global_example
+candidate_quotes:
+- quote: MPS allows Service Users (as per TS 22.153 [24]) priority access to system resources in situations such as during
+    congestion, creating the ability to deliver or complete sessions of a high priority nature.
+  page: 308
+  clause: Clause 5.16.5
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: global_example
+  why: Defines architectural support for Multimedia Priority Service enabling authorized users to maintain communication during
+    network congestion.
+- quote: An MPS-subscribed UE obtains priority access to the Radio Access Network by using the Unified Access Control mechanism
+    according to TS 22.261 [2].
+  page: 308
+  clause: Clause 5.16.5
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: global_example
+  why: Specifies the application of Unified Access Control for radio-level precedence during network overload.
+- quote: Satellite may be used as part of the backhaul between (R)AN and 5GC.
+  page: 509
+  clause: Clause 5.43.1
+  topic: failover_path_security
+  gap: GAP-IN-06
+  supports: global_example
+  why: Standardizes integration of satellite backhaul links (relevant to emulated NTN connectivity) connecting radio access
+    networks to the 5G core.
+verified: false
+notes: 3GPP Release 18 specification TS 23.501 V18.5.0 transposed by ETSI as ETSI TS 123 501 V18.5.0. All NTN links in testbeds
+  are emulated.

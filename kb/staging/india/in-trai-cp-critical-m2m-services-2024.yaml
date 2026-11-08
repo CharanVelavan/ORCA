@@ -1,0 +1,37 @@
+id: in-trai-cp-critical-m2m-services-2024
+title: Consultation Paper on Issues Related to Critical Services in the Machine-to-Machine (M2M) Sector
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: consultation
+url: https://trai.gov.in/sites/default/files/2024-09/CP_24062024.pdf
+landing_page: https://trai.gov.in/telecom/licensing
+local_path: corpus/raw/india/in-trai-cp-critical-m2m-services-2024.pdf
+sha256: adddd7b3b71c6d946510ee36285213fe010581c6691dda38bdd41e5f2cb0caec
+bytes: 1173179
+pages: 56
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: not stated in the document
+issued: '2024-06-24'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-02
+- GAP-IN-03
+- GAP-IN-06
+role: context
+candidate_quotes:
+- quote: Consultation Paper No. 6/2024
+  clause: Title Page
+  topic: priority_routing
+  gap: GAP-IN-03
+  supports: context
+  why: Consults on regulatory identification of critical M2M services and quality-of-service priority requirements.
+  page: 1
+verified: false
+notes: TRAI consultation paper on issues related to critical services in the machine-to-machine (M2M) sector.

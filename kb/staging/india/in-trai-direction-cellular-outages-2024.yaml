@@ -1,0 +1,36 @@
+id: in-trai-direction-cellular-outages-2024
+title: Direction on Reporting of Mobile Cellular Outages and Base Station Downtime
+authority: Telecom Regulatory Authority of India (TRAI)
+jurisdiction: IN
+doc_type: direction
+url: https://trai.gov.in/sites/default/files/2024-11/Direction_19092024.pdf
+landing_page: https://trai.gov.in/telecom/qos
+local_path: corpus/raw/india/in-trai-direction-cellular-outages-2024.pdf
+sha256: 9f1302c5a4700f7e448b4a8ab9ae691526d59495cc93f8c1ff89057e2dfa1600
+bytes: 1224805
+pages: 26
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '2024-09-19'
+in_force_from: unknown
+amends: none found
+amended_by: []
+licence: Government of India open (GODL)
+language: en
+gaps:
+- GAP-IN-01
+- GAP-IN-04
+role: india_evidence
+candidate_quotes:
+- quote: at Annexure-II to this Direction, within 24 hours of the start of the outage;
+  page: 3
+  clause: paragraph 7(i)
+  topic: incident_reporting
+  gap: GAP-IN-01
+  supports: answers_gap
+  why: Sets a significant network outage reporting deadline that can inform comparison with cyber-incident reporting.
+verified: false
+notes: Downloaded and text extracted. Candidate clauses not yet manually verified; no quotes entered.

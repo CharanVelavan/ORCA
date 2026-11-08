@@ -1,0 +1,48 @@
+id: us-nist-csf-2-0-2024
+title: "The NIST Cybersecurity Framework (CSF) 2.0 (NIST CSWP 29)"
+authority: National Institute of Standards and Technology (NIST)
+jurisdiction: US
+doc_type: technical_standard
+url: https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf
+landing_page: https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final
+local_path: corpus/raw/global/us-nist-csf-2-0-2024.pdf
+sha256: 3c31f46fee98cac0c4323453e5109291a213b4de7fef8c058af9bf67f717433c
+bytes: 1518858
+pages: 32
+retrieved_at: 2026-11-08
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: "The CSF does not prescribe how outcomes should be achieved. Rather, it links to online resources that provide additional guidance"
+issued: 2024-02-26
+in_force_from: 2024-02-26
+amends: []
+amended_by: []
+licence: public_domain
+language: en
+gaps: [GAP-IN-06, GAP-IN-08]
+role: global_example
+candidate_quotes:
+  - quote: "The CSF does not prescribe how outcomes should be achieved. Rather, it links to online resources that provide additional guidance on practices and controls that could be used to achieve those outcomes."
+    page: 2
+    clause: "Abstract"
+    topic: standards
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Defines the non-prescriptive, outcomes-based structure of the updated NIST Cybersecurity Framework 2.0."
+  - quote: "CSF Core Functions — GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND, and RECOVER — organize cybersecurity outcomes at their highest level."
+    page: 8
+    clause: "Section 2"
+    topic: telecom_cyber_security
+    gap: GAP-IN-06
+    supports: global_example
+    why: "Introduces the new Govern (GV) core function alongside Identify, Protect, Detect, Respond, and Recover."
+  - quote: "GOVERN (GV) — The organization’s cybersecurity risk management strategy, expectations, and policy are established, communicated, and monitored."
+    page: 8
+    clause: "Section 2"
+    topic: critical_infrastructure
+    gap: GAP-IN-08
+    supports: global_example
+    why: "Establishes institutional governance, risk strategy, and oversight expectations across organizational operations."
+verified: false
+notes: "Major 2024 revision of NIST Cybersecurity Framework expanding scope beyond critical infrastructure to all sectors and adding GOVERN function."

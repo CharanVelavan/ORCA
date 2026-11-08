@@ -1,0 +1,29 @@
+id: jp-telecom-business-act-disaster-priority
+title: 'Telecommunications Business Act (Act No. 86 of 1984): Article 8 (Securing Important Communications)'
+authority: National Diet of Japan
+jurisdiction: JP
+doc_type: act
+url: https://www.japaneselawtranslation.go.jp/en/laws/view/4279/en
+landing_page: https://www.japaneselawtranslation.go.jp
+local_path: null
+sha256: null
+bytes: null
+pages: null
+retrieved_at: '2026-11-08'
+status: failed
+official_domain: true
+binding_status: not stated
+binding_basis: not stated in the document
+issued: '1984-12-25'
+in_force_from: unknown
+amends: []
+amended_by: []
+licence: unknown
+language: en
+gaps:
+- GAP-IN-03
+role: context
+candidate_quotes: []
+verified: false
+notes: Listed URL https://www.japaneselawtranslation.go.jp/en/laws/view/4279/en resolves to a different act (international assistance in criminal investigation, Article 24 text), not the Telecommunications
+  Business Act Article 8. Title and URL mismatch; not used.

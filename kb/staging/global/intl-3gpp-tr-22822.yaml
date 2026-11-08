@@ -1,0 +1,56 @@
+id: intl-3gpp-tr-22822
+title: '3GPP TR 22.822 V16.0.0 (Release 16): Study on using Satellite Access in 5G'
+authority: 3GPP Technical Specification Group Services and System Aspects
+jurisdiction: INTL
+doc_type: report
+url: https://www.3gpp.org/ftp/Specs/archive/22_series/22.822/22822-g00.zip
+landing_page: https://www.3gpp.org/DynaReport/22822.htm
+local_path: corpus/raw/global/intl-3gpp-tr-22822/22822-g00.doc
+sha256: 3e5c79caff093ced3e284aa4d52f7fe0eaa9489f16f80a70ea5568d4892b61ba
+bytes: 1143296
+pages: 6
+retrieved_at: '2026-11-08'
+status: ok
+official_domain: true
+binding_status: advisory
+binding_basis: The present document has not been subject to any approval process by the 3GPP Organizational Partners and shall
+  not be implemented. This Report is provided for future development work within 3GPP only.
+issued: '2018-07-06'
+in_force_from: '2018-07-06'
+amends: []
+amended_by: []
+licence: 3GPP open report
+language: en
+gaps:
+- GAP-IN-03
+role: global_example
+candidate_quotes:
+- quote: Elements of the RATs are partially or completely destroyed. Accesses to the services that are normally delivered
+    by the terrestrial network are not available anymore.
+  page: 5
+  clause: 5.4.1
+  topic: disaster_coordination
+  gap: null
+  supports: context
+  why: Describes physical destruction of terrestrial radio access infrastructure during disasters justifying satellite failover.
+- quote: At the same time, the crisis leads to a situation of urgency for the population, as well for the public institution
+    in order to provide first aid support, and to restore security and to organise logistics support.
+  page: 5
+  clause: 5.4.1
+  topic: capacity_priority
+  gap: null
+  supports: context
+  why: Describes urgency conditions during natural disasters requiring prioritized communications for first responders and
+    logistics.
+- quote: '[PR 6.2.006] A 5G system with multiple access shall be able to select the combination of access technologies to
+    serve a UE on the basis of the targeted priority, pre-emption, QoS parameters and access technology availability.'
+  page: 5
+  clause: '6.2'
+  topic: capacity_priority
+  gap: GAP-IN-03
+  supports: global_example
+  why: Specifies access selection requirements incorporating priority levels, pre-emption capabilities, and QoS parameters
+    across multi-access networks.
+verified: false
+notes: Unzipped into corpus/raw/global/intl-3gpp-tr-22822/ (22822-g00.doc) and extracted text to intl-3gpp-tr-22822.txt. Replaced
+  contradicted binding basis with verbatim words from p1. All NTN links in testbeds are emulated.
