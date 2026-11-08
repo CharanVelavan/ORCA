@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main, Pred]
+  pull_request:
+    branches: [main, Pred]
+
+jobs:
+  ci:
+    name: Validate KB and Run Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libgomp1
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Validate Knowledge Base
+        run: |
+          python tools/validate_kb.py
+
+      - name: Check Scenario Consistency
+        run: |
+          python scenarios/check_scen.py
+
+      - name: Run Test Suite (Mock LLM, Offline, No Secrets)
+        env:
+          LLM_MODE: replay
+          LLM_BASE_URL: mock
+          LLM_MODEL: mock
+        run: |
+          python -m pytest -q

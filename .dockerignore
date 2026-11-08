@@ -1,0 +1,27 @@
+# Git and VCS
+.git
+.gitignore
+
+# Virtual environment and local config
+.venv/
+.env
+.env.*
+.claude/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Large data, run logs, local databases, and temporary artifacts
+chroma/
+runs/
+corpus/
+data/raw/
+finetune/
+*.log

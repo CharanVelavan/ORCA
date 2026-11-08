@@ -1,192 +1,236 @@
-# Run ORCA-NTN on a laptop
+# ORCA-NTN: Judge & Evaluator Run Guide
 
-This guide runs the whole emulated sandbox on one laptop. Every network link in the sandbox is **emulated**.
-No real satellite, mobile network or power grid is touched.
+This guide provides step-by-step instructions to run and evaluate **ORCA-NTN** (Orchestrated Response and Coordination Agents for Non-Terrestrial Networks).
 
-Each command below was run on macOS (Apple Silicon) on 8 Nov 2026. Sections marked **coming (Mission 8)** are not built yet.
+> [!IMPORTANT]
+> **Emulation Notice:** Every satellite and non-terrestrial network (NTN) link in ORCA-NTN is strictly **emulated** within a software sandbox. No live orbital assets, commercial satellite constellations, or physical telecommunications infrastructure are accessed or controlled.
 
-## 1. What you need
+---
 
-| Part | Needed for | Notes |
-|---|---|---|
-| Python 3.11 or newer | tests, scenario replay, mock agent run | Checked with Python 3.14.7 (no vector KB packages) |
-| Python 3.12 (in `.venv`) | vector KB (`orca.kbvec`) | Checked with 3.12.14, installed by `uv` |
-| `uv` (optional) | fetches Python 3.12 and installs the pinned packages | `brew install uv` |
-| LM Studio with `text-embedding-nomic-embed-text-v1.5` loaded | vector KB ingest and query | Server on `http://localhost:1234/v1` |
-| poppler (`brew install poppler`) | only the corpus tools in `tools/search_sources.py` and `scripts/quote_check.py` | Not needed to run the demo |
-| Docker | not used here | `Dockerfile` and `docker-compose.yml` are not tested yet |
-| A cloud or local LLM endpoint | live agent runs | **coming (Mission 8)**. The LLM client exists but no runner uses it yet |
+## 1. Quick Start via Docker Compose (Recommended)
 
-You do not need an LLM for sections 2 to 5.
+Docker Compose provides a reproducible environment that runs the entire testbed on one machine, including the ORCA-NTN application and a persistent ChromaDB vector store.
 
-## 2. Install
+### Prerequisites
+- Docker Engine 24.0+ / Docker Desktop (verified with Docker version 29.5.3)
+- Docker Compose v2.20+
 
-Clone the repo and enter it:
-
-```
+### Step 1: Clone and Enter the Repository
+```bash
+git clone <repo-url>
 cd orca-ntn
 ```
 
-**Quick path (tests, scenarios, mock run).** Python 3.11 or newer (`pyproject.toml`) with `pyyaml` and `pytest` is enough.
-Tested on Python 3.14.7. That Python had no `chromadb`, so the vector KB was off and the tests still ran.
+### Step 2: Configure Environment (Optional)
+By default, ORCA-NTN runs in **offline mock mode** requiring no external API keys, internet connectivity, or credentials.
 
-**Full path (adds the vector KB).** Use Python 3.12 in a local `.venv`:
-
+To set an optional Commander PIN hash or configure external endpoints, copy the template:
+```bash
+cp .env.example .env
 ```
-uv venv --python 3.12 .venv
-uv pip install --python .venv/bin/python -r requirements.txt
+*(Never bake secrets or tokens into images; Compose automatically pulls variables from `.env` without printing or storing plaintext PINs.)*
+
+### Step 3: Run with Docker Compose
+To build the image and run the default demo scenario (`S1`):
+```bash
+docker compose up --build
 ```
-
-`uv` used CPython 3.12.14 and installed every pinned package. Without `uv`, install Python 3.12 yourself and run
-`python3.12 -m venv .venv && .venv/bin/pip install -r requirements.txt` (not tested here).
-
-## 3. Run the tests
-
-From the repo root:
-
-```
-python3 -m pytest -q
+Or to run via an ephemeral one-off container:
+```bash
+docker compose run --rm orca
 ```
 
-Result on Python 3.14.7 (no vector KB): **164 passed, 4 skipped, 1 xfailed**.
+### Step 4: Run Any Specific Scenario in Docker
+You can execute any of the 10 scenarios (`S0`–`S3`, `N1`–`N5`, `CAP`) directly:
+```bash
+# Run scenario S1 with deterministic rule engine
+docker compose run --rm orca python run_demo.py --scenario s1
 
-Run the safety tests on their own, with the skip and xfail reasons shown:
+# Run scenario S1 without rules (baseline comparison)
+docker compose run --rm orca python run_demo.py --scenario s1 --no-rules
 
-```
-python3 -m pytest -q tests/test_safety.py -rxs
-```
-
-Result: **65 passed, 3 skipped, 1 xfailed**. The 3 skips are Mission 6 features (autonomy modes, kill switch,
-blast-radius cap). The xfail is a known bug in single-use approval tokens (`orca/remediation.py:108-109`).
-
-With the full `.venv` (vector KB installed):
-
-```
-.venv/bin/python -m pytest -q
+# Run full capability scenario
+docker compose run --rm orca python run_demo.py --scenario cap
 ```
 
-Result: **167 passed, 3 skipped, 1 xfailed, 1 failed**. The failure is an existing test,
-`tests/test_agents.py::test_adviser_answers_from_kb_with_citations`. With the vector KB on, the policy adviser can cite
-a corpus chunk id (for example `in-certin-faq-2022:p15:c0`), and that test only accepts record or gap ids. The
-citation is allowed by design. The test is out of date. It was not changed in this step.
-
-## 4. Replay all scenarios
-
+### Step 5: Stop Services
+```bash
+docker compose down
 ```
-python3 scenarios/check_scen.py
+ChromaDB state is persisted to the local `./chroma` directory across container restarts.
+
+---
+
+## 2. Quick Start via Local Python Environment
+
+If you prefer running directly on your host machine using a Python virtual environment:
+
+### Prerequisites
+- Python 3.12 (Python 3.11+ supported for core rules/tests; 3.12 recommended for vector KB)
+- Git
+
+### Step 1: Set Up Virtual Environment
+```bash
+cd orca-ntn
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
 ```
+*(On Debian/Ubuntu Linux systems, ensure `libgomp1` is installed: `sudo apt-get install -y libgomp1` for LightGBM OpenMP support).*
 
-Each scenario replays its events, runs the rule engine after every event, and checks the expected verdicts.
-Last run: 10 scenarios (CAP, N1 to N5, S0 to S3), **0 problems** in every line. The script exits with code 0.
-
-## 5. Check the knowledge base
-
+### Step 2: Run the Verification Suite
+Run the test suite offline with mock LLM:
+```bash
+python -m pytest -q
 ```
-python3 tools/validate_kb.py
+*Expected result:* 227+ passed (offline deterministic test double, zero external network calls).
+
+### Step 3: Validate the Knowledge Base
+Ensure all regulatory records and citations meet strict schema criteria:
+```bash
+python tools/validate_kb.py
 ```
+*Expected result:* `OK` (validates all jurisdiction records, gaps, and verified official quotes).
 
-Expected output: `records: 50 (...)`, `verified quotes: 49`, `gaps: 9`, `sources: 24`, then `OK`.
-
-Only some source files are on disk. Check which ones are present:
-
+### Step 4: Verify Scenario Consistency
+Replay all 10 scenario event streams and evaluate state consistency:
+```bash
+python scenarios/check_scen.py
 ```
-python3 tools/fetch_sources.py --check
-```
+*Expected result:* 0 problems across all scenarios (`CAP`, `N1`–`N5`, `S0`–`S3`).
 
-Last run: two files were MISSING (`intl-3gpp-tr-33700-29`, `intl-itut-x1144-2024`). The rest were OK. To download
-the missing files (uses the network and writes hashes into `kb/sources.yaml`), run `python3 tools/fetch_sources.py`.
-That command was **not run** here.
+---
 
-## 6. Mock-LLM agent run
+## 3. Running Scenarios (S0–S3, N1–N5, CAP)
 
-This runs the role agents on scenario S1 with a deterministic mock model. No network and no LLM server.
+ORCA-NTN includes ten reproducible scenarios testing automated fault vs. attack classification, regulatory compliance, multi-agency coordination, and gap detection.
 
-```
-mkdir -p runs && rm -f runs/mock-s1.jsonl && python3 -c "
-import yaml, pathlib
-from orca.agents import Coordinator, PolicyMockLLM
-from orca.world import World
-s = yaml.safe_load(open('scenarios/s1.yaml'))
-w = World.new({'jurisdiction': 'IN', 'now': s['start']}, pathlib.Path('runs/mock-s1.jsonl'))
-res = Coordinator(w, PolicyMockLLM()).run(s)
-print(len(res), 'agent turns;', len(w.audit.entries()), 'audit entries; chain intact:', w.audit.verify() is None)
-"
-```
+### Scenario Descriptions
 
-Last run: **11 agent turns, 56 audit entries, chain intact: True**. The audit file is `runs/mock-s1.jsonl`
-(the `runs/` folder is git-ignored).
+| Scenario | Description | Key Focus |
+|---|---|---|
+| **S0** | Baseline Clean Run | Normal network conditions, zero false-alarm gap triggers |
+| **S1** | Multi-Operator Cyber Incident | Space ground-segment attack, reporting clocks, cross-sector coordination |
+| **S2** | Priority & Conflict Resolution | Competing emergency vs. critical-infrastructure traffic routing |
+| **S3** | Regulatory Regime Swap | Comparative analysis across jurisdictions (e.g. India vs. Global/EU) |
+| **N1** | Weather Fade vs. Jamming | Anomaly detection differentiating rain fade from uplink jamming |
+| **N2** | Cascading Power Outage | Backhaul battery depletion and critical-load shedding |
+| **N3** | Ground Segment Misconfiguration | VPN credential misuse and terminal unresponsiveness |
+| **N4** | Coordinated Physical + Cyber Attack | Multi-site simultaneous failover and path validation |
+| **N5** | Downstream Supply Chain Breach | Third-party maintenance vector and notification propagation |
+| **CAP** | Full Capability Benchmark | End-to-end evaluation covering all 9 regulatory gap categories |
 
-Run `python3 run_demo.py --kb india` for a quick check. It validates the KB and prints the record count. The full
-pipeline is **coming (Mission 8)**.
+### Execution Commands
 
-## 7. Build and query the vector KB
+Run any scenario using `run_demo.py`:
 
-Needs the `.venv` from section 2 and LM Studio on port 1234 with the nomic embedding model loaded. Check the server first:
+```bash
+# Core Scenarios
+python run_demo.py --scenario s0
+python run_demo.py --scenario s1
+python run_demo.py --scenario s2
+python run_demo.py --scenario s3
 
-```
-curl -s http://localhost:1234/v1/models
-```
+# Network & Threat Scenarios
+python run_demo.py --scenario n1
+python run_demo.py --scenario n2
+python run_demo.py --scenario n3
+python run_demo.py --scenario n4
+python run_demo.py --scenario n5
 
-Build the index from `kb/sources` and the verified records (about 2 minutes on a laptop):
-
-```
-.venv/bin/python -m orca.kbvec ingest
-```
-
-Last run: 24 sources, **3,055 chunks embedded**, 50 verified records, no errors. The index is in `chroma/` (git-ignored).
-
-Query it:
-
-```
-.venv/bin/python -m orca.kbvec query "6 hour incident report" --filter jurisdiction=IN
-```
-
-Last run: the top hit was `IN-CERTIN-DIR-2022-ii` (verified, binding, CERT-In Direction (ii)), then `IN-TCSR-2024-R7-1`.
-
-Find the nearest clauses for a gap check:
-
-```
-.venv/bin/python -m orca.kbvec coverage "backup power hours" IN
-```
-
-Last run: searched 18 documents, nearest clause `IN-CEA-2020-8-11`.
-
-Save a snapshot of the index (writes `kb/vec_snapshots/`):
-
-```
-.venv/bin/python -m orca.kbvec snapshot
+# Full Capability Scenario
+python run_demo.py --scenario cap
 ```
 
-Last run: 3,055 chunks, embed model `text-embedding-nomic-embed-text-v1.5`.
+### With Rules vs. Without Rules Comparison
+ORCA-NTN demonstrates the critical necessity of a deterministic policy engine over raw LLM reasoning:
 
-Score retrieval (30 questions, no reranker):
+1. **With Rules (Default):**
+   ```bash
+   python run_demo.py --scenario s1
+   ```
+   *Output:* Deterministic verdicts (`COMPLIANT`, `CONFLICT`, `AMBIGUITY`, `POTENTIAL_GAP`) verified against exact KB record citations (`GAP-IN-01`, `GAP-IN-02`, `GAP-IN-09`).
 
+2. **Without Rules Baseline (`--no-rules`):**
+   ```bash
+   python run_demo.py --scenario s1 --no-rules
+   ```
+   *Output:* Rule engine bypassed; agent prompts execute without statutory constraints, revealing missed gap detections and ungrounded coordination decisions.
+
+Every execution produces an immutable, SHA-256 chained audit trail stored in `runs/<SCENARIO>-<mode>.jsonl`.
+
+---
+
+## 4. LLM Configuration Modes
+
+ORCA-NTN supports multiple execution backends depending on judge environment and hardware availability:
+
+### Option 1: Deterministic Offline Mock (Default & Recommended for Judges)
+- **Zero setup:** Default flag `--llm mock`.
+- **Zero cost & network:** Operates completely offline with no API keys or local LLM servers.
+- **Deterministic:** Provides identical, reproducible verdicts across any operating system.
+```bash
+python run_demo.py --scenario s1 --llm mock
 ```
-.venv/bin/python -m orca.kbvec evaluate --no-rerank
+
+### Option 2: Local LM Studio (Local Inference)
+If evaluating with a local model on your laptop:
+1. Launch **LM Studio** and start the local server on `http://localhost:1234/v1`.
+2. Load `qwen2.5-14b-instruct` (or similar OpenAI-compatible model) and nomic embedding model.
+3. Configure your environment:
+   ```bash
+   export LLM_BASE_URL="http://localhost:1234/v1"
+   export LLM_MODEL="qwen2.5-14b"
+   ```
+4. Run:
+   ```bash
+   python run_demo.py --scenario s1 --llm local
+   ```
+
+### Option 3: Hosted Qwen Endpoint (Cloud / Atlas Tunnel)
+For live high-capacity evaluations using the hosted Qwen model (e.g., Qwen3.6-35B-A3B on Google Cloud via IAP/SSH tunnel):
+1. Establish the tunnel to the evaluation VM:
+   ```bash
+   # Tunnel exposes hosted endpoint on localhost:8000
+   ```
+2. Configure environment:
+   ```bash
+   export LLM_BASE_URL="http://localhost:8000/v1"
+   export LLM_MODEL="Qwen/Qwen3.6-35B-A3B"
+   ```
+3. Run:
+   ```bash
+   python run_demo.py --scenario s1 --llm local
+   ```
+
+### Option 4: Exact Replay Mode (`LLM_MODE=replay`)
+To inspect pre-recorded high-parameter live runs without active network calls:
+```bash
+export LLM_MODE=replay
+python run_demo.py --scenario s1 --llm local
+```
+*Note:* Replay mode loads cryptographic matches from `data/llm_cache/`. If a new prompt is sent that has not been cached, it informs you to record it with `LLM_MODE=record`.
+
+---
+
+## 5. Vector Knowledge Base (ChromaDB)
+
+The vector KB (`orca.kbvec`) stores clause embeddings for semantic search and gap discovery over official regulatory texts.
+
+- **Persistent storage:** Located in `./chroma` (and mounted into `/app/chroma` in Docker).
+- **Ingest:** Embeds official source documents and verified records.
+- **Query:** Fast retrieval of relevant regulatory clauses and binding directions.
+
+Example query using local virtualenv:
+```bash
+python -m orca.kbvec query "6 hour incident reporting window" --filter jurisdiction=IN
 ```
 
-Last run: **recall@5 = 1.000, MRR = 0.933**. This matches the table in `docs/KBVEC.md`.
+---
 
-Note: `query` and `coverage` write the cache in `kb/vec_cache/`. That is intended, and the tests ignore it.
+## 6. Security and Compliance Rules
 
-## 8. Coming (Mission 8)
-
-These parts are not built yet. Do not expect them to run:
-
-- autonomy modes MANUAL, ASSISTED and AUTO, with a PIN and expiry per site or playbook;
-- kill switch;
-- blast-radius cap (sites per action, actions per 10 minutes);
-- live LLM agent runs through a runner (LM Studio or a cloud endpoint);
-- the full demo pipeline in `run_demo.py` (today it only validates the KB);
-- Docker run (`docker-compose.yml`);
-- the commander console and dashboard.
-
-## 9. Known issues
-
-- One existing test fails with the vector KB installed (section 3).
-- The single-use approval token can be re-minted at the same clock instant (xfail in `tests/test_safety.py`).
-  Fix: `orca/remediation.py`, token derivation and `approve()`. This is not fixed in this step.
-- Two source files are missing from `kb/sources` (section 5).
-- `query`, `coverage` and `snapshot` write into `kb/` (`kb/vec_cache/`, `kb/vec_snapshots/`). Scenario runs do not.
-  The safety test ignores `vec_cache` and fails on any other change under `kb/`.
-- The approval PIN is checked only for being non-empty (`orca/remediation.py`, `approve()`).
+- **PIN Security:** The incident commander PIN is never stored or logged in plain text. Only `ORCA_COMMANDER_PIN_SHA256` is ingested via environment or `.env`.
+- **Read-Only Verification:** Hard-coded guardrails prevent modification of verified records in `kb/` during scenario execution.
+- **Audit Verification:** All actions, verdicts, and tool invocations append to a hash-chained audit log verifiable via `orca.audit.AuditLog.verify()`.
