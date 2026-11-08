@@ -1,0 +1,155 @@
+{
+  "generator": "finetune/make_data.py",
+  "seed": 20261108,
+  "kb_as_of": "2026-11-07",
+  "vector_corpus": "off (record and gap ids only, for determinism)",
+  "roles_sha256": "af8c0afdde7f8599c5773d21fa29c79a78ff59229ce30b92916b46efd2c4619e",
+  "roles_frozen_flag_present": true,
+  "split": {
+    "train": [
+      "S0",
+      "S1",
+      "S2",
+      "S3",
+      "N1",
+      "N2",
+      "N3"
+    ],
+    "test_and_cases": [
+      "N4",
+      "N5",
+      "CAP"
+    ]
+  },
+  "counts": {
+    "train": 1242,
+    "test": 623,
+    "cases": 1221
+  },
+  "train": {
+    "by_role": {
+      "cert_in": 80,
+      "gap_analyst": 200,
+      "mobile_operator": 526,
+      "power_utility": 120,
+      "regulator": 82,
+      "satellite_operator": 234
+    },
+    "by_scenario": {
+      "N1": 187,
+      "N2": 179,
+      "N3": 229,
+      "S0": 103,
+      "S1": 146,
+      "S2": 206,
+      "S3": 192
+    },
+    "by_kind": {
+      "askowner": 106,
+      "assess": 686,
+      "catalogue": 57,
+      "exec": 40,
+      "faketoken": 58,
+      "insuff": 62,
+      "notoken": 98,
+      "oos": 72,
+      "share": 63
+    },
+    "by_tag": {
+      "tool_choice": 1170,
+      "filter_source": 210,
+      "approval_first": 215,
+      "no_token_refuse": 156,
+      "cite_kb": 469,
+      "insufficient_evidence": 62,
+      "refuse_out_of_scope": 72,
+      "ask_owner": 199,
+      "share_limits": 63,
+      "final_format": 1242
+    },
+    "mix": {
+      "refusal_or_insufficient": 0.2842,
+      "no_token": 0.1256
+    }
+  },
+  "test": {
+    "by_role": {
+      "cert_in": 55,
+      "gap_analyst": 157,
+      "mobile_operator": 189,
+      "power_utility": 50,
+      "regulator": 34,
+      "satellite_operator": 138
+    },
+    "by_scenario": {
+      "CAP": 213,
+      "N4": 213,
+      "N5": 197
+    },
+    "by_kind": {
+      "askowner": 47,
+      "assess": 357,
+      "catalogue": 25,
+      "exec": 21,
+      "faketoken": 30,
+      "insuff": 33,
+      "notoken": 51,
+      "oos": 25,
+      "share": 34
+    },
+    "by_tag": {
+      "tool_choice": 598,
+      "filter_source": 70,
+      "approval_first": 107,
+      "no_token_refuse": 81,
+      "cite_kb": 287,
+      "insufficient_evidence": 33,
+      "refuse_out_of_scope": 25,
+      "ask_owner": 105,
+      "share_limits": 34,
+      "final_format": 623
+    },
+    "mix": {
+      "refusal_or_insufficient": 0.2777,
+      "no_token": 0.13
+    }
+  },
+  "cases": {
+    "by_role": {
+      "cert_in": 107,
+      "gap_analyst": 307,
+      "mobile_operator": 372,
+      "power_utility": 96,
+      "regulator": 67,
+      "satellite_operator": 272
+    },
+    "by_scenario": {
+      "CAP": 415,
+      "N4": 420,
+      "N5": 386
+    },
+    "by_tag": {
+      "tool_choice": 1196,
+      "filter_source": 140,
+      "approval_first": 214,
+      "no_token_refuse": 162,
+      "cite_kb": 574,
+      "insufficient_evidence": 66,
+      "refuse_out_of_scope": 25,
+      "ask_owner": 210,
+      "share_limits": 68,
+      "final_format": 1221
+    }
+  },
+  "dropped": {
+    "count": 0,
+    "reasons_first_20": []
+  },
+  "skipped_insufficient_hit": 15,
+  "dropped_test_text_overlap": 76,
+  "file_bytes": {
+    "train.jsonl": 16573022,
+    "test.jsonl": 8915654,
+    "cases.jsonl": 5668406
+  }
+}
