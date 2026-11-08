@@ -1,0 +1,481 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "read_alerts",
+      "description": "Read the events, model alerts and messages released to YOU. source=M3 gives the fault-or-attack classification, source=M1 anomalies, M2 forecasts, M4 capacity; source=any gives everything. Use site only to narrow to one tower.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "enum": [
+              "any",
+              "M1",
+              "M2",
+              "M3",
+              "M4",
+              "scenario"
+            ]
+          },
+          "site": {
+            "type": "string",
+            "enum": [
+              "any",
+              "CHN-01",
+              "CHN-02",
+              "CHN-03",
+              "CHN-04",
+              "CHN-05",
+              "CHN-06"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "description": "One short sentence: why you make this call."
+          }
+        },
+        "required": [
+          "rationale"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "explain_model",
+      "description": "Get the model's own explanation for one alert id that read_alerts returned to you.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "alert_id": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string",
+            "description": "One short sentence: why you make this call."
+          }
+        },
+        "required": [
+          "alert_id",
+          "rationale"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "query_kb",
+      "description": "Search the legal knowledge base (verified records and the document corpus). Returns ids you may cite.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "topic": {
+            "type": "string",
+            "enum": [
+              "backup_power",
+              "capacity_priority",
+              "cert_powers",
+              "critical_infrastructure",
+              "cross_border_transfer",
+              "data_location",
+              "disaster_coordination",
+              "downstream_warning",
+              "emergency_powers",
+              "emergency_priority",
+              "failover_path_security",
+              "grid_comms_backup",
+              "incident_reporting",
+              "interference_reporting",
+              "joint_command",
+              "log_retention",
+              "network_info_sharing",
+              "network_redundancy",
+              "ntn_coverage",
+              "outage_reporting",
+              "personal_data_breach",
+              "point_of_contact",
+              "public_alerts",
+              "satellite_design_security",
+              "space_cyber",
+              "standards",
+              "standards_power",
+              "telecom_cyber_security",
+              "terminal_control"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "description": "One short sentence: why you make this call."
+          }
+        },
+        "required": [
+          "question",
+          "rationale"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "ask_adviser",
+      "description": "Ask the policy/legal adviser a question. It answers only from the knowledge base, with citations, or says the answer was not found in the sources checked.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string",
+            "description": "One short sentence: why you make this call."
+          }
+        },
+        "required": [
+          "question",
+          "rationale"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "draft_notice",
+      "description": "Draft a notice. It stays a draft until a human sends it. Put the ids you rely on in citations.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "certin_report",
+              "dot_report",
+              "downstream_warning",
+              "policy_brief",
+              "information_request",
+              "advisory"
+            ]
+          },
+          "recipient": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "citations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rationale": {
+            "type": "string",
+            "description": "One short sentence: why you make this call."
+          }
+        },
+        "required": [
+          "kind",
+          "recipient",
+          "body",
+          "rationale"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "record_gap",
+      "description": "Pre-confirm a policy gap for HUMAN review (only a human confirms). Evidence must be record, gap or chunk ids that a tool returned.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string",
+            "enum": [
+              "backup_power",
+              "capacity_priority",
+              "cert_powers",
+              "critical_infrastructure",
+              "cross_border_transfer",
+              "data_location",
+              "disaster_coordination",
+              "downstream_warning",
+              "emergency_powers",
+              "emergency_priority",
+              "failover_path_security",
+              "grid_comms_backup",
+              "incident_reporting",
+              "interference_reporting",
+              "joint_command",
+              "log_retention",
+              "network_info_sharing",
+              "network_redundancy",
+              "ntn_coverage",
+              "outage_reporting",
+              "personal_data_breach",
+              "point_of_contact",
+              "public_alerts",
+              "satellite_design_security",
+              "space_cyber",
+              "standards",
+              "standards_power",
+              "telecom_cyber_security",
+              "terminal_control"
+            ]
+          },
+          "finding": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rationale": {
+            "type": "string",
+            "description": "One short sentence: why you make this call."
+          }
+        },
+        "required": [
+          "topic",
+          "finding",
+          "evidence",
+          "rationale"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "run_rule_engine",
+      "description": "Run the deterministic rule engine on the current facts (the only source of verdicts and deadlines). Optionally add coverage questions as {topic, text}.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "questions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "topic": {
+                  "type": "string",
+                  "enum": [
+                    "backup_power",
+                    "capacity_priority",
+                    "cert_powers",
+                    "critical_infrastructure",
+                    "cross_border_transfer",
+                    "data_location",
+                    "disaster_coordination",
+                    "downstream_warning",
+                    "emergency_powers",
+                    "emergency_priority",
+                    "failover_path_security",
+                    "grid_comms_backup",
+                    "incident_reporting",
+                    "interference_reporting",
+                    "joint_command",
+                    "log_retention",
+                    "network_info_sharing",
+                    "network_redundancy",
+                    "ntn_coverage",
+                    "outage_reporting",
+                    "personal_data_breach",
+                    "point_of_contact",
+                    "public_alerts",
+                    "satellite_design_security",
+                    "space_cyber",
+                    "standards",
+                    "standards_power",
+                    "telecom_cyber_security",
+                    "terminal_control"
+                  ]
+                },
+                "text": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "topic",
+                "text"
+              ]
+            }
+          },
+          "rationale": {
+            "type": "string",
+            "description": "One short sentence: why you make this call."
+          }
+        },
+        "required": [
+          "rationale"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "select_playbook",
+      "description": "LIST the fixed playbook catalogue (read only; it does not run or request anything). To act, call request_approval next.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "goal": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string",
+            "description": "One short sentence: why you make this call."
+          }
+        },
+        "required": [
+          "rationale"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "send_message",
+      "description": "Send a typed protocol message to other agents or the commander. Types: inform, request, propose (name a playbook), object (reply to a message id). refs = evidence ids (alerts, records, gaps, plans).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "to": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "inform",
+              "request",
+              "propose",
+              "object"
+            ]
+          },
+          "text": {
+            "type": "string"
+          },
+          "refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "data_class": {
+            "type": "string",
+            "enum": [
+              "operational",
+              "technical_indicator",
+              "legal_direction"
+            ]
+          },
+          "playbook": {
+            "type": "string"
+          },
+          "in_reply_to": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string",
+            "description": "One short sentence: why you make this call."
+          }
+        },
+        "required": [
+          "to",
+          "type",
+          "text",
+          "rationale"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "request_approval",
+      "description": "Ask the human commander to approve a playbook you own, on your own targets. Returns the plan hash, expiry and clone-test result. This is the step BEFORE execute_playbook.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "playbook": {
+            "type": "string"
+          },
+          "targets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "params": {
+            "type": "object"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string",
+            "description": "One short sentence: why you make this call."
+          }
+        },
+        "required": [
+          "playbook",
+          "targets",
+          "reason",
+          "rationale"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "execute_playbook",
+      "description": "Execute an APPROVED playbook you own, with the one-time token the commander sent you. Without a token it is refused: call request_approval instead.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "playbook": {
+            "type": "string"
+          },
+          "targets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "params": {
+            "type": "object"
+          },
+          "token": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string",
+            "description": "One short sentence: why you make this call."
+          }
+        },
+        "required": [
+          "playbook",
+          "targets",
+          "token",
+          "rationale"
+        ]
+      }
+    }
+  }
+]

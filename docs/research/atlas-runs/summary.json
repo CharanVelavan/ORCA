@@ -1,0 +1,304 @@
+{
+ "S0-rules": {
+  "ok": true,
+  "found": 4,
+  "expected": 4,
+  "missing": [],
+  "verdicts": 7,
+  "entries": 32,
+  "agent_steps": 18,
+  "citations_rejected": 14,
+  "tool_refusals": 0,
+  "executed": 0,
+  "approvals_requested": 0,
+  "minutes": 0.8,
+  "trace": "runs/atlas/S0-rules-qwen.jsonl"
+ },
+ "S0-norules": {
+  "ok": true,
+  "found": 0,
+  "expected": 4,
+  "missing": [
+   {
+    "verdict": "COMPLIANT"
+   },
+   {
+    "verdict": "COMPLIANT"
+   },
+   {
+    "verdict": "COMPLIANT"
+   },
+   {
+    "verdict": "COMPLIANT"
+   }
+  ],
+  "verdicts": 0,
+  "entries": 48,
+  "agent_steps": 30,
+  "citations_rejected": 1,
+  "tool_refusals": 0,
+  "executed": 0,
+  "approvals_requested": 0,
+  "minutes": 1.1,
+  "trace": "runs/atlas/S0-norules-qwen.jsonl"
+ },
+ "S1-rules": {
+  "ok": true,
+  "found": 5,
+  "expected": 5,
+  "missing": [],
+  "verdicts": 98,
+  "entries": 153,
+  "agent_steps": 97,
+  "citations_rejected": 8,
+  "tool_refusals": 1,
+  "executed": 0,
+  "approvals_requested": 5,
+  "minutes": 5.0,
+  "trace": "runs/atlas/S1-rules-qwen.jsonl"
+ },
+ "S1-norules": {
+  "ok": true,
+  "found": 0,
+  "expected": 5,
+  "missing": [
+   {
+    "verdict": "POTENTIAL_GAP",
+    "gap": "GAP-IN-09-SPACE-CYBER-ADVISORY"
+   },
+   {
+    "verdict": "AMBIGUITY",
+    "gap": "GAP-IN-01-REPORTING-CLOCKS"
+   },
+   {
+    "verdict": "POTENTIAL_GAP",
+    "gap": "GAP-IN-02-NO-DOWNSTREAM-WARNING"
+   },
+   {
+    "verdict": "CONFLICT"
+   },
+   {
+    "verdict": "COMPLIANT"
+   }
+  ],
+  "verdicts": 0,
+  "entries": 245,
+  "agent_steps": 146,
+  "citations_rejected": 5,
+  "tool_refusals": 11,
+  "executed": 0,
+  "approvals_requested": 10,
+  "minutes": 6.6,
+  "trace": "runs/atlas/S1-norules-qwen.jsonl"
+ },
+ "S2-rules": {
+  "ok": true,
+  "found": 3,
+  "expected": 3,
+  "missing": [],
+  "verdicts": 46,
+  "entries": 142,
+  "agent_steps": 92,
+  "citations_rejected": 3,
+  "tool_refusals": 1,
+  "executed": 0,
+  "approvals_requested": 2,
+  "minutes": 3.9,
+  "trace": "runs/atlas/S2-rules-qwen.jsonl"
+ },
+ "S2-norules": {
+  "ok": true,
+  "found": 0,
+  "expected": 3,
+  "missing": [
+   {
+    "verdict": "AMBIGUITY",
+    "gap": "GAP-IN-04-NO-BATTERY-FLOOR"
+   },
+   {
+    "verdict": "AMBIGUITY",
+    "gap": "GAP-IN-03-NO-PRIORITY-ORDER"
+   },
+   {
+    "verdict": "COMPLIANT"
+   }
+  ],
+  "verdicts": 0,
+  "entries": 113,
+  "agent_steps": 70,
+  "citations_rejected": 0,
+  "tool_refusals": 0,
+  "executed": 0,
+  "approvals_requested": 1,
+  "minutes": 2.4,
+  "trace": "runs/atlas/S2-norules-qwen.jsonl"
+ },
+ "S3-rules": {
+  "ok": true,
+  "found": 3,
+  "expected": 3,
+  "missing": [],
+  "verdicts": 21,
+  "entries": 116,
+  "agent_steps": 79,
+  "citations_rejected": 0,
+  "tool_refusals": 0,
+  "executed": 0,
+  "approvals_requested": 0,
+  "minutes": 3.2,
+  "trace": "runs/atlas/S3-rules-qwen.jsonl"
+ },
+ "S3-norules": {
+  "ok": true,
+  "found": 0,
+  "expected": 3,
+  "missing": [
+   {
+    "verdict": "POTENTIAL_GAP",
+    "gap": "GAP-IN-08-NO-CLEAN-PATH-CHECK"
+   },
+   {
+    "verdict": "POTENTIAL_GAP",
+    "gap": "GAP-IN-06-STANDARDS"
+   },
+   {
+    "verdict": "COMPLIANT"
+   }
+  ],
+  "verdicts": 0,
+  "entries": 149,
+  "agent_steps": 93,
+  "citations_rejected": 5,
+  "tool_refusals": 6,
+  "executed": 0,
+  "approvals_requested": 0,
+  "minutes": 4.0,
+  "trace": "runs/atlas/S3-norules-qwen.jsonl"
+ },
+ "N1-rules": {
+  "ok": true,
+  "found": 3,
+  "expected": 3,
+  "missing": [],
+  "verdicts": 40,
+  "entries": 126,
+  "agent_steps": 84,
+  "citations_rejected": 2,
+  "tool_refusals": 4,
+  "executed": 0,
+  "approvals_requested": 4,
+  "minutes": 3.2,
+  "trace": "runs/atlas/N1-rules-qwen.jsonl"
+ },
+ "N1-norules": {
+  "ok": true,
+  "found": 0,
+  "expected": 3,
+  "missing": [
+   {
+    "verdict": "AMBIGUITY",
+    "gap": "GAP-IN-04-NO-BATTERY-FLOOR"
+   },
+   {
+    "verdict": "POTENTIAL_GAP",
+    "gap": "GAP-IN-02-NO-DOWNSTREAM-WARNING"
+   },
+   {
+    "verdict": "COMPLIANT"
+   }
+  ],
+  "verdicts": 0,
+  "entries": 138,
+  "agent_steps": 86,
+  "citations_rejected": 0,
+  "tool_refusals": 0,
+  "executed": 0,
+  "approvals_requested": 8,
+  "minutes": 3.6,
+  "trace": "runs/atlas/N1-norules-qwen.jsonl"
+ },
+ "N2-rules": {
+  "ok": true,
+  "found": 2,
+  "expected": 2,
+  "missing": [],
+  "verdicts": 19,
+  "entries": 96,
+  "agent_steps": 63,
+  "citations_rejected": 1,
+  "tool_refusals": 2,
+  "executed": 0,
+  "approvals_requested": 4,
+  "minutes": 2.0,
+  "trace": "runs/atlas/N2-rules-qwen.jsonl"
+ },
+ "N2-norules": {
+  "ok": true,
+  "found": 0,
+  "expected": 2,
+  "missing": [
+   {
+    "verdict": "POTENTIAL_GAP",
+    "gap": "GAP-IN-02-NO-DOWNSTREAM-WARNING"
+   },
+   {
+    "verdict": "COMPLIANT"
+   }
+  ],
+  "verdicts": 0,
+  "entries": 121,
+  "agent_steps": 65,
+  "citations_rejected": 0,
+  "tool_refusals": 0,
+  "executed": 0,
+  "approvals_requested": 4,
+  "minutes": 2.5,
+  "trace": "runs/atlas/N2-norules-qwen.jsonl"
+ },
+ "N3-rules": {
+  "ok": true,
+  "found": 3,
+  "expected": 3,
+  "missing": [],
+  "verdicts": 13,
+  "entries": 59,
+  "agent_steps": 36,
+  "citations_rejected": 0,
+  "tool_refusals": 0,
+  "executed": 0,
+  "approvals_requested": 0,
+  "minutes": 1.2,
+  "trace": "runs/atlas/N3-rules-qwen.jsonl"
+ },
+ "N3-norules": {
+  "ok": true,
+  "found": 0,
+  "expected": 3,
+  "missing": [
+   {
+    "verdict": "POTENTIAL_GAP",
+    "gap": "GAP-IN-06-STANDARDS"
+   },
+   {
+    "verdict": "POTENTIAL_GAP",
+    "gap": "GAP-IN-09-SPACE-CYBER-ADVISORY"
+   },
+   {
+    "verdict": "COMPLIANT"
+   }
+  ],
+  "verdicts": 0,
+  "entries": 65,
+  "agent_steps": 37,
+  "citations_rejected": 4,
+  "tool_refusals": 4,
+  "executed": 0,
+  "approvals_requested": 0,
+  "minutes": 2.8,
+  "trace": "runs/atlas/N3-norules-qwen.jsonl"
+ },
+ "N4-rules": {
+  "ok": false,
+  "error": "recorded while Atlas was down (0.0 min); redo"
+ }
+}
