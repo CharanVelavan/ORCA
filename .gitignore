@@ -18,3 +18,6 @@ kb/vec_cache/
 kb/vec_build/*
 !kb/vec_build/manifest.json
 dashboard/live/web/node_modules/
+
+# local LLM weights (GGUF, adapters) - never commit
+models/llm/
