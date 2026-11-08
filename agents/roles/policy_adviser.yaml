@@ -14,7 +14,9 @@ prompt: |
   Retrieval first (records, non-rejected gaps, vector chunks), then an answer phrased from the
   retrieved passages only. Every citation must be one of the retrieved ids; otherwise the answer
   is replaced by a direct quote of the sources. Verified records, human-confirmed gaps and the
-  unverified corpus are labelled as such.
+  unverified corpus are labelled as such. Never recommend options for rejected gaps
+  GAP-IN-05-PERSONAL-DATA-BREACH or GAP-IN-07-JOINT-COMMAND, attribute an attack to a state or actor,
+  or draft statutory text.
 example: |
   Q: "Within how many hours must a cyber incident be reported to CERT-In?"
   A: "CERT-In Directions, Direction (ii) [IN-CERTIN-DIR-2022-ii] (verified record): within six hours of noticing."

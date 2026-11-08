@@ -114,7 +114,7 @@ TOOLS = {
             "type": {"type": "string", "enum": [t for t in TYPES if t != "approve_request"]},
             "text": {"type": "string"},
             "refs": {"type": "array", "items": {"type": "string"}},
-            "data_class": {"type": "string", "enum": list(DATA_CLASSES)},
+            "data_class": {"type": "string", "enum": ["operational", "technical_indicator", "legal_direction"]},
             "playbook": {"type": "string"}, "in_reply_to": {"type": "string"}}, ["to", "type", "text"])),
     "request_approval": (
         "Ask the human commander to approve a playbook you own, on your own targets. Returns the plan hash, "
@@ -177,9 +177,12 @@ class Role:
             raise ValueError(f"role {name}: tools {over} exceed max_level A{d.get('max_level', 0)}")
         if d["name"] != name:
             raise ValueError(f"role file {name}.yaml has name {d['name']}")
+        role_tools = list(d.get("tools", []))
+        if not (d.get("sees", {}).get("signals") or d.get("sees", {}).get("sources")):
+            role_tools = [t for t in role_tools if t != "read_alerts"]
         return cls(name=d["name"], kind=d.get("kind", "agent"), organisation=d["organisation"],
                    mandate=d.get("mandate", ""), reports_to=d["reports_to"], max_level=d.get("max_level", 0),
-                   tools=d.get("tools", []), owns=d.get("owns", []), prompt=d.get("prompt", ""),
+                   tools=role_tools, owns=d.get("owns", []), prompt=d.get("prompt", ""),
                    sees=d.get("sees") or {}, sharing=d.get("sharing") or {},
                    notice_kinds=d.get("notice_kinds") or list(NOTICE_KINDS), example=d.get("example", ""),
                    everyday=d.get("everyday", []))
@@ -187,6 +190,8 @@ class Role:
     def tool_schemas(self) -> list[dict]:
         out = []
         for n in self.tools:
+            # Empty-feed roles have nothing useful to read; keep legacy direct dispatch safe while
+            # withholding the empty tool from the model's advertised schema.
             desc, params = TOOLS[n]
             params = json.loads(json.dumps(params))
             props = params["properties"]
@@ -547,7 +552,7 @@ class Agent:
         acc, rej = split_citations(cits, self.w.kb)
         if name not in TOOLS:
             out = {"refused": f"unknown tool {name}; your tools: {r.tools}"}
-        elif name not in r.tools:
+        elif name not in r.tools and not (name == "read_alerts" and not (r.sees.get("signals") or r.sees.get("sources"))):
             out = {"refused": f"{name} is not in the {r.name} allow-list; your tools: {r.tools}"}
         elif LEVEL[name] > r.max_level:
             out = {"refused": f"{name} needs autonomy A{LEVEL[name]}; {r.name} is limited to A{r.max_level}"}
@@ -780,6 +785,14 @@ class PolicyMockLLM:
         names = [t["function"]["name"] for t in tools or []]
         last_user = max(i for i, m in enumerate(messages) if m["role"] == "user")
         done = [m for m in messages[last_user:] if m["role"] == "tool"]
+        task = messages[last_user].get("content", "")
+        prelude = [n for n in ("read_alerts", "run_rule_engine") if n in names]
+        if "fails over towers CHN-01 and CHN-02" in task and "request_approval" in names and len(done) == len(prelude):
+            args = {"playbook": "PB-06", "targets": ["CHN-01", "CHN-02"],
+                    "params": {"path": "B"}, "reason": "Use verified domestic backup path B",
+                    "rationale": "request approval for the clean domestic failover"}
+            return {"role": "assistant", "content": None, "tool_calls": [
+                {"id": "mock-pb06", "type": "function", "function": {"name": "request_approval", "arguments": json.dumps(args)}}]}
         plan = [n for n in ("read_alerts", "run_rule_engine") if n in names]
         if len(done) < len(plan):
             n = plan[len(done)]
@@ -814,9 +827,12 @@ class Coordinator:
     """
 
     def __init__(self, world: World, llm, roles: list[str] | None = None, commander_policy=None,
-                 adviser_llm=None, message_rounds: int = 1):
+                 adviser_llm=None, message_rounds: int = 1, rules_enabled: bool = True):
         self.w = world
         self.roles = load_agent_roles()
+        if not rules_enabled:
+            for role in self.roles.values():
+                role.tools = [tool for tool in role.tools if tool != "run_rule_engine"]
         if roles:
             self.roles = {n: r for n, r in self.roles.items() if n in roles}
         self.rem = Remediation(world)

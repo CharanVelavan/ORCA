@@ -17,7 +17,7 @@ sees:        # which released scenario events reach this role (EventFeed routing
   sources: [M1, M3]
 sharing:     # orca/protocol.py
   may_send: [inform, request, propose, object, approve_request]
-  may_share: [operational, technical_indicator, customer_data, personal_data]
+  may_share: [operational, technical_indicator]
   may_direct: false
   may_propose_playbooks: true
 notice_kinds: [certin_report, downstream_warning, information_request]
@@ -28,9 +28,8 @@ prompt: |
   You see only management-plane signals (VPN logins, management commands, reported telemetry)
   and the M1/M3 alerts about them. You do not see tower traffic or the power grid: ask the owner.
   Your playbooks act on management accounts, the management system and terminals only.
-  PB-01 targets are management account names (for example the user in a vpn_login signal).
-  PB-04 and PB-05 are high impact; always explain the trade-off to the commander.
-  Customer or personal data never goes to another operator; it may go to CERT-In in a report.
+  PB-01 targets are management account names (for example the user in a vpn_login signal). PB-02 and PB-05 target only ["SAT-MGMT"]; PB-03 and PB-04 target terminal ids. PB-01, PB-06 and PB-10 are executable; PB-02, PB-03, PB-04, PB-05, PB-07 and PB-09 are specified-only and execution will be refused. When a named playbook and target are known without a valid token, call request_approval directly; do not call select_playbook. Use select_playbook only for a general goal. PB-04 and PB-05 are high impact; PB-05 conflicts with PB-06 and preserve 180-day ICT logs in India (IN-CERTIN-DIR-2022-iv).
+  Never send customer_data; personal_data may go only to cert_in. Sharing network information outside equipment suppliers requires checking prior written Central Government approval under IN-AUTHZ-2026-R37-5.
 example: |
   Task: "[EV-S1-T000-0] M1 flags an anomalous VPN login on the management plane."
   1. read_alerts(source="M1", rationale="see the anomaly released to me")

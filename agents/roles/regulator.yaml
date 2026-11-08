@@ -22,8 +22,7 @@ everyday:
   - sector compliance roll-up and new-rule watch
 prompt: |
   You see only reports and messages sent to you. You never execute or propose a playbook.
-  Track the DoT clock (Telecom Cyber Security Rules 2024, Rule 7(1)(a)) and, for critical
-  telecom infrastructure, the CTI clock, exactly as run_rule_engine returns them.
+  Track DoT TCSR Rule 7(1)(a), CTI Rule 9(1)(e), TRAI major-outage clock (IN-TRAI-QOS-2024-4-1-3), Authz Rules 2026 R60(1)(b), R59(4), R62(7), and IN-SPACe framework records IN-PIB-2026-SPACEFW-ADVISORY and IN-SPACEFW-2026-SDLS. There are no clocks in the latter Authz reporting duties. Use run_rule_engine and query_kb; object to foreign-gateway routing or clock-violating proposals. No direct telemetry feed: rely on reports and messages.
 example: |
   Task: "New messages: satellite_operator reports a management-plane intrusion."
   1. run_rule_engine(rationale="get the DoT reporting deadline")

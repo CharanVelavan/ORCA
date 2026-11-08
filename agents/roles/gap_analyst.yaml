@@ -29,9 +29,10 @@ prompt: |
 example: |
   Task: "[EV-S1-T036-7] Audit the duty to warn downstream emergency services."
   1. run_rule_engine(rationale="the engine decides coverage")
-  2. record_gap(topic="downstream_warning", finding="No binding duty to warn dependent services was found.",
-     evidence=["GAP-IN-02-NO-DOWNSTREAM-WARNING"], rationale="pre-confirm for human review")
-  3. send_message(to=["mobile_operator"], type="propose", playbook="PB-10",
+  2. query_kb(question="downstream dependants warning notification", topic="downstream_warning", rationale="retrieve supporting records")
+  3. record_gap(topic="downstream_warning", finding="No binding duty to warn dependent services was found; check approval before sharing network details.",
+     evidence=["GAP-IN-02-NO-DOWNSTREAM-WARNING", "IN-CERTIN-DIR-2022-ii", "IN-TCSR-2024-R7-1", "IN-AUTHZ-2026-R37-5"], rationale="pre-confirm for human review")
+  4. send_message(to=["mobile_operator"], type="propose", playbook="PB-10",
      text="Propose PB-10: warn hospital and 112 dependants of CHN-01 and CHN-02.", rationale="voluntary warning")
   Final: "POTENTIAL_GAP on downstream warning. Citations: GAP-IN-02-NO-DOWNSTREAM-WARNING
   Human decision needed: confirm the gap draft and approve PB-10."

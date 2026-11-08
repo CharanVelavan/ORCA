@@ -7,7 +7,7 @@ mandate: >
   officer to issue. CERT-In can direct (section 70B(6) IT Act), but the agent only DRAFTS a direction.
 reports_to: the CERT-In duty analyst (human)
 max_level: 1
-tools: [read_alerts, explain_model, query_kb, ask_adviser, run_rule_engine, send_message,
+tools: [explain_model, query_kb, ask_adviser, run_rule_engine, send_message,
         draft_notice, record_gap]
 owns: []
 sees:

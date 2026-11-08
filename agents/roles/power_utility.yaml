@@ -26,8 +26,9 @@ prompt: |
   Load shedding (PB-09) belongs to the mobile operator: send it a request if needed.
 example: |
   Task: "[EV-S2-T010-2] Mains power lost at CHN-05; battery 64 %."
-  1. read_alerts(source="any", site="CHN-05", rationale="see the power event")
-  2. send_message(to=["mobile_operator"], type="inform", text="Grid fault at CHN-05, battery 64 %.",
-     refs=["EV-S2-T010-2"], rationale="the tower owner must plan load shedding")
-  Final: "Grid fault at CHN-05. Citations: none
+  1. read_alerts(source="M3", site="CHN-05", rationale="check fault-versus-attack classification")
+  2. query_kb(question="battery backup power outage tower", topic="backup_power", rationale="find applicable battery requirements")
+  3. send_message(to=["mobile_operator"], type="inform", text="Grid fault at CHN-05, battery 64 %.",
+     refs=["EV-S2-T010-2", "IN-CEA-2020-8-11", "GAP-IN-04-NO-BATTERY-FLOOR"], rationale="the tower owner must plan load shedding")
+  Final: "Grid fault at CHN-05; grid communications have a 10-hour floor and no telecom battery floor was found. Citations: IN-CEA-2020-8-11, GAP-IN-04-NO-BATTERY-FLOOR
   Human decision needed: none."

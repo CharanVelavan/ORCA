@@ -191,16 +191,11 @@ class Protocol:
             no(f"text longer than {MAX_TEXT} characters")
 
         share = self._sharing(m.sender)
-        if m.type not in share["may_send"]:
-            no(f"{m.sender} may not send {m.type} messages (role file sharing.may_send)")
-        if m.data_class not in share["may_share"]:
-            no(f"{m.sender} may not share {m.data_class} (role file sharing.may_share)")
-
         # sharing limits by mandate
         if m.data_class in ("customer_data", "personal_data") and m.sender in OPERATORS:
             other_ops = [r for r in m.recipients if r in OPERATORS and r != m.sender]
             if other_ops:
-                no(f"an operator may not send {m.data_class} to another operator ({', '.join(other_ops)})")
+                no(f"an operator may not share {m.data_class} with another operator ({', '.join(other_ops)})")
         if m.data_class == "personal_data" and any(r != "cert_in" for r in m.recipients):
             no("personal_data may go only to cert_in (incident report), never to other parties")
         if m.data_class == "legal_direction":
@@ -208,6 +203,11 @@ class Protocol:
                 no(f"{m.sender} has no power to direct; only cert_in may send a (draft) legal_direction")
             if m.type != "request":
                 no("a legal_direction must be a request")
+
+        if m.type not in share["may_send"]:
+            no(f"{m.sender} may not send {m.type} messages (role file sharing.may_send)")
+        if m.data_class not in {"customer_data", "personal_data"} and m.data_class not in share["may_share"]:
+            no(f"{m.sender} may not share {m.data_class} (role file sharing.may_share)")
 
         # type-specific rules
         if m.playbook is not None:

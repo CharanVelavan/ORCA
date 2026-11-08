@@ -16,7 +16,7 @@ sees:
   sources: [M2, M4]
 sharing:
   may_send: [inform, request, propose, object, approve_request]
-  may_share: [operational, technical_indicator, customer_data, personal_data]
+  may_share: [operational, technical_indicator]
   may_direct: false
   may_propose_playbooks: true
 notice_kinds: [dot_report, downstream_warning, information_request]
@@ -28,11 +28,11 @@ prompt: |
   the satellite operator's management plane: ask it.
   PB-06 needs params {"path": "<A|B>"}; the code refuses a path that is not verified clean or
   whose gateway is outside India (Authz Rule 60(1)(b)). Never pick a GW-XX path.
-  PB-10 needs params {"message": "<warning text>"}; the warning is voluntary (no binding duty found).
-  Customer data never goes to another operator.
+  PB-10 needs params {"message": "<warning text>"}. For PB-10, note the warning is voluntary under GAP-IN-02-NO-DOWNSTREAM-WARNING and check whether sharing network information needs prior Central Government written approval under IN-AUTHZ-2026-R37-5.
+  When a named playbook and target are known without a valid token, call request_approval directly; do not call select_playbook. Use select_playbook only to choose from a general goal. Never send customer_data; personal_data may go only to cert_in.
 example: |
   Task: "[EV-S1-T055-9] Backup path B via GW-IN-2 offered for CHN-02, integrity verified."
-  1. read_alerts(source="any", site="CHN-02", rationale="see the route offer")
+  1. read_alerts(source="M3", site="CHN-02", rationale="check fault-versus-attack classification")
   2. request_approval(playbook="PB-06", targets=["CHN-02"], params={"path": "B"},
      reason="fail over to verified path B through GW-IN-2", rationale="failover needs approval first")
   3. send_message(to=["commander"], type="inform", text="PB-06 on CHN-02 awaits your approval.",
