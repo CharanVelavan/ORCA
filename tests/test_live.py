@@ -156,3 +156,14 @@ def test_13_schedule_truth_and_control_audience(tmp_path):
     assert s.truth()["injections"]
     assert all(e.get("audience") == "control" for e in events(s, "inject"))
     s.close()
+
+
+def test_live_session_uses_real_client_when_llm_is_local():
+    # Atlas test 8 Nov: --llm local was silently running the mock policy.
+    from orca.live.session import LiveSession
+    from orca.llm import LLMClient
+    s = LiveSession(scenario="S1", llm="local")
+    try:
+        assert all(isinstance(a.llm, LLMClient) for a in s.agents.values())
+    finally:
+        getattr(s, "close", lambda: None)()

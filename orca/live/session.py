@@ -9,6 +9,7 @@ from pathlib import Path
 
 from orca import rules
 from orca.agents import Agent, EventFeed, PolicyMockLLM, load_agent_roles
+from orca.llm import LLMClient
 from orca.audit import AuditLog
 from orca.remediation import Refused, Remediation
 from orca.sim import attacks
@@ -84,7 +85,8 @@ class LiveSession:
             for role in self.roles.values():
                 role.tools = [tool for tool in role.tools if tool != "run_rule_engine"]
         self.feed = EventFeed(self.scenario, self.roles)
-        self.agents = {name: Agent(role, self.world, PolicyMockLLM(), self.rem) for name, role in self.roles.items()}
+        llm_client = PolicyMockLLM() if self.llm_mode == "mock" else LLMClient()   # local = LLM_BASE_URL / LLM_MODEL
+        self.agents = {name: Agent(role, self.world, llm_client, self.rem) for name, role in self.roles.items()}
         self.impact, self.shadow = Impact(), Impact()
         self.recording = path
         self.world.log("run_meta", "system", {"scenario": self.scenario_name, "rules": self.rules_enabled,
