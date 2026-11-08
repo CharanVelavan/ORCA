@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ORCA-NTN dashboard</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>ORCA-NTN</h1>
+    <span class="sub">Incident replay</span>
+    <span class="badge emu" title="No real satellite link is used anywhere in this project.">Emulated network</span>
+  </div>
+  <div class="pickers">
+    <label>Run
+      <select id="pickA" aria-label="Choose a run"></select>
+    </label>
+    <label>Compare with
+      <select id="pickB" aria-label="Choose a second run to compare"></select>
+    </label>
+    <button id="pairBtn" class="btn small" hidden></button>
+    <label class="chk"><input type="checkbox" id="follow"> Follow file</label>
+  </div>
+</header>
+
+<div class="controls" role="group" aria-label="Replay controls">
+  <button id="bReset" class="btn" title="Back to the start (Home)">&#9198; Start</button>
+  <button id="bBack" class="btn" title="One step back (Left arrow)">&#9664; Back</button>
+  <button id="bPlay" class="btn primary" title="Play or pause (Space)">&#9654; Play</button>
+  <button id="bStep" class="btn" title="One step forward (Right arrow)">Step &#9654;</button>
+  <button id="bMile" class="btn" title="Jump to the next key moment">Next key moment &#9197;</button>
+  <button id="bEnd" class="btn" title="Jump to the end (End)">End &#9199;</button>
+  <label class="spd">Speed
+    <select id="speed">
+      <option value="1200">Slow</option>
+      <option value="600" selected>Normal</option>
+      <option value="250">Fast</option>
+      <option value="80">Very fast</option>
+    </select>
+  </label>
+  <input id="slider" type="range" min="0" max="0" value="0" aria-label="Replay position">
+  <span id="pos" class="pos" aria-live="polite"></span>
+</div>
+<div id="nowline" class="nowline"></div>
+
+<main id="main" aria-live="off"></main>
+
+<aside id="detail" class="detail" hidden>
+  <div class="detail-head"><strong id="detailTitle">Event</strong><button id="detailClose" class="btn small">Close</button></div>
+  <pre id="detailBody"></pre>
+</aside>
+<div id="toast" class="toast" role="status" hidden></div>
+
+<footer class="foot">
+  Replay of a run file. No LLM and no network are used by this page. Every satellite link shown is emulated.
+  Verdicts come from the rule engine only. A person confirms or rejects every gap.
+</footer>
+<script src="/app.js"></script>
+</body>
+</html>
