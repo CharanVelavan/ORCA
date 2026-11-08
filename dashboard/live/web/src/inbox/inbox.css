@@ -1,4 +1,4 @@
-/* Commander inbox, PIN pad, war-room log, status rail. Tokens only (theme/tokens.css). */
+/* Commander inbox, war-room log, status rail. Tokens only (theme/tokens.css). */
 
 .inbox-root { display: flex; flex-direction: column; height: 100%; min-height: 0; background: var(--bg); color: var(--ink); font-family: var(--font-sans); font-size: 15.5px; }
 .inbox-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 12px; border-bottom: 1px solid var(--border); flex: none; }
@@ -66,32 +66,13 @@
 .inbox-link:hover { color: var(--ink); }
 .inbox-field { display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: var(--ink-muted); }
 .inbox-field input, .inbox-field select { height: 33px; padding: 0 8px; border-radius: var(--r-ctl); border: 1px solid var(--border); background: var(--bg); color: var(--ink); font: inherit; font-size: 15.5px; }
-.inbox-btn:focus-visible, .inbox-key:focus-visible, .inbox-link:focus-visible, .inbox-field input:focus-visible, .inbox-field select:focus-visible, .inbox-log__btn:focus-visible, .inbox-rail__btn:focus-visible, .inbox-topbtn:focus-visible, .inbox-seg__opt:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.inbox-btn:focus-visible, .inbox-link:focus-visible, .inbox-field input:focus-visible, .inbox-field select:focus-visible, .inbox-log__btn:focus-visible, .inbox-rail__btn:focus-visible, .inbox-topbtn:focus-visible, .inbox-seg__opt:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 
-/* PIN pad */
-.inbox-pin { display: flex; flex-direction: column; gap: 8px; padding: 10px; border: 1px solid var(--border); border-radius: var(--r-card); background: var(--surface-2); outline: none; }
-.inbox-pin:focus-visible { border-color: var(--accent); }
-.inbox-pin__title { font-weight: 500; }
-.inbox-pin__sub { color: var(--ink-muted); font-size: 14px; }
-.inbox-pin__dots { display: flex; gap: 6px; justify-content: center; padding: 4px 0; }
-.inbox-pin__dot { width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--ink-muted); transition: background var(--dur1) var(--ease-out); }
-.inbox-pin__dot.is-on { background: var(--ink); border-color: var(--ink); }
-.inbox-pin__error { min-height: 19px; color: var(--critical); font-size: 14px; line-height: 19px; text-align: center; }
-.inbox-pin__keys { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; width: 100%; max-width: 200px; margin: 0 auto; }
-.inbox-key { height: 42.5px; border-radius: var(--r-ctl); border: 1px solid var(--border); background: var(--surface); color: var(--ink); font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 17.5px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: transform var(--dur1) var(--ease-out), background var(--dur1) var(--ease-out); }
-.inbox-key:hover:not(:disabled) { background: var(--bg); }
-.inbox-key:active:not(:disabled) { transform: scale(0.98); }
-.inbox-key:disabled { opacity: 0.45; cursor: default; }
-.inbox-key--ok { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-.inbox-key--ok:hover:not(:disabled) { background: var(--accent); opacity: 0.9; }
-.inbox-pin__foot { display: flex; align-items: center; justify-content: space-between; font-size: 14px; color: var(--ink-muted); }
-.inbox-pin--compact { gap: 4px; padding: 6px; border-radius: var(--r-ctl); max-width: 200px; }
-.inbox-pin--compact .inbox-pin__title { font-size: 14px; }
-.inbox-pin--compact .inbox-pin__dots { gap: 4px; padding: 0; }
-.inbox-pin--compact .inbox-pin__dot { width: 8px; height: 8px; }
-.inbox-pin--compact .inbox-pin__keys { gap: 3px; max-width: 168px; }
-.inbox-pin--compact .inbox-key { height: 30.5px; font-size: 15.5px; }
-.inbox-pin--compact .inbox-pin__error { min-height: 16.5px; line-height: 16.5px; }
+/* Confirm and refusal */
+.inbox-confirm { display: flex; flex-direction: column; gap: 6px; }
+.inbox-refusal { display: flex; gap: 6px; align-items: flex-start; margin: 6px 0 0; padding: 8px 10px; border-radius: var(--r-ctl); border: 1px solid var(--critical); background: var(--critical-soft); color: var(--critical); font-size: 14px; line-height: 19px; }
+.inbox-refusal svg { flex: none; margin-top: 2px; }
+.inbox-refusal strong { font-weight: 600; }
 @keyframes inbox-spin { to { transform: rotate(360deg); } }
 .inbox-spin { animation: inbox-spin 0.9s linear infinite; }
 
@@ -159,7 +140,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .inbox-popover, .inbox-spin { animation: none; }
-  .inbox-btn, .inbox-key, .inbox-topbtn, .inbox-rail__btn, .inbox-timer__bar > span, .inbox-log__chev { transition: none; }
+  .inbox-btn, .inbox-topbtn, .inbox-rail__btn, .inbox-timer__bar > span, .inbox-log__chev { transition: none; }
 }
 .inbox-log__count { color: var(--accent); font-size: 14px; }
 

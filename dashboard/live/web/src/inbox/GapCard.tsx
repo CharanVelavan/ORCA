@@ -4,7 +4,7 @@ import { CheckCircle2, ChevronDown, FileSearch, XCircle } from 'lucide-react';
 import { api } from '../api';
 import { useLiveStore } from '../store';
 import type { LiveEvent } from '../types';
-import { PinPad } from './PinPad';
+import { ConfirmButton } from './ConfirmButton';
 import { Chip, ICON, useCardMotion } from './parts';
 import './inbox.css';
 
@@ -17,7 +17,6 @@ export function GapCard({ gap }: { gap: LiveEvent }) {
   const raw = useLiveStore((s) => s.raw);
   const logged = [...raw].reverse().find((e) => e.kind === 'gap_human_decision' && (e.draft_id === gapId || e.gap_id === gapId));
   const [local, setLocal] = useState<Decision | null>(null);
-  const [asking, setAsking] = useState<Decision | null>(null);
   const decided = (local ?? (logged ? String(logged.decision) : null)) as Decision | null;
 
   const topic = String(gap.topic ?? gap.title ?? gap.question ?? 'Policy gap');
@@ -25,10 +24,10 @@ export function GapCard({ gap }: { gap: LiveEvent }) {
   const records = ((gap.records ?? gap.record_ids ?? []) as unknown[]).map(String);
   const recommendation = gap.recommendation ? String(gap.recommendation) : '';
 
-  const submit = (decision: Decision) => async (pin: string) => {
-    const res = await api.gap({ gap_id: gapId, decision, pin });
-    if (res && (res as Record<string, unknown>).ok === false) throw new Error('API 400: gap');
-    setLocal(decision); setAsking(null);
+  const submit = (decision: Decision) => async () => {
+    const res = await api.gap({ gap_id: gapId, decision, pin: 'click' });
+    if (res && (res as Record<string, unknown>).ok === false) throw new Error(String((res as Record<string, unknown>).error ?? 'The console did not accept that.'));
+    setLocal(decision);
   };
 
   const [expanded, setExpanded] = useState(false);
@@ -48,15 +47,11 @@ export function GapCard({ gap }: { gap: LiveEvent }) {
           {text && <p className="inbox-body">{text}</p>}
           {recommendation && <p className="inbox-body inbox-body--muted">Recommendation: {recommendation}</p>}
           {records.length > 0 && <div className="inbox-records">{records.map((r) => <span key={r} className="mono inbox-record" title={r}>{r}</span>)}</div>}
-          {!decided && !asking && (
+          {!decided && (
             <div className="inbox-actions">
-              <button type="button" className="inbox-btn inbox-btn--primary" onClick={() => setAsking('confirm')}>Confirm gap</button>
-              <button type="button" className="inbox-btn" onClick={() => setAsking('reject')}>Reject</button>
+              <ConfirmButton label="Confirm gap" confirmLabel="Confirm as a real gap" onConfirm={submit('confirm')} />
+              <ConfirmButton label="Reject" confirmLabel="Confirm reject" tone="plain" onConfirm={submit('reject')} />
             </div>
-          )}
-          {!decided && asking && (
-            <PinPad title="Commander PIN" subtitle={asking === 'confirm' ? `Confirm ${gapId} as a real gap` : `Reject ${gapId}`}
-              onSubmit={submit(asking)} onCancel={() => setAsking(null)} />
           )}
         </>
       )}

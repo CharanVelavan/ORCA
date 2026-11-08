@@ -7,6 +7,7 @@ import { BANDS, NODES } from './pipelineNodes';
 import { pathFor } from './scenarioPaths';
 import { usePipeline, type Tone } from './pipelineStore';
 import { FlowGraph, Ticker } from './FlowGraph';
+import { GuideCard, GuideControls } from './GuideCard';
 import './pipeline.css';
 
 const ICON = { size: 15, strokeWidth: 1.5, 'aria-hidden': true } as const;
@@ -22,7 +23,7 @@ export function PipelineFlow({ truth }: { truth: boolean }) {
   return (
     <section className={`pf ${view === 'full' ? 'pf--full' : ''}`} aria-label="Pipeline flow">
       <Narration truth={truth} />
-      <div className="pf-body"><FlowGraph truth={truth} /><Ticker /></div>
+      <div className="pf-body"><FlowGraph truth={truth} /><Ticker /><GuideCard /></div>
     </section>
   );
 }
@@ -48,6 +49,7 @@ function Narration({ truth }: { truth: boolean }) {
         <span className="pf-nar__mode" data-mode={mode}>{mode === 'live' ? <><Radio {...ICON} size={12} /> LIVE</> : mode === 'replay' ? 'REPLAY' : 'EXPLAIN'}</span>
         <span className="pf-nar__meta mono">{scenario} · step {flowStep} of 7{!explaining && beat ? ` · ${ist(beat.ts)}` : ''}</span>
         <span className="pf-nar__tools">
+          <GuideControls />
           <button className="pf-ib" aria-label="Previous step" title="Previous step (Left arrow)" onClick={() => explainStep(-1)}><ChevronLeft {...ICON} /></button>
           <button className="pf-ib" aria-label="Next step" title="Next step (Right arrow)" onClick={() => explainStep(1)}><ChevronRight {...ICON} /></button>
           {mode === 'explain' && <button className="pf-ib pf-ib--txt" onClick={() => setMode('live')} title="Back to live (Esc)">Live</button>}

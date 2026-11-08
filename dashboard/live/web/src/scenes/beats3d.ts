@@ -101,28 +101,28 @@ export const siteFromExec = (nodes: Record<string, NodeInfo>): string | undefine
 
 // ---- camera script -------------------------------------------------------------------------------------
 export type Shot = { target: V3; offset: V3 };
-export const DEFAULT_OFFSET: V3 = [7.5, 7.2, 6.5];
+export const DEFAULT_OFFSET: V3 = [9.5, 5.6, 9.5];
 
 /** Scripted camera shot for an effect, or null to fall back to the idle follow-the-site behaviour. */
 export function shotFor(fx: Effect, nodes: Record<string, NodeInfo>): Shot | null {
   const p = placePos(fx.site);
   const at = (y: number): V3 => (p ? [p[0], y, p[2]] : [0, y, 0]);
   switch (fx.kind) {
-    case 'threat': return fx.site === 'SAT-MGMT' ? { target: [RULES_POS[0], 1.2, RULES_POS[2]], offset: [4.2, 3.2, 4.6] } : { target: at(0.9), offset: [3.3, 2.7, 3.6] };
-    case 'detect': return { target: at(0.9), offset: [3.8, 3.2, 4.0] };
-    case 'coordinate': return { target: [BADGE_C[0], BADGE_C[1] - 0.5, BADGE_C[2]], offset: [4.6, 2.6, 5.2] };
-    case 'rules': return { target: [RULES_POS[0], 1.4, RULES_POS[2]], offset: [4.2, 2.8, 4.6] };
-    case 'commander': return { target: [0, 1, 0], offset: [9.5, 9.0, 8.5] };
-    case 'gap': return { target: [-1, 0.6, 0], offset: [8, 7.5, 7] };
+    case 'threat': return fx.site === 'SAT-MGMT' ? { target: [RULES_POS[0] * 0.6, 2.4, RULES_POS[2] * 0.6], offset: [6.4, 3.6, 7.0] } : { target: at(2.6), offset: [7.4, 3.6, 8.0] };
+    case 'detect': return { target: at(2.6), offset: [7.4, 3.6, 8.0] };
+    case 'coordinate': return { target: [BADGE_C[0] * 0.7, 3.2, BADGE_C[2] * 0.7], offset: [6.6, 2.8, 7.2] };
+    case 'rules': return { target: [RULES_POS[0] * 0.6, 2.6, RULES_POS[2] * 0.6], offset: [6.4, 3.0, 7.0] };
+    case 'commander': return { target: [0, 2.4, 0], offset: [9.5, 6.0, 9.5] };
+    case 'gap': return { target: [-0.6, 2.2, 0], offset: [9, 5.8, 9] };
     case 'heal': {
       const step = fx.node.slice(5);
-      if (step === 'r5' || step === 'r25' || step === 'r100') return { target: [-0.4, 2.2, -0.6], offset: [7.5, 5.0, 7.0] };
+      if (step === 'r5' || step === 'r25' || step === 'r100') return { target: [-0.4, 2.6, -0.6], offset: [8.0, 4.6, 8.0] };
       if (step === 'cleanpath' || step === 'failover') {
         const g = GATEWAYS[backupGateway(nodes)]?.pos ?? GATEWAYS['GW-IN-2'].pos;
         const s = (p ?? SITES['CHN-01'].pos);
-        return { target: [(s[0] + g[0]) / 2, 1.0, (s[2] + g[2]) / 2], offset: [6, 5, 6] };
+        return { target: [(s[0] + g[0]) / 2, 2.2, (s[2] + g[2]) / 2], offset: [7, 4.2, 7] };
       }
-      return { target: at(0.9), offset: [4, 3.4, 4.2] };
+      return { target: at(2.6), offset: [7.4, 3.6, 8.0] };
     }
     default: return null;
   }

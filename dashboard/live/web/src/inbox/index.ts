@@ -1,5 +1,4 @@
-export { PinPad } from './PinPad';
-export type { PinPadProps } from './PinPad';
+export { ApproveButton } from './ApproveButton';
 export { ApprovalCard } from './ApprovalCard';
 export { GapCard } from './GapCard';
 export { WarRoomLog } from './WarRoomLog';

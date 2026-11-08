@@ -2,9 +2,8 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Ban, CheckCircle2, Clock, FlaskConical, Hourglass, Bot, XCircle } from 'lucide-react';
 import { api } from '../api';
-import { useUi } from '../stage/uiStore';
 import type { Approval } from '../types';
-import { PinPad } from './PinPad';
+import { ApproveButton } from './ApproveButton';
 import { Chip, ICON, useCardMotion } from './parts';
 import type { Tone } from './parts';
 import { clockText, plainError, roleName, toMs } from './format';
@@ -37,7 +36,6 @@ function cloneTest(value: unknown): { state: 'pass' | 'fail' | 'none'; detail: s
 export function ApprovalCard({ approval }: { approval: Approval }) {
   const motionProps = useCardMotion();
   const now = useSimNow();
-  const pinFor = useUi((s) => s.pinFor), pinAt = useUi((s) => s.pinAt), openPin = useUi((s) => s.openPin);
   const [rejecting, setRejecting] = useState(false);
   const [reason, setReason] = useState('');
   const [busy, setBusy] = useState(false);
@@ -53,14 +51,7 @@ export function ApprovalCard({ approval }: { approval: Approval }) {
   const ct = cloneTest(approval.clone_test);
   const total = Number.isFinite(reqMs) && Number.isFinite(expMs) && expMs > reqMs ? expMs - reqMs : 5 * 60000;
   const frac = Number.isFinite(left) ? Math.min(1, Math.max(0, left / total)) : 0;
-  const pinHere = pinFor === approval.hash && pinAt === 'inbox';
-  const pinElsewhere = pinFor === approval.hash && pinAt === 'node';
 
-  const approve = async (pin: string) => {
-    const res = await api.approve({ hash: approval.hash, pin });
-    if (res && (res as Record<string, unknown>).ok === false) throw new Error('API 400: approve');
-    openPin(null);
-  };
   const reject = async () => {
     setBusy(true); setError('');
     try { await api.reject({ hash: approval.hash, reason: reason.trim() || 'Rejected by commander' }); setRejecting(false); }
@@ -98,11 +89,10 @@ export function ApprovalCard({ approval }: { approval: Approval }) {
         </div>
       )}
       {!open && approval.reject_reason != null && <p className="inbox-note">Reason: {String(approval.reject_reason)}</p>}
-      {open && !pinHere && !rejecting && (
+      {open && !rejecting && (
         <div className="inbox-actions">
-          <button type="button" className="inbox-btn inbox-btn--primary" onClick={() => openPin(approval.hash, 'inbox')}>Approve</button>
-          <button type="button" className="inbox-btn" onClick={() => { openPin(null); setRejecting(true); }}>Reject</button>
-          {pinElsewhere && <span className="inbox-note">PIN pad is open on the Commander node.</span>}
+          <ApproveButton hash={approval.hash} />
+          <button type="button" className="inbox-btn" onClick={() => setRejecting(true)}>Reject</button>
         </div>
       )}
       {open && rejecting && (
@@ -116,10 +106,6 @@ export function ApprovalCard({ approval }: { approval: Approval }) {
           </div>
           {error && <p className="inbox-error" role="alert">{error}</p>}
         </form>
-      )}
-      {open && pinHere && (
-        <PinPad title="Commander PIN" subtitle={`Approve ${approval.playbook} on ${(approval.targets ?? []).join(', ')}`}
-          onSubmit={approve} onCancel={() => openPin(null)} />
       )}
     </motion.article>
   );

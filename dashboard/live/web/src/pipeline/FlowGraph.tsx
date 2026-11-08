@@ -2,7 +2,7 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, typ
 import { useReducedMotion } from 'framer-motion';
 import { Check, CircleDashed, Clock3 } from 'lucide-react';
 import { api } from '../api';
-import { PinPad } from '../inbox';
+import { ApproveButton } from '../inbox';
 import { useUi } from '../stage/uiStore';
 import { ist, leftOf } from '../stage/time';
 import type { BandId, NodeDef } from './model';
@@ -31,7 +31,7 @@ const AGENT_HUE: Record<string, string> = {
   'agent:mobile_operator': '#5B8DEF', 'agent:satellite_operator': '#3FB5C9', 'agent:power_utility': '#D9B341',
   'agent:cert_in': '#E08A4F', 'agent:regulator': '#A77BD9', 'agent:gap_analyst': '#4FB58A',
 };
-const holdMs = (speed: number) => (speed >= 10 ? 90 : speed >= 5 ? 160 : speed >= 2 ? 360 : 700);
+const holdMs = (speed: number) => (speed >= 10 ? 120 : speed >= 5 ? 260 : speed >= 2 ? 700 : 1200);
 const lit = (n?: NodeInfo) => !!n && (n.phase === 'active' || (n.phase === 'done' && !!n.at));
 
 /** Which nodes each lane shows. Lanes only show what matters to this run, so nothing is crammed. */
@@ -295,10 +295,8 @@ function Bubble({ beat, step, box, width }: { beat?: Beat; step?: { node: string
 function ApprovalAsk() {
   const pending = usePipeline((s) => s.pending);
   const ts = usePipeline((s) => s.ts);
-  const { pinFor, pinAt, openPin } = useUi();
   const p = pending[pending.length - 1];
   if (!p) return null;
-  const open = pinFor === p.hash && pinAt === 'node';
   return (
     <div className="fc-ask fg-ask">
       <div className="fc-ask__title">{p.title}</div>
@@ -307,13 +305,7 @@ function ApprovalAsk() {
         <span className="fc-ask__wait"><Clock3 size={14} strokeWidth={1.75} />Awaiting your approval</span>
         <span className="mono fc-ask__exp">{leftOf(ts, p.expires_at)} left</span>
       </div>
-      {open ? (
-        <div className="fc-ask__pin">
-          <PinPad compact title={`Approve ${p.playbook}`} subtitle={`#${p.hash.slice(0, 4)}`} onSubmit={async (pin) => { await api.approve({ hash: p.hash, pin }); openPin(null); }} onCancel={() => openPin(null)} />
-        </div>
-      ) : (
-        <button className="fc-btn" onClick={() => openPin(p.hash, 'node')}>Approve with PIN</button>
-      )}
+      <ApproveButton hash={p.hash} variant="node" />
       {pending.length > 1 && <div className="fc-ask__more">{pending.length - 1} more in the inbox</div>}
     </div>
   );

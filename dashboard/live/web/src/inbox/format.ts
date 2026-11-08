@@ -30,7 +30,7 @@ export function roleName(role: unknown): string {
 /** Plain error text for a failed command. api.ts drops the server text, so keep this generic. */
 export function plainError(err: unknown): string {
   const message = err instanceof Error ? err.message : String(err ?? '');
-  if (/^API 4\d\d/.test(message)) return 'The console did not accept that. Check the PIN and try again.';
+  if (/^API 4\d\d/.test(message)) return 'The console did not accept that. Try again.';
   if (/^API 5\d\d/.test(message)) return 'The console reported a fault. Try again.';
   if (/failed to fetch|networkerror|load failed/i.test(message)) return 'Cannot reach the console server.';
   return message || 'Something went wrong. Try again.';

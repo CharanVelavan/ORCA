@@ -25,10 +25,6 @@ type UiStore = {
   theme: Theme;
   config: ExerciseConfig;
   fired: FiredInject[];
-  /** Hash of the approval the PIN pad is open for (shared by inbox card and commander node). */
-  pinFor: string | null;
-  /** Where the PIN pad renders: on the inbox card or on the Pipeline commander node. */
-  pinAt: 'inbox' | 'node';
   setConfig: (patch: Partial<ExerciseConfig>) => void;
   start: () => void;
   end: () => void;
@@ -36,7 +32,6 @@ type UiStore = {
   toggleDrawer: (open?: boolean) => void;
   toggleTheme: () => void;
   markFired: (item: FiredInject) => void;
-  openPin: (hash: string | null, at?: 'inbox' | 'node') => void;
 };
 
 const readTheme = (): Theme => {
@@ -50,11 +45,9 @@ export const useUi = create<UiStore>((set) => ({
   theme: readTheme(),
   config: { scenario: 'S1', llm: 'mock', rules: true, kb: 'india', speed: 1 },
   fired: [],
-  pinFor: null,
-  pinAt: 'inbox',
   setConfig: (patch) => set((s) => ({ config: { ...s.config, ...patch } })),
   start: () => set({ mode: 'running', pipeline: 'open', simDrawer: false, fired: [] }),
-  end: () => set({ mode: 'setup', simDrawer: false, pinFor: null }),
+  end: () => set({ mode: 'setup', simDrawer: false }),
   setPipeline: (pipeline) => set({ pipeline }),
   toggleDrawer: (open) => set((s) => ({ simDrawer: open ?? !s.simDrawer })),
   toggleTheme: () => set((s) => {
@@ -63,5 +56,4 @@ export const useUi = create<UiStore>((set) => ({
     return { theme };
   }),
   markFired: (item) => set((s) => ({ fired: [...s.fired, item] })),
-  openPin: (pinFor, at = 'inbox') => set({ pinFor, pinAt: at }),
 }));

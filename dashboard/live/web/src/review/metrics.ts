@@ -48,7 +48,7 @@ export function computeMetrics(events: LiveEvent[], file: string, scenario: stri
 
   const decisions: Decision[] = events.filter((e) => e.kind === 'approval' && e.status !== 'requested').map((e) => ({
     minute: num(e.t), ts: str(e.ts), playbook: str(e.playbook), owner: str(e.owner), targets: targetsOf(e).join(', '),
-    status: str(e.status), who: e.status === 'auto' ? 'Auto (inside granted scope)' : e.status === 'rejected' ? 'Human (rejected)' : 'Human (commander PIN)',
+    status: str(e.status), who: e.status === 'auto' ? 'Auto (inside granted scope)' : e.status === 'rejected' ? 'Human (rejected)' : 'Human (commander click)',
   }));
 
   const humanChoice = new Map<string, string>();

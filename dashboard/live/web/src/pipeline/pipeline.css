@@ -52,7 +52,10 @@
 .fc-btn { margin-top: 10px; width: 100%; padding: 10px 14px; border-radius: var(--r-ctl); border: 0; background: var(--accent); color: var(--bg); font: 600 15px var(--font-sans); cursor: pointer; transition: transform var(--dur1) var(--ease-out), opacity var(--dur1); }
 .fc-btn:hover { opacity: .92; } .fc-btn:active { transform: scale(.98); }
 .fc-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
-.fc-ask__pin { margin-top: 10px; padding: 8px; border-radius: 8px; background: var(--surface); border: 1px solid var(--border); }
+.fc-ask__refusal { display: flex; gap: 6px; align-items: flex-start; margin: 8px 0 0; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--critical); background: var(--critical-soft); color: var(--critical); font-size: 13.5px; line-height: 18px; }
+.fc-ask__refusal svg { flex: none; margin-top: 2px; }
+.fc-btn:disabled { opacity: .6; cursor: default; }
+.fc-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
 .fc-ask__more { margin-top: 8px; font-size: 13px; color: var(--ink-muted); }
 
 /* ===================== Flowchart v2: swimlanes with shapes, live packets and sentence bubbles ===================== */
@@ -237,3 +240,31 @@
 /* Agents have no card behind them, so give their text a halo where an edge passes underneath. */
 .fg-n--agent .fg-n__label, .fg-n--agent .fg-n__detail { text-shadow: 0 0 4px var(--surface), 0 0 4px var(--surface), 0 0 2px var(--surface); }
 .fg-n--agent .fg-word { background: color-mix(in srgb, var(--c) 15%, var(--surface)); }
+
+/* Guided presentation: "what happens next" card over the flowchart while the run is paused */
+.pf-body { position: relative; }
+.gd-wrap { position: absolute; inset: 0; z-index: 20; display: grid; place-items: center; padding: 24px; background: color-mix(in srgb, var(--bg) 55%, transparent); backdrop-filter: blur(2px); animation: pf-fade var(--dur3) var(--ease-out); }
+.gd { --c: var(--accent); width: min(640px, 100%); padding: 24px 28px 20px; border-radius: 14px; background: var(--surface); border: 1.5px solid var(--c); box-shadow: 0 24px 60px -20px rgba(0,0,0,.6); display: flex; flex-direction: column; gap: 10px; animation: gd-in 380ms var(--ease-out) both; }
+.gd.b-threat { --c: var(--critical); } .gd.b-detect { --c: var(--accent); } .gd.b-coordinate { --c: var(--accent); }
+.gd.b-commander { --c: var(--warn); } .gd.b-execute { --c: var(--ok); } .gd.b-gaps { --c: #9B7FE0; }
+.gd-kicker { font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--c); }
+.gd h2 { margin: 0; display: flex; align-items: center; gap: 10px; font-size: 27px; line-height: 1.2; font-weight: 650; color: var(--ink); }
+.gd h2 svg { color: var(--c); flex: none; }
+.gd p { margin: 0; font-size: 18px; line-height: 1.5; color: var(--ink-muted); }
+.gd .gd-story { font-size: 17px; }
+.gd-steps { margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.gd-steps li { display: grid; grid-template-columns: 28px 20px auto minmax(0, 1fr); align-items: center; gap: 10px; font-size: 16px; color: var(--ink-muted); }
+.gd-steps li b { color: var(--ink); font-weight: 600; white-space: nowrap; }
+.gd-steps li svg { color: var(--accent); }
+.gd-n { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--accent); color: var(--accent); font-size: 14px; font-weight: 600; }
+.gd-foot { display: flex; align-items: center; gap: 12px; margin-top: 8px; }
+.gd-bar { flex: 1; height: 4px; border-radius: 2px; background: var(--surface-2); overflow: hidden; }
+.gd-bar i { display: block; height: 100%; background: var(--c); transform-origin: left; transition: transform 100ms linear; }
+.gd-note { font-size: 14px; color: var(--ink-muted); white-space: nowrap; }
+.gd-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: var(--r-ctl); border: 1px solid var(--c); background: color-mix(in srgb, var(--c) 14%, transparent); color: var(--ink); font: 600 15px var(--font-sans); cursor: pointer; white-space: nowrap; }
+.gd-btn:hover { background: color-mix(in srgb, var(--c) 24%, transparent); }
+.gd-btn:focus-visible { outline: 2px solid var(--c); outline-offset: 2px; }
+.gd-q { margin-left: 4px; padding: 0 5px; border-radius: 999px; background: var(--surface-2); font-size: 13.5px; }
+@keyframes gd-in { from { opacity: 0; transform: translateY(10px) scale(.98); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .gd, .gd-wrap { animation: none; } }
+.pf-ib.pf-ib--txt { width: auto; display: inline-flex; align-items: center; gap: 5px; padding: 0 9px; white-space: nowrap; font-size: 14px; }

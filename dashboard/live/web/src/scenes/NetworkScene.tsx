@@ -177,8 +177,8 @@ function Mgmt({ palette }: { palette: Palette }) {
 function CameraRig({ focus, fx }: { focus: string | null; fx: Effect }) {
   const { camera } = useThree();
   const controls = useThree((s) => s.controls) as OrbitControlsImpl | null;
-  const target = useRef(new THREE.Vector3(0, 1.2, 0));
-  const want = useRef(new THREE.Vector3(0, 1.2, 0));
+  const target = useRef(new THREE.Vector3(0, 2.4, 0));
+  const want = useRef(new THREE.Vector3(0, 2.4, 0));
   const wantOff = useRef(new THREE.Vector3(...DEFAULT_OFFSET));
   const pausedUntil = useRef(0);
   const reduced = useReducedMotionFlag();
@@ -188,7 +188,7 @@ function CameraRig({ focus, fx }: { focus: string | null; fx: Effect }) {
     const shot = shotFor(fx, nodes.current);
     if (shot) { want.current.set(...shot.target); wantOff.current.set(...shot.offset); return; }
     const p = focus ? SITES[focus]?.pos ?? GATEWAYS[focus]?.pos : null;
-    want.current.set(p ? p[0] * 0.5 : 0, 1.2, p ? p[2] * 0.5 : 0);
+    want.current.set(p ? p[0] * 0.4 : 0, 2.4, p ? p[2] * 0.4 : 0); // overview keeps the satellite (y 5.2) in frame
     wantOff.current.set(...DEFAULT_OFFSET);
   }, [focus, fx]);
   useEffect(() => {
@@ -243,7 +243,7 @@ export function NetworkScene({ truth }: { truth: boolean }) {
 
   return (
     <div className="scn" data-theme-key={theme}>
-      <Canvas dpr={[1, 2]} camera={{ position: [7.5, 7.2, 6.5], fov: 38 }} gl={{ antialias: true, powerPreference: 'high-performance' }}>
+      <Canvas dpr={[1, 2]} camera={{ position: [9.5, 8, 9.5], fov: 38 }} gl={{ antialias: true, powerPreference: 'high-performance' }}>
         <color attach="background" args={[palette.bg]} />
         <fog attach="fog" args={[palette.bg, 16, 30]} />
         <hemisphereLight args={[palette.ink, palette.bg, 0.9]} />

@@ -24,7 +24,7 @@ export function AutonomyBadge() {
   );
 }
 
-/** Compact top-bar button: ARMED (ready) or ENGAGED. Click opens reason + PIN pad. */
+/** Compact top-bar button: ARMED (ready) or ENGAGED. Click opens reason and confirm. */
 export function KillSwitchButton() {
   const killed = useKilled();
   const [open, setOpen] = useState(false);

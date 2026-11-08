@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { api } from '../api';
 import { useLiveStore } from '../store';
-import { PinPad } from './PinPad';
+import { ConfirmButton } from './ConfirmButton';
 import { istTime, toMs } from './format';
 import { getSimNowMs } from './simClock';
 import './inbox.css';
@@ -32,13 +32,16 @@ export function AutonomyPanel({ onDone }: { onDone: () => void }) {
   }
   if (pick) {
     return (
-      <PinPad title={`Set ${pick}`} subtitle={`${pick} for ${minutes} min, all sites and playbooks`}
-        onCancel={() => setPick(null)}
-        onSubmit={async (pin) => {
-          const res = await api.autonomy({ mode: pick, sites: '*', playbooks: '*', minutes, pin });
-          if (res && (res as Record<string, unknown>).ok === false) throw new Error('API 400: autonomy');
+      <div className="inbox-pop">
+        <div className="inbox-pop__title">{`Set ${pick}`}</div>
+        <p className="inbox-body inbox-body--muted">{`${pick} for ${minutes} min, all sites and playbooks.`}</p>
+        <ConfirmButton label={`Set ${pick}`} confirmLabel="Confirm" onConfirm={async () => {
+          const res = await api.autonomy({ mode: pick, sites: '*', playbooks: '*', minutes, pin: 'click' });
+          if (res && (res as Record<string, unknown>).ok === false) throw new Error(String((res as Record<string, unknown>).error ?? 'The console did not accept that.'));
           onDone();
         }} />
+        <button type="button" className="inbox-link" onClick={() => setPick(null)}>Back</button>
+      </div>
     );
   }
   return (
@@ -58,7 +61,7 @@ export function AutonomyPanel({ onDone }: { onDone: () => void }) {
           {MINUTES.map((m) => <option key={m} value={m}>{m} minutes</option>)}
         </select>
       </label>
-      <p className="inbox-body inbox-body--muted">Choosing a mode asks for the commander PIN.</p>
+      <p className="inbox-body inbox-body--muted">Choosing a mode asks you to confirm.</p>
     </div>
   );
 }

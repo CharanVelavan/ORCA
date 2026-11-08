@@ -11,7 +11,6 @@ export function useStageKeys(allowSim: boolean) {
       if (t && t.getAttribute && t.getAttribute('role') === 'separator' && e.key.startsWith('Arrow')) return; // the split handle owns arrows
       if (e.metaKey || e.ctrlKey || e.altKey) return;
       const ui = useUi.getState();
-      if (ui.pinFor) return; // the PIN pad owns the keyboard while open
       const k = e.key.toLowerCase();
       if (k === 's' && allowSim && ui.mode === 'running') { ui.toggleDrawer(); e.preventDefault(); }
       else if (k === 'p') { ui.setPipeline(ui.pipeline === 'rail' ? 'open' : 'rail'); e.preventDefault(); }

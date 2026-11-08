@@ -318,7 +318,7 @@ export const usePipeline = create<PipelineState>((set, get) => ({
           put('human', { phase: 'done', tone: 'ok', word: status === 'auto' ? 'AUTO' : 'APPROVED', detail: `${pb} #${hash.slice(0, 4)}`, pulse: pending.length > 0 });
           for (const k of Object.keys(nodes)) if (nodes[k].pulse && k.startsWith('model:')) nodes[k] = { ...nodes[k], pulse: false };
           put(refNode(owner), { phase: 'active', tone: 'ok', word: 'APPROVED', detail: `${pb} signed #${hash.slice(0, 4)}` });
-          beat('human', status === 'auto' ? 'Approved automatically' : 'Human approves', status === 'auto' ? `${pb} runs inside the AUTO scope the commander granted.` : `The commander approves ${pb} with a PIN. The signed approval travels back to ${pretty(owner)}.`, 'ok');
+          beat('human', status === 'auto' ? 'Approved automatically' : 'Human approves', status === 'auto' ? `${pb} runs inside the AUTO scope the commander granted.` : `The commander approves ${pb} with one click. The signed approval travels back to ${pretty(owner)}.`, 'ok');
         } else if (status === 'rejected') {
           pending = pending.filter((p) => p.hash !== hash);
           send('human', refNode(owner), 'REJECTED', 'critical');
