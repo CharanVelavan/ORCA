@@ -27,17 +27,33 @@ python -m orca.kbvec snapshot
 python -m orca.kbvec eval --v2 --tier corpus
 ```
 
-`questions_v2.yml` is a fixed 50/50 dev/test evaluation set. The abstention threshold is selected only from dev
-scores. Compare a v1 run and v2 run on test for corpus recall@5, MRR@10, nDCG@10, negative abstention accuracy,
-amendment hit rate, exact-citation hit@1, and p50/p95 latency. Do not make `orca_v2` the default unless it beats v1
-on corpus recall@5 and negative accuracy and has p95 under 3 seconds using the 0.6B reranker. Measurements have
-not yet been produced, so no v1-v2 results table is claimed here.
+`questions_v2.yml` is a fixed 50/50 dev/test evaluation set (100 questions); `negatives_extra.yml` adds 30 more
+negatives (15 dev, 15 test). The abstention cut was chosen on dev only.
 
-| Test metric | v1 | v2 |
-|---|---:|---:|
-| Corpus recall@5 | pending | pending |
-| Negative abstention accuracy | pending | pending |
-| p95 latency (ms) | pending | pending |
+**Default pipeline (finalised 9 Nov 2026): `orca_v2` + P1 pipeline.** Citation router, hybrid vector + BM25 with rank
+fusion, `BAAI/bge-reranker-base` on CPU (pool 15, 1,500 characters, 8 threads), abstain when the top reranker logit is
+below -3.0 unless a top-3 hit holds a verified record's own quote. Details and limits:
+[`research/rag-v3/ABSTENTION.md`](research/rag-v3/ABSTENTION.md).
+
+Measured on the 50-question test split, corpus tier, one Mac, same scoring for every row (raw files in
+`research/rag-v3/p2/`):
+
+| Test metric | v1 (nomic) | v2, no reranker | **v2 + reranker (default)** | v3 + reranker |
+|---|---:|---:|---:|---:|
+| recall@5 | 0.400 | 0.575 | **0.700** | 0.675 |
+| MRR@10 | 0.327 | 0.470 | 0.535 | 0.612 |
+| exact-citation hit@1 (5 questions) | 3/5 | 5/5 | **5/5** | 5/5 |
+| amendment hit rate | 0.4 | 0.4 | **0.8** | 0.8 |
+| negatives refused, original 10 (before the -3.0 cut) | 9/10 | 3/10 | 5/10 | 3/10 |
+| p95 latency (ms) | 11,310 | 727 | 5,008 | 4,167 |
+
+After the -3.0 cut (`ABSTENTION.md`): 64% of the 25 held-out negatives refused (32% before), 7/10 of the original
+ten, recall@5 unchanged at 0.700, 0 of 54 gap-evidence questions refused. v1 still refuses more of the original
+negatives (9/10) but finds far less (recall 0.40). **The v2 ship rule (p95 under 3 s, negative accuracy above v1) is
+not met**; v2 + reranker is the default because it has the best recall and amendment results, and the remaining
+weakness (abstention, latency) is stated rather than hidden. `orca_v3` (137,434 chunks, 4-level legal hierarchy
+parser) was built and measured (`research/rag-v3/p2/FINAL.md`); it did not beat v2 and is kept as an option
+(`ORCA_KBVEC_COLLECTION=orca_v3`). With 40 positives and 25 negatives one question moves a score by 2.5 or 4 points.
 
 The retrieval cache key includes the collection snapshot and embedding model id. On machines without Chroma, a
 citation lookup fails closed (`get_chunk(...) -> None`) so an invented chunk cannot bypass the protocol guard.
@@ -62,11 +78,11 @@ Python API: `from orca.kbvec import search, get_chunk, coverage`.
 `get_chunk(id)` returns None for an unknown id; verified records have `chunk_id == record id`.
 
 ## Config (env)
-`ORCA_EMBED_URL` (default `http://localhost:1234/v1`), `ORCA_EMBED_MODEL` (`text-embedding-nomic-embed-text-v1.5`),
-`ORCA_EMBED_KEY`, `ORCA_EMBED_BATCH`, `ORCA_RERANK_MODEL` (`Xenova/ms-marco-MiniLM-L-6-v2`), `ORCA_MAIN_REPO`
+`ORCA_EMBED_URL` (default `http://localhost:1234/v1`), `ORCA_EMBED_MODEL` (default follows the collection: `text-embedding-qwen3-embedding-8b` for `orca_v2`, nomic for `orca_kb`),
+`ORCA_EMBED_KEY`, `ORCA_EMBED_BATCH`, `ORCA_RERANK_MODEL` (`BAAI/bge-reranker-base`), `ORCA_RERANK_POOL`/`_CHARS`/`_THREADS`/`_DEVICE`, `ORCA_KBVEC_COLLECTION` (`orca_v2`), `ORCA_ABSTAIN_THRESHOLD` (-3.0; empty string = off), `ORCA_MAIN_REPO`
 (where gitignored `kb/sources` and `corpus/` live), `ORCA_KB_SOURCES`, `ORCA_KB_STAGING`, `ORCA_CORPUS_DIR`,
 `ORCA_CHROMA_DIR` (default `chroma/`), `ORCA_KBVEC_CACHE` (`kb/vec_cache/`), `ORCA_KBVEC_SNAPSHOTS`.
-Nomic task prefixes `search_document: ` / `search_query: ` are added by the client.
+Nomic task prefixes (`search_document: ` / `search_query: `) apply to `orca_kb`; the Qwen3 embedding model uses an instruction prefix on queries only.
 
 ## Chunks
 `chunk_id = <source_id>:p<page>:c<n>`; verified records use their record id. Metadata: source_id, title, authority,
@@ -98,5 +114,5 @@ question. The corpus-only row is the honest test of chunking plus embedding. The
 not help on this set (it was trained for web passages, not statutes); keep it switchable.
 
 ## Limits
-Roman-numeral sub-clauses such as "(iii)" are not treated as headings. Scanned PDFs without a text layer are
+The v2 index keeps the old sub-clause parser (Roman numerals only); the router matches `(1)(a)` levels by clause text, and `orca_v3` has the fuller parser. Scanned PDFs without a text layer are
 skipped and logged (OCR is not built here). nomic is English-only. Corpus ingest is untested at scale.
