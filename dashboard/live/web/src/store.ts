@@ -1,10 +1,10 @@
 import { create } from 'zustand';
 import type { Agent, Approval, LiveEvent, SiteState } from './types';
 
-type Store = { seq:number; session:Record<string,unknown>; sites:Record<string,SiteState>; gateways:Record<string,string>; paths:Record<string,unknown>[]; alerts:LiveEvent[]; models:LiveEvent[]; messages:LiveEvent[]; verdicts:LiveEvent[]; obligations:LiveEvent[]; approvals:Approval[]; gaps:LiveEvent[]; phases:string[]; impact:LiveEvent|null; autonomy:LiveEvent|null; kill:LiveEvent|null; agents:Record<string,Agent>; errors:LiveEvent[]; raw:LiveEvent[]; waiting:boolean; add:(event:LiveEvent)=>void; reset:()=>void };
-const initial = { seq:0, session:{}, sites:{}, gateways:{}, paths:[], alerts:[], models:[], messages:[], verdicts:[], obligations:[], approvals:[], gaps:[], phases:[], impact:null, autonomy:null, kill:null, agents:{}, errors:[], raw:[], waiting:false };
+type Store = { seq:number; session:Record<string,unknown>; sites:Record<string,SiteState>; gateways:Record<string,string>; paths:Record<string,unknown>[]; alerts:LiveEvent[]; models:LiveEvent[]; messages:LiveEvent[]; verdicts:LiveEvent[]; obligations:LiveEvent[]; approvals:Approval[]; gaps:LiveEvent[]; phases:string[]; impact:LiveEvent|null; autonomy:LiveEvent|null; kill:LiveEvent|null; agents:Record<string,Agent>; errors:LiveEvent[]; raw:LiveEvent[]; truth:LiveEvent[]; schedules:LiveEvent[]; waiting:boolean; add:(event:LiveEvent)=>void; addControl:(event:LiveEvent)=>void; reset:()=>void };
+const initial = { seq:0, session:{}, sites:{}, gateways:{}, paths:[], alerts:[], models:[], messages:[], verdicts:[], obligations:[], approvals:[], gaps:[], phases:[], impact:null, autonomy:null, kill:null, agents:{}, errors:[], raw:[], truth:[], schedules:[], waiting:false };
 const cap = <T,>(items:T[]) => items.slice(-60);
-export const useLiveStore = create<Store>((set) => ({ ...initial, reset:() => set(initial), add:(event) => set((state) => {
+const reduce = (state:Store, event:LiveEvent, includeControl:boolean):Partial<Store> => {
   if (event.audience === 'control') return state;
   const next = { ...state, seq:Math.max(state.seq,event.seq) };
   switch(event.kind) {
@@ -26,7 +26,10 @@ export const useLiveStore = create<Store>((set) => ({ ...initial, reset:() => se
     case 'clock_waiting': return { ...next, waiting:true };
     case 'clock_resumed': return { ...next, waiting:false };
     case 'error': return { ...next, errors:cap([...state.errors,event]) };
-    case 'inject': case 'execute': case 'heal': case 'patch_stage': case 'rollback': case 'reattack': return { ...next, raw:cap([...state.raw,event]) };
+    case 'inject': return { ...next, truth:cap([...state.truth,event]), raw:cap([...state.raw,event]) };
+    case 'scheduled': return { ...next, schedules:cap([...state.schedules.filter(x=>x.id!==event.id),event]), raw:cap([...state.raw,event]) };
+    case 'execute': case 'heal': case 'patch_stage': case 'rollback': case 'reattack': return { ...next, raw:cap([...state.raw,event]) };
     default: return { ...next, raw:cap([...state.raw,event]) };
   }
-}) }));
+};
+export const useLiveStore = create<Store>((set) => ({ ...initial, reset:() => set(initial), add:(event) => set((state) => reduce(state,event,false)), addControl:(event) => set((state) => event.audience==='control' ? ({...state,seq:Math.max(state.seq,event.seq),truth:event.kind==='scheduled'?state.truth:cap([...state.truth,event]),schedules:event.kind==='scheduled'?cap([...state.schedules.filter(x=>x.id!==event.id),event]):state.schedules,raw:cap([...state.raw,event])}) : reduce(state,event,true)) }));

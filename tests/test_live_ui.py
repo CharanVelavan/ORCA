@@ -34,3 +34,19 @@ def test_live_ui_dist_has_no_external_runtime_urls() -> None:
             if not url.startswith(ALLOWED_URL_PREFIXES):
                 forbidden.append(f"{path.relative_to(DIST)}: {url}")
     assert not forbidden, "External runtime URL(s) found:\n" + "\n".join(forbidden)
+
+
+def test_live_ui_bundle_has_all_routes_and_split_views() -> None:
+    """The offline bundle keeps the three exercise views as lazy route chunks."""
+    assets = DIST / "assets"
+    names = {path.name for path in assets.glob("*.js")}
+    for route in ("Landing-", "Control-", "Review-", "Console-"):
+        assert any(name.startswith(route) for name in names), f"Missing built {route[:-1]} route chunk"
+
+
+def test_live_ui_bundle_keeps_control_events_out_of_console_store() -> None:
+    """Control-only ground truth is deliberately filtered before console rendering."""
+    store = ROOT / "dashboard" / "live" / "web" / "src" / "store.ts"
+    source = store.read_text(encoding="utf-8")
+    assert "if (event.audience === 'control') return state" in source
+    assert "addControl" in source

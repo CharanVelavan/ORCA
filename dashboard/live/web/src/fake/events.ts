@@ -8,7 +8,7 @@ const sites = (state:'ok'|'degraded'|'down'|'healing'='ok') => ({
 export const fakeEvents:LiveEvent[] = [
   {seq:1,t:0,ts,kind:'session',scenario:'S1',title:'KA-SAT response exercise',story:'Chennai services are supported by an emulated satellite operator ground network.',start:ts,llm:'mock',rules:true,kb:'india',autoplay:true,sync:true,speed:1,emulated:true},
   {seq:2,t:0,ts,kind:'tick',sites:sites(),gateways:{'GW-IN-1':'up','GW-IN-2':'up','GW-XX':'suspect'},paths:[{site:'CHN-01',path:'SAT-A',gateway:'GW-IN-1',integrity:'clean',active:true}]},
-  {seq:3,t:1,ts,kind:'inject',id:'mgmt_intrusion',label:'KA-SAT style management intrusion',target:'CHN-02',start:1,end:8,by:'human:commander'},
+  {seq:3,t:1,ts,kind:'inject',audience:'control',id:'mgmt_intrusion',label:'KA-SAT style management intrusion',target:'CHN-02',start:1,end:8,by:'human:commander'},
   {seq:4,t:1,ts,kind:'model',model:'M2',site:'CHN-02',horizon:20,text:'Backhaul margin forecast: 3 dB in 20 minutes.',top_features:['link margin','terminal retries']},
   {seq:5,t:2,ts,kind:'model',model:'M1',site:'CHN-02',score:0.82,text:'Unusual management-plane activity.',top_features:['VPN login burst','terminal reset pattern']},
   {seq:6,t:2,ts,kind:'alert',id:'ALT-101',source:'M1',site:'CHN-02',label:'Management-plane anomaly',visible_to:['satellite_operator'],text:'Anomaly exceeds response threshold.',top_features:['VPN login burst','terminal reset pattern']},
@@ -23,7 +23,7 @@ export const fakeEvents:LiveEvent[] = [
   {seq:15,t:5,ts,kind:'msg',from:'satellite_operator',to:['mobile_operator','cert_in'],type:'incident_notice',data_class:'operational',text:'Containment is pending command approval.',refs:['ALT-101'],accepted:true},
   {seq:16,t:6,ts,kind:'execute',hash:'a4d8•••e91c',playbook:'PB-01',targets:['CHN-02'],stage_pct:100,result:'ok',why:'Approved containment complete.'},
   {seq:17,t:7,ts,kind:'agent_busy',role:'satellite_operator',busy:false,queue:0},
-  {seq:18,t:8,ts,kind:'inject',id:'jamming',label:'Jam the satellite uplink',target:'CHN-02',start:8,end:13,by:'human:commander'},
+  {seq:18,t:8,ts,kind:'inject',audience:'control',id:'jamming',label:'Jam the satellite uplink',target:'CHN-02',start:8,end:13,by:'human:commander'},
   {seq:19,t:8,ts,kind:'alert',id:'ALT-102',source:'M3',site:'CHN-02',label:'Uplink interference',visible_to:['mobile_operator'],text:'Jamming classification confirms degraded margin.'},
   {seq:20,t:8,ts,kind:'autonomy',mode:'AUTO',scope:{sites:['CHN-02'],playbooks:['PB-06']},expires_at:'2026-11-08T14:00:00Z',by:'human:commander'},
   {seq:21,t:9,ts,kind:'tick',sites:sites('healing'),gateways:{'GW-IN-1':'suspect','GW-IN-2':'up','GW-XX':'suspect'},paths:[{site:'CHN-02',path:'SAT-B',gateway:'GW-IN-2',integrity:'clean',active:true}]},
