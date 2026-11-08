@@ -53,3 +53,15 @@ SERVICES = ("112", "hospital", "payments", "grid", "general")
 PRIORITY = {"112": 1, "hospital": 2, "grid": 3, "payments": 4, "general": 5}
 DEMAND_SHARE = {"112": 0.05, "hospital": 0.10, "grid": 0.05, "payments": 0.15, "general": 0.65}
 TERMINALS_PER_SITE = 4          # ASSUMED satellite modems per site
+
+# Emulated service demand used by the live-console impact counter.  These are deliberately
+# small, stated assumptions rather than operator data; they make the human impact display
+# reproducible while keeping all connectivity in the simulator.
+DEPENDANT_METRICS = {
+    "CHN-01": {"population": 48_000, "calls_112_per_min": 1.8, "hospital": True},
+    "CHN-02": {"population": 76_000, "calls_112_per_min": 2.4, "payments_per_min": 520},
+    "CHN-03": {"population": 61_000, "calls_112_per_min": 1.9},
+    "CHN-04": {"population": 43_000, "calls_112_per_min": 1.3, "grid_scada": True},
+    "CHN-05": {"population": 35_000, "calls_112_per_min": 1.1},
+    "CHN-06": {"population": 58_000, "calls_112_per_min": 1.7},
+}

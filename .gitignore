@@ -15,3 +15,6 @@ corpus/
 .claude/worktrees/
 kb/vec_snapshots/
 kb/vec_cache/
+kb/vec_build/*
+!kb/vec_build/manifest.json
+dashboard/live/web/node_modules/
