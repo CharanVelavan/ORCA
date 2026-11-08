@@ -806,3 +806,22 @@
   verified: true
   verified_by: "PDF opened by Claude 8 Nov 2026 (pdftotext, PDF p. 112; quote matches verbatim); verification set at Charan Velavan's instruction"
   notes: "Added by agent G-A 8 Nov 2026. Used for the Indian-gateway COMPLIANT check in scenarios and the PB-06 precondition."
+
+# --- added 8 Nov 2026 after the second-model (ChatGPT) evidence review ---
+- id: IN-NGP-2024-XI-B-v
+  jurisdiction: IN
+  instrument: IN-SPACe Norms, Guidelines and Procedures for Implementation of Indian Space Policy 2023 (NGP 2024, V1.0)
+  clause: Chapter XI (space debris and safe operations), B. Guidelines for Satellites, item v
+  authority: IN-SPACe, Department of Space
+  binding_status: binding
+  issued: 2024-05-03
+  in_force_from: 2024-05-03
+  topic: satellite_design_security
+  topics: [satellite_design_security]
+  quote: "Assure cyber security including encryptions at design level and prevent unauthorized commandeering of satellite through adequate data security."
+  pinpoint: PDF p. 71 (document page 63 of 147)
+  summary: IN-SPACe authorisation holders, who warrant compliance with the NGP, are asked in one line to build cyber security and encryption into the satellite design; no standard, control list, ground-segment rule or audit is named.
+  source: inspace-ngp-2024
+  verified: false
+  verified_by: null
+  notes: "Quote and page checked by script (pdftotext). Binding via the applicant's warranty to comply with the NGP (Annexure clause g); the chapter allows deviations 'reviewed and approved on a case-by-case basis'. Covers the space object only, not gateways, management networks or terminals. Narrows GAP-IN-09 and GAP-IN-06. Own topic on purpose: a one-line design duty is not the space_cyber baseline, so verifying it must not turn GAP-IN-09 into COMPLIANT (same pattern as Authz Rule 54 under telecom_cyber_security). Awaiting human verification."

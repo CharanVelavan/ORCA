@@ -1,5 +1,8 @@
 # GAP-IN-09: No Binding Satellite-Specific Cyber-Resilience Baseline (Space Framework Is Advisory)
 
+> **Review 8 Nov (second model + human decision):** narrowed to *no detailed, auditable satellite cyber baseline*. IN-SPACe NGP 2024 Ch. XI B(v), PDF p. 71, asks for "encryptions at design level" (record IN-NGP-2024-XI-B-v, unverified). Register text in `kb/gaps/india.yaml` wins over this draft.
+
+
 - **Gap ID:** `GAP-IN-09-SPACE-CYBER-ADVISORY`
 - **Topic:** `space_cyber`
 - **Kind:** `coverage`
@@ -89,7 +92,7 @@ India's binding telecom rules (`Authz Rules 2026` Rules 50, 53, 54, 59–62; `TC
    - **Issuing Authority:** Federal Communications Commission (US)
    - **Binding Status:** `binding`
    - **Exact Quote (`us-fcc-part-4-outage`, 47 CFR § 4.9(c)(1), page null - XML, auto-checked):**
-     > "In addition, all Mobile-Satellite Service (“MSS”) satellite operators shall submit electronically a Notification to the Commission within 120 minutes of discovering that they have experienced on any facilities that they own, operate, lease, or otherwise utilize, of an outage of at least 30 minutes duration that manifests itself as a failure of any gateway earth station, except in the case where other earth stations at the gateway location are used to continue gateway operations within 30 minutes of the onset of the failure."
+     > "**[DROPPED 8 Nov: irrelevant, review row 10]** In addition, all Mobile-Satellite Service (“MSS”) satellite operators shall submit electronically a Notification to the Commission within 120 minutes of discovering that they have experienced on any facilities that they own, operate, lease, or otherwise utilize, of an outage of at least 30 minutes duration that manifests itself as a failure of any gateway earth station, except in the case where other earth stations at the gateway location are used to continue gateway operations within 30 minutes of the onset of the failure."
    - **How it closes the gap:** Binds satellite operators to specific operational resilience thresholds for gateway earth stations, satellite transponders, and inter-satellite links, creating direct regulatory accountability if a gateway failure is not absorbed by redundant earth stations within 30 minutes.
 
 ## 4. Recommendation

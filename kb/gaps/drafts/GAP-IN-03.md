@@ -1,5 +1,8 @@
 # GAP-IN-03: Priority Callers Exist for Disaster Restoration, But No Binding Ranking for Sharing Scarce Backup Capacity
 
+> **Review 8 Nov:** priority rules exist (Telecom Act s.20, UL clause 41.1) but none settles containment vs continuity. Register text wins over this draft.
+
+
 - **Gap ID:** `GAP-IN-03-NO-PRIORITY-ORDER`
 - **Topic:** `capacity_priority`
 - **Kind:** `ambiguity`

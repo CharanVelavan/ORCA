@@ -1,5 +1,8 @@
 # GAP-IN-02: No Binding Duty for a Satellite Operator to Warn Downstream Dependent Services
 
+> **Review 8 Nov:** claim kept as *no automatic, binding duty to warn named dependants*; key Indian quote is TCSR Rule 7(2) (disclosure is the Government's call). Register text wins over this draft.
+
+
 - **Gap ID:** `GAP-IN-02-NO-DOWNSTREAM-WARNING`
 - **Topic:** `downstream_warning`
 - **Kind:** `coverage`
@@ -37,7 +40,7 @@ When a cyber incident or outage compromises an emulated or live non-terrestrial 
 - **`in-dot-cell-broadcast-rules-2023` (page 3)** — Indian Wireless Telegraphy (Cell Broadcasting Service for Disaster Alerts) Rules, 2023, Rule 2(c) (auto-checked, not yet human-verified):
   > "\"cell broadcast\" means a method of sending messages to multiple mobile telephone users in a defined area at the same time in a broadcast manner."
 - **`in-dot-telecom-standards-rules-2025` (page 9)** — Telecommunications (Framework to Notify Standards, Conformity Assessment and Certification) Rules, 2025, Rule 10(1) (auto-checked, not yet human-verified):
-  > "An authorised entity or a licensee shall, upon becoming aware that a user of its telecommunication services is using telecommunication equipment that does not have a valid Certificate of Conformity Assessment, issue a notice in writing to such user seeking discontinuance by the user of such telecommunication equipment within a period of seven days from the date of issuance of the notice."
+  > "**[DROPPED 8 Nov: irrelevant, review row 11]** An authorised entity or a licensee shall, upon becoming aware that a user of its telecommunication services is using telecommunication equipment that does not have a valid Certificate of Conformity Assessment, issue a notice in writing to such user seeking discontinuance by the user of such telecommunication equipment within a period of seven days from the date of issuance of the notice."
 
 ### What Is Missing
 India's binding laws create upward reporting duties to CERT-In, DoT, and TRAI, give the Central Government discretion to disclose security incidents to the public (`IN-TCSR-2024-R7-2`), and assign early-warning dissemination functions to CERT-In (`IN-ITACT-2000-70B-4`) and NCIIPC (`in-nciipc-cii-rules-2013`, p. 3). However, no binding rule requires a satellite or telecom operator to directly warn downstream critical-infrastructure dependants (mobile operators, power utilities, PSAPs, hospitals, or banks) within a set timeframe when an incident threatens service continuity or integrity. Worse, **Authz Rule 37(5)** (`IN-AUTHZ-2026-R37-5`) prohibits a new authorised entity from sharing any information relating to its telecommunication network with any other person (except equipment suppliers/manufacturers) without prior written Central Government approval, creating a legal barrier to rapid peer-to-dependent technical warnings.
@@ -70,7 +73,7 @@ India's binding laws create upward reporting duties to CERT-In, DoT, and TRAI, g
    - **Issuing Authority:** European Parliament and Council
    - **Binding Status:** `binding`
    - **Exact Quote (`eu-eecc-2018-1972`, Article 110(1), page 148, auto-checked):**
-     > "Member States shall ensure that, when public warning systems regarding imminent or developing major emergencies and disasters are in place, public warnings are transmitted by providers of mobile number-based interpersonal communications services to the end-users concerned."
+     > "**[DROPPED 8 Nov: irrelevant, review row 15]** Member States shall ensure that, when public warning systems regarding imminent or developing major emergencies and disasters are in place, public warnings are transmitted by providers of mobile number-based interpersonal communications services to the end-users concerned."
    - **How it closes the gap:** Supplements B2B service-recipient warnings under NIS2 with mandatory downstream warning transmission to end-users during developing emergencies.
 
 ## 4. Recommendation

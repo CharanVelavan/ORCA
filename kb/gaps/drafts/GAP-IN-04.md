@@ -1,5 +1,8 @@
 # GAP-IN-04: Telecom Sites Must Have Power Redundancy, But No Minimum Hours Are Set
 
+> **Review 8 Nov:** the reviewer saw only staged quotes; the Indian evidence is the verified records (CEA 8(11) 10 h for grid equipment; DoT SOP 3.1.3 no hours; TRAI QoS 3.2 excludes power failures). Kept.
+
+
 - **Gap ID:** `GAP-IN-04-NO-BATTERY-FLOOR`
 - **Topic:** `backup_power`
 - **Kind:** `ambiguity`
@@ -25,7 +28,7 @@ When a cyber-physical incident or natural disaster causes a regional electric-gr
 - **`in-trai-qos-2024` (page 113)** — TRAI Standards of Quality of Service of Access and Broadband Service Regulations, 2024, Schedule, para 4.1.3(ii) (`IN-TRAI-QOS-2024-4-1-3` verified):
   > "All such SNOs shall be reported to the Authority within 24 Hrs. from the start of any such outage."
 - **`in-cea-cyber-power-guidelines-2021` (page 3)** — CEA Guidelines on Cyber Security in Power Sector 2021, Section 2.0 (auto-checked, not yet human-verified):
-  > "The requester and the user shall comply with cyber security guidelines issued by the Central Government, from time to time, and the technical standards for communication system in Power Sector laid down by the Authority."
+  > "**[DROPPED 8 Nov: irrelevant, review row 50]** The requester and the user shall comply with cyber security guidelines issued by the Central Government, from time to time, and the technical standards for communication system in Power Sector laid down by the Authority."
 
 ### What Is Missing
 India's binding telecom QoS regulation (`IN-TRAI-QOS-2024-3-2`) requires an access provider's quality management plan to provide *"required redundancies including power,"* and DoT's disaster SOP (`IN-DOT-SOP-2017-3-1-3`) asks for *"sufficient"* battery storage capacity and diesel/fuel availability at vulnerable critical network components. Neither sets a minimum numeric duration (in hours) of backup power autonomy for cellular base stations, core nodes, or satellite earth station gateways. By contrast, India's power-sector regulator already mandates a binding **10-hour battery floor** for power-system communication nodes (`IN-CEA-2020-8-11`).

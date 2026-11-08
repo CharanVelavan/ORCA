@@ -1,5 +1,8 @@
 # GAP-IN-06: Feeder-Link and Inter-Satellite-Link Security Is Left Unspecified in 3GPP, and India Has Not Used Its Section 19 Standards Power for Satellite Links
 
+> **Review 8 Nov:** narrowed to *no mandatory, named space-link crypto standard*; NGP 2024 XI B(v) asks only for design-level encryption. Register text in `kb/gaps/india.yaml` wins over this draft.
+
+
 - **Gap ID:** `GAP-IN-06-STANDARDS`
 - **Topic:** `standards`
 - **Kind:** `standards`
@@ -59,7 +62,7 @@ In 5G non-terrestrial networks (NTN), international mobile standards (3GPP) defi
    - **Exact Quote (`eu-space-programme-2021-696`, Article 34(1)(a), page 42, auto-checked):**
      > "the protection of infrastructure, both ground and space, and of the provision of services, particularly against physical or cyber-attacks, including interference with data streams;"
    - **Exact Quote (`eu-space-programme-2021-696`, Article 33(b), page 41, auto-checked):**
-     > "to use the security rules of the Council and of the Commission, which provide, inter alia, for a separation between operational functions and those associated with accreditation."
+     > "**[DROPPED 8 Nov: irrelevant, review row 61]** to use the security rules of the Council and of the Commission, which provide, inter alia, for a separation between operational functions and those associated with accreditation."
    - **How it closes the gap:** Subjects Union space-programme and sovereign connectivity systems (including ground-to-space and inter-satellite data streams) to mandatory security accreditation and data-stream protection rules.
 
 3. **US Space Policy Directive-5 & NIST IR 8270 (`us-whitehouse-spd5-2020` & `us-nist-ir-8270-2023`, staged — text verified directly in PDF on disk)**
@@ -79,7 +82,7 @@ In 5G non-terrestrial networks (NTN), international mobile standards (3GPP) defi
    - **Issuing Authority:** European Parliament and Council
    - **Binding Status:** `binding`
    - **Exact Quote (`eu-cybersecurity-act-2019`, Article 52(1), page 42, auto-checked):**
-     > "A European cybersecurity certification scheme may specify one or more of the following assurance levels for ICT products, ICT services and ICT processes: ‘basic’, ‘substantial’ or ‘high’."
+     > "**[DROPPED 8 Nov: irrelevant, review row 60]** A European cybersecurity certification scheme may specify one or more of the following assurance levels for ICT products, ICT services and ICT processes: ‘basic’, ‘substantial’ or ‘high’."
    - **How it closes the gap:** Provides the statutory certification-scheme machinery (analogous to India's 2025 Telecom Standards Rules) for translating technical link and equipment standards into tiered conformity certificates.
 
 ## 4. Recommendation

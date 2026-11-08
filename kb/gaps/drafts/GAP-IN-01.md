@@ -1,5 +1,8 @@
 # GAP-IN-01: Up to Four Reports to Three Bodies, With Two Different Triggers
 
+> **Review 8 Nov:** strongest gap; CTIR (occurrence), TCSR (awareness), CERT-In (noticing) and NGP (occurrence) triggers confirmed in context.
+
+
 - **Gap ID:** `GAP-IN-01-REPORTING-CLOCKS`
 - **Topic:** `incident_reporting`
 - **Kind:** `ambiguity`
@@ -54,7 +57,7 @@ For a single emulated or live NTN incident affecting designated Critical Telecom
    - **Exact Quote (`EU-NIS2-2022-ART23-4-b`, Article 23(4)(b), page n/a - HTML):**
      > "without undue delay and in any event within 72 hours of becoming aware of the significant incident, an incident notification"
    - **Exact Quote (`eu-nis2-ir-2024-2690`, Article 10(c), page 11, auto-checked):**
-     > "the integrity, confidentiality or authenticity of stored, transmitted or processed data related to the provision of a managed service or managed security service is compromised as a result of a suspectedly malicious action;"
+     > "**[DROPPED 8 Nov: irrelevant, review row 36]** the integrity, confidentiality or authenticity of stored, transmitted or processed data related to the provision of a managed service or managed security service is compromised as a result of a suspectedly malicious action;"
    - **How it closes the gap:** Uses a single, unambiguous trigger ("becoming aware of the significant incident") for both the 24-hour early warning and the 72-hour detailed notification, avoiding retroactive breach of an "occurrence" clock when an outage is only later recognized as malicious.
 
 2. **EU Cyber Resilience Act — Simultaneous Single-Submission Reporting (`eu-cyber-resilience-act-2024`, staged auto-checked)**
@@ -63,7 +66,7 @@ For a single emulated or live NTN incident affecting designated Critical Telecom
    - **Issuing Authority:** European Parliament and Council
    - **Binding Status:** `binding`
    - **Exact Quote (`eu-cyber-resilience-act-2024`, Article 14(1), page 38, auto-checked):**
-     > "A manufacturer shall notify any actively exploited vulnerability contained in the product with digital elements that it becomes aware of simultaneously to the CSIRT designated as coordinator, in accordance with paragraph 7 of this Article, and to ENISA."
+     > "**[DROPPED 8 Nov: irrelevant, review row 33]** A manufacturer shall notify any actively exploited vulnerability contained in the product with digital elements that it becomes aware of simultaneously to the CSIRT designated as coordinator, in accordance with paragraph 7 of this Article, and to ENISA."
    - **Exact Quote (`eu-cyber-resilience-act-2024`, Article 14(2)(a), page 38, auto-checked):**
      > "an early warning notification of an actively exploited vulnerability, without undue delay and in any event within 24 hours of the manufacturer becoming aware of it, indicating, where applicable, the Member States on the territory of which the manufacturer is aware that their product with digital elements has been made available;"
    - **How it closes the gap:** Implements a "report-once, distribute-simultaneously" architecture anchored to awareness, eliminating duplicate filings to separate national and Union authorities.

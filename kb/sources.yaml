@@ -154,3 +154,10 @@
   url: https://nccs.gov.in/public/itsar/ITSAR002042604.pdf
   sha256: 814b7cd392758bf6f093bc33ec3354d0fa07ce1c52428712d44aa5d71837377b
   notes: Downloaded by Claude 8 Nov 2026. Issued under MTCTE. "Date of Enforcement" left blank on the cover. The NCCS list of published ITSARs (nccs.gov.in/home/itsars, 64 entries, read 8 Nov 2026) has no ITSAR for satellite equipment (VSAT, gateway, earth station, TT&C); the draft lists showed no entries.
+
+- id: inspace-ngp-2024
+  title: Norms, Guidelines and Procedures for Implementation of Indian Space Policy 2023 in respect of Authorization of Space Activities (IN:ISP2023:NGP2024/V1.0, 3 May 2024)
+  authority: IN-SPACe (Indian National Space Promotion and Authorization Centre), Department of Space
+  url: https://www.inspace.gov.in/sys_attachment.do?sys_id=5d532e37877102503b0f0d060cbb35cf
+  sha256: 0d2d94868af9cdc1b86d7e5f7226c2e534a2d1243fa7fc443c18459043877adf
+  notes: Downloaded by a wave-1 agent 8 Nov 2026; registered by Claude 8 Nov after the second-model review flagged Chapter XI B(v). Authorisation applicants warrant compliance with these Norms (Annexure, clause g, "shall comply with the Norms, Guidelines and Procedures").

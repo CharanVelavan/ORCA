@@ -1,5 +1,8 @@
 # GAP-IN-08: Partial Gap — No Explicit Pre-Failover Clean-Path Security Check During an Attack
 
+> **Review 8 Nov:** kept as a *partial* gap - no *explicit* pre-failover clean-path check. Register text wins over this draft.
+
+
 - **Gap ID:** `GAP-IN-08-NO-CLEAN-PATH-CHECK`
 - **Topic:** `failover_path_security`
 - **Kind:** `standards`

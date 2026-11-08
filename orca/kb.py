@@ -23,7 +23,7 @@ TOPICS = {
     "personal_data_breach", "cross_border_transfer", "space_cyber", "emergency_priority",
     # added 7 Nov 2026 for topic-coverage gap detection
     "ntn_coverage", "downstream_warning", "capacity_priority", "failover_path_security",
-    "backup_power", "joint_command",
+    "backup_power", "joint_command", "satellite_design_security",
     # added 7 Nov 2026 night (policy sweep)
     "data_location", "terminal_control", "interference_reporting", "public_alerts",
     "outage_reporting", "disaster_coordination", "grid_comms_backup",

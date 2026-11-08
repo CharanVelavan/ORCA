@@ -1,5 +1,8 @@
 # New Candidate Policy Gaps Found in the Staged Corpus
 
+> **Decision 8 Nov (Charan Velavan, after second-model review): all five candidates REJECTED as Indian legal gaps.** GAP-CAND-IN-10 is undercut by CTIR's two-year log retention; 11, 12 have no Indian evidence. GAP-CAND-IN-13 (AI-agent autonomy) and GAP-CAND-IN-14 (hybrid multi-orbit trust) are kept as future-work research directions, not gaps.
+
+
 - **Status of all entries below:** `candidate` (`verified: false` — drafted for human review only; only the human confirms gaps).
 - **Topic exclusions respected:** None of these candidates involves `joint_command` (rejected `GAP-IN-07`) or `personal_data_breach` (rejected `GAP-IN-05`).
 - **Scope note:** All non-terrestrial network (NTN) links in the ORCA-NTN Chennai deployment are **emulated**.
@@ -66,7 +69,7 @@
     > "1. The EPS/5G AKA procedure may not get fully completed or is partially completed. It results into incomplete procedure for mutual authentication between the network and the UE."
     > "For the downlink data (e.g., NAS message before authentication), similarly, the UE is not able to verify its integrity. It is hard to detect whether the data is sent from a legitimate network or an external attacker. As an example, the external attacker can send fake information (e.g., satellite ID(s), wait timer) in Attach Reject message thus resulting in DoS attack on the UE."
   - **`in-trai-satellite-low-bit-rate-recommendations` (page 2)** — TRAI Recommendations on Licensing Framework for Satellite Based Connectivity for Low Bit Rate Applications, Paragraph 7(b) & 7(d) (staged, not yet human-verified; `advisory`):
-    > "All types of satellite viz. Geo Stationary Orbit (GSO) and Non-GSO (NGSO) satellites and any of the permitted satellite frequency bands may be used for providing satellite-based low-bit-rate connectivity."
+    > "**[DROPPED 8 Nov: irrelevant, review row 67]** All types of satellite viz. Geo Stationary Orbit (GSO) and Non-GSO (NGSO) satellites and any of the permitted satellite frequency bands may be used for providing satellite-based low-bit-rate connectivity."
   - **`in-authz-rules-2026:p101:c3`** (corpus chunk, Rule 38(2)(b), PDF p. 101; `binding`): Requires access-service licensees to *"implement roaming in accordance with the guidelines or directions issued by the Central Government or the designated agency"*, without specifying signalling-plane security controls for NTN or disaster roaming.
 - **Global Examples:**
   - **`us-nist-ir-8401-2022`** (NIST IR 8401, Section 1.1, PDF p. 12, staged; `advisory`):

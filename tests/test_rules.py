@@ -232,6 +232,15 @@ def test_space_cyber_in_is_headline_gap():
     assert v.verdict == "POTENTIAL_GAP" and v.gap_id == "GAP-IN-09-SPACE-CYBER-ADVISORY"
 
 
+def test_verifying_ngp_design_line_keeps_space_cyber_gap(monkeypatch):
+    # NGP 2024 XI B(v) is one high-level design line; once a human verifies it, it must not count as the baseline.
+    rec = KB.records["IN-NGP-2024-XI-B-v"]
+    assert "space_cyber" not in rec["topics"]
+    monkeypatch.setitem(rec, "verified", True)
+    assert question("space_cyber").verdict == "POTENTIAL_GAP"
+    assert question("satellite_design_security").verdict == "COMPLIANT"
+
+
 @pytest.mark.parametrize("topic,record", [
     ("data_location", "IN-AUTHZ-2026-R62-2"),
     ("terminal_control", "IN-AUTHZ-2026-R62-7"),

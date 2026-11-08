@@ -54,6 +54,7 @@ record lists it in `topics`. See `docs/plan/build-contract.md`.
 TOPICS: `incident_reporting`, `point_of_contact`, `log_retention`, `cert_powers`, `emergency_powers`,
 `telecom_cyber_security`, `critical_infrastructure`, `standards`, `personal_data_breach`,
 `cross_border_transfer`, `space_cyber`, `emergency_priority`, `ntn_coverage`, `downstream_warning`,
-`capacity_priority`, `failover_path_security`, `backup_power`, `joint_command`.
+`capacity_priority`, `failover_path_security`, `backup_power`, `joint_command`, `satellite_design_security`
+(a one-line design duty on the space object; deliberately separate from `space_cyber` so it never counts as the baseline).
 
 `python tools/validate_kb.py` checks every file against these rules.
