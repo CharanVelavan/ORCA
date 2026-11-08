@@ -9,7 +9,7 @@ reports_to: the mobile operator's NOC lead (human)
 max_level: 2
 tools: [read_alerts, explain_model, query_kb, ask_adviser, run_rule_engine, select_playbook,
         send_message, request_approval, execute_playbook, draft_notice, record_gap]
-owns: [PB-06, PB-07, PB-09, PB-10]
+owns: [PB-06, PB-07, PB-09, PB-10, PB-15, PB-16, PB-17]
 sees:
   signals: [snr_db, rain_mm_h, link_margin_db, packet_loss, terminals_up, route_candidate,
             traffic_load, txn_success, link_protection, battery_pct]

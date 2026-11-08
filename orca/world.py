@@ -17,7 +17,8 @@ from orca.audit import AuditLog
 
 # Who owns what (emulated). execute_playbook refuses targets outside the caller's list.
 DEFAULT_ASSETS = {
-    "satellite_operator": {"mgmt_account": ["*"], "mgmt_system": ["SAT-MGMT"], "terminal": ["*"]},
+    "satellite_operator": {"mgmt_account": ["*"], "mgmt_system": ["SAT-MGMT"], "terminal": ["*"],
+                           "gateway": ["GW-IN-1", "GW-IN-2"]},     # never GW-XX (Authz Rule 60(1)(b))
     "mobile_operator": {"site": ["CHN-01", "CHN-02", "CHN-03", "CHN-04", "CHN-05", "CHN-06"]},
     "power_utility": {"grid": ["GRID-CHN"]},
 }
@@ -44,6 +45,7 @@ class World:
     drafts: list = field(default_factory=list)          # notices drafted by agents (a human sends)
     gap_drafts: list = field(default_factory=list)      # record_gap output (a human reviews; never kb/)
     health: object = None                               # callable(targets, playbook, params, stage_pct) -> bool; simulator hook
+    netops: object = None                               # orca.sim.netops.NetOps (set by orca.sim.netops.attach)
 
     def __post_init__(self):
         if self.kb is None:

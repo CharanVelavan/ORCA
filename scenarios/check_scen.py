@@ -9,7 +9,7 @@ ACT = {"M1","M2","M3","M4","attacker","environment","judge","satellite_operator"
        "cert_in","regulator","gap_analyst","commander"}
 BAN_T = {"joint_command","personal_data_breach","emergency_priority"}
 M3 = {"normal","fault-weather","fault-power/equipment","attack-jamming","attack-management-plane","abstain"}
-EXEC_OK = {"PB-01","PB-06","PB-10"}
+EXEC_OK = {"PB-01","PB-06","PB-10","PB-11","PB-12","PB-13","PB-14","PB-15","PB-16","PB-17"}
 known_gaps = set(kb.gaps)
 def merge(f, add):
     for k, v in (add or {}).items():

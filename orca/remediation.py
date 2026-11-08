@@ -282,6 +282,18 @@ class Remediation:
 
     def clone_test(self, pb: dict, targets: list[str], params: dict) -> dict:
         """Run the plan's preconditions on a copy of the state. Nothing real changes."""
+        from orca.sim import netops as _net
+        if pb["id"] in _net.NET_PLAYBOOKS and pb["id"] not in ("PB-06", "PB-01"):
+            if self.w.netops is None:
+                return {"passed": False, "detail": "no emulated network attached (orca.sim.netops.attach)"}
+            return _net.clone_test(self.w.netops.net, pb["id"], targets, params, self.w.netops.sim)
+        if pb["id"] == "PB-06" and self.w.netops is not None:
+            for site in targets:      # measured clean-path checks (jamming, compromised mgmt, feeder, ...)
+                r = _net.check_path_clean(site, params.get("path"), self.w.netops.net, self.w.netops.sim,
+                                          route=self.w.routes.get(site, {}).get(params.get("path")))
+                if not r["clean"]:
+                    bad = [x["check"] for x in r["checks"] if not x["ok"]]
+                    return {"passed": False, "detail": f"{site}: path {params.get('path')} not clean: {bad}"}
         if pb["id"] == "PB-06":
             path = params.get("path")
             for site in targets:
@@ -301,11 +313,17 @@ class Remediation:
     # ------------------------------------------------------------ effects
     def _rollout(self, caller: str, pb: dict, targets: list[str], params: dict) -> dict:
         stages = []
+        ops = self.w.netops
+        seen = len(ops.records) if ops is not None else 0
         for pct in STAGES:
             ok = self.w.health(targets, pb["id"], params, pct) if self.w.health else True
             stages.append({"pct": pct, "healthy": bool(ok)})
             if not ok:
-                return {"ok": False, "stages": stages, "detail": f"health check failed at {pct} %, rolled back"}
+                net = ops.records[seen:] if ops is not None else []
+                return {"ok": False, "stages": stages, "network": net,
+                        "detail": f"health check failed at {pct} %, rolled back"}
+        if ops is not None:
+            network = ops.records[seen:]      # diffs per stage + verify (re-scan, re-attack) -> audit
         if pb["id"] == "PB-01":
             self.w.disabled_accounts.update(targets)
         elif pb["id"] == "PB-06":
@@ -315,4 +333,7 @@ class Remediation:
             to = sorted({d for s in targets for d in DEPENDANTS.get(s, [])})
             self.w.bus.append({"at": self.w.now, "sender": caller, "to": to, "kind": "warning",
                                "payload": {"sites": targets, "message": params["message"]}})
-        return {"ok": True, "stages": stages, "detail": "rolled out 5/25/100 %"}
+        out = {"ok": True, "stages": stages, "detail": "rolled out 5/25/100 %"}
+        if ops is not None:
+            out["network"] = network
+        return out

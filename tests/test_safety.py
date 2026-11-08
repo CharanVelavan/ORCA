@@ -570,3 +570,18 @@ def test_mock_scenario_run_does_not_write_kb(name, tmp_path):
     Coordinator(world, PolicyMockLLM()).run(scenario)
     assert world.audit.entries(), "the run wrote no audit entries"
     assert tree_hashes(KB_DIR) == before, f"{name} changed files under kb/"
+
+
+def test_network_playbook_refused_without_emulated_network(w):
+    # PB-13 (feeder-link encryption) must not "succeed" with no effect when no network is attached
+    rem = Remediation(w)
+    plan = rem.request_approval("satellite_operator", "PB-13", ["GW-IN-1"], {}, "t")
+    assert not plan["clone_test"]["passed"] and "no emulated network" in plan["clone_test"]["detail"]
+
+
+def test_pb14_on_three_sites_needs_two_approvals(w):
+    # firmware waves on 3 terminals exceed the 2-target cap: AUTO never self-approves it
+    rem = Remediation(w)
+    rem.set_mode("AUTO", "Charan Velavan", "4321", minutes=60)
+    plan = rem.request_approval("satellite_operator", "PB-14", ["TERM-CHN-01", "TERM-CHN-02", "TERM-CHN-05"], {}, "t")
+    assert "auto_token" not in plan

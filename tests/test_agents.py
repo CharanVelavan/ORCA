@@ -109,7 +109,10 @@ def test_send_message_enums_limited_by_role():
     assert "propose" not in props["type"]["enum"] and props["data_class"]["enum"] == ["operational"]
     assert "regulator" not in props["to"]["items"]["enum"] and "commander" in props["to"]["items"]["enum"]
     sat = {t["function"]["name"]: t["function"]["parameters"] for t in Role.load("satellite_operator").tool_schemas()}
-    assert sat["request_approval"]["properties"]["playbook"]["enum"] == ["PB-01", "PB-02", "PB-03", "PB-04", "PB-05"]
+    import yaml
+    owned = yaml.safe_load(Path("agents/roles/satellite_operator.yaml").read_text())["owns"]
+    assert sat["request_approval"]["properties"]["playbook"]["enum"] == owned
+    assert {"PB-01", "PB-11", "PB-14"} <= set(owned) and "PB-06" not in owned      # mobile operator's
 
 
 # ------------------------------------------------------------------ information isolation
