@@ -162,6 +162,8 @@ def make_handler(session: LiveSession):
                 return session.clock(b.get("action", ""), b.get("speed"))
             if path == "/api/inject":
                 return session.inject(b["kind"], b.get("target"), b.get("duration_min", 10), b.get("params") or {})
+            if path == "/api/inject/stop":
+                return session.stop_injection(b.get("id"), b.get("kind"))
             if path == "/api/schedule":
                 return session.schedule(b["kind"], b.get("target"), b["at_t"], b["duration_min"], b.get("params") or {})
             if path == "/api/autonomy":

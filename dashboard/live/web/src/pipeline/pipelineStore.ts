@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import type { LiveEvent } from '../types';
 import { NODES } from './pipelineNodes';
 import { pathFor } from './scenarioPaths';
+import { scenarioName } from '../names';
 
 // Pipeline Flow state. Every stream event updates node state immediately; travelling packets go
 // through a director queue so bursts play one at a time (plan section 4.4).
@@ -55,7 +56,10 @@ const refNode = (ref: string): string | null => {
   return NODE_IDS.has(agent) ? agent : null;
 };
 
-const pretty = (role: string) => role.replace(/_/g, ' ').replace('cert in', 'CERT-In');
+// People read the generic agent names (pipelineNodes.ts), not engine role ids.
+const pretty = (role: string) => { const n = NODES.find((x) => x.refs.includes(role) && x.kind === 'agent'); return n ? n.label : role.replace(/_/g, ' ').replace('cert in', 'CERT-In'); };
+/** Plain name for a reporting-deadline rule id (engine rule ids stay in the hover card). */
+const regimeName = (r: unknown) => { const x = String(r ?? ''); return /CERTIN/i.test(x) ? 'CERT-In 6-hour report' : /TCSR/i.test(x) ? 'Telecom cyber rules report' : /CTIR/i.test(x) ? 'Critical telecom report' : /DPDP/i.test(x) ? 'Data breach report' : /NIS2/i.test(x) ? 'NIS2 report' : x.replace(/^IN-R-DEADLINE-/, ''); };
 const pct = (v: unknown) => (typeof v === 'number' ? `${Math.round(v <= 1 ? v * 100 : v)}%` : '');
 const short = (s: unknown, n = 44) => { const t = String(s ?? '').replace(/\s+/g, ' ').trim(); return t.length > n ? `${t.slice(0, n - 1)}…` : t; };
 const siteTone = (state: string): Tone => (state === 'ok' ? 'ok' : state === 'degraded' ? 'warn' : state === 'down' ? 'critical' : state === 'healing' ? 'healing' : 'unknown');
@@ -116,7 +120,7 @@ export const usePipeline = create<PipelineState>((set, get) => ({
         set({ ...empty(scenario), truth, mode: s.mode === 'replay' ? 'replay' : 'live', ts: String(event.ts ?? '') });
         const p = pathFor(scenario);
         const fresh = get();
-        set({ beats: [{ id: ++beatSeq, node: 'sat', title: 'Normal operation', text: p ? `${p.title}. Six Chennai sites run over an emulated satellite backhaul.` : 'Six Chennai sites run over an emulated satellite backhaul.', ts: String(event.ts ?? ''), tone: 'ok' }], nodes: { ...fresh.nodes, sat: { ...fresh.nodes.sat, phase: 'active' } }, reached: 0 });
+        set({ beats: [{ id: ++beatSeq, node: 'sat', title: 'Normal operation', text: p ? `${scenarioName(scenario, p.title)}. Six Chennai sites run over an emulated satellite backhaul.` : 'Six Chennai sites run over an emulated satellite backhaul.', ts: String(event.ts ?? ''), tone: 'ok' }], nodes: { ...fresh.nodes, sat: { ...fresh.nodes.sat, phase: 'active' } }, reached: 0 });
         return;
       }
       case 'tick': {
@@ -163,6 +167,12 @@ export const usePipeline = create<PipelineState>((set, get) => ({
         beat(id, String(event.label ?? 'Threat injected'), `${event.label ?? injector} hits ${event.target ?? 'the network'}. Ground truth, director only.`, 'critical');
         break;
       }
+      case 'inject_stop': {
+        const id = `threat:${event.injector}`;
+        put(id, { phase: 'done', tone: 'ok', word: 'STOPPED', detail: `${event.target ?? ''} stopped by the director`, pulse: false });
+        beat(id, 'Attack stopped', `${String(event.label ?? event.injector)} on ${event.target ?? 'the network'} is stopped. The network now recovers.`, 'ok');
+        break;
+      }
       case 'scheduled': {
         put(`threat:${event.injector}`, { phase: 'path', word: 'SCHEDULED', detail: `at T+${event.at_t}` });
         break;
@@ -184,17 +194,17 @@ export const usePipeline = create<PipelineState>((set, get) => ({
           m1 = { scores: [...m1.scores, score].slice(-32), threshold };
           const flagged = event.state === 'flagged';
           put(id, { phase: flagged ? 'active' : 'done', tone: flagged ? 'critical' : 'ok', word: flagged ? 'FLAGGED' : 'NORMAL', detail: `${site} score ${score.toFixed(2)} / ${threshold.toFixed(2)}`, pulse: flagged });
-          if (flagged && !wasRed) { send(refNode(site), id, 'anomaly', 'critical'); beat(id, 'M1 flags an anomaly', `Isolation Forest score ${score.toFixed(2)} at ${site} is above the ${threshold.toFixed(2)} threshold.`, 'critical'); }
+          if (flagged && !wasRed) { send(refNode(site), id, 'anomaly', 'critical'); beat(id, 'Anomaly detector flags a problem', `Anomaly score ${score.toFixed(2)} at ${site} is above the ${threshold.toFixed(2)} threshold.`, 'critical'); }
         } else if (model === 'M2') {
           const h = event.horizon_min, flagged = event.state === 'flagged';
           const what = event.metric === 'battery' ? 'battery empty' : 'link lost';
           put(id, { phase: flagged ? 'active' : 'done', tone: flagged ? 'warn' : 'ok', word: flagged ? 'FORECAST' : 'NORMAL', detail: h == null ? 'no failure forecast' : Number(h) <= 0 ? `${site} ${what} now` : `${site} ${what} in ${h} min`, pulse: flagged });
-          if (flagged && !wasRed) { send(refNode(site), id, 'trend', 'warn'); beat(id, 'M2 forecasts a failure', Number(h) <= 0 ? `${site}: ${what} now.` : `${site}: ${what} in about ${h} minutes.`, 'warn'); }
+          if (flagged && !wasRed) { send(refNode(site), id, 'trend', 'warn'); beat(id, 'Failure forecaster warns', Number(h) <= 0 ? `${site}: ${what} now.` : `${site}: ${what} in about ${h} minutes.`, 'warn'); }
         } else if (model === 'M4') {
           const alloc = Array.isArray(event.allocation) ? (event.allocation as string[]).join(' > ') : '';
           const replan = event.state === 'replan';
           put(id, { phase: replan ? 'active' : 'done', tone: replan ? 'warn' : 'ok', word: replan ? 'RE-PLAN' : 'NORMAL', detail: alloc || 'capacity balanced' });
-          if (replan && !wasRed) beat(id, 'M4 re-plans capacity', `Scarce capacity goes first to ${alloc || '112 and the hospital'}.`, 'warn');
+          if (replan && !wasRed) beat(id, 'Capacity planner re-plans', `Scarce capacity goes first to ${alloc || '112 and the hospital'}.`, 'warn');
         } else {
           const cls = String(event.class ?? ''), conf = Number(event.confidence ?? 0);
           if (cls === 'normal' || st === 'ok') { put(id, { phase: 'done', tone: 'ok', word: 'NORMAL', detail: 'all sites normal', pulse: false }); break; }
@@ -204,7 +214,7 @@ export const usePipeline = create<PipelineState>((set, get) => ({
           put(id, { phase: 'active', tone, word: unsure ? 'UNSURE' : attack ? 'ATTACK' : 'FAULT', detail: unsure ? 'abstains, human decides' : `${cls} ${conf.toFixed(2)}`, pulse: true });
           if (!wasRed || nodes[id]?.detail !== `${cls} ${conf.toFixed(2)}`) {
             send(refNode(site), id, unsure ? 'unclear' : cls.replace('attack-', '').replace('fault-', ''), tone);
-            beat(id, unsure ? 'M3 is not sure' : attack ? 'M3 says: attack' : 'M3 says: fault', unsure ? `M3 abstains at ${site} and hands the call to the human.` : `M3 classifies ${site} as ${cls} with ${Math.round(conf * 100)}% confidence.`, tone);
+            beat(id, unsure ? 'Attack classifier is not sure' : attack ? 'Attack classifier: cyber attack' : 'Attack classifier: a fault', unsure ? `It abstains at ${site} and hands the call to the human.` : `${site} looks like ${cls.replace(/-/g, ' ')} (${Math.round(conf * 100)}% confident).`, tone);
           }
           if (!truth && anomalySite) put('threat:anomaly', { detail: `${anomalySite}: M3 says ${unsure ? 'unsure' : cls}` });
         }
@@ -215,7 +225,7 @@ export const usePipeline = create<PipelineState>((set, get) => ({
         const to = Array.isArray(event.visible_to) ? (event.visible_to as string[]) : [];
         for (const role of to) send(from, refNode(role), `alert ${event.site ?? ''}`, 'critical');
         if (!truth && !anomalySite && event.site) { anomalySite = String(event.site); put('threat:anomaly', { phase: 'active', tone: 'warn', word: 'ANOMALY', detail: `${event.site}, cause not yet known` }); }
-        if (to.length) beat(refNode(to[0]), 'Agents are told', `${String(event.source)} alerts ${to.map(pretty).join(', ')}.`, 'accent');
+        if (to.length) beat(refNode(to[0]), 'Agents are told', `${event.source === 'M3' ? 'The attack classifier' : String(event.source)} alerts the ${to.map(pretty).join(', ')}.`, 'accent');
         break;
       }
       case 'agent_busy': {
@@ -292,11 +302,11 @@ export const usePipeline = create<PipelineState>((set, get) => ({
         const ckey = `c:${event.regime}`;
         if (seen.has(ckey)) break;
         seen.add(ckey);
-        put('clocks', { phase: 'active', tone: 'warn', word: 'RUNNING', detail: `${short(event.regime, 18)} due ${String(event.due_at ?? '').slice(11, 16)}` });
+        put('clocks', { phase: 'active', tone: 'warn', word: 'RUNNING', detail: `${regimeName(event.regime)} due ${String(event.due_at ?? '').slice(11, 16)}` });
         send('rules', 'clocks', 'clock starts', 'warn');
         const owes = /CERT/i.test(String(event.regime)) ? 'agent:cert_in' : /TCSR|CTIR|DOT|TEL/i.test(String(event.regime)) ? 'agent:regulator' : null;
-        if (owes) { send('clocks', owes, 'report due', 'warn'); put(owes, { phase: 'active', tone: 'warn', word: 'REPORT DUE', detail: `${short(event.regime, 22)} by ${String(event.due_at ?? '').slice(11, 16)} IST` }); }
-        beat('clocks', 'A reporting clock starts', `${short(event.regime, 40)} must be reported by ${String(event.due_at ?? '').slice(11, 16)}.`, 'warn');
+        if (owes) { send('clocks', owes, 'report due', 'warn'); put(owes, { phase: 'active', tone: 'warn', word: 'REPORT DUE', detail: `${regimeName(event.regime)} by ${String(event.due_at ?? '').slice(11, 16)} IST` }); }
+        beat('clocks', 'A reporting clock starts', `${regimeName(event.regime)} is due by ${String(event.due_at ?? '').slice(11, 16)} IST.`, 'warn');
         break;
       }
       case 'approval': {

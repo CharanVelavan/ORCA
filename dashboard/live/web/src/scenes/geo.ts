@@ -12,9 +12,9 @@ export const SITES: Record<string, { name: string; pos: V3 }> = {
   'CHN-06': { name: 'OMR', pos: [1.5, 0, 2.9] },
 };
 export const GATEWAYS: Record<string, { name: string; pos: V3; foreign?: boolean }> = {
-  'GW-IN-1': { name: 'GW-IN-1 Chennai', pos: [-2.6, 0, -1.2] },
-  'GW-IN-2': { name: 'GW-IN-2 Bengaluru', pos: [-5.2, 0, 1.4] },
-  'GW-XX': { name: 'GW-XX foreign', pos: [5.6, 0, -3.8], foreign: true },
+  'GW-IN-1': { name: 'Main ground station', pos: [-2.6, 0, -1.2] },
+  'GW-IN-2': { name: 'Backup ground station', pos: [-5.2, 0, 1.4] },
+  'GW-XX': { name: 'Foreign ground station', pos: [5.6, 0, -3.8], foreign: true },
 };
 export const SAT: V3 = [-0.6, 5.2, -0.4];
 /** Operator management network (SAT-MGMT): a small server block next to GW-IN-1. */
@@ -60,7 +60,7 @@ export const ROLE_COLORS: Record<string, string> = {
 };
 export const ROLE_ORDER = ['mobile_operator', 'satellite_operator', 'power_utility', 'cert_in', 'regulator', 'gap_analyst'] as const;
 export const ROLE_SHORT: Record<string, string> = {
-  mobile_operator: 'Mobile op', satellite_operator: 'Sat op', power_utility: 'Power', cert_in: 'CERT-In', regulator: 'Regulator', gap_analyst: 'Gap analyst',
+  mobile_operator: 'Mobile network', satellite_operator: 'Satellite link', power_utility: 'Power grid', cert_in: 'Cyber response', regulator: 'Regulator', gap_analyst: 'Policy adviser',
 };
 
 /** Centre of the orbiting agent badges (above GW-IN-1), the rules diamond (above SAT-MGMT) and the commander shield. */

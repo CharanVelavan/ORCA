@@ -163,7 +163,7 @@ function Mgmt({ palette }: { palette: Palette }) {
       <group position={MGMT}>
         <mesh position-y={0.3}><boxGeometry args={[0.6, 0.6, 0.42]} /><meshStandardMaterial color={palette.surface2} roughness={0.9} /></mesh>
         <mesh position-y={0.62}><boxGeometry args={[0.6, 0.05, 0.42]} /><meshStandardMaterial color={palette.accent} roughness={0.8} /></mesh>
-        <Html position={[0, 0.95, 0]} center><span className="scn-label scn-label--mgmt"><span className="scn-dot" />SAT-MGMT</span></Html>
+        <Html position={[0, 0.95, 0]} center><span className="scn-label scn-label--mgmt"><span className="scn-dot" />Satellite control centre</span></Html>
       </group>
       <Line points={[[MGMT[0], 0.6, MGMT[2]], [g[0], 0.9, g[2]]]} color={palette.border} lineWidth={1} dashed dashSize={0.12} gapSize={0.1} />
     </group>
@@ -193,10 +193,13 @@ function CameraRig({ focus, fx }: { focus: string | null; fx: Effect }) {
   }, [focus, fx]);
   useEffect(() => {
     if (!controls) return;
-    const pause = () => { pausedUntil.current = performance.now() + 8000; };
+    // Rotating or zooming by hand holds the scripted camera for 25 s; 'orca-3d-reset' hands control back at once.
+    const pause = () => { pausedUntil.current = performance.now() + 25000; };
+    const resume = () => { pausedUntil.current = 0; };
+    window.addEventListener('orca-3d-reset', resume);
     controls.addEventListener('start', pause);
     controls.addEventListener('end', pause);
-    return () => { controls.removeEventListener('start', pause); controls.removeEventListener('end', pause); };
+    return () => { controls.removeEventListener('start', pause); controls.removeEventListener('end', pause); window.removeEventListener('orca-3d-reset', resume); };
   }, [controls]);
   const goal = useMemo(() => new THREE.Vector3(), []);
   useFrame((_, dt) => {
@@ -258,7 +261,7 @@ export function NetworkScene({ truth }: { truth: boolean }) {
           <Mgmt palette={palette} />
           <EffectsLayer fx={fx} palette={palette} truth={truth} reduced={reduced} />
         </Suspense>
-        <OrbitControls makeDefault enablePan={false} enableZoom={false} enableDamping dampingFactor={0.12} maxPolarAngle={Math.PI / 2.15} minPolarAngle={0.35} />
+        <OrbitControls makeDefault enablePan={false} enableZoom zoomSpeed={0.8} minDistance={3.5} maxDistance={24} enableDamping dampingFactor={0.12} maxPolarAngle={Math.PI / 2.15} minPolarAngle={0.35} />
         <CameraRig focus={focus} fx={fx} />
       </Canvas>
       <div className="scn-tag mono">EMULATED NETWORK · CHENNAI</div>

@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import { usePipeline } from '../pipeline/pipelineStore';
 import { useUi } from './uiStore';
+import { usePresenter } from './presenter';
 
-/** S: simulator drawer, P: collapse pipeline, F: pipeline full screen, arrows: explain steps, Esc: back. */
+/** Space: pause or resume, S: simulator drawer, P: collapse pipeline, F: pipeline full screen, arrows: explain steps, Esc: back. */
 export function useStageKeys(allowSim: boolean) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -12,7 +13,8 @@ export function useStageKeys(allowSim: boolean) {
       if (e.metaKey || e.ctrlKey || e.altKey) return;
       const ui = useUi.getState();
       const k = e.key.toLowerCase();
-      if (k === 's' && allowSim && ui.mode === 'running') { ui.toggleDrawer(); e.preventDefault(); }
+      if (e.key === ' ' && allowSim && ui.mode === 'running' && t?.tagName !== 'BUTTON') { usePresenter.getState().toggleHold(); e.preventDefault(); }
+      else if (k === 's' && allowSim && ui.mode === 'running') { ui.toggleDrawer(); e.preventDefault(); }
       else if (k === 'p') { ui.setPipeline(ui.pipeline === 'rail' ? 'open' : 'rail'); e.preventDefault(); }
       else if (k === 'f') { ui.setPipeline(ui.pipeline === 'full' ? 'open' : 'full'); e.preventDefault(); }
       else if (e.key === 'ArrowRight') { usePipeline.getState().explainStep(1); e.preventDefault(); }

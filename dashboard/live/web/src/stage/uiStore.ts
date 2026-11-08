@@ -7,12 +7,13 @@ export type StageMode = 'setup' | 'running';
 export type PipelineView = 'open' | 'rail' | 'full';
 export type Theme = 'dark' | 'light';
 
+/** Demo replays a recorded run (no engine logic). Live runs the engine with the real LLM. Rules always on, India KB only. */
+export type RunMode = 'demo' | 'live';
 export type ExerciseConfig = {
   scenario: string;
-  llm: 'mock' | 'local';
-  rules: boolean;
-  kb: 'india' | 'eu';
-  speed: 1 | 2 | 5 | 10;
+  run: RunMode;
+  /** Slow 0.5, Normal 1, Fast 2 (engine-valid speeds). */
+  speed: 0.5 | 1 | 2;
 };
 
 /** One fired attack/fault button, for the rail check marks. */
@@ -43,7 +44,7 @@ export const useUi = create<UiStore>((set) => ({
   pipeline: 'open',
   simDrawer: false,
   theme: readTheme(),
-  config: { scenario: 'S1', llm: 'mock', rules: true, kb: 'india', speed: 1 },
+  config: { scenario: 'S1', run: 'demo', speed: 1 },
   fired: [],
   setConfig: (patch) => set((s) => ({ config: { ...s.config, ...patch } })),
   start: () => set({ mode: 'running', pipeline: 'open', simDrawer: false, fired: [] }),

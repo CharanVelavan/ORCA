@@ -17,6 +17,7 @@ export const api = {
   schedule: (body:{kind:string;target:string;at_t:number;duration_min:number;params?:Record<string,unknown>}) => call<Record<string, unknown>>('schedule', body),
   deleteSchedule: (id:string) => call<Record<string, unknown>>(`schedule/${encodeURIComponent(id)}`, undefined, 'DELETE'),
   truth: () => call<Record<string, unknown>>('truth', undefined, 'GET'),
+  stopInject: (body: { kind?: string; id?: string }) => call<Record<string, unknown>>('inject/stop', body),
   runs: () => call<{ runs?: { file: string; scenario: string | null; stream: boolean; size: number; mtime: number }[] }>('runs', undefined, 'GET'),
   replay: (file:string) => call<Record<string, unknown>>(`replay?file=${encodeURIComponent(file)}`, undefined, 'GET'),
 };

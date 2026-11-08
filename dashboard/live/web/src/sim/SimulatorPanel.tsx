@@ -7,6 +7,7 @@ import { startExercise } from './actions';
 import { CATEGORY_LABEL, INJECTOR_ICONS, groupInjectors } from './injectors';
 import { useCatalogue } from './useCatalogue';
 import type { ScenarioKind } from './useCatalogue';
+import { scenarioName } from '../names';
 import './sim.css';
 
 const KIND: Record<ScenarioKind, { label: string; Icon: LucideIcon; tone: string }> = {
@@ -16,7 +17,7 @@ const KIND: Record<ScenarioKind, { label: string; Icon: LucideIcon; tone: string
   audit: { label: 'Audit', Icon: Eye, tone: 'accent' },
   mixed: { label: 'Mixed', Icon: Layers, tone: 'healing' },
 };
-const SPEEDS: ExerciseConfig['speed'][] = [1, 2, 5, 10];
+const SPEEDS: { value: ExerciseConfig['speed']; text: string }[] = [{ value: 0.5, text: 'Slow' }, { value: 1, text: 'Normal' }, { value: 2, text: 'Fast' }];
 
 export function KindBadge({ kind }: { kind: ScenarioKind }) {
   const k = KIND[kind] ?? { label: kind, Icon: CircleHelp, tone: 'unknown' };
@@ -71,7 +72,7 @@ export function SimulatorPanel() {
                   onClick={() => setConfig({ scenario: s.id })}>
                   <span className="sim-card-top">
                     <span className="sim-chip mono">{s.id}</span>
-                    <span className="sim-card-title">{s.title}</span>
+                    <span className="sim-card-title" title={s.title}>{scenarioName(s.id, s.title)}</span>
                     <KindBadge kind={s.kind} />
                   </span>
                   <span className="sim-sites mono">{s.sites.join(' ')}</span>
@@ -104,23 +105,15 @@ export function SimulatorPanel() {
 
       <footer className="sim-foot">
         <div className="sim-settings">
-          <div className="sim-field">
-            <span className="sim-field-label" id="sim-rules-label">Rules</span>
-            <button type="button" role="switch" aria-checked={config.rules} aria-labelledby="sim-rules-label"
-              className={`sim-switch${config.rules ? ' is-on' : ''}`} onClick={() => setConfig({ rules: !config.rules })}>
-              <span className="sim-switch-track" aria-hidden><span className="sim-switch-thumb" /></span>
-              <span className="sim-switch-word">{config.rules ? 'ON' : 'OFF'}</span>
-            </button>
-          </div>
-          <Segmented label="KB" value={config.kb} onChange={(kb) => setConfig({ kb })}
-            options={[{ value: 'india', text: 'India' }, { value: 'eu', text: 'EU' }]} />
-          <Segmented label="LLM" value={config.llm} onChange={(llm) => setConfig({ llm })}
-            options={[{ value: 'mock', text: 'mock' }, { value: 'local', text: 'local' }]} />
-          <Segmented label="Speed" value={config.speed} onChange={(speed) => setConfig({ speed })}
-            options={SPEEDS.map((v) => ({ value: v, text: `x${v}` }))} />
+          <Segmented label="Mode" value={config.run} onChange={(run) => setConfig({ run })}
+            options={[{ value: 'demo', text: 'Demo (recorded)' }, { value: 'live', text: 'Live (AI model)' }]} />
+          <Segmented label="Speed" value={config.speed} onChange={(speed) => setConfig({ speed })} options={SPEEDS} />
         </div>
+        <p className="sim-mode-note">{config.run === 'demo'
+          ? 'Replays a recorded run of this scenario. Same result every time, no engine needed.'
+          : 'Runs the engine now with the AI model. Rules are always on; the knowledge base is India.'}</p>
         <button type="button" className="sim-primary" onClick={start} disabled={starting} aria-busy={starting}>
-          {starting ? <><Loader size={16} strokeWidth={1.5} className="sim-spin" aria-hidden />Starting</> : <>Start exercise</>}
+          {starting ? <><Loader size={16} strokeWidth={1.5} className="sim-spin" aria-hidden />Starting</> : <>{config.run === 'demo' ? 'Play demo' : 'Start live run'}</>}
         </button>
         {error && <p className="sim-error" role="alert">{error}</p>}
         <p className="sim-note">All links and figures are EMULATED.</p>

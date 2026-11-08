@@ -13,13 +13,27 @@ export function istNow(): string {
 }
 
 export async function startExercise(config: ExerciseConfig): Promise<void> {
+  // Demo: the stage replays a recorded run (stage/DataBridge.tsx); the engine is not touched.
+  if (config.run === 'demo') { useUi.getState().start(); return; }
+  // Switch the stage to running first so the new session's first events are not dropped as "setup" noise.
+  useUi.getState().start();
   try {
-    await api.session({ scenario: config.scenario, llm: config.llm, rules: config.rules, kb: config.kb, autoplay: true, sync: true });
+    // Live uses the real LLM. '?llm=mock' (rehearsal without the GPU tunnel) swaps in the scripted agents.
+    const llm = new URLSearchParams(window.location.search).get('llm') === 'mock' ? 'mock' : 'local';
+    await api.session({ scenario: config.scenario, llm, rules: true, kb: 'india', autoplay: true, sync: true });
     await api.clock({ action: 'play', speed: config.speed });
   } catch (error) {
-    throw plain(error, 'Could not start the exercise. Is the engine running?');
+    useUi.getState().end();
+    throw plain(error, 'Could not start the live run. Is the engine running with the LLM?');
   }
-  useUi.getState().start();
+}
+
+export async function stopInject(injector: string): Promise<void> {
+  try {
+    await api.stopInject({ kind: injector });
+  } catch (error) {
+    throw plain(error, 'Could not stop that event.');
+  }
 }
 
 export async function fireInject(injector: string, target: string, durationMin = 15): Promise<void> {
@@ -33,7 +47,7 @@ export async function fireInject(injector: string, target: string, durationMin =
 
 export async function endExercise(): Promise<void> {
   try {
-    await api.clock({ action: 'pause' });
+    if (useUi.getState().config.run === 'live') await api.clock({ action: 'pause' });
   } catch (error) {
     throw plain(error, 'Could not pause the clock.');
   } finally {

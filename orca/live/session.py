@@ -170,14 +170,14 @@ class LiveSession:
                       "approved": "approval", "rejected": "approval", "executed": "execute",
                       "execute_refused": "execute", "rolled_back": "rollback", "autonomy_set": "autonomy",
                       "autonomy_downgraded": "autonomy", "kill_switch": "kill",
-                      "kill_switch_released": "kill"}.get(kind, kind)
+                      "kill_switch_released": "kill", "inject_stopped": "inject_stop"}.get(kind, kind)
             # Audit payloads for injection scheduling use ``kind`` for the catalogue
             # id.  Preserve the stream discriminator and expose that id as ``injector``.
-            if mapped in ("inject", "scheduled") and "kind" in p:
+            if mapped in ("inject", "scheduled", "inject_stop") and "kind" in p:
                 p["injector"] = p.pop("kind")
             event = {"t": max(self.sim.t, 0), "ts": entry["ts"], "kind": mapped, "audit_kind": kind,
                      "actor": entry["actor"], **p}
-            if mapped in ("inject", "scheduled"):
+            if mapped in ("inject", "scheduled", "inject_stop"):
                 event["audience"] = "control"
             if kind == "approval_requested":
                 event["status"] = "requested"
@@ -246,9 +246,11 @@ class LiveSession:
                by: str = "human:commander", start: int | None = None) -> dict:
         with self.lock:
             at = self.sim.t + 1 if start is None else int(start)
+            before = len(self.sim.conditions)
             applied = apply_injector(self.sim, kind, target, at, duration_min, params)
             iid = f"INJ-{len(self.injections) + 1:03d}"
-            item = {"id": iid, "by": by, "params": dict(params or {}), **applied}
+            item = {"id": iid, "by": by, "params": dict(params or {}), **applied,
+                    "_conds": self.sim.conditions[before:]}   # kept server-side so the director can stop it
             self.injections.append(item)
             self.contained_at[iid], self.healed_at[iid] = None, None
             # Ground truth belongs in the tamper-evident exercise record, but never in an
@@ -256,6 +258,32 @@ class LiveSession:
             self.world.log("inject", by, self._public_injection(item))
             self._flush_audit()
             return {"ok": True, "injection": self._public_injection(item)}
+
+    def running_injections(self) -> list[dict]:
+        """Injections whose conditions are still active or not yet started (public fields only)."""
+        t = self.sim.t
+        return [self._public_injection(i) for i in self.injections
+                if any(c.end is None or c.end > t for c in i.get("_conds", []))]
+
+    def stop_injection(self, injection_id: str | None = None, kind: str | None = None,
+                       by: str = "human:commander") -> dict:
+        """End a running attack or fault now (director control). The network then recovers on its own
+        or through the agents' fixes; nothing is rolled back."""
+        with self.lock:
+            t = self.sim.t
+            items = [i for i in self.injections
+                     if any(c.end is None or c.end > t for c in i.get("_conds", []))
+                     and ((injection_id and i["id"] == injection_id) or (kind and i["kind"] == kind))]
+            if not items:
+                raise ValueError("nothing of that kind is running")
+            for it in items:
+                for c in it["_conds"]:
+                    c.end = max(c.start, t + 1)
+                it["end"] = t + 1
+                self.world.log("inject_stopped", by, {"id": it["id"], "kind": it["kind"], "label": it["label"],
+                                                       "target": it["target"], "end": it["end"]})
+            self._flush_audit()
+            return {"ok": True, "stopped": [i["id"] for i in items]}
 
     def schedule(self, kind: str, target: str | None, at_t: int, duration_min: int, params: dict | None = None) -> dict:
         with self.lock:
@@ -491,7 +519,7 @@ class LiveSession:
         item = {"id": iid, "by": "scenario", "params": dict(cond.params), "kind": cond.kind,
                 "label": inj.label if inj else cond.kind.replace("_", " "), "target": cond.site or "",
                 "start": cond.start, "end": cond.end, "truth_class": CLASS_OF[cond.kind],
-                "sites": [cond.site] if cond.site else []}
+                "sites": [cond.site] if cond.site else [], "_conds": [cond]}
         self.injections.append(item)
         self.contained_at[iid], self.healed_at[iid] = None, None
         self.world.log("inject", "scenario", self._public_injection(item))

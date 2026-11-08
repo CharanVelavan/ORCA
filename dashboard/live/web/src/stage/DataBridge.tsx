@@ -20,26 +20,42 @@ export function normalize(e: LiveEvent): LiveEvent {
 /** Which routes may see ground truth (audience 'control'). The Console never does. */
 export const truthRoute = (path: string) => path === '/stage' || path === '/control' || path === '/review';
 
-/** Connects the SSE stream (or the ?fake=1 fixture) to the live store and the Pipeline. Review drives its own replay. */
+const PACE: Record<number, number> = { 0.5: 2600, 1: 1600, 2: 800 }; // ms per recorded sim minute (Demo)
+
+/**
+ * Feeds the live store and the Pipeline. Stage: Demo replays a recorded run (public/fixtures), Live follows the
+ * engine stream; both go through the presenter so the run is shown step by step. Review drives its own replay.
+ */
 export function DataBridge() {
   const location = useLocation();
+  const uiMode = useUi((s) => s.mode);
+  const run = useUi((s) => s.config.run);
+  const scenario = useUi((s) => s.config.scenario);
+  const stage = location.pathname === '/stage';
+  const q = new URLSearchParams(location.search);
+  const urlFake = q.get('fake') === '1';
+  const demo = stage && (urlFake || run === 'demo');
+  const demoKey = demo ? `${uiMode}|${urlFake ? q.get('scn') ?? 'S1' : scenario}` : 'live';
   useEffect(() => {
     if (location.pathname === '/review' || location.pathname === '/') return;
     const truth = truthRoute(location.pathname);
-    const live = useLiveStore.getState();
-    live.reset();
+    useLiveStore.getState().reset();
     usePipeline.getState().reset();
     usePipeline.setState({ truth });
+    if (urlFake && stage && useUi.getState().mode !== 'running') {
+      const scn = (q.get('scn') ?? 'S1').toUpperCase();
+      useUi.getState().setConfig({ scenario: scn, run: 'demo' });
+      useUi.getState().start();
+      return;
+    }
     const apply = (event: LiveEvent) => {
       if (event.kind === 'session') useLiveStore.getState().reset(); // a new run starts: drop the old one
       const s = useLiveStore.getState();
       if (truth) s.addControl(event); else s.add(event);
       usePipeline.getState().ingest(event, truth);
     };
-    const q = new URLSearchParams(location.search);
-    const fake = q.get('fake') === '1';
     // The Stage is presented step by step (presenter.ts); other routes get events as they come.
-    const guided = location.pathname === '/stage' ? present(apply, { live: !fake }) : null;
+    const guided = stage ? present(apply, { live: !demo }) : null;
     const receive = (raw: LiveEvent) => {
       const e = normalize(raw);
       // On the Stage, a finished run's history must not paint the setup screen; Start sends a fresh session.
@@ -48,10 +64,18 @@ export function DataBridge() {
     };
     // Back to setup: clear the last run so the scene and flowchart start clean.
     const offUi = useUi.subscribe((u, prev) => { if (u.mode === 'setup' && prev.mode === 'running') { useLiveStore.getState().reset(); usePipeline.getState().reset(); } });
-    const stop = fake
-      ? (location.pathname === '/stage' && useUi.getState().start(), playFake(receive, q.get('scn') ?? 'S1', Number(q.get('pace') ?? 1200)))
-      : connectStream(0, receive);
+    let stop: () => void = () => undefined;
+    if (demo) {
+      if (useUi.getState().mode === 'running') {
+        const scn = urlFake ? (q.get('scn') ?? 'S1').toUpperCase() : useUi.getState().config.scenario;
+        const pace = urlFake && q.get('pace') ? Number(q.get('pace')) : PACE[useUi.getState().config.speed] ?? 1600;
+        stop = playFake(receive, scn, pace);
+      }
+    } else {
+      stop = connectStream(0, receive);
+    }
     return () => { stop(); guided?.stop(); offUi(); };
-  }, [location.pathname, location.search]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname, location.search, demo, demoKey]);
   return null;
 }

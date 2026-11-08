@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Loader2, ShieldAlert } from 'lucide-react';
 import { api } from '../api';
 import { usePipeline } from '../pipeline/pipelineStore';
+import { useUi } from '../stage/uiStore';
 import { ICON } from './parts';
 import { plainError } from './format';
 import './inbox.css';
@@ -16,6 +17,8 @@ export function ApproveButton({ hash, variant = 'inbox', label = 'Approve', onDo
   const drop = () => usePipeline.setState((st) => ({ pending: st.pending.filter((p) => p.hash !== hash) }));
   const go = async () => {
     if (pending) return;
+    // Demo replays a recorded run: the click releases the recorded decision; nothing is sent to an engine.
+    if (window.location.pathname === '/stage' && useUi.getState().config.run === 'demo') { drop(); onDone?.(); return; }
     setPending(true); setError('');
     try {
       const res = (await api.approve({ hash, pin: 'click' })) as Record<string, unknown> | null;

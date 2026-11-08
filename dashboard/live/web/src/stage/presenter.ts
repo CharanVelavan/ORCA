@@ -22,24 +22,31 @@ type Presenter = {
   setEnabled: (on: boolean) => void;
 };
 
-export const usePresenter = create<Presenter>((set) => ({
+let heldAt = 0;
+export const usePresenter = create<Presenter>((set, get) => ({
   enabled: true,
   card: null,
   held: false,
   queued: 0,
   skip: () => { set({ card: null }); kick(); },
-  toggleHold: () => { set((s) => ({ held: !s.held })); kick(); },
+  // Pause freezes everything, the guide pop-up's countdown included.
+  toggleHold: () => {
+    const s = get();
+    if (s.held && s.card) set({ card: { ...s.card, started: s.card.started + (Date.now() - heldAt) } });
+    if (!s.held) heldAt = Date.now();
+    set({ held: !s.held }); kick();
+  },
   setEnabled: (enabled) => { set({ enabled, card: null }); kick(); },
 }));
 
-const CARD_MS: Record<number, number> = { 1: 6500, 2: 4500, 5: 2200, 10: 1200 };
-const GAP_MS: Record<number, number> = { 1: 1500, 2: 900, 5: 350, 10: 150 };
+const CARD_MS: Record<number, number> = { 0.5: 7000, 1: 5000, 2: 3000 };
+const GAP_MS: Record<number, number> = { 0.5: 2200, 1: 1400, 2: 700 };
 const speedOf = () => useUi.getState().config.speed;
 
 /** The stage an event belongs to, or null for background state (ticks, heartbeats, quiet verdicts). */
 export function bandOf(e: LiveEvent, truth: boolean): BandId | null {
   switch (e.kind) {
-    case 'inject': return truth ? 'threat' : null;
+    case 'inject': case 'inject_stop': return truth ? 'threat' : null;
     case 'model': {
       const st = String(e.state ?? ''), cls = String(e.class ?? '');
       return st === 'flagged' || st === 'replan' || st === 'unsure' || (cls && cls !== 'normal' && st !== 'ok') ? 'detect' : null;
@@ -103,12 +110,17 @@ function pump() {
   usePresenter.setState({ queued: queue.length });
   backpressure();
   if (!deliver) return;
+  if (p.held) return;
   if (p.card) {
     const left = p.card.started + p.card.ms - Date.now();
     if (left > 0) { timer = window.setTimeout(() => { timer = null; usePresenter.setState({ card: null }); pump(); }, left); return; }
     usePresenter.setState({ card: null });
   }
   if (p.held) return;
+  // A decision is waiting: show nothing further until the commander acts, unless the decision itself is
+  // already resolved further down the queue (AUTO mode, or a recorded approval in Demo after the click).
+  const waiting = usePipeline.getState().pending;
+  if (waiting.length && !(live && queue.some((q) => q.e.kind === 'approval' && q.e.status !== 'requested' && waiting.some((w) => w.hash === String(q.e.hash ?? q.e.plan_hash ?? ''))))) return;
   let budget = 200;
   while (queue.length && budget-- > 0) {
     const head = queue[0];

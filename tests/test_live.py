@@ -417,3 +417,21 @@ def test_e9_n1_heals_after_clean_backup_is_offered(tmp_path):
     heals = events(s, "heal")
     assert [(h["site"], h["to_path"]) for h in heals] == [("CHN-01", "B")] and heals[0]["t"] >= 48
     s.close()
+
+
+def test_live_director_can_stop_a_running_attack(tmp_path):
+    s = live(tmp_path, scenario="S0")
+    s.inject("jamming", "CHN-02", 30)
+    for _ in range(3):
+        s.tick()
+    running = [i["kind"] for i in s.running_injections()]
+    assert "jamming" in running
+    out = s.stop_injection(kind="jamming")
+    assert out["ok"] and out["stopped"]
+    for _ in range(2):
+        s.tick()
+    assert "jamming" not in [i["kind"] for i in s.running_injections()]
+    stop = events(s, "inject_stop")
+    assert stop and stop[0]["audience"] == "control" and stop[0]["injector"] == "jamming"
+    with pytest.raises(ValueError):
+        s.stop_injection(kind="jamming")

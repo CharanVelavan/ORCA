@@ -1,38 +1,33 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { useReducedMotion } from 'framer-motion';
-import { Check, CircleDashed, Clock3 } from 'lucide-react';
-import { api } from '../api';
-import { ApproveButton } from '../inbox';
+import { Check, CircleDashed, Maximize, Minus, Plus } from 'lucide-react';
 import { useUi } from '../stage/uiStore';
-import { ist, leftOf } from '../stage/time';
+import { ist } from '../stage/time';
 import type { BandId, NodeDef } from './model';
 import { ICONS } from './icons';
 import { BANDS, NODES } from './pipelineNodes';
 import { pathFor } from './scenarioPaths';
 import { usePipeline, type Beat, type NodeInfo, type Packet, type Tone } from './pipelineStore';
 
-// Flowchart v2 (docs/plan/FLOWCHART_V2_PLAN.md): one lane per band, top to bottom, each node drawn in its own
-// shape. Edges appear as packets cross them, a dot carries each packet, and the latest sentence sits in a bubble
-// next to the node that acted. Positions are measured from the DOM so text keeps its real pixel size.
+// Flowchart (docs/plan/FLOWCHART_V2_PLAN.md, revised 9 Nov after review): one lane per step, top to bottom, a shape
+// per kind of node. The whole chart is fitted to the panel with CSS zoom (no scrolling); the presenter can zoom in.
+// Edges appear as packets cross them; the latest sentence is a small glass tile by the node that acted; hovering
+// any node tells its name, role and what it is doing now.
 
 const BAND_TITLE: Record<BandId, string> = {
   network: 'Chennai network', threat: 'Threat', detect: 'AI models detect', coordinate: 'Agents coordinate',
   commander: 'Commander decides', execute: 'Fix and self-heal', gaps: 'Policy gaps found',
 };
-const BAND_SUB: Record<BandId, string> = {
-  network: 'Emulated satellite backhaul', threat: 'What the attacker does', detect: '4 models watch every link',
-  coordinate: '6 agents talk by protocol', commander: 'Code decides, human approves', execute: 'Tested, staged, verified',
-  gaps: 'Missing in Indian rules',
-};
 const BAND_OF: Record<string, BandId> = Object.fromEntries(NODES.map((n) => [n.id, n.band]));
 const DEF: Record<string, NodeDef> = Object.fromEntries(NODES.map((n) => [n.id, n]));
 const EXEC_ORDER = ['exec:clone', 'exec:r5', 'exec:r25', 'exec:r100', 'exec:reattack', 'exec:cleanpath', 'exec:failover', 'exec:return', 'exec:rollback'];
 const AGENT_HUE: Record<string, string> = {
-  'agent:mobile_operator': '#5B8DEF', 'agent:satellite_operator': '#3FB5C9', 'agent:power_utility': '#D9B341',
-  'agent:cert_in': '#E08A4F', 'agent:regulator': '#A77BD9', 'agent:gap_analyst': '#4FB58A',
+  'agent:mobile_operator': '#5B8DEF', 'agent:satellite_operator': '#3FB5C9', 'agent:power_utility': '#C9A43E',
+  'agent:cert_in': '#D9864C', 'agent:regulator': '#9C7BD0', 'agent:gap_analyst': '#4FA883',
 };
-const holdMs = (speed: number) => (speed >= 10 ? 120 : speed >= 5 ? 260 : speed >= 2 ? 700 : 1200);
+const holdMs = (speed: number) => (speed >= 2 ? 750 : speed >= 1 ? 1200 : 1700);
 const lit = (n?: NodeInfo) => !!n && (n.phase === 'active' || (n.phase === 'done' && !!n.at));
+const MODEL_TAG: Record<string, string> = { 'model:M1': 'M1', 'model:M2': 'M2', 'model:M3': 'M3', 'model:M4': 'M4' };
 
 /** Which nodes each lane shows. Lanes only show what matters to this run, so nothing is crammed. */
 function laneNodes(band: BandId, nodes: Record<string, NodeInfo>, truth: boolean): string[] {
@@ -58,12 +53,12 @@ type Edge = { key: string; from: string; to: string; tone: Tone; n: number };
 function route(a: Box, b: Box): string {
   const ax = a.x + a.w / 2, bx = b.x + b.w / 2;
   if (Math.abs(a.y - b.y) < 8) {
-    const y = Math.min(a.y, b.y) + 2, lift = Math.min(46, 18 + Math.abs(ax - bx) / 6);
+    const y = Math.min(a.y, b.y) + 2, lift = Math.min(34, 14 + Math.abs(ax - bx) / 8);
     return `M${ax},${y} C${ax},${y - lift} ${bx},${y - lift} ${bx},${y}`;
   }
   const down = b.y > a.y;
   const y0 = down ? a.y + a.h : a.y, y1 = down ? b.y : b.y + b.h;
-  const k = Math.max(24, Math.abs(y1 - y0) * 0.45) * (down ? 1 : -1);
+  const k = Math.max(20, Math.abs(y1 - y0) * 0.45) * (down ? 1 : -1);
   return `M${ax},${y0} C${ax},${y0 + k} ${bx},${y1 - k} ${bx},${y1}`;
 }
 
@@ -74,39 +69,63 @@ export function FlowGraph({ truth }: { truth: boolean }) {
   const explainIdx = usePipeline((s) => s.explainIdx);
   const scenario = usePipeline((s) => s.scenario);
   const current = usePipeline((s) => s.current);
-  const pending = usePipeline((s) => s.pending);
   const speed = useUi((s) => s.config.speed);
   const reduced = !!useReducedMotion();
 
   const lanes = useMemo(() => BANDS.map((b) => ({ band: b, ids: laneNodes(b.id, nodes, truth) })), [nodes, truth]);
   const shown = useMemo(() => new Set(lanes.flatMap((l) => l.ids)), [lanes]);
 
-  // Focus: the node of the latest sentence (or the explained step).
   const step = mode === 'explain' ? pathFor(scenario)?.steps[explainIdx] : undefined;
   const beat: Beat | undefined = beats[beats.length - 1];
   const focusNode = step?.node ?? beat?.node ?? 'sat';
   const focusBand = BAND_OF[focusNode] ?? 'network';
   const reachedBand = BANDS.reduce((acc, b, i) => (lanes[i].ids.some((id) => lit(nodes[id])) && b.id !== 'network' ? i : acc), 0);
 
-  // ---- measuring
+  // ---- fit to the panel: lay the chart out at width viewW / fit, then scale it by fit (plus the presenter's zoom).
+  // transform: scale keeps measurement exact; the sizer gives the scroller the right size when zoomed in.
+  const view = useRef<HTMLDivElement>(null);
   const wrap = useRef<HTMLDivElement>(null);
+  const [fit, setFit] = useState(1);
+  const [user, setUser] = useState(1);
+  const [frame, setFrame] = useState({ vw: 0, vh: 0, lh: 0 });
+  const zoom = fit * user;
+  const zoomRef = useRef(zoom); zoomRef.current = zoom;
+  const fitRef = useRef(fit); fitRef.current = fit;
+
+  // ---- measuring (boxes are in the chart's own, unscaled coordinates)
   const els = useRef(new Map<string, HTMLElement>());
   const [boxes, setBoxes] = useState<Record<string, Box>>({});
   const [size, setSize] = useState({ w: 0, h: 0 });
   const reg = useCallback((id: string) => (el: HTMLElement | null) => { if (el) els.current.set(id, el); else els.current.delete(id); }, []);
+  const tries = useRef(0);
   const measure = useCallback(() => {
-    const w = wrap.current; if (!w) return;
+    const w = wrap.current, v = view.current; if (!w || !v) return;
+    const z = zoomRef.current;
     const base = w.getBoundingClientRect();
     const out: Record<string, Box> = {};
-    els.current.forEach((el, id) => { const r = el.getBoundingClientRect(); out[id] = { x: r.left - base.left, y: r.top - base.top, w: r.width, h: r.height }; });
-    setBoxes(out); setSize({ w: w.scrollWidth, h: w.scrollHeight });
+    els.current.forEach((el, id) => { const r = el.getBoundingClientRect(); out[id] = { x: (r.left - base.left) / z, y: (r.top - base.top) / z, w: r.width / z, h: r.height / z }; });
+    setBoxes(out); setSize({ w: w.offsetWidth, h: w.offsetHeight });
+    const vw = v.clientWidth, vh = v.clientHeight, lh = w.offsetHeight;
+    setFrame((f) => (f.vw === vw && f.vh === vh && f.lh === lh ? f : { vw, vh, lh }));
+    // Converge on the scale whose re-flowed height fills the panel (a few damped steps).
+    if (lh > 0 && vh > 0) {
+      const f0 = fitRef.current, target = Math.max(0.6, Math.min(1.3, (vh / lh) * 0.985));
+      const overflow = lh * f0 > vh + 2; // never leave the chart cut off, even after the fit has settled
+      if (overflow && target < f0) setFit(+Math.max(0.6, Math.min(target, f0 - 0.01)).toFixed(3));
+      else if (tries.current < 8 && Math.abs(target - f0) > 0.012) { tries.current++; setFit(+(f0 + (target - f0) * 0.75).toFixed(3)); }
+    }
   }, []);
-  useLayoutEffect(() => { const id = requestAnimationFrame(measure); return () => cancelAnimationFrame(id); }, [measure, nodes, lanes, pending.length]);
+  useLayoutEffect(() => { const id = requestAnimationFrame(measure); return () => cancelAnimationFrame(id); }, [measure, nodes, lanes, zoom]);
   useEffect(() => {
-    const w = wrap.current; if (!w) return;
-    const ro = new ResizeObserver(() => measure()); ro.observe(w);
+    const v = view.current; if (!v) return;
+    let last = '';
+    const ro = new ResizeObserver(() => { const k = `${v.clientWidth}x${v.clientHeight}`; if (k !== last) { last = k; tries.current = 0; } measure(); });
+    ro.observe(v);
     return () => ro.disconnect();
   }, [measure]);
+  // New nodes can change the height: allow the fit to settle again.
+  const shownKey = [...shown].join(',');
+  useEffect(() => { tries.current = 0; }, [shownKey]);
 
   // ---- director queue: one packet holds the stage at a time (state is already updated)
   const next = usePipeline((s) => s.nextPacket);
@@ -126,18 +145,12 @@ export function FlowGraph({ truth }: { truth: boolean }) {
     const key = `${current.from}>${current.to}`;
     setEdges((es) => {
       const old = es.find((e) => e.key === key);
-      const rest = es.filter((e) => e.key !== key);
-      return [...rest, { key, from: current.from, to: current.to, tone: current.tone, n: (old?.n ?? 0) + 1 }].slice(-48);
+      return [...es.filter((e) => e.key !== key), { key, from: current.from, to: current.to, tone: current.tone, n: (old?.n ?? 0) + 1 }].slice(-40);
     });
   }, [current]);
 
-  // ---- keep the focused lane on screen
-  const scroller = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const el = scroller.current, b = boxes[focusNode] ?? boxes[`band:${focusBand}`];
-    if (!el || !b) return;
-    if (b.y < el.scrollTop + 160 || b.y + b.h > el.scrollTop + el.clientHeight - 60) el.scrollTo({ top: Math.max(0, b.y - 170), behavior: reduced ? 'auto' : 'smooth' });
-  }, [focusNode, focusBand, boxes, reduced]);
+  // ---- hover card
+  const [hover, setHover] = useState<string | null>(null);
 
   const activeKey = current ? `${current.from}>${current.to}` : '';
   const rail0 = boxes[`band:${BANDS[0].id}`], railN = boxes[`band:${BANDS[BANDS.length - 1].id}`], railR = boxes[`band:${BANDS[reachedBand].id}`];
@@ -145,45 +158,49 @@ export function FlowGraph({ truth }: { truth: boolean }) {
   const railTop = rail0 ? rail0.y + rail0.h / 2 : 0, railEnd = railN ? railN.y + railN.h / 2 : 0, railFill = railR ? railR.y + railR.h / 2 : railTop;
 
   return (
-    <div className="fg-scroll" ref={scroller}>
-      <div className="fg" ref={wrap} data-reduced={reduced || undefined}>
-        {/* progress rail: fills like a video bar to the furthest lane reached */}
+    <div className={`fg-view ${user > 1.001 ? 'is-zoomed' : ''}`} ref={view}>
+      <div className="fg-sizer" style={{ width: frame.vw ? (frame.vw / fit) * zoom : '100%', height: frame.lh ? frame.lh * zoom : undefined }}>
+      <div className="fg" ref={wrap} style={{ width: frame.vw ? frame.vw / fit : '100%', transform: `scale(${zoom})` }} data-reduced={reduced || undefined} onMouseLeave={() => setHover(null)}>
         {rail0 && railN && <>
-          <div className="fg-rail" style={{ left: railX - 2, top: railTop, height: railEnd - railTop }} aria-hidden />
-          <div className="fg-rail fg-rail--fill" style={{ left: railX - 2, top: railTop, height: railEnd - railTop, transform: `scaleY(${railEnd > railTop ? (railFill - railTop) / (railEnd - railTop) : 0})` }} aria-hidden />
+          <div className="fg-rail" style={{ left: railX - 1.5, top: railTop, height: railEnd - railTop }} aria-hidden />
+          <div className="fg-rail fg-rail--fill" style={{ left: railX - 1.5, top: railTop, height: railEnd - railTop, transform: `scaleY(${railEnd > railTop ? (railFill - railTop) / (railEnd - railTop) : 0})` }} aria-hidden />
         </>}
-
         <svg className="fg-edges" width={size.w} height={size.h} aria-hidden>
           {edges.map((e) => {
             const a = boxes[e.from], b = boxes[e.to];
             if (!a || !b || !shown.has(e.from) || !shown.has(e.to)) return null;
             const on = e.key === activeKey;
-            return <path key={e.key} d={route(a, b)} className={`fg-e t-${e.tone} ${on ? 'is-on' : ''}`} style={{ strokeWidth: on ? 3 : Math.min(2.4, 1 + e.n * 0.25) }} />;
+            return <path key={e.key} d={route(a, b)} className={`fg-e t-${e.tone} ${on ? 'is-on' : ''}`} />;
           })}
         </svg>
-
         {lanes.map(({ band, ids }, i) => {
           const state = band.id === focusBand ? 'now' : i <= reachedBand ? 'past' : 'future';
           const Icon = ICONS[band.icon];
           return (
             <section key={band.id} className={`fg-lane is-${state}`} data-band={band.id} aria-label={BAND_TITLE[band.id]}>
               <header className="fg-lh">
-                <span className="fg-lh__n mono" ref={reg(`band:${band.id}`)}>{i < reachedBand || (i === reachedBand && band.id !== focusBand) ? <Check size={16} strokeWidth={2.2} /> : band.n}</span>
-                <span className="fg-lh__t"><b><Icon size={15} strokeWidth={1.75} aria-hidden /> {band.id === 'threat' && !truth ? 'Anomaly' : BAND_TITLE[band.id]}</b><small>{band.id === 'threat' && !truth ? 'Cause not yet known' : BAND_SUB[band.id]}</small></span>
+                <span className="fg-lh__n mono" ref={reg(`band:${band.id}`)}>{i < reachedBand || (i === reachedBand && band.id !== focusBand) ? <Check size={15} strokeWidth={2.2} /> : band.n}</span>
+                <span className="fg-lh__t"><Icon size={15} strokeWidth={1.75} aria-hidden />{band.id === 'threat' && !truth ? 'Anomaly' : BAND_TITLE[band.id]}</span>
               </header>
               <div className={`fg-row fg-row--${band.id}`}>
                 {ids.length === 0 && <Ghost band={band.id} />}
-                {ids.map((id) => <GraphNode key={id} id={id} info={nodes[id]} focus={id === focusNode} reg={reg(id)} />)}
-                {band.id === 'commander' && pending.length > 0 && <ApprovalAsk />}
+                {ids.map((id) => <GraphNode key={id} id={id} info={nodes[id]} focus={id === focusNode} reg={reg(id)} onHover={setHover} />)}
               </div>
             </section>
           );
         })}
-
         {current && !reduced && boxes[current.from] && boxes[current.to] && shown.has(current.from) && shown.has(current.to) && (
           <PacketDot key={current.id} p={current} path={route(boxes[current.from], boxes[current.to])} ms={holdMs(speed)} />
         )}
-        <Bubble beat={beat} step={step} box={boxes[focusNode] ?? boxes[`band:${focusBand}`]} width={size.w} />
+        {!hover && <Bubble beat={beat} step={step} box={boxes[focusNode] ?? boxes[`band:${focusBand}`]} width={size.w}
+          rowEnd={Math.max(0, ...(lanes.find((l) => l.band.id === focusBand)?.ids ?? []).map((id) => (boxes[id] ? boxes[id].x + boxes[id].w : 0)))} />}
+        {hover && boxes[hover] && <HoverCard id={hover} info={nodes[hover]} box={boxes[hover]} width={size.w} height={size.h} />}
+      </div>
+      </div>
+      <div className="fg-zoom" role="group" aria-label="Zoom the flowchart">
+        <button onClick={() => setUser((u) => Math.max(1, +(u - 0.2).toFixed(2)))} disabled={user <= 1} aria-label="Zoom out"><Minus size={15} /></button>
+        <button onClick={() => setUser(1)} aria-label="Fit to screen" title="Fit to screen"><Maximize size={14} /><span>Fit</span></button>
+        <button onClick={() => setUser((u) => Math.min(2, +(u + 0.2).toFixed(2)))} aria-label="Zoom in"><Plus size={15} /></button>
       </div>
     </div>
   );
@@ -191,71 +208,57 @@ export function FlowGraph({ truth }: { truth: boolean }) {
 
 /* ------------------------------------------------------------------ nodes, one shape per kind */
 const SHAPES: Partial<Record<NodeDef['kind'], ReactNode>> = {
-  threat: <polygon points="7,0 93,0 100,50 93,100 7,100 0,50" />,
-  rules: <polygon points="50,1 99,50 50,99 1,50" />,
-  human: <path d="M50 2 L97 14 L97 52 Q97 84 50 98 Q3 84 3 52 L3 14 Z" />,
-  step: <polygon points="0,0 88,0 100,50 88,100 0,100 10,50" />,
-  gap: <polygon points="0,0 84,0 100,16 100,100 0,100" />,
+  threat: <polygon points="6,0 94,0 100,50 94,100 6,100 0,50" />,
+  rules: <polygon points="50,2 98,50 50,98 2,50" />,
+  human: <path d="M50 2 L97 14 L97 50 Q97 82 50 98 Q3 82 3 50 L3 14 Z" />,
+  step: <polygon points="0,0 90,0 100,50 90,100 0,100 9,50" />,
+  gap: <polygon points="0,0 88,0 100,18 100,100 0,100" />,
 };
 
-function GraphNode({ id, info, focus, reg }: { id: string; info?: NodeInfo; focus: boolean; reg: (el: HTMLElement | null) => void }) {
+function GraphNode({ id, info, focus, reg, onHover }: { id: string; info?: NodeInfo; focus: boolean; reg: (el: HTMLElement | null) => void; onHover: (id: string | null) => void }) {
   const def = DEF[id];
   const n = info ?? { phase: 'idle' as const };
   const Icon = ICONS[def.icon] ?? CircleDashed;
   const state = n.phase === 'active' ? 'active' : lit(n) || def.band === 'network' || def.band === 'detect' ? 'done' : 'future';
-  const cls = `fg-n fg-n--${def.kind} is-${state} t-${n.tone ?? 'unknown'} ${focus ? 'is-focus' : ''} ${n.pulse ? 'is-pulse' : ''}`;
+  const cls = `fg-n fg-n--${def.kind} is-${state} t-${n.tone ?? 'unknown'} ${focus ? 'is-focus' : ''}`;
   const style = (AGENT_HUE[id] ? { '--hue': AGENT_HUE[id] } : undefined) as CSSProperties | undefined;
-  const title = `${def.label} · ${def.role}${n.word ? ` · ${n.word}` : ''}${n.detail ? ` · ${n.detail}` : ''}`;
+  const hov = { onMouseEnter: () => onHover(id), onFocus: () => onHover(id), onBlur: () => onHover(null), tabIndex: 0, 'aria-label': `${def.label}. ${def.role}. ${n.word ?? ''} ${n.detail ?? ''}` };
   const shape = SHAPES[def.kind];
+  const word = n.word && !(def.kind === 'site' && n.word === 'OK') && def.kind !== 'satellite' ? n.word : '';
 
   if (def.kind === 'agent') {
     return (
-      <div className={cls} style={style} title={title}>
-        <span className="fg-av" ref={reg}><span className="fg-av__ring" aria-hidden /><Icon size={22} strokeWidth={1.6} aria-hidden /></span>
-        <b className="fg-n__label">{def.label}</b>
+      <div className={cls} style={style} {...hov}>
+        <span className="fg-av" ref={reg}><Icon size={20} strokeWidth={1.6} aria-hidden /></span>
+        <b className="fg-n__label">{def.label.replace(' agent', '')}</b>
         <span className="fg-word mono">{n.word ?? 'IDLE'}</span>
-        {n.detail && <span className="fg-n__detail">{n.detail}</span>}
       </div>
     );
   }
-  if (def.kind === 'model') return <ModelCard id={id} n={n} cls={cls} title={title} reg={reg} />;
+  if (def.kind === 'model') {
+    return (
+      <div className={cls} ref={reg} {...hov}>
+        <span className="fg-mc__id mono">{MODEL_TAG[id]}</span>
+        <span className="fg-n__txt"><b className="fg-n__label">{def.label}</b><span className="fg-word mono">{n.word ?? 'NORMAL'}</span></span>
+      </div>
+    );
+  }
   if (def.kind === 'clocks') {
     return (
-      <div className={cls} ref={reg} title={title}>
-        <span className="fg-dial" aria-hidden><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" className="fg-dial__bg" /><circle cx="20" cy="20" r="16" className="fg-dial__arc" /></svg><Icon size={16} strokeWidth={1.75} /></span>
-        <span className="fg-n__txt"><b className="fg-n__label">{def.label}</b><span className="fg-n__detail">{n.detail ?? 'No deadline yet'}</span></span>
+      <div className={cls} ref={reg} {...hov}>
+        <span className="fg-dial" aria-hidden><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" className="fg-dial__bg" /><circle cx="20" cy="20" r="16" className="fg-dial__arc" /></svg><Icon size={15} strokeWidth={1.75} /></span>
+        <span className="fg-n__txt"><b className="fg-n__label">{def.label}</b>{word && <span className="fg-word mono">{word}</span>}</span>
       </div>
     );
   }
   return (
-    <div className={cls} ref={reg} title={title}>
+    <div className={cls} ref={reg} {...hov}>
       {shape && <svg className="fg-shape" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden>{shape}</svg>}
-      <Icon className="fg-n__icon" size={def.kind === 'site' ? 15 : 17} strokeWidth={1.6} aria-hidden />
+      <Icon className="fg-n__icon" size={def.kind === 'site' ? 14 : 16} strokeWidth={1.6} aria-hidden />
       <span className="fg-n__txt">
         <b className="fg-n__label">{def.label}</b>
-        {def.kind !== 'site' && def.kind !== 'step' && def.kind !== 'rules' && !(def.band === 'network' && (n.tone === 'ok' || n.tone === 'unknown')) && <span className="fg-n__detail">{n.detail ?? def.role}</span>}
+        {word && <span className="fg-word mono">{word}</span>}
       </span>
-      {n.word && def.kind !== 'site' && def.kind !== 'satellite' && <span className="fg-word mono">{n.word}</span>}
-      {def.kind === 'site' && n.word && n.word !== 'OK' && <span className="fg-word mono">{n.word}</span>}
-    </div>
-  );
-}
-
-function ModelCard({ id, n, cls, title, reg }: { id: string; n: NodeInfo; cls: string; title: string; reg: (el: HTMLElement | null) => void }) {
-  const def = DEF[id];
-  const m1 = usePipeline((s) => s.m1);
-  const Icon = ICONS[def.icon];
-  const pts = id === 'model:M1' && m1.scores.length > 1
-    ? m1.scores.map((v, i) => `${(i / (m1.scores.length - 1)) * 100},${30 - Math.min(1, v) * 28}`).join(' ')
-    : '';
-  return (
-    <div className={cls} ref={reg} title={title}>
-      <span className="fg-mc__top"><span className="fg-mc__id mono">{id.slice(6)}</span><Icon size={16} strokeWidth={1.6} aria-hidden /><b className="fg-n__label">{def.label}</b></span>
-      <span className="fg-mc__mid">
-        <span className="fg-word mono">{n.word ?? 'NORMAL'}</span>
-        {pts && <svg className="fg-spark" viewBox="0 0 100 32" preserveAspectRatio="none" aria-hidden><line x1="0" x2="100" y1={30 - m1.threshold * 28} y2={30 - m1.threshold * 28} className="fg-spark__th" /><polyline points={pts} /></svg>}
-      </span>
-      <span className="fg-n__detail">{n.detail ?? def.role}</span>
     </div>
   );
 }
@@ -264,7 +267,7 @@ function Ghost({ band }: { band: BandId }) {
   return <div className="fg-ghost">{band === 'gaps' ? 'Gaps appear here as the rule engine finds them' : band === 'threat' ? 'No attack or fault yet' : 'Waiting'}</div>;
 }
 
-/* ------------------------------------------------------------------ packet, bubble, approval */
+/* ------------------------------------------------------------------ packet, glass tiles */
 function PacketDot({ p, path, ms }: { p: Packet; path: string; ms: number }) {
   const style = { offsetPath: `path('${path}')`, animationDuration: `${ms}ms` } as CSSProperties;
   return (
@@ -274,63 +277,60 @@ function PacketDot({ p, path, ms }: { p: Packet; path: string; ms: number }) {
   );
 }
 
-function Bubble({ beat, step, box, width }: { beat?: Beat; step?: { node: string; title: string; text: string }; box?: Box; width: number }) {
+/** Place a tile above (or below) a node, inside the chart. */
+function place(box: Box, width: number, W: number, H: number, total = Infinity): CSSProperties {
+  const cx = box.x + box.w / 2;
+  const left = Math.max(6, Math.min(width - W - 6, cx - W / 2));
+  const above = box.y > H + 16 || box.y + box.h + H + 16 > total;
+  return { left, width: W, ...(above ? { top: box.y - 8, transform: 'translateY(-100%)' } : { top: box.y + box.h + 8 }) };
+}
+
+function Bubble({ beat, step, box, width, rowEnd }: { beat?: Beat; step?: { node: string; title: string; text: string }; box?: Box; width: number; rowEnd: number }) {
   if (!box || (!beat && !step)) return null;
   const title = step?.title ?? beat!.title, text = step?.text ?? beat!.text, tone = step ? 'accent' : beat!.tone;
   const actor = DEF[step?.node ?? beat!.node];
-  const W = Math.min(380, Math.max(260, width * 0.36));
-  const cx = box.x + box.w / 2;
-  const left = Math.max(8, Math.min(width - W - 8, cx - W / 2));
-  const above = box.y > 150;
-  const style: CSSProperties = above ? { left, top: box.y - 10, width: W, transform: 'translateY(-100%)' } : { left, top: box.y + box.h + 10, width: W };
+  const W = Math.min(260, width * 0.26);
+  // Prefer the free space at the end of the active row, so the tile never covers another row.
+  const side = rowEnd > 0 && width - rowEnd - 24 >= W;
+  const style: CSSProperties = side ? { left: rowEnd + 16, width: Math.min(320, width - rowEnd - 28), top: box.y + box.h / 2, transform: 'translateY(-50%)' } : place(box, width, W, 58);
   return (
-    <div key={`${step ? 's' : 'b'}${beat?.id ?? 0}${step?.title ?? ''}`} className={`fg-bub t-${tone} ${above ? 'is-above' : 'is-below'}`} style={{ ...style, '--tail': `${Math.max(16, Math.min(W - 16, cx - left))}px` } as CSSProperties} role="status">
-      <span className="fg-bub__who mono">{actor ? actor.label : ''}{beat && !step ? ` · ${ist(beat.ts)}` : ''}</span>
+    <div key={`${step ? 's' : 'b'}${beat?.id ?? 0}${step?.title ?? ''}`} className={`fg-tile fg-bub t-${tone} ${side ? '' : 'is-compact'}`} style={style} role="status">
+      <span className="fg-tile__who">{actor ? actor.label : ''}{beat && !step ? <span className="mono"> · {ist(beat.ts, false)}</span> : null}</span>
       <b>{title}</b>
-      <span className="fg-bub__txt">{text}</span>
+      {side && <span className="fg-tile__txt">{text}</span>}
     </div>
   );
 }
 
-function ApprovalAsk() {
-  const pending = usePipeline((s) => s.pending);
-  const ts = usePipeline((s) => s.ts);
-  const p = pending[pending.length - 1];
-  if (!p) return null;
+/** Hover: who this is, what it is for, and what it is doing right now. */
+function HoverCard({ id, info, box, width, height }: { id: string; info?: NodeInfo; box: Box; width: number; height: number }) {
+  const def = DEF[id];
+  const n = info ?? { phase: 'idle' as const };
+  const now = n.phase === 'active' ? 'Working now' : lit(n) ? 'Done' : def.band === 'network' || def.band === 'detect' ? 'Watching' : 'Not involved yet';
   return (
-    <div className="fc-ask fg-ask">
-      <div className="fc-ask__title">{p.title}</div>
-      <div className="fc-ask__meta mono">{p.playbook} · {p.targets.join(', ')} · asked by {p.owner.replace(/_/g, ' ')}</div>
-      <div className="fc-ask__row">
-        <span className="fc-ask__wait"><Clock3 size={14} strokeWidth={1.75} />Awaiting your approval</span>
-        <span className="mono fc-ask__exp">{leftOf(ts, p.expires_at)} left</span>
-      </div>
-      <ApproveButton hash={p.hash} variant="node" />
-      {pending.length > 1 && <div className="fc-ask__more">{pending.length - 1} more in the inbox</div>}
+    <div className={`fg-tile fg-hover t-${n.tone ?? 'unknown'}`} style={place(box, width, 280, 120, height)} role="tooltip">
+      <span className="fg-tile__who">{MODEL_TAG[id] ? `${MODEL_TAG[id]} · ` : ''}{now}{n.at ? <span className="mono"> · {ist(n.at, false)}</span> : null}</span>
+      <b>{def.label}</b>
+      <span className="fg-tile__txt">{def.role}</span>
+      {(n.word || n.detail) && <span className="fg-tile__now"><span className="mono">{n.word ?? ''}</span>{n.detail ? ` ${n.detail}` : ''}</span>}
     </div>
   );
 }
 
-/* ------------------------------------------------------------------ ticker: the last sentences, so nothing is missed */
-export function Ticker() {
+/* ------------------------------------------------------------------ subtitle: the one thing happening now */
+export function Subtitle() {
   const beats = usePipeline((s) => s.beats);
-  const rows: Beat[] = [];
-  for (let i = beats.length - 1; i >= 0 && rows.length < 4; i--) { const b = beats[i]; if (!rows.some((r) => r.title === b.title && r.text === b.text)) rows.push(b); }
+  const b = beats[beats.length - 1];
+  const d = b ? DEF[b.node] : undefined;
+  const Icon = d ? ICONS[d.icon] : CircleDashed;
   return (
-    <ol className="fg-tick" aria-label="Latest events" aria-live="polite">
-      {rows.length === 0 && <li className="fg-tick__empty">Events appear here as they happen.</li>}
-      {rows.map((b, i) => {
-        const d = DEF[b.node];
-        const Icon = d ? ICONS[d.icon] : CircleDashed;
-        return (
-          <li key={b.id} className={`t-${b.tone} ${i === 0 ? 'is-new' : ''}`}>
-            <span className="mono fg-tick__at">{ist(b.ts)}</span>
-            <Icon size={15} strokeWidth={1.75} aria-hidden />
-            <span className="fg-tick__who">{d?.label ?? ''}</span>
-            <span className="fg-tick__txt" title={`${b.title}. ${b.text}`}><b>{b.title}.</b> {b.text}</span>
-          </li>
-        );
-      })}
-    </ol>
+    <div className={`fg-sub t-${b?.tone ?? 'unknown'}`} aria-live="polite">
+      {b ? <>
+        <span className="mono fg-sub__at">{ist(b.ts, false)}</span>
+        <Icon size={16} strokeWidth={1.75} aria-hidden />
+        <span className="fg-sub__who">{d?.label ?? ''}</span>
+        <span className="fg-sub__txt" key={b.id}><b>{b.title}.</b> {b.text}</span>
+      </> : <span className="fg-sub__txt">Events appear here as they happen.</span>}
+    </div>
   );
 }

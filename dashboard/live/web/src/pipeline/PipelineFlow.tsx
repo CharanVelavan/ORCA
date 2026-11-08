@@ -1,82 +1,50 @@
-import { ChevronLeft, ChevronRight, CircleDashed, Maximize2, Minimize2, PanelRightClose, PanelRightOpen, Radio } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Maximize2, Minimize2, Radio } from 'lucide-react';
 import { useUi } from '../stage/uiStore';
-import { ist } from '../stage/time';
-import type { IconName } from './model';
-import { ICONS } from './icons';
+import { scenarioName } from '../names';
 import { BANDS, NODES } from './pipelineNodes';
 import { pathFor } from './scenarioPaths';
-import { usePipeline, type Tone } from './pipelineStore';
-import { FlowGraph, Ticker } from './FlowGraph';
-import { GuideCard, GuideControls } from './GuideCard';
+import { usePipeline } from './pipelineStore';
+import { FlowGraph, Subtitle } from './FlowGraph';
 import './pipeline.css';
 
 const ICON = { size: 15, strokeWidth: 1.5, 'aria-hidden': true } as const;
-const Icon = ({ name, size = 15 }: { name: IconName; size?: number }) => {
-  const C = ICONS[name] ?? CircleDashed;
-  return <C size={size} strokeWidth={1.5} aria-hidden />;
-};
 
+/** The flowchart panel: a slim header, the chart fitted to the panel, the subtitle line, and the guide pop-up. */
 export function PipelineFlow({ truth }: { truth: boolean }) {
   const view = useUi((s) => s.pipeline);
-  const setPipeline = useUi((s) => s.setPipeline);
-  if (view === 'rail') return <PipelineRail onOpen={() => setPipeline('open')} />;
   return (
-    <section className={`pf ${view === 'full' ? 'pf--full' : ''}`} aria-label="Pipeline flow">
-      <Narration truth={truth} />
-      <div className="pf-body"><FlowGraph truth={truth} /><Ticker /><GuideCard /></div>
+    <section className={`pf ${view === 'full' ? 'pf--full' : ''}`} aria-label="How the system responds, step by step">
+      <Header truth={truth} />
+      <div className="pf-body"><FlowGraph truth={truth} /></div>
+      <Subtitle />
     </section>
   );
 }
 
-/* ------------------------------------------------------------------ narration bar (Floorplan Flows pattern) */
-function Narration({ truth }: { truth: boolean }) {
-  const { scenario, beats, reached, mode, explainIdx, setMode, explainStep } = usePipeline();
+function Header({ truth }: { truth: boolean }) {
+  const { scenario, beats, mode, explainIdx, setMode, explainStep } = usePipeline();
   const view = useUi((s) => s.pipeline);
+  const run = useUi((s) => s.config.run);
   const setPipeline = useUi((s) => s.setPipeline);
-  const path = pathFor(scenario);
-  const steps = path?.steps ?? [];
+  const steps = pathFor(scenario)?.steps ?? [];
   const beat = beats[beats.length - 1];
   const explaining = mode === 'explain' && steps[explainIdx];
-  const title = explaining ? steps[explainIdx].title : beat?.title ?? 'Waiting for the exercise';
-  const text = explaining ? steps[explainIdx].text : beat?.text ?? 'Start an exercise. Each step lights up here as it happens.';
-  const n = explaining ? explainIdx : Math.max(0, reached);
   const band = NODES.find((x) => x.id === (explaining ? steps[explainIdx].node : beat?.node))?.band ?? 'network';
-  const flowStep = BANDS.findIndex((b) => b.id === band) + 1;
-  const key = explaining ? `e${explainIdx}` : `b${beat?.id ?? 0}`;
+  const n = BANDS.findIndex((b) => b.id === band) + 1;
   return (
-    <header className="pf-nar">
-      <div className="pf-nar__top">
-        <span className="pf-nar__mode" data-mode={mode}>{mode === 'live' ? <><Radio {...ICON} size={12} /> LIVE</> : mode === 'replay' ? 'REPLAY' : 'EXPLAIN'}</span>
-        <span className="pf-nar__meta mono">{scenario} · step {flowStep} of 7{!explaining && beat ? ` · ${ist(beat.ts)}` : ''}</span>
-        <span className="pf-nar__tools">
-          <GuideControls />
-          <button className="pf-ib" aria-label="Previous step" title="Previous step (Left arrow)" onClick={() => explainStep(-1)}><ChevronLeft {...ICON} /></button>
-          <button className="pf-ib" aria-label="Next step" title="Next step (Right arrow)" onClick={() => explainStep(1)}><ChevronRight {...ICON} /></button>
-          {mode === 'explain' && <button className="pf-ib pf-ib--txt" onClick={() => setMode('live')} title="Back to live (Esc)">Live</button>}
-          <button className="pf-ib" aria-label={view === 'full' ? 'Exit full screen' : 'Full screen'} title={view === 'full' ? 'Exit full screen (Esc)' : 'Full screen (F)'} onClick={() => setPipeline(view === 'full' ? 'open' : 'full')}>{view === 'full' ? <Minimize2 {...ICON} /> : <Maximize2 {...ICON} />}</button>
-          <button className="pf-ib" aria-label="Collapse pipeline" title="Collapse (P)" onClick={() => setPipeline('rail')}><PanelRightClose {...ICON} /></button>
-        </span>
-      </div>
+    <header className="pf-head">
+      <span className="pf-head__mode" data-mode={mode === 'explain' ? 'explain' : run}>
+        {mode === 'explain' ? 'EXPLAIN' : run === 'demo' ? 'DEMO' : <><Radio {...ICON} size={12} /> LIVE</>}
+      </span>
+      <span className="pf-head__title">{scenarioName(scenario)}</span>
+      <span className="pf-head__step mono">Step {n} of 7 · {BANDS[n - 1]?.title ?? ''}</span>
+      <span className="pf-head__tools">
+        <button className="pf-ib" aria-label="Previous step" title="Previous step (Left arrow)" onClick={() => explainStep(-1)}><ChevronLeft {...ICON} /></button>
+        <button className="pf-ib" aria-label="Next step" title="Next step (Right arrow)" onClick={() => explainStep(1)}><ChevronRight {...ICON} /></button>
+        {mode === 'explain' && <button className="pf-ib pf-ib--txt" onClick={() => setMode('live')} title="Back to the run (Esc)">Back to run</button>}
+        <button className="pf-ib" aria-label={view === 'full' ? 'Exit full screen' : 'Full screen'} title={view === 'full' ? 'Exit full screen (Esc)' : 'Full screen (F)'} onClick={() => setPipeline(view === 'full' ? 'open' : 'full')}>{view === 'full' ? <Minimize2 {...ICON} /> : <Maximize2 {...ICON} />}</button>
+      </span>
       {!truth && <span className="sr-only">Console view: ground truth hidden</span>}
     </header>
-  );
-}
-
-/* ------------------------------------------------------------------ collapsed rail */
-function PipelineRail({ onOpen }: { onOpen: () => void }) {
-  const nodes = usePipeline((s) => s.nodes);
-  const worst = (band: string): Tone | undefined => {
-    const order: Tone[] = ['critical', 'warn', 'healing', 'accent', 'ok'];
-    const tones = NODES.filter((n) => n.band === band).map((n) => nodes[n.id]).filter((x) => x && x.phase === 'active').map((x) => x!.tone);
-    return order.find((t) => tones.includes(t));
-  };
-  return (
-    <nav className="pf-rail" aria-label="Pipeline bands">
-      <button className="pf-ib" onClick={onOpen} aria-label="Open pipeline" title="Open pipeline (P)"><PanelRightOpen {...ICON} /></button>
-      {BANDS.map((b) => { const t = worst(b.id); return (
-        <button key={b.id} className={`pf-rail__b ${t ? `t-${t}` : ''}`} onClick={onOpen} title={`${b.n} ${b.title}${t ? `: ${t === 'critical' ? 'alert' : t === 'warn' ? 'attention' : t === 'healing' ? 'healing' : t === 'accent' ? 'working' : 'ok'}` : ''}`}>
-          <Icon name={b.icon} size={16} /><span className="mono">{b.n}</span>
-        </button>); })}
-    </nav>
   );
 }
