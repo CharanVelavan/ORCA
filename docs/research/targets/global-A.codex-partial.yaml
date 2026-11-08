@@ -1,0 +1,341 @@
+- rank: 1
+  id: eu-nis2-2022
+  title: Directive (EU) 2022/2555 of the European Parliament and of the Council of 14 December 2022 on measures for a high common level of cybersecurity across the Union
+  authority: European Parliament and Council
+  jurisdiction: EU
+  doc_type: act
+  url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj/eng
+  landing_page: https://eur-lex.europa.eu/eli/dir/2022/2555/oj/eng
+  binding_status: binding
+  issued: 2022-12-14
+  in_force: "yes"
+  amendments: none found
+  licence: EUR-Lex reuse policy
+  gaps: [GAP-IN-01, GAP-IN-02, GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: The Directive sets cybersecurity risk-management and significant-incident reporting duties for covered essential and important entities, offering a broad comparison for telecom and digital infrastructure obligations.
+
+- rank: 2
+  id: eu-nis2-ir-2024-2690
+  title: Commission Implementing Regulation (EU) 2024/2690 of 17 October 2024
+  authority: European Commission
+  jurisdiction: EU
+  doc_type: regulation
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2690
+  landing_page: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2690
+  binding_status: binding
+  issued: 2024-10-17
+  in_force: "yes"
+  amendments: none found
+  licence: EUR-Lex reuse policy
+  gaps: [GAP-IN-01, GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: It specifies cybersecurity risk-management measures and incident-significance criteria for named digital infrastructure and service providers, illustrating operational requirements under NIS2.
+
+- rank: 3
+  id: eu-eecc-2018-1972
+  title: Directive (EU) 2018/1972 establishing the European Electronic Communications Code
+  authority: European Parliament and Council
+  jurisdiction: EU
+  doc_type: act
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32018L1972
+  landing_page: https://eur-lex.europa.eu/eli/dir/2018/1972/oj/eng
+  binding_status: binding
+  issued: 2018-12-11
+  in_force: "yes"
+  amendments: amendments and corrigenda listed in EUR-Lex consolidated text
+  licence: EUR-Lex reuse policy
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-04]
+  role: global_example
+  relevance: 5
+  why: Articles 108–110 address service availability during catastrophic network breakdown, emergency communications and public warnings.
+
+- rank: 4
+  id: eu-cer-2022-2557
+  title: Directive (EU) 2022/2557 on the resilience of critical entities
+  authority: European Parliament and Council
+  jurisdiction: EU
+  doc_type: act
+  url: https://eur-lex.europa.eu/eli/dir/2022/2557/oj/eng
+  landing_page: https://eur-lex.europa.eu/eli/dir/2022/2557/oj/eng
+  binding_status: binding
+  issued: 2022-12-14
+  in_force: "yes"
+  amendments: none found
+  licence: EUR-Lex reuse policy
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-04, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: It requires identified critical entities to assess risks and adopt proportionate resilience measures, including continuity and recovery arrangements.
+
+- rank: 5
+  id: eu-space-act-proposal-2025
+  title: Proposal for a Regulation on the safety, resilience and sustainability of space activities in the Union
+  authority: European Commission
+  jurisdiction: EU
+  doc_type: consultation
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+  landing_page: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+  binding_status: draft
+  issued: 2025-06-25
+  in_force: "no"
+  amendments: none found
+  licence: EUR-Lex reuse policy
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: The proposal would establish a Union framework for space activity safety, resilience and sustainability and explicitly coordinates with NIS2 and CER.
+
+- rank: 6
+  id: eu-gdpr-2016
+  title: Regulation (EU) 2016/679 (General Data Protection Regulation)
+  authority: European Parliament and Council
+  jurisdiction: EU
+  doc_type: regulation
+  url: https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng
+  landing_page: https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng
+  binding_status: binding
+  issued: 2016-04-27
+  in_force: "yes"
+  amendments: none found
+  licence: EUR-Lex reuse policy
+  gaps: [GAP-IN-01]
+  role: global_example
+  relevance: 4
+  why: Articles 33 and 34 set personal-data breach notification duties to supervisory authorities and affected people, providing a distinct reporting comparison.
+
+- rank: 7
+  id: eu-cyber-resilience-act-2024
+  title: Regulation (EU) 2024/2847 on horizontal cybersecurity requirements for products with digital elements
+  authority: European Parliament and Council
+  jurisdiction: EU
+  doc_type: regulation
+  url: https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng
+  landing_page: https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng
+  binding_status: binding
+  issued: 2024-10-23
+  in_force: partly
+  amendments: none found
+  licence: EUR-Lex reuse policy
+  gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: It establishes cybersecurity requirements for products with digital elements, including vulnerability handling and reporting provisions with staged application.
+
+- rank: 8
+  id: eu-cybersecurity-act-2019
+  title: Regulation (EU) 2019/881 on ENISA and information and communications technology cybersecurity certification
+  authority: European Parliament and Council
+  jurisdiction: EU
+  doc_type: regulation
+  url: https://eur-lex.europa.eu/eli/reg/2019/881/oj/eng
+  landing_page: https://eur-lex.europa.eu/eli/reg/2019/881/oj/eng
+  binding_status: binding
+  issued: 2019-04-17
+  in_force: "yes"
+  amendments: none found
+  licence: EUR-Lex reuse policy
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: It establishes a Union cybersecurity certification framework and ENISA’s cybersecurity mandate, relevant to standards and assurance mechanisms.
+
+- rank: 9
+  id: eu-space-programme-2021-696
+  title: Regulation (EU) 2021/696 establishing the Union Space Programme and the European Union Agency for the Space Programme
+  authority: European Parliament and Council
+  jurisdiction: EU
+  doc_type: regulation
+  url: https://eur-lex.europa.eu/eli/reg/2021/696/oj/eng
+  landing_page: https://eur-lex.europa.eu/eli/reg/2021/696/oj/eng
+  binding_status: binding
+  issued: 2021-04-28
+  in_force: "yes"
+  amendments: amendments listed in EUR-Lex
+  licence: EUR-Lex reuse policy
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: global_example
+  relevance: 3
+  why: The regulation provides the institutional and programme framework for EU space systems, including security and continuity objectives.
+
+- rank: 10
+  id: eu-iris2-regulation-2023-588
+  title: Regulation (EU) 2023/588 establishing the Union Secure Connectivity Programme for the period 2023–2027
+  authority: European Parliament and Council
+  jurisdiction: EU
+  doc_type: regulation
+  url: https://eur-lex.europa.eu/eli/reg/2023/588/oj/eng
+  landing_page: https://eur-lex.europa.eu/eli/reg/2023/588/oj/eng
+  binding_status: binding
+  issued: 2023-03-15
+  in_force: "yes"
+  amendments: none found
+  licence: EUR-Lex reuse policy
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: It establishes the Union Secure Connectivity Programme and sets security and resilience objectives for its satellite-based secure connectivity system.
+
+- rank: 11
+  id: eu-net-neutrality-2015-2120
+  title: Regulation (EU) 2015/2120 laying down measures concerning open internet access
+  authority: European Parliament and Council
+  jurisdiction: EU
+  doc_type: regulation
+  url: https://eur-lex.europa.eu/eli/reg/2015/2120/oj/eng
+  landing_page: https://eur-lex.europa.eu/eli/reg/2015/2120/oj/eng
+  binding_status: binding
+  issued: 2015-11-25
+  in_force: "yes"
+  amendments: none found
+  licence: EUR-Lex reuse policy
+  gaps: [GAP-IN-03]
+  role: global_example
+  relevance: 3
+  why: Article 3(3) sets equal-treatment requirements for internet traffic and defines limited grounds for traffic management.
+
+- rank: 12
+  id: eu-nis2-ir-correction-2024
+  title: Commission Implementing Regulation (EU) 2024/2690, corrigendum and current text
+  authority: European Commission
+  jurisdiction: EU
+  doc_type: regulation
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2690
+  landing_page: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2690
+  binding_status: binding
+  issued: 2024-10-17
+  in_force: "yes"
+  amendments: no separate amendment identified in the official text reviewed
+  licence: EUR-Lex reuse policy
+  gaps: [GAP-IN-01, GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 3
+  why: The EUR-Lex page provides the current instrument record and implementation details for the NIS2 technical measures.
+
+- rank: 13
+  id: itu-x805-2003
+  title: Security architecture for systems providing end-to-end communications
+  authority: International Telecommunication Union, Telecommunication Standardization Sector
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.itu.int/ITU-T/recommendations/rec.aspx?rec=7024
+  landing_page: https://www.itu.int/ITU-T/recommendations/rec.aspx?rec=7024
+  binding_status: advisory
+  issued: 2003-10-29
+  in_force: "yes"
+  amendments: none found
+  licence: unknown
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: The recommendation defines an end-to-end security architecture with management, control and end-user planes and an availability dimension.
+
+- rank: 14
+  id: itu-x805-pdf-2003
+  title: Security architecture for systems providing end-to-end communications (ITU-T X.805)
+  authority: International Telecommunication Union, Telecommunication Standardization Sector
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-X.805-200310-I%21%21PDF-E&lang=e&type=items
+  landing_page: https://www.itu.int/ITU-T/recommendations/rec.aspx?rec=7024
+  binding_status: advisory
+  issued: 2003-10-29
+  in_force: "yes"
+  amendments: none found
+  licence: unknown
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 3
+  why: The official recommendation PDF presents the security layers, planes and dimensions underlying X.805.
+
+- rank: 15
+  id: itu-tampere-convention-1998
+  title: Tampere Convention on the Provision of Telecommunication Resources for Disaster Mitigation and Relief Operations
+  authority: International Telecommunication Union and States Parties
+  jurisdiction: INTL
+  doc_type: treaty
+  url: https://www.itu.int/en/ITU-D/Emergency-Telecommunications/Pages/TampereConvention.aspx
+  landing_page: https://www.itu.int/en/ITU-D/Emergency-Telecommunications/Pages/TampereConvention.aspx
+  binding_status: binding
+  issued: 1998-06-18
+  in_force: "yes"
+  amendments: none found
+  licence: unknown
+  gaps: [GAP-IN-03, GAP-IN-04]
+  role: context
+  relevance: 3
+  why: The Convention addresses state facilitation and coordination of prompt telecommunications assistance for disaster mitigation and relief operations.
+
+- rank: 16
+  id: itu-emergency-telecom-guidelines
+  title: BDT Guidelines for Developing National Emergency Telecommunication Plans
+  authority: International Telecommunication Union, Telecommunication Development Bureau
+  jurisdiction: INTL
+  doc_type: guideline
+  url: https://www.itu.int/en/action/emergency/Pages/default.aspx
+  landing_page: https://www.itu.int/en/action/emergency/Pages/default.aspx
+  binding_status: advisory
+  issued: not stated
+  in_force: unknown
+  amendments: none found
+  licence: unknown
+  gaps: [GAP-IN-03, GAP-IN-04]
+  role: context
+  relevance: 3
+  why: The ITU emergency telecommunications page identifies guidelines supporting national emergency telecommunications planning and multi-stakeholder coordination.
+
+- rank: 17
+  id: eu-cer-article-13-guidelines-2026
+  title: Communication from the Commission: Guidelines on the application of Article 13(5) of Directive (EU) 2022/2557
+  authority: European Commission
+  jurisdiction: EU
+  doc_type: guideline
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52026XC03712
+  landing_page: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52026XC03712
+  binding_status: advisory
+  issued: 2026-07-13
+  in_force: unknown
+  amendments: none found
+  licence: EUR-Lex reuse policy
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-04]
+  role: global_example
+  relevance: 4
+  why: The Commission says the guidelines are non-binding and discusses continuity, service prioritisation, backup locations and crisis command arrangements.
+
+- rank: 18
+  id: eu-cer-article-13-guidelines-pdf-2026
+  title: Communication from the Commission: Guidelines on the application of Article 13(5) of Directive (EU) 2022/2557
+  authority: European Commission
+  jurisdiction: EU
+  doc_type: guideline
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52026XC03712
+  landing_page: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52026XC03712
+  binding_status: advisory
+  issued: 2026-07-13
+  in_force: unknown
+  amendments: none found
+  licence: EUR-Lex reuse policy
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-04]
+  role: global_example
+  relevance: 2
+  why: The PDF provides the same Commission guidance in a downloadable form.
+
+- rank: 19
+  id: eu-cer-article-13-guidelines-pdf-copy-2026
+  title: Communication from the Commission: Guidelines on the application of Article 13(5) of Directive (EU) 2022/2557
+  authority: European Commission
+  jurisdiction: EU
+  doc_type: guideline
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52026XC03712
+  landing_page: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52026XC03712
+  binding_status: advisory
+  issued: 2026-07-13
+  in_force: unknown
+  amendments: none found
+  licence: EUR-Lex reuse policy
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-04]
+  role: global_example
+  relevance: 1
+  why: This is a duplicate presentation of the same guidance and adds no distinct policy example.

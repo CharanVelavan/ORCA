@@ -1,0 +1,181 @@
+- rank: 161
+  id: in-sebi-cscrf-2024
+  title: Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs)
+  authority: Securities and Exchange Board of India
+  jurisdiction: IN
+  doc_type: circular
+  url: https://www.sebi.gov.in/sebi_data/attachdocs/aug-2024/1724326790365.pdf
+  landing_page: https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html
+  binding_status: binding
+  issued: 2024-08-20
+  in_force: yes
+  amendments: Clarifications issued 2024-12-31, 2025-04-30 and 2025-08-28; implementation timeline extension issued 2025-06
+  licence: unknown
+  gaps: [GAP-IN-01, GAP-IN-04, GAP-IN-08]
+  role: india_evidence
+  relevance: 3
+  why: The framework sets cyber-resilience controls and compliance reporting for regulated securities entities, offering a cross-sector comparison for incident response and continuity.
+
+- rank: 162
+  id: in-rbi-it-governance-directions-2023
+  title: Reserve Bank of India (Information Technology Governance, Risk, Controls and Assurance Practices) Directions, 2023
+  authority: Reserve Bank of India
+  jurisdiction: IN
+  doc_type: direction
+  url: https://www.rbi.org.in/Scripts/BS_ViewMasterDirections.aspx?id=12562
+  landing_page: https://www.rbi.org.in/Scripts/BS_ViewMasterDirections.aspx?id=12562
+  binding_status: binding
+  issued: 2023-11-07
+  in_force: yes (2024-04-01)
+  amendments: none found
+  licence: unknown
+  gaps: [GAP-IN-01, GAP-IN-04, GAP-IN-08]
+  role: india_evidence
+  relevance: 3
+  why: The Directions consolidate IT governance, controls, business continuity and disaster recovery requirements for specified RBI-regulated entities.
+
+- rank: 163
+  id: in-rbi-it-outsourcing-directions-2023
+  title: Reserve Bank of India (Outsourcing of Information Technology Services) Directions, 2023
+  authority: Reserve Bank of India
+  jurisdiction: IN
+  doc_type: direction
+  url: https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=4690
+  landing_page: https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=4690
+  binding_status: binding
+  issued: 2023-04-10
+  in_force: yes
+  amendments: none found
+  licence: unknown
+  gaps: [GAP-IN-04, GAP-IN-08]
+  role: india_evidence
+  relevance: 3
+  why: The RBI page identifies directions addressing IT-service outsourcing risks, concentration risk and foreign service providers, relevant to dependencies in service restoration.
+
+- rank: 164
+  id: in-sebi-cscrf-implementation-extension-2025
+  title: Extension towards Adoption and Implementation of Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs)
+  authority: Securities and Exchange Board of India
+  jurisdiction: IN
+  doc_type: circular
+  url: https://www.sebi.gov.in/sebi_data/attachdocs/jun-2025/1751286353420.pdf
+  landing_page: https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListingAll=yes&search=Clarifications
+  binding_status: binding
+  issued: 2025-06
+  in_force: yes
+  amendments: Extends specified REs’ compliance timeline to 2025-08-31; excludes MIIs, KRAs and QRTAs from that extension
+  licence: unknown
+  gaps: [GAP-IN-01]
+  role: india_evidence
+  relevance: 2
+  why: The circular documents an implementation-timeline extension for the CSCRF, useful when assessing the framework’s effective rollout.
+
+- rank: 165
+  id: in-trai-ppdr-consultation-2017
+  title: Consultation Paper on Next Generation Public Protection and Disaster Relief (PPDR) Communication Networks
+  authority: Telecom Regulatory Authority of India
+  jurisdiction: IN
+  doc_type: consultation
+  url: https://www.trai.gov.in/sites/default/files/2024-09/Consultation_Paper_PPDR%20_09102017%20%281%29.pdf
+  landing_page: https://www.trai.gov.in/node/1267
+  binding_status: not stated
+  issued: 2017
+  in_force: no
+  amendments: none found
+  licence: unknown
+  gaps: [GAP-IN-03, GAP-IN-04]
+  role: context
+  relevance: 3
+  why: The consultation describes disaster-related network damage, congestion and increased communications demand for responders; it is a consultation paper rather than a binding rule.
+
+- rank: 166
+  id: in-national-cyber-security-policy-2013
+  title: National Cyber Security Policy -2013
+  authority: Ministry of Electronics and Information Technology
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://www.meity.gov.in/writereaddata/files/National_cyber_security_policy-2013_0.pdf
+  landing_page: https://www.meity.gov.in/
+  binding_status: advisory
+  issued: 2013
+  in_force: unknown
+  amendments: none found
+  licence: Government of India open (terms not checked)
+  gaps: [GAP-IN-01, GAP-IN-06, GAP-IN-09]
+  role: india_evidence
+  relevance: 3
+  why: The policy describes national cyber security as an evolving, coordinated framework and identifies the need for rapid information exchange and response to large-scale cyber incidents.
+
+- rank: 167
+  id: in-cea-cyber-security-regulations-2026
+  title: Cyber Security Regulations
+  authority: Central Electricity Authority
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://cea.nic.in/notification/cyber-security-regulations/?lang=en
+  landing_page: https://cea.nic.in/regulations-category/8852d06d-7f96-458a-8c59-0f7098d8f307?lang=en
+  binding_status: binding
+  issued: 2026-08-12
+  in_force: unknown
+  amendments: none found
+  licence: unknown
+  gaps: [GAP-IN-01, GAP-IN-06, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: The CEA notification page identifies the 2026 power-sector cyber security regulations, which are relevant to cyber resilience dependencies involving electricity infrastructure.
+
+- rank: 168
+  id: in-cea-cyber-security-regulations-draft-2025
+  title: Draft Central Electricity Authority (Cyber Security in Power Sector) Regulations, 2025
+  authority: Central Electricity Authority
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://www.cea.nic.in/regulations/draft-regulations?lang=en
+  landing_page: https://www.cea.nic.in/regulations/draft-regulations?lang=en
+  binding_status: draft
+  issued: 2025
+  in_force: no
+  amendments: Superseded by the notified Cyber Security Regulations listed by CEA in 2026
+  licence: unknown
+  gaps: [GAP-IN-01, GAP-IN-06, GAP-IN-08]
+  role: context
+  relevance: 2
+  why: The CEA draft-regulations index lists a 2025 draft power-sector cyber security regulation, providing context for the subsequent notified instrument.
+
+- rank: 169
+  id: in-tn-disaster-management-agency
+  title: Tamil Nadu State Disaster Management Agency
+  authority: Government of Tamil Nadu, Commissionerate of Revenue Administration and Disaster Management
+  jurisdiction: IN
+  doc_type: not stated
+  url: https://cra.tn.gov.in/disaster_t.php
+  landing_page: https://cra.tn.gov.in/disaster_t.php
+  binding_status: not stated
+  issued: not stated
+  in_force: unknown
+  amendments: none found
+  licence: unknown
+  gaps: [GAP-IN-02, GAP-IN-03]
+  role: context
+  relevance: 2
+  why: The state page describes the Tamil Nadu State Disaster Management Authority’s role in policy guidance, approval of the state plan and monitoring disaster-risk-reduction activity.
+
+- rank: 170
+  id: in-gcc-city-disaster-plan-2026
+  title: City Disaster Management Perspective Plan 2026
+  authority: Greater Chennai Corporation
+  jurisdiction: IN
+  doc_type: plan
+  url: https://chennaicorporation.gov.in/gcc/cdmp/
+  landing_page: https://chennaicorporation.gov.in/gcc/cdmp/
+  binding_status: not stated
+  issued: 2026
+  in_force: unknown
+  amendments: none found
+  licence: unknown
+  gaps: [GAP-IN-02, GAP-IN-03]
+  role: context
+  relevance: 3
+  why: The Corporation’s disaster-management page identifies the 2026 city plan and a disaster-management directory, relevant to local coordination and response context.
+
+Only these 10 qualifying or contextual targets are included here. I could not create or append the requested ranks 161–330 file because the session’s filesystem permission is read-only.

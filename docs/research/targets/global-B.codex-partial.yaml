@@ -1,0 +1,269 @@
+- rank: 111
+  id: ae-space-law-2023
+  title: "Federal Decree-Law No. 46 of 2023 Regarding the Organization of the Space Sector"
+  authority: "United Arab Emirates"
+  jurisdiction: AE
+  doc_type: act
+  url: https://u.ae/-/media/Documents-2024/Space-regulation-law-no-46-of-2023.pdf
+  landing_page: https://u.ae/en/about-the-uae/science-and-technology/key-sectors-in-science-and-technology/space-science-and-technology/space-regulation
+  binding_status: binding
+  issued: 2023-09-28
+  in_force: "yes (30 days after publication)"
+  amendments: "none found"
+  licence: unknown
+  gaps: [GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: "The official law text states that it repeals Federal Law No. 12 of 2019, and the government page says the law regulates satellite communication activities and requires permits."
+
+- rank: 112
+  id: ae-tdra-iar-v1-1
+  title: "UAE Information Assurance Regulation, Version 1.1"
+  authority: "Telecommunications and Digital Government Regulatory Authority"
+  jurisdiction: AE
+  doc_type: regulation
+  url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/UAE-Information-Assurance-Regulation-v1-1-pdf.ashx
+  landing_page: https://tdra.gov.ae/en/About/tdra-sectors/telecommunication
+  binding_status: not stated
+  issued: "2020"
+  in_force: unknown
+  amendments: "Version 1.1 located; earlier version and change history not checked"
+  licence: unknown
+  gaps: [GAP-IN-04, GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: "The regulation includes controls for utility disruption, uninterrupted power supply, emergency lighting, and physical protection of power and telecommunications cabling."
+
+- rank: 113
+  id: ae-tdra-interconnection-2006
+  title: "Interconnection Instructions, Version 1.2"
+  authority: "Telecommunications and Digital Government Regulatory Authority"
+  jurisdiction: AE
+  doc_type: instruction
+  url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/Instruction-Interconnection-19Feb2006-EN-pdf.ashx
+  landing_page: https://tdra.gov.ae/en/About/tdra-sectors/telecommunication
+  binding_status: not stated
+  issued: 2006
+  in_force: unknown
+  amendments: "Version 1.2; further amendments not found"
+  licence: unknown
+  gaps: [GAP-IN-03]
+  role: global_example
+  relevance: 3
+  why: "The interconnection instructions include emergency call handling and priority provisions at interconnection points."
+
+- rank: 114
+  id: ae-space-law-repeal-2019
+  title: "Federal Law No. 12 of 2019 on the Regulation of the Space Sector"
+  authority: "United Arab Emirates"
+  jurisdiction: AE
+  doc_type: act
+  url: https://u.ae/-/media/Documents-2024/Space-regulation-law-no-46-of-2023.pdf
+  landing_page: https://u.ae/en/about-the-uae/science-and-technology/key-sectors-in-science-and-technology/space-science-and-technology/space-regulation
+  binding_status: binding
+  issued: 2019
+  in_force: "no (repealed by Federal Decree-Law No. 46 of 2023)"
+  amendments: "Repeal stated in Federal Decree-Law No. 46 of 2023"
+  licence: unknown
+  gaps: [GAP-IN-09]
+  role: global_example
+  relevance: 2
+  why: "The 2023 law's official text records repeal of the 2019 space law, useful for establishing the current framework's succession."
+
+- rank: 115
+  id: au-soci-act-2018
+  title: "Security of Critical Infrastructure Act 2018"
+  authority: "Parliament of Australia"
+  jurisdiction: AU
+  doc_type: act
+  url: https://www.legislation.gov.au/C2018A00029/latest/text
+  landing_page: https://www.legislation.gov.au/C2018A00029/latest/text
+  binding_status: binding
+  issued: 2018
+  in_force: "yes"
+  amendments: "Amended; latest compilation shown as C2026C00213, 4 June 2026"
+  licence: unknown
+  gaps: [GAP-IN-01, GAP-IN-02, GAP-IN-04, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "The Act establishes critical infrastructure obligations and reporting requirements for covered entities, including regulated infrastructure sectors."
+
+- rank: 116
+  id: au-telecom-consumer-protection-act-emergency
+  title: "Telecommunications (Consumer Protection and Service Standards) Act 1999, Part 8—Provision of emergency call services"
+  authority: "Parliament of Australia"
+  jurisdiction: AU
+  doc_type: act
+  url: https://www.legislation.gov.au/C2004A00441/2025-10-31/2025-10-31/text/original/pdf
+  landing_page: https://www.legislation.gov.au/C2004A00441/2025-10-31/2025-10-31/text/original/pdf
+  binding_status: binding
+  issued: 1999
+  in_force: "yes"
+  amendments: "Compilation No. 45, compilation date 31 October 2025"
+  licence: unknown
+  gaps: [GAP-IN-03]
+  role: global_example
+  relevance: 4
+  why: "Part 8 authorizes ACMA requirements and directions about emergency call services, including policies and procedures for handling emergency calls."
+
+- rank: 117
+  id: uk-telecommunications-security-act-2021
+  title: "Telecommunications (Security) Act 2021"
+  authority: "UK Parliament"
+  jurisdiction: UK
+  doc_type: act
+  url: https://www.legislation.gov.uk/ukpga/2021/31/enacted
+  landing_page: https://www.legislation.gov.uk/ukpga/2021/31/enacted
+  binding_status: binding
+  issued: 2021-11-17
+  in_force: "yes"
+  amendments: "Amends the Communications Act 2003; commencement regulations made in 2022"
+  licence: unknown
+  gaps: [GAP-IN-01, GAP-IN-02, GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "It imposes proportionate security duties on public telecom providers and includes duties to report security incidents and inform users of associated risks."
+
+- rank: 118
+  id: uk-security-measures-regulations-2022
+  title: "The Electronic Communications (Security Measures) Regulations 2022"
+  authority: "UK Secretary of State"
+  jurisdiction: UK
+  doc_type: regulation
+  url: https://www.legislation.gov.uk/uksi/2022/933/contents/made
+  landing_page: https://www.gov.uk/government/publications/electronic-communications-security-measures-regulations-and-telecommunications-security-code-of-practice
+  binding_status: binding
+  issued: 2022-09-05
+  in_force: "yes (2022-10-01)"
+  amendments: "None found"
+  licence: unknown
+  gaps: [GAP-IN-01, GAP-IN-04, GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "The regulations prescribe additional security measures for public telecom providers under the statutory security framework."
+
+- rank: 119
+  id: uk-telecom-security-code-practice-2022
+  title: "Telecommunications Security Code of Practice"
+  authority: "Department for Science, Innovation and Technology"
+  jurisdiction: UK
+  doc_type: guideline
+  url: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1120531/E02781980_Telecommunications_Security_CoP_Accessible.pdf
+  landing_page: https://www.gov.uk/government/publications/electronic-communications-security-measures-regulations-and-telecommunications-security-code-of-practice
+  binding_status: advisory
+  issued: 2022-12-01
+  in_force: "yes (published 2022-12-01)"
+  amendments: "Version 1.1 published 2026-07-14; a revised version was in draft in search results"
+  licence: "Crown copyright"
+  gaps: [GAP-IN-04, GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: "The code gives technical and procedural guidance for providers to meet statutory telecom security duties, including resilience and recovery themes."
+
+- rank: 120
+  id: sg-cybersecurity-act
+  title: "Cybersecurity Act 2018"
+  authority: "Parliament of Singapore"
+  jurisdiction: SG
+  doc_type: act
+  url: https://sso.agc.gov.sg/Act/CA2018
+  landing_page: https://www.csa.gov.sg/legislation/cybersecurity-act/
+  binding_status: binding
+  issued: 2018
+  in_force: yes
+  amendments: "Amendments passed in Parliament in May 2024; check current consolidated text for commencement"
+  licence: unknown
+  gaps: [GAP-IN-01, GAP-IN-06, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "The Act provides for critical information infrastructure cybersecurity duties and reporting, with amendments extending oversight to additional regulated entity classes."
+
+- rank: 121
+  id: au-anatel-res-740-2020
+  title: "Resolução nº 740, de 21 de dezembro de 2020: Regulamento de Segurança Cibernética Aplicada ao Setor de Telecomunicações"
+  authority: "Agência Nacional de Telecomunicações"
+  jurisdiction: BR
+  doc_type: regulation
+  url: https://informacoes.anatel.gov.br/legislacao/index.php/component/content/article?id=1497
+  landing_page: https://informacoes.anatel.gov.br/legislacao/index.php/component/content/article?id=1497
+  binding_status: binding
+  issued: 2020-12-21
+  in_force: "yes (2021-01-04)"
+  amendments: "Amended by Resolução nº 767, 7 August 2024; affected-provider list in Portaria Anatel nº 2899, 16 September 2024"
+  licence: unknown
+  gaps: [GAP-IN-01, GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "The regulation establishes procedures to promote security in telecom networks and services, including cybersecurity and protection of critical telecommunications infrastructure."
+
+- rank: 122
+  id: sa-nca-ecc-2-2024
+  title: "Essential Cybersecurity Controls (ECC 2-2024)"
+  authority: "National Cybersecurity Authority"
+  jurisdiction: SA
+  doc_type: standard
+  url: https://nca.gov.sa/ecc-en.pdf
+  landing_page: https://nca.gov.sa/en/regulatory-documents/controls-list/ecc/
+  binding_status: binding
+  issued: 2024
+  in_force: yes
+  amendments: "ECC 2-2024; no later amendment found"
+  licence: unknown
+  gaps: [GAP-IN-01, GAP-IN-04, GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: "The controls state that organizations in scope must implement applicable controls and include cybersecurity governance and operational controls."
+
+- rank: 123
+  id: intl-liability-convention-1972
+  title: "Convention on International Liability for Damage Caused by Space Objects"
+  authority: "United Nations General Assembly"
+  jurisdiction: INTL
+  doc_type: treaty
+  url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/liability-convention.html
+  landing_page: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/introliability-convention.html
+  binding_status: binding
+  issued: 1972-03-29
+  in_force: "yes (1972-09-01)"
+  amendments: "none found"
+  licence: "United Nations copyright"
+  gaps: [GAP-IN-09]
+  role: context
+  relevance: 2
+  why: "It sets international liability rules for damage caused by space objects, including absolute liability for damage on Earth and fault-based liability for damage in space."
+
+- rank: 124
+  id: intl-registration-convention-1975
+  title: "Convention on Registration of Objects Launched into Outer Space"
+  authority: "United Nations General Assembly"
+  jurisdiction: INTL
+  doc_type: treaty
+  url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/registration-convention.html
+  landing_page: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/registration-convention.html
+  binding_status: binding
+  issued: 1975-11-12
+  in_force: "yes (1976-09-15)"
+  amendments: "none found"
+  licence: "United Nations copyright"
+  gaps: [GAP-IN-09]
+  role: context
+  relevance: 2
+  why: "It requires launching states to register space objects and provide information for the UN register, supporting identification and jurisdictional context."
+
+- rank: 125
+  id: intl-unoosa-space-object-resources
+  title: "Resources on space object registration"
+  authority: "United Nations Office for Outer Space Affairs"
+  jurisdiction: INTL
+  doc_type: guideline
+  url: https://www.unoosa.org/oosa/spaceobjectregister/resources/index.html
+  landing_page: https://www.unoosa.org/oosa/spaceobjectregister/resources/index.html
+  binding_status: advisory
+  issued: unknown
+  in_force: unknown
+  amendments: "none found"
+  licence: "United Nations copyright"
+  gaps: [GAP-IN-09]
+  role: context
+  relevance: 1
+  why: "The UNOOSA resource page links treaty texts and registration materials relevant to identifying the international framework for satellite operations."

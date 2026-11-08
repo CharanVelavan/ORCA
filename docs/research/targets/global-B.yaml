@@ -1,0 +1,2442 @@
+- rank: 111
+  id: ae-space-law-2023
+  title: Federal Decree-Law No. 46 of 2023 Regarding the Organization of the Space
+    Sector
+  authority: United Arab Emirates
+  jurisdiction: AE
+  doc_type: act
+  url: https://u.ae/-/media/Documents-2024/Space-regulation-law-no-46-of-2023.pdf
+  landing_page: https://u.ae/en/about-the-uae/science-and-technology/key-sectors-in-science-and-technology/space-science-and-technology/space-regulation
+  binding_status: binding
+  issued: '2023-09-28'
+  in_force: yes (30 days after publication)
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: The official law explicitly repeals Federal Law No. 12 of 2019 and establishes
+    licensing, safety, and permit requirements for satellite communication and space
+    activities.
+- rank: 112
+  id: ae-tdra-iar-v1-1
+  title: UAE Information Assurance Regulation, Version 1.1
+  authority: Telecommunications and Digital Government Regulatory Authority
+  jurisdiction: AE
+  doc_type: regulation
+  url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/UAE-Information-Assurance-Regulation-v1-1-pdf.ashx
+  landing_page: https://tdra.gov.ae/en/About/tdra-sectors/telecommunication
+  binding_status: not stated
+  issued: '2020'
+  in_force: unknown
+  amendments: Version 1.1; earlier versions not reviewed
+  licence: unknown
+  gaps:
+  - GAP-IN-04
+  - GAP-IN-06
+  - GAP-IN-08
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Contains mandatory security controls for utility disruption, uninterrupted
+    power supply (UPS), and physical security for telecommunications and power cabling.
+- rank: 113
+  id: ae-tdra-interconnection-2006
+  title: Interconnection Instructions, Version 1.2
+  authority: Telecommunications and Digital Government Regulatory Authority
+  jurisdiction: AE
+  doc_type: instruction
+  url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/Instruction-Interconnection-19Feb2006-EN-pdf.ashx
+  landing_page: https://tdra.gov.ae/en/About/tdra-sectors/telecommunication
+  binding_status: not stated
+  issued: 2006
+  in_force: unknown
+  amendments: Version 1.2
+  licence: unknown
+  gaps:
+  - GAP-IN-03
+  role: global_example
+  relevance: 3
+  why: Requires all emergency calls to be treated with highest priority across interconnection
+    points and dedicated capacity provided where possible.
+- rank: 114
+  id: ae-space-law-repeal-2019
+  title: Federal Law No. 12 of 2019 on the Regulation of the Space Sector
+  authority: United Arab Emirates
+  jurisdiction: AE
+  doc_type: act
+  url: https://u.ae/-/media/Documents-2024/Space-regulation-law-no-46-of-2023.pdf
+  landing_page: https://u.ae/en/about-the-uae/science-and-technology/key-sectors-in-science-and-technology/space-science-and-technology/space-regulation
+  binding_status: binding
+  issued: 2019
+  in_force: no (repealed by Federal Decree-Law No. 46 of 2023)
+  amendments: Repealed in 2023
+  licence: unknown
+  gaps:
+  - GAP-IN-09
+  role: global_example
+  relevance: 2
+  why: Predecessor space legislation whose repeal by Decree-Law 46/2023 confirms the
+    updated statutory mandate for satellite operators.
+- rank: 115
+  id: ae-ncema-7000-2021
+  title: Business Continuity Management Standard (AE/SCNS/NCEMA 7000:2021)
+  authority: National Emergency Crisis and Disaster Management Authority
+  jurisdiction: AE
+  doc_type: standard
+  url: https://www.ncema.gov.ae/dassets/download/f32c333d/%D8%A7%D9%84%D8%AF%D9%84%D9%8A%D9%84%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B1%D8%B4%D8%A7%D8%AF%D9%8A%20%D8%A7%D9%86%D8%AC%D9%84%D9%8A%D8%B2%D9%8A.pdf.aspx
+  landing_page: https://www.ncema.gov.ae/en/about-ministry/events/7/2023/certified-lead-implementer-for-business-continuity-management-ncema-70002021-course.aspx
+  binding_status: binding
+  issued: 2021
+  in_force: 'yes'
+  amendments: Replaces 2015 edition
+  licence: unknown
+  gaps:
+  - GAP-IN-03
+  - GAP-IN-04
+  - GAP-IN-08
+  role: global_example
+  relevance: 4
+  why: Mandates business continuity management systems, business impact analysis,
+    and emergency recovery capability for critical infrastructure entities.
+- rank: 116
+  id: ae-ncema-7001-guidelines
+  title: Business Continuity Management System Guidelines (NCEMA 7001)
+  authority: National Emergency Crisis and Disaster Management Authority
+  jurisdiction: AE
+  doc_type: guideline
+  url: https://www.ncema.gov.ae/dassets/download/f32c333d/%D8%A7%D9%84%D8%AF%D9%84%D9%8A%D9%84%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B1%D8%B4%D8%A7%D8%AF%D9%8A%20%D8%A7%D9%86%D8%AC%D9%84%D9%8A%D8%B2%D9%8A.pdf.aspx
+  landing_page: https://www.ncema.gov.ae
+  binding_status: advisory
+  issued: 2021
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-03
+  - GAP-IN-04
+  - GAP-IN-08
+  role: global_example
+  relevance: 3
+  why: Provides implementation guidance and operational templates for crisis response,
+    backup power resilience, and failover arrangements.
+- rank: 117
+  id: ae-pdpl-decree-law-45-2021
+  title: Federal Decree-Law No. 45 of 2021 Regarding the Protection of Personal Data
+  authority: United Arab Emirates
+  jurisdiction: AE
+  doc_type: act
+  url: https://uaelegislation.gov.ae/en/legislations/1972/download
+  landing_page: https://uaelegislation.gov.ae/en/legislations/1972
+  binding_status: binding
+  issued: '2021-09-20'
+  in_force: yes (2022-01-02)
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-02
+  role: global_example
+  relevance: 4
+  why: Article 9 sets requirements for controllers to immediately notify the Data
+    Office and data subjects upon discovering personal data breaches.
+- rank: 118
+  id: ae-ai-charter-2024
+  title: The UAE Charter for the Development and Use of Artificial Intelligence
+  authority: UAE Artificial Intelligence, Digital Economy and Remote Work Applications
+    Office
+  jurisdiction: AE
+  doc_type: guideline
+  url: https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/policies/Ai/The-UAE-Charter-for-the-Development-and-Use-of-Artificial-Intelligence
+  landing_page: https://ai.gov.ae/
+  binding_status: advisory
+  issued: 2024
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 3
+  why: Sets 12 principles including human oversight, safety, and traceability for
+    autonomous decision-making and AI-driven failover systems.
+- rank: 119
+  id: ae-csc-ciip-policy
+  title: Critical Information Infrastructure Protection (CIIP) Policy
+  authority: UAE Cyber Security Council
+  jurisdiction: AE
+  doc_type: policy
+  url: https://uaelegislation.gov.ae/en/policy/details/critical-information-infrastructure-protection-policy
+  landing_page: https://uaelegislation.gov.ae
+  binding_status: binding
+  issued: 2023
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-06
+  - GAP-IN-08
+  - GAP-IN-09
+  role: global_example
+  relevance: 5
+  why: Defines national protective governance, mandatory cyber risk management, and
+    incident reporting for vital sectors including telecommunications and energy.
+- rank: 120
+  id: ae-csc-cloud-security-policy
+  title: National Cloud Security Policy
+  authority: UAE Cyber Security Council
+  jurisdiction: AE
+  doc_type: policy
+  url: https://uaelegislation.gov.ae/en/policy/details/national-cloud-security-policy
+  landing_page: https://uaelegislation.gov.ae
+  binding_status: binding
+  issued: 2023
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 4
+  why: Regulates security baselines, data sovereignty, and incident escalation for
+    cloud systems hosting critical network functions.
+- rank: 121
+  id: ae-csc-data-exchange-policy
+  title: National Data Exchange Security Policy
+  authority: UAE Cyber Security Council
+  jurisdiction: AE
+  doc_type: policy
+  url: https://uaelegislation.gov.ae/en/policy/details/national-data-exchange-security-policy
+  landing_page: https://uaelegislation.gov.ae
+  binding_status: binding
+  issued: 2023
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-06
+  role: global_example
+  relevance: 3
+  why: Prescribes secure communications protocols, interface controls, and inter-entity
+    warning requirements for critical data transmission.
+- rank: 122
+  id: ae-csc-iot-security-policy
+  title: National Internet of Things (IoT) Security Policy
+  authority: UAE Cyber Security Council
+  jurisdiction: AE
+  doc_type: policy
+  url: https://uaelegislation.gov.ae/en/policy/details/national-internet-of-things-security-policy
+  landing_page: https://uaelegislation.gov.ae
+  binding_status: binding
+  issued: 2023
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  role: global_example
+  relevance: 3
+  why: Sets mandatory device authentication, firmware integrity, and encryption controls
+    across connected devices.
+- rank: 123
+  id: ae-csc-encryption-policy
+  title: National Encryption Policy
+  authority: UAE Cyber Security Council
+  jurisdiction: AE
+  doc_type: policy
+  url: https://uaelegislation.gov.ae/en/policy/details/national-encryption-policy
+  landing_page: https://uaelegislation.gov.ae
+  binding_status: binding
+  issued: 2023
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 4
+  why: Mandates encryption algorithms and key management practices for data at rest
+    and in transit across critical communications links.
+- rank: 124
+  id: ae-tdra-space-services-policy
+  title: Policy on Space Services and Satellite Filing Regulations
+  authority: Telecommunications and Digital Government Regulatory Authority
+  jurisdiction: AE
+  doc_type: regulation
+  url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/Ultra-Wide-Band-and-Short-Range-Devices-Regulations.ashx
+  landing_page: https://tdra.gov.ae/en/About/tdra-sectors/telecommunication
+  binding_status: binding
+  issued: 2020
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: global_example
+  relevance: 3
+  why: Governs frequency coordination, orbital slot filings, and interference mitigation
+    requirements for satellite operators.
+- rank: 125
+  id: ae-space-agency-res-1969
+  title: Cabinet Resolution No. 204 Regarding Space Sector Regulations
+  authority: UAE Space Agency / UAE Cabinet
+  jurisdiction: AE
+  doc_type: regulation
+  url: https://uaelegislation.gov.ae/en/legislations/1969/download
+  landing_page: https://uaelegislation.gov.ae/en/legislations/1969
+  binding_status: binding
+  issued: 2022
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Specifies regulatory safety standards, operational permits, and debris mitigation
+    procedures for space systems.
+- rank: 126
+  id: au-telecom-consumer-protection-act-emergency
+  title: Telecommunications (Consumer Protection and Service Standards) Act 1999,
+    Part 8—Provision of emergency call services
+  authority: Parliament of Australia
+  jurisdiction: AU
+  doc_type: act
+  url: https://www.legislation.gov.au/C2004A00441/2025-10-31/2025-10-31/text/original/pdf
+  landing_page: https://www.legislation.gov.au/C2004A00441/2025-10-31/2025-10-31/text/original/pdf
+  binding_status: binding
+  issued: 1999
+  in_force: 'yes'
+  amendments: Compilation No. 45 (2025)
+  licence: unknown
+  gaps:
+  - GAP-IN-03
+  role: global_example
+  relevance: 4
+  why: Authorizes statutory ACMA determinations governing priority handling and obligations
+    for carriage service providers delivering emergency calls.
+- rank: 127
+  id: au-acma-emergency-call-determination-2019
+  title: Telecommunications (Emergency Call Service) Determination 2019
+  authority: Australian Communications and Media Authority
+  jurisdiction: AU
+  doc_type: determination
+  url: https://www.legislation.gov.au/F2019L01509/latest/text
+  landing_page: https://www.legislation.gov.au/F2019L01509/latest/text
+  binding_status: binding
+  issued: '2019-11-25'
+  in_force: 'yes'
+  amendments: Amended by Telecommunications (Emergency Call Service) Amendment Determination
+    2024
+  licence: unknown
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-03
+  role: global_example
+  relevance: 5
+  why: Requires carriers to route emergency calls (000/112) with priority, provide
+    camp-on capabilities during outages, and share outage information.
+- rank: 128
+  id: au-soci-incident-reporting-part2b
+  title: 'Security of Critical Infrastructure Act 2018: Part 2B (Mandatory Cyber Incident
+    Reporting)'
+  authority: Parliament of Australia
+  jurisdiction: AU
+  doc_type: act
+  url: https://www.legislation.gov.au/C2018A00029/latest/text
+  landing_page: https://www.legislation.gov.au/C2018A00029/latest/text
+  binding_status: binding
+  issued: 2021
+  in_force: 'yes'
+  amendments: Enacted via Security Legislation Amendment (Critical Infrastructure)
+    Act 2021
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  role: global_example
+  relevance: 5
+  why: Mandates reporting critical cyber incidents within 12 hours and other significant
+    incidents within 72 hours to the Australian Cyber Security Centre.
+- rank: 129
+  id: au-soci-application-rules-2021
+  title: Security of Critical Infrastructure (Application) Rules (LIN 21/084) 2021
+  authority: Minister for Home Affairs
+  jurisdiction: AU
+  doc_type: rules
+  url: https://www.legislation.gov.au/F2021L01709/latest/text
+  landing_page: https://www.legislation.gov.au/F2021L01709/latest/text
+  binding_status: binding
+  issued: '2021-12-02'
+  in_force: 'yes'
+  amendments: Amended 2022
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Specifies classes of critical infrastructure assets subject to mandatory cyber
+    incident reporting under Part 2B of the SOCI Act.
+- rank: 130
+  id: au-soci-definitions-rules-2021
+  title: Security of Critical Infrastructure (Definitions) Rules (LIN 21/039) 2021
+  authority: Minister for Home Affairs
+  jurisdiction: AU
+  doc_type: rules
+  url: https://www.legislation.gov.au/F2021L01708/latest/text
+  landing_page: https://www.legislation.gov.au/F2021L01708/latest/text
+  binding_status: binding
+  issued: '2021-12-02'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-06
+  role: global_example
+  relevance: 3
+  why: Defines telecommunications and data processing assets and threshold criteria
+    determining coverage under critical infrastructure cyber security rules.
+- rank: 131
+  id: au-space-launches-returns-act-2018
+  title: Space (Launches and Returns) Act 2018
+  authority: Parliament of Australia
+  jurisdiction: AU
+  doc_type: act
+  url: https://www.legislation.gov.au/C2018A00109/latest/text
+  landing_page: https://www.legislation.gov.au/C2018A00109/latest/text
+  binding_status: binding
+  issued: '2018-08-31'
+  in_force: 'yes'
+  amendments: Compilation No. 3 (2021)
+  licence: unknown
+  gaps:
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Governs licensing of launch facilities, launch permits, and overseas payload
+    permits for Australian satellite operators.
+- rank: 132
+  id: au-space-general-rules-2019
+  title: Space (Launches and Returns) (General) Rules 2019
+  authority: Australian Space Agency
+  jurisdiction: AU
+  doc_type: rules
+  url: https://www.legislation.gov.au/F2019L01118/latest/text
+  landing_page: https://www.legislation.gov.au/F2019L01118/latest
+  binding_status: binding
+  issued: '2019-08-28'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Imposes safety case, flight safety, and cybersecurity risk assessment obligations
+    for satellite payload and launch permit applications.
+- rank: 133
+  id: au-asd-ism
+  title: Australian Government Information Security Manual (ISM)
+  authority: Australian Signals Directorate
+  jurisdiction: AU
+  doc_type: standard
+  url: https://www.cyber.gov.au/ism
+  landing_page: https://www.cyber.gov.au
+  binding_status: advisory
+  issued: 2024
+  in_force: 'yes'
+  amendments: Updated monthly
+  licence: unknown
+  gaps:
+  - GAP-IN-04
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 4
+  why: Provides detailed technical controls for cryptographic protocols, backup power
+    maintenance, and clean failover verification in government systems.
+- rank: 134
+  id: au-asd-cloud-security
+  title: Cloud Security Guidance
+  authority: Australian Cyber Security Centre / ASD
+  jurisdiction: AU
+  doc_type: guideline
+  url: https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism/cyber-security-guidelines/guidelines-cloud-services
+  landing_page: https://www.cyber.gov.au
+  binding_status: advisory
+  issued: 2023
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 3
+  why: Guides risk management and continuous monitoring for cloud-hosted network functions
+    and ground segment virtualization.
+- rank: 135
+  id: au-acma-c525-emergency-code
+  title: Handling of Emergency Calls by Carriage Service Providers Code (C525:2023)
+  authority: Communications Alliance / ACMA
+  jurisdiction: AU
+  doc_type: standard
+  url: https://www.commsalliance.com.au/__data/assets/pdf_file/0019/84043/C525_2023.pdf
+  landing_page: https://www.acma.gov.au
+  binding_status: binding
+  issued: 2023
+  in_force: 'yes'
+  amendments: Replaces C525:2017
+  licence: unknown
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-03
+  role: global_example
+  relevance: 4
+  why: Establishes mandatory operational procedures for carriers to handle emergency
+    call traffic and provide caller location during network faults.
+- rank: 136
+  id: au-national-cyber-strategy-2023
+  title: 2023-2030 Australian Cyber Security Strategy
+  authority: Department of Home Affairs
+  jurisdiction: AU
+  doc_type: strategy
+  url: https://www.homeaffairs.gov.au/cyber-security-subsite/files/2023-cyber-security-strategy.pdf
+  landing_page: https://www.homeaffairs.gov.au
+  binding_status: advisory
+  issued: '2023-11-22'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-02
+  - GAP-IN-09
+  role: global_example
+  relevance: 3
+  why: Sets policy shields for sovereign space resilience, threat intelligence sharing,
+    and streamlined incident reporting across critical sectors.
+- rank: 137
+  id: au-acma-service-continuity-rules
+  title: Telecommunications (Service Provider — Customer Authorisation and Identity
+    Checks) Determination
+  authority: Australian Communications and Media Authority
+  jurisdiction: AU
+  doc_type: determination
+  url: https://www.legislation.gov.au/F2022L00810/latest/text
+  landing_page: https://www.legislation.gov.au/F2022L00810/latest/text
+  binding_status: binding
+  issued: 2022
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  role: global_example
+  relevance: 2
+  why: Mandates identity verification and fraud prevention controls to protect subscriber
+    credentials and service continuity across carriage networks.
+- rank: 138
+  id: uk-space-agency-cyber-toolkit
+  title: Cyber Security Toolkit for Space
+  authority: UK Space Agency
+  jurisdiction: UK
+  doc_type: guideline
+  url: https://www.gov.uk/government/publications/cyber-security-toolkit
+  landing_page: https://www.gov.uk/government/publications/cyber-security-toolkit
+  binding_status: advisory
+  issued: 2023
+  in_force: 'yes'
+  amendments: none found
+  licence: Open Government Licence v3.0
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: global_example
+  relevance: 5
+  why: Provides space operators and suppliers with assurance frameworks, threat assessments,
+    and security controls for satellite and ground architectures.
+- rank: 139
+  id: uk-dsit-space-ground-cloud-cyber
+  title: Cyber risks of cloud computing in the ground segment of the space sector
+  authority: Department for Science, Innovation and Technology / UK Space Agency
+  jurisdiction: UK
+  doc_type: report
+  url: https://www.gov.uk/government/publications/cyber-risks-of-cloud-computing-in-the-ground-segment-of-the-space-sector/cyber-risks-of-cloud-computing-in-the-ground-segment-of-the-space-sector
+  landing_page: https://www.gov.uk/government/publications/cyber-risks-of-cloud-computing-in-the-ground-segment-of-the-space-sector
+  binding_status: advisory
+  issued: '2024-04-18'
+  in_force: 'yes'
+  amendments: none found
+  licence: Open Government Licence v3.0
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  - GAP-IN-09
+  role: global_example
+  relevance: 5
+  why: Analyzes cybersecurity vulnerabilities, cloud misconfiguration risks, and supply
+    chain threats across satellite ground station infrastructure.
+- rank: 140
+  id: uk-ofcom-backup-power-emergency-guidance
+  title: Guidance on measures to protect access to emergency organisations when there
+    is a power cut at the customer's premises
+  authority: Office of Communications
+  jurisdiction: UK
+  doc_type: guideline
+  url: https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/114208-emergency-access-during-power-cuts/associated-documents/guidance-emergency-access-power-cut.pdf
+  landing_page: https://www.ofcom.org.uk
+  binding_status: advisory
+  issued: '2018-10-24'
+  in_force: 'yes'
+  amendments: none found
+  licence: Open Government Licence v3.0
+  gaps:
+  - GAP-IN-03
+  - GAP-IN-04
+  role: global_example
+  relevance: 5
+  why: Recommends communications providers provide at least one hour of backup power
+    solution to ensure vulnerable consumers retain 999/112 access during outages.
+- rank: 141
+  id: uk-ofcom-general-conditions-a3
+  title: 'General Conditions of Entitlement: Condition A3 (Availability of Services
+    and Access to Emergency Organisations)'
+  authority: Office of Communications
+  jurisdiction: UK
+  doc_type: regulation
+  url: https://www.ofcom.org.uk/__data/assets/pdf_file/0026/112679/unofficial-consolidated-general-conditions.pdf
+  landing_page: https://www.ofcom.org.uk
+  binding_status: binding
+  issued: 2022
+  in_force: 'yes'
+  amendments: Consolidated text 2022
+  licence: Open Government Licence v3.0
+  gaps:
+  - GAP-IN-03
+  - GAP-IN-04
+  role: global_example
+  relevance: 4
+  why: Legally requires telecom providers to maintain uninterrupted emergency access
+    and network resilience during catastrophic power outages.
+- rank: 142
+  id: uk-ofcom-security-guidance-105a-d
+  title: Ofcom Guidance on Security Requirements in Sections 105A to D of the Communications
+    Act 2003
+  authority: Office of Communications
+  jurisdiction: UK
+  doc_type: guideline
+  url: https://www.ofcom.org.uk/__data/assets/pdf_file/0019/108487/Guidance-on-security-requirements.pdf
+  landing_page: https://www.ofcom.org.uk
+  binding_status: advisory
+  issued: 2017
+  in_force: 'yes'
+  amendments: Precedes Telecommunications (Security) Act 2021 regime
+  licence: Open Government Licence v3.0
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-08
+  role: global_example
+  relevance: 3
+  why: Outlines reporting criteria and technical measures for network providers to
+    prevent and handle significant security breaches.
+- rank: 143
+  id: uk-caa-cap2223-space-cyber
+  title: 'CAP 2223: Cyber Security for Spaceflight Activities'
+  authority: Civil Aviation Authority
+  jurisdiction: UK
+  doc_type: guideline
+  url: https://publicapps.caa.co.uk/docs/33/CAP2223%20Cyber%20Security%20for%20Spaceflight%20Activities.pdf
+  landing_page: https://www.caa.co.uk
+  binding_status: advisory
+  issued: '2021-07-29'
+  in_force: 'yes'
+  amendments: none found
+  licence: Open Government Licence v3.0
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: global_example
+  relevance: 5
+  why: Sets out guidance for spaceflight applicants and licensees on cyber security
+    strategy, command link protection, and incident response.
+- rank: 144
+  id: uk-ncsc-annual-review-space-2023
+  title: 'NCSC Annual Review 2023: Case Study on Russia and Space/Satellite Infrastructure'
+  authority: National Cyber Security Centre
+  jurisdiction: UK
+  doc_type: report
+  url: https://www.ncsc.gov.uk/collection/annual-review-2023/threats-risks/case-study-russia
+  landing_page: https://www.ncsc.gov.uk
+  binding_status: advisory
+  issued: '2023-11-14'
+  in_force: 'yes'
+  amendments: none found
+  licence: Open Government Licence v3.0
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: context
+  relevance: 3
+  why: Documents Russian cyber attacks against commercial satellite communications
+    (Viasat KA-SAT) and highlights vulnerabilities of satellite broadband ground modems.
+- rank: 145
+  id: uk-ncsc-mcss-2023
+  title: Minimum Cyber Security Standard (MCSS) Version 2.0
+  authority: Cabinet Office / NCSC
+  jurisdiction: UK
+  doc_type: standard
+  url: https://www.gov.uk/government/publications/the-minimum-cyber-security-standard
+  landing_page: https://www.gov.uk
+  binding_status: binding
+  issued: 2023
+  in_force: 'yes'
+  amendments: Version 2.0
+  licence: Open Government Licence v3.0
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 3
+  why: Sets mandatory security requirements for government systems including encryption,
+    privileged access management, and logging.
+- rank: 146
+  id: uk-national-cyber-strategy-2022
+  title: 'National Cyber Strategy 2022: Pioneering a cyber resilient future'
+  authority: Cabinet Office
+  jurisdiction: UK
+  doc_type: strategy
+  url: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1040814/national-cyber-strategy-2022.pdf
+  landing_page: https://www.gov.uk/government/publications/national-cyber-strategy-2022
+  binding_status: advisory
+  issued: '2022-01-14'
+  in_force: 'yes'
+  amendments: none found
+  licence: Open Government Licence v3.0
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-09
+  role: global_example
+  relevance: 3
+  why: Prioritizes securing critical national infrastructure and space-enabled technologies
+    against state-sponsored and cyber criminal attacks.
+- rank: 147
+  id: uk-national-space-strategy-2021
+  title: National Space Strategy
+  authority: Department for Business, Energy & Industrial Strategy / Ministry of Defence
+  jurisdiction: UK
+  doc_type: strategy
+  url: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1035416/national-space-strategy.pdf
+  landing_page: https://www.gov.uk/government/publications/national-space-strategy
+  binding_status: advisory
+  issued: '2021-09-27'
+  in_force: 'yes'
+  amendments: none found
+  licence: Open Government Licence v3.0
+  gaps:
+  - GAP-IN-09
+  role: global_example
+  relevance: 3
+  why: Identifies satellite communications and space-derived positioning as vital
+    civil infrastructure requiring robust defense against hybrid threats.
+- rank: 148
+  id: uk-gov-resilience-framework-2022
+  title: The UK Government Resilience Framework
+  authority: Cabinet Office
+  jurisdiction: UK
+  doc_type: strategy
+  url: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1125824/UK_Government_Resilience_Framework_Final.pdf
+  landing_page: https://www.gov.uk/government/publications/the-uk-government-resilience-framework
+  binding_status: advisory
+  issued: '2022-12-19'
+  in_force: 'yes'
+  amendments: none found
+  licence: Open Government Licence v3.0
+  gaps:
+  - GAP-IN-03
+  - GAP-IN-04
+  role: global_example
+  relevance: 3
+  why: Sets cross-sector resilience standards, infrastructure stress testing, and
+    backup capacity arrangements across critical utilities and telecommunications.
+- rank: 149
+  id: uk-dsit-iot-code-practice
+  title: Code of Practice for Consumer IoT Security
+  authority: Department for Digital, Culture, Media & Sport
+  jurisdiction: UK
+  doc_type: guideline
+  url: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/778158/Code_of_Practice_for_Consumer_IoT_Security_October_2018.pdf
+  landing_page: https://www.gov.uk/government/publications/code-of-practice-for-consumer-iot-security
+  binding_status: advisory
+  issued: '2018-10-14'
+  in_force: 'yes'
+  amendments: none found
+  licence: Open Government Licence v3.0
+  gaps:
+  - GAP-IN-06
+  role: global_example
+  relevance: 3
+  why: Forms the foundational 13 principles adapted into ETSI EN 303 645 for securing
+    connected device endpoints.
+- rank: 150
+  id: sg-cybersecurity-amendment-act-2024
+  title: Cybersecurity (Amendment) Act 2024 (No. 19 of 2024)
+  authority: Parliament of Singapore
+  jurisdiction: SG
+  doc_type: act
+  url: https://sso.agc.gov.sg/Acts-Supp/19-2024/Published/20240704
+  landing_page: https://sso.agc.gov.sg
+  binding_status: binding
+  issued: '2024-07-04'
+  in_force: partly
+  amendments: Amends Cybersecurity Act 2018
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-06
+  - GAP-IN-09
+  role: global_example
+  relevance: 5
+  why: Regulates third-party owned CII (3PO CII), virtualized cloud systems, and systems
+    of temporary cybersecurity concern with mandatory incident reporting.
+- rank: 151
+  id: sg-imda-cop-tsr
+  title: Code of Practice for Telecommunication Service Resiliency (CoP TSR)
+  authority: Infocomm Media Development Authority
+  jurisdiction: SG
+  doc_type: standard
+  url: https://www.imda.gov.sg/assets/3ada6ed2-9110-4419-baa0-bc1966c510df.pdf
+  landing_page: https://www.imda.gov.sg
+  binding_status: binding
+  issued: 2013
+  in_force: 'yes'
+  amendments: Revised periodically
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-02
+  - GAP-IN-04
+  role: global_example
+  relevance: 5
+  why: Mandates proactive network resilience, outage thresholds, rapid restoration
+    times, and penalty frameworks for major service disruptions.
+- rank: 152
+  id: sg-telecom-act-1999
+  title: Telecommunications Act 1999
+  authority: Parliament of Singapore
+  jurisdiction: SG
+  doc_type: act
+  url: https://sso.agc.gov.sg/Act/TA1999
+  landing_page: https://sso.agc.gov.sg
+  binding_status: binding
+  issued: 1999
+  in_force: 'yes'
+  amendments: Current compilation 2020
+  licence: unknown
+  gaps:
+  - GAP-IN-03
+  - GAP-IN-06
+  role: global_example
+  relevance: 4
+  why: Empowers IMDA to issue codes of practice, emergency takeover directions, and
+    license conditions for telecommunications networks.
+- rank: 153
+  id: sg-imda-emergency-calling-guidelines
+  title: Advisory Guidelines on Emergency Call Services (995 and 999)
+  authority: Infocomm Media Development Authority
+  jurisdiction: SG
+  doc_type: guideline
+  url: https://www.imda.gov.sg/-/media/imda/files/regulation-licensing-and-consultations/frameworks-and-policies/emergency-services/advisory-guidelines-emergency-services.pdf
+  landing_page: https://www.imda.gov.sg
+  binding_status: advisory
+  issued: 2019
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-03
+  role: global_example
+  relevance: 4
+  why: Sets technical rules for carriage service providers to route 995/999 calls
+    with highest priority and provide accurate caller location data.
+- rank: 154
+  id: sg-csa-supply-chain-guidelines
+  title: Guidelines on Supply Chain Cybersecurity for Critical Information Infrastructure
+  authority: Cyber Security Agency of Singapore
+  jurisdiction: SG
+  doc_type: guideline
+  url: https://www.csa.gov.sg/-/media/csa/documents/legislation/csa-guidelines-on-supply-chain-cybersecurity-for-cii.pdf
+  landing_page: https://www.csa.gov.sg
+  binding_status: advisory
+  issued: '2021-10-06'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 4
+  why: Provides security guidance for CII owners on third-party vendor audits, firmware
+    provenance, and supply chain cyber risk management.
+- rank: 155
+  id: sg-csa-cloud-companion-ccop
+  title: Cloud Security Companion Guide to the Cybersecurity Code of Practice (CCoP)
+  authority: Cyber Security Agency of Singapore
+  jurisdiction: SG
+  doc_type: guideline
+  url: https://www.csa.gov.sg/-/media/csa/documents/legislation/ccop/cloud-security-companion-guide.pdf
+  landing_page: https://www.csa.gov.sg
+  binding_status: advisory
+  issued: 2022
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 4
+  why: Assists CII operators deploying core network workloads onto commercial cloud
+    platforms to meet mandatory CCoP security controls.
+- rank: 156
+  id: sg-cybersecurity-strategy-2021
+  title: Singapore Cybersecurity Strategy 2021
+  authority: Cyber Security Agency of Singapore
+  jurisdiction: SG
+  doc_type: strategy
+  url: https://www.csa.gov.sg/-/media/csa/documents/publications/singapore-cybersecurity-strategy-2021.pdf
+  landing_page: https://www.csa.gov.sg
+  binding_status: advisory
+  issued: '2021-10-05'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-09
+  role: global_example
+  relevance: 3
+  why: Outlines national strategic pillars including foundational digital infrastructure
+    defense, zero trust architecture, and international operational cooperation.
+- rank: 157
+  id: sg-csa-ai-security-guidelines-2024
+  title: Guidelines on Securing Artificial Intelligence (AI) Systems
+  authority: Cyber Security Agency of Singapore
+  jurisdiction: SG
+  doc_type: guideline
+  url: https://www.csa.gov.sg/-/media/csa/documents/publications/guidelines-on-securing-ai-systems.pdf
+  landing_page: https://www.csa.gov.sg
+  binding_status: advisory
+  issued: '2024-03-01'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 4
+  why: Provides controls against adversarial machine learning, model tampering, and
+    data poisoning for autonomous network management systems.
+- rank: 158
+  id: sg-imda-iot-cyber-guide
+  title: IoT Cyber Security Guide
+  authority: Infocomm Media Development Authority
+  jurisdiction: SG
+  doc_type: guideline
+  url: https://www.imda.gov.sg/-/media/imda/files/regulation-licensing-and-consultations/ict-standards/iot-cyber-security-guide.pdf
+  landing_page: https://www.imda.gov.sg
+  binding_status: advisory
+  issued: '2020-01-20'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  role: global_example
+  relevance: 3
+  why: Sets foundational security baselines for connected IoT devices including secure
+    boot, encrypted communication, and unique device credentials.
+- rank: 159
+  id: sg-csa-cls-scheme
+  title: Cybersecurity Labelling Scheme (CLS) Publication
+  authority: Cyber Security Agency of Singapore
+  jurisdiction: SG
+  doc_type: standard
+  url: https://www.csa.gov.sg/-/media/csa/documents/programmes/cls/cls-overview-and-specifications.pdf
+  landing_page: https://www.csa.gov.sg
+  binding_status: advisory
+  issued: 2020
+  in_force: 'yes'
+  amendments: Levels 1 to 4 defined
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  role: global_example
+  relevance: 3
+  why: Establishes tiered security ratings for consumer smart devices aligned with
+    ETSI EN 303 645.
+- rank: 160
+  id: sa-nca-ecc-2-2024
+  title: Essential Cybersecurity Controls (ECC 2-2024)
+  authority: National Cybersecurity Authority
+  jurisdiction: SA
+  doc_type: standard
+  url: https://nca.gov.sa/ecc-en.pdf
+  landing_page: https://nca.gov.sa/en/regulatory-documents/controls-list/ecc/
+  binding_status: binding
+  issued: 2024
+  in_force: 'yes'
+  amendments: Replaces ECC-1:2018
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-04
+  - GAP-IN-06
+  - GAP-IN-08
+  - GAP-IN-09
+  role: global_example
+  relevance: 5
+  why: Establishes mandatory baseline cybersecurity controls across governance, defense,
+    resilience, and third-party risk for national entities.
+- rank: 161
+  id: sa-cst-crf-ict
+  title: Cybersecurity Regulatory Framework (CRF) for the Information and Communications
+    Technology Sector
+  authority: Communications, Space and Technology Commission
+  jurisdiction: SA
+  doc_type: regulation
+  url: https://www.cst.gov.sa/en/regulations-and-licenses/regulations/Document-413
+  landing_page: https://www.cst.gov.sa
+  binding_status: binding
+  issued: 2021
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 5
+  why: Mandates rigorous cybersecurity controls and tiered compliance obligations
+    across all telecom, satellite, and cloud providers licensed by CST.
+- rank: 162
+  id: sa-nca-cscc-1-2019
+  title: Critical Systems Cybersecurity Controls (CSCC-1:2019)
+  authority: National Cybersecurity Authority
+  jurisdiction: SA
+  doc_type: standard
+  url: https://nca.gov.sa/cscc-en.pdf
+  landing_page: https://nca.gov.sa/en/regulatory-documents/controls-list/cscc/
+  binding_status: binding
+  issued: 2019
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-04
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 5
+  why: Mandates 32 core controls and 73 subcontrols for systems whose disruption threatens
+    national security, critical communications, or human safety.
+- rank: 163
+  id: sa-nca-ccc-1-2020
+  title: Cloud Cybersecurity Controls (CCC-1:2020)
+  authority: National Cybersecurity Authority
+  jurisdiction: SA
+  doc_type: standard
+  url: https://nca.gov.sa/ccc-en.pdf
+  landing_page: https://nca.gov.sa/en/regulatory-documents/controls-list/ccc/
+  binding_status: binding
+  issued: 2020
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 4
+  why: Imposes mandatory security controls on cloud service providers and tenants
+    hosting sensitive data and virtualized communications services.
+- rank: 164
+  id: sa-nca-tcc-1-2021
+  title: Telework Cybersecurity Controls (TCC-1:2021)
+  authority: National Cybersecurity Authority
+  jurisdiction: SA
+  doc_type: standard
+  url: https://nca.gov.sa/tcc-en.pdf
+  landing_page: https://nca.gov.sa/en/regulatory-documents/controls-list/tcc/
+  binding_status: binding
+  issued: 2021
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  role: global_example
+  relevance: 3
+  why: Prescribes remote access security requirements, multi-factor authentication,
+    and endpoint integrity verification for critical operations.
+- rank: 165
+  id: sa-cst-satellite-services-regulation
+  title: Regulations for the Provision of Satellite Communications Services
+  authority: Communications, Space and Technology Commission
+  jurisdiction: SA
+  doc_type: regulation
+  url: https://www.cst.gov.sa/en/regulations-and-licenses/regulations/Documents/Reg-Provision-Satellite-EN.pdf
+  landing_page: https://www.cst.gov.sa
+  binding_status: binding
+  issued: 2021
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Regulates landing rights, earth station authorizations, and cyber security
+    obligations for non-geostationary and geostationary satellite systems.
+- rank: 166
+  id: sa-cst-space-debris-regulations
+  title: Regulations for Space Debris Mitigation and Space Sustainability
+  authority: Communications, Space and Technology Commission
+  jurisdiction: SA
+  doc_type: regulation
+  url: https://www.cst.gov.sa/en/regulations-and-licenses/regulations/Documents/Space-Debris-Mitigation-Reg-EN.pdf
+  landing_page: https://www.cst.gov.sa
+  binding_status: binding
+  issued: 2023
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-09
+  role: global_example
+  relevance: 3
+  why: Imposes collision avoidance, post-mission disposal, and safe operational guidelines
+    for space objects licensed in Saudi Arabia.
+- rank: 167
+  id: sa-nca-incident-management-controls
+  title: Cybersecurity Incident Management Controls (CIMC-1:2021)
+  authority: National Cybersecurity Authority
+  jurisdiction: SA
+  doc_type: standard
+  url: https://nca.gov.sa/cimc-en.pdf
+  landing_page: https://nca.gov.sa/en/regulatory-documents/controls-list/
+  binding_status: binding
+  issued: 2021
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-02
+  role: global_example
+  relevance: 5
+  why: Specifies incident classification, notification escalation paths, and timelines
+    for reporting severe cyber events to the national CSIRT.
+- rank: 168
+  id: sa-cst-emergency-telecom-plan
+  title: National Emergency Telecommunications Plan (NETP)
+  authority: Communications, Space and Technology Commission
+  jurisdiction: SA
+  doc_type: sop
+  url: https://www.cst.gov.sa/en/mediacenter/pressreleases/Documents/NETP-EN.pdf
+  landing_page: https://www.cst.gov.sa
+  binding_status: binding
+  issued: 2022
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-03
+  - GAP-IN-04
+  role: global_example
+  relevance: 4
+  why: Defines operational coordination, priority traffic restoration, and backup
+    power mandates for telecommunications infrastructure during major crises.
+- rank: 169
+  id: sa-national-cybersecurity-strategy
+  title: National Cybersecurity Strategy of the Kingdom of Saudi Arabia
+  authority: National Cybersecurity Authority
+  jurisdiction: SA
+  doc_type: strategy
+  url: https://nca.gov.sa/strategy-en.pdf
+  landing_page: https://nca.gov.sa
+  binding_status: advisory
+  issued: 2020
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-09
+  role: global_example
+  relevance: 3
+  why: Defines strategic objectives to protect critical infrastructure, enhance national
+    cyber defense, and stimulate industrial cybersecurity capabilities.
+- rank: 170
+  id: br-anatel-res-740-2020
+  title: 'Resolução nº 740, de 21 de dezembro de 2020: Regulamento de Segurança Cibernética
+    Aplicada ao Setor de Telecomunicações'
+  authority: Agência Nacional de Telecomunicações
+  jurisdiction: BR
+  doc_type: regulation
+  url: https://informacoes.anatel.gov.br/legislacao/resolucoes/2020/1497-resolucao-740
+  landing_page: https://informacoes.anatel.gov.br/legislacao/index.php/component/content/article?id=1497
+  binding_status: binding
+  issued: '2020-12-21'
+  in_force: yes (2021-01-04)
+  amendments: Amended by Resolução nº 767/2024
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-06
+  - GAP-IN-08
+  - GAP-IN-09
+  role: global_example
+  relevance: 5
+  why: Establishes mandatory cybersecurity governance, vulnerability assessments,
+    and incident reporting for telecommunications networks.
+- rank: 171
+  id: br-anatel-res-767-2024
+  title: Resolução nº 767, de 7 de agosto de 2024 (Altera o Regulamento de Segurança
+    Cibernética)
+  authority: Agência Nacional de Telecomunicações
+  jurisdiction: BR
+  doc_type: regulation
+  url: https://informacoes.anatel.gov.br/legislacao/resolucoes/2024/1990-resolucao-767
+  landing_page: https://informacoes.anatel.gov.br/legislacao/resolucoes/2020/1497-resolucao-740
+  binding_status: binding
+  issued: '2024-08-07'
+  in_force: yes (2024-08-08)
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 5
+  why: Expands ex-ante critical infrastructure controls to submarine cable operators,
+    mobile network operators, and data transport wholesale providers.
+- rank: 172
+  id: br-anatel-portaria-2899-2024
+  title: Portaria Anatel nº 2899, de 16 de setembro de 2024 (Identificação de Prestadoras
+    Sujeitas ao R-Ciber)
+  authority: Agência Nacional de Telecomunicações
+  jurisdiction: BR
+  doc_type: order
+  url: https://informacoes.anatel.gov.br/legislacao/portarias-de-fiscalizacao/2024/1995-portaria-2899
+  landing_page: https://informacoes.anatel.gov.br
+  binding_status: binding
+  issued: '2024-09-16'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Nominally lists covered telecommunications infrastructure operators subject
+    to heightened cyber audits and vulnerability remediation.
+- rank: 173
+  id: br-anatel-res-717-2019-continuidade
+  title: 'Resolução nº 717, de 23 de dezembro de 2019: Regulamento de Continuidade
+    dos Serviços de Telecomunicações'
+  authority: Agência Nacional de Telecomunicações
+  jurisdiction: BR
+  doc_type: regulation
+  url: https://informacoes.anatel.gov.br/legislacao/resolucoes/2019/1359-resolucao-717
+  landing_page: https://informacoes.anatel.gov.br
+  binding_status: binding
+  issued: '2019-12-23'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-03
+  - GAP-IN-04
+  - GAP-IN-08
+  role: global_example
+  relevance: 5
+  why: Mandates business continuity and network redundancy plans to guarantee critical
+    service continuity during electrical and systemic failures.
+- rank: 174
+  id: br-lgpd-lei-13709-2018
+  title: 'Lei nº 13.709, de 14 de agosto de 2018: Lei Geral de Proteção de Dados Pessoais
+    (LGPD)'
+  authority: Presidência da República
+  jurisdiction: BR
+  doc_type: act
+  url: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm
+  landing_page: https://www.gov.br/anpd
+  binding_status: binding
+  issued: '2018-08-14'
+  in_force: 'yes'
+  amendments: Amended by Lei nº 13.853/2019
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-02
+  role: global_example
+  relevance: 4
+  why: Article 48 requires data controllers to communicate security incidents that
+    may create relevant risk or damage to the national authority (ANPD) and affected
+    data subjects.
+- rank: 175
+  id: br-decreto-10222-2020-eciber
+  title: 'Decreto nº 10.222, de 5 de fevereiro de 2020: Aprova a Estratégia Nacional
+    de Segurança Cibernética (E-Ciber)'
+  authority: Presidência da República
+  jurisdiction: BR
+  doc_type: regulation
+  url: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/decreto/d10222.htm
+  landing_page: https://www.gov.br/gsi
+  binding_status: binding
+  issued: '2020-02-05'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Establishes national cybersecurity governance, protection of critical information
+    infrastructures, and coordinated incident handling.
+- rank: 176
+  id: br-marco-civil-internet-lei-12965
+  title: 'Lei nº 12.965, de 23 de abril de 2014: Marco Civil da Internet'
+  authority: Presidência da República
+  jurisdiction: BR
+  doc_type: act
+  url: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm
+  landing_page: https://www.planalto.gov.br
+  binding_status: binding
+  issued: '2014-04-23'
+  in_force: 'yes'
+  amendments: Amended by Lei nº 14.874/2024
+  licence: unknown
+  gaps:
+  - GAP-IN-03
+  - GAP-IN-06
+  role: global_example
+  relevance: 3
+  why: Article 9 establishes net neutrality principles while allowing prioritized
+    traffic management necessary for technical emergency requirements.
+- rank: 177
+  id: br-decreto-10748-2021-rgic
+  title: 'Decreto nº 10.748, de 16 de julho de 2021: Institui a Rede Federal de Gestão
+    de Incidentes Cibernéticos'
+  authority: Presidência da República
+  jurisdiction: BR
+  doc_type: regulation
+  url: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/decreto/d10748.htm
+  landing_page: https://www.gov.br/gsi
+  binding_status: binding
+  issued: '2021-07-16'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-02
+  role: global_example
+  relevance: 4
+  why: Creates the federal incident management network and sets notification protocols
+    for cyber attacks targeting federal critical digital assets.
+- rank: 178
+  id: jp-cybersecurity-basic-act-2014
+  title: Basic Act on Cybersecurity (Act No. 104 of 2014)
+  authority: National Diet of Japan
+  jurisdiction: JP
+  doc_type: act
+  url: https://www.japaneselawtranslation.go.jp/en/laws/view/3160/en
+  landing_page: https://www.nisc.go.jp
+  binding_status: binding
+  issued: '2014-11-12'
+  in_force: 'yes'
+  amendments: Amended by Act No. 67 of 2018
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-06
+  - GAP-IN-09
+  role: global_example
+  relevance: 5
+  why: Establishes the Cybersecurity Strategic Headquarters (NISC), setting national
+    policy to protect critical information infrastructure operators.
+- rank: 179
+  id: jp-space-basic-act-2008
+  title: Space Basic Act (Act No. 43 of 2008)
+  authority: National Diet of Japan
+  jurisdiction: JP
+  doc_type: act
+  url: https://www.japaneselawtranslation.go.jp/en/laws/view/2857/en
+  landing_page: https://www.cao.go.jp
+  binding_status: binding
+  issued: '2008-05-28'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Sets fundamental principles for space development and use, ensuring peace,
+    national security, and disaster prevention capabilities.
+- rank: 180
+  id: jp-space-activities-act-2016
+  title: Act on Launching of Spacecraft, etc. and Control of Spacecraft (Act No. 76
+    of 2016)
+  authority: National Diet of Japan
+  jurisdiction: JP
+  doc_type: act
+  url: https://www.japaneselawtranslation.go.jp/en/laws/view/3642/en
+  landing_page: https://www.cao.go.jp
+  binding_status: binding
+  issued: '2016-11-16'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Regulates spacecraft launch permits and satellite control licensing, requiring
+    measures to prevent loss of satellite control.
+- rank: 181
+  id: jp-mic-telecom-cybersecurity-guidelines
+  title: Guidelines for Information Security Measures in Telecommunications Businesses
+  authority: Ministry of Internal Affairs and Communications
+  jurisdiction: JP
+  doc_type: guideline
+  url: https://www.soumu.go.jp/main_content/000788392.pdf
+  landing_page: https://www.tele.soumu.go.jp
+  binding_status: advisory
+  issued: 2021
+  in_force: 'yes'
+  amendments: 5th Edition
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 4
+  why: Provides detailed technical requirements for telecom providers to counter cyber
+    attacks, secure routing control planes, and protect signalling.
+- rank: 182
+  id: jp-nisc-cii-policy-5th
+  title: The 5th Cybersecurity Policy for Critical Infrastructure Protection
+  authority: National center of Incident readiness and Strategy for Cybersecurity
+    (NISC)
+  jurisdiction: JP
+  doc_type: policy
+  url: https://www.nisc.go.jp/eng/pdf/actionplan_cip_5th_eng.pdf
+  landing_page: https://www.nisc.go.jp/eng/
+  binding_status: binding
+  issued: '2022-06-17'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 5
+  why: Requires critical infrastructure operators including telecommunications to
+    establish cross-sector information sharing and incident reporting.
+- rank: 183
+  id: jp-disaster-countermeasures-act-1961
+  title: Disaster Countermeasures Basic Act (Act No. 223 of 1961)
+  authority: National Diet of Japan
+  jurisdiction: JP
+  doc_type: act
+  url: https://www.japaneselawtranslation.go.jp/en/laws/view/1953/en
+  landing_page: https://www.bousai.go.jp
+  binding_status: binding
+  issued: '1961-11-15'
+  in_force: 'yes'
+  amendments: Frequently amended; recent revision 2021
+  licence: unknown
+  gaps:
+  - GAP-IN-03
+  - GAP-IN-04
+  role: global_example
+  relevance: 4
+  why: Designates telecommunications and satellite operators as designated public
+    corporations with statutory duties to maintain emergency communications.
+- rank: 184
+  id: jp-mic-telecom-accident-reporting-rules
+  title: 'Regulations for Enforcement of the Telecommunications Business Act: Incident
+    Reporting Standards'
+  authority: Ministry of Internal Affairs and Communications
+  jurisdiction: JP
+  doc_type: regulation
+  url: https://www.tele.soumu.go.jp/e/adm/infra/index.htm
+  landing_page: https://www.tele.soumu.go.jp
+  binding_status: binding
+  issued: 1985
+  in_force: 'yes'
+  amendments: Amended 2022 (Ordinance No. 30)
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-02
+  role: global_example
+  relevance: 4
+  why: Imposes strict outage reporting thresholds (affecting 30,000+ users for 2+
+    hours or emergency call disruptions for 1+ hour) to the Minister.
+- rank: 185
+  id: jp-telecom-business-act-disaster-priority
+  title: 'Telecommunications Business Act (Act No. 86 of 1984): Article 8 (Securing
+    Important Communications)'
+  authority: National Diet of Japan
+  jurisdiction: JP
+  doc_type: act
+  url: https://www.japaneselawtranslation.go.jp/en/laws/view/4279/en
+  landing_page: https://www.japaneselawtranslation.go.jp
+  binding_status: binding
+  issued: '1984-12-25'
+  in_force: 'yes'
+  amendments: Latest compilation 2022
+  licence: unknown
+  gaps:
+  - GAP-IN-03
+  role: global_example
+  relevance: 5
+  why: Statutorily permits telecommunications carriers to suspend or restrict general
+    communications to prioritize essential emergency and disaster communications.
+- rank: 186
+  id: ca-radiocommunication-act-1985
+  title: Radiocommunication Act (R.S.C., 1985, c. R-2)
+  authority: Parliament of Canada
+  jurisdiction: CA
+  doc_type: act
+  url: https://laws-lois.justice.gc.ca/PDF/R-2.pdf
+  landing_page: https://laws-lois.justice.gc.ca/eng/acts/r-2/
+  binding_status: binding
+  issued: 1985
+  in_force: 'yes'
+  amendments: Current to 2024
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Authorizes the Minister of Innovation, Science and Economic Development (ISED)
+    to regulate satellite orbital positions, spectrum licences, and apparatus security.
+- rank: 187
+  id: ca-telecom-act-1993
+  title: Telecommunications Act (S.C. 1993, c. 38)
+  authority: Parliament of Canada
+  jurisdiction: CA
+  doc_type: act
+  url: https://laws-lois.justice.gc.ca/PDF/T-3.4.pdf
+  landing_page: https://laws-lois.justice.gc.ca/eng/acts/t-3.4/
+  binding_status: binding
+  issued: '1993-06-23'
+  in_force: 'yes'
+  amendments: Current to 2024; pending amendments in Bill C-26
+  licence: unknown
+  gaps:
+  - GAP-IN-03
+  - GAP-IN-06
+  role: global_example
+  relevance: 4
+  why: Empowers the CRTC to establish conditions for service provision, emergency
+    call routing, and network interconnection standards.
+- rank: 188
+  id: ca-emergency-management-act-2007
+  title: Emergency Management Act (S.C. 2007, c. 15)
+  authority: Parliament of Canada
+  jurisdiction: CA
+  doc_type: act
+  url: https://laws-lois.justice.gc.ca/PDF/E-4.56.pdf
+  landing_page: https://laws-lois.justice.gc.ca/eng/acts/e-4.56/
+  binding_status: binding
+  issued: '2007-06-22'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-03
+  role: global_example
+  relevance: 4
+  why: Mandates federal ministers identify critical infrastructure risks and maintain
+    emergency preparedness and business continuity arrangements.
+- rank: 189
+  id: ca-remote-sensing-space-systems-act
+  title: Remote Sensing Space Systems Act (S.C. 2005, c. 45)
+  authority: Parliament of Canada
+  jurisdiction: CA
+  doc_type: act
+  url: https://laws-lois.justice.gc.ca/PDF/R-5.4.pdf
+  landing_page: https://laws-lois.justice.gc.ca/eng/acts/r-5.4/
+  binding_status: binding
+  issued: '2005-11-25'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Imposes strict command link encryption and operational security controls on
+    Canadian remote sensing and earth observation satellite operators.
+- rank: 190
+  id: ca-crtc-policy-2023-388-ng911
+  title: 'Telecom Regulatory Policy CRTC 2023-388: Next-Generation 9-1-1 Service Resiliency
+    and Funding'
+  authority: Canadian Radio-television and Telecommunications Commission
+  jurisdiction: CA
+  doc_type: regulation
+  url: https://crtc.gc.ca/eng/archive/2023/2023-388.pdf
+  landing_page: https://crtc.gc.ca/eng/archive/2023/2023-388.htm
+  binding_status: binding
+  issued: '2023-11-23'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-03
+  - GAP-IN-04
+  role: global_example
+  relevance: 5
+  why: Establishes mandatory diversity, backup power, and mutual assistance obligations
+    for carriers providing Next-Generation 9-1-1 networks.
+- rank: 191
+  id: ca-cccs-itsg-33
+  title: 'IT Security Risk Management: A Lifecycle Approach (ITSG-33)'
+  authority: Canadian Centre for Cyber Security
+  jurisdiction: CA
+  doc_type: guideline
+  url: https://www.cyber.gc.ca/sites/default/files/2022-06/itsg-33-eng.pdf
+  landing_page: https://www.cyber.gc.ca/en/guidance/it-security-risk-management-lifecycle-approach-itsg-33
+  binding_status: advisory
+  issued: 2012
+  in_force: 'yes'
+  amendments: Periodic updates
+  licence: unknown
+  gaps:
+  - GAP-IN-04
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 4
+  why: Catalogues security controls for power resilience, physical tamper prevention,
+    and failover validation across IT and OT systems.
+- rank: 192
+  id: ca-cccs-itsp-10-020-cii
+  title: Cyber Security Guidance for Critical Infrastructure (ITSP.10.020)
+  authority: Canadian Centre for Cyber Security
+  jurisdiction: CA
+  doc_type: guideline
+  url: https://www.cyber.gc.ca/sites/default/files/2023-01/ITSP.10.020-eng.pdf
+  landing_page: https://www.cyber.gc.ca
+  binding_status: advisory
+  issued: '2023-01-10'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 4
+  why: Provides baseline cybersecurity controls, segmentation, and continuous telemetry
+    monitoring recommendations for critical infrastructure owners.
+- rank: 193
+  id: ca-space-strategy-2019
+  title: 'Exploration, Imagination, Innovation: A New Space Strategy for Canada'
+  authority: Canadian Space Agency
+  jurisdiction: CA
+  doc_type: strategy
+  url: https://www.asc-csa.gc.ca/pdf/eng/publications/space-strategy-for-canada.pdf
+  landing_page: https://www.asc-csa.gc.ca
+  binding_status: advisory
+  issued: 2019
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-09
+  role: global_example
+  relevance: 3
+  why: Emphasizes securing satellite communications and space assets as vital contributors
+    to national sovereignty and remote connectivity.
+- rank: 194
+  id: nz-ticsa-2013
+  title: Telecommunications (Interception Capability and Security) Act 2013
+  authority: Parliament of New Zealand
+  jurisdiction: NZ
+  doc_type: act
+  url: https://www.legislation.govt.nz/act/public/2013/0091/latest/whole.html
+  landing_page: https://www.legislation.govt.nz/act/public/2013/0091/latest/DLM5170701.html
+  binding_status: binding
+  issued: '2013-11-11'
+  in_force: 'yes'
+  amendments: Current compilation 2023
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 5
+  why: Part 3 requires network operators to notify the GCSB Director-General of proposed
+    changes that may raise national security cyber risks.
+- rank: 195
+  id: nz-oshaa-2017
+  title: Outer Space and High-altitude Activities Act 2017
+  authority: Parliament of New Zealand
+  jurisdiction: NZ
+  doc_type: act
+  url: https://www.legislation.govt.nz/act/public/2017/0029/latest/whole.html
+  landing_page: https://www.legislation.govt.nz/act/public/2017/0029/latest/DLM6966602.html
+  binding_status: binding
+  issued: '2017-07-10'
+  in_force: 'yes'
+  amendments: Current compilation 2022
+  licence: unknown
+  gaps:
+  - GAP-IN-09
+  role: global_example
+  relevance: 5
+  why: Regulates space launches, payload permits, and overseas launches, mandating
+    risk management and alignment with international liability treaties.
+- rank: 196
+  id: nz-cdem-act-2002
+  title: 'Civil Defence Emergency Management Act 2002 (Part 5: Lifeline Utilities)'
+  authority: Parliament of New Zealand
+  jurisdiction: NZ
+  doc_type: act
+  url: https://www.legislation.govt.nz/act/public/2002/0033/latest/whole.html
+  landing_page: https://www.legislation.govt.nz/act/public/2002/0033/latest/DLM149789.html
+  binding_status: binding
+  issued: '2002-10-16'
+  in_force: 'yes'
+  amendments: Current compilation 2023
+  licence: unknown
+  gaps:
+  - GAP-IN-03
+  - GAP-IN-04
+  role: global_example
+  relevance: 5
+  why: Imposes statutory duties on telecommunications and energy entities as lifeline
+    utilities to ensure service continuity and emergency functioning.
+- rank: 197
+  id: nz-cdem-plan-order-2015
+  title: National Civil Defence Emergency Management Plan Order 2015
+  authority: Governor-General of New Zealand
+  jurisdiction: NZ
+  doc_type: regulation
+  url: https://www.legislation.govt.nz/regulation/public/2015/0140/latest/whole.html
+  landing_page: https://www.legislation.govt.nz/regulation/public/2015/0140/latest/DLM6486401.html
+  binding_status: binding
+  issued: '2015-06-08'
+  in_force: 'yes'
+  amendments: Amended 2023
+  licence: unknown
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-03
+  - GAP-IN-04
+  role: global_example
+  relevance: 4
+  why: Details operational coordination, priority telecommunications restoration,
+    and warning protocols during national civil defense emergencies.
+- rank: 198
+  id: nz-ncsc-nzism
+  title: New Zealand Information Security Manual (NZISM)
+  authority: Government Communications Security Bureau / NCSC
+  jurisdiction: NZ
+  doc_type: standard
+  url: https://www.nzism.gcsb.govt.nz/assets/Uploads/NZISM-PDF/NZISM-Full-Document-v3.8.pdf
+  landing_page: https://www.nzism.gcsb.govt.nz/
+  binding_status: binding
+  issued: 2023
+  in_force: 'yes'
+  amendments: Version 3.8 (updated periodically)
+  licence: unknown
+  gaps:
+  - GAP-IN-04
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 4
+  why: Prescribes mandatory technical security controls for government networks and
+    CII, including power resilience, cryptography, and logging.
+- rank: 199
+  id: nz-tcf-emergency-calling-code
+  title: Emergency Calling Code (TCF Emergency Calling Code 2021)
+  authority: Telecommunications Forum of New Zealand / Commerce Commission
+  jurisdiction: NZ
+  doc_type: standard
+  url: https://www.tcf.org.nz/assets/codes/emergency-calling-code.pdf
+  landing_page: https://www.tcf.org.nz
+  binding_status: binding
+  issued: 2021
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-03
+  role: global_example
+  relevance: 4
+  why: Specifies requirements for handling 111 emergency calls, mobile emergency call
+    prioritization, and location information delivery.
+- rank: 200
+  id: nz-space-policy-framework-2022
+  title: Aotearoa New Zealand Aerospace Strategy and Space Policy Framework
+  authority: Ministry of Business, Innovation and Employment (MBIE)
+  jurisdiction: NZ
+  doc_type: strategy
+  url: https://www.mbie.govt.nz/dmsdocument/23573-national-space-policy.pdf
+  landing_page: https://www.mbie.govt.nz
+  binding_status: advisory
+  issued: '2023-05-31'
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-09
+  role: global_example
+  relevance: 3
+  why: Sets policy values protecting national security and peaceful uses of space,
+    emphasizing space system resilience and international cooperation.
+- rank: 201
+  id: nz-ncsc-cyber-standards-voluntary
+  title: Voluntary Cyber Security Standards for Critical National Infrastructure
+  authority: National Cyber Security Centre (NCSC New Zealand)
+  jurisdiction: NZ
+  doc_type: guideline
+  url: https://www.ncsc.govt.nz/assets/NCSC-Documents/NCSC-Cyber-Security-Governance.pdf
+  landing_page: https://www.ncsc.govt.nz
+  binding_status: advisory
+  issued: 2022
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 3
+  why: Recommends cybersecurity governance, incident handling, and third-party risk
+    management practices for essential infrastructure providers.
+- rank: 202
+  id: intl-outer-space-treaty-1967
+  title: Treaty on Principles Governing the Activities of States in the Exploration
+    and Use of Outer Space, including the Moon and Other Celestial Bodies
+  authority: United Nations General Assembly
+  jurisdiction: INTL
+  doc_type: treaty
+  url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/outerspacetreaty.html
+  landing_page: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/outerspacetreaty.html
+  binding_status: binding
+  issued: '1967-01-27'
+  in_force: yes (1967-10-10)
+  amendments: none found
+  licence: United Nations copyright
+  gaps:
+  - GAP-IN-09
+  role: context
+  relevance: 4
+  why: Article VI establishes international responsibility of States for national
+    space activities (including non-governmental commercial satellite operators).
+- rank: 203
+  id: intl-liability-convention-1972
+  title: Convention on International Liability for Damage Caused by Space Objects
+  authority: United Nations General Assembly
+  jurisdiction: INTL
+  doc_type: treaty
+  url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/liability-convention.html
+  landing_page: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/introliability-convention.html
+  binding_status: binding
+  issued: '1972-03-29'
+  in_force: yes (1972-09-01)
+  amendments: none found
+  licence: United Nations copyright
+  gaps:
+  - GAP-IN-09
+  role: context
+  relevance: 3
+  why: Sets international liability rules for damage caused by space objects, establishing
+    absolute liability on Earth and fault-based liability in outer space.
+- rank: 204
+  id: intl-registration-convention-1975
+  title: Convention on Registration of Objects Launched into Outer Space
+  authority: United Nations General Assembly
+  jurisdiction: INTL
+  doc_type: treaty
+  url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/registration-convention.html
+  landing_page: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/registration-convention.html
+  binding_status: binding
+  issued: '1975-11-12'
+  in_force: yes (1976-09-15)
+  amendments: none found
+  licence: United Nations copyright
+  gaps:
+  - GAP-IN-09
+  role: context
+  relevance: 3
+  why: Requires launching States to maintain a national registry and furnish orbital
+    parameters to the UN Secretary-General for identification.
+- rank: 205
+  id: intl-rescue-agreement-1968
+  title: Agreement on the Rescue of Astronauts, the Return of Astronauts and the Return
+    of Objects Launched into Outer Space
+  authority: United Nations General Assembly
+  jurisdiction: INTL
+  doc_type: treaty
+  url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/rescueagreement.html
+  landing_page: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/rescueagreement.html
+  binding_status: binding
+  issued: '1968-04-22'
+  in_force: yes (1968-12-03)
+  amendments: none found
+  licence: United Nations copyright
+  gaps:
+  - GAP-IN-09
+  role: context
+  relevance: 2
+  why: Governs notification and recovery obligations when space objects or their component
+    parts return to Earth outside the launching authority's territory.
+- rank: 206
+  id: intl-unoosa-lts-guidelines-2019
+  title: Guidelines for the Long-term Sustainability of Outer Space Activities (A/74/20,
+    Annex II)
+  authority: United Nations Committee on the Peaceful Uses of Outer Space (COPUOS)
+  jurisdiction: INTL
+  doc_type: guideline
+  url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/guidelines-long-term-sustainability-outer-space-activities.html
+  landing_page: https://www.unoosa.org
+  binding_status: advisory
+  issued: '2019-06-21'
+  in_force: 'yes'
+  amendments: none found
+  licence: United Nations copyright
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Guideline B.8 and C.1 recommend States share space situational awareness and
+    establish regulatory measures to protect space systems against cyber threats.
+- rank: 207
+  id: intl-unoosa-debris-guidelines-2007
+  title: Space Debris Mitigation Guidelines of the Committee on the Peaceful Uses
+    of Outer Space
+  authority: United Nations General Assembly / COPUOS
+  jurisdiction: INTL
+  doc_type: guideline
+  url: https://www.unoosa.org/pdf/publications/st_space_49E.pdf
+  landing_page: https://www.unoosa.org/oosa/en/ourwork/topics/space-debris/index.html
+  binding_status: advisory
+  issued: 2007
+  in_force: 'yes'
+  amendments: none found
+  licence: United Nations copyright
+  gaps:
+  - GAP-IN-09
+  role: context
+  relevance: 3
+  why: Sets voluntary technical guidelines for minimizing orbital debris generation,
+    intentional break-ups, and post-mission disposal.
+- rank: 208
+  id: intl-unoosa-space-object-resources
+  title: Resources on space object registration
+  authority: United Nations Office for Outer Space Affairs
+  jurisdiction: INTL
+  doc_type: guideline
+  url: https://www.unoosa.org/oosa/spaceobjectregister/resources/index.html
+  landing_page: https://www.unoosa.org/oosa/spaceobjectregister/resources/index.html
+  binding_status: advisory
+  issued: 2022
+  in_force: 'yes'
+  amendments: none found
+  licence: United Nations copyright
+  gaps:
+  - GAP-IN-09
+  role: context
+  relevance: 2
+  why: Provides guidance, forms, and procedures for submitting satellite registration
+    filings under the Registration Convention and GA Res 1721 B.
+- rank: 209
+  id: intl-undrr-sendai-framework-2015
+  title: Sendai Framework for Disaster Risk Reduction 2015–2030
+  authority: United Nations General Assembly / UNDRR
+  jurisdiction: INTL
+  doc_type: framework
+  url: https://www.preventionweb.net/files/43291_sendaiframeworkfordrren.pdf
+  landing_page: https://www.undrr.org/publication/sendai-framework-disaster-risk-reduction-2015-2030
+  binding_status: advisory
+  issued: '2015-03-18'
+  in_force: 'yes'
+  amendments: none found
+  licence: United Nations copyright
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-03
+  - GAP-IN-04
+  role: global_example
+  relevance: 4
+  why: Priority 4 calls for enhancing disaster preparedness for effective response,
+    including investing in resilient telecommunications and early warning systems.
+- rank: 210
+  id: intl-un-spider-res-61-110
+  title: 'United Nations General Assembly Resolution 61/110: UN-SPIDER'
+  authority: United Nations General Assembly
+  jurisdiction: INTL
+  doc_type: resolution
+  url: https://www.unoosa.org/pdf/gadocs/A_RES_61_110E.pdf
+  landing_page: https://www.unoosa.org/oosa/en/ourwork/un-spider/index.html
+  binding_status: advisory
+  issued: '2006-12-14'
+  in_force: 'yes'
+  amendments: none found
+  licence: United Nations copyright
+  gaps:
+  - GAP-IN-02
+  role: context
+  relevance: 3
+  why: Establishes UN-SPIDER to ensure all countries have access to and capacity to
+    use space-based information for disaster risk management and emergency response.
+- rank: 211
+  id: intl-ccsds-355-0-b-2
+  title: Space Data Link Security Protocol (CCSDS 355.0-B-2)
+  authority: Consultative Committee for Space Data Systems
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://ccsds.org/Pubs/355x0b2.pdf
+  landing_page: https://public.ccsds.org/Pubs/
+  binding_status: advisory
+  issued: 2022-07
+  in_force: 'yes'
+  amendments: Blue Book; replaces 355.0-B-1 (2015)
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  - GAP-IN-09
+  role: global_example
+  relevance: 5
+  why: Defines security protocols for TC and TM space data links providing authentication,
+    data integrity, and confidentiality against command injection.
+- rank: 212
+  id: intl-ccsds-352-0-b-1
+  title: Cryptographic Algorithms (CCSDS 352.0-B-1)
+  authority: Consultative Committee for Space Data Systems
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://ccsds.org/Pubs/352x0b1s.pdf
+  landing_page: https://public.ccsds.org/Pubs/
+  binding_status: advisory
+  issued: 2012-11
+  in_force: 'yes'
+  amendments: Blue Book
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  role: global_example
+  relevance: 4
+  why: Specifies approved symmetric cryptographic algorithms (AES-GCM, AES-CBC) for
+    encryption and authentication across space missions.
+- rank: 213
+  id: intl-ccsds-350-0-g-2
+  title: The Application of CCSDS Protocols to Secure Systems (CCSDS 350.0-G-2)
+  authority: Consultative Committee for Space Data Systems
+  jurisdiction: INTL
+  doc_type: guideline
+  url: https://ccsds.org/Pubs/350x0g2s.pdf
+  landing_page: https://public.ccsds.org/Pubs/
+  binding_status: advisory
+  issued: 2006-03
+  in_force: 'yes'
+  amendments: Green Book
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Provides architectural concepts and guidance on mapping security services onto
+    CCSDS space communications link protocols.
+- rank: 214
+  id: intl-ccsds-350-1-g-3
+  title: Security Threats against Space Missions (CCSDS 350.1-G-3)
+  authority: Consultative Committee for Space Data Systems
+  jurisdiction: INTL
+  doc_type: report
+  url: https://ccsds.org/Pubs/350x1g3.pdf
+  landing_page: https://public.ccsds.org/Pubs/
+  binding_status: advisory
+  issued: 2021-04
+  in_force: 'yes'
+  amendments: Green Book; replaces 350.1-G-2
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: global_example
+  relevance: 5
+  why: Catalogues threat vectors across ground, link, and space segments including
+    RF jamming, command spoofing, replay, and eavesdropping.
+- rank: 215
+  id: intl-ccsds-350-5-g-1
+  title: Space Data Link Security Protocol—Summary of Concept and Rationale (CCSDS
+    350.5-G-1)
+  authority: Consultative Committee for Space Data Systems
+  jurisdiction: INTL
+  doc_type: report
+  url: https://ccsds.org/Pubs/350x5g1s.pdf
+  landing_page: https://public.ccsds.org/Pubs/
+  binding_status: advisory
+  issued: 2018-06
+  in_force: 'yes'
+  amendments: Green Book
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Explains operational concepts, service models, and security association management
+    for the Space Data Link Security (SDLS) protocol.
+- rank: 216
+  id: intl-ccsds-350-7-g-1
+  title: Spacecraft On-Board Interface Security (CCSDS 350.7-G-1)
+  authority: Consultative Committee for Space Data Systems
+  jurisdiction: INTL
+  doc_type: guideline
+  url: https://ccsds.org/Pubs/350x7g1.pdf
+  landing_page: https://ccsds.org/publications/allpubs/entry/3136/
+  binding_status: advisory
+  issued: 2019-10
+  in_force: 'yes'
+  amendments: Green Book
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 4
+  why: Identifies cyber security vulnerabilities and mitigations for spacecraft internal
+    communications buses and sub-system interfaces.
+- rank: 217
+  id: intl-ccsds-351-0-m-1
+  title: Security Architecture for Space Data Systems (CCSDS 351.0-M-1)
+  authority: Consultative Committee for Space Data Systems
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://ccsds.org/Pubs/351x0m1.pdf
+  landing_page: https://public.ccsds.org/Pubs/
+  binding_status: advisory
+  issued: 2012-11
+  in_force: 'yes'
+  amendments: Magenta Book
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Recommends end-to-end security architectures, key management practices, and
+    security zones across space flight and ground systems.
+- rank: 218
+  id: intl-ccsds-355-1-b-1
+  title: Space Data Link Security over CCSDS Telecommand Space Data Link Protocol
+    (CCSDS 355.1-B-1)
+  authority: Consultative Committee for Space Data Systems
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://ccsds.org/Pubs/355x1b1.pdf
+  landing_page: https://public.ccsds.org/Pubs/
+  binding_status: advisory
+  issued: 2020-04
+  in_force: 'yes'
+  amendments: Blue Book
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 4
+  why: Specifies procedures for applying authenticated encryption and anti-replay
+    counters to telecommand frames.
+- rank: 219
+  id: intl-ecss-e-st-80c
+  title: Space engineering – Security in space systems lifecycles (ECSS-E-ST-80C)
+  authority: European Cooperation for Space Standardization
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://ecss.nl/standard/ecss-e-st-80c-space-engineering-security-in-space-systems-lifecycles/
+  landing_page: https://ecss.nl
+  binding_status: binding
+  issued: '2023-09-15'
+  in_force: 'yes'
+  amendments: none found
+  licence: free registration required
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  - GAP-IN-09
+  role: global_example
+  relevance: 5
+  why: Prescribes mandatory security engineering requirements across space, ground,
+    launch, and operations segments throughout the mission lifecycle.
+- rank: 220
+  id: intl-esa-cyber-resilience-framework
+  title: ESA Cyber Resilience Policy and C-SOC Operations
+  authority: European Space Agency
+  jurisdiction: INTL
+  doc_type: policy
+  url: https://www.esa.int/Space_Safety/Cyber_resilience/Cyber_resilience2
+  landing_page: https://www.esa.int
+  binding_status: advisory
+  issued: 2023
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-06
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Details ESA's cyber defense architecture, Cyber Security Operations Centre
+    monitoring, and space mission cyber incident response.
+- rank: 221
+  id: intl-ecss-q-st-80c
+  title: Space product assurance – Software product assurance (ECSS-Q-ST-80C Rev.1)
+  authority: European Cooperation for Space Standardization
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://ecss.nl/standard/ecss-q-st-80c-rev-1-software-product-assurance/
+  landing_page: https://ecss.nl
+  binding_status: binding
+  issued: '2017-02-15'
+  in_force: 'yes'
+  amendments: Revision 1
+  licence: free registration required
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 4
+  why: Establishes software assurance requirements for flight and ground software,
+    including secure coding, static analysis, and vulnerability mitigation.
+- rank: 222
+  id: intl-esa-security-directives
+  title: Security Directives for Space Missions (ESA Security Regulations)
+  authority: European Space Agency
+  jurisdiction: INTL
+  doc_type: regulation
+  url: https://www.esa.int/About_Us/Law_at_ESA/ESA_rules_and_regulations
+  landing_page: https://www.esa.int
+  binding_status: binding
+  issued: 2018
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Mandates security classifications, cryptographic material handling, and access
+    controls for all European space mission contractors.
+- rank: 223
+  id: intl-space-isac-whitepaper-2023
+  title: Space Sector Cyber Threat Profile and Information Sharing Framework
+  authority: Space Information Sharing and Analysis Center (Space ISAC)
+  jurisdiction: INTL
+  doc_type: report
+  url: https://spaceisac.org/
+  landing_page: https://spaceisac.org
+  binding_status: advisory
+  issued: 2023
+  in_force: 'yes'
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-02
+  - GAP-IN-09
+  role: global_example
+  relevance: 4
+  why: Details multi-vector threats (RF, cyber, physical) to commercial satellite
+    constellations and establishes actionable threat sharing protocols.
+- rank: 224
+  id: intl-etsi-ts-103701
+  title: 'ETSI TS 103 701 V2.1.1: Cyber Security for Consumer Internet of Things:
+    Conformance Assessment of Baseline Requirements'
+  authority: European Telecommunications Standards Institute
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.etsi.org/deliver/etsi_ts/103700_103799/103701/02.01.01_60/ts_103701v020101p.pdf
+  landing_page: https://www.etsi.org
+  binding_status: advisory
+  issued: 2025-05
+  in_force: 'yes'
+  amendments: V2.1.1; supersedes V1.1.1
+  licence: free download
+  gaps:
+  - GAP-IN-06
+  role: global_example
+  relevance: 4
+  why: Defines testing and evaluation procedures for verifying consumer IoT device
+    compliance with the cybersecurity requirements of EN 303 645.
+- rank: 225
+  id: intl-etsi-tr-101985
+  title: 'ETSI TR 101 985 V1.1.2: Satellite Earth Stations and Systems (SES); Broadband
+    Satellite Multimedia (BSM); Security threats analysis'
+  authority: European Telecommunications Standards Institute
+  jurisdiction: INTL
+  doc_type: report
+  url: https://www.etsi.org/deliver/etsi_tr/101900_101999/101985/01.01.02_60/tr_101985v010102p.pdf
+  landing_page: https://www.etsi.org
+  binding_status: advisory
+  issued: 2002-11
+  in_force: 'yes'
+  amendments: V1.1.2
+  licence: free download
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  - GAP-IN-09
+  role: global_example
+  relevance: 5
+  why: Analyzes specific security threats to satellite multimedia links, feeder links,
+    and terrestrial interfaces including interception, spoofing, and denial of service.
+- rank: 226
+  id: intl-etsi-tr-102287
+  title: 'ETSI TR 102 287 V1.1.1: Satellite Earth Stations and Systems (SES); Broadband
+    Satellite Multimedia (BSM); Security framework'
+  authority: European Telecommunications Standards Institute
+  jurisdiction: INTL
+  doc_type: report
+  url: https://www.etsi.org/deliver/etsi_tr/102200_102299/102287/01.01.01_60/tr_102287v010101p.pdf
+  landing_page: https://www.etsi.org
+  binding_status: advisory
+  issued: 2004-05
+  in_force: 'yes'
+  amendments: V1.1.1
+  licence: free download
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: global_example
+  relevance: 5
+  why: Establishes a security architecture framework adapting IPsec, key management,
+    and authentication mechanisms to satellite transmission protocols.
+- rank: 227
+  id: intl-etsi-ts-103246-1
+  title: 'ETSI TS 103 246-1 V1.2.1: Satellite Earth Stations and Systems (SES); GNSS
+    based location systems; Part 1: Functional requirements'
+  authority: European Telecommunications Standards Institute
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.etsi.org/deliver/etsi_ts/103200_103299/10324601/01.02.01_60/ts_10324601v010201p.pdf
+  landing_page: https://www.etsi.org
+  binding_status: advisory
+  issued: 2017-03
+  in_force: 'yes'
+  amendments: V1.2.1
+  licence: free download
+  gaps:
+  - GAP-IN-06
+  role: global_example
+  relevance: 4
+  why: Specifies system security, anti-spoofing verification, and integrity monitoring
+    requirements for GNSS location-based services.
+- rank: 228
+  id: intl-hybrid-coe-wp21-space-war
+  title: 'Hybrid CoE Working Paper 21: Space and the Ukraine War: The Role of Space
+    in Hybrid Warfare and Modern Conflict'
+  authority: European Centre of Excellence for Countering Hybrid Threats
+  jurisdiction: INTL
+  doc_type: report
+  url: https://www.hybridcoe.fi/wp-content/uploads/2023/01/20230109-Hybrid-CoE-Working-Paper-21-Space-and-the-Ukraine-war-WEB.pdf
+  landing_page: https://www.hybridcoe.fi
+  binding_status: advisory
+  issued: '2023-01-09'
+  in_force: 'yes'
+  amendments: none found
+  licence: open access
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: context
+  relevance: 4
+  why: Examines electronic warfare, satellite communication jamming, and cyber attacks
+    against commercial satellite constellations during interstate conflict.
+- rank: 229
+  id: intl-nato-ccdcoe-space-cyber-weakspot
+  title: Space – NATO's Cyber Security Weak Spot
+  authority: NATO Cooperative Cyber Defence Centre of Excellence (CCDCOE)
+  jurisdiction: INTL
+  doc_type: report
+  url: https://ccdcoe.org/incyder-articles/chatham-house-report-space-nato-cyber-securitys-weak-spot/
+  landing_page: https://ccdcoe.org
+  binding_status: advisory
+  issued: 2019-10
+  in_force: 'yes'
+  amendments: none found
+  licence: open access
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  - GAP-IN-09
+  role: context
+  relevance: 4
+  why: Analyzes systemic cyber vulnerabilities in military and commercial satellite
+    systems, command and control links, and shared ground segment facilities.
+- rank: 230
+  id: eu-easa-sib-2022-02r4-gnss
+  title: 'Safety Information Bulletin SIB 2022-02R4: Global Navigation Satellite System
+    (GNSS) Outages and Alterations Leading to Navigation/Surveillance Degradation'
+  authority: European Union Aviation Safety Agency
+  jurisdiction: EU
+  doc_type: guideline
+  url: https://www.easa.europa.eu/en/newsroom-and-events/news/easa-updates-safety-information-bulletin-gnss-interference
+  landing_page: https://www.easa.europa.eu
+  binding_status: advisory
+  issued: '2024-01-26'
+  in_force: 'yes'
+  amendments: Revision 4; supersedes R1-R3
+  licence: unknown
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-06
+  role: context
+  relevance: 4
+  why: Issues operational warnings and mitigation procedures for aviation and dependent
+    infrastructure regarding widespread GNSS jamming and spoofing.

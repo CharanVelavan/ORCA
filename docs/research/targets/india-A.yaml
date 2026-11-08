@@ -1,0 +1,615 @@
+- rank: 1
+  id: in-certin-dir-2022
+  title: Directions under sub-section (6) of section 70B of the Information Technology Act, 2000
+  authority: Indian Computer Emergency Response Team (CERT-In)
+  jurisdiction: IN
+  doc_type: direction
+  url: https://www.cert-in.org.in/PDF/CERT-In_Directions_70B_28.04.2022.pdf
+  landing_page: https://www.cert-in.org.in/Directions70B.jsp
+  binding_status: binding
+  issued: 2022-04-28
+  in_force: true
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  role: india_evidence
+  relevance: 5
+  why: The Directions require covered entities to report specified cyber incidents to CERT-In within six hours of noticing them or being informed of them.
+- rank: 2
+  id: in-telact-2023
+  title: The Telecommunications Act, 2023
+  authority: Parliament of India
+  jurisdiction: IN
+  doc_type: act
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/Telecommunications-Act-2023.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2023-12-24
+  in_force: partly
+  amendments: none found
+  licence: Government of India open (terms not checked)
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-03
+  - GAP-IN-04
+  - GAP-IN-06
+  - GAP-IN-08
+  role: india_evidence
+  relevance: 5
+  why: Sections 20, 22 and 24 address emergency and public-safety powers, telecom cyber security, and standards, while commencement has been phased.
+- rank: 3
+  id: in-tcsr-2024
+  title: Telecommunications (Telecom Cyber Security) Rules, 2024
+  authority: Department of Telecommunications
+  jurisdiction: IN
+  doc_type: rules
+  url: https://thc.nic.in/Central%20Governmental%20Rules/Telecommunications%20(Telecom%20Cyber%20Security)%20Rules,%202024.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024-11-21
+  in_force: true
+  amendments: amended in 2025
+  licence: Government of India open (terms not checked)
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-02
+  - GAP-IN-06
+  - GAP-IN-08
+  role: india_evidence
+  relevance: 5
+  why: The rules establish a telecom cyber-security framework and empower the Central Government to issue directions to telecommunication entities.
+- rank: 4
+  id: in-tcsr-2025-amendment
+  title: Telecommunications (Telecom Cyber Security) Amendment Rules, 2025
+  authority: Department of Telecommunications
+  jurisdiction: IN
+  doc_type: rules
+  url: https://eservices.dot.gov.in/sites/default/files/circular-notifications/telecom-cyber-security-amendment-rules-2025_0.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2025-10-22
+  in_force: true
+  amendments: amends the Telecommunications (Telecom Cyber Security) Rules, 2024
+  licence: Government of India open (terms not checked)
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-02
+  - GAP-IN-06
+  role: india_evidence
+  relevance: 5
+  why: This amendment changes the 2024 telecom cyber-security rules and should be read with their current text.
+- rank: 5
+  id: in-ctir-2024
+  title: Telecommunications (Critical Telecommunication Infrastructure) Rules, 2024
+  authority: Department of Telecommunications
+  jurisdiction: IN
+  doc_type: rules
+  url: https://eservices.dot.gov.in/sites/default/files/circular-notifications/Critical%20Telecommunication%20Infrastructure%20Rules%2C%202024_0.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024-11-22
+  in_force: true
+  amendments: none found
+  licence: Government of India open (terms not checked)
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: india_evidence
+  relevance: 5
+  why: The rules provide the framework for identifying and protecting critical telecommunication infrastructure.
+- rank: 6
+  id: in-space-cyber-framework-2026
+  title: Cyber Security Framework and Guidelines for Space including Satellite Communication
+  authority: CERT-In and SIA-India
+  jurisdiction: IN
+  doc_type: guideline
+  url: https://www.cert-in.org.in/PDF/CyberSecurityFrameworkGuideline_for_space.pdf
+  landing_page: https://www.cert-in.org.in/
+  binding_status: advisory
+  issued: 2026
+  in_force: true
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  - GAP-IN-09
+  role: india_evidence
+  relevance: 5
+  why: The framework addresses cyber security for space systems, including satellite communications, but is guidance rather than a binding satellite-specific baseline.
+- rank: 7
+  id: in-itact-2000
+  title: The Information Technology Act, 2000 (as amended)
+  authority: Parliament of India
+  jurisdiction: IN
+  doc_type: act
+  url: https://indiacode.gov.in/server/api/core/bitstreams/770a7d02-48f2-4274-bab9-10d0f48ee264/content
+  landing_page: https://www.indiacode.gov.in/
+  binding_status: binding
+  issued: 2000-06-09
+  in_force: true
+  amendments: amended, including by the Information Technology (Amendment) Act, 2008
+  licence: Government of India open (terms not checked)
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-06
+  - GAP-IN-09
+  role: india_evidence
+  relevance: 5
+  why: Sections 70A and 70B provide for protection of critical information infrastructure and CERT-In’s national cyber-incident response functions.
+- rank: 8
+  id: in-nciipc-cii-rules-2013
+  title: Information Technology (National Critical Information Infrastructure Protection Centre and Manner of Performing Functions and Duties) Rules, 2013
+  authority: Ministry of Communications and Information Technology
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.meity.gov.in/documents/act-and-policies
+  landing_page: https://www.meity.gov.in/documents/act-and-policies
+  binding_status: binding
+  issued: 2013
+  in_force: unknown
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: india_evidence
+  relevance: 4
+  why: The rules concern NCIIPC’s statutory functions for critical information infrastructure, but the linked official index needs to be checked for a direct instrument URL.
+- rank: 9
+  id: in-certin-rules-2013
+  title: Information Technology (The Indian Computer Emergency Response Team and Manner of Performing Functions and Duties) Rules, 2013
+  authority: Ministry of Communications and Information Technology
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.meity.gov.in/documents/act-and-policies/rules-for-information-technology-act-2000-YDO5AjMtQWa
+  landing_page: https://www.meity.gov.in/documents/act-and-policies/rules-for-information-technology-act-2000-YDO5AjMtQWa
+  binding_status: binding
+  issued: 2013
+  in_force: unknown
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  role: india_evidence
+  relevance: 4
+  why: The rules set out CERT-In’s functions under the Information Technology Act; the linked MeitY page is an index of IT Act rules.
+- rank: 10
+  id: in-dot-unified-licence
+  title: Unified Licence Agreement
+  authority: Department of Telecommunications
+  jurisdiction: IN
+  doc_type: licence
+  url: https://www.eservices.dot.gov.in/sites/default/files/2024-11/Unified%20License%20Agreement.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024
+  in_force: true
+  amendments: amendments and addenda listed separately by DoT
+  licence: Government of India open (terms not checked)
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-02
+  - GAP-IN-03
+  - GAP-IN-04
+  - GAP-IN-06
+  - GAP-IN-08
+  role: india_evidence
+  relevance: 5
+  why: The agreement includes telecom license conditions and satellite-service chapters, including GMPCS gateway requirements.
+- rank: 11
+  id: in-dot-ctir-2024
+  title: Telecommunications (Critical Telecommunication Infrastructure) Rules, 2024
+  authority: Department of Telecommunications
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/act-and-rules
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024-11-22
+  in_force: true
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: india_evidence
+  relevance: 4
+  why: The official DoT index confirms the rules’ title and notification date; a direct file link should be retrieved from that index.
+- rank: 12
+  id: in-dot-telecom-standards-rules-2025
+  title: Telecommunications (Framework to Notify Standards, Conformity Assessment and Certification) Rules, 2025
+  authority: Department of Telecommunications
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/act-and-rules
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2025-05-16
+  in_force: true
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: india_evidence
+  relevance: 5
+  why: These rules establish the framework for notifying telecom standards and conformity assessment, relevant to the Act’s standards powers.
+- rank: 13
+  id: in-dot-interception-rules-2024
+  title: Procedures and Safeguards for Lawful Interception of Messages Rules, 2024
+  authority: Department of Telecommunications
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/act-and-rules
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024-12-06
+  in_force: true
+  amendments: none found
+  licence: unknown
+  gaps: []
+  role: context
+  relevance: 2
+  why: The rules govern lawful interception procedures and safeguards under the Telecommunications Act.
+- rank: 14
+  id: in-dot-suspension-rules-2024
+  title: Telecommunications (Temporary Suspension of Services) Rules, 2024
+  authority: Department of Telecommunications
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/act-and-rules
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024-11-22
+  in_force: true
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-03
+  role: india_evidence
+  relevance: 3
+  why: These rules prescribe the procedure for temporary suspension of telecommunication services in specified circumstances.
+- rank: 15
+  id: in-dot-cell-broadcast-rules-2023
+  title: Cell Broadcasting Service for Disaster Rules, 2023
+  authority: Department of Telecommunications
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/act-and-rules
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2023-04-06
+  in_force: true
+  amendments: amended in 2024
+  licence: unknown
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-03
+  role: india_evidence
+  relevance: 4
+  why: The rules provide for cell-broadcast disaster alerts, which bear on public warning channels and emergency communications.
+- rank: 16
+  id: in-dot-cell-broadcast-amendment-2024
+  title: Cell Broadcasting Service for Disaster Alerts (Amendment) Rules, 2024
+  authority: Department of Telecommunications
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/act-and-rules
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024-09-17
+  in_force: true
+  amendments: amends the Cell Broadcasting Service for Disaster Rules, 2023
+  licence: unknown
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-03
+  role: india_evidence
+  relevance: 3
+  why: The amendment updates the disaster cell-broadcast alert framework.
+- rank: 17
+  id: in-dot-row-rules-2024
+  title: Telecommunications (Right of Way) Rules, 2024
+  authority: Department of Telecommunications
+  jurisdiction: IN
+  doc_type: rules
+  url: https://eservices.dot.gov.in/sites/default/files/2024-11/Notified_RoW_Rules_18_09.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024-09-17
+  in_force: true
+  amendments: none found
+  licence: Government of India open (terms not checked)
+  gaps:
+  - GAP-IN-04
+  - GAP-IN-08
+  role: india_evidence
+  relevance: 3
+  why: The rules govern telecom infrastructure right of way and specify a 1 January 2025 commencement.
+- rank: 18
+  id: in-space-policy-2023
+  title: Indian Space Policy 2023
+  authority: Government of India, Department of Space
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://www.inspace.gov.in/sys_attachment.do?sys_id=5d532e37877102503b0f0d060cbb35cf&sysparm_viewer_id=467b1e9a87cd3550de76a8660cbb35d0&sysparm_viewer_table=kb_knowledge
+  landing_page: https://www.isro.gov.in/IndianSpacePolicy.html
+  binding_status: advisory
+  issued: 2023
+  in_force: true
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-09
+  role: india_evidence
+  relevance: 4
+  why: The policy assigns roles for non-government space entities, IN-SPACe, ISRO and the Department of Space.
+- rank: 19
+  id: inspace-ngp-2024
+  title: Norms, Guidelines and Procedures for Implementation of Indian Space Policy 2023
+  authority: Indian National Space Promotion and Authorisation Centre (IN-SPACe)
+  jurisdiction: IN
+  doc_type: guideline
+  url: https://www.inspace.gov.in/
+  landing_page: https://www.inspace.gov.in/
+  binding_status: not stated
+  issued: 2024
+  in_force: unknown
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-09
+  role: india_evidence
+  relevance: 4
+  why: The framework governs authorisation of space activities but the reviewed official page did not expose a direct document URL.
+- rank: 20
+  id: in-ndma-communication-guidelines
+  title: 'National Disaster Management Guidelines: National Disaster Management Information and Communication System'
+  authority: National Disaster Management Authority
+  jurisdiction: IN
+  doc_type: guideline
+  url: https://www.trai.gov.in/sites/default/files/2024-11/INCOIS_CP_PPDR.pdf
+  landing_page: https://www.ndma.gov.in/
+  binding_status: advisory
+  issued: unknown
+  in_force: unknown
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-03
+  - GAP-IN-04
+  role: india_evidence
+  relevance: 4
+  why: The retrieved text recommends diverse operators and communication media, satellite connectivity, overlay VSAT and bandwidth arrangements for disaster scenarios.
+- rank: 21
+  id: in-mha-ners-guidelines-2015
+  title: 'Nationwide Emergency Response System (NERS) Guidelines: Emergency Number 112'
+  authority: Ministry of Home Affairs
+  jurisdiction: IN
+  doc_type: guideline
+  url: https://www.mha.gov.in/sites/default/files/2022-12/NERSGuidelines_09112022%5B1%5D.pdf
+  landing_page: https://www.mha.gov.in/emergency-response-support-system-erss
+  binding_status: advisory
+  issued: 2015-08
+  in_force: unknown
+  amendments: none found
+  licence: Government of India open (terms not checked)
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-03
+  role: india_evidence
+  relevance: 4
+  why: The guidelines set out the nationwide emergency number system and its emergency-response framework.
+- rank: 22
+  id: in-mha-erss
+  title: Emergency Response Support System (ERSS)
+  authority: Ministry of Home Affairs
+  jurisdiction: IN
+  doc_type: report
+  url: https://www.mha.gov.in/emergency-response-support-system-erss
+  landing_page: https://www.mha.gov.in/emergency-response-support-system-erss
+  binding_status: not stated
+  issued: unknown
+  in_force: true
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-03
+  role: context
+  relevance: 3
+  why: The page describes ERSS-112 as a state-centric system that routes actionable distress calls to relevant police, health, fire and disaster dispatchers.
+- rank: 23
+  id: in-rbi-psos-cyber-resilience-2024
+  title: Master Directions on Cyber Resilience and Digital Payment Security Controls for non-bank Payment System Operators
+  authority: Reserve Bank of India
+  jurisdiction: IN
+  doc_type: direction
+  url: https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12715
+  landing_page: https://www.rbi.org.in/Scripts/BS_ViewMasterDirections.aspx?did=344
+  binding_status: binding
+  issued: 2024-07-30
+  in_force: true
+  amendments: phased implementation dates vary by PSO size
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-03
+  - GAP-IN-08
+  role: india_evidence
+  relevance: 4
+  why: The directions establish cyber-risk governance and baseline security measures intended to support resilience of non-bank payment system operators.
+- rank: 24
+  id: in-cea-cyber-power-guidelines-2021
+  title: Guidelines on Cyber Security in Power Sector 2021
+  authority: Central Electricity Authority
+  jurisdiction: IN
+  doc_type: guideline
+  url: https://cea.nic.in/notification/cea-cyber-security-in-power-sector-guidelines-2021/?lang=en
+  landing_page: https://cea.nic.in/notification/cea-cyber-security-in-power-sector-guidelines-2021/?lang=en
+  binding_status: advisory
+  issued: 2021-10-07
+  in_force: unknown
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-02
+  - GAP-IN-08
+  role: india_evidence
+  relevance: 4
+  why: CEA identifies this instrument as its 2021 power-sector cyber-security guidelines, relevant to telecom dependencies on grid operations.
+- rank: 25
+  id: in-telecom-network-rules-2026
+  title: Telecommunication Network Rules, 2026
+  authority: Department of Telecommunications
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/act-and-rules?page=0
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules?page=0
+  binding_status: binding
+  issued: 2026-07-20
+  in_force: unknown
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: india_evidence
+  relevance: 3
+  why: DoT’s Act and Rules index lists the 2026 network rules, but their provisions and commencement were not reviewed.
+- rank: 26
+  id: in-dot-principal-telecom-authorisation-rules-2026
+  title: Authorisation for Provision of Principal Telecommunication Services Rules, 2026
+  authority: Department of Telecommunications
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/act-and-rules?page=0
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules?page=0
+  binding_status: binding
+  issued: 2026-06-23
+  in_force: unknown
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-02
+  - GAP-IN-06
+  role: india_evidence
+  relevance: 3
+  why: The official DoT index lists these new authorisation rules, which may replace or migrate earlier service authorisations.
+- rank: 27
+  id: in-dot-right-of-way-amendment-2023
+  title: Indian Telegraph Right of Way (Amendment) Rules, 2023
+  authority: Department of Telecommunications
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/act-and-rules?page=0
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules?page=0
+  binding_status: binding
+  issued: 2023-08-07
+  in_force: no (superseded from 2025-01-01)
+  amendments: superseded by Telecommunications (Right of Way) Rules, 2024
+  licence: unknown
+  gaps:
+  - GAP-IN-04
+  role: context
+  relevance: 2
+  why: The DoT index lists this prior right-of-way amendment, while the 2024 rules superseded the earlier framework.
+- rank: 28
+  id: in-tec-itsar-index
+  title: Essential Requirements and List of ITSAR Annexures to Essential Requirements
+  authority: Telecommunication Engineering Centre
+  jurisdiction: IN
+  doc_type: standard
+  url: https://www.mtcte.tec.gov.in/er_inst
+  landing_page: https://www.mtcte.tec.gov.in/er_inst
+  binding_status: not stated
+  issued: unknown
+  in_force: unknown
+  amendments: unknown
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-08
+  role: india_evidence
+  relevance: 4
+  why: TEC’s portal provides essential requirements and links to ITSAR security requirements for telecom equipment.
+- rank: 29
+  id: in-trai-satellite-low-bit-rate-recommendations
+  title: Recommendations on Licensing Framework for Satellite Based Connectivity for Low Bit Rate Applications
+  authority: Telecom Regulatory Authority of India
+  jurisdiction: IN
+  doc_type: consultation
+  url: https://www.trai.gov.in/node/747
+  landing_page: https://www.trai.gov.in/node/747
+  binding_status: advisory
+  issued: unknown
+  in_force: unknown
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: india_evidence
+  relevance: 3
+  why: The recommendations concern licensing of satellite-based connectivity for low bit-rate applications.
+- rank: 30
+  id: in-trai-space-spectrum-consultation-2023
+  title: Consultation Paper on Assignment of Spectrum for Space-based Communication Services
+  authority: Telecom Regulatory Authority of India
+  jurisdiction: IN
+  doc_type: consultation
+  url: https://www.trai.gov.in/consultation-paper-assignment-spectrum-space-based-communication-services
+  landing_page: https://www.trai.gov.in/consultation-paper-assignment-spectrum-space-based-communication-services
+  binding_status: draft
+  issued: 2023-04-06
+  in_force: false
+  amendments: none found
+  licence: unknown
+  gaps:
+  - GAP-IN-06
+  - GAP-IN-09
+  role: context
+  relevance: 2
+  why: The consultation paper addresses assignment of spectrum for space-based communication services and is explicitly marked closed.
+- rank: 31
+  id: in-meity-it-rules-index
+  title: Rules for Information Technology Act, 2000
+  authority: Ministry of Electronics and Information Technology
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.meity.gov.in/documents/act-and-policies/rules-for-information-technology-act-2000-YDO5AjMtQWa
+  landing_page: https://www.meity.gov.in/documents/act-and-policies/rules-for-information-technology-act-2000-YDO5AjMtQWa
+  binding_status: binding
+  issued: unknown
+  in_force: unknown
+  amendments: multiple instruments; not enumerated in the reviewed index excerpt
+  licence: unknown
+  gaps:
+  - GAP-IN-01
+  - GAP-IN-06
+  role: india_evidence
+  relevance: 3
+  why: MeitY’s official index collects rules under the IT Act, but the index excerpt does not establish which listed rules apply to these gaps.
+- rank: 32
+  id: in-abdm-health-data-management-policy
+  title: Health Data Management Policy
+  authority: National Health Authority
+  jurisdiction: IN
+  doc_type: guideline
+  url: https://abdm.gov.in/publications/policies_regulations/health_data_management_policy
+  landing_page: https://abdm.gov.in/publications/policies_regulations/health_data_management_policy
+  binding_status: not stated
+  issued: unknown
+  in_force: unknown
+  amendments: unknown
+  licence: unknown
+  gaps:
+  - GAP-IN-02
+  - GAP-IN-08
+  role: india_evidence
+  relevance: 2
+  why: The ABDM policy page identifies the Health Data Management Policy, relevant to the security and continuity of a digitally connected health service.

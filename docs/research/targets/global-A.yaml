@@ -1,0 +1,1980 @@
+- rank: 1
+  id: eu-nis2-2022
+  title: "Directive (EU) 2022/2555 of the European Parliament and of the Council of 14 December 2022 on measures for a high common level of cybersecurity across the Union (NIS2)"
+  authority: "European Parliament and Council"
+  jurisdiction: EU
+  doc_type: act
+  url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj/eng
+  landing_page: https://eur-lex.europa.eu/eli/dir/2022/2555/oj/eng
+  binding_status: binding
+  issued: 2022-12-14
+  in_force: "yes"
+  amendments: "none found"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-01, GAP-IN-02, GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Articles 21 and 23 establish a phased 24-hour early warning, 72-hour incident notification, and explicit downstream customer notification duties for significant cybersecurity incidents."
+
+- rank: 2
+  id: eu-nis2-ir-2024-2690
+  title: "Commission Implementing Regulation (EU) 2024/2690 of 17 October 2024 laying down technical and methodological requirements of cybersecurity risk-management measures and significant incident thresholds"
+  authority: "European Commission"
+  jurisdiction: EU
+  doc_type: regulation
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32024R2690
+  landing_page: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2690
+  binding_status: binding
+  issued: 2024-10-17
+  in_force: "yes"
+  amendments: "none found"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-01, GAP-IN-02, GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Defines quantitative thresholds for significant incidents affecting digital infrastructure and mandates cryptographic controls, backup verification, and recipient alert mechanisms."
+
+- rank: 3
+  id: eu-eecc-2018-1972
+  title: "Directive (EU) 2018/1972 establishing the European Electronic Communications Code"
+  authority: "European Parliament and Council"
+  jurisdiction: EU
+  doc_type: act
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32018L1972
+  landing_page: https://eur-lex.europa.eu/eli/dir/2018/1972/oj/eng
+  binding_status: binding
+  issued: 2018-12-11
+  in_force: "yes"
+  amendments: "amendments and corrigenda listed in EUR-Lex consolidated text"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-01, GAP-IN-02, GAP-IN-03, GAP-IN-04]
+  role: global_example
+  relevance: 5
+  why: "Articles 40-41 mandate network security and incident notification, while Articles 108-110 require network availability during catastrophic breakdown, emergency caller prioritization, and public warnings."
+
+- rank: 4
+  id: eu-cer-2022-2557
+  title: "Directive (EU) 2022/2557 of the European Parliament and of the Council of 14 December 2022 on the resilience of critical entities"
+  authority: "European Parliament and Council"
+  jurisdiction: EU
+  doc_type: act
+  url: https://eur-lex.europa.eu/eli/dir/2022/2557/oj/eng
+  landing_page: https://eur-lex.europa.eu/eli/dir/2022/2557/oj/eng
+  binding_status: binding
+  issued: 2022-12-14
+  in_force: "yes"
+  amendments: "none found"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-04, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Requires critical entities to adopt physical and organizational measures ensuring continuity of essential services, including alternative power and backup site resilience."
+
+- rank: 5
+  id: eu-space-act-proposal-2025
+  title: "Proposal for a Regulation on the safety, resilience and sustainability of space activities in the Union (COM(2025) 335)"
+  authority: "European Commission"
+  jurisdiction: EU
+  doc_type: consultation
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+  landing_page: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0335
+  binding_status: draft
+  issued: 2025-06-25
+  in_force: "no"
+  amendments: "none found"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Establishes mandatory space cybersecurity baselines, TT&C encryption standards, and orbital risk-management rules coordinating with NIS2."
+
+- rank: 6
+  id: eu-cyber-resilience-act-2024
+  title: "Regulation (EU) 2024/2847 on horizontal cybersecurity requirements for products with digital elements (Cyber Resilience Act)"
+  authority: "European Parliament and Council"
+  jurisdiction: EU
+  doc_type: regulation
+  url: https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng
+  landing_page: https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng
+  binding_status: binding
+  issued: 2024-10-23
+  in_force: partly
+  amendments: "none found"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Mandates security by design, vulnerability handling, and patched update verification across hardware and software components, applicable to satellite terminals and gateways."
+
+- rank: 7
+  id: eu-cybersecurity-act-2019
+  title: "Regulation (EU) 2019/881 on ENISA and on information and communications technology cybersecurity certification (Cybersecurity Act)"
+  authority: "European Parliament and Council"
+  jurisdiction: EU
+  doc_type: regulation
+  url: https://eur-lex.europa.eu/eli/reg/2019/881/oj/eng
+  landing_page: https://eur-lex.europa.eu/eli/reg/2019/881/oj/eng
+  binding_status: binding
+  issued: 2019-04-17
+  in_force: "yes"
+  amendments: "none found"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: "Creates the European cybersecurity certification framework for ICT products, services, and processes, setting standard assurance levels."
+
+- rank: 8
+  id: eu-space-programme-2021-696
+  title: "Regulation (EU) 2021/696 establishing the Union Space Programme and the European Union Agency for the Space Programme"
+  authority: "European Parliament and Council"
+  jurisdiction: EU
+  doc_type: regulation
+  url: https://eur-lex.europa.eu/eli/reg/2021/696/oj/eng
+  landing_page: https://eur-lex.europa.eu/eli/reg/2021/696/oj/eng
+  binding_status: binding
+  issued: 2021-04-28
+  in_force: "yes"
+  amendments: "amendments listed in EUR-Lex"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: "Establishes institutional governance, security accreditation requirements, and operational continuity mandates for EU space infrastructure."
+
+- rank: 9
+  id: eu-iris2-regulation-2023-588
+  title: "Regulation (EU) 2023/588 establishing the Union Secure Connectivity Programme for the period 2023–2027"
+  authority: "European Parliament and Council"
+  jurisdiction: EU
+  doc_type: regulation
+  url: https://eur-lex.europa.eu/eli/reg/2023/588/oj/eng
+  landing_page: https://eur-lex.europa.eu/eli/reg/2023/588/oj/eng
+  binding_status: binding
+  issued: 2023-03-15
+  in_force: "yes"
+  amendments: "none found"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-03, GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Specifies multi-orbital secure satellite connectivity resilience standards, governmental priority access tiers, and quantum-resistant encryption requirements."
+
+- rank: 10
+  id: eu-net-neutrality-2015-2120
+  title: "Regulation (EU) 2015/2120 laying down measures concerning open internet access"
+  authority: "European Parliament and Council"
+  jurisdiction: EU
+  doc_type: regulation
+  url: https://eur-lex.europa.eu/eli/reg/2015/2120/oj/eng
+  landing_page: https://eur-lex.europa.eu/eli/reg/2015/2120/oj/eng
+  binding_status: binding
+  issued: 2015-11-25
+  in_force: "yes"
+  amendments: "none found"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-03]
+  role: global_example
+  relevance: 4
+  why: "Article 3(3) regulates reasonable traffic management and defines strict legal exceptions permitting emergency traffic prioritization to prevent network congestion."
+
+- rank: 11
+  id: eu-cer-article-13-guidelines-2026
+  title: "Communication from the Commission: Guidelines on the application of Article 13(5) of Directive (EU) 2022/2557"
+  authority: "European Commission"
+  jurisdiction: EU
+  doc_type: guideline
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52026XC03712
+  landing_page: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52026XC03712
+  binding_status: advisory
+  issued: 2026-07-13
+  in_force: unknown
+  amendments: "none found"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-04]
+  role: global_example
+  relevance: 4
+  why: "Provides Commission guidance on business continuity, service prioritization, backup power autonomy, and crisis command coordination across critical sectors."
+
+- rank: 12
+  id: enisa-space-threat-landscape-2025
+  title: "ENISA Space Threat Landscape 2025"
+  authority: "European Union Agency for Cybersecurity (ENISA)"
+  jurisdiction: EU
+  doc_type: report
+  url: https://www.enisa.europa.eu/sites/default/files/2025-03/Space_Threat_Landscape_Report_fin.pdf
+  landing_page: https://www.enisa.europa.eu/publications/enisa-space-threat-landscape-2025
+  binding_status: advisory
+  issued: 2025-03-01
+  in_force: "yes"
+  amendments: "none found"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Analyzes specific cyber threat vectors against satellite TT&C links, ground stations, user terminals, and supply chains, categorizing observed jamming, spoofing, and intrusion techniques."
+
+- rank: 13
+  id: enisa-eecc-incident-reporting-guideline
+  title: "ENISA Technical Guideline on Incident Reporting under the EECC"
+  authority: "European Union Agency for Cybersecurity (ENISA)"
+  jurisdiction: EU
+  doc_type: guideline
+  url: https://www.enisa.europa.eu/sites/default/files/publications/ENISA%20Technical%20Guideline%20on%20Incident%20Reporting%20under%20the%20EECC.pdf
+  landing_page: https://www.enisa.europa.eu/publications/enisa-technical-guideline-on-incident-reporting-under-the-eecc
+  binding_status: advisory
+  issued: 2021-12-14
+  in_force: "yes"
+  amendments: "none found"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-01, GAP-IN-02]
+  role: global_example
+  relevance: 5
+  why: "Establishes standardized thresholds based on user-hours and percentage of network capacity lost for mandatory ad-hoc incident reporting to national authorities."
+
+- rank: 14
+  id: enisa-eecc-security-measures-guideline
+  title: "ENISA Guideline on Security Measures under the EECC (4th Edition)"
+  authority: "European Union Agency for Cybersecurity (ENISA)"
+  jurisdiction: EU
+  doc_type: guideline
+  url: https://www.enisa.europa.eu/sites/default/files/publications/ENISA%20-%20Guideline%20on%20Security%20Measures%20under%20the%20EECC-%204th%20edition.pdf
+  landing_page: https://www.enisa.europa.eu/publications/guideline-on-security-measures-under-the-eecc
+  binding_status: advisory
+  issued: 2021-11-20
+  in_force: "yes"
+  amendments: "none found"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-04, GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Details 29 security objectives across 8 domains, including backup power supply autonomy, physical and environmental security, and automated failover verification."
+
+- rank: 15
+  id: eu-5g-cybersecurity-toolbox-2020
+  title: "Cybersecurity of 5G networks: EU Toolbox of risk mitigating measures"
+  authority: "NIS Cooperation Group"
+  jurisdiction: EU
+  doc_type: guideline
+  url: https://ec.europa.eu/newsroom/dae/document.cfm?doc_id=64468
+  landing_page: https://digital-strategy.ec.europa.eu/en/library/cybersecurity-5g-networks-eu-toolbox-risk-mitigating-measures
+  binding_status: advisory
+  issued: 2020-01-29
+  in_force: "yes"
+  amendments: "Progress reports in 2020 and 2023"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Recommends multi-vendor diversification, strict access controls for network management, and supply-chain risk mitigation for critical network assets."
+
+- rank: 16
+  id: us-fcc-part-4-outage
+  title: "47 CFR Part 4 Disruptions to Communications"
+  authority: "Federal Communications Commission"
+  jurisdiction: US
+  doc_type: regulation
+  url: https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-4
+  landing_page: https://www.fcc.gov/network-outage-reporting-system-nors
+  binding_status: binding
+  issued: 2004-08-19
+  in_force: "yes"
+  amendments: "Amended by FCC 21-34 (2021) and FCC 22-50 (2022)"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-01, GAP-IN-02]
+  role: global_example
+  relevance: 5
+  why: "Sections 4.9 and 4.11 mandate filing outage notifications within 120 minutes of discovery for outages exceeding 900,000 user-minute thresholds across wireless, wireline, and satellite links."
+
+- rank: 17
+  id: us-fcc-mdri-order-2022
+  title: "Report and Order and Further Notice of Proposed Rulemaking on Resilient Networks (FCC 22-50)"
+  authority: "Federal Communications Commission"
+  jurisdiction: US
+  doc_type: order
+  url: https://docs.fcc.gov/public/attachments/FCC-22-50A1.pdf
+  landing_page: https://www.fcc.gov/document/fcc-adopts-mandatory-disaster-response-initiative
+  binding_status: binding
+  issued: 2022-07-06
+  in_force: "yes"
+  amendments: "none found"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Establishes the Mandatory Disaster Response Initiative (47 CFR § 4.17) requiring facilities-based wireless providers to provide bilateral disaster roaming and mutual aid during emergencies."
+
+- rank: 18
+  id: us-cpuc-d20-07-011-2020
+  title: "CPUC Decision 20-07-011 Adopting Wireless Provider Resiliency Strategies"
+  authority: "California Public Utilities Commission"
+  jurisdiction: US
+  doc_type: order
+  url: https://docs.cpuc.ca.gov/PublishedDocs/Published/G000/M344/K021/344021480.PDF
+  landing_page: https://www.cpuc.ca.gov/resiliencyandreliability/
+  binding_status: binding
+  issued: 2020-07-16
+  in_force: "yes"
+  amendments: "none found"
+  licence: "public domain (US State Gov)"
+  gaps: [GAP-IN-04]
+  role: global_example
+  relevance: 5
+  why: "Mandates that facilities-based mobile wireless providers maintain a minimum of 72 hours of emergency backup power at all cell sites located in Tier 2 and Tier 3 High Fire Threat Districts."
+
+- rank: 19
+  id: us-cpuc-d21-02-029-2021
+  title: "CPUC Decision 21-02-029 Adopting Wireline Provider Resiliency Strategies"
+  authority: "California Public Utilities Commission"
+  jurisdiction: US
+  doc_type: order
+  url: https://www.cpuc.ca.gov/-/media/cpuc-website/divisions/communications-division/documents/network-resiliency/d2102029-february-18-2021.pdf
+  landing_page: https://www.cpuc.ca.gov/resiliencyandreliability/
+  binding_status: binding
+  issued: 2021-02-18
+  in_force: "yes"
+  amendments: "none found"
+  licence: "public domain (US State Gov)"
+  gaps: [GAP-IN-04]
+  role: global_example
+  relevance: 5
+  why: "Directs facilities-based wireline telecommunications providers to implement 72 hours of backup power for facilities in High Fire Threat Districts and file annual resiliency plans."
+
+- rank: 20
+  id: us-fcc-911-reliability-2013
+  title: "Report and Order on Improving 911 Reliability; Reliability and Resiliency of Mobile Wireless Communications Networks (FCC 13-158)"
+  authority: "Federal Communications Commission"
+  jurisdiction: US
+  doc_type: order
+  url: https://docs.fcc.gov/public/attachments/FCC-13-158A1.pdf
+  landing_page: https://www.fcc.gov/document/fcc-adopts-rules-improve-911-reliability
+  binding_status: binding
+  issued: 2013-12-20
+  in_force: "yes"
+  amendments: "Codified in 47 CFR § 9.19"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-04, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Requires covered 911 service providers to certify central office backup power redundancy, physical diversity of transmission lines, and network monitoring capabilities."
+
+- rank: 21
+  id: us-fcc-backup-power-rule-920
+  title: "47 CFR § 9.20 Backup power for residential interconnected VoIP service subscriber premises equipment"
+  authority: "Federal Communications Commission"
+  jurisdiction: US
+  doc_type: regulation
+  url: https://www.ecfr.gov/current/title-47/part-9/section-9.20
+  landing_page: https://www.fcc.gov/general/backup-power
+  binding_status: binding
+  issued: 2015-08-07
+  in_force: "yes"
+  amendments: "Revised 2019"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-04]
+  role: global_example
+  relevance: 4
+  why: "Requires providers of interconnected VoIP service to make available commercial backup power options offering at least 8 hours and 24 hours of standby power."
+
+- rank: 22
+  id: us-whitehouse-spd5-2020
+  title: "Space Policy Directive-5 (SPD-5): Cybersecurity Principles for Space Systems (85 FR 56155)"
+  authority: "Executive Office of the President"
+  jurisdiction: US
+  doc_type: order
+  url: https://www.federalregister.gov/documents/2020/09/10/2020-20160/cybersecurity-principles-for-space-systems
+  landing_page: https://www.federalregister.gov/documents/2020/09/10/2020-20160/cybersecurity-principles-for-space-systems
+  binding_status: binding
+  issued: 2020-09-04
+  in_force: "yes"
+  amendments: "none found"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Establishes executive principles requiring space system operators to maintain positive control, encrypt TT&C links, monitor payload telemetry for anomalies, and report cyber attacks."
+
+- rank: 23
+  id: us-nist-ir-8270-2023
+  title: "NIST IR 8270: Introduction to Cybersecurity for Commercial Satellite Operations"
+  authority: "National Institute of Standards and Technology (NIST)"
+  jurisdiction: US
+  doc_type: standard
+  url: https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8270.pdf
+  landing_page: https://csrc.nist.gov/publications/detail/nistir/8270/final
+  binding_status: advisory
+  issued: 2023-01-18
+  in_force: "yes"
+  amendments: "none found"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Maps cybersecurity controls across space vehicle command links, payload data downlinks, ground operations, and user terminals based on NIST CSF."
+
+- rank: 24
+  id: us-nist-ir-8401-2022
+  title: "NIST IR 8401: Satellite Ground Segment: Applying the Cybersecurity Framework to Assure Commercial Satellite Operations"
+  authority: "National Institute of Standards and Technology (NIST)"
+  jurisdiction: US
+  doc_type: standard
+  url: https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8401.pdf
+  landing_page: https://csrc.nist.gov/publications/detail/nistir/8401/final
+  binding_status: advisory
+  issued: 2022-07-28
+  in_force: "yes"
+  amendments: "none found"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Provides specific implementation guidance for securing satellite ground stations, gateway facilities, antenna controllers, and TT&C network interfaces."
+
+- rank: 25
+  id: us-nist-ir-8441-2023
+  title: "NIST IR 8441: Cybersecurity Framework Profile for Hybrid Satellite Networks (HSN)"
+  authority: "National Institute of Standards and Technology (NIST)"
+  jurisdiction: US
+  doc_type: standard
+  url: https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8441.pdf
+  landing_page: https://csrc.nist.gov/publications/detail/nistir/8441/final
+  binding_status: advisory
+  issued: 2023-05-31
+  in_force: "yes"
+  amendments: "none found"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Defines an actionable CSF profile for hybrid architectures integrating multi-orbit satellites with terrestrial core networks, focusing on interface protection and failover resilience."
+
+- rank: 26
+  id: us-nist-csf-2-0-2024
+  title: "The NIST Cybersecurity Framework 2.0 (NIST CSWP 29)"
+  authority: "National Institute of Standards and Technology (NIST)"
+  jurisdiction: US
+  doc_type: standard
+  url: https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf
+  landing_page: https://www.nist.gov/cyberframework
+  binding_status: advisory
+  issued: 2024-02-26
+  in_force: "yes"
+  amendments: "Supersedes NIST CSF v1.1"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Expands governance outcomes across critical infrastructure and emphasizes cybersecurity supply chain risk management and incident response coordination."
+
+- rank: 27
+  id: us-cisa-space-cyber-2024
+  title: "Recommendations to Space System Operators for Improving Cybersecurity"
+  authority: "Cybersecurity and Infrastructure Security Agency (CISA)"
+  jurisdiction: US
+  doc_type: guideline
+  url: https://www.cisa.gov/sites/default/files/2024-06/Recommendations%20to%20Space%20System%20Operators%20for%20.Improving%20Cybersecurity%20%28508%29.pdf
+  landing_page: https://www.cisa.gov
+  binding_status: advisory
+  issued: 2024-06-12
+  in_force: "yes"
+  amendments: "none found"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Prescribes operational security controls including mandatory MFA on ground stations, zero-trust network segmentation, and incident sharing for commercial space systems."
+
+- rank: 28
+  id: us-cisa-space-zero-trust-2024
+  title: "Space Systems Security and Resilience Landscape: Zero Trust in the Space Environment"
+  authority: "Cybersecurity and Infrastructure Security Agency (CISA)"
+  jurisdiction: US
+  doc_type: report
+  url: https://www.cisa.gov/sites/default/files/2024-06/Space%20Systems%20Security%20and%20Resilience%20.Landscape%20-%20Zero%20Trust%20in%20the%20Space%20Environment%20%28508%29.pdf
+  landing_page: https://www.cisa.gov
+  binding_status: advisory
+  issued: 2024-06-12
+  in_force: "yes"
+  amendments: "none found"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: "Examines applying zero-trust architecture to orbital payloads, inter-satellite links, and ground gateways to prevent malicious lateral movement across constellations."
+
+- rank: 29
+  id: us-cisa-satcom-advisory-2022
+  title: "Alert (AA22-076A) Strengthening Cybersecurity of SATCOM Network Providers and Customers"
+  authority: "Cybersecurity and Infrastructure Security Agency and Federal Bureau of Investigation"
+  jurisdiction: US
+  doc_type: guideline
+  url: https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-076a
+  landing_page: https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-076a
+  binding_status: advisory
+  issued: 2022-03-17
+  in_force: "yes"
+  amendments: "none found"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-02, GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Analyzes real-world cyberattacks against satellite network management segments and advises SATCOM operators to monitor telemetry anomalies and alert downstream critical customers."
+
+- rank: 30
+  id: us-cisa-circia-nprm-2024
+  title: "Cyber Incident Reporting for Critical Infrastructure Act of 2022 (CIRCIA) Notice of Proposed Rulemaking (89 FR 23644)"
+  authority: "Cybersecurity and Infrastructure Security Agency"
+  jurisdiction: US
+  doc_type: consultation
+  url: https://www.federalregister.gov/documents/2024/04/04/2024-06526/cyber-incident-reporting-for-critical-infrastructure-act-of-2022-circia-reporting-requirements
+  landing_page: https://www.cisa.gov/circia
+  binding_status: draft
+  issued: 2024-04-04
+  in_force: "no"
+  amendments: "none found"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-01, GAP-IN-02]
+  role: global_example
+  relevance: 5
+  why: "Proposes a mandatory 72-hour reporting requirement for covered cyber incidents and 24-hour reporting for ransom payments across communications and critical infrastructure sectors."
+
+- rank: 31
+  id: us-cisa-cpgs-2023
+  title: "Cross-Sector Cybersecurity Performance Goals (CPGs) Version 1.0.1"
+  authority: "Cybersecurity and Infrastructure Security Agency"
+  jurisdiction: US
+  doc_type: guideline
+  url: https://www.cisa.gov/sites/default/files/2023-03/Cross-Sector_Cybersecurity_Performance_Goals_v1.0.1.pdf
+  landing_page: https://www.cisa.gov/cpgs
+  binding_status: advisory
+  issued: 2023-03-27
+  in_force: "yes"
+  amendments: "none found"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Establishes a baseline of prioritized cybersecurity practices including asset inventory, multi-factor authentication, network segmentation, and log retention."
+
+- rank: 32
+  id: us-fcc-dirs-rules-2024
+  title: "Report and Order in PS Docket No. 21-346: Mandatory Disaster Information Reporting System (DIRS) Reporting"
+  authority: "Federal Communications Commission"
+  jurisdiction: US
+  doc_type: order
+  url: https://docs.fcc.gov/public/attachments/FCC-24-10A1.pdf
+  landing_page: https://www.fcc.gov/document/fcc-strengthens-disaster-communications-reporting
+  binding_status: binding
+  issued: 2024-01-26
+  in_force: "yes"
+  amendments: "Codified in 47 CFR § 4.18"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-01, GAP-IN-02, GAP-IN-04]
+  role: global_example
+  relevance: 5
+  why: "Mandates daily DIRS reporting by communications providers during declared disaster areas, detailing cell site outages, backhaul failures, and operating backup generators."
+
+- rank: 33
+  id: us-fcc-space-cyber-notice-2023
+  title: "Public Notice: Space Bureau Reminds Satellite and Earth Station Licensees of Cybersecurity Responsibilities"
+  authority: "Federal Communications Commission, Space Bureau"
+  jurisdiction: US
+  doc_type: guideline
+  url: https://docs.fcc.gov/public/attachments/DA-23-456A1.pdf
+  landing_page: https://www.fcc.gov/space
+  binding_status: advisory
+  issued: 2023-05-30
+  in_force: "yes"
+  amendments: "none found"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: "Reminds satellite operators and earth station licensees to adopt robust cybersecurity measures against orbital interception and unauthorized command injections."
+
+- rank: 34
+  id: us-whitehouse-nsm22-2024
+  title: "National Security Memorandum on Critical Infrastructure Security and Resilience (NSM-22)"
+  authority: "The White House"
+  jurisdiction: US
+  doc_type: order
+  url: https://www.whitehouse.gov/briefing-room/presidential-actions/2024/04/30/national-security-memorandum-on-critical-infrastructure-security-and-resilience/
+  landing_page: https://www.whitehouse.gov
+  binding_status: binding
+  issued: 2024-04-30
+  in_force: "yes"
+  amendments: "Replaces PPD-21"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: "Instructs federal agencies to coordinate cross-sector risk management, secure critical communications backbones, and mandate minimum resilience standards."
+
+- rank: 35
+  id: us-nist-sp800-160v2-2021
+  title: "NIST SP 800-160 Vol. 2 Rev. 1: Developing Cyber-Resilient Systems: A Systems Security Engineering Approach"
+  authority: "National Institute of Standards and Technology (NIST)"
+  jurisdiction: US
+  doc_type: standard
+  url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v2r1.pdf
+  landing_page: https://csrc.nist.gov/publications/detail/sp/800-160/vol-2-rev-1/final
+  binding_status: advisory
+  issued: 2021-12-09
+  in_force: "yes"
+  amendments: "none found"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: "Presents design constructs and techniques for anticipation, withstanding, recovery, and adaptation of systems under persistent cyber attack."
+
+- rank: 36
+  id: itu-radio-regulations-art15
+  title: "ITU Radio Regulations, Edition of 2024: Article 15 (Interferences)"
+  authority: "International Telecommunication Union"
+  jurisdiction: INTL
+  doc_type: treaty
+  url: https://www.itu.int/pub/R-REG-RR-2024
+  landing_page: https://www.itu.int/pub/R-REG-RR
+  binding_status: binding
+  issued: 2024-12-01
+  in_force: "yes"
+  amendments: "Incorporates WRC-23 revisions"
+  licence: "ITU copyright / public distribution"
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Prohibits all transmissions with unnecessary bandwidth or power that cause harmful interference and establishes binding investigation and cessation procedures between administrations."
+
+- rank: 37
+  id: itu-radio-regulations-art45
+  title: "ITU Radio Regulations, Edition of 2024: Article 45 (Harmful Interference and Emergency Communications)"
+  authority: "International Telecommunication Union"
+  jurisdiction: INTL
+  doc_type: treaty
+  url: https://www.itu.int/pub/R-REG-RR-2024
+  landing_page: https://www.itu.int/pub/R-REG-RR
+  binding_status: binding
+  issued: 2024-12-01
+  in_force: "yes"
+  amendments: "Incorporates WRC-23 revisions"
+  licence: "ITU copyright / public distribution"
+  gaps: [GAP-IN-03, GAP-IN-06, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Mandates that stations of all services must give absolute priority to distress, urgency, and safety communications, obligating immediate cessation of interfering transmissions."
+
+- rank: 38
+  id: itu-constitution-art40
+  title: "Constitution of the International Telecommunication Union: Article 40 (Priority of Telecommunications Concerning Safety of Life)"
+  authority: "International Telecommunication Union"
+  jurisdiction: INTL
+  doc_type: treaty
+  url: https://www.itu.int/council/pd/constitution.html
+  landing_page: https://www.itu.int/en/history/Pages/ConstitutionAndConvention.aspx
+  binding_status: binding
+  issued: 1992-12-22
+  in_force: "yes"
+  amendments: "Amended by Plenipotentiary Conferences 1994, 1998, 2002, 2006, 2010, 2014, 2018, 2022"
+  licence: "ITU copyright / public distribution"
+  gaps: [GAP-IN-03]
+  role: global_example
+  relevance: 5
+  why: "International telecommunication services must give absolute priority to all telecommunications concerning safety of life at sea, on land, in the air or in outer space."
+
+- rank: 39
+  id: itu-x805-2003
+  title: "Recommendation ITU-T X.805: Security architecture for systems providing end-to-end communications"
+  authority: "ITU-T Study Group 17"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-X.805-200310-I!!PDF-E&lang=e&type=items
+  landing_page: https://www.itu.int/ITU-T/recommendations/rec.aspx?rec=7024
+  binding_status: advisory
+  issued: 2003-10-29
+  in_force: "yes"
+  amendments: "none found"
+  licence: "ITU open recommendation"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Defines security architecture across 3 planes (management, control, user), 3 layers (infrastructure, services, applications), and 8 dimensions including availability."
+
+- rank: 40
+  id: itu-tampere-convention-1998
+  title: "Tampere Convention on the Provision of Telecommunication Resources for Disaster Mitigation and Relief Operations"
+  authority: "International Telecommunication Union and States Parties"
+  jurisdiction: INTL
+  doc_type: treaty
+  url: https://treaties.un.org/doc/Publication/UNTS/Volume%202299/v2299.pdf
+  landing_page: https://www.itu.int/en/ITU-D/Emergency-Telecommunications/Pages/TampereConvention.aspx
+  binding_status: binding
+  issued: 1998-06-18
+  in_force: "yes"
+  amendments: "none found"
+  licence: "United Nations Treaty Series"
+  gaps: [GAP-IN-03, GAP-IN-04]
+  role: context
+  relevance: 4
+  why: "Obligates State Parties to reduce regulatory barriers and facilitate prompt deployment and priority operation of telecommunication resources for disaster relief."
+
+- rank: 41
+  id: itu-x1051-2023
+  title: "Recommendation ITU-T X.1051 (06/2023): Information security, cybersecurity and privacy protection – Information security controls based on ISO/IEC 27002 for telecommunications organizations"
+  authority: "ITU-T Study Group 17"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.itu.int/rec/T-REC-X.1051-202306-I/en
+  landing_page: https://www.itu.int/ITU-T/recommendations/rec.aspx?rec=15367
+  binding_status: advisory
+  issued: 2023-06-29
+  in_force: "yes"
+  amendments: "Alters and replaces 2016 edition"
+  licence: "ITU open recommendation"
+  gaps: [GAP-IN-04, GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Provides telecommunication-specific controls for equipment power redundancy, dual-homed backhaul routing, secure network management, and signaling traffic protection."
+
+- rank: 42
+  id: itu-y3172-2019
+  title: "Recommendation ITU-T Y.3172 (06/2019): Architectural framework for machine learning in future networks including IMT-2020"
+  authority: "ITU-T Study Group 13"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-Y.3172-201906-I!!PDF-E&lang=e&type=items
+  landing_page: https://www.itu.int/rec/T-REC-Y.3172/en
+  binding_status: advisory
+  issued: 2019-06-29
+  in_force: "yes"
+  amendments: "none found"
+  licence: "ITU open recommendation"
+  gaps: [GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Defines an architectural framework for integrating machine learning into networks, specifying ML pipelines, sandbox validation, and policy enforcement points for autonomous actions."
+
+- rank: 43
+  id: itu-e106-2003
+  title: "Recommendation ITU-T E.106: International Emergency Preference Scheme (IEPS) for disaster relief operations"
+  authority: "ITU-T Study Group 2"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-E.106-200310-I!!PDF-E&lang=e&type=items
+  landing_page: https://www.itu.int/rec/T-REC-E.106/en
+  binding_status: advisory
+  issued: 2003-10-24
+  in_force: "yes"
+  amendments: "none found"
+  licence: "ITU open recommendation"
+  gaps: [GAP-IN-03]
+  role: global_example
+  relevance: 5
+  why: "Establishes technical requirements and priority markings ensuring authorized emergency callers obtain preferential treatment during extreme network congestion and outages."
+
+- rank: 44
+  id: itu-y1271-2014
+  title: "Recommendation ITU-T Y.1271 (07/2014): Framework(s) on network requirements and capabilities to support emergency telecommunications over evolving circuit-switched and packet-switched networks"
+  authority: "ITU-T Study Group 13"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-Y.1271-201407-I!!PDF-E&lang=e&type=items
+  landing_page: https://www.itu.int/rec/T-REC-Y.1271/en
+  binding_status: advisory
+  issued: 2014-07-22
+  in_force: "yes"
+  amendments: "Supersedes 2004 edition"
+  licence: "ITU open recommendation"
+  gaps: [GAP-IN-03, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Specifies packet-switched network capabilities for priority bandwidth allocation, pre-emption, and dynamic failover during emergency communications over alternative links."
+
+- rank: 45
+  id: itu-x1812-2023
+  title: "Recommendation ITU-T X.1812 (03/2023): Security requirements and architecture for satellite communication networks"
+  authority: "ITU-T Study Group 17"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.itu.int/rec/T-REC-X.1812-202303-I/en
+  landing_page: https://www.itu.int/ITU-T/recommendations/rec.aspx?rec=15276
+  binding_status: advisory
+  issued: 2023-03-16
+  in_force: "yes"
+  amendments: "none found"
+  licence: "ITU open recommendation"
+  gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Defines security requirements for satellite space, feeder, inter-satellite, and user links, specifying identity authentication and encryption mechanisms."
+
+- rank: 46
+  id: itu-d-netp-guidelines-2020
+  title: "ITU Guidelines for Developing National Emergency Telecommunication Plans (NETP)"
+  authority: "ITU Telecommunication Development Bureau"
+  jurisdiction: INTL
+  doc_type: guideline
+  url: https://www.itu.int/en/ITU-D/Emergency-Telecommunications/Documents/2020/NETP-guidelines.pdf
+  landing_page: https://www.itu.int/en/ITU-D/Emergency-Telecommunications/Pages/National-Emergency-Telecommunication-Plans.aspx
+  binding_status: advisory
+  issued: 2020-03-10
+  in_force: "yes"
+  amendments: "none found"
+  licence: "ITU open publication"
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-04]
+  role: global_example
+  relevance: 4
+  why: "Provides structured guidance for governments on establishing legal frameworks, multi-agency SOPs, backup communications, and resilient satellite infrastructure for national emergencies."
+
+- rank: 47
+  id: itu-e108-2016
+  title: "Recommendation ITU-T E.108: Requirements for a disaster relief mobile telecommunication service"
+  authority: "ITU-T Study Group 2"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-E.108-201601-I!!PDF-E&lang=e&type=items
+  landing_page: https://www.itu.int/rec/T-REC-E.108/en
+  binding_status: advisory
+  issued: 2016-01-13
+  in_force: "yes"
+  amendments: "none found"
+  licence: "ITU open recommendation"
+  gaps: [GAP-IN-03]
+  role: global_example
+  relevance: 4
+  why: "Sets operational and functional requirements for prioritizing disaster-relief mobile traffic, voice, messaging, and data over congested public networks."
+
+- rank: 48
+  id: itu-x1060-2021
+  title: "Recommendation ITU-T X.1060: Framework for the creation and operation of a cyber defence centre"
+  authority: "ITU-T Study Group 17"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-X.1060-202106-I!!PDF-E&lang=e&type=items
+  landing_page: https://www.itu.int/rec/T-REC-X.1060/en
+  binding_status: advisory
+  issued: 2021-06-29
+  in_force: "yes"
+  amendments: "none found"
+  licence: "ITU open recommendation"
+  gaps: [GAP-IN-01, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Provides a structured framework for establishing Security Operations Centres (SOCs), specifying incident triage, cross-organization alert routing, and evidence retention."
+
+- rank: 49
+  id: itu-radio-regulations-app10
+  title: "ITU Radio Regulations, Edition of 2024: Appendix 10 (Report of harmful interference)"
+  authority: "International Telecommunication Union"
+  jurisdiction: INTL
+  doc_type: treaty
+  url: https://www.itu.int/pub/R-REG-RR-2024
+  landing_page: https://www.itu.int/pub/R-REG-RR
+  binding_status: binding
+  issued: 2024-12-01
+  in_force: "yes"
+  amendments: "Incorporates WRC-23 revisions"
+  licence: "ITU copyright / public distribution"
+  gaps: [GAP-IN-01, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: "Prescribes the mandatory formal reporting template and operational technical data required when notifying the ITU Radiocommunication Bureau of satellite interference."
+
+- rank: 50
+  id: itu-r-res644-2019
+  title: "Resolution 644 (Rev. WRC-19): Radiocommunication resources for early warning, disaster mitigation and relief operations"
+  authority: "World Radiocommunication Conference"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.itu.int/dms_pub/itu-r/oth/0c/0a/R0C0A00000A0023PDFE.pdf
+  landing_page: https://www.itu.int/pub/R-REG-RR
+  binding_status: binding
+  issued: 2019-11-22
+  in_force: "yes"
+  amendments: "none found"
+  licence: "ITU copyright"
+  gaps: [GAP-IN-03, GAP-IN-04]
+  role: global_example
+  relevance: 4
+  why: "Urges administrations to facilitate emergency cross-border satellite communications spectrum usage and prioritize relief operations in national frequency plans."
+
+- rank: 51
+  id: itu-e110-2020
+  title: "Recommendation ITU-T E.110: Hierarchical disaster emergency communications scheme"
+  authority: "ITU-T Study Group 2"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-E.110-202008-I!!PDF-E&lang=e&type=items
+  landing_page: https://www.itu.int/rec/T-REC-E.110/en
+  binding_status: advisory
+  issued: 2020-08-13
+  in_force: "yes"
+  amendments: "none found"
+  licence: "ITU open recommendation"
+  gaps: [GAP-IN-03]
+  role: global_example
+  relevance: 4
+  why: "Outlines a tiered priority schema categorizing communications into national command, public safety, critical infrastructure operations, and general public access."
+
+- rank: 52
+  id: itu-x1056-2020
+  title: "Recommendation ITU-T X.1056: Security incident handling for telecommunication organizations"
+  authority: "ITU-T Study Group 17"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-X.1056-202003-I!!PDF-E&lang=e&type=items
+  landing_page: https://www.itu.int/rec/T-REC-X.1056/en
+  binding_status: advisory
+  issued: 2020-03-13
+  in_force: "yes"
+  amendments: "none found"
+  licence: "ITU open recommendation"
+  gaps: [GAP-IN-01, GAP-IN-02]
+  role: global_example
+  relevance: 4
+  why: "Provides operational procedures for detecting, triaging, analyzing, and notifying stakeholders and interconnected carriers of telecommunication cyber incidents."
+
+- rank: 53
+  id: intl-3gpp-ts-33501
+  title: "3GPP TS 33.501 V18.5.0: Security architecture and procedures for 5G System"
+  authority: "3GPP SA3"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.501/33501-i50.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/33_series/33.501/
+  binding_status: advisory
+  issued: 2024-03-28
+  in_force: "yes"
+  amendments: "Regular quarterly releases"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Specifies fundamental 5G security mechanisms including primary authentication (5G-AKA/EAP-AKA'), user plane integrity protection, and Security Edge Protection Proxy (SEPP) filtering."
+
+- rank: 54
+  id: intl-3gpp-ts-38300
+  title: "3GPP TS 38.300 V18.1.0: NR; NR and NG-RAN Overall description; Stage-2 (Release 18)"
+  authority: "3GPP RAN2"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/38_series/38.300/38300-i10.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/38_series/38.300/
+  binding_status: advisory
+  issued: 2024-03-29
+  in_force: "yes"
+  amendments: "Regular quarterly releases"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Section 16.14 defines the stage-2 architectural support for Non-Terrestrial Networks (NTN), addressing satellite transparent and regenerative payloads, ephemeris broadcast, and feeder link switchovers."
+
+- rank: 55
+  id: intl-3gpp-ts-22261
+  title: "3GPP TS 22.261 V19.2.0: Service requirements for the 5G system (Release 19)"
+  authority: "3GPP SA1"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/22_series/22.261/22261-j20.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/22_series/22.261/
+  binding_status: advisory
+  issued: 2024-03-25
+  in_force: "yes"
+  amendments: "Regular quarterly releases"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-03, GAP-IN-06]
+  role: global_example
+  relevance: 5
+  why: "Mandates service requirements for satellite integration, emergency services access, mission-critical communications (MCX), and priority handling under severe capacity constraints."
+
+- rank: 56
+  id: intl-3gpp-ts-32541
+  title: "3GPP TS 32.541 V18.0.0: Telecommunication management; Self-Organizing Networks (SON); Concepts and requirements for self-healing"
+  authority: "3GPP SA5"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/32_series/32.541/32541-i00.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/32_series/32.541/
+  binding_status: advisory
+  issued: 2024-03-28
+  in_force: "yes"
+  amendments: "Maintained in Release 18"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Defines self-healing concepts, stage-1 requirements, fault detection, automatic software recovery, and rollback procedures for cellular radio access nodes."
+
+- rank: 57
+  id: intl-3gpp-ts-23501
+  title: "3GPP TS 23.501 V18.5.0: System architecture for the 5G System (5GS); Stage 2"
+  authority: "3GPP SA2"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-i50.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/
+  binding_status: advisory
+  issued: 2024-03-27
+  in_force: "yes"
+  amendments: "Regular quarterly releases"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-03, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Defines 5G QoS architecture, Allocation and Retention Priority (ARP), 5QI prioritization, and satellite backhaul delay-tolerant transport handling."
+
+- rank: 58
+  id: intl-3gpp-ts-28541
+  title: "3GPP TS 28.541 V18.4.0: Management and orchestration; 5G Network Resource Model (NRM); Stage 2 and stage 3"
+  authority: "3GPP SA5"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/28_series/28.541/28541-i40.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/28_series/28.541/
+  binding_status: advisory
+  issued: 2024-03-28
+  in_force: "yes"
+  amendments: "Regular quarterly releases"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Specifies management information models and configuration parameters for virtualized network functions, automated reconfiguration, and slice lifecycle management."
+
+- rank: 59
+  id: intl-3gpp-ts-22153
+  title: "3GPP TS 22.153 V18.2.0: Multimedia Priority Service (MPS)"
+  authority: "3GPP SA1"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/22_series/22.153/22153-i20.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/22_series/22.153/
+  binding_status: advisory
+  issued: 2023-12-18
+  in_force: "yes"
+  amendments: "Maintained in Release 18"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-03]
+  role: global_example
+  relevance: 5
+  why: "Specifies end-to-end priority treatment across transport and access networks for authorized national security and emergency preparedness users during network degradation."
+
+- rank: 60
+  id: intl-3gpp-ts-38401
+  title: "3GPP TS 38.401 V18.1.0: NG-RAN; Architecture description"
+  authority: "3GPP RAN3"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/38_series/38.401/38401-i10.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/38_series/38.401/
+  binding_status: advisory
+  issued: 2024-03-29
+  in_force: "yes"
+  amendments: "Regular quarterly releases"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Defines disaggregated RAN architecture (gNB-CU and gNB-DU split) used in satellite onboard gNB-DU payloads and transparent satellite transponders."
+
+- rank: 61
+  id: intl-3gpp-ts-23502
+  title: "3GPP TS 23.502 V18.5.0: Procedures for the 5G System (5GS); Stage 2"
+  authority: "3GPP SA2"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/23_series/23.502/23502-i50.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/23_series/23.502/
+  binding_status: advisory
+  issued: 2024-03-27
+  in_force: "yes"
+  amendments: "Regular quarterly releases"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Specifies detailed procedural flows for session continuity, disaster roaming fallback, inter-system handovers, and failover across alternative access paths."
+
+- rank: 62
+  id: intl-3gpp-tr-38821
+  title: "3GPP TR 38.821 V16.2.0: Solutions for NR to support non-terrestrial networks (NTN)"
+  authority: "3GPP RAN3"
+  jurisdiction: INTL
+  doc_type: report
+  url: https://www.3gpp.org/ftp/Specs/archive/38_series/38.821/38821-g20.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/38_series/38.821/
+  binding_status: advisory
+  issued: 2021-05-18
+  in_force: "yes"
+  amendments: "none found"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Studies timing advance, Doppler shift compensation, ephemeris calculations, and radio link monitoring over satellite feeder and service links."
+
+- rank: 63
+  id: intl-3gpp-tr-22822
+  title: "3GPP TR 22.822 V16.0.0: Study on using Satellite Access in 5G; Stage 1"
+  authority: "3GPP SA1"
+  jurisdiction: INTL
+  doc_type: report
+  url: https://www.3gpp.org/ftp/Specs/archive/22_series/22.822/22822-g00.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/22_series/22.822/
+  binding_status: advisory
+  issued: 2018-06-19
+  in_force: "yes"
+  amendments: "none found"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Analyzes primary use cases for satellite integration including resilient backhaul failover for cellular base stations during disaster situations."
+
+- rank: 64
+  id: intl-3gpp-ts-33511
+  title: "3GPP TS 33.511 V18.2.0: Security Assurance Specification (SCAS) for the next generation Node B (gNodeB) network product class"
+  authority: "3GPP SA3"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.511/33511-i20.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/33_series/33.511/
+  binding_status: advisory
+  issued: 2024-03-28
+  in_force: "yes"
+  amendments: "Regular quarterly releases"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Establishes automated security test cases evaluating gNodeB resistance to rogue base-station impersonation, backhaul eavesdropping, and tampering."
+
+- rank: 65
+  id: intl-3gpp-ts-23273
+  title: "3GPP TS 23.273 V18.4.0: 5G System (5GS) Location Services (LCS); Stage 2"
+  authority: "3GPP SA2"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/23_series/23.273/23273-i40.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/23_series/23.273/
+  binding_status: advisory
+  issued: 2024-03-27
+  in_force: "yes"
+  amendments: "Regular quarterly releases"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Specifies user equipment positioning and ephemeris verification procedures, critical for detecting GNSS spoofing and validating satellite location integrity."
+
+- rank: 66
+  id: intl-3gpp-ts-24501
+  title: "3GPP TS 24.501 V18.5.1: Non-Access-Stratum (NAS) protocol for 5G System (5GS); Stage 3"
+  authority: "3GPP CT1"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/24_series/24.501/24501-i51.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/24_series/24.501/
+  binding_status: advisory
+  issued: 2024-04-03
+  in_force: "yes"
+  amendments: "Regular quarterly releases"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-03, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Defines NAS signaling procedures for emergency registration, disaster roaming fallback, and access barring exemptions for priority user categories."
+
+- rank: 67
+  id: intl-3gpp-ts-38331
+  title: "3GPP TS 38.331 V18.1.0: Radio Resource Control (RRC) protocol specification"
+  authority: "3GPP RAN2"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/38_series/38.331/38331-i10.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/38_series/38.331/
+  binding_status: advisory
+  issued: 2024-03-29
+  in_force: "yes"
+  amendments: "Regular quarterly releases"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Specifies System Information Block (SIB19) containing satellite ephemeris parameters, polarization, and feeder link re-routing notifications."
+
+- rank: 68
+  id: intl-3gpp-ts-33512
+  title: "3GPP TS 33.512 V18.1.0: Security Assurance Specification (SCAS) for the Access and Mobility Management Function (AMF)"
+  authority: "3GPP SA3"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/33_series/33.512/33512-i10.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/33_series/33.512/
+  binding_status: advisory
+  issued: 2024-03-28
+  in_force: "yes"
+  amendments: "none found"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 3
+  why: "Establishes security assurance and automated compliance test cases evaluating AMF handling of rogue signaling messages and authorization checks."
+
+- rank: 69
+  id: intl-3gpp-ts-23003
+  title: "3GPP TS 23.003 V18.5.0: Numbering, addressing and identification"
+  authority: "3GPP CT4"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/23_series/23.003/23003-i50.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/23_series/23.003/
+  binding_status: advisory
+  issued: 2024-03-27
+  in_force: "yes"
+  amendments: "Regular quarterly releases"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-06]
+  role: global_example
+  relevance: 3
+  why: "Defines routing and tracking area identities for satellite cells, ensuring correct spatial binding and preventing fraudulent cell identification spoofing."
+
+- rank: 70
+  id: intl-3gpp-ts-29573
+  title: "3GPP TS 29.573 V18.4.0: 5G System; Public Land Mobile Network (PLMN) Interconnection; Stage 3"
+  authority: "3GPP CT4"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.3gpp.org/ftp/Specs/archive/29_series/29.573/29573-i40.zip
+  landing_page: https://www.3gpp.org/ftp/Specs/archive/29_series/29.573/
+  binding_status: advisory
+  issued: 2024-03-27
+  in_force: "yes"
+  amendments: "none found"
+  licence: "3GPP open standard"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Specifies the N32 interface and PRINS application-level security between SEPPs to prevent message tampering during inter-PLMN and satellite roaming failover."
+
+- rank: 71
+  id: intl-gsma-fs11-ss7
+  title: "GSMA FS.11: SS7 Interconnect Security Monitoring and Firewall Guidelines"
+  authority: "GSM Association (GSMA)"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.gsma.com/solutions-and-impact/technologies/security/
+  landing_page: https://www.gsma.com/solutions-and-impact/technologies/security/
+  binding_status: advisory
+  issued: 2021
+  in_force: "yes"
+  amendments: "Periodic updates"
+  licence: "GSMA member / restricted"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Defines category 1, 2, and 3 SS7 message filtering and firewall inspection rules to prevent unauthorized subscriber tracking and signaling interception."
+
+- rank: 72
+  id: intl-gsma-fs07-diameter
+  title: "GSMA FS.07: Diameter Interconnect Security Guidelines"
+  authority: "GSM Association (GSMA)"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.gsma.com/solutions-and-impact/technologies/security/
+  landing_page: https://www.gsma.com/solutions-and-impact/technologies/security/
+  binding_status: advisory
+  issued: 2021
+  in_force: "yes"
+  amendments: "Periodic updates"
+  licence: "GSMA member / restricted"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Establishes filtering rules and validation checks at Diameter edge agents (DEA) to defeat rogue spoofing and subscriber profiling over interconnect links."
+
+- rank: 73
+  id: intl-gsma-fs19-gtp
+  title: "GSMA FS.19: GTP Security Guidelines"
+  authority: "GSM Association (GSMA)"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.gsma.com/solutions-and-impact/technologies/security/
+  landing_page: https://www.gsma.com/solutions-and-impact/technologies/security/
+  binding_status: advisory
+  issued: 2022
+  in_force: "yes"
+  amendments: "none found"
+  licence: "GSMA member / restricted"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Details GTP-C and GTP-U firewall validation, anti-spoofing controls, and packet sanity checks preventing user-plane traffic injection on backhaul links."
+
+- rank: 74
+  id: intl-gsma-fs34-5g-interconnect
+  title: "GSMA FS.34: 5G Interconnect Security Guidelines"
+  authority: "GSM Association (GSMA)"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.gsma.com/solutions-and-impact/technologies/security/
+  landing_page: https://www.gsma.com/solutions-and-impact/technologies/security/
+  binding_status: advisory
+  issued: 2023
+  in_force: "yes"
+  amendments: "none found"
+  licence: "GSMA member / restricted"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Guides deployment of Security Edge Protection Proxies (SEPP), TLS certificate validation, and JSON Web Encryption (JWE) on international 5G roaming interfaces."
+
+- rank: 75
+  id: intl-gsma-clp17-5g-security
+  title: "GSMA CLP.17: 5G Security Guide"
+  authority: "GSM Association (GSMA)"
+  jurisdiction: INTL
+  doc_type: guideline
+  url: https://www.gsma.com/solutions-and-impact/technologies/security/
+  landing_page: https://www.gsma.com/solutions-and-impact/technologies/security/
+  binding_status: advisory
+  issued: 2022
+  in_force: "yes"
+  amendments: "none found"
+  licence: "GSMA member / restricted"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Provides operational best practices for deploying virtualized 5G core network functions, zero-trust perimeter enforcement, and automated telemetry logging."
+
+- rank: 76
+  id: intl-gsma-ng113-disaster-roaming
+  title: "GSMA NG.113: 5G Disaster Roaming Guidelines"
+  authority: "GSM Association (GSMA)"
+  jurisdiction: INTL
+  doc_type: guideline
+  url: https://www.gsma.com/solutions-and-impact/technologies/networks/
+  landing_page: https://www.gsma.com/solutions-and-impact/technologies/networks/
+  binding_status: advisory
+  issued: 2023
+  in_force: "yes"
+  amendments: "none found"
+  licence: "GSMA member / restricted"
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Establishes technical procedures for opening domestic disaster roaming across partner networks when an operator's backhaul or radio sites suffer total collapse."
+
+- rank: 77
+  id: intl-etsi-en-303645
+  title: "ETSI EN 303 645 V2.1.1: CYBER; Cyber Security for Consumer Internet of Things: Baseline Requirements"
+  authority: "European Telecommunications Standards Institute (ETSI)"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.etsi.org/deliver/etsi_en/303600_303699/303645/02.01.01_60/en_303645v020101p.pdf
+  landing_page: https://www.etsi.org/standards-search
+  binding_status: advisory
+  issued: 2020-06-29
+  in_force: "yes"
+  amendments: "none found"
+  licence: "ETSI open standard"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Establishes baseline cybersecurity provisions including no universal default passwords, vulnerability disclosure policies, and secure software update verification."
+
+- rank: 78
+  id: intl-etsi-ts-102181
+  title: "ETSI TS 102 181 V1.4.1: Emergency Communications (EMTEL); Requirements for communication between authorities and individuals"
+  authority: "European Telecommunications Standards Institute (ETSI)"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.etsi.org/deliver/etsi_ts/102100_102199/102181/01.04.01_60/ts_102181v010401p.pdf
+  landing_page: https://www.etsi.org/standards-search
+  binding_status: advisory
+  issued: 2014-12-18
+  in_force: "yes"
+  amendments: "none found"
+  licence: "ETSI open standard"
+  gaps: [GAP-IN-02, GAP-IN-03]
+  role: global_example
+  relevance: 4
+  why: "Defines functional requirements for warning distribution systems and prioritizing public safety communications across commercial electronic networks."
+
+- rank: 79
+  id: intl-etsi-ts-103457
+  title: "ETSI TS 103 457 V1.2.1: CYBER; Interface to secure cryptographic hardware"
+  authority: "European Telecommunications Standards Institute (ETSI)"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.etsi.org/deliver/etsi_ts/103400_103499/103457/01.02.01_60/ts_103457v010201p.pdf
+  landing_page: https://www.etsi.org/standards-search
+  binding_status: advisory
+  issued: 2020-03-31
+  in_force: "yes"
+  amendments: "none found"
+  licence: "ETSI open standard"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 3
+  why: "Specifies application programming interfaces to Hardware Security Modules (HSMs) and tamper-proof storage for encryption key custody in network nodes."
+
+- rank: 80
+  id: intl-etsi-en-302186
+  title: "ETSI EN 302 186 V2.1.1: Satellite Earth Stations and Systems (SES); Harmonised Standard for satellite mobile aircraft stations"
+  authority: "European Telecommunications Standards Institute (ETSI)"
+  jurisdiction: INTL
+  doc_type: standard
+  url: https://www.etsi.org/deliver/etsi_en/302100_302199/302186/02.01.01_60/en_302186v020101p.pdf
+  landing_page: https://www.etsi.org/standards-search
+  binding_status: advisory
+  issued: 2016-03-10
+  in_force: "yes"
+  amendments: "none found"
+  licence: "ETSI open standard"
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: global_example
+  relevance: 3
+  why: "Establishes technical standards for satellite earth terminals to prevent unwanted radio emissions, unauthorized frequency transmissions, and interference."
+
+- rank: 81
+  id: au-asd-securing-space-2026
+  title: "Securing space – Cyber security for low earth orbit satellite communications"
+  authority: "Australian Signals Directorate (ASD ACSC), ASA, CCCS, NSA, NCSC-NZ"
+  jurisdiction: AU
+  doc_type: guideline
+  url: https://www.cyber.gov.au/resources-business-and-government/securing-space
+  landing_page: https://www.cyber.gov.au/resources-business-and-government/securing-space
+  binding_status: advisory
+  issued: 2026-03-20
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Australian Commonwealth Copyright / Open"
+  gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 5
+  why: "Establishes joint security guidelines across space, ground, user segments, and RF links for LEO satellite constellations, emphasizing provider resilience checks and encryption."
+
+- rank: 82
+  id: au-soci-act-2018
+  title: "Security of Critical Infrastructure Act 2018 (Act No. 29, 2018)"
+  authority: "Parliament of Australia"
+  jurisdiction: AU
+  doc_type: act
+  url: https://www.legislation.gov.au/C2018A00029/latest/text
+  landing_page: https://www.legislation.gov.au/C2018A00029/latest/details
+  binding_status: binding
+  issued: 2018-04-11
+  in_force: "yes"
+  amendments: "Amended by Security Legislation Amendment (Critical Infrastructure) Acts 2021 and 2022"
+  licence: "Australian Commonwealth Open"
+  gaps: [GAP-IN-01, GAP-IN-02, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Part 2B mandates 12-hour reporting for critical cyber incidents and 72-hour reporting for other incidents, while Part 3A grants government powers to direct assistance during severe cyber attacks."
+
+- rank: 83
+  id: au-soci-cirmp-rules-2023
+  title: "Security of Critical Infrastructure (Critical infrastructure risk management program) Rules (LIN 23/006) 2023"
+  authority: "Minister for Home Affairs (Australia)"
+  jurisdiction: AU
+  doc_type: rules
+  url: https://www.legislation.gov.au/F2023L00128/latest/text
+  landing_page: https://www.legislation.gov.au/F2023L00128/latest/details
+  binding_status: binding
+  issued: 2023-02-16
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Australian Commonwealth Open"
+  gaps: [GAP-IN-04, GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Mandates critical infrastructure entities to establish risk management programs covering hazard mitigation, cyber resilience baselines, and supply chain integrity."
+
+- rank: 84
+  id: au-telact-part14-tssr
+  title: "Telecommunications Act 1997: Part 14 (Telecommunications Sector Security Reforms)"
+  authority: "Parliament of Australia"
+  jurisdiction: AU
+  doc_type: act
+  url: https://www.legislation.gov.au/C2004A05145/latest/text
+  landing_page: https://www.legislation.gov.au/C2004A05145/latest/details
+  binding_status: binding
+  issued: 2017-09-18
+  in_force: "yes"
+  amendments: "Incorporated into Telecommunications Act 1997 via Act No. 104, 2017"
+  licence: "Australian Commonwealth Open"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Requires carriage service providers to do their best to protect networks from unauthorized access and notify government of planned significant network changes."
+
+- rank: 85
+  id: au-asd-essential-eight-2023
+  title: "Strategies to Mitigate Cyber Security Incidents: The Essential Eight"
+  authority: "Australian Signals Directorate (ASD ACSC)"
+  jurisdiction: AU
+  doc_type: guideline
+  url: https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/essential-eight
+  landing_page: https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/essential-eight
+  binding_status: advisory
+  issued: 2023-11-28
+  in_force: "yes"
+  amendments: "Periodic maturity model revisions"
+  licence: "Australian Commonwealth Copyright / Open"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Prescribes prioritized operational mitigations including application control, patch application timelines, multi-factor authentication, and regular data backups."
+
+- rank: 86
+  id: uk-telecoms-security-act-2021
+  title: "Telecommunications (Security) Act 2021 (c. 31)"
+  authority: "Parliament of the United Kingdom"
+  jurisdiction: UK
+  doc_type: act
+  url: https://www.legislation.gov.uk/ukpga/2021/31/enacted/data.pdf
+  landing_page: https://www.legislation.gov.uk/ukpga/2021/31/contents
+  binding_status: binding
+  issued: 2021-11-17
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Open Government Licence v3.0"
+  gaps: [GAP-IN-01, GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Imposes statutory duties on public telecoms providers to identify security compromises and inform regulator Ofcom immediately of significant security compromises."
+
+- rank: 87
+  id: uk-elec-comm-security-regs-2022
+  title: "The Electronic Communications (Security Measures) Regulations 2022 (SI 2022/933)"
+  authority: "Secretary of State for Digital, Culture, Media and Sport (UK)"
+  jurisdiction: UK
+  doc_type: regulation
+  url: https://www.legislation.gov.uk/uksi/2022/933/made/data.pdf
+  landing_page: https://www.legislation.gov.uk/uksi/2022/933/contents/made
+  binding_status: binding
+  issued: 2022-09-05
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Open Government Licence v3.0"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Mandates specific technical controls including management plane segregation, monitoring network telemetry, testing backup pathways, and protecting core configuration data."
+
+- rank: 88
+  id: uk-telecom-security-code-2022
+  title: "Telecommunications Security Code of Practice"
+  authority: "Department for Digital, Culture, Media and Sport (DCMS) / Ofcom"
+  jurisdiction: UK
+  doc_type: guideline
+  url: https://assets.publishing.service.gov.uk/media/63849767e90e0737a4c0eb66/Telecommunications_Security_Code_of_Practice.pdf
+  landing_page: https://www.gov.uk/government/publications/telecommunications-security-code-of-practice
+  binding_status: binding
+  issued: 2022-11-28
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Open Government Licence v3.0"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Provides detailed tier-based implementation measures for providers, specifying technical steps to verify software authenticity and protect vital network services."
+
+- rank: 89
+  id: uk-space-industry-act-2018
+  title: "Space Industry Act 2018 (c. 5)"
+  authority: "Parliament of the United Kingdom"
+  jurisdiction: UK
+  doc_type: act
+  url: https://www.legislation.gov.uk/ukpga/2018/5/enacted/data.pdf
+  landing_page: https://www.legislation.gov.uk/ukpga/2018/5/contents
+  binding_status: binding
+  issued: 2018-03-15
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Open Government Licence v3.0"
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: "Regulates space activities and spaceports, requiring licensees to satisfy national security requirements and take steps to prevent unlawful interference with space vehicles."
+
+- rank: 90
+  id: uk-space-industry-regs-2021
+  title: "The Space Industry Regulations 2021 (SI 2021/792)"
+  authority: "Secretary of State for Transport (UK)"
+  jurisdiction: UK
+  doc_type: regulation
+  url: https://www.legislation.gov.uk/uksi/2021/792/made/data.pdf
+  landing_page: https://www.legislation.gov.uk/uksi/2021/792/contents/made
+  binding_status: binding
+  issued: 2021-07-07
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Open Government Licence v3.0"
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: "Prescribes security regulations for spaceflight operators, including cyber risk assessments, mission control cybersecurity safeguards, and emergency response planning."
+
+- rank: 91
+  id: uk-ncsc-caf-3-2
+  title: "NCSC Cyber Assessment Framework (CAF) Version 3.2"
+  authority: "National Cyber Security Centre (UK)"
+  jurisdiction: UK
+  doc_type: guideline
+  url: https://www.ncsc.gov.uk/collection/caf
+  landing_page: https://www.ncsc.gov.uk/collection/caf
+  binding_status: advisory
+  issued: 2023-10-10
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Open Government Licence v3.0"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Provides systematic guidance for assessing cyber resilience in operators of essential services, covering resilience planning, network monitoring, and response capabilities."
+
+- rank: 92
+  id: ca-bill-c26-ccspa-2024
+  title: "Bill C-26: An Act respecting cyber security, amending the Telecommunications Act and making consequential amendments to other Acts"
+  authority: "Parliament of Canada"
+  jurisdiction: CA
+  doc_type: act
+  url: https://www.parl.ca/DocumentViewer/en/44-1/bill/C-26/third-reading
+  landing_page: https://www.parl.ca/legisinfo/en/bill/44-1/c-26
+  binding_status: draft
+  issued: 2024-06-19
+  in_force: partly
+  amendments: "Passed House of Commons 2024"
+  licence: "Parliament of Canada open access"
+  gaps: [GAP-IN-01, GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Enacts the Critical Cyber Systems Protection Act (CCSPA) and amends the Telecommunications Act to empower binding cybersecurity orders and mandatory incident reporting to CSE."
+
+- rank: 93
+  id: ca-crtc-decision-2022-198
+  title: "CRTC Telecom Decision 2022-198: Network resilience and mutual assistance during emergency outages"
+  authority: "Canadian Radio-television and Telecommunications Commission (CRTC)"
+  jurisdiction: CA
+  doc_type: order
+  url: https://crtc.gc.ca/eng/archive/2022/dt2022-198.pdf
+  landing_page: https://crtc.gc.ca/eng/archive/2022/dt2022-198.htm
+  binding_status: binding
+  issued: 2022-07-21
+  in_force: "yes"
+  amendments: "Followed by Telecom Order 2023-133"
+  licence: "Government of Canada Copyright / Open"
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Orders major telecommunications service providers to establish bilateral emergency roaming agreements and mutual assistance protocols following catastrophic nationwide network failure."
+
+- rank: 94
+  id: uk-ofcom-resilience-guidance
+  title: "Ofcom Guidance on Network Resilience and Emergency Planning for Communications Providers"
+  authority: "Office of Communications (Ofcom)"
+  jurisdiction: UK
+  doc_type: guideline
+  url: https://www.ofcom.org.uk/__data/assets/pdf_file/0023/108482/resilience-guidance.pdf
+  landing_page: https://www.ofcom.org.uk
+  binding_status: advisory
+  issued: 2020-04-15
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Open Government Licence v3.0"
+  gaps: [GAP-IN-03, GAP-IN-04]
+  role: global_example
+  relevance: 4
+  why: "Provides regulatory expectations for telecom exchange power resilience, battery standby autonomy minimums, and priority handling for emergency calls."
+
+- rank: 95
+  id: ca-cyber-satellite-guidance-2023
+  title: "Cyber Security Considerations for Satellite Operations (ITAP.00.012)"
+  authority: "Canadian Centre for Cyber Security (CCCS)"
+  jurisdiction: CA
+  doc_type: guideline
+  url: https://www.cyber.gc.ca/en/guidance/cyber-security-considerations-satellite-operations-itap00012
+  landing_page: https://www.cyber.gc.ca/en/guidance/cyber-security-considerations-satellite-operations-itap00012
+  binding_status: advisory
+  issued: 2023-08-22
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of Canada Open"
+  gaps: [GAP-IN-06, GAP-IN-08, GAP-IN-09]
+  role: global_example
+  relevance: 4
+  why: "Highlights specific satellite risk management measures including command link cryptographic authentication, isolated ground stations, and anomaly monitoring."
+
+- rank: 96
+  id: sg-cybersecurity-act-2018
+  title: "Cybersecurity Act 2018 (Act 9 of 2018, as amended 2024)"
+  authority: "Parliament of Singapore"
+  jurisdiction: SG
+  doc_type: act
+  url: https://sso.agc.gov.sg/Act/CA2018
+  landing_page: https://sso.agc.gov.sg/Act/CA2018
+  binding_status: binding
+  issued: 2018-03-02
+  in_force: "yes"
+  amendments: "Cybersecurity (Amendment) Act 2024 passed April 2024"
+  licence: "Government of Singapore open access"
+  gaps: [GAP-IN-01, GAP-IN-02, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Sections 14-15 mandate critical information infrastructure (CII) owners to report cybersecurity incidents within 2 hours of confirmation and comply with binding directions."
+
+- rank: 97
+  id: sg-csa-ccop-2-0
+  title: "Cybersecurity Code of Practice for Critical Information Infrastructure (CCoP 2.0)"
+  authority: "Cyber Security Agency of Singapore (CSA)"
+  jurisdiction: SG
+  doc_type: direction
+  url: https://www.csa.gov.sg/-/media/csa/documents/legislation/ccop/cybersecurity-code-of-practice-second-edition.pdf
+  landing_page: https://www.csa.gov.sg/legislation/cybersecurity-act/codes-of-practice
+  binding_status: binding
+  issued: 2022-07-01
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of Singapore open access"
+  gaps: [GAP-IN-04, GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Mandates specific technical controls for CII owners including redundant power supply resilience, multi-factor authentication, network isolation, and audit logging."
+
+- rank: 98
+  id: sg-imda-tccop-2021
+  title: "Telecommunications Cybersecurity Code of Practice (TCCoP)"
+  authority: "Infocomm Media Development Authority (IMDA Singapore)"
+  jurisdiction: SG
+  doc_type: direction
+  url: https://www.imda.gov.sg/-/media/imda/files/regulation-licensing-and-consultations/codes-of-practice/codes-of-practice-telecommunication-services/tccop.pdf
+  landing_page: https://www.imda.gov.sg/regulations-and-licensing-listing/telecommunications-cybersecurity-code-of-practice
+  binding_status: binding
+  issued: 2021-04-01
+  in_force: "yes"
+  amendments: "Periodic revisions"
+  licence: "Government of Singapore open access"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Sets binding baseline cybersecurity standards for designated public telecom licensees, focusing on perimeter protection, SS7/Diameter signaling filtering, and 24/7 monitoring."
+
+- rank: 99
+  id: jp-telecom-business-act-art28
+  title: "Telecommunications Business Act (Act No. 86 of 1984): Article 28 and Article 31 (Reporting and Technical Standards)"
+  authority: "Ministry of Internal Affairs and Communications (MIC, Japan)"
+  jurisdiction: JP
+  doc_type: act
+  url: https://www.japaneselawtranslation.go.jp/en/laws/view/4279/en
+  landing_page: https://www.soumu.go.jp/english/
+  binding_status: binding
+  issued: 1984-12-25
+  in_force: "yes"
+  amendments: "Amended by Act No. 70 of 2022"
+  licence: "Japanese Law Translation / Public Domain"
+  gaps: [GAP-IN-01, GAP-IN-02, GAP-IN-04]
+  role: global_example
+  relevance: 5
+  why: "Article 28 requires immediate reporting to MIC of serious telecommunications service disruptions, while Article 31 mandates technical standards for network reliability."
+
+- rank: 100
+  id: jp-mic-safety-reliability-standards
+  title: "Rules for Telecommunications Facilities for Telecommunications Business (MIC Ordinance No. 30 of 1985)"
+  authority: "Ministry of Internal Affairs and Communications (MIC, Japan)"
+  jurisdiction: JP
+  doc_type: regulation
+  url: https://www.tele.soumu.go.jp/e/adm/infra/index.htm
+  landing_page: https://www.soumu.go.jp
+  binding_status: binding
+  issued: 1985-04-01
+  in_force: "yes"
+  amendments: "Regularly updated for disaster countermeasures"
+  licence: "Government of Japan open access"
+  gaps: [GAP-IN-04, GAP-IN-08]
+  role: global_example
+  relevance: 5
+  why: "Prescribes detailed technical standards for telecom facilities, requiring redundant electrical power systems, storage battery capacity minimums, and diverse physical routing."
+
+- rank: 101
+  id: ae-tdra-emergency-telecom-framework
+  title: "TDRA Regulatory Framework for Emergency Telecommunications"
+  authority: "Telecommunications and Digital Government Regulatory Authority (TDRA)"
+  jurisdiction: AE
+  doc_type: regulation
+  url: https://tdra.gov.ae/-/media/About/regulations-and-ruling/EN/Regulatory-Framework-for-Emergency-Telecommunications.ashx
+  landing_page: https://tdra.gov.ae/en/regulations-and-rulings
+  binding_status: binding
+  issued: 2020
+  in_force: "yes"
+  amendments: "none found"
+  licence: "TDRA open publication"
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-04]
+  role: global_example
+  relevance: 5
+  why: "Establishes regulatory obligations for telecom licensees in the UAE to maintain emergency communications, provide priority restoration, and coordinate disaster response."
+
+- rank: 102
+  id: berec-open-internet-guidelines-2022
+  title: "BEREC Guidelines on the Implementation of the Open Internet Regulation (BoR (22) 81)"
+  authority: "Body of European Regulators for Electronic Communications (BEREC)"
+  jurisdiction: EU
+  doc_type: guideline
+  url: https://www.berec.europa.eu/en/document-store/berec-office/berec-guidelines/berec-guidelines-on-the-implementation-of-the-open-internet-regulation
+  landing_page: https://www.berec.europa.eu
+  binding_status: advisory
+  issued: 2022-06-09
+  in_force: "yes"
+  amendments: "Replaces BoR (20) 112"
+  licence: "BEREC open access"
+  gaps: [GAP-IN-03]
+  role: global_example
+  relevance: 4
+  why: "Clarifies the application of Article 3(3) of Regulation 2015/2120 regarding reasonable traffic management, network security measures, and exceptional congestion relief prioritization."
+
+- rank: 103
+  id: berec-emergency-comm-guidelines-2020
+  title: "BEREC Guidelines on Emergency Communications (BoR (20) 195)"
+  authority: "Body of European Regulators for Electronic Communications (BEREC)"
+  jurisdiction: EU
+  doc_type: guideline
+  url: https://www.berec.europa.eu/en/document-store/berec-office/berec-guidelines/berec-guidelines-on-emergency-communications
+  landing_page: https://www.berec.europa.eu
+  binding_status: advisory
+  issued: 2020-12-10
+  in_force: "yes"
+  amendments: "none found"
+  licence: "BEREC open access"
+  gaps: [GAP-IN-03, GAP-IN-04]
+  role: global_example
+  relevance: 4
+  why: "Provides NRAs with guidance for implementing Articles 109 and 110 of the EECC, covering caller location accuracy, uninterrupted emergency access, and public warning reliability."
+
+- rank: 104
+  id: eu-commission-reg-2023-894
+  title: "Commission Delegated Regulation (EU) 2023/894 supplementing Directive (EU) 2018/1972 on measures to ensure effective access to emergency services"
+  authority: "European Commission"
+  jurisdiction: EU
+  doc_type: regulation
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0894
+  landing_page: https://eur-lex.europa.eu/eli/reg_del/2023/894/oj/eng
+  binding_status: binding
+  issued: 2022-12-16
+  in_force: "yes"
+  amendments: "none found"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-02, GAP-IN-03]
+  role: global_example
+  relevance: 4
+  why: "Establishes mandatory technical criteria for emergency communications routing to PSAPs, handset-derived caller location accuracy, and network availability standards."
+
+- rank: 105
+  id: enisa-telecom-incidents-report-2023
+  title: "Telecom Security Incidents 2023: Annual Analysis of Article 40 EECC Reports"
+  authority: "European Union Agency for Cybersecurity (ENISA)"
+  jurisdiction: EU
+  doc_type: report
+  url: https://www.enisa.europa.eu/sites/default/files/publications/Telecom%20Security%20Incidents%202023.pdf
+  landing_page: https://www.enisa.europa.eu/publications/telecom-security-incidents-2023
+  binding_status: advisory
+  issued: 2024-06-25
+  in_force: "yes"
+  amendments: "Annual series"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-01, GAP-IN-04]
+  role: global_example
+  relevance: 4
+  why: "Identifies primary root causes of major telecom outages across Europe, revealing that power cuts and third-party transmission cable cuts cause over 60% of user-hour losses."
+
+- rank: 106
+  id: fcc-wea-rules-47cfr10
+  title: "47 CFR Part 10 Wireless Emergency Alerts (WEA)"
+  authority: "Federal Communications Commission"
+  jurisdiction: US
+  doc_type: regulation
+  url: https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-10
+  landing_page: https://www.fcc.gov/wireless-emergency-alerts-wea
+  binding_status: binding
+  issued: 2008-08-07
+  in_force: "yes"
+  amendments: "Amended 2023 for multilingual alerts"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-02, GAP-IN-03]
+  role: global_example
+  relevance: 4
+  why: "Mandates technical specifications and delivery timelines for commercial mobile service providers to transmit geo-targeted emergency warnings without subscriber congestion."
+
+- rank: 107
+  id: cpuc-pub-util-code-776
+  title: "California Public Utilities Code Section 776 (Backup Power Regulations for Telecommunications Systems)"
+  authority: "California State Legislature"
+  jurisdiction: US
+  doc_type: act
+  url: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=776.&lawCode=PUC
+  landing_page: https://leginfo.legislature.ca.gov
+  binding_status: binding
+  issued: 2006
+  in_force: "yes"
+  amendments: "Amended 2019"
+  licence: "public domain (US State Gov)"
+  gaps: [GAP-IN-04]
+  role: global_example
+  relevance: 4
+  why: "Directs the CPUC to adopt performance, reliability, and backup electric power requirements for telecommunications networks, including cellular base stations."
+
+- rank: 108
+  id: fcc-outage-reporting-order-2004
+  title: "Report and Order in ET Docket No. 04-35: New Part 4 of the Commission's Rules Concerning Disruptions to Communications (FCC 04-188)"
+  authority: "Federal Communications Commission"
+  jurisdiction: US
+  doc_type: order
+  url: https://docs.fcc.gov/public/attachments/FCC-04-188A1.pdf
+  landing_page: https://www.fcc.gov/document/disruptions-communications
+  binding_status: binding
+  issued: 2004-08-19
+  in_force: "yes"
+  amendments: "none found"
+  licence: "public domain (US Gov)"
+  gaps: [GAP-IN-01, GAP-IN-02]
+  role: global_example
+  relevance: 4
+  why: "Foundational order establishing outage reporting rules across wireline, cellular, satellite, and cable providers to protect homeland security and network integrity."
+
+- rank: 109
+  id: berec-security-common-approaches-2020
+  title: "BEREC Guidelines on Common Approaches to the Security of Network and Services (BoR (20) 107)"
+  authority: "Body of European Regulators for Electronic Communications (BEREC)"
+  jurisdiction: EU
+  doc_type: guideline
+  url: https://www.berec.europa.eu/en/document-store/berec-office/berec-guidelines/berec-guidelines-on-common-approaches-to-the-security-of-network-and-services
+  landing_page: https://www.berec.europa.eu
+  binding_status: advisory
+  issued: 2020-06-12
+  in_force: "yes"
+  amendments: "none found"
+  licence: "BEREC open access"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: global_example
+  relevance: 4
+  why: "Harmonizes national regulatory authority supervision methods for electronic communications security, supply chain assessment, and technical vulnerability mitigation."
+
+- rank: 110
+  id: eu-declaration-digital-rights-2023
+  title: "European Declaration on Digital Rights and Principles for the Digital Decade (2023/C 23/01)"
+  authority: "European Parliament, Council and European Commission"
+  jurisdiction: EU
+  doc_type: strategy
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023C0123(01)
+  landing_page: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023C0123(01)
+  binding_status: advisory
+  issued: 2023-01-23
+  in_force: "yes"
+  amendments: "none found"
+  licence: "EUR-Lex reuse policy"
+  gaps: [GAP-IN-03, GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Proclaims high-level principles guaranteeing universal access to secure, resilient, and human-centric digital infrastructure and emergency connectivity."
+

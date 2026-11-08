@@ -1,0 +1,1763 @@
+- rank: 161
+  id: in-sebi-cscrf-2024
+  title: "Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs)"
+  authority: "Securities and Exchange Board of India"
+  jurisdiction: IN
+  doc_type: direction
+  url: https://www.sebi.gov.in/sebi_data/attachdocs/aug-2024/1724326790365.pdf
+  landing_page: https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html
+  binding_status: binding
+  issued: 2024-08-20
+  in_force: "yes"
+  amendments: "Clarifications issued 2024-12-31, 2025-04-30 and 2025-08-28; implementation timeline extension issued 2025-06"
+  licence: "unknown"
+  gaps: [GAP-IN-01, GAP-IN-04, GAP-IN-08]
+  role: india_evidence
+  relevance: 3
+  why: "The framework sets cyber-resilience controls and compliance reporting for regulated securities entities, offering a cross-sector comparison for incident response and continuity."
+
+- rank: 162
+  id: in-rbi-it-governance-directions-2023
+  title: "Reserve Bank of India (Information Technology Governance, Risk, Controls and Assurance Practices) Directions, 2023"
+  authority: "Reserve Bank of India"
+  jurisdiction: IN
+  doc_type: direction
+  url: https://www.rbi.org.in/Scripts/BS_ViewMasterDirections.aspx?id=12562
+  landing_page: https://www.rbi.org.in/Scripts/BS_ViewMasterDirections.aspx?id=12562
+  binding_status: binding
+  issued: 2023-11-07
+  in_force: "yes (2024-04-01)"
+  amendments: "none found"
+  licence: "unknown"
+  gaps: [GAP-IN-01, GAP-IN-04, GAP-IN-08]
+  role: india_evidence
+  relevance: 3
+  why: "The Directions consolidate IT governance, controls, business continuity and disaster recovery requirements for specified RBI-regulated entities."
+
+- rank: 163
+  id: in-rbi-it-outsourcing-directions-2023
+  title: "Reserve Bank of India (Outsourcing of Information Technology Services) Directions, 2023"
+  authority: "Reserve Bank of India"
+  jurisdiction: IN
+  doc_type: direction
+  url: https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=4690
+  landing_page: https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=4690
+  binding_status: binding
+  issued: 2023-04-10
+  in_force: "yes"
+  amendments: "none found"
+  licence: "unknown"
+  gaps: [GAP-IN-04, GAP-IN-08]
+  role: india_evidence
+  relevance: 3
+  why: "The RBI page identifies directions addressing IT-service outsourcing risks, concentration risk and foreign service providers, relevant to dependencies in service restoration."
+
+- rank: 164
+  id: in-sebi-cscrf-implementation-extension-2025
+  title: "Extension towards Adoption and Implementation of Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs)"
+  authority: "Securities and Exchange Board of India"
+  jurisdiction: IN
+  doc_type: direction
+  url: https://www.sebi.gov.in/sebi_data/attachdocs/jun-2025/1751286353420.pdf
+  landing_page: https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListingAll=yes&search=Clarifications
+  binding_status: binding
+  issued: 2025-06
+  in_force: "yes"
+  amendments: "Extends specified REs’ compliance timeline to 2025-08-31; excludes MIIs, KRAs and QRTAs from that extension"
+  licence: "unknown"
+  gaps: [GAP-IN-01]
+  role: india_evidence
+  relevance: 2
+  why: "The circular documents an implementation-timeline extension for the CSCRF, useful when assessing the framework’s effective rollout."
+
+- rank: 165
+  id: in-trai-ppdr-consultation-2017
+  title: "Consultation Paper on Next Generation Public Protection and Disaster Relief (PPDR) Communication Networks"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: consultation
+  url: https://www.trai.gov.in/sites/default/files/2024-09/Consultation_Paper_PPDR%20_09102017%20%281%29.pdf
+  landing_page: https://www.trai.gov.in/node/1267
+  binding_status: not stated
+  issued: 2017
+  in_force: "no"
+  amendments: "none found"
+  licence: "unknown"
+  gaps: [GAP-IN-03, GAP-IN-04]
+  role: context
+  relevance: 3
+  why: "The consultation describes disaster-related network damage, congestion and increased communications demand for responders; it is a consultation paper rather than a binding rule."
+
+- rank: 166
+  id: in-national-cyber-security-policy-2013
+  title: "National Cyber Security Policy - 2013"
+  authority: "Ministry of Electronics and Information Technology"
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://www.meity.gov.in/static/uploads/2024/02/National_cyber_security_policy-2013_0.pdf
+  landing_page: https://www.meity.gov.in/
+  binding_status: advisory
+  issued: 2013-07-02
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-01, GAP-IN-06, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "India foundation cyber security policy framework establishing CERT-In as the national nodal agency and outlining CII protection and cyber crisis management."
+
+- rank: 167
+  id: in-cea-power-cyber-security-guidelines-2021
+  title: "Guidelines on Cyber Security in Power Sector 2021"
+  authority: "Central Electricity Authority"
+  jurisdiction: IN
+  doc_type: guideline
+  url: https://cea.nic.in/whats-new/file?path=%2Fhome%2Fcea_website%2Freports%2Fgeneral%2Fen%2FGuidelines_on_Cyber_Security_in_Power_Sector_2021-1.pdf&mode=view
+  landing_page: https://cea.nic.in/
+  binding_status: binding
+  issued: 2021-10-07
+  in_force: "yes"
+  amendments: "2022"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-01, GAP-IN-04, GAP-IN-08]
+  role: india_evidence
+  relevance: 5
+  why: "Mandates cyber security baselines, isolation of operational technology (OT) from IT networks, CISO appointments, and mandatory 6-month/annual security audits for power utilities."
+
+- rank: 168
+  id: in-cea-power-cyber-security-guidelines-amendment-2022
+  title: "Amendment to Guidelines on Cyber Security in Power Sector"
+  authority: "Central Electricity Authority"
+  jurisdiction: IN
+  doc_type: guideline
+  url: https://cea.nic.in/whats-new/file?path=%2Fhome%2Fcea_website%2Freports%2Fgeneral%2Fen%2FAmendment_in_CEA_Guidelines-1.pdf&mode=view
+  landing_page: https://cea.nic.in/
+  binding_status: binding
+  issued: 2022-09-08
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-01, GAP-IN-04]
+  role: india_evidence
+  relevance: 4
+  why: "Amends the cyber security audit periodicity requiring CERT-In empanelled auditor assessments every 6 months for IT systems and annually for OT systems."
+
+- rank: 169
+  id: in-tn-disaster-management-agency
+  title: "Tamil Nadu State Disaster Management Agency"
+  authority: "Government of Tamil Nadu, Commissionerate of Revenue Administration and Disaster Management"
+  jurisdiction: IN
+  doc_type: report
+  url: https://cra.tn.gov.in/disaster_t.php
+  landing_page: https://cra.tn.gov.in/disaster_t.php
+  binding_status: not stated
+  issued: not stated
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "unknown"
+  gaps: [GAP-IN-02, GAP-IN-03]
+  role: context
+  relevance: 2
+  why: "The state page describes the Tamil Nadu State Disaster Management Authority’s role in policy guidance, approval of the state plan and monitoring disaster-risk-reduction activity."
+
+- rank: 170
+  id: in-gcc-city-disaster-plan-2026
+  title: "City Disaster Management Perspective Plan 2026"
+  authority: "Greater Chennai Corporation"
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://chennaicorporation.gov.in/gcc/cdmp/
+  landing_page: https://chennaicorporation.gov.in/gcc/cdmp/
+  binding_status: not stated
+  issued: 2026
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "unknown"
+  gaps: [GAP-IN-02, GAP-IN-03]
+  role: context
+  relevance: 3
+  why: "The Corporation’s disaster-management page identifies the 2026 city plan and a disaster-management directory, relevant to local coordination and response context."
+
+- rank: 171
+  id: in-tn-cyber-security-policy-2020
+  title: "Tamil Nadu Cyber Security Policy 2020"
+  authority: "Government of Tamil Nadu"
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://www.karuvoolam.tn.gov.in/documents/45087/23785221/TN_Cyber_Security_policy_2020.pdf/6323367f-1608-1d6e-d70e-e811fba9c61b?t=1703084786652
+  landing_page: https://www.tn.gov.in/
+  binding_status: advisory
+  issued: 2020-09-19
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-01, GAP-IN-06, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Establishes Tamil Nadu's cyber security framework including SAF-TN, GRC, CERT-TN, SOC-TN and state cyber crisis management plan (CCMP-TN)."
+
+- rank: 172
+  id: in-tn-disaster-management-plan-2023
+  title: "Tamil Nadu State Disaster Management Plan 2023"
+  authority: "Tamil Nadu State Disaster Management Authority"
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://cdn.s3waas.gov.in/s342e7aaa88b48137a16a1acd04ed91125/uploads/2023/05/2023051136.pdf
+  landing_page: https://pudukkottai.nic.in/tn-disaster-management-plan-2023/
+  binding_status: binding
+  issued: 2023-05
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-04]
+  role: india_evidence
+  relevance: 4
+  why: "Sets operational procedures, emergency communication protocols and department responsibilities during disasters in Tamil Nadu."
+
+- rank: 173
+  id: in-tn-disaster-management-policy-2023
+  title: "Tamil Nadu State Disaster Management Policy 2023"
+  authority: "Revenue and Disaster Management Department, Government of Tamil Nadu"
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://cdn.s3waas.gov.in/s342e7aaa88b48137a16a1acd04ed91125/uploads/2023/05/2023051129.pdf
+  landing_page: https://pudukkottai.nic.in/tn-disaster-management-plan-2023/
+  binding_status: advisory
+  issued: 2023-05
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-02, GAP-IN-03]
+  role: context
+  relevance: 3
+  why: "Formulates state vision for disaster risk reduction, institutional roles, early warning dissemination and critical infrastructure resilience."
+
+- rank: 174
+  id: in-tnerc-grid-code-2026
+  title: "Tamil Nadu Electricity Grid Code, 2026"
+  authority: "Tamil Nadu Electricity Regulatory Commission"
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://cdnbbsr.s3waas.gov.in/s3716e1b8c6cd17b771da77391355749f3/uploads/2026/03/202603131939222810.pdf
+  landing_page: https://www.tnerc.tn.gov.in/
+  binding_status: binding
+  issued: 2026-03-13
+  in_force: "yes"
+  amendments: "repeals Grid Code 2005"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-04, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Regulates grid connectivity, operational security, demand disconnection and emergency grid restoration rules for Tamil Nadu."
+
+- rank: 175
+  id: in-dot-tn-row-order-2024
+  title: "Tamil Nadu Government Order on Implementation of Telecommunications Right of Way Rules 2024"
+  authority: "Department of Information Technology and Digital Services, Government of Tamil Nadu"
+  jurisdiction: IN
+  doc_type: order
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/go-tn-state_row-rules-2024.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024-10
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-04, GAP-IN-06]
+  role: india_evidence
+  relevance: 4
+  why: "Directs local authorities in Tamil Nadu including Greater Chennai Corporation on expedited Right of Way permissions and deployment of overground and underground telecom infrastructure."
+
+- rank: 176
+  id: in-tn-ethical-ai-policy-2020
+  title: "Tamil Nadu Safe and Ethical Artificial Intelligence Policy 2020"
+  authority: "Information Technology Department, Government of Tamil Nadu"
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://www.tnebnet.org/awp/resource/TN_Policy_for_Safe_and_Ethical_AI.pdf
+  landing_page: https://www.tn.gov.in/
+  binding_status: advisory
+  issued: 2020-09-19
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Establishes the TAM-DEF framework and DEEP-MAX scorecard for transparent, accountable and ethical AI evaluation in state public systems."
+
+- rank: 177
+  id: in-rbi-cyber-security-banks-2016
+  title: "Cyber Security Framework in Banks"
+  authority: "Reserve Bank of India"
+  jurisdiction: IN
+  doc_type: direction
+  url: https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=10462
+  landing_page: https://rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=10462
+  binding_status: binding
+  issued: 2016-06-02
+  in_force: "yes"
+  amendments: "supplemented by graded framework for UCBs (2019)"
+  licence: "unknown"
+  gaps: [GAP-IN-01, GAP-IN-04, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Mandates bank board-approved cyber security policy, 24x7 C-SOC, continuous threat monitoring, and immediate incident reporting to RBI and CERT-In."
+
+- rank: 178
+  id: in-rbi-ucb-cyber-framework-2019
+  title: "Comprehensive Cyber Security Framework for Primary (Urban) Cooperative Banks (UCBs) - A Graded Approach"
+  authority: "Reserve Bank of India"
+  jurisdiction: IN
+  doc_type: direction
+  url: https://rbi.org.in/Scripts/NotificationUser.aspx?Id=11792
+  landing_page: https://rbi.org.in/Scripts/NotificationUser.aspx?Id=11792
+  binding_status: binding
+  issued: 2019-12-31
+  in_force: "yes"
+  amendments: "none found"
+  licence: "unknown"
+  gaps: [GAP-IN-01, GAP-IN-08]
+  role: india_evidence
+  relevance: 3
+  why: "Extends graded baseline cyber security controls and incident reporting requirements to urban cooperative banks based on digital depth."
+
+- rank: 179
+  id: in-rbi-digital-payment-security-2021
+  title: "Reserve Bank of India (Digital Payment Security Controls) Directions, 2021"
+  authority: "Reserve Bank of India"
+  jurisdiction: IN
+  doc_type: direction
+  url: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12032
+  landing_page: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12032
+  binding_status: binding
+  issued: 2021-02-18
+  in_force: "yes"
+  amendments: "none found"
+  licence: "unknown"
+  gaps: [GAP-IN-01, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Sets mandatory security baselines for internet banking, mobile payment apps, card payments, and multi-factor authentication for financial transactions."
+
+- rank: 180
+  id: in-rbi-nbfc-it-framework-2017
+  title: "Master Direction - Information Technology Framework for the NBFC Sector"
+  authority: "Reserve Bank of India"
+  jurisdiction: IN
+  doc_type: direction
+  url: https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=10999
+  landing_page: https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=10999
+  binding_status: binding
+  issued: 2017-06-08
+  in_force: "yes"
+  amendments: "consolidated with 2023 IT Governance Directions for upper/middle layers"
+  licence: "unknown"
+  gaps: [GAP-IN-01, GAP-IN-04, GAP-IN-08]
+  role: india_evidence
+  relevance: 3
+  why: "Prescribes IT governance, information security baselines, business continuity planning and disaster recovery requirements for NBFCs."
+
+- rank: 181
+  id: in-irdai-cyber-security-guidelines-2023
+  title: "Information and Cyber Security Guidelines, 2023"
+  authority: "Insurance Regulatory and Development Authority of India"
+  jurisdiction: IN
+  doc_type: guideline
+  url: https://avantiscdnprodstorage.blob.core.windows.net/legalupdatedocs/23219/IRDAI_Information_and_Cyber_Security_Guidelines_2023_April242023.pdf
+  landing_page: https://irdai.gov.in/
+  binding_status: binding
+  issued: 2023-04-24
+  in_force: "yes"
+  amendments: "superseded by 2026 guidelines"
+  licence: "unknown"
+  gaps: [GAP-IN-01, GAP-IN-04, GAP-IN-08]
+  role: india_evidence
+  relevance: 3
+  why: "Replaces 2017 framework to mandate board-approved cyber security policy, CISO appointment, periodic VAPT, and cyber incident reporting across insurers and intermediaries."
+
+- rank: 182
+  id: in-irdai-cyber-security-guidelines-2026
+  title: "Information and Cyber Security Guidelines, 2026"
+  authority: "Insurance Regulatory and Development Authority of India"
+  jurisdiction: IN
+  doc_type: direction
+  url: https://avantiscdnprodstorage.blob.core.windows.net/legalupdatedocs/54551/IRDAI-issued-the-revised-guidelines-on-Information-and-Cyber-Security-for-Regulated-Entities-April082026.pdf
+  landing_page: https://irdai.gov.in/
+  binding_status: binding
+  issued: 2026-04-06
+  in_force: "yes"
+  amendments: "supersedes 2023 guidelines"
+  licence: "unknown"
+  gaps: [GAP-IN-01, GAP-IN-04, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Updates cyber risk governance, third-party vendor oversight, incident escalation timelines, and supply chain resilience requirements for insurance sector entities."
+
+- rank: 183
+  id: in-pfrda-cloud-adoption-policy
+  title: "Policy on Adoption of Cloud Services by Intermediaries Regulated by PFRDA"
+  authority: "Pension Fund Regulatory and Development Authority"
+  jurisdiction: IN
+  doc_type: guideline
+  url: https://pfrda.org.in/documents/33652/153406/Policy+on+adoption+of+cloud+services+by+intermediaries+regulated+by+PFRDA.pdf
+  landing_page: https://pfrda.org.in/
+  binding_status: binding
+  issued: 2023
+  in_force: "yes"
+  amendments: "none found"
+  licence: "unknown"
+  gaps: [GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Governs risk management, data sovereignty within India, audit rights, and business continuity for regulated pension intermediaries adopting cloud infrastructure."
+
+- rank: 184
+  id: in-meity-cloud-empanelment-guidelines
+  title: "Guidelines for Empanelment of Cloud Service Providers"
+  authority: "Ministry of Electronics and Information Technology"
+  jurisdiction: IN
+  doc_type: guideline
+  url: https://www.meity.gov.in/static/uploads/2024/02/f228f03f173a0e320758a504295f3a1f.pdf
+  landing_page: https://www.meity.gov.in/content/gi-Cloud-meghraj
+  binding_status: binding
+  issued: 2024-02
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Sets technical standards, ISO/IEC certifications, data localization mandates, and STQC security audits for cloud service providers serving Indian government bodies."
+
+- rank: 185
+  id: in-niti-ai-strategy-2018
+  title: "National Strategy for Artificial Intelligence (#AIForAll)"
+  authority: "NITI Aayog"
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://www.niti.gov.in/sites/default/files/2023-03/National-Strategy-for-Artificial-Intelligence.pdf
+  landing_page: https://www.niti.gov.in/
+  binding_status: advisory
+  issued: 2018-06
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Outlines India's overarching AI policy roadmap, identifying core sectors including telecom and healthcare and establishing research priorities for trustworthy AI."
+
+- rank: 186
+  id: in-niti-responsible-ai-part1-2021
+  title: "Responsible AI"
+  authority: "NITI Aayog"
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://www.niti.gov.in/sites/default/files/2021-02/Responsible-AI-22022021.pdf
+  landing_page: https://www.niti.gov.in/
+  binding_status: advisory
+  issued: 2021-02-22
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Formulates core ethical principles for AI deployment in India covering safety, reliability, equality, privacy, security, transparency, and human-in-the-loop oversight."
+
+- rank: 187
+  id: in-niti-responsible-ai-part2-2021
+  title: "Responsible AI"
+  authority: "NITI Aayog"
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://niti.gov.in/sites/default/files/2021-08/Part2-Responsible-AI-12082021.pdf
+  landing_page: https://www.niti.gov.in/
+  binding_status: advisory
+  issued: 2021-08-12
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Details mechanisms to operationalize ethical AI principles through procurement standards, risk-tiering, internal review boards, and continuous auditing."
+
+- rank: 188
+  id: in-certin-ccmp-framework
+  title: "Cyber Crisis Management Plan for Countering Cyber Attacks and Cyber Terrorism"
+  authority: "Indian Computer Emergency Response Team (CERT-In)"
+  jurisdiction: IN
+  doc_type: sop
+  url: https://cert-in.org.in/s2cMainServlet?pageid=CCMP
+  landing_page: https://cert-in.org.in/
+  binding_status: advisory
+  issued: 2017
+  in_force: "yes"
+  amendments: "updated periodically with sectoral templates"
+  licence: "unknown"
+  gaps: [GAP-IN-01, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Sets crisis management guidelines, emergency coordination hierarchy, and standard response procedures for cyber attacks targeting critical information infrastructure."
+
+- rank: 189
+  id: in-ndma-plan-2019
+  title: "National Disaster Management Plan, 2019"
+  authority: "National Disaster Management Authority"
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://cdnbbsr.s3waas.gov.in/s36143cc48107351648de16d8367dc5db4/uploads/2025/03/20250313721922077.pdf
+  landing_page: https://sdma.maharashtra.gov.in/en/national-disaster-management-plan-ndmp-2019/
+  binding_status: binding
+  issued: 2019-11
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-04]
+  role: india_evidence
+  relevance: 4
+  why: "Sets national framework for disaster response, command structures, early warning dissemination and restoration priorities for critical lifeline infrastructure."
+
+- rank: 190
+  id: in-mha-i4c-framework-sansad
+  title: "Lok Sabha Statement on Indian Cyber Crime Coordination Centre (I4C) Operations, CFMC, and NCRP Framework"
+  authority: "Ministry of Home Affairs"
+  jurisdiction: IN
+  doc_type: report
+  url: https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU674_3jTmOI.pdf?source=lsapps
+  landing_page: https://sansad.in/
+  binding_status: not stated
+  issued: 2024-07-23
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-01, GAP-IN-02]
+  role: india_evidence
+  relevance: 4
+  why: "Details national cyber crime coordination institutional structures under MHA, the Cyber Fraud Mitigation Centre (CFMC), and real-time coordination with telecom and banking nodes."
+
+- rank: 191
+  id: in-parl-it-report-26-suspension
+  title: "Twenty-Sixth Report on Suspension of Telecom Services/Internet and its Impact"
+  authority: "Standing Committee on Communications and Information Technology (17th Lok Sabha)"
+  jurisdiction: IN
+  doc_type: report
+  url: https://sansad.in/getFile/lsscommittee/Communications%20and%20Information%20Technology/17_Communications_and_Information_Technology_26.pdf?source=loksabhadocs
+  landing_page: https://sansad.in/
+  binding_status: advisory
+  issued: 2021-12
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Evaluates economic and public safety impacts of telecom shutdown orders under the 2017 Suspension Rules and recommends strict necessity, proportionality, and central logging."
+
+- rank: 192
+  id: in-parl-it-report-48-data-security
+  title: "Forty-Eighth Report on Citizens Data Security and Privacy"
+  authority: "Standing Committee on Communications and Information Technology (17th Lok Sabha)"
+  jurisdiction: IN
+  doc_type: report
+  url: https://sansad.in/getFile/lsscommittee/Communications%20and%20Information%20Technology/17_Communications_and_Information_Technology_48.pdf?source=loksabhadocs
+  landing_page: https://sansad.in/
+  binding_status: advisory
+  issued: 2023-07
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-01, GAP-IN-06]
+  role: india_evidence
+  relevance: 3
+  why: "Examines data protection safeguards, CERT-In's incident handling capacity, and cyber breach reporting across central ministries and private digital platforms."
+
+- rank: 193
+  id: in-parl-it-report-54-digital-payments
+  title: "Fifty-Fourth Report on Digital Payment and Online Security Measures for Data Protection"
+  authority: "Standing Committee on Communications and Information Technology (17th Lok Sabha)"
+  jurisdiction: IN
+  doc_type: report
+  url: https://sansad.in/getFile/lsscommittee/Communications%20and%20Information%20Technology/17_Communications_and_Information_Technology_54.pdf?source=loksabhadocs
+  landing_page: https://sansad.in/
+  binding_status: advisory
+  issued: 2024-02-08
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-01, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Investigates online financial fraud trends, multi-factor authentication vulnerabilities, and coordinated incident response mechanisms between telecom providers, banks, and CERT-In."
+
+- rank: 194
+  id: in-parl-it-report-27-media-standards
+  title: "Twenty-Seventh Report on Ethical Standards in Media Coverage"
+  authority: "Standing Committee on Communications and Information Technology (17th Lok Sabha)"
+  jurisdiction: IN
+  doc_type: report
+  url: https://sansad.in/getFile/lsscommittee/Communications%20and%20Information%20Technology/17_Communications_and_Information_Technology_27.pdf?source=loksabhadocs
+  landing_page: https://sansad.in/
+  binding_status: advisory
+  issued: 2021-12
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: []
+  role: context
+  relevance: 2
+  why: "Reviews convergence between broadcast, telecom and OTT digital media channels and recommends an overarching statutory regulatory council."
+
+- rank: 195
+  id: in-parl-it-report-30-demands-telecom
+  title: "Thirtieth Report on Demands for Grants (2022-23) of the Department of Telecommunications"
+  authority: "Standing Committee on Communications and Information Technology (17th Lok Sabha)"
+  jurisdiction: IN
+  doc_type: report
+  url: https://sansad.in/getFile/lsscommittee/Communications%20and%20Information%20Technology/17_Communications_and_Information_Technology_30.pdf?source=loksabhadocs
+  landing_page: https://sansad.in/
+  binding_status: advisory
+  issued: 2022-03
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-03, GAP-IN-04]
+  role: context
+  relevance: 3
+  why: "Audits budgetary allocations for USOF, BharatNet, optical fiber connectivity, and emergency disaster communications equipment deployment."
+
+- rank: 196
+  id: in-parl-it-report-51-demands-telecom
+  title: "Fifty-First Report on Demands for Grants (2023-24) of the Department of Telecommunications"
+  authority: "Standing Committee on Communications and Information Technology (17th Lok Sabha)"
+  jurisdiction: IN
+  doc_type: report
+  url: https://sansad.in/getFile/lsscommittee/Communications%20and%20Information%20Technology/17_Communications_and_Information_Technology_51.pdf?source=loksabhadocs
+  landing_page: https://sansad.in/
+  binding_status: advisory
+  issued: 2023-03
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-03, GAP-IN-04]
+  role: context
+  relevance: 3
+  why: "Scrutinizes rollout of 4G/5G mobile towers in border and remote areas, tower battery backup infrastructure, and telecom disaster preparedness funding."
+
+- rank: 197
+  id: in-cag-spectrum-audit-2022
+  title: "Report No. 2 of 2022 - Performance Audit of Management of Spectrum assigned on the Administrative basis to Government Departments/Agencies"
+  authority: "Comptroller and Auditor General of India"
+  jurisdiction: IN
+  doc_type: report
+  url: https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2022/Report-No.-2-of-the-yera-2022,-Union-Government-Ministry-of-Communications-(Performance-Audit)-068b1666b2d1899.38993675.pdf
+  landing_page: https://cag.gov.in/en/audit-report/details/116503
+  binding_status: advisory
+  issued: 2022-04-01
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-03, GAP-IN-06]
+  role: india_evidence
+  relevance: 4
+  why: "Assesses administrative spectrum assignment, idle spectrum holdings, and inter-agency spectrum coordination for government and satellite communication systems."
+
+- rank: 198
+  id: in-trai-ppdr-recommendations-2018
+  title: "Recommendations on Next Generation Public Protection and Disaster Relief (PPDR) Communication Networks"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://www.trai.gov.in/sites/default/files/2024-09/RecommendationsPPDR04062018.pdf
+  landing_page: https://www.trai.gov.in/
+  binding_status: advisory
+  issued: 2018-06-04
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-02, GAP-IN-03, GAP-IN-04]
+  role: india_evidence
+  relevance: 5
+  why: "Recommends hybrid satellite-terrestrial broadband PPDR network architecture, 700 MHz spectrum dedicated for public safety, and resilient backhaul failover for emergency responders."
+
+- rank: 199
+  id: in-trai-space-spectrum-recommendations-2025
+  title: "Recommendations on Terms and Conditions for the Assignment of Spectrum for Certain Satellite-Based Commercial Communication Services"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://www.trai.gov.in/sites/default/files/2025-05/Recommendtion_09052025.pdf
+  landing_page: https://www.trai.gov.in/
+  binding_status: advisory
+  issued: 2025-05-09
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-03, GAP-IN-06, GAP-IN-09]
+  role: india_evidence
+  relevance: 5
+  why: "Recommends terms and conditions, spectrum pricing, and assignment mechanisms for GSO and NGSO commercial satellite communications under the Telecommunications Act 2023."
+
+- rank: 200
+  id: in-trai-scn-consultation-2026
+  title: "Consultation Paper on Framework for Satellite Communication Network Authorisation and Assignment of Spectrum to Satellite Communication Network Providers"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: consultation
+  url: https://www.trai.gov.in/sites/default/files/2026-04/CP_08042026.pdf
+  landing_page: https://www.trai.gov.in/
+  binding_status: draft
+  issued: 2026-04-08
+  in_force: "no"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-02, GAP-IN-06, GAP-IN-09]
+  role: india_evidence
+  relevance: 5
+  why: "Formulates regulatory consultation questions on Satellite Communication Network (SCN) service authorisation, gateway infrastructure sharing, and feeder/user link spectrum assignment."
+
+- rank: 201
+  id: in-trai-satellite-spectrum-consultation-2024
+  title: "Consultation Paper on Terms and Conditions for the Assignment of Spectrum for Certain Satellite-Based Commercial Communication Services"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: consultation
+  url: https://www.trai.gov.in/sites/default/files/2024-10/CP_27092024_0.pdf
+  landing_page: https://www.trai.gov.in/consultation-paper-terms-and-conditions-assignment-spectrum-certain-satellite-based-commercial-0
+  binding_status: draft
+  issued: 2024-09-27
+  in_force: "no"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-03, GAP-IN-06, GAP-IN-09]
+  role: india_evidence
+  relevance: 5
+  why: "Consults on NGSO and GSO satellite commercial spectrum assignment mechanisms, level playing field with terrestrial networks, and pricing models under the 2023 Act."
+
+- rank: 202
+  id: in-trai-submarine-cable-recommendations-2023
+  title: "Recommendations on Licensing Framework and Regulatory Mechanism for Submarine Cable Landing in India"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://trai.gov.in/sites/default/files/2024-09/Recommendation_19062023_0.pdf
+  landing_page: https://www.trai.gov.in/
+  binding_status: advisory
+  issued: 2023-06-19
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-02, GAP-IN-06, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Recommends designating submarine cable landing stations (CLS) as critical infrastructure, mandated domestic ownership criteria, and dark fibre protection for international backhaul."
+
+- rank: 203
+  id: in-trai-net-neutrality-recommendations-2017
+  title: "Recommendations on Net Neutrality"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://www.trai.gov.in/sites/default/files/2024-09/Recommendations_NN_2017_11_28.pdf
+  landing_page: https://www.trai.gov.in/
+  binding_status: advisory
+  issued: 2017-11-28
+  in_force: "yes"
+  amendments: "incorporated into Unified License (2018)"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-03, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Establishes net neutrality principles prohibiting discriminatory treatment of internet traffic while defining exceptions for reasonable traffic management and specialized services."
+
+- rank: 204
+  id: in-trai-critical-m2m-recommendations-2025
+  title: "Recommendations on the Issues Related to Critical Services in the M2M Sector, and the Transfer of Ownership of M2M SIMs"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://www.trai.gov.in/sites/default/files/2025-04/Final_Reco_on_critical_M2M_services_22.04.2025_1250_0.pdf
+  landing_page: https://www.trai.gov.in/
+  binding_status: advisory
+  issued: 2025-04-22
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-03, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Defines critical M2M services (e-health, utility grids, emergency transport) requiring higher quality of service benchmarks, failover priority, and secured communications."
+
+- rank: 205
+  id: in-trai-esim-m2m-recommendations-2024
+  title: "Recommendations on Usage of Embedded SIM for Machine-to-Machine (M2M) Communications"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://trai.gov.in/sites/default/files/2024-09/Recommendations_21032024_0.pdf
+  landing_page: https://www.trai.gov.in/
+  binding_status: advisory
+  issued: 2024-03-21
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: india_evidence
+  relevance: 3
+  why: "Regulates remote eSIM profile provisioning, security standards, and switching of service providers for IoT devices without hardware replacement."
+
+- rank: 206
+  id: in-trai-service-authorisations-reco-2025
+  title: "Recommendations on Framework for Service Authorisations to be Granted Under the Telecommunications Act, 2023"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://www.trai.gov.in/sites/default/files/2025-02/Recommendation_28022025.pdf
+  landing_page: https://www.trai.gov.in/
+  binding_status: advisory
+  issued: 2025-02-28
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-03, GAP-IN-06]
+  role: india_evidence
+  relevance: 4
+  why: "Formulates recommendations on transitioning from the Unified License regime to the new authorization categories under Section 3 of the Telecommunications Act 2023."
+
+- rank: 207
+  id: in-trai-network-authorisations-response-2025
+  title: "Response to Back-Reference on Terms and Conditions of Network Authorisations Under the Telecommunications Act, 2023"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://www.trai.gov.in/sites/default/files/2025-08/Response_13082025.pdf
+  landing_page: https://www.trai.gov.in/
+  binding_status: advisory
+  issued: 2025-08-13
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-03, GAP-IN-06]
+  role: india_evidence
+  relevance: 4
+  why: "Clarifies terms for satellite earth station gateways, telecommunication network authorisations, and infrastructure sharing obligations between operators."
+
+- rank: 208
+  id: in-trai-data-economy-response-2025
+  title: "Response to Back-Reference on Regulatory Framework for Promoting Data Economy Through Establishment of Data Centres, Content Delivery Networks, and Interconnect Exchanges"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://www.trai.gov.in/sites/default/files/2025-11/TRAI_Response_17112025.pdf
+  landing_page: https://www.trai.gov.in/
+  binding_status: advisory
+  issued: 2025-11-17
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-04, GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Recommends power redundancy norms, renewable energy integration, and security baselines for mission-critical data centres and internet exchange points in India."
+
+- rank: 209
+  id: in-trai-spectrum-sharing-response
+  title: "Response to Back-Reference on Guidelines on Spectrum Sharing"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://www.trai.gov.in/sites/default/files/2024-09/Response%20-%20Spectrum%20Sharing%3DFinal.pdf
+  landing_page: https://www.trai.gov.in/
+  binding_status: advisory
+  issued: 2024-09
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-03, GAP-IN-06]
+  role: context
+  relevance: 3
+  why: "Details regulatory terms for intra-band spectrum sharing between access service providers to enhance network spectral efficiency."
+
+- rank: 210
+  id: in-trai-in-building-access-reco
+  title: "Recommendations on In-Building Access by Telecom Service Providers"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://www.trai.gov.in/sites/default/files/2024-11/Recommendation_IBS_0932018.pdf
+  landing_page: https://www.trai.gov.in/
+  binding_status: advisory
+  issued: 2018-03-09
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-04, GAP-IN-06]
+  role: context
+  relevance: 3
+  why: "Recommends non-discriminatory access to common telecom infrastructure within buildings, shared risers, and power backup availability for essential building communication."
+
+- rank: 211
+  id: in-trai-closure-access-service-reco
+  title: "Recommendations Related to Closure of Access Service"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://www.trai.gov.in/sites/default/files/2024-09/Rec_Closure_%20Access_Serv_31072017.pdf
+  landing_page: https://www.trai.gov.in/
+  binding_status: advisory
+  issued: 2017-07-31
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-02, GAP-IN-03]
+  role: context
+  relevance: 3
+  why: "Outlines operator notice obligations to subscribers and authorities prior to discontinuation of access services to prevent sudden downstream communication blackouts."
+
+- rank: 212
+  id: in-dot-regulatory-sandbox-rules-2026
+  title: "Telecommunications (Regulatory Sandbox) Rules, 2026"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/regulatory-sandbox-rule-2026.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2026-03
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Establishes regulatory sandbox procedures for testing new telecom technologies, satellite communications, and AI models in live environments with defined safety exemptions."
+
+- rank: 213
+  id: in-dot-network-services-rules-2026
+  title: "Telecommunications (Network Services Authorisation) Rules, 2026"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/network-services-rules-july-2026.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2026-07
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-02, GAP-IN-06, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Governs authorisations for national long distance, international long distance, and satellite network infrastructure service providers under the 2023 Act."
+
+- rank: 214
+  id: in-dot-radio-possession-rules-2026
+  title: "Telecommunications (Radio Equipment Possession Authorisation) Rules, 2026"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/telecommunications-radio-equipment-possession-authorisation-rules-2026.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2026-06
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: india_evidence
+  relevance: 3
+  why: "Regulates legal possession and technical authorisation for wireless telegraphy equipment, satellite ground stations, and radio transceivers."
+
+- rank: 215
+  id: in-dot-captive-telecom-rules-2026
+  title: "Telecommunications (Captive Services Authorisation) Rules, 2026"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/captive-telecom-services-rules-2026.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2026-06
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Sets conditions for captive non-public networks (CNPN) established by critical infrastructure operators such as power utilities and ports."
+
+- rank: 216
+  id: in-dot-misc-telecom-rules-2026
+  title: "Telecommunications (Miscellaneous Services Authorisation) Rules, 2026"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/misc-telecom-services-rules-2026.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2026-06
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06]
+  role: context
+  relevance: 3
+  why: "Prescribes authorisation terms for value-added, emergency messaging, and specialized digital communications services."
+
+- rank: 217
+  id: in-dot-migration-rules-2026
+  title: "Telecommunications (Migration of Existing Licences) Rules, 2026"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/migration-rules-2026.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2026-06
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06]
+  role: context
+  relevance: 3
+  why: "Establishes statutory procedures for existing Unified Licensees and GMPCS holders to migrate to new authorisations under the Telecommunications Act 2023."
+
+- rank: 218
+  id: in-dot-user-identification-rules-2026
+  title: "Instructions under the Telecommunications (User Identification) Rules, 2026"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: direction
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/instruction-of-user-identification-rules-2026.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2026-07
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Outlines verification standards, biometric authentication, and digital KYC procedures for telecommunication service users."
+
+- rank: 219
+  id: in-dot-cnap-circular-2024
+  title: "Introduction of Calling Name Presentation (CNAP) Service in Telecommunication Networks"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: direction
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/circular-no-01-reg-cnap.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024-11
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Mandates telecom service providers to implement calling name presentation to combat spoofed calling and telecommunication identity fraud."
+
+- rank: 220
+  id: in-dot-ul-cli-amendment
+  title: "Amendment to the Unified License Agreement - Definition of Calling Line Identification"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: licence
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/ul-amendment-no-01-reg-calling-line-identification-definition.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024-11
+  in_force: "yes"
+  amendments: "amends Unified License"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Clarifies technical specifications and legal obligations regarding Calling Line Identification (CLI) spoofing prevention in public telecom networks."
+
+- rank: 221
+  id: in-dot-infra-safety-rules-2022
+  title: "Indian Telegraph (Infrastructure Safety) Rules, 2022"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/Indian%20Telegraph%20%28Infrastructure%20Safety%29%20Rules%2C%202022.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2022-12-30
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-02, GAP-IN-04, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Creates mandatory duty for excavating agencies to notify telecom infrastructure providers through CBuD portal before digging to prevent critical backhaul cuts."
+
+- rank: 222
+  id: in-dot-cbud-gazette-2025
+  title: "Call Before u Dig (CBuD) Rules Notification"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/CBuD%20CG-DL-E-21032025-261799.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2025-03-21
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-02, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Formalizes statutory operation of the CBuD mobile application and platform to protect underground optical fibre backhaul assets."
+
+- rank: 223
+  id: in-dot-digital-bharat-nidhi-rules-2024
+  title: "Telecommunications (Administration of Digital Bharat Nidhi) Rules, 2024"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/Administration%20of%20Digital%20Bharat%20Nidhi%20Rules%2C%202024_0.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024-08-30
+  in_force: "yes"
+  amendments: "supersedes USOF rules"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-03, GAP-IN-04]
+  role: india_evidence
+  relevance: 4
+  why: "Establishes administration of Digital Bharat Nidhi (formerly USOF) for funding telecom connectivity, satellite backhaul, and disaster relief communications in underserved areas."
+
+- rank: 224
+  id: in-dot-bharatnet-special-project-2024
+  title: "Declaration of BharatNet as Special Project Under Rule 12(1) of Telecommunications (Right of Way) Rules, 2024"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: order
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/BharatNet%20as%20Special%20Project%20under%20rule%2012%281%29%20of%20Telecommunications%20%28Right%20of%20Way%29%20Rules%2C%202024.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024-09
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-04, GAP-IN-06]
+  role: context
+  relevance: 3
+  why: "Grants special statutory right-of-way privileges and waived administrative fees to expedite national rural optical fibre network deployment."
+
+- rank: 225
+  id: in-dot-imei-tampering-amendment-2022
+  title: "Prevention of Tampering of the Mobile Device Equipment Identification Number (Amendment) Rules, 2022"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/the-prevention-of-tampering-of-the-mobile-device-equipment-identification-number-amendment-rules-2022.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2022-09-26
+  in_force: "yes"
+  amendments: "amends 2017 IMEI rules"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Mandates registration of IMEI numbers of all imported mobile phones with the Indian Counterfeited Device Restriction (ICDR) system before sale."
+
+- rank: 226
+  id: in-dot-ifmc-amendment-rules-2022
+  title: "Flight and Maritime Connectivity (Amendment) Rules, 2022"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/flight-and-maritime-connectivity-amendment-rules-2022.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2022-09
+  in_force: "yes"
+  amendments: "amends 2018 IFMC rules"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: india_evidence
+  relevance: 4
+  why: "Regulates satellite-backed connectivity for in-flight and maritime vessels in Indian airspace and territorial waters, including gateway and monitoring rules."
+
+- rank: 227
+  id: in-dot-ifmc-rules-gazette-2018
+  title: "Flight and Maritime Connectivity Rules, 2018"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/publication-of-gazette-notification-for-amendment-in-flight-and-maritime-connectivity-rules-2018.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2018-12-14
+  in_force: "yes"
+  amendments: "amended in 2022"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06, GAP-IN-09]
+  role: india_evidence
+  relevance: 4
+  why: "Principal rules establishing authorization framework, satellite earth station gateway mandates, and lawful interception for IFMC services."
+
+- rank: 228
+  id: in-dot-short-range-rf-amendment-2024
+  title: "Use of Low Power and Very Low Power Short Range Radio Frequency Devices (Exemption from Licensing Requirement) Amendment Rules, 2024"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/use-of-low-power-and-very-low-power-short-range-radio-frequency-devices-exemption-from-licensing-requirement-amendment-rules-2024.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024-03
+  in_force: "yes"
+  amendments: "amends 2018 SRD rules"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06]
+  role: context
+  relevance: 3
+  why: "De-licenses short-range low-power radio devices in specified bands for IoT and automated monitoring applications."
+
+- rank: 229
+  id: in-dot-gmdss-radio-rules-2024
+  title: "Commercial Radio Operators Certificate of Proficiency to Operate Global Maritime Distress and Safety System Rules, 2024"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/commercial-radio-operator-certificate-of-proficiency-to-operate-global-maritime-distress-and-safety-system-rules-2024.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024-09
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-02, GAP-IN-09]
+  role: context
+  relevance: 3
+  why: "Prescribes qualifications and operational standards for maritime emergency satellite and radio communications operators under GMDSS."
+
+- rank: 230
+  id: in-dot-amateur-services-rules-2024
+  title: "Telecommunications (Amateur Services Authorisation) Rules, 2024"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/amateur-services-rules-2024.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2024-09
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-02, GAP-IN-03]
+  role: context
+  relevance: 3
+  why: "Governs amateur radio operations which serve as emergency backup communications during disasters when public networks fail."
+
+- rank: 231
+  id: in-dot-mtcte-standards-notification-2025
+  title: "Notification of Standards under Mandatory Testing and Certification of Telecommunication Equipment (MTCTE)"
+  authority: "Department of Telecommunications / Telecommunication Engineering Centre"
+  jurisdiction: IN
+  doc_type: order
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/downloaddocument_mtcte_standards-may25-1.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2025-05
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Updates the schedule of mandatory testing, electromagnetic compatibility (EMC), and cyber security testing standards for telecom and networking equipment."
+
+- rank: 232
+  id: in-dot-mtcte-procedure
+  title: "Procedure for Mandatory Testing and Certification of Telecommunication Equipment"
+  authority: "Department of Telecommunications / Telecommunication Engineering Centre"
+  jurisdiction: IN
+  doc_type: guideline
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/mandatory-testing-and-certification-of-telecommunication-equipment-mtcte.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2023
+  in_force: "yes"
+  amendments: "updated phases"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Establishes certification workflows, accredited testing lab requirements, and security compliance certificates before telecom equipment can be connected to Indian networks."
+
+- rank: 233
+  id: in-dot-nsdts-amendment-2026
+  title: "Amendment to Telecom Licenses for Implementation of National Security Directive on Telecommunication Sector"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: licence
+  url: https://www.dot.gov.in/static/uploads/2026/05/c7396429754934254ff7d55e5640ccca.pdf
+  landing_page: https://www.dot.gov.in/
+  binding_status: binding
+  issued: 2026-05
+  in_force: "yes"
+  amendments: "amends Unified License security condition"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: india_evidence
+  relevance: 5
+  why: "Legally binds telecom licensees to connect only trusted products from trusted sources designated by the National Cyber Security Coordinator."
+
+- rank: 234
+  id: in-dot-unified-license-agreement
+  title: "Unified License Agreement"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: licence
+  url: https://www.eservices.dot.gov.in/sites/default/files/2024-11/Unified_License_Agreement.pdf
+  landing_page: https://www.eservices.dot.gov.in/
+  binding_status: binding
+  issued: 2024-11
+  in_force: "yes"
+  amendments: "consolidated agreement"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-01, GAP-IN-04, GAP-IN-06, GAP-IN-08]
+  role: india_evidence
+  relevance: 5
+  why: "Sets comprehensive licensing conditions including disaster management, security monitoring, infrastructure sharing, and quality of service for all authorization chapters."
+
+- rank: 235
+  id: in-cerc-iegc-2023-sor
+  title: "Statement of Reasons for Central Electricity Regulatory Commission (Indian Electricity Grid Code) Regulations, 2023"
+  authority: "Central Electricity Regulatory Commission"
+  jurisdiction: IN
+  doc_type: report
+  url: https://www.cercind.gov.in/regulations/180-SOR.pdf
+  landing_page: https://cercind.gov.in/
+  binding_status: not stated
+  issued: 2023-05-29
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-04, GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Explains regulatory rationale for grid stability, primary frequency response, blackout restoration, and cybersecurity protections under the 2023 Grid Code."
+
+- rank: 236
+  id: in-cerc-iegc-second-amendment-draft-2026
+  title: "Draft Central Electricity Regulatory Commission (Indian Electricity Grid Code) (Second Amendment) Regulations, 2026"
+  authority: "Central Electricity Regulatory Commission"
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://www.cercind.gov.in/2026/draft_reg/EM_IEGC-2ndAmnd.pdf
+  landing_page: https://cercind.gov.in/
+  binding_status: draft
+  issued: 2026-06
+  in_force: "no"
+  amendments: "amends IEGC 2023"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-04, GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Proposes regulatory updates for energy storage systems (ESS), battery autonomy, and emergency reserve response for grid resilience."
+
+- rank: 237
+  id: in-bis-is-16046-part1-2018
+  title: "IS 16046 (Part 1): 2018 / IEC 62133-1: 2017 - Secondary Cells and Batteries Containing Alkaline or Other Non-Acid Electrolytes (Nickel Systems)"
+  authority: "Bureau of Indian Standards"
+  jurisdiction: IN
+  doc_type: standard
+  url: https://www.bis.gov.in/wp-content/uploads/2019/03/IS-16046_Part-1_2018-final-1.pdf
+  landing_page: https://www.bis.gov.in/
+  binding_status: binding
+  issued: 2018
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-04]
+  role: india_evidence
+  relevance: 4
+  why: "Prescribes safety requirements and mechanical/electrical test standards for secondary sealed nickel battery systems used in electronic equipment backup."
+
+- rank: 238
+  id: in-bis-is-16046-part2-2018
+  title: "IS 16046 (Part 2): 2018 / IEC 62133-2: 2017 - Secondary Cells and Batteries Containing Alkaline or Other Non-Acid Electrolytes (Lithium Systems)"
+  authority: "Bureau of Indian Standards"
+  jurisdiction: IN
+  doc_type: standard
+  url: https://www.bis.gov.in/wp-content/uploads/2019/03/IS-16046_Part-2_2018-final-1.pdf
+  landing_page: https://www.bis.gov.in/
+  binding_status: binding
+  issued: 2018
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-04]
+  role: india_evidence
+  relevance: 4
+  why: "Establishes safety standards and thermal runaway protection requirements for secondary lithium battery systems deployed in modern telecom sites and mobile devices."
+
+- rank: 239
+  id: in-dot-telecom-cyber-security-amendment-rules-2025
+  title: "Telecommunications (Telecom Cyber Security) Amendment Rules, 2025"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/telecom-cyber-security-amendment-rules-2025.pdf
+  landing_page: https://www.eservices.dot.gov.in/
+  binding_status: binding
+  issued: 2025-11-21
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-01, GAP-IN-08]
+  role: india_evidence
+  relevance: 5
+  why: "Amends incident reporting workflows and technical standards for telecommunication security incident reporting via the ICDR portal."
+
+- rank: 240
+  id: in-dot-lawful-interception-rules-2024
+  title: "Procedures and Safeguards for Lawful Interception of Messages Rules, 2024"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/procedures-and-safeguards-for-lawful-interception-of-messages-rules-2024.pdf
+  landing_page: https://www.eservices.dot.gov.in/
+  binding_status: binding
+  issued: 2024-06-25
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06]
+  role: india_evidence
+  relevance: 4
+  why: "Formulates cryptographic integrity, access control, and audit trail retention requirements for lawful interception monitoring across telecom and satellite networks."
+
+- rank: 241
+  id: in-dot-suspension-services-rules-2024
+  title: "Telecommunications (Temporary Suspension of Services) Rules, 2024"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/temporary-suspension-of-services-rules-2024.pdf
+  landing_page: https://www.eservices.dot.gov.in/
+  binding_status: binding
+  issued: 2024-06-25
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-02, GAP-IN-03]
+  role: india_evidence
+  relevance: 4
+  why: "Replaces telegraph suspension rules under the 2023 Act, governing ministerial emergency shutdown powers and oversight committee review mechanisms during disasters."
+
+- rank: 242
+  id: in-dot-railway-street-furniture-policy
+  title: "Policy on Deployment of Telecom Infrastructure on Railway Land and Street Furniture"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/railway-policy-for-usage-of-street-furniture.pdf
+  landing_page: https://www.eservices.dot.gov.in/
+  binding_status: binding
+  issued: 2023-01-16
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-04, GAP-IN-06]
+  role: context
+  relevance: 3
+  why: "Sets right-of-way tariffs and non-discriminatory access rules for small cells and telegraph lines along national railway corridors and street furniture."
+
+- rank: 243
+  id: in-dot-rtr-rules-2025
+  title: "Telecommunications (Right of Terminal Redirection) Rules, 2025"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/rtr-rules-2025.pdf
+  landing_page: https://www.eservices.dot.gov.in/
+  binding_status: binding
+  issued: 2025-03-15
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-02, GAP-IN-08]
+  role: india_evidence
+  relevance: 4
+  why: "Regulates network-level redirection and routing safeguards to prevent spoofed calls and unauthorized terminal rerouting during cyber events."
+
+- rank: 244
+  id: in-niti-blockchain-india-strategy-2020
+  title: "Blockchain: The India Strategy - Part I"
+  authority: "NITI Aayog"
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://niti.gov.in/sites/default/files/2020-01/Blockchain_The_India_Strategy_Part_I.pdf
+  landing_page: https://niti.gov.in/
+  binding_status: advisory
+  issued: 2020-01-20
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Outlines trust frameworks, decentralized identity architectures, and security verification standards for national critical digital infrastructure."
+
+- rank: 245
+  id: in-sansad-i4c-rajya-sabha-2024
+  title: "Rajya Sabha Statement on Indian Cyber Crime Coordination Centre (I4C) Attached Office Status and Operations"
+  authority: "Ministry of Home Affairs"
+  jurisdiction: IN
+  doc_type: report
+  url: https://sansad.in/getFile/annex/271/AU1188_15JzHp.pdf?source=pqars
+  landing_page: https://sansad.in/
+  binding_status: not stated
+  issued: 2024-07-31
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-01, GAP-IN-02]
+  role: india_evidence
+  relevance: 4
+  why: "Reports on the transition of I4C into an attached office of the Ministry of Home Affairs and inter-agency coordination mechanisms for cyber incident response."
+
+- rank: 246
+  id: in-trai-rating-digital-connectivity-response-2025
+  title: "TRAI Response to Back-Reference on Recommendations on Rating of Buildings or Areas for Digital Connectivity"
+  authority: "Telecom Regulatory Authority of India"
+  jurisdiction: IN
+  doc_type: regulation
+  url: https://trai.gov.in/sites/default/files/2025-05/TRAI_Response_22052025.pdf
+  landing_page: https://trai.gov.in/trais-response-back-reference-dated-19032025-received-dot-recommendations-rating-buildings-or-areas
+  binding_status: advisory
+  issued: 2025-05-22
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-04, GAP-IN-06]
+  role: india_evidence
+  relevance: 4
+  why: "Recommends mandatory building digital connectivity infrastructure standards, power backup specifications, and non-discriminatory access for telecom and satellite antennas in buildings."
+
+- rank: 247
+  id: in-dot-puducherry-row-rules-2024
+  title: "Adoption of Telecommunications (Right of Way) Rules, 2024 in the Union Territory of Puducherry"
+  authority: "Department of Telecommunications and Government of Puducherry"
+  jurisdiction: IN
+  doc_type: order
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/puducherry-row-rules-of-dot_new.pdf
+  landing_page: https://www.eservices.dot.gov.in/
+  binding_status: binding
+  issued: 2024-09-12
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-04, GAP-IN-06]
+  role: context
+  relevance: 3
+  why: "Regional corridor right-of-way alignment order adjoining Tamil Nadu / Chennai for fast-track satellite earth station and optical fiber deployment."
+
+- rank: 248
+  id: in-dot-telangana-row-order
+  title: "State Right of Way and Infrastructure Safety Implementation Order"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: order
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/telangana-order.pdf
+  landing_page: https://www.eservices.dot.gov.in/
+  binding_status: binding
+  issued: 2024-05-20
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-04]
+  role: context
+  relevance: 3
+  why: "Regional implementation order for telecom asset protection, mandatory utility coordination, and underground fiber restoration during emergency disruptions."
+
+- rank: 249
+  id: in-isro-is4om-brochure
+  title: "ISRO System for Safe & Sustainable Space Operations Management (IS4OM) Information Brochure"
+  authority: "Indian Space Research Organisation"
+  jurisdiction: IN
+  doc_type: guideline
+  url: https://www.isro.gov.in/media_isro/pdf/sssom_brochure.pdf
+  landing_page: https://www.isro.gov.in/
+  binding_status: advisory
+  issued: 2022-07
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-09]
+  role: india_evidence
+  relevance: 4
+  why: "Details operational capabilities of IS4OM for tracking space debris, conjunction assessment, collision avoidance manoeuvres, and safeguarding Indian space assets."
+
+- rank: 250
+  id: in-isro-debris-free-missions-2024
+  title: "India's Intent on Debris-Free Space Missions by 2030"
+  authority: "Indian Space Research Organisation"
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://www.isro.gov.in/Debris_Free_Space_Missions.html
+  landing_page: https://www.isro.gov.in/
+  binding_status: advisory
+  issued: 2024-04
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-09]
+  role: india_evidence
+  relevance: 3
+  why: "Declares India's policy target of achieving debris-free space missions by 2030 for all government and non-government space actors to preserve orbit sustainability."
+
+- rank: 251
+  id: in-tec-er-ip-terminal
+  title: "Essential Requirements for IP Terminal (ER No. TEC67472407)"
+  authority: "Telecommunication Engineering Centre"
+  jurisdiction: IN
+  doc_type: standard
+  url: https://www.mtcte.tec.gov.in/filedownload?name=TEC67472407.pdf
+  landing_page: https://www.mtcte.tec.gov.in/
+  binding_status: binding
+  issued: 2024-07
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: india_evidence
+  relevance: 3
+  why: "Outlines mandatory technical requirements, safety tests, and interface standards for IP communication terminals deployed in Indian telecom networks."
+
+- rank: 252
+  id: in-sansad-nsdts-lok-sabha-statement
+  title: "Lok Sabha Starred/Unstarred Question Answer on National Security Directive on Telecommunication Sector"
+  authority: "Parliament of India (Lok Sabha) / Ministry of Communications"
+  jurisdiction: IN
+  doc_type: report
+  url: https://sansad.in/getFile/loksabhaquestions/annex/185/AU2910_hYU9b8.pdf?source=pqals
+  landing_page: https://sansad.in/
+  binding_status: not stated
+  issued: 2024
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06, GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Official parliamentary statement outlining criteria for trusted products and trusted sources under the National Cyber Security Coordinator."
+
+- rank: 253
+  id: in-niti-ai-facial-recognition-2024
+  title: "Responsible AI"
+  authority: "NITI Aayog"
+  jurisdiction: IN
+  doc_type: strategy
+  url: https://www.niti.gov.in/sites/default/files/2024-06/document.pdf
+  landing_page: https://www.niti.gov.in/
+  binding_status: advisory
+  issued: 2024-06
+  in_force: "unknown"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-08]
+  role: context
+  relevance: 3
+  why: "Demonstrates application of Responsible AI principles, risk mitigation, and security guardrails to automated biometric processing systems."
+
+- rank: 254
+  id: in-dot-433mhz-rf-rules-2022
+  title: "Use of Low Power Radio Frequency Devices in the Frequency Band 433.05 to 434.79 MHz (Exemption from Licensing Requirement) Rules, 2022"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/the-use-of-low-power-radio-frequency-devices-in-the-frequency-band-433.05-to-434.79-mhz-exemption-from-license-rules-2022.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2022-09
+  in_force: "yes"
+  amendments: "none found"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06]
+  role: context
+  relevance: 3
+  why: "De-licenses 433 MHz band for telemetry, smart grid monitoring, and supervisory control equipment under specified power limits."
+
+- rank: 255
+  id: in-dot-telegraph-5th-amendment-2022
+  title: "Indian Telegraph (5th Amendment) Rules, 2022"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/Indian%20Telegraph%20%285th%20Amendment%29%20Rules%2C%202022.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2022-11
+  in_force: "yes"
+  amendments: "amends Indian Telegraph Rules 1951"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06]
+  role: context
+  relevance: 3
+  why: "Modifies licensing and regulatory parameters under the Indian Telegraph Rules for telecommunication network operations."
+
+- rank: 256
+  id: in-dot-telegraph-4th-amendment-2022
+  title: "Indian Telegraph (4th Amendment) Rules, 2022"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/indian-telegraph-4th-amendment-rules-2022.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2022-10
+  in_force: "yes"
+  amendments: "amends Indian Telegraph Rules 1951"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06]
+  role: context
+  relevance: 3
+  why: "Updates technical licensing conditions and telegraph apparatus certification terms under statutory telegraph rules."
+
+- rank: 257
+  id: in-dot-telegraph-2nd-amendment-2022
+  title: "Indian Telegraph (2nd Amendment) Rules, 2022"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/theindiantelegraph2ndamendmentrules2022nw_repaired_0.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2022-06
+  in_force: "yes"
+  amendments: "amends Indian Telegraph Rules 1951"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-06]
+  role: context
+  relevance: 3
+  why: "Amends procedural compliance rules and telegraph inspection guidelines for licensed public network operators."
+
+- rank: 258
+  id: in-dot-telegraph-row-amendment-2022
+  title: "Indian Telegraph Right of Way (Amendment) Rules, 2022"
+  authority: "Department of Telecommunications"
+  jurisdiction: IN
+  doc_type: rules
+  url: https://www.eservices.dot.gov.in/sites/default/files/circular-notifications/indian-telegraph-right-of-way-amendment-rules-2022.pdf
+  landing_page: https://www.eservices.dot.gov.in/act-and-rules
+  binding_status: binding
+  issued: 2022-08-17
+  in_force: "yes"
+  amendments: "amends 2016 RoW rules; updated in 2023 and 2024"
+  licence: "Government of India open (GODL)"
+  gaps: [GAP-IN-04, GAP-IN-06]
+  role: india_evidence
+  relevance: 4
+  why: "Introduced provisions for small cells and street furniture deployment on public utility infrastructure without separate charges, accelerating 5G small cell backhaul."
