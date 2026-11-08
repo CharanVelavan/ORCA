@@ -1,0 +1,1854 @@
+{
+  "chunk_count": 82191,
+  "chunks_sha256": "aaca9f16fedc8b866269b71c5670845525159351bdf7acf9e1f446028a5cdd28",
+  "parser_version": "rag-v2-legal-structure-1",
+  "skipped": [],
+  "source_count": 369,
+  "sources": [
+    {
+      "chunks": 39,
+      "sha256": "202c2f3953d792dcfb3ecb3634fc82ab75437ee596de89b8d59a211e8e42431f",
+      "source_id": "in-certin-dir-2022"
+    },
+    {
+      "chunks": 54,
+      "sha256": "7c4ae9eab453db32a5feece63987f7606373d689755b5b2869bb367b5682d6af",
+      "source_id": "in-certin-faq-2022"
+    },
+    {
+      "chunks": 247,
+      "sha256": "003b3218fe399b293c73f6aef9ca52e5c1d080388c43fb0523572c1dc5f3d529",
+      "source_id": "in-itact-2000"
+    },
+    {
+      "chunks": 130,
+      "sha256": "81663bfba1915837df416dd99ec7b1b823de05ea16c4fafa30e8dc1c0616d503",
+      "source_id": "in-telact-2023"
+    },
+    {
+      "chunks": 57,
+      "sha256": "16f93fbc5e1bbdbdee56b3b98a020e0d49e32f98b524ed8942ac8d6f7dc81494",
+      "source_id": "in-tcsr-2024"
+    },
+    {
+      "chunks": 45,
+      "sha256": "116466ec2799bb80750e9d810495fbfb1c0b041366dbb3625da03b2085199f4d",
+      "source_id": "in-ctir-2024"
+    },
+    {
+      "chunks": 173,
+      "sha256": "6310ef527d43896777084d9c875e7b33b9ad176fa51e42c2027a36c70400e50a",
+      "source_id": "in-space-fw-2026"
+    },
+    {
+      "chunks": 150,
+      "sha256": "dda561b9fd6420e1b99157b60f92bb0470a6154c6d559bbee3482ac255ac2c24",
+      "source_id": "in-dpdp-act-2023"
+    },
+    {
+      "chunks": 204,
+      "sha256": "eabc7d05e013144615d78ddc0e8b9c9aac1920e814f4fad38ce6560951f5aa08",
+      "source_id": "in-dpdp-rules-2025"
+    },
+    {
+      "chunks": 216,
+      "sha256": "2f18a35716baa84e07d694e2dc3c69834607bdeeb92f6e815ee6a7e79019288f",
+      "source_id": "eu-nis2-2022"
+    },
+    {
+      "chunks": 337,
+      "sha256": "9569524e4e89f1519f956c74a1261ef2de767c727913b95bbc108dfcff847c85",
+      "source_id": "eu-gdpr-2016"
+    },
+    {
+      "chunks": 104,
+      "sha256": "2720bedb598ab88a685c83269de91b94d68b576a6d510c78bd2d3cc99b40660e",
+      "source_id": "ae-tdra-interconnection-2006"
+    },
+    {
+      "chunks": 32,
+      "sha256": "fe249008ba43a70bd50da278f0150b61e3a42161f21899882afca5057d895363",
+      "source_id": "in-tcsr-2025-amendment"
+    },
+    {
+      "chunks": 9,
+      "sha256": "0de59b2277e0514c0b6ca11181e1e4dd21f3186c93b0592fb7111f72f4373d92",
+      "source_id": "in-dpdp-rules-2025-corrigendum"
+    },
+    {
+      "chunks": 367,
+      "sha256": "636990f28c97d7f7a2d6816cf1130223472e82d9ccda523a622aa64e0d8f5f41",
+      "source_id": "ae-tdra-iar-v1-1"
+    },
+    {
+      "chunks": 8,
+      "sha256": "5c0a18fb4dd2ec401a1a781f07d96d3cbfc7408c30b6e7faa08b34b8c3add7ea",
+      "source_id": "in-pib-space-fw-2026"
+    },
+    {
+      "chunks": 684,
+      "sha256": "52608d4a74075233add8acfa9f75c880212916b8117bd085e2e76e8548d3d6c5",
+      "source_id": "in-authz-rules-2026"
+    },
+    {
+      "chunks": 121,
+      "sha256": "a20c84779294b94389825f25ffeceb14070a9f88718b08b2191ad9bff2dbc656",
+      "source_id": "in-dot-disaster-sop-2017"
+    },
+    {
+      "chunks": 1344,
+      "sha256": "25d7c3f1658264242121bdca86b0357b09531440725eea2cc820abe8285e4ad7",
+      "source_id": "in-trai-qos-2024"
+    },
+    {
+      "chunks": 19,
+      "sha256": "370ed2bf59389aa012a22a82630c6c376996deb21ebfec81f70e82e57caaff94",
+      "source_id": "in-cea-comm-2020"
+    },
+    {
+      "chunks": 244,
+      "sha256": "04f25bf5f9aa92e1a03ae0e47d6a6b6410133335e46a3bcc1f2b9c73e81b54ff",
+      "source_id": "in-dot-gmpcs-licence"
+    },
+    {
+      "chunks": 423,
+      "sha256": "22558bd88f221ff4bd625d89099fb39eb062408c5ca8adbaf52ffec8d01f69f9",
+      "source_id": "intl-itut-x1144-2024"
+    },
+    {
+      "chunks": 410,
+      "sha256": "814b7cd392758bf6f093bc33ec3354d0fa07ce1c52428712d44aa5d71837377b",
+      "source_id": "in-nccs-itsar-csr-g4-2026"
+    },
+    {
+      "chunks": 397,
+      "sha256": "0d2d94868af9cdc1b86d7e5f7226c2e534a2d1243fa7fc443c18459043877adf",
+      "source_id": "inspace-ngp-2024"
+    },
+    {
+      "chunks": 10,
+      "sha256": "7e999c9f744212a173ce68a6a8bdd8655ea8126aa233b2c28c8ad8ef22b9f9ec",
+      "source_id": "au-acma-emergency-call-determination-2019"
+    },
+    {
+      "chunks": 2,
+      "sha256": "57990ac66af857a5799100c9c529df4842f2dfe252bd56520e5810ab0e28dbce",
+      "source_id": "au-acma-service-continuity-rules"
+    },
+    {
+      "chunks": 129,
+      "sha256": "b05c7163490f77e12162fc0c4b0b62bcb6e11e840589065636f9fe7a397b9c81",
+      "source_id": "au-national-cyber-strategy-2023"
+    },
+    {
+      "chunks": 22,
+      "sha256": "f56b578970fc3cefd58e16b70c2caf856c319e914cfac91ae427cb8024288cd7",
+      "source_id": "au-soci-act-2018"
+    },
+    {
+      "chunks": 2,
+      "sha256": "39d85f1031f7df1c5b3a539dc0890e65486fd5dfbf7c10deb123e5209638342b",
+      "source_id": "au-soci-application-rules-2021"
+    },
+    {
+      "chunks": 2,
+      "sha256": "9c41630db7b6fc64ab756accd867dfb476e3be8c210122335c2e89a825e7c2ff",
+      "source_id": "au-soci-cirmp-rules-2023"
+    },
+    {
+      "chunks": 2,
+      "sha256": "72b62543ba12f0e37dba2ccbaa584ca691261b66c8f7cf33d2db9ff3110d68ed",
+      "source_id": "au-soci-definitions-rules-2021"
+    },
+    {
+      "chunks": 22,
+      "sha256": "d4174cd507429c5d5635c659e74bc00c568133cf010fb71ca6c0376d2d383a04",
+      "source_id": "au-soci-incident-reporting-part2b"
+    },
+    {
+      "chunks": 12,
+      "sha256": "6b559bc4e7d75a8680a042022ad8d8d0c4c4d9ed7e5ae134b6e0d5a8d7d441cd",
+      "source_id": "au-space-general-rules-2019"
+    },
+    {
+      "chunks": 2,
+      "sha256": "b076e6ad49ec01e527df075b61d2372a1ff45ca8de344e03578878f71b9bac33",
+      "source_id": "au-space-launches-returns-act-2018"
+    },
+    {
+      "chunks": 80,
+      "sha256": "226aded2529dff993bee36df5a490d7c278c7d8410f7b81bf4d8e2431eef9bfc",
+      "source_id": "au-telact-part14-tssr"
+    },
+    {
+      "chunks": 145,
+      "sha256": "cc901797f86df36ffdb4542c515419a064ff6b3fd882d28eb3bd03f28efc44df",
+      "source_id": "au-telecom-consumer-protection-act-emergency"
+    },
+    {
+      "chunks": 31,
+      "sha256": "97632a581e57d26c2ee20bf0de55d8c2d8ba5a3c779d9be67d79bcfc9a3fa8b1",
+      "source_id": "ca-emergency-management-act-2007"
+    },
+    {
+      "chunks": 156,
+      "sha256": "ed1e68267a35f8b47e608acc3f1af75b7410f2767869278e9a155f0c530e8a40",
+      "source_id": "ca-radiocommunication-act-1985"
+    },
+    {
+      "chunks": 103,
+      "sha256": "f272fd658fd4e6f3da7a9b31c2adbda5ee4db23d5d21ad23832f6019200fc413",
+      "source_id": "ca-remote-sensing-space-systems-act"
+    },
+    {
+      "chunks": 36,
+      "sha256": "fe0c6f8fb793bcaca2239b42c49ccb57aa8272b799a3d600dabb1b445dcb9f29",
+      "source_id": "ca-space-strategy-2019"
+    },
+    {
+      "chunks": 384,
+      "sha256": "63b5cb3f814db5e42b8fa3f543b99a513c1ac0bfd1a39cc54c92780a2ac7944f",
+      "source_id": "ca-telecom-act-1993"
+    },
+    {
+      "chunks": 95,
+      "sha256": "870160449b37e6f2831d4ef0d43bed0bfa5f1d588cd0e02a60b2870349b40a00",
+      "source_id": "enisa-eecc-incident-reporting-guideline"
+    },
+    {
+      "chunks": 195,
+      "sha256": "1143f6db71bbafff0b0e192708e902c92197939b3e3bf02fda586766f34d1330",
+      "source_id": "enisa-eecc-security-measures-guideline"
+    },
+    {
+      "chunks": 246,
+      "sha256": "d076b53c3a2f7b3a9bf428a3b0b8e5544cf7c93ae750b1880b09c713f3a01c01",
+      "source_id": "enisa-space-threat-landscape-2025"
+    },
+    {
+      "chunks": 88,
+      "sha256": "35166c0a1c00b9e5ab29e22b8ff320d8ec7d557eccd0f6d600b38c0a8a24a5c9",
+      "source_id": "eu-5g-cybersecurity-toolbox-2020"
+    },
+    {
+      "chunks": 129,
+      "sha256": "3eb32b248e66a91aa6c7281dc1006e6cc3d673d53624fa3fd1541d1cfa2485f1",
+      "source_id": "eu-cer-2022-2557"
+    },
+    {
+      "chunks": 33,
+      "sha256": "db093d8ab18c3c188ad1f28a4849893230d3611e1b90d9ad3bbfae0f54339443",
+      "source_id": "eu-cer-article-13-guidelines-2026"
+    },
+    {
+      "chunks": 3129,
+      "sha256": "f3d972c7d23e15408388558a22fc268ce555e99ef9a9879fddac5a9cfa0a82d8",
+      "source_id": "eu-commission-reg-2023-894"
+    },
+    {
+      "chunks": 369,
+      "sha256": "e3ecaabddf6e321fa04097d15dfcccc7309d0fe5896240ab7625a27d74ab1b0a",
+      "source_id": "eu-cyber-resilience-act-2024"
+    },
+    {
+      "chunks": 253,
+      "sha256": "a78a34d01193d56266f6a317823e81464c2381fc876fc5e15457978ebcbf32e6",
+      "source_id": "eu-cybersecurity-act-2019"
+    },
+    {
+      "chunks": 74,
+      "sha256": "9bf3caf8ea2be13f27f1e376eea9d39e9664c308234a20db0a7fb61f873cb32c",
+      "source_id": "eu-declaration-digital-rights-2023"
+    },
+    {
+      "chunks": 11,
+      "sha256": "7c0cd143e7a5e1dd98dea6235dbaa792bc9be149831bd7d1ffe3e49aafa8d2cc",
+      "source_id": "eu-easa-sib-2022-02r4-gnss"
+    },
+    {
+      "chunks": 639,
+      "sha256": "ffddc8797eb5107db8b062f71b17fe1101e38cd9e44aae9fef30702f0276520b",
+      "source_id": "eu-eecc-2018-1972"
+    },
+    {
+      "chunks": 163,
+      "sha256": "526f8ffe3101784831ce7d3d13fa8a4927ab5d3d35f9e71926b4c55cf70ebd58",
+      "source_id": "eu-iris2-regulation-2023-588"
+    },
+    {
+      "chunks": 70,
+      "sha256": "475dd148d3b5c5874d791c85bd5cf7975b618f9c8bd0758cbd8620dd7a8ed33b",
+      "source_id": "eu-net-neutrality-2015-2120"
+    },
+    {
+      "chunks": 99,
+      "sha256": "8799b1a7c352060c4f155ddc56241b0b2679e2204645361b134bbda3199d7199",
+      "source_id": "eu-nis2-ir-2024-2690"
+    },
+    {
+      "chunks": 439,
+      "sha256": "44d36b057bd5ef0f5849e1601701d216d065ae00c6bd1e6f823899dceb945067",
+      "source_id": "eu-space-act-proposal-2025"
+    },
+    {
+      "chunks": 353,
+      "sha256": "960792357bf6ceaab33f689e844b8b5af984eaa5f72d78699b8182385e2f8c6a",
+      "source_id": "eu-space-programme-2021-696"
+    },
+    {
+      "chunks": 369,
+      "sha256": "cf8dcab0d551bbc6753d8fd6fd921bd23dc567bfdd7bbe42560c406e59cf7b79",
+      "source_id": "fcc-outage-reporting-order-2004"
+    },
+    {
+      "chunks": 2,
+      "sha256": "0bef0232635e638b7fc2229408b8a944644eff9585a35efaa57c09cc2758f681",
+      "source_id": "fcc-wea-rules-47cfr10"
+    },
+    {
+      "chunks": 63,
+      "sha256": "18a7e6797cf7727b71665627e3a7fc150ccf9a3367a620a5f713b2f9efb62c58",
+      "source_id": "intl-3gpp-ts-22153"
+    },
+    {
+      "chunks": 1940,
+      "sha256": "960f4f8a188571a2b759dd5a3b4343f4385dad57c4e7dd4a0fee319a3bc5e5b8",
+      "source_id": "intl-3gpp-ts-23501"
+    },
+    {
+      "chunks": 2791,
+      "sha256": "142cd76186d31c24923b24cda57d91ae1132676caeec4ca2f134a3ab7607b30b",
+      "source_id": "intl-3gpp-ts-23502"
+    },
+    {
+      "chunks": 33,
+      "sha256": "3c355a34240fede22ad77b4bc42be30294c2149400802cd057c722ea23bb97f4",
+      "source_id": "intl-3gpp-ts-32541"
+    },
+    {
+      "chunks": 845,
+      "sha256": "d491f7e819d07d9017041f96dc2748f29110e0f8feb5dede176f19c722c6dbb7",
+      "source_id": "intl-3gpp-ts-33501"
+    },
+    {
+      "chunks": 692,
+      "sha256": "058188999eb469ae95097a3b29b3abd24e65470a10f60d9d8965f7610c0de8f1",
+      "source_id": "intl-3gpp-ts-38300"
+    },
+    {
+      "chunks": 406,
+      "sha256": "bb0ef15b71c5b1b519b08fa5004c39cbc5024e59312ade610b59414a6b11df41",
+      "source_id": "intl-3gpp-ts-38401"
+    },
+    {
+      "chunks": 120,
+      "sha256": "9181aab44b1d1e85ee9614952c40d4cf4e537474ee22446ace552e8da6220912",
+      "source_id": "intl-ccsds-350-0-g-2"
+    },
+    {
+      "chunks": 83,
+      "sha256": "a2da2aafe37c698c53ab8dbc2fabdac8d2405b1cec7d8186915e0b1faff4df19",
+      "source_id": "intl-ccsds-350-1-g-3"
+    },
+    {
+      "chunks": 265,
+      "sha256": "16ad69d3d1f379e3e1fbfe768f2bab06b2885eaf4eb29b60b5e70f55754f507e",
+      "source_id": "intl-ccsds-350-5-g-1"
+    },
+    {
+      "chunks": 116,
+      "sha256": "4bdcf457ce941678283e1464feced248cd7e2f966674e16b92c5066b742c5a4a",
+      "source_id": "intl-ccsds-351-0-m-1"
+    },
+    {
+      "chunks": 50,
+      "sha256": "1fe77fc03f46fe3281e97df628561b0c9c02db3ecf5ade2e1e500ddbde8a694f",
+      "source_id": "intl-ccsds-352-0-b-1"
+    },
+    {
+      "chunks": 201,
+      "sha256": "86717aedd33886013333054355b92d2d32ffaf84a4a3eb63b7b6ffc6f17d5818",
+      "source_id": "intl-ccsds-355-0-b-2"
+    },
+    {
+      "chunks": 300,
+      "sha256": "5864d866e9c66fc2e644225d6e61724bc6f2c140359e444377e74ceb1a722483",
+      "source_id": "intl-ccsds-355-1-b-1"
+    },
+    {
+      "chunks": 72,
+      "sha256": "90fc6d4b53adfdb612d1f3e1a53e976f72830e0705db5d6f9c32cc1c88fb5d23",
+      "source_id": "intl-ecss-e-st-80c"
+    },
+    {
+      "chunks": 138,
+      "sha256": "daf707f31e66b8746413af3fcd6bbc78e607008bd687e07ec2bab1a6371879eb",
+      "source_id": "intl-ecss-q-st-80c"
+    },
+    {
+      "chunks": 5,
+      "sha256": "dbba97f2d834fea1647e1f784ef5ac52fbe579af4172018eb938443f1b3a2a38",
+      "source_id": "intl-esa-cyber-resilience-framework"
+    },
+    {
+      "chunks": 114,
+      "sha256": "65e547f5dfa69165d6aef9b5b8137b6445753a50c43348807fcd540665c059bc",
+      "source_id": "intl-etsi-en-302186"
+    },
+    {
+      "chunks": 67,
+      "sha256": "4a484c2e3a7c746cd1d655ae39b617f970696f34860266598b2b1b775d7a7bd3",
+      "source_id": "intl-etsi-en-303645"
+    },
+    {
+      "chunks": 85,
+      "sha256": "e6dde1cd10fc03ebbf2fc39b796e65824c7d3a3ad52969f7063602d63ca7572d",
+      "source_id": "intl-etsi-tr-101985"
+    },
+    {
+      "chunks": 107,
+      "sha256": "aa9486a29e6beb26cad8de1fb541fe9bb2541443bb8a6793771be3a50e957da8",
+      "source_id": "intl-etsi-tr-102287"
+    },
+    {
+      "chunks": 53,
+      "sha256": "91db691d26975c7d19b15f8fb24542abcd46bb4b405896087a4b73c5f1c5dc5a",
+      "source_id": "intl-etsi-ts-103246-1"
+    },
+    {
+      "chunks": 56,
+      "sha256": "3ea892c6e71440ac9076e61cf05dae51ec3469d6433b79430f4ded3b8919e031",
+      "source_id": "intl-etsi-ts-103457"
+    },
+    {
+      "chunks": 272,
+      "sha256": "25afe7ad6273bbf1df96522a1a6f94b6ba4308d01201bef6f1ed134e91c78797",
+      "source_id": "intl-etsi-ts-103701"
+    },
+    {
+      "chunks": 50,
+      "sha256": "25dcc622b955e28a43bf84ea358b2dc11f5957f3909e1ce80c1542edb054b70f",
+      "source_id": "intl-hybrid-coe-wp21-space-war"
+    },
+    {
+      "chunks": 46,
+      "sha256": "8ba8c9f0b7cc8a8ca1367b5feb1356932a191eb52527c417b940e72a1521c08e",
+      "source_id": "intl-liability-convention-1972"
+    },
+    {
+      "chunks": 7,
+      "sha256": "5c1848325ad40d2bc23925c9a5641e9079f11045db432af09263294254cf9964",
+      "source_id": "intl-nato-ccdcoe-space-cyber-weakspot"
+    },
+    {
+      "chunks": 33,
+      "sha256": "7b6beba90cdbcb80f22d7e17441f2c22627e84fba6a7084502fa682d69518070",
+      "source_id": "intl-outer-space-treaty-1967"
+    },
+    {
+      "chunks": 28,
+      "sha256": "6850961a4f04bdff2c520013019b0808f30ea06e4de94903dc2052bbba8cef8c",
+      "source_id": "intl-registration-convention-1975"
+    },
+    {
+      "chunks": 21,
+      "sha256": "42ae6450c59c79ae978fa981eb929bdba5f01ca45ccb64058f669705d8f51db4",
+      "source_id": "intl-rescue-agreement-1968"
+    },
+    {
+      "chunks": 23,
+      "sha256": "8587ba4b9efd0a1a59f5ae6c7afb3108cd5025cc8bc74d477f22ae2b1c986177",
+      "source_id": "intl-unoosa-debris-guidelines-2007"
+    },
+    {
+      "chunks": 9,
+      "sha256": "8b9144c0ba9e6dbada832ef4689c8dbbde3c57bcf44c797fe01038e456a12ef7",
+      "source_id": "intl-unoosa-space-object-resources"
+    },
+    {
+      "chunks": 1242,
+      "sha256": "8ef2be6b4f0b384415836f982766caf81cbd01b9c0917d33693c17d6f6e23447",
+      "source_id": "itu-constitution-art40"
+    },
+    {
+      "chunks": 191,
+      "sha256": "4c765c9c919dd5f092a9421f155806a1e630c1b32962f66b5f83854f7396a12c",
+      "source_id": "itu-d-netp-guidelines-2020"
+    },
+    {
+      "chunks": 21,
+      "sha256": "f1afd0e50a8429cc374e0d1cfb8252b1d0833cf82974689b4fcafd8cb49d56e0",
+      "source_id": "itu-e106-2003"
+    },
+    {
+      "chunks": 21,
+      "sha256": "cc8e89c8c50e52d998f0d3c422bea29d58d5ee2f61d839d91410e54d08ccaaef",
+      "source_id": "itu-e108-2016"
+    },
+    {
+      "chunks": 1134,
+      "sha256": "a08159f6efe34c5ea71db5c698fc30bd27167a94b05dafdbe9a86196d6cdc492",
+      "source_id": "itu-r-res644-2019"
+    },
+    {
+      "chunks": 1586,
+      "sha256": "49e283a5c22e57b44b5e0220eee94df4a7d2055418662bf83c125475d98f3abf",
+      "source_id": "itu-radio-regulations-app10"
+    },
+    {
+      "chunks": 836,
+      "sha256": "a19db60201342f44443143c01c528abe725b93cf133602631edaa2b6c9ba6a8f",
+      "source_id": "itu-radio-regulations-art15"
+    },
+    {
+      "chunks": 836,
+      "sha256": "a19db60201342f44443143c01c528abe725b93cf133602631edaa2b6c9ba6a8f",
+      "source_id": "itu-radio-regulations-art45"
+    },
+    {
+      "chunks": 712,
+      "sha256": "7d3fc88ae299ec112255749186998a97de8dc089061c387996050d4f23403118",
+      "source_id": "itu-tampere-convention-1998"
+    },
+    {
+      "chunks": 70,
+      "sha256": "a7bab5aef7fa33ddc615e2655ca98161a722e661ddb0ff5aceefe6a636f28bbc",
+      "source_id": "itu-x1051-2023"
+    },
+    {
+      "chunks": 58,
+      "sha256": "ce170556e266df8ad0fb4a6ab1cfe061a5b0094ba05a69d85409f6309163a587",
+      "source_id": "itu-x1056-2020"
+    },
+    {
+      "chunks": 33,
+      "sha256": "44ba6c581fb5b51306a151799acb26edcff835a63a082d16ab0b8da3dcfd0d0a",
+      "source_id": "itu-x1060-2021"
+    },
+    {
+      "chunks": 64,
+      "sha256": "5b627346c6c2aac3a6ccf8e3cf22eb964fe0732249250319504327db1f38f482",
+      "source_id": "itu-x1812-2023"
+    },
+    {
+      "chunks": 59,
+      "sha256": "4564cfeb2ed5289a7e486bb216ad2dc642ce21ad60c260551480ed575fbe5cfc",
+      "source_id": "itu-x805-2003"
+    },
+    {
+      "chunks": 40,
+      "sha256": "e76729e421735a3699622ce19d05c66a2155373326a285608bf05df070686e30",
+      "source_id": "itu-y1271-2014"
+    },
+    {
+      "chunks": 51,
+      "sha256": "e42f9a3be3f951d3e19b9007f876f0b389c81b4693f0d8576e18185a1acfe67b",
+      "source_id": "itu-y3172-2019"
+    },
+    {
+      "chunks": 87,
+      "sha256": "1e3538bdfca1577807447d43fd75332494ba169720988f9a8406064d3345c777",
+      "source_id": "jp-disaster-countermeasures-act-1961"
+    },
+    {
+      "chunks": 6,
+      "sha256": "fecd6f29568d5008be464e17f8d968f9ee91af2247e2aa6e0b6f3abd6ddd271f",
+      "source_id": "sg-imda-cop-tsr"
+    },
+    {
+      "chunks": 12,
+      "sha256": "1887e9ddab73566c50f7aa8cd2de1faa76c0b9c07a36af34eed8335dd94e204c",
+      "source_id": "sg-imda-tccop-2021"
+    },
+    {
+      "chunks": 63,
+      "sha256": "ca9a311656f3145eada6f888bf178bee5bbd770364af3949cef1c73f8129f3c6",
+      "source_id": "uk-dsit-space-ground-cloud-cyber"
+    },
+    {
+      "chunks": 9,
+      "sha256": "185f8cf4d667d5463b74bb90184a5a861bf82e136902d78e940f49a3778e3d8f",
+      "source_id": "uk-ncsc-annual-review-space-2023"
+    },
+    {
+      "chunks": 8,
+      "sha256": "7d840ea0f03fcddcf5d9f06f1d7f51ab6344311d1e3c6a1abcc9ceca7c99a11b",
+      "source_id": "uk-ncsc-caf-3-2"
+    },
+    {
+      "chunks": 3,
+      "sha256": "b92990f0661eb59f97504331750537f3a7551de839f055422b721ecb731fe454",
+      "source_id": "uk-ncsc-mcss-2023"
+    },
+    {
+      "chunks": 119,
+      "sha256": "6390af8890939de90f3240efa01b6df977fabaea45d92af67488ee60b8a19802",
+      "source_id": "uk-ofcom-backup-power-emergency-guidance"
+    },
+    {
+      "chunks": 3,
+      "sha256": "df3a9e899c03417b683c3c18f25576b6c9b25a385dd66e79d40aa2675b26c128",
+      "source_id": "uk-space-agency-cyber-toolkit"
+    },
+    {
+      "chunks": 876,
+      "sha256": "e84d993b1458d9ffe27e25b5bdaa83701b60cf9a81a3171b7d8911c3f7ba51eb",
+      "source_id": "us-cisa-circia-nprm-2024"
+    },
+    {
+      "chunks": 71,
+      "sha256": "44ace92a275468d1946868855c44cb9d914ef0ce3d6656ebca5c9b9fa879f85e",
+      "source_id": "us-cisa-cpgs-2023"
+    },
+    {
+      "chunks": 6,
+      "sha256": "ef073c7f55fd0c534241dfa32aa7a5c00f99e7f6556aacc7c7cb206e28f190bf",
+      "source_id": "us-cisa-satcom-advisory-2022"
+    },
+    {
+      "chunks": 35,
+      "sha256": "fe450df3b740c325500623dd748a39edf8721a6448f3601d05d828acc6e82fe8",
+      "source_id": "us-cisa-space-cyber-2024"
+    },
+    {
+      "chunks": 34,
+      "sha256": "e679947174b87d4c8a449a2da3b5049a80c024828ddd175bbe64fd4aeeafd0b7",
+      "source_id": "us-cisa-space-zero-trust-2024"
+    },
+    {
+      "chunks": 220,
+      "sha256": "87563b092a44c802955ecc1faf5fbab5c6a921481739c86f5ed24f9479f827a9",
+      "source_id": "us-cpuc-d20-07-011-2020"
+    },
+    {
+      "chunks": 154,
+      "sha256": "07127d29be45f4fb7592d6c16e2203426261215d1a89896736eabdbbecb399bf",
+      "source_id": "us-cpuc-d21-02-029-2021"
+    },
+    {
+      "chunks": 206,
+      "sha256": "2e315d763b0ceef57cc16b1137871330a25fa7ae238ad21b78fcb0134d4ce83f",
+      "source_id": "us-fcc-911-reliability-2013"
+    },
+    {
+      "chunks": 208,
+      "sha256": "530861da347e2a51822f09df08479376bd63dcc319646d402cfdcffa757c91aa",
+      "source_id": "us-fcc-dirs-rules-2024"
+    },
+    {
+      "chunks": 116,
+      "sha256": "031f0ab6401a44973af791146bd2cca565b956903bc86b87fab3b5111a9426c2",
+      "source_id": "us-fcc-mdri-order-2022"
+    },
+    {
+      "chunks": 56,
+      "sha256": "3c31f46fee98cac0c4323453e5109291a213b4de7fef8c058af9bf67f717433c",
+      "source_id": "us-nist-csf-2-0-2024"
+    },
+    {
+      "chunks": 69,
+      "sha256": "5fc8757a5c88a64b20ed0b2d3ff81e378d127181821a213f2fe928d73b0782d5",
+      "source_id": "us-nist-ir-8270-2023"
+    },
+    {
+      "chunks": 112,
+      "sha256": "8821a67fce8553ca73a063edfb60245af2e12167a2a224f9b5c38e25525c853d",
+      "source_id": "us-nist-ir-8401-2022"
+    },
+    {
+      "chunks": 73,
+      "sha256": "f611c973a031d74eae6e43ba9236dcb88d59bb74053c8b0ece6fbe8622d6dee0",
+      "source_id": "us-nist-ir-8441-2023"
+    },
+    {
+      "chunks": 537,
+      "sha256": "d3e9830faadfd1e7a43392194320c5203935c3d7f30f78896b55a8a53e0f0b15",
+      "source_id": "us-nist-sp800-160v2-2021"
+    },
+    {
+      "chunks": 41,
+      "sha256": "c6cf5096704d3963157180a1b93e007a0e52a9c1d63e49d87aaa0ece0f1eeb68",
+      "source_id": "us-whitehouse-nsm22-2024"
+    },
+    {
+      "chunks": 16,
+      "sha256": "84dce15d6759f113842da39deae6b26ed94fbb8d521d5ac074daef61c452f44c",
+      "source_id": "us-whitehouse-spd5-2020"
+    },
+    {
+      "chunks": 79,
+      "sha256": "fe6c1647c494c5b2acb69b32770342a93ca3b45a6d35591bc51cf0cb5dad0baa",
+      "source_id": "in-abdm-health-data-management-policy"
+    },
+    {
+      "chunks": 66,
+      "sha256": "2f10934e848680cb9854a168414053eb7c18ab137c55bf4cc712a728962a2dbb",
+      "source_id": "in-cea-cyber-power-guidelines-2021"
+    },
+    {
+      "chunks": 444,
+      "sha256": "aa48282545abac69d6a15f5d5e0974cc3585261a549d99861f9c4d70bc4a39d8",
+      "source_id": "in-cea-disaster-mgmt-plan-power-2024"
+    },
+    {
+      "chunks": 455,
+      "sha256": "c84866eea0797aa8e9c2048fde759ae405466f96e2681ac69e8b9a35ba98bc06",
+      "source_id": "in-cea-disaster-mgmt-plan-power-2025"
+    },
+    {
+      "chunks": 66,
+      "sha256": "2f10934e848680cb9854a168414053eb7c18ab137c55bf4cc712a728962a2dbb",
+      "source_id": "in-cea-power-cyber-security-guidelines-2021"
+    },
+    {
+      "chunks": 471,
+      "sha256": "22f6769405804bfb1aab22e54a2a6e14e9f85807916abe3a7d5fd489bf5733db",
+      "source_id": "in-cerc-electricity-act-2003-amended"
+    },
+    {
+      "chunks": 926,
+      "sha256": "c29cb694b2b3a8a9c0492cdc2d29cf4c41ee198e9305e4a69ddc2b392651a7e8",
+      "source_id": "in-cerc-iegc-2023-sor"
+    },
+    {
+      "chunks": 215,
+      "sha256": "32ca09177de36866beb0b046f6d318416b04cb27316969641ff211910c95bcd1",
+      "source_id": "in-cerc-iegc-second-amendment-draft-2026"
+    },
+    {
+      "chunks": 29,
+      "sha256": "37155a1a0a8ffe2c7d79fe6935766073695bd215b42b61009a855162a91f906f",
+      "source_id": "in-dot-433mhz-rf-rules-2022"
+    },
+    {
+      "chunks": 63,
+      "sha256": "63d31e444b1fea70f719a526d85903cb2a2ed4dfc2388965018355f8beb85b85",
+      "source_id": "in-dot-amateur-services-rules-2024"
+    },
+    {
+      "chunks": 5,
+      "sha256": "31619f895dfe35b6a5062805dbc617a372bf35e5dc9bcb1dfbe14c948d5a8c03",
+      "source_id": "in-dot-bharatnet-special-project-2024"
+    },
+    {
+      "chunks": 263,
+      "sha256": "4abb772a15cfbc0ad3a64e151602169d8cb82e727cc56d47ff7f09334739f9f4",
+      "source_id": "in-dot-captive-telecom-rules-2026"
+    },
+    {
+      "chunks": 5,
+      "sha256": "2436fdd24f4a208f558327760912251f4103a543439292ceec0a642a8ba204c5",
+      "source_id": "in-dot-cbud-gazette-2025"
+    },
+    {
+      "chunks": 14,
+      "sha256": "284f3307a5ea819afd41d76aef5e6fef5e3dd5c49863bf5114ec8d7b369e7ef3",
+      "source_id": "in-dot-cell-broadcast-amendment-2024"
+    },
+    {
+      "chunks": 12,
+      "sha256": "f26f3aaf10cbf26e36d1668a3957b88080e98ce8dd2c3511215663756d09cb7e",
+      "source_id": "in-dot-cell-broadcast-rules-2023"
+    },
+    {
+      "chunks": 12,
+      "sha256": "55360261d0c655997f8bdff1999c69e37d38909430e88754999487cd8ec40f00",
+      "source_id": "in-dot-cnap-circular-2024"
+    },
+    {
+      "chunks": 35,
+      "sha256": "cf5aa15359d944eb7015e536e57acfe01dda1fb3b6e88692091acef18f0bfb3f",
+      "source_id": "in-dot-digital-bharat-nidhi-rules-2024"
+    },
+    {
+      "chunks": 47,
+      "sha256": "281b8e4e264efc236b53ed03eaf5ce1de27799a8b6a6cda45930dbc87ad2b340",
+      "source_id": "in-dot-gmdss-radio-rules-2024"
+    },
+    {
+      "chunks": 9,
+      "sha256": "76dd6c343245a92e681d00a293dfe9be1f9ebf59d53f953c9959c34818455f69",
+      "source_id": "in-dot-ifmc-amendment-rules-2022"
+    },
+    {
+      "chunks": 5,
+      "sha256": "8dccca0a5036aede541a2a5de5b79c467c323ba5c01ffc8240ca9d33d1559d66",
+      "source_id": "in-dot-ifmc-rules-gazette-2018"
+    },
+    {
+      "chunks": 8,
+      "sha256": "c08fcea2fbff3e94f5e6438032c0db7629b84cf0bbed85e170badada38d56e5e",
+      "source_id": "in-dot-imei-tampering-amendment-2022"
+    },
+    {
+      "chunks": 8,
+      "sha256": "6756ebf5b34b638e1bd16e36bcb17fe924ef050d2c25bea348af69d57c5b04b1",
+      "source_id": "in-dot-infra-safety-rules-2022"
+    },
+    {
+      "chunks": 31,
+      "sha256": "cd0a0f7d8e5deb8bd2c9338f3b7a3001594064176dc8db6544b8703a233557ea",
+      "source_id": "in-dot-interception-rules-2024"
+    },
+    {
+      "chunks": 31,
+      "sha256": "cd0a0f7d8e5deb8bd2c9338f3b7a3001594064176dc8db6544b8703a233557ea",
+      "source_id": "in-dot-lawful-interception-rules-2024"
+    },
+    {
+      "chunks": 38,
+      "sha256": "96ff14161fe36a957cfeb725e6be4a9d43b19de9ccd5fd360931a133f20478e5",
+      "source_id": "in-dot-migration-rules-2026"
+    },
+    {
+      "chunks": 344,
+      "sha256": "65239e3403e89d0e4c58936630856381746e4e303af41d3e5b662ddc2a8b5d34",
+      "source_id": "in-dot-misc-telecom-rules-2026"
+    },
+    {
+      "chunks": 5,
+      "sha256": "33df0a16f6bf0825566ddecbcb7b77704063cf3a5e0c84417f37f85260d61db9",
+      "source_id": "in-dot-mtcte-procedure"
+    },
+    {
+      "chunks": 22,
+      "sha256": "1cb4dff8a48c2b35857c1b9020093bef1d5440d16b2dfedf1963d40857402912",
+      "source_id": "in-dot-mtcte-standards-notification-2025"
+    },
+    {
+      "chunks": 229,
+      "sha256": "95f7627a2d095ffefbafc724ec60d2f851c4e05f408615dc32331d9c4a0e7e67",
+      "source_id": "in-dot-network-services-rules-2026"
+    },
+    {
+      "chunks": 9,
+      "sha256": "d95b0eacbdeda3ac50ed2d5acc74e5467ceaebe6fe8f8200b06d47f65266a261",
+      "source_id": "in-dot-nsdts-amendment-2026"
+    },
+    {
+      "chunks": 60,
+      "sha256": "a1d3ebf0f61bce01ca7893a957d5e75e96645f7c612f1c813f132615b159a9e8",
+      "source_id": "in-dot-radio-possession-rules-2026"
+    },
+    {
+      "chunks": 6,
+      "sha256": "eefd8892fa76a66f2022b5132b81d288d5b1a7102ec78b418608365cf679f451",
+      "source_id": "in-dot-railway-street-furniture-policy"
+    },
+    {
+      "chunks": 50,
+      "sha256": "06cb3f597d8596659fb54d7f9e75ddd62d9629245cb859325ba69cc3ec97a529",
+      "source_id": "in-dot-regulatory-sandbox-rules-2026"
+    },
+    {
+      "chunks": 18,
+      "sha256": "0bd85bff6ce270cb07a4888b18491ce9745f0630cc3b054ed688f8c4ec5e6620",
+      "source_id": "in-dot-right-of-way-amendment-2023"
+    },
+    {
+      "chunks": 134,
+      "sha256": "12a3e727a063ed389218b0a9e13a2d7a6340ee928859c935d35cbde7ac19485b",
+      "source_id": "in-dot-row-rules-2024"
+    },
+    {
+      "chunks": 76,
+      "sha256": "eadafed30910817367cd54b32148475a7afde6d57d42ca75b13ecb9b295dd801",
+      "source_id": "in-dot-rtr-rules-2025"
+    },
+    {
+      "chunks": 13,
+      "sha256": "b0746eea30e24618c7463d22551bd7d542b406ec1e8e5fb4a7c772ecb7989165",
+      "source_id": "in-dot-short-range-rf-amendment-2024"
+    },
+    {
+      "chunks": 21,
+      "sha256": "f60ca6db4d91b116b8ef9bf543faff095d019a6bb631da553c695bf020f07735",
+      "source_id": "in-dot-suspension-rules-2024"
+    },
+    {
+      "chunks": 21,
+      "sha256": "f60ca6db4d91b116b8ef9bf543faff095d019a6bb631da553c695bf020f07735",
+      "source_id": "in-dot-suspension-services-rules-2024"
+    },
+    {
+      "chunks": 22,
+      "sha256": "1cb4dff8a48c2b35857c1b9020093bef1d5440d16b2dfedf1963d40857402912",
+      "source_id": "in-dot-telecom-standards-rules-2025"
+    },
+    {
+      "chunks": 7,
+      "sha256": "bf45a9cd2987fbe704e4369222fd3232e6b0bbbfd160508f842ceac653a8e63d",
+      "source_id": "in-dot-telegraph-2nd-amendment-2022"
+    },
+    {
+      "chunks": 10,
+      "sha256": "85630cbef95ab36b1b6e71d34c1991b396ebf2f6c27b51171ae83cfbe9fe460c",
+      "source_id": "in-dot-telegraph-4th-amendment-2022"
+    },
+    {
+      "chunks": 17,
+      "sha256": "a9bb166d5e2ee74ba6d02373c35cfa24de7216cfa36a7f9d40453f6730fd79db",
+      "source_id": "in-dot-telegraph-5th-amendment-2022"
+    },
+    {
+      "chunks": 36,
+      "sha256": "c08e193a087a6a91121599f0c74d2bc1cc46aff5ec420c485f08af5f450ecc75",
+      "source_id": "in-dot-telegraph-row-amendment-2022"
+    },
+    {
+      "chunks": 3,
+      "sha256": "cacbd6da75ad1fb341e373396e05c583a579a8b028014150fc2c066bc8f445ef",
+      "source_id": "in-dot-ul-cli-amendment"
+    },
+    {
+      "chunks": 620,
+      "sha256": "9ec9bdbc18af400376edecb0c6b72e4e670e1f72c386c36648ab413d0dc2e8f3",
+      "source_id": "in-dot-unified-licence"
+    },
+    {
+      "chunks": 520,
+      "sha256": "006096afdb535561320827410698ff58bf6335f574c709461a23c012b017f91d",
+      "source_id": "in-dot-unified-license-agreement"
+    },
+    {
+      "chunks": 5,
+      "sha256": "df8e8f7177a88dba2b7155ca354972547074535c8d1f62abfb28cc05767bdfef",
+      "source_id": "in-dot-user-identification-rules-2026"
+    },
+    {
+      "chunks": 1407,
+      "sha256": "9bb34068bffb756610530879b0eeb6c8e4e70cd919a099cb02508deee005142c",
+      "source_id": "in-gcc-city-disaster-plan-2026"
+    },
+    {
+      "chunks": 512,
+      "sha256": "4f92b32e337d5cc49b705ff62cca4d42005ffea79b53c7f2971094fe0a2bb2a9",
+      "source_id": "in-irdai-cyber-security-guidelines-2023"
+    },
+    {
+      "chunks": 3,
+      "sha256": "73de954f293bc706b44f1a13101f1ec4c53bd2220f06bfcdd771679c98b13da7",
+      "source_id": "in-isro-debris-free-missions-2024"
+    },
+    {
+      "chunks": 133,
+      "sha256": "e3a67fbb9d309dbbb067f9dcdc0e4b1443b4117b356c7f3a7a2df38666c9d217",
+      "source_id": "in-meity-cloud-empanelment-guidelines"
+    },
+    {
+      "chunks": 279,
+      "sha256": "91f7e814b63ec7df9e5561d4aa3cd81896c09ec136a472438650ebaff5121726",
+      "source_id": "in-meity-it-rules-index"
+    },
+    {
+      "chunks": 152,
+      "sha256": "f2b964b9f686731f0e53e117014d6e2b884f1817e9918cfbf3ff7044bab2179e",
+      "source_id": "in-mha-disaster-management-act-2005"
+    },
+    {
+      "chunks": 3,
+      "sha256": "e7cbd71a27fbae13dae72c3ff5dbc6a8d9088be0c389c81bc05abd708d1e428c",
+      "source_id": "in-mha-erss"
+    },
+    {
+      "chunks": 8,
+      "sha256": "e433f19d1c46f30e66bdb264c23acff77805953c18b9e55b979c42089769bc43",
+      "source_id": "in-mha-i4c-framework-sansad"
+    },
+    {
+      "chunks": 68,
+      "sha256": "391f998169214ac33549e5c3fc167657e66b7bd7f279bdf97b0997f5129f9998",
+      "source_id": "in-mha-ners-guidelines-2015"
+    },
+    {
+      "chunks": 22,
+      "sha256": "eaf3dbcde254bad4739d687680cab2fcb741c417ca7c166f9991bc54a8276b5b",
+      "source_id": "in-national-cyber-security-policy-2013"
+    },
+    {
+      "chunks": 136,
+      "sha256": "2bd848a9eedd8a6db4487d6cad9148bef8c502b99548275100736587d1911a7f",
+      "source_id": "in-nccs-itsar-4g-enodeb-2020"
+    },
+    {
+      "chunks": 172,
+      "sha256": "341117f858887e8b6cc1bf9af0318ca08fb045307d9a47cb3038ee229fd4e936",
+      "source_id": "in-nccs-itsar-4g-hss-2022"
+    },
+    {
+      "chunks": 124,
+      "sha256": "a7e7dbc0c2f4735d6b8c165e58c9f5f474bcc8fb863d22ca08c2a860c8a0c10f",
+      "source_id": "in-nccs-itsar-4g-mme-2023"
+    },
+    {
+      "chunks": 142,
+      "sha256": "3844414405cc8e9482fad78ad6cf70afe0dc744f5d141d498553aed53d4384e9",
+      "source_id": "in-nccs-itsar-4g-pcrf-2023"
+    },
+    {
+      "chunks": 153,
+      "sha256": "ca4cc645c3ab30fc5b4e9c86673f5db9767d596faee8894046a3115fa5f263df",
+      "source_id": "in-nccs-itsar-4g-pgw-2022"
+    },
+    {
+      "chunks": 224,
+      "sha256": "15ea4f58e3017834ef61f47e1600f10944391e3db8669287ffc6ee7a3d802f54",
+      "source_id": "in-nccs-itsar-4g-sgw-2022"
+    },
+    {
+      "chunks": 173,
+      "sha256": "7437ae1d8d355c64ba74badee3ba131bef7f70a71f1b8ed183af92e5ee11a5bc",
+      "source_id": "in-nccs-itsar-5g-af-2023"
+    },
+    {
+      "chunks": 189,
+      "sha256": "4ad33b0a5e8497343240132b213c9c0dfba71a3c69a8794c5d0d96403fb930a4",
+      "source_id": "in-nccs-itsar-5g-amf-2022"
+    },
+    {
+      "chunks": 174,
+      "sha256": "67d07218ec07134f216b4a44e9b4cb9ace861818ca4b92d7512bb6ec924b5a60",
+      "source_id": "in-nccs-itsar-5g-ausf-2022"
+    },
+    {
+      "chunks": 215,
+      "sha256": "376aa40834aed0cb74d9620d885663ba179ba103b8bfbab0a68cfdbf7137b7d3",
+      "source_id": "in-nccs-itsar-5g-disaggregated-ran-2024"
+    },
+    {
+      "chunks": 236,
+      "sha256": "1e77fd7ac4b981d09b6cd3a0089a0ab339bb8a0d1dd4b869f1d977d6663c0d34",
+      "source_id": "in-nccs-itsar-5g-eir-2024"
+    },
+    {
+      "chunks": 238,
+      "sha256": "1f5a3284212c8e2be57cfafccc23648aebe03772e2169f88b027bd497f2e9547",
+      "source_id": "in-nccs-itsar-5g-gnb-nsa-2023"
+    },
+    {
+      "chunks": 188,
+      "sha256": "e47e95d25bfa947efd56b410747c14aa9c6ab5b64a4d938a69f6b65bbd2f3ebf",
+      "source_id": "in-nccs-itsar-5g-gnb-sa-2023"
+    },
+    {
+      "chunks": 253,
+      "sha256": "706f77d1511769ec40b12ca0a2dbf2b7b2dd7baae982702f11d06b93ba0fa698",
+      "source_id": "in-nccs-itsar-5g-lmf-gmlc-2023"
+    },
+    {
+      "chunks": 170,
+      "sha256": "76e487b85975f02ce4a517aeffd1f3156570bcbffd753523cf3693a5f5bcc415",
+      "source_id": "in-nccs-itsar-5g-n3iwf-2022"
+    },
+    {
+      "chunks": 182,
+      "sha256": "c87eaf26978181e5a0f2f22e87dad032db2b3d756c3605b395108553a44197e1",
+      "source_id": "in-nccs-itsar-5g-nef-2022"
+    },
+    {
+      "chunks": 187,
+      "sha256": "c8526eab70e3235027660abef4bc760e76f79905536f944f17c5cf321562ffb7",
+      "source_id": "in-nccs-itsar-5g-nrf-2024"
+    },
+    {
+      "chunks": 254,
+      "sha256": "f961296abe296e907b9921aa0b0b634bbcaa76aef77cabcfae1e0fe76f7ca87e",
+      "source_id": "in-nccs-itsar-5g-nsacf-2024"
+    },
+    {
+      "chunks": 178,
+      "sha256": "d73ddc114cb48e91bb9018706e46e252025a27c34e3caf590163cf8d811e7b84",
+      "source_id": "in-nccs-itsar-5g-nssf-2023"
+    },
+    {
+      "chunks": 255,
+      "sha256": "3d1845ef2b54551e242ae9d2d2b1080f109695ee4d081dc77882eaa3f49fa5ef",
+      "source_id": "in-nccs-itsar-5g-open-ran-2026"
+    },
+    {
+      "chunks": 201,
+      "sha256": "5f26b1315d7ea6f6388e3a6455000b3f5ddaee67fbdd21c743984ee72e13c5e5",
+      "source_id": "in-nccs-itsar-5g-pcf-2023"
+    },
+    {
+      "chunks": 246,
+      "sha256": "4443a5f660c0815d19079eee5671acb5e1f861b0c70de1ed6143281ebc5e78e4",
+      "source_id": "in-nccs-itsar-5g-ric-2026"
+    },
+    {
+      "chunks": 170,
+      "sha256": "698c87ec329d6a7f2e270cb261a15043648715f6f3570c7df14e5dbeebd44327",
+      "source_id": "in-nccs-itsar-5g-scp-2022"
+    },
+    {
+      "chunks": 196,
+      "sha256": "c45eef833d746805b0a7e124d22c56cf2296dec13f1c0cd3830a9ec8cc05349d",
+      "source_id": "in-nccs-itsar-5g-sepp-2024"
+    },
+    {
+      "chunks": 193,
+      "sha256": "1b94583b22338b0b2cd8ee9b7ec7dd777f73c5ffbe4cb8761c7c67686d46f1b1",
+      "source_id": "in-nccs-itsar-5g-smf-2024"
+    },
+    {
+      "chunks": 184,
+      "sha256": "47c646334eca12a3bc08e1daa0c349f3815b464e364b690b645d5d1a5be5c24f",
+      "source_id": "in-nccs-itsar-5g-udm-2024"
+    },
+    {
+      "chunks": 227,
+      "sha256": "2ae7727ce789f72b1fcd25982436351554d0d2edf514e1690767576aec150841",
+      "source_id": "in-nccs-itsar-5g-udr-2023"
+    },
+    {
+      "chunks": 195,
+      "sha256": "9960d594dfe9ddd445e4d1406d6edcd8f8300bdc6b1269a01d643885f78e4b5e",
+      "source_id": "in-nccs-itsar-5g-upf-2024"
+    },
+    {
+      "chunks": 134,
+      "sha256": "e48b75ecd034c216c8579c944831fa7c92bca0c855b73440c7a37bd11b3ef764",
+      "source_id": "in-nccs-itsar-broadband-olt-2023"
+    },
+    {
+      "chunks": 123,
+      "sha256": "9687df7349d3bbf39e5fb19ace67fbe89228d18deaeb2e1a2b3a5b9103a67f2f",
+      "source_id": "in-nccs-itsar-broadband-ont-2023"
+    },
+    {
+      "chunks": 153,
+      "sha256": "7d6951524f0a40c2ae8c8df59f846a3eb27152453989925253b913c4db94510f",
+      "source_id": "in-nccs-itsar-cell-broadcast-centre-2022"
+    },
+    {
+      "chunks": 13,
+      "sha256": "65fc7fdaff028af7dfbe45a2b5a6ea43063806fc9b58503222db3b5274826905",
+      "source_id": "in-nccs-itsar-crypto-controls-v1-2020"
+    },
+    {
+      "chunks": 45,
+      "sha256": "dbf83b0c5e739d347c13791c32879ff19dcd58accc08396ffb47424a9400d240",
+      "source_id": "in-nccs-itsar-crypto-controls-v2-2024"
+    },
+    {
+      "chunks": 242,
+      "sha256": "80b9111072c1ef688d1ba4fe235d40afaf21fe66d0698b5f0a0140ff6916fd48",
+      "source_id": "in-nccs-itsar-euicc-telecom-2024"
+    },
+    {
+      "chunks": 216,
+      "sha256": "11a29b11fb8ef9d8f53421b1b83ee466fe511deae217c4f2573b126142b2cf04",
+      "source_id": "in-nccs-itsar-firewall-ids-ips-2025"
+    },
+    {
+      "chunks": 109,
+      "sha256": "39ec7c9f5e574e78b7a4933644e00c49fbb22f771c0ab8065142196463cb51ad",
+      "source_id": "in-nccs-itsar-group1-csr-2025"
+    },
+    {
+      "chunks": 211,
+      "sha256": "480f37be9a5d67425347e03b68839b41aa1d3775d742022e3ba5d9307adacb74",
+      "source_id": "in-nccs-itsar-group2-csr-2026"
+    },
+    {
+      "chunks": 205,
+      "sha256": "6554f6f00a043eee374cf585f49c6fca495b9fca1a62a10efed4fd51601635f5",
+      "source_id": "in-nccs-itsar-group3-csr-2026"
+    },
+    {
+      "chunks": 160,
+      "sha256": "ba2491cf33de75f7129bcdfed22b6798199a6f80e4144038c6bde72b7be56c61",
+      "source_id": "in-nccs-itsar-group5-csr-2025"
+    },
+    {
+      "chunks": 99,
+      "sha256": "0ce98890b4edc419682bae8a48d27248c8334cc9246d5f54c7ef14f446fab703",
+      "source_id": "in-nccs-itsar-group6-csr-2026"
+    },
+    {
+      "chunks": 100,
+      "sha256": "15de2fb1a0d177211042cd84546ef1529b29a9aef2a75c54157d3001a9be48f7",
+      "source_id": "in-nccs-itsar-ip-router-v1-2024"
+    },
+    {
+      "chunks": 291,
+      "sha256": "7c4e88cb7f096f66df948f266b37cd5b788369ed40b32c395f5d316b1710122f",
+      "source_id": "in-nccs-itsar-ip-router-v2-2025"
+    },
+    {
+      "chunks": 338,
+      "sha256": "088e67421a06034bdc65abf91fa3e154a4a4390ed133d114438efe9f081c621b",
+      "source_id": "in-nccs-itsar-lan-switch-2025"
+    },
+    {
+      "chunks": 440,
+      "sha256": "f9037bb01cba76e685d9db9a11e05a4cb24d679f8e1f6a5971c0305807572b2d",
+      "source_id": "in-nccs-itsar-mobile-nfv-2023"
+    },
+    {
+      "chunks": 196,
+      "sha256": "1724c58976ef1083db7779571c1f98e61e498e043737bd9f00bfa333904138d8",
+      "source_id": "in-nccs-itsar-mobile-user-equipment-2023"
+    },
+    {
+      "chunks": 145,
+      "sha256": "cd337d3987748211742156e59245871259e249bf8d3b4f5c50a87ca51813f68e",
+      "source_id": "in-nccs-itsar-sim-uicc-2020"
+    },
+    {
+      "chunks": 144,
+      "sha256": "61f092c85f4cda8c711ce460f1ff1bc72bbbc50c4f5b8a8d88b2f68d1d42a449",
+      "source_id": "in-nccs-itsar-smart-meter-iot-2025"
+    },
+    {
+      "chunks": 136,
+      "sha256": "1c7457c629dc9e0a64499df44845784967d542ee3efbc42591e5e1171bc23d2c",
+      "source_id": "in-nccs-itsar-telecom-os-2024"
+    },
+    {
+      "chunks": 164,
+      "sha256": "6d0dcd063dd9e31b8936a64701fb83441bf3809f854dbf59ca49a0bebfa025c4",
+      "source_id": "in-nccs-itsar-transmission-dwdm-sdh-2022"
+    },
+    {
+      "chunks": 150,
+      "sha256": "07e1969199fcd1a75b76df526d6dd4fe0010fa8cfccf5a347a9806c6aa6c9107",
+      "source_id": "in-nccs-itsar-vehicle-tracking-iot-2025"
+    },
+    {
+      "chunks": 46,
+      "sha256": "b9212ba4c650d1165827995b2c20162c9c8a802e4516e83d8a9e3efd99a76a75",
+      "source_id": "in-nccs-itsar-wifi-cpe-v1-2024"
+    },
+    {
+      "chunks": 281,
+      "sha256": "968fc257db35ee36c087d66715912462752cc3568d6f4f6b6a3e7b7814f3cbdf",
+      "source_id": "in-nccs-itsar-wifi-cpe-v2-2025"
+    },
+    {
+      "chunks": 30,
+      "sha256": "b295548981d5c194a8243e74d425254db5539f935c0b9080649eeee4524d4e93",
+      "source_id": "in-nciipc-cii-rules-2013"
+    },
+    {
+      "chunks": 457,
+      "sha256": "81df2bffa09cbf3948c1dad1f8d2c3e1d25706f9e891b487061bf653c15ebe39",
+      "source_id": "in-ndma-communication-guidelines"
+    },
+    {
+      "chunks": 2998,
+      "sha256": "ce9a2b2d80c95590cd698f99ceb498eb758087d1d1e04b0bdde17fa80db4d8a9",
+      "source_id": "in-ndma-compendium-disaster-management-laws"
+    },
+    {
+      "chunks": 660,
+      "sha256": "1993299df4a1fd72ce26e9ef3737ec6f7e233223f339b0adce6d438596e47b27",
+      "source_id": "in-ndma-cyclones-guidelines-2008"
+    },
+    {
+      "chunks": 549,
+      "sha256": "2fc4518a29c249c91d223eb6edb6f5cba23d3fa85eaaa8a71d319bdde451981f",
+      "source_id": "in-ndma-flood-guidelines-2008"
+    },
+    {
+      "chunks": 29,
+      "sha256": "b7e73b63fbc47102e8d54456ddfd929b0ac8ccbbaa348ab434d7cde2b7648778",
+      "source_id": "in-ndma-g20-drr-issue-note"
+    },
+    {
+      "chunks": 229,
+      "sha256": "9e1385d2a9b6038e47f0d54692e1c8d5e81963ea227279f3c7ec6b890bf643cf",
+      "source_id": "in-ndma-hospital-safety-guidelines-2016"
+    },
+    {
+      "chunks": 140,
+      "sha256": "817945da39c3f1ebcec45c4406307d7febcdd1b9f46927fd5be545b1c257ae97",
+      "source_id": "in-ndma-sfdrr-midterm-review-report"
+    },
+    {
+      "chunks": 155,
+      "sha256": "a8eee8d216fd0614ebeee7554ae74d08ca575f2fee9467bf7c52c50d1202285d",
+      "source_id": "in-niti-ai-facial-recognition-2024"
+    },
+    {
+      "chunks": 192,
+      "sha256": "da5404dbb584c8956aae707dfcfe324dc1df11a179bc8288af0e898f4e37dcc5",
+      "source_id": "in-niti-ai-strategy-2018"
+    },
+    {
+      "chunks": 118,
+      "sha256": "96cf68f8eb50c7e907da7c4dfabd5bbd34e6cc504211554b06c27853a3f94ff5",
+      "source_id": "in-niti-blockchain-india-strategy-2020"
+    },
+    {
+      "chunks": 99,
+      "sha256": "381272dfa3b7a098a98df31adad95a32b3b7d182eb1ef8b21ec4873ae9c70254",
+      "source_id": "in-niti-responsible-ai-part1-2021"
+    },
+    {
+      "chunks": 80,
+      "sha256": "65f46c3b632759a6280c6bef9285fbdaa71329454351e0b062092d3db28972db",
+      "source_id": "in-niti-responsible-ai-part2-2021"
+    },
+    {
+      "chunks": 217,
+      "sha256": "a614b597c1d4834645480cc617071b0761db032a933ff492fb58010f7d7c2ed9",
+      "source_id": "in-parl-it-report-26-suspension"
+    },
+    {
+      "chunks": 167,
+      "sha256": "bf5f811b5d1ffe1a1b3575c6ca862e5876c5f93f413cdeb3a1cca707efb86c5d",
+      "source_id": "in-parl-it-report-27-media-standards"
+    },
+    {
+      "chunks": 118,
+      "sha256": "7291faa6e664697617ccf434ead7a2bf6550392c7c2a12da0e39a58afc40accc",
+      "source_id": "in-parl-it-report-30-demands-telecom"
+    },
+    {
+      "chunks": 179,
+      "sha256": "0fe674e7572be522e1768fffa8b6a30100048ff74a8c284d336f84d8e32ed291",
+      "source_id": "in-parl-it-report-48-data-security"
+    },
+    {
+      "chunks": 131,
+      "sha256": "e14c889c315888babd2060b8a026ad138a183c280d94db1f8dde0b2adf8a11a2",
+      "source_id": "in-parl-it-report-51-demands-telecom"
+    },
+    {
+      "chunks": 135,
+      "sha256": "7bec0c11ccf0459b8e574f663ccf3435fc8c08d79c8d005e5bc8381bb23b63c4",
+      "source_id": "in-parl-it-report-54-digital-payments"
+    },
+    {
+      "chunks": 38,
+      "sha256": "277a7ab4096636fe60a1d6408b580bd5a998366f61beef021c87cab0a0b24e5f",
+      "source_id": "in-pfrda-cloud-adoption-policy"
+    },
+    {
+      "chunks": 10,
+      "sha256": "1828491df1c464a9f15712b816f57c7a4dd28295c5e6243218bf60d89a8588d1",
+      "source_id": "in-rbi-cyber-security-banks-2016"
+    },
+    {
+      "chunks": 54,
+      "sha256": "6bcef4c5a997dcd7ef97ee2b06e919a7aec18d8c00279dba0007249ee40973f1",
+      "source_id": "in-rbi-digital-payment-security-2021"
+    },
+    {
+      "chunks": 58,
+      "sha256": "e047aada1be6f5c8fc6f7691cca5d1cea988ee9255712d3c32b58a25346e1b9a",
+      "source_id": "in-rbi-it-governance-directions-2023"
+    },
+    {
+      "chunks": 66,
+      "sha256": "31c994db8cbadc0b42a4cdacb7f8ca8cfdb583309ffa037fd13a94cea75d9262",
+      "source_id": "in-rbi-it-outsourcing-directions-2023"
+    },
+    {
+      "chunks": 57,
+      "sha256": "06d4559ff1cca79402a44160afd106e855a7fad94c57cf5ae08e7f8d548d73b5",
+      "source_id": "in-rbi-nbfc-it-framework-2017"
+    },
+    {
+      "chunks": 52,
+      "sha256": "668064507b2d029de019d9b1ac2b2fddaff2836e7876105631761766e99bd1ff",
+      "source_id": "in-rbi-psos-cyber-resilience-2024"
+    },
+    {
+      "chunks": 17,
+      "sha256": "cbda1ec2965dcef457dd10f37310c7bc7d34f6ac304f8fb0da02c4b61e8bb8f6",
+      "source_id": "in-rbi-ucb-cyber-framework-2019"
+    },
+    {
+      "chunks": 5,
+      "sha256": "2a42d3be3a4dc32b4060240ff2a2d785425561608c6c3aafe646002640785b6f",
+      "source_id": "in-sansad-i4c-rajya-sabha-2024"
+    },
+    {
+      "chunks": 3,
+      "sha256": "42a8eb1d5564e2ada3732b20367edcd1fc55ff4d62237a9f85f8c466d73ca278",
+      "source_id": "in-sansad-nsdts-lok-sabha-statement"
+    },
+    {
+      "chunks": 520,
+      "sha256": "bd9ddb68bb49b9a92771ff01ed3138e01f0962b383e9ff643008b729290fc85d",
+      "source_id": "in-sebi-cscrf-2024"
+    },
+    {
+      "chunks": 5,
+      "sha256": "1cfe435dc21149027bad0ddb0ed7c156dbe000b01b29e72faa05935c71561465",
+      "source_id": "in-sebi-cscrf-implementation-extension-2025"
+    },
+    {
+      "chunks": 39,
+      "sha256": "b6f852a958d7dec07ecb5c10d8bc42857dd471f71c9070fc4a1aa0a95524755a",
+      "source_id": "in-space-policy-2023"
+    },
+    {
+      "chunks": 250,
+      "sha256": "dd6c098b3d91bbfbf90bd95ff21c28c18d0751f0b4be3c30dcdf316c29362739",
+      "source_id": "in-tdsat-telegraph-trai-bare-acts-compilation"
+    },
+    {
+      "chunks": 65,
+      "sha256": "e119fa4184107e8e9e33ace7d5877e1da61138568f0f562259f7c267c6d5b64a",
+      "source_id": "in-tec-ems-telecom-gr-2016"
+    },
+    {
+      "chunks": 7,
+      "sha256": "7ff166db3a7fbc2bda12f20deb01877c4b40735704bffea7e47ec1b9bc8e5b6c",
+      "source_id": "in-tec-er-ip-terminal"
+    },
+    {
+      "chunks": 99,
+      "sha256": "e2c459b1cb7aa144764d84a8c2fd5f823ddd5de5c269176fb9e8d568de7396d3",
+      "source_id": "in-tec-firewall-system-telecom-gr-2014"
+    },
+    {
+      "chunks": 2,
+      "sha256": "663d60b5f1a0a4be56045ae1443b985cf9f38432762509bda8dacca27bceab80",
+      "source_id": "in-tec-itsar-index"
+    },
+    {
+      "chunks": 108,
+      "sha256": "5515c8d1698174ba0fe21e669362a06147bb7237bd182cd80ddaf1ad6b7556c4",
+      "source_id": "in-tec-li-ion-battery-planning-guide-2020"
+    },
+    {
+      "chunks": 39,
+      "sha256": "47b5178b3d5a61887281ed4c76bb2979304acf3c15a6e3bc20d2596d4144d56b",
+      "source_id": "in-tec-mtcte-applicant-instructions"
+    },
+    {
+      "chunks": 62,
+      "sha256": "7f3368b4010dde82dfcf866169d7df457d1b59bc85ec6fd908e66d3093e54c88",
+      "source_id": "in-tec-mtcte-procedure-2023"
+    },
+    {
+      "chunks": 57,
+      "sha256": "a24a591773408f1edba376fb59197857da917d6a62d2b9fa2e6eed414c9d74cc",
+      "source_id": "in-tec-pppmii-telecom-order"
+    },
+    {
+      "chunks": 175,
+      "sha256": "2215f0eb4393ad83c7edb405e924583a32f8037e0d36b9bc01a71f04ebfd80dc",
+      "source_id": "in-tec-smps-power-plant-standard-2025"
+    },
+    {
+      "chunks": 107,
+      "sha256": "96379f99ae5c4b9cc053a9393703f2ace858c798a016a079ad1f63a275fbb729",
+      "source_id": "in-tec-vrla-battery-telecom-gr-2011"
+    },
+    {
+      "chunks": 229,
+      "sha256": "95f7627a2d095ffefbafc724ec60d2f851c4e05f408615dc32331d9c4a0e7e67",
+      "source_id": "in-telecom-network-rules-2026"
+    },
+    {
+      "chunks": 47,
+      "sha256": "082994fd981e2f51e1a1cb93ad3fe8371c138a629d4dd93a324f3ca42914379b",
+      "source_id": "in-tn-cyber-security-policy-2020"
+    },
+    {
+      "chunks": 2,
+      "sha256": "0882647877a76baf678a6d881648488ae14e1afa4421a518d8bdf3dfd5f591f1",
+      "source_id": "in-tn-disaster-management-agency"
+    },
+    {
+      "chunks": 781,
+      "sha256": "00042c76c2a4e624a9e356221f55dbe2ccb1e0d8f70c5175a31df0ebfa344957",
+      "source_id": "in-tn-disaster-management-plan-2023"
+    },
+    {
+      "chunks": 161,
+      "sha256": "95258649d615291e04b2d1ada0450943af212306170eac3769ee812409b6e0ca",
+      "source_id": "in-tn-disaster-management-policy-2023"
+    },
+    {
+      "chunks": 57,
+      "sha256": "2f8764cef6e7e0fabef25231e74cdafa6603d7ad511e5dce0cda2ca679be70d0",
+      "source_id": "in-tn-ethical-ai-policy-2020"
+    },
+    {
+      "chunks": 13,
+      "sha256": "9890f89ef2f28801028b89071f39b076a730d26c3bbe237ae66dbbc10e2fce21",
+      "source_id": "in-tnerc-grid-code-2026"
+    },
+    {
+      "chunks": 88,
+      "sha256": "7dc9c0453a5347426f4e87bf5638a354d1c75de2daa59a44d10b1d36aebc3d46",
+      "source_id": "in-trai-closure-access-service-reco"
+    },
+    {
+      "chunks": 201,
+      "sha256": "486fc608492c964685ab5f734072555afa91c0619b4deb586b5955c316baee59",
+      "source_id": "in-trai-cp-ai-big-data-telecom-2022"
+    },
+    {
+      "chunks": 130,
+      "sha256": "0d73a269c5aebc9704c02820ab1e085c9a32795a048e93836fcbc4739c14e617",
+      "source_id": "in-trai-cp-aircraft-ground-data-comm-2022"
+    },
+    {
+      "chunks": 236,
+      "sha256": "eefd700c69ef791c22dea5483d07c1de68dd23dbd75f98a74443c61b134b9a49",
+      "source_id": "in-trai-cp-allocation-spectrum-bands-2017"
+    },
+    {
+      "chunks": 513,
+      "sha256": "9e036afef9378719c3a863a38f600bcd3b230df8e7cf67196ddc5d0ae5fffd6b",
+      "source_id": "in-trai-cp-auction-spectrum-access-bands-2025"
+    },
+    {
+      "chunks": 140,
+      "sha256": "adddd7b3b71c6d946510ee36285213fe010581c6691dda38bdd41e5f2cb0caec",
+      "source_id": "in-trai-cp-critical-m2m-services-2024"
+    },
+    {
+      "chunks": 555,
+      "sha256": "1482e4b82d822709a93f4bb613114ab4cc1780a43d7fae8c1ee0cc0bc6666f3b",
+      "source_id": "in-trai-cp-draft-amendments-qos-2026"
+    },
+    {
+      "chunks": 339,
+      "sha256": "ab2d8ffadd77b9adf7ddfeb602a9bc0a1a487ca2142d6cc05f0fa744f3353676",
+      "source_id": "in-trai-cp-ev-band-spectrum-2023"
+    },
+    {
+      "chunks": 167,
+      "sha256": "f68633536ebec0a61d802bca58cf4b1a33108e0108ef8adbc2c663cdc2967f87",
+      "source_id": "in-trai-cp-infrastructure-sharing-2023"
+    },
+    {
+      "chunks": 64,
+      "sha256": "5c7c83d17fb6d84c0401d544d9d5f41b259e74b7d2f43698b1291519816a1bc4",
+      "source_id": "in-trai-cp-interconnection-framework-2019"
+    },
+    {
+      "chunks": 491,
+      "sha256": "38870245fb055ed102d90802777936452662cd71fadaea1ca827ee6f96f7f452",
+      "source_id": "in-trai-cp-interconnection-review-2025"
+    },
+    {
+      "chunks": 246,
+      "sha256": "bca02c82982083f4c6d769e02cf76cd25d5ec53d31fb5fe201204b93c28bbddc",
+      "source_id": "in-trai-cp-m2m-roaming-qos-2016"
+    },
+    {
+      "chunks": 447,
+      "sha256": "d8edbf362104de39ee48ca7a61dedbe2deddf04ebc7b4a26bffab022df90d115",
+      "source_id": "in-trai-cp-microwave-spectrum-2025"
+    },
+    {
+      "chunks": 254,
+      "sha256": "bebac216a99dc9cd97c032e0b01227a22b5ec8b33ec9afa5fa56bfdf75630cfd",
+      "source_id": "in-trai-cp-net-neutrality-2017"
+    },
+    {
+      "chunks": 363,
+      "sha256": "46e3fa182b4359173d4529bc7400969349809862bc34c448ecbae533fa23f1f6",
+      "source_id": "in-trai-cp-network-authorisations-2024"
+    },
+    {
+      "chunks": 472,
+      "sha256": "86093e35ce832a3eb094959aed13b85a8d5037dd70640c1e7cf7b09b64a400af",
+      "source_id": "in-trai-cp-qos-standards-review-2023"
+    },
+    {
+      "chunks": 135,
+      "sha256": "657f6e4b57f9e97abe849db8399e4ea8b01a2f01b097b9232bdf9abeb82c6898",
+      "source_id": "in-trai-cp-railways-additional-spectrum-2024"
+    },
+    {
+      "chunks": 82,
+      "sha256": "8ac609888b0356815673cd25574253c0f8740faff8b6e13ec57fa0fa551cc6e8",
+      "source_id": "in-trai-cp-railways-public-safety-2019"
+    },
+    {
+      "chunks": 122,
+      "sha256": "52604513c2c0337f24b8be6093ba44a5f4f0f267bc7d8969f41d0dd647acdf06",
+      "source_id": "in-trai-cp-rrts-spectrum-requirements-2022"
+    },
+    {
+      "chunks": 474,
+      "sha256": "fa9d9c6846abc09bab0a88dfa4af1386ec0c1a1d18a74674ddfde5e2d3042a12",
+      "source_id": "in-trai-cp-satcom-network-authorisation-2026"
+    },
+    {
+      "chunks": 254,
+      "sha256": "74280ba65bb253bf8c5f9bf9a1ef56dc77aefff11576a15ea25c89c9ecfe6368",
+      "source_id": "in-trai-cp-satellite-spectrum-assignment-2024"
+    },
+    {
+      "chunks": 743,
+      "sha256": "c908e41ac92c8eb44c66c172ead857d0190646756a378c4224992bd3ee32ee78",
+      "source_id": "in-trai-cp-service-authorisations-2024"
+    },
+    {
+      "chunks": 461,
+      "sha256": "060b1a19a0a46c560b13b9f695e4a525d3a1251ecafe6ee800fc409a110f44b4",
+      "source_id": "in-trai-cp-space-spectrum-assignment-2023"
+    },
+    {
+      "chunks": 179,
+      "sha256": "74377261c8938dc44afa96b8a579d2328aed2bdef1eb44534ee968b08df6169b",
+      "source_id": "in-trai-cp-spectrum-37-43ghz-satellite-terrestrial-2024"
+    },
+    {
+      "chunks": 143,
+      "sha256": "9c101ca3265d241204f1ab4bb35e61e963b4cf2eee90b21f0b02fa7314e2c566",
+      "source_id": "in-trai-cp-traffic-management-practices-2020"
+    },
+    {
+      "chunks": 524,
+      "sha256": "75fe4291b60f1b3bd688c138ebdcf72d751bc4a05b447368c730d5d13a244966",
+      "source_id": "in-trai-cp-v2x-communication-2026"
+    },
+    {
+      "chunks": 107,
+      "sha256": "6be271d1b8c6a31eb18856de56bf453a0dcf48fdc46ed2fa5da8e318095d5cbf",
+      "source_id": "in-trai-cp-volte-csfb-voice-2018"
+    },
+    {
+      "chunks": 140,
+      "sha256": "d4df7c12232eaff91eaeeb55c5a97e44bf6007551ef0ba741e852b7215d4532b",
+      "source_id": "in-trai-critical-m2m-recommendations-2025"
+    },
+    {
+      "chunks": 140,
+      "sha256": "d4df7c12232eaff91eaeeb55c5a97e44bf6007551ef0ba741e852b7215d4532b",
+      "source_id": "in-trai-critical-m2m-services-recs-2025"
+    },
+    {
+      "chunks": 21,
+      "sha256": "30821a6c823080c7e36fb2c55c20cf6f5fce983acf25a6e5c970731c3956967a",
+      "source_id": "in-trai-data-economy-response-2025"
+    },
+    {
+      "chunks": 224,
+      "sha256": "cb8294d2dfcd95475437e63c24f61516086b1d99e6e1d306ba6b7f6c1c3d2b5a",
+      "source_id": "in-trai-dcip-authorization-recs-2023"
+    },
+    {
+      "chunks": 20,
+      "sha256": "706c150da3c4f30a6eaf42044084008bf57a55922107e49129f17a012cabe2f8",
+      "source_id": "in-trai-direction-blacklisting-telecom-resources-2024"
+    },
+    {
+      "chunks": 49,
+      "sha256": "9f1302c5a4700f7e448b4a8ab9ae691526d59495cc93f8c1ff89057e2dfa1600",
+      "source_id": "in-trai-direction-cellular-outages-2024"
+    },
+    {
+      "chunks": 15,
+      "sha256": "96caf54af17abd57bb387e5699a38013fe81858ca7012b20eea8c2eddcdad56c",
+      "source_id": "in-trai-direction-header-traceability-2024"
+    },
+    {
+      "chunks": 34,
+      "sha256": "04a8f9250e3fa4d79ce54decb42de265a616675a8de4e7dbc218d588ece2d23c",
+      "source_id": "in-trai-direction-latency-packet-loss-2024"
+    },
+    {
+      "chunks": 53,
+      "sha256": "14cba31ee958fdaa34afe5129695bd947efc410168407397934ed10c441fb47a",
+      "source_id": "in-trai-direction-pmr-submission-2026"
+    },
+    {
+      "chunks": 30,
+      "sha256": "b5b124201f39d9b2837847d3b454f94a2c451ffbf5ee4c9436e946210288f76d",
+      "source_id": "in-trai-direction-qos-publication-2025"
+    },
+    {
+      "chunks": 34,
+      "sha256": "c03a9c624424cccd8d0b8d173d75f5cd1c223c009207b45be97cfcd8dfba3fc4",
+      "source_id": "in-trai-direction-qos-standards-2024"
+    },
+    {
+      "chunks": 6,
+      "sha256": "ad97a5a68ca38ca528edd98515afeefd440484da58c0e1234431b5d26934d19d",
+      "source_id": "in-trai-direction-sms-template-scrubbing-2024"
+    },
+    {
+      "chunks": 12,
+      "sha256": "130adf62f7346ca9c216cbd756570e1de84498d9239d6e2bf9a84bf26ef573b9",
+      "source_id": "in-trai-direction-ucc-detect-system-2023"
+    },
+    {
+      "chunks": 11,
+      "sha256": "3f7ce6197cc85ce35a2e6791e1440960b5684e82620bc5605d171260ab6953db",
+      "source_id": "in-trai-direction-unauthorised-telecom-activities-2023"
+    },
+    {
+      "chunks": 278,
+      "sha256": "339f117e35a32fceeacd953b6bcb35ad3fc7f07c6c39a261fdff67829516c0d7",
+      "source_id": "in-trai-esim-m2m-recommendations-2024"
+    },
+    {
+      "chunks": 22,
+      "sha256": "4aaf2502d5630d9876cac11415e0e739d2661e678ed5210f0cf516ecd3dbf219",
+      "source_id": "in-trai-in-building-access-reco"
+    },
+    {
+      "chunks": 185,
+      "sha256": "bf112a6d6a5f8f5d1b2a3a30a8230247be2db7c896164e71f23f398e1fe804cc",
+      "source_id": "in-trai-internet-telephony-recs-2017"
+    },
+    {
+      "chunks": 591,
+      "sha256": "7c15c2ddbaad16eae0e5554defa07bbf10d0ca70cc9fa90e6e6327e320c9820e",
+      "source_id": "in-trai-m2m-qos-recommendations-2017"
+    },
+    {
+      "chunks": 1063,
+      "sha256": "577ccd5247598edf25d774b7dd5bc19354be4260e25115b36f5138749d5aed19",
+      "source_id": "in-trai-microwave-spectrum-recs-2025"
+    },
+    {
+      "chunks": 248,
+      "sha256": "f44ad439a758eae1508f7521438cc58ab1d13e9a156c8962efb0d0b88be133fd",
+      "source_id": "in-trai-net-neutrality-recommendations-2017"
+    },
+    {
+      "chunks": 947,
+      "sha256": "34fe8e6b7af0717196777b92d5aaec59e1f420e58af233e17103b006e87d108b",
+      "source_id": "in-trai-network-authorisations-recs-2025"
+    },
+    {
+      "chunks": 237,
+      "sha256": "bf9145a22035726172726a7f8f48d59afbfe21bbb3501661751c125c7b140c36",
+      "source_id": "in-trai-network-authorisations-response-2025"
+    },
+    {
+      "chunks": 161,
+      "sha256": "1a0cfceb5b052e432c5113333d32ebb81d9a1bf7bc7eea48a4381cf4b21906e4",
+      "source_id": "in-trai-ppdr-consultation-2017"
+    },
+    {
+      "chunks": 162,
+      "sha256": "a80275e743b7d18e1b768c5f8db273d7ee47257e1cd34706cfa0cfd627e16052",
+      "source_id": "in-trai-ppdr-recommendations-2018"
+    },
+    {
+      "chunks": 64,
+      "sha256": "6e8609bf4aa0171d7b4d96de8b391bcc4efa3c29fc0c797794de456ce3620412",
+      "source_id": "in-trai-pre-cp-net-neutrality-2016"
+    },
+    {
+      "chunks": 222,
+      "sha256": "32e5233a211189582a1680787019e3cb831edd067739f748cf78be9796e24fd7",
+      "source_id": "in-trai-railways-mission-critical-spectrum-2024"
+    },
+    {
+      "chunks": 80,
+      "sha256": "0dd35cc146f12f954a7cb4f9edfaa9e637ccd703b679aed8e227a7f068a22c42",
+      "source_id": "in-trai-railways-public-safety-spectrum-2019"
+    },
+    {
+      "chunks": 56,
+      "sha256": "4981e8bbcef74fd919f47ec5503423e4e3fbb497b3160862fb074dfbda3064d7",
+      "source_id": "in-trai-rating-digital-connectivity-response-2025"
+    },
+    {
+      "chunks": 241,
+      "sha256": "1fafce782402c482ddce083e22cec3029f025f805dcdd4f00abece293e047054",
+      "source_id": "in-trai-sandbox-innovation-recs-2024"
+    },
+    {
+      "chunks": 1090,
+      "sha256": "9b7ee08ab7f210a70384ef399343db4554722aa01f15ba42b6d50cd348f2315e",
+      "source_id": "in-trai-satcom-network-recommendations-2026"
+    },
+    {
+      "chunks": 5,
+      "sha256": "62c08a5bd37534d218a82f8b1f1142cb99c627029f0d4fe8cdddcdd99a334edc",
+      "source_id": "in-trai-satellite-low-bit-rate-recommendations"
+    },
+    {
+      "chunks": 363,
+      "sha256": "ac76af432445a4101b4ceb62024ff03713eb3eee7a73b52664fd1dfdfb70a566",
+      "source_id": "in-trai-satellite-low-bit-rate-recs-2021"
+    },
+    {
+      "chunks": 254,
+      "sha256": "74280ba65bb253bf8c5f9bf9a1ef56dc77aefff11576a15ea25c89c9ecfe6368",
+      "source_id": "in-trai-satellite-spectrum-consultation-2024"
+    },
+    {
+      "chunks": 666,
+      "sha256": "a165aafb7702aa1ce38346236b3b3c91c183e0aff5c4ad627924636a715a1ff3",
+      "source_id": "in-trai-satellite-spectrum-terms-2025"
+    },
+    {
+      "chunks": 79,
+      "sha256": "6b6b372be88f84622b7674ae85a8395be7a87fb6f63facd07202f64abd172240",
+      "source_id": "in-trai-satellite-suc-recommendations-2018"
+    },
+    {
+      "chunks": 474,
+      "sha256": "fa9d9c6846abc09bab0a88dfa4af1386ec0c1a1d18a74674ddfde5e2d3042a12",
+      "source_id": "in-trai-scn-consultation-2026"
+    },
+    {
+      "chunks": 262,
+      "sha256": "70b43e31308b6405ed676a03e1e79bbc721d8da77cd670c5c4165aa1cb2ad1e9",
+      "source_id": "in-trai-service-authorisations-reco-2025"
+    },
+    {
+      "chunks": 2170,
+      "sha256": "b3a63c4f4bd8cee1735e5bb8ac0beb924e2ff287923444f872203f9cdda70558",
+      "source_id": "in-trai-service-authorisations-recs-2024"
+    },
+    {
+      "chunks": 228,
+      "sha256": "44cc316cb449ee43a80cf3fb8002956617a19ceb12298b4e31b1f446adfb6019",
+      "source_id": "in-trai-sesg-licensing-recs-2022"
+    },
+    {
+      "chunks": 461,
+      "sha256": "060b1a19a0a46c560b13b9f695e4a525d3a1251ecafe6ee800fc409a110f44b4",
+      "source_id": "in-trai-space-spectrum-consultation-2023"
+    },
+    {
+      "chunks": 666,
+      "sha256": "a165aafb7702aa1ce38346236b3b3c91c183e0aff5c4ad627924636a715a1ff3",
+      "source_id": "in-trai-space-spectrum-recommendations-2025"
+    },
+    {
+      "chunks": 1039,
+      "sha256": "dc872c08bea8dea9bef7393f948434aab471dc8664a3867063ca28168727a9d1",
+      "source_id": "in-trai-spectrum-auction-recs-2026"
+    },
+    {
+      "chunks": 38,
+      "sha256": "551710bbb46880d4da7381fdafdfb637ee179843e29801cf22cd32313ee97509",
+      "source_id": "in-trai-spectrum-sharing-response"
+    },
+    {
+      "chunks": 127,
+      "sha256": "d6050e6197a5f9466e57d330e7a5caee612f2673cc7b3f7f00fd58f9e44ef264",
+      "source_id": "in-trai-submarine-cable-recommendations-2023"
+    },
+    {
+      "chunks": 33,
+      "sha256": "f46d9bfef68bfd5f0516965ec9f5e63af2ce46c4bb97d73aa37b5733abdd8434",
+      "source_id": "in-trai-supp-cp-aircraft-ground-data-comm-2023"
+    },
+    {
+      "chunks": 152,
+      "sha256": "2d6db4c894de6d55a49c292ecce563a4aceca0886731083fe3ad04ccc4114100",
+      "source_id": "in-trai-traffic-management-recommendations-2020"
+    },
+    {
+      "chunks": 181,
+      "sha256": "167c7d7d07d18135561246c101cd7472b98fb86fe99a4a40718fee83d0adf32b",
+      "source_id": "in-trai-unbundling-layers-recs-2021"
+    },
+    {
+      "chunks": 96,
+      "sha256": "1c87035a6ec10d07f26a53bda15a16c9e26758b3822e967f441441e96672a6a5",
+      "source_id": "in-trai-vno-multi-nso-recs-2024"
+    }
+  ]
+}

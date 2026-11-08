@@ -25,7 +25,7 @@ def _post(texts: list[str]) -> list[list[float]]:
 
 
 def embed(texts: list[str], kind: str = "document", progress=None) -> list[list[float]]:
-    prefix = config.DOC_PREFIX if kind == "document" else config.QUERY_PREFIX
+    prefix = config.doc_prefix() if kind == "document" else config.query_prefix()
     out: list[list[float]] = []
     b = config.embed_batch()
     for i in range(0, len(texts), b):

@@ -12,14 +12,14 @@ from pathlib import Path
 import yaml
 
 from . import config, store
-from .chunk import chunk_page
+from .chunk import base_of, chunk_page, parent_of
 from .meta import canon_doc_type, canon_jurisdiction
 
-DOC_TYPES = [("act", r"\bact\b"), ("rules", r"\brules?\b"), ("directions", r"direction"),
+DOC_TYPES = [("directions", r"\bdirections?\b"), ("act", r"\bact\b"), ("rules", r"\brules?\b"),
              ("directive", r"directive"), ("regulation", r"regulation"), ("licence", r"licen[cs]e|authori[sz]ation"),
              ("guidelines", r"guideline|framework|sop|procedure"), ("standard", r"standard|itsar|recommendation|3gpp|itu-t"),
              ("faq", r"\bfaq"), ("press_release", r"\bpib\b|press"), ("report", r"report|study")]
-PREFIX_JURIS = {"in": "IN", "eu": "EU", "us": "US", "ae": "AE", "intl": "INTL"}
+PREFIX_JURIS = {"in": "IN", "inspace": "IN", "eu": "EU", "us": "US", "ae": "AE", "intl": "INTL"}
 
 
 def sha256_file(p: Path) -> str:
@@ -169,11 +169,12 @@ def v2_source_chunks(src: dict) -> list[dict]:
     clean clone in Colab before Chroma, an embedding endpoint, or a GPU exist.
     """
     pages, sha, clauses, carry = parse_pages(src["path"], src.get("sidecar")), sha256_file(src["path"]), [], ""
+    doc_type = src.get("doc_type", "")
     for page, body in enumerate(pages, 1):
-        bits, carry = chunk_page(body, carry)
+        bits, carry = chunk_page(body, carry, doc_type=doc_type)
         for ordinal, bit in enumerate(bits):
             path = bit["clause"] or "Preamble"
-            parent_path = re.sub(r"\s*\([ivxlcdm]+\)$", "", path, flags=re.I).strip() or path
+            parent_path = parent_of(path)
             parent_id = f"{src['source_id']}:s:{_slug(parent_path)}"
             meta = {"source_id": src["source_id"], "title": src["title"], "authority": src["authority"],
                     "jurisdiction": canon_jurisdiction(src["jurisdiction"]), "doc_type": canon_doc_type(src["doc_type"]),
@@ -192,11 +193,12 @@ def v2_source_chunks(src: dict) -> list[dict]:
     output = clauses[:]
     for parent_id, children in parents.items():
         words = " ".join(r["text"].split("\n", 1)[-1] for r in children).split()
+        first = children[0]
+        parent_path = parent_of(first["meta"]["clause_path"])
         # Parent chunks are bounded independently; a suffix avoids duplicate ids
         # for unusually long statutory sections.
         for n in range(0, len(words), 2000):
-            first = children[0]
-            meta = dict(first["meta"], level="parent", clause=first["meta"]["clause_path"],
+            meta = dict(first["meta"], level="parent", clause=parent_path, clause_path=parent_path,
                         parent_id=parent_id)
             suffix = "" if n == 0 else f":{n // 2000 + 1}"
             output.append({"id": parent_id + suffix, "text": _header(meta) + "\n" + " ".join(words[n:n + 2000]),
@@ -246,7 +248,7 @@ def load_vectors(chunks: Path | None = None, embeddings: Path | None = None, ids
     base = config.vec_build_dir()
     chunks, embeddings, ids = chunks or base / "chunks.jsonl", embeddings or base / "embeddings.f16.npy", ids or base / "ids.json"
     rows = [json.loads(line) for line in chunks.read_text().splitlines() if line.strip()]
-    vector_ids, vectors = json.loads(ids.read_text()), np.load(embeddings)
+    vector_ids, vectors = json.loads(ids.read_text()), np.load(embeddings, mmap_mode="r")
     if len(rows) != len(vector_ids) or len(rows) != len(vectors):
         raise ValueError("chunks.jsonl, ids.json and embeddings.f16.npy have different lengths")
     if [r["id"] for r in rows] != vector_ids:
@@ -259,6 +261,31 @@ def load_vectors(chunks: Path | None = None, embeddings: Path | None = None, ids
     from . import retrieve
     retrieve.invalidate()
     return {"collection": "orca_v2", "loaded": len(rows), "dimensions": int(vectors.shape[1]) if len(vectors.shape) > 1 else 0}
+
+
+def load_vectors_v3(chunks: Path | None = None, embeddings: Path | None = None, ids: Path | None = None,
+                    collection: str = "orca_v3") -> dict:
+    """Load precomputed vectors into collection orca_v3 without calling an embedder."""
+    import numpy as np
+    base = config.vec_build_dir() / "v3"
+    chunks = chunks or base / "chunks.jsonl"
+    embeddings = embeddings or base / "embeddings.f16.npy"
+    ids = ids or base / "ids.json"
+    rows = [json.loads(line) for line in chunks.read_text().splitlines() if line.strip()]
+    vector_ids, vectors = json.loads(ids.read_text()), np.load(embeddings, mmap_mode="r")
+    if len(rows) != len(vector_ids) or len(rows) != len(vectors):
+        raise ValueError("chunks.jsonl, ids.json and embeddings.f16.npy have different lengths")
+    if [r["id"] for r in rows] != vector_ids:
+        raise ValueError("ids.json does not exactly match chunks.jsonl order")
+    col = store.collection(name=collection)
+    for start in range(0, len(rows), 500):
+        part, vec = rows[start:start + 500], vectors[start:start + 500]
+        col.upsert(ids=[r["id"] for r in part], documents=[r["text"] for r in part],
+                   metadatas=[r["meta"] for r in part], embeddings=[[float(x) for x in v] for v in vec])
+    from . import retrieve
+    retrieve.invalidate()
+    return {"collection": collection, "loaded": len(rows),
+            "dimensions": int(vectors.shape[1]) if len(vectors.shape) > 1 else 0}
 
 
 def source_chunks(src: dict) -> list[dict]:

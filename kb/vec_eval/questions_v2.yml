@@ -463,60 +463,60 @@
 - id: V2-091
   split: dev
   kind: exact_citation
-  question: "What does IN CERTIN DIR 2022 ii say?"
+  question: "What does Direction (ii) of the CERT-In Directions under section 70B(6) of the IT Act say?"
   gold: {record: IN-CERTIN-DIR-2022-ii}
   exact: true
 - id: V2-092
   split: test
   kind: exact_citation
-  question: "What does IN CERTIN DIR 2022 iii say?"
+  question: "What does Direction (iii) of the CERT-In Directions of 28 April 2022 require?"
   gold: {record: IN-CERTIN-DIR-2022-iii}
   exact: true
 - id: V2-093
   split: dev
   kind: exact_citation
-  question: "What does IN CERTIN DIR 2022 iv say?"
+  question: "What does Direction (iv) of the CERT-In Directions under section 70B(6) say about logs?"
   gold: {record: IN-CERTIN-DIR-2022-iv}
   exact: true
 - id: V2-094
   split: test
   kind: exact_citation
-  question: "What does IN CERTIN DIR 2022 ANX1 ix say?"
+  question: "What is item (ix) of Annexure I to the CERT-In Directions 2022?"
   gold: {record: IN-CERTIN-DIR-2022-ANX1-ix}
   exact: true
 - id: V2-095
   split: dev
   kind: exact_citation
-  question: "What does IN TCSR 2024 R7 1 say?"
+  question: "What does Rule 7(1)(a) of the Telecom Cyber Security Rules 2024 say?"
   gold: {record: IN-TCSR-2024-R7-1}
   exact: true
 - id: V2-096
   split: test
   kind: exact_citation
-  question: "What does IN CTIR 2024 R7 1 j say?"
+  question: "What does Rule 7(1)(j) of the Critical Telecommunication Infrastructure Rules 2024 say?"
   gold: {record: IN-CTIR-2024-R7-1-j}
   exact: true
 - id: V2-097
   split: dev
   kind: exact_citation
-  question: "What does IN SPACEFW 2026 3 2 1 say?"
+  question: "What does section 3.2.1 of the CERT-In / SIA-India space cyber security framework say?"
   gold: {record: IN-SPACEFW-2026-3-2-1}
   exact: true
 - id: V2-098
   split: test
   kind: exact_citation
-  question: "What does IN DPDP ACT 2023 8 6 say?"
+  question: "What does Section 8(6) of the Digital Personal Data Protection Act 2023 say?"
   gold: {record: IN-DPDP-ACT-2023-8-6}
   exact: true
 - id: V2-099
   split: dev
   kind: exact_citation
-  question: "What does IN DPDP RULES 2025 R7 say?"
+  question: "What does Rule 7 of the Digital Personal Data Protection Rules 2025 say?"
   gold: {record: IN-DPDP-RULES-2025-R7}
   exact: true
 - id: V2-100
   split: test
   kind: exact_citation
-  question: "What does IN TELACT 2023 2 s say?"
+  question: "What does Section 2(s) of the Telecommunications Act 2023 define?"
   gold: {record: IN-TELACT-2023-2-s}
   exact: true

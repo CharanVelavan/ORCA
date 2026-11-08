@@ -47,7 +47,7 @@ def _current_sid() -> str:
     return _sid_cache[1]
 
 
-RETRIEVAL_VERSION = "2"      # bump when ranking, dedupe or filter semantics change (invalidates replays)
+RETRIEVAL_VERSION = "3"      # bump when ranking, dedupe or filter semantics change (invalidates replays)
 
 
 def cache_key(query: str, k: int, filters: dict, rerank: bool, dedupe: bool = True,

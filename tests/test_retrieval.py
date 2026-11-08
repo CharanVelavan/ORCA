@@ -161,3 +161,112 @@ def test_get_chunk_fails_closed_without_chromadb(monkeypatch):
         return real_import(name, *args, **kwargs)
     monkeypatch.setattr(builtins, "__import__", blocked)
     assert kbvec.get_chunk("invented:p1:c1") is None
+
+
+def test_citation_router_parsing_and_aliases():
+    from orca.kbvec.retrieve import _get_instrument_aliases, route_citation, _index
+
+    aliases = dict(_get_instrument_aliases())
+    assert aliases.get("telecom cyber security rules") == "in-tcsr-2024"
+    assert aliases.get("critical telecommunication infrastructure rules") == "in-ctir-2024"
+    assert aliases.get("cert-in directions") == "in-certin-dir-2022"
+    assert aliases.get("digital personal data protection act") == "in-dpdp-act-2023"
+    assert aliases.get("telecommunications act") == "in-telact-2023"
+
+    mock_idx = {
+        "ids": ["chunk1", "chunk2", "chunk3"],
+        "docs": [
+            "Telecommunications (Telecom Cyber Security) Rules, 2024 | DoT | IN | binding | s.7 | p.5\n7. Reporting (1) ... (a) report within six hours",
+            "General noise text about cybersecurity in telecom networks without citations.",
+            "Directions under section 70B(6) | CERT-In | IN | binding | (ii) | p.2\n(ii) report within six hours",
+        ],
+        "metas": [
+            {"source_id": "in-tcsr-2024", "clause": "s.7", "page": 5, "level": "clause"},
+            {"source_id": "other", "clause": "p.1", "page": 1, "level": "clause"},
+            {"source_id": "in-certin-dir-2022", "clause": "(ii)", "page": 2, "level": "clause"},
+        ],
+    }
+    # Citation parsing and matching on mock index
+    assert route_citation("What does Rule 7(1)(a) of the Telecom Cyber Security Rules 2024 say?", mock_idx) == 0
+    assert route_citation("What does Direction (ii) of the CERT-In Directions require?", mock_idx) == 2
+    # Non-citation queries must return None
+    assert route_citation("How does a satellite authenticate with the ground station?", mock_idx) is None
+
+
+def test_calibrated_abstention_jurisdiction_gate():
+    from orca.kbvec.retrieve import _asks_binding_indian_rule, search_with_abstention
+    import orca.kbvec.retrieve as ret_mod
+
+    assert _asks_binding_indian_rule("Is there a binding Indian rule requiring a satellite operator to warn hospitals?")
+    assert _asks_binding_indian_rule("What Indian rule imposes a fixed battery-hour minimum?")
+    assert _asks_binding_indian_rule("What mandatory provision requires a common ground gateway?")
+    assert not _asks_binding_indian_rule("Are India's space cyber guidelines binding or advisory?")
+    assert not _asks_binding_indian_rule("When must an EU essential entity issue an early warning?")
+
+    # 1. Test jurisdiction gate triggers when top hits are non-binding or non-IN
+    orig_search = ret_mod.search
+    ret_mod.search = lambda *a, **k: [
+        {"chunk_id": "eu-chunk-1", "jurisdiction": "EU", "binding_status": "binding", "score": 10.0},
+        {"chunk_id": "in-advisory-1", "jurisdiction": "IN", "binding_status": "advisory", "score": 9.0},
+    ]
+    try:
+        res = search_with_abstention("What binding Indian rule requires continuous monitoring?", k=2)
+        assert res["abstained"] is True
+        assert res["reason"] == "NO_BINDING_IN_JURISDICTION"
+        assert "prob" in res and "margin" in res and "list_z" in res
+    finally:
+        ret_mod.search = orig_search
+
+    # 2. Test score thresholding
+    ret_mod.search = lambda *a, **k: [
+        {"chunk_id": "in-1", "jurisdiction": "IN", "binding_status": "binding", "score": 0.01},
+    ]
+    try:
+        res2 = search_with_abstention("When must a telecom security event be reported?", threshold=0.05)
+        assert res2["abstained"] is True
+        assert res2["reason"] == "SCORE_BELOW_THRESHOLD"
+    finally:
+        ret_mod.search = orig_search
+
+
+@pytest.mark.skipif(not _index_ready(), reason="index not built or embedder not reachable")
+def test_verified_gap_evidence_records_never_abstained():
+    from orca.kbvec import search_with_abstention, config
+    from pathlib import Path
+
+    gap_yaml = config.MAIN_REPO / "kb" / "gaps" / "india.yaml"
+    if not gap_yaml.exists():
+        pytest.skip("kb/gaps/india.yaml not found")
+    data = yaml.safe_load(gap_yaml.read_text())
+    verified_gap_recs = {e for g in data for e in g.get("evidence", [])}
+
+    qs = yaml.safe_load(config.eval_v2_file().read_text())
+    target_qs = [q for q in qs if q.get("gold", {}).get("record") in verified_gap_recs and q.get("kind") != "negative"]
+
+    assert len(target_qs) > 0, "no evaluation questions found for verified gap records"
+    for q in target_qs[:10]:
+        res = search_with_abstention(q["question"], k=5, rerank=False, cache=False)
+        assert not res["abstained"], f"abstained on verified gap question {q['id']}: {q['question']}"
+
+
+# ------------------------------------------------------------------ abstention operating point (9 Nov)
+def test_default_abstain_cut_is_tied_to_the_bge_reranker(monkeypatch):
+    from orca.kbvec import config
+    monkeypatch.delenv("ORCA_ABSTAIN_THRESHOLD", raising=False)
+    monkeypatch.setenv("ORCA_RERANK_MODEL", "BAAI/bge-reranker-base")
+    assert config.abstain_threshold() == config.DEFAULT_ABSTAIN_THRESHOLD == -3.0
+    monkeypatch.setenv("ORCA_RERANK_MODEL", "Qwen/Qwen3-Reranker-0.6B")
+    assert config.abstain_threshold() is None          # logits of another model: no cut
+    monkeypatch.setenv("ORCA_RERANK_MODEL", "BAAI/bge-reranker-base")
+    monkeypatch.setenv("ORCA_ABSTAIN_THRESHOLD", "")
+    assert config.abstain_threshold() is None          # empty string switches abstention off
+
+
+def test_verified_record_text_is_never_treated_as_unanswerable():
+    from orca.kbvec import ingest
+    from orca.kbvec.retrieve import _top_has_verified_quote
+    rec = next(r for r in ingest._records() if r.get("verified") and r.get("quote"))
+    hit = {"source_id": rec["source"], "text": "preamble " + rec["quote"] + " trailing text"}
+    assert _top_has_verified_quote([hit])
+    assert not _top_has_verified_quote([{"source_id": "other-source", "text": rec["quote"]}])
+    assert not _top_has_verified_quote([{"source_id": rec["source"], "text": "an unrelated passage"}])

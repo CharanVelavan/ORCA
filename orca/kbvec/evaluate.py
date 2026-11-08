@@ -73,27 +73,67 @@ def tune_abstention(dev_rows: list[dict]) -> float:
 
 
 def run_v2(rerank: bool = True, tier: str = "corpus", threshold: float | None = None) -> dict:
-    """Evaluate v2 without leaking test labels into threshold selection."""
+    """Evaluate v2 measuring the real abstention path and scoring negatives per RAG_V2 spec."""
+    from .meta import canon_jurisdiction, norm_text
+    from .retrieve import search_with_abstention
+
     qs, recs = yaml.safe_load(config.eval_v2_file().read_text()), _records()
     rows = []
     for q in qs:
         t0 = time.perf_counter()
-        hits = search(q["question"], k=10, filters={"tier": tier}, rerank=rerank, cache=False)
+        ret = search_with_abstention(q["question"], k=10, filters={"tier": tier}, rerank=rerank,
+                                     threshold=threshold, cache=False)
+        hits = ret["results"]
         rank = next((i + 1 for i, h in enumerate(hits) if q.get("gold") and _is_hit(h, q["gold"], recs)), None)
-        rows.append({"id": q["id"], "split": q["split"], "kind": q["kind"], "rank": rank,
-                     "best_score": hits[0]["score"] if hits else float("-inf"),
-                     "latency_ms": (time.perf_counter() - t0) * 1000})
-    threshold = tune_abstention([r for r in rows if r["split"] == "dev"]) if threshold is None else threshold
-    test, pos = [r for r in rows if r["split"] == "test"], []
+
+        top3 = hits[:3]
+        top3_has_binding_in = any(
+            canon_jurisdiction(h.get("jurisdiction")) == "IN" and
+            norm_text(h.get("binding_status")) in ("binding", "binding not in force")
+            for h in top3
+        )
+
+        rows.append({
+            "id": q["id"], "split": q["split"], "kind": q["kind"], "rank": rank,
+            "best_score": ret["best_score"],
+            "abstained": ret["abstained"],
+            "reason": ret.get("reason"),
+            "prob": ret.get("prob"),
+            "margin": ret.get("margin"),
+            "list_z": ret.get("list_z"),
+            "top3_has_binding_in": top3_has_binding_in,
+            "latency_ms": (time.perf_counter() - t0) * 1000
+        })
+
+    if threshold is None and config.abstain_threshold() is not None and rerank:
+        threshold = config.abstain_threshold()
+    elif threshold is None:
+        threshold = tune_abstention([r for r in rows if r["split"] == "dev"])
+        for r in rows:
+            if not r["abstained"] and r["best_score"] < threshold:
+                r["abstained"] = True
+                if not r.get("reason"):
+                    r["reason"] = "SCORE_BELOW_THRESHOLD"
+
+    test = [r for r in rows if r["split"] == "test"]
     pos = [r for r in test if r["kind"] != "negative"]
     neg = [r for r in test if r["kind"] == "negative"]
     at = lambda kind: [r for r in test if r["kind"] == kind]
-    return {"rows": rows, "threshold": threshold, "test_n": len(test),
-            "recall@5": sum(bool(r["rank"] and r["rank"] <= 5) for r in pos) / len(pos) if pos else 0,
-            "mrr@10": sum(1 / r["rank"] for r in pos if r["rank"] and r["rank"] <= 10) / len(pos) if pos else 0,
-            "ndcg@10": sum(1 / __import__("math").log2(r["rank"] + 1) for r in pos if r["rank"] and r["rank"] <= 10) / len(pos) if pos else 0,
-            "negative_accuracy": sum(r["best_score"] < threshold for r in neg) / len(neg) if neg else 0,
-            "amendment_hit_rate": sum(bool(r["rank"]) for r in at("amendment")) / max(1, len(at("amendment"))),
-            "exact_citation_hit@1": sum(r["rank"] == 1 for r in at("exact_citation")) / max(1, len(at("exact_citation"))),
-            "p50_latency_ms": statistics.median(r["latency_ms"] for r in test),
-            "p95_latency_ms": sorted(r["latency_ms"] for r in test)[max(0, int(.95 * len(test)) - 1)]}
+
+    neg_abstained = sum(bool(r["abstained"]) for r in neg)
+    neg_spec_correct = sum(bool(r["abstained"] or not r["top3_has_binding_in"]) for r in neg)
+    neg_n = max(1, len(neg))
+
+    return {
+        "rows": rows, "threshold": threshold, "test_n": len(test),
+        "recall@5": sum(bool(r["rank"] and r["rank"] <= 5 and not r["abstained"]) for r in pos) / len(pos) if pos else 0,
+        "mrr@10": sum(1 / r["rank"] for r in pos if r["rank"] and r["rank"] <= 10 and not r["abstained"]) / len(pos) if pos else 0,
+        "ndcg@10": sum(1 / __import__("math").log2(r["rank"] + 1) for r in pos if r["rank"] and r["rank"] <= 10 and not r["abstained"]) / len(pos) if pos else 0,
+        "negative_accuracy": neg_spec_correct / neg_n,
+        "negative_abstention_accuracy": neg_abstained / neg_n,
+        "negative_spec_accuracy": neg_spec_correct / neg_n,
+        "amendment_hit_rate": sum(bool(r["rank"] and not r["abstained"]) for r in at("amendment")) / max(1, len(at("amendment"))),
+        "exact_citation_hit@1": sum(bool(r["rank"] == 1 and not r["abstained"]) for r in at("exact_citation")) / max(1, len(at("exact_citation"))),
+        "p50_latency_ms": statistics.median(r["latency_ms"] for r in test) if test else 0,
+        "p95_latency_ms": sorted(r["latency_ms"] for r in test)[max(0, int(.95 * len(test)) - 1)] if test else 0
+    }

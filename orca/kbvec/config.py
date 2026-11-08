@@ -32,14 +32,49 @@ def vec_build_dir() -> Path: return _p("ORCA_KBVEC_BUILD", ROOT / "kb" / "vec_bu
 
 
 def embed_url() -> str: return os.environ.get("ORCA_EMBED_URL", "http://localhost:1234/v1")
-def embed_model() -> str: return os.environ.get("ORCA_EMBED_MODEL", "text-embedding-nomic-embed-text-v1.5")
+V1_EMBED_MODEL = "text-embedding-nomic-embed-text-v1.5"
+V2_EMBED_MODEL = "text-embedding-qwen3-embedding-8b"   # LM Studio GGUF of Qwen/Qwen3-Embedding-8B (index built in bf16)
+V2_QUERY_INSTRUCTION = ("Instruct: Given a question about telecom, cyber security or space law, "
+                        "retrieve the legal provision that answers it\nQuery: ")
+
+
+def embed_model() -> str:
+    default = V2_EMBED_MODEL if collection_name() == "orca_v2" else V1_EMBED_MODEL
+    return os.environ.get("ORCA_EMBED_MODEL", default)
+
+
+def _is_qwen3_embed() -> bool: return "qwen3-embedding" in embed_model().lower()
+def doc_prefix() -> str: return "" if _is_qwen3_embed() else DOC_PREFIX
+def query_prefix() -> str: return V2_QUERY_INSTRUCTION if _is_qwen3_embed() else QUERY_PREFIX
+def rerank_pool() -> int: return int(os.environ.get("ORCA_RERANK_POOL", "15"))
+def rerank_chars() -> int: return int(os.environ.get("ORCA_RERANK_CHARS", "1500"))
+def rerank_device() -> str: return os.environ.get("ORCA_RERANK_DEVICE", "cpu")
+def rerank_threads() -> int: return int(os.environ.get("ORCA_RERANK_THREADS", str(min(8, os.cpu_count() or 4))))
 def embed_key() -> str: return os.environ.get("ORCA_EMBED_KEY", "lm-studio")
 def embed_batch() -> int: return int(os.environ.get("ORCA_EMBED_BATCH", "16"))
-def reranker_model() -> str: return os.environ.get("ORCA_RERANK_MODEL", "Qwen/Qwen3-Reranker-0.6B")
+def reranker_model() -> str: return os.environ.get("ORCA_RERANK_MODEL", "BAAI/bge-reranker-base")
 def collection_name() -> str: return os.environ.get("ORCA_KBVEC_COLLECTION", "orca_v2")
+# Cut on the cross-encoder (bge-reranker-base) top-1 logit. Chosen on the dev split only (dev plateau -3.9 .. -2.1,
+# midpoint rounded); see docs/research/rag-v3/ABSTENTION.md. Meaningless for other rerankers or without one.
+DEFAULT_ABSTAIN_THRESHOLD = -3.0
+
+
 def abstain_threshold() -> float | None:
     value = os.environ.get("ORCA_ABSTAIN_THRESHOLD")
-    return float(value) if value not in (None, "") else None
+    if value is not None:
+        return float(value) if value != "" else None   # empty string turns abstention off
+    return DEFAULT_ABSTAIN_THRESHOLD if reranker_model() == "BAAI/bge-reranker-base" else None
+def abstain_temperature() -> float:
+    return float(os.environ.get("ORCA_ABSTAIN_TEMPERATURE", "2.0"))
+def abstain_prob_threshold() -> float | None:
+    v = os.environ.get("ORCA_ABSTAIN_PROB_THRESHOLD")
+    return float(v) if v not in (None, "") else None
+def abstain_margin_threshold() -> float | None:
+    v = os.environ.get("ORCA_ABSTAIN_MARGIN_THRESHOLD")
+    return float(v) if v not in (None, "") else None
+def abstain_z_threshold() -> float | None:
+    v = os.environ.get("ORCA_ABSTAIN_Z_THRESHOLD")
+    return float(v) if v not in (None, "") else None
 
 
 # ``orca_kb`` is the legacy v1 collection.  v2 never replaces it.

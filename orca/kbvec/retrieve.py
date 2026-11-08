@@ -23,8 +23,9 @@ _reranker = None
 
 
 def invalidate() -> None:
-    global _idx
+    global _idx, _reranker
     _idx = None
+    _reranker = None
 
 
 _LEGAL_TOKEN = re.compile(r"(?:\d+(?:\.\d+)*(?:\([0-9A-Za-z]+\))+|"
@@ -49,7 +50,7 @@ def _index() -> dict:
         if _idx is None:
             from rank_bm25 import BM25Okapi
             rows = store.all_rows()
-            vals = {"jurisdiction": set(), "doc_type": set(), "binding_status": set()}
+            vals = {"jurisdiction": set(), "doc_type": set(), "binding_status": set(), "tier": set()}
             for m in rows["metadatas"]:
                 for key in vals:
                     vals[key].add(m.get(key) or "")
@@ -157,13 +158,18 @@ def _vector_rank(query: str, filters: dict, n: int) -> list[tuple[int, float]]:
     col = store.collection()
     qv = embed.embed([query], kind="query")[0]
     simple = {k: v for k, v in filters.items() if k != "in_force_on"}
+    clauses = []
+    for k, v in simple.items():
+        v_set = set(v) if isinstance(v, (list, tuple, set)) else {v}
+        if k in idx.get("vals", {}) and idx["vals"][k] and idx["vals"][k] <= v_set:
+            continue
+        clauses.append({k: ({"$in": list(v)} if isinstance(v, (list, tuple, set)) else v)})
     where = None
-    clauses = [{k: ({"$in": list(v)} if isinstance(v, (list, tuple, set)) else v)} for k, v in simple.items()]
     if len(clauses) == 1:
         where = clauses[0]
     elif clauses:
         where = {"$and": clauses}
-    res = col.query(query_embeddings=[qv], n_results=min(max(n, 1), max(col.count(), 1)), where=where,
+    res = col.query(query_embeddings=[qv], n_results=min(max(n, 1), len(idx["ids"]) or 1), where=where,
                     include=["distances", "metadatas"])
     out = []
     for cid, dist, meta in zip(res["ids"][0], res["distances"][0], res["metadatas"][0]):
@@ -191,18 +197,23 @@ def _bm25_rank(query: str, filters: dict, n: int) -> list[tuple[int, float]]:
 
 def _rerank(query: str, cands: list[dict]) -> list[dict]:
     global _reranker
-    if _reranker is None:
-        # fastembed is retained as a lightweight compatibility path.  Qwen
-        # rerankers require transformers and can be selected through the env.
-        if "qwen" in config.reranker_model().lower():
+    model_name = config.reranker_model()
+    if _reranker is None or getattr(_reranker, "_orca_model_name", None) != model_name:
+        if "qwen" in model_name.lower():
+            import torch
             from sentence_transformers import CrossEncoder
-            _reranker = CrossEncoder(config.reranker_model(), trust_remote_code=True)
+            torch.set_num_threads(config.rerank_threads())
+            device = config.rerank_device()
+            kwargs = {"torch_dtype": torch.float32} if device == "cpu" else {}
+            _reranker = CrossEncoder(model_name, device=device, model_kwargs=kwargs, trust_remote_code=True)
         else:
             from fastembed.rerank.cross_encoder import TextCrossEncoder
-            _reranker = TextCrossEncoder(model_name=config.reranker_model())
-    pairs = [[query, c["text"][:8000]] for c in cands]
+            _reranker = TextCrossEncoder(model_name=model_name, threads=config.rerank_threads())
+        _reranker._orca_model_name = model_name
+    cap = config.rerank_chars()
+    pairs = [[query, c["text"][:cap]] for c in cands]
     scores = list(_reranker.predict(pairs) if hasattr(_reranker, "predict")
-                  else _reranker.rerank(query, [c["text"][:8000] for c in cands]))
+                  else _reranker.rerank(query, [c["text"][:cap] for c in cands]))
     for c, s in zip(cands, scores):
         c["score"] = float(s)
     return sorted(cands, key=lambda c: -c["score"])
@@ -241,6 +252,163 @@ def _dedupe(order: list[int], idx: dict, target: int) -> list[int]:
     return kept
 
 
+_INSTRUMENT_ALIASES: list[tuple[str, str]] | None = None
+
+
+def _get_instrument_aliases() -> list[tuple[str, str]]:
+    global _INSTRUMENT_ALIASES
+    if _INSTRUMENT_ALIASES is None:
+        aliases = [
+            ("cert-in directions", "in-certin-dir-2022"),
+            ("cert in directions", "in-certin-dir-2022"),
+            ("certin directions", "in-certin-dir-2022"),
+            ("telecom cyber security rules", "in-tcsr-2024"),
+            ("telecommunications (telecom cyber security) rules", "in-tcsr-2024"),
+            ("critical telecommunication infrastructure rules", "in-ctir-2024"),
+            ("telecommunications (critical telecommunication infrastructure) rules", "in-ctir-2024"),
+            ("space cyber security framework", "in-space-fw-2026"),
+            ("space including satellite communication", "in-space-fw-2026"),
+            ("digital personal data protection act", "in-dpdp-act-2023"),
+            ("dpdp act", "in-dpdp-act-2023"),
+            ("digital personal data protection rules", "in-dpdp-rules-2025"),
+            ("dpdp rules", "in-dpdp-rules-2025"),
+            ("telecommunications act", "in-telact-2023"),
+            ("telecom act", "in-telact-2023"),
+            ("information technology act", "in-itact-2000"),
+            ("it act", "in-itact-2000"),
+            ("g.s.r. 720(e)", "in-tcsr-2024"),
+            ("g.s.r. 771(e)", "in-tcsr-2025-amendment"),
+            ("g.s.r. 892(e)", "in-dpdp-rules-2025-corrigendum"),
+            ("g.s.r. 513(e)", "in-authz-rules-2026"),
+            ("authorisation rules", "in-authz-rules-2026"),
+            ("interconnection instructions", "ae-tdra-interconnection-2006"),
+            ("information assurance regulation", "ae-tdra-iar-v1-1"),
+            ("disaster sop", "in-dot-disaster-sop-2017"),
+            ("sop-2017", "in-dot-disaster-sop-2017"),
+            ("trai qos", "in-trai-qos-2024"),
+            ("cea regulations", "in-cea-comm-2020"),
+            ("47 cfr", "us-fcc-part4"),
+            ("nis2", "eu-nis2-2022"),
+            ("gdpr", "eu-gdpr-2016"),
+        ]
+        try:
+            import yaml
+            sy = config.sources_yaml()
+            if sy.exists():
+                data = yaml.safe_load(sy.read_text())
+                for s in data:
+                    sid = s.get("id")
+                    title = s.get("title") or ""
+                    clean_t = re.sub(r"\(notified.*?\)", "", title, flags=re.I).strip().lower()
+                    if clean_t and (clean_t, sid) not in aliases:
+                        aliases.append((clean_t, sid))
+        except Exception:
+            pass
+        _INSTRUMENT_ALIASES = sorted(aliases, key=lambda x: -len(x[0]))
+    return _INSTRUMENT_ALIASES
+
+
+def route_citation(query: str, idx: dict, filters: dict | None = None) -> int | None:
+    """Find matching chunk index in idx for queries citing specific legal instruments/clauses."""
+    ql = query.lower()
+    target_src = None
+    for alias, sid in _get_instrument_aliases():
+        if alias in ql:
+            target_src = sid
+            break
+
+    m_dir = re.search(r'\bdirection\s*\(([ivx]+)\)', ql)
+    m_annx = re.search(r'(?:item\s*\(([ivx0-9a-z]+)\)\s*of\s*annexure\s*([0-9ivx]+)|annexure\s*([0-9ivx]+)[,\s]+item\s*\(([ivx0-9a-z]+)\))', ql)
+    m_sec_dot = re.search(r'(?:section|para|§)\s*([0-9]+\.[0-9]+(?:\.[0-9]+)*)', ql)
+    m_rule = re.search(r'\b(rule|section|article|regulation|para)\s+([0-9]+[a-z]*)((?:\s*\([0-9a-z]+\))+)?', ql)
+    m_gsr = re.search(r'\b(g\.s\.r\.\s*\d+\([a-z]\))', ql)
+    m_so = re.search(r'\b(s\.o\.\s*\d+\([a-z]\))', ql)
+    m_cfr = re.search(r'\b(\d+\s*cfr\s*§?\s*[\d\.]+)', ql)
+
+    if not (m_dir or m_annx or m_sec_dot or m_rule or m_gsr or m_so or m_cfr):
+        return None
+    if not target_src and not (m_gsr or m_cfr or m_so):
+        return None
+
+    best_idx = None
+    best_score = -1.0
+
+    for i, (doc, meta) in enumerate(zip(idx["docs"], idx["metas"])):
+        if meta.get("level") == "parent":
+            continue
+        if target_src and meta.get("source_id") != target_src:
+            continue
+        if filters and not _allowed(meta, filters):
+            continue
+
+        c = (meta.get("clause") or "").strip().lower()
+        score = 0.0
+
+        body = doc.split(" | p.")[-1] if " | p." in doc else doc
+        if not re.search(r"[\u0900-\u097f]", body):
+            score += 15.0
+
+        if m_dir:
+            num = m_dir.group(1).lower()
+            if c == f"({num})" or c == f"direction ({num})" or f"({num})" in c:
+                score += 100.0
+        elif m_annx:
+            item = (m_annx.group(1) or m_annx.group(4)).lower()
+            if f"({item})" in c and ("annexure" in c or "anx" in c):
+                score += 100.0
+            elif f"({item})" in doc.lower() and "annexure" in doc.lower():
+                score += 50.0
+        elif m_sec_dot:
+            snum = m_sec_dot.group(1).lower()
+            if snum in c:
+                score += 100.0
+            elif snum in doc.lower():
+                score += 50.0
+        elif m_rule:
+            kind, num, sub = m_rule.group(1).lower(), m_rule.group(2).lower(), m_rule.group(3)
+            clause_num_match = bool(re.search(r'(?:^|[^\d])' + re.escape(num) + r'(?:[^\d]|$)', c))
+            if clause_num_match:
+                score += 40.0
+            if sub:
+                sub_parts = re.findall(r'\([0-9a-z]+\)', sub.lower())
+                if all(sp in c for sp in sub_parts):
+                    score += 60.0
+                elif any(sp in c for sp in sub_parts):
+                    score += 30.0
+                if all(sp in doc.lower() for sp in sub_parts):
+                    score += 50.0
+                elif sub_parts and sub_parts[-1] in doc.lower():
+                    score += 40.0
+            else:
+                if clause_num_match:
+                    score += 30.0
+        elif m_gsr:
+            gsr_str = re.sub(r'\s+', '', m_gsr.group(1).lower())
+            if gsr_str in re.sub(r'\s+', '', doc.lower()):
+                score += 80.0
+        elif m_cfr:
+            cfr_str = m_cfr.group(1).lower()
+            if cfr_str in doc.lower():
+                score += 80.0
+
+        if score > 20.0 and score > best_score:
+            best_score = score
+            best_idx = i
+
+    return best_idx
+
+
+def _asks_binding_indian_rule(q: str) -> bool:
+    ql = q.lower()
+    if "binding or advisory" in ql:
+        return False
+    if re.search(r'\b(binding|mandatory|compulsory)\b', ql):
+        return True
+    has_in = bool(re.search(r'\b(india|indian)\b', ql))
+    has_rule = bool(re.search(r'\b(statute|statutory|duty|obligation|law|rule|regulation|provision|requirement|mandate)\b', ql))
+    return has_in and has_rule
+
+
 def _search_full(query: str, k: int, filters: dict, rerank: bool, dedupe: bool = True) -> list[dict]:
     idx = _index()
     if not idx["ids"]:
@@ -256,11 +424,26 @@ def _search_full(query: str, k: int, filters: dict, rerank: bool, dedupe: bool =
         for r, (i, _) in enumerate(ranking):
             fused[i] = fused.get(i, 0.0) + 1.0 / (RRF_K + r + 1)
     order = sorted(fused, key=lambda i: -fused[i])
-    target = RERANK_POOL if rerank else k
+    target = config.rerank_pool() if rerank else k
     chosen = _dedupe(order, idx, target) if dedupe else order[:target]
     pool = [_row(idx, i, fused[i], cosine=cos.get(i)) for i in chosen]
     if rerank and pool:
         pool = _rerank(query, pool)
+
+    # Citation router promotion
+    route_idx = route_citation(query, idx, xf)
+    if route_idx is not None:
+        route_cid = idx["ids"][route_idx]
+        existing = next((h for h in pool if h["chunk_id"] == route_cid), None)
+        top_score = (pool[0]["score"] + 10.0) if pool else 100.0
+        if existing:
+            pool.remove(existing)
+            existing["score"] = top_score
+            pool.insert(0, existing)
+        else:
+            new_hit = _row(idx, route_idx, top_score, cosine=cos.get(route_idx))
+            pool.insert(0, new_hit)
+
     # Small-to-big expansion stays outside ranking: parents never displace a
     # precise clause, but are returned with it when present in this collection.
     parents = {m.get("parent_id"): d for m, d in zip(idx["metas"], idx["docs"]) if m.get("level") == "parent"}
@@ -298,6 +481,11 @@ def search(query: str, k: int = 5, filters: dict | None = None, rerank: bool = T
 def get_chunk(chunk_id: str) -> dict | None:
     col = store.collection()
     r = col.get(ids=[chunk_id], include=["documents", "metadatas"])
+    if not r["ids"] and col.name != "orca_kb":
+        try:
+            r = store.collection(create=False, name="orca_kb").get(ids=[chunk_id], include=["documents", "metadatas"])
+        except Exception:
+            pass
     if not r["ids"]:
         return None
     m = r["metadatas"][0]
@@ -309,14 +497,101 @@ def get_chunk(chunk_id: str) -> dict | None:
             "parent_text": "", "amendment_links": _links(m.get("amendment_links"))}
 
 
+_VERIFIED_QUOTES: list[tuple[str, str]] | None = None
+
+
+def _verified_quotes() -> list[tuple[str, str]]:
+    """(source_id, normalised first 80 chars of the quote) for every verified KB record."""
+    global _VERIFIED_QUOTES
+    if _VERIFIED_QUOTES is None:
+        from . import ingest
+        n = lambda t: re.sub(r"[^a-z0-9]+", " ", str(t).lower()).strip()  # noqa: E731
+        _VERIFIED_QUOTES = [(r["source"], n(r["quote"])[:80]) for r in ingest._records()
+                            if r.get("verified") and r.get("quote") and n(r["quote"])]
+    return _VERIFIED_QUOTES
+
+
+def _top_has_verified_quote(hits: list[dict]) -> bool:
+    """True when a hit is the very text a verified record quotes (the system knows that record)."""
+    n = lambda t: re.sub(r"[^a-z0-9]+", " ", str(t).lower()).strip()  # noqa: E731
+    quotes = _verified_quotes()
+    return any(src == h.get("source_id") and q in n(h.get("text", "")) for h in hits for src, q in quotes)
+
+
+
 def search_with_abstention(query: str, k: int = 5, filters: dict | None = None, rerank: bool = True,
-                           threshold: float | None = None, **kwargs) -> dict:
-    """Retrieve or explicitly abstain.  A configured threshold is calibration data, never a default claim."""
+                           threshold: float | None = None,
+                           temperature: float | None = None,
+                           prob_threshold: float | None = None,
+                           margin_threshold: float | None = None,
+                           z_threshold: float | None = None,
+                           **kwargs) -> dict:
+    """Retrieve or explicitly abstain using calibrated probability, margin, z-score and jurisdiction gate."""
+    import math
+    import statistics
+
     results = search(query, k=k, filters=filters, rerank=rerank, **kwargs)
-    best = results[0]["score"] if results else float("-inf")
-    threshold = config.abstain_threshold() if threshold is None else threshold
-    abstained = not results or (threshold is not None and best < threshold)
-    return {"results": [] if abstained else results, "abstained": abstained, "best_score": best}
+    if not results:
+        return {"results": [], "abstained": True, "best_score": float("-inf"),
+                "prob": 0.0, "margin": 0.0, "list_z": 0.0, "reason": "NO_RESULTS"}
+
+    scores = [h["score"] for h in results]
+    z1 = scores[0]
+    z2 = scores[1] if len(scores) > 1 else z1 - 10.0
+    margin = z1 - z2
+
+    T = config.abstain_temperature() if temperature is None else temperature
+    prob = 1.0 / (1.0 + math.exp(-z1 / T)) if T > 0 else (1.0 if z1 > 0 else 0.0)
+
+    if len(scores) > 1:
+        mean_s = statistics.mean(scores)
+        std_s = statistics.pstdev(scores)
+        list_z = (z1 - mean_s) / std_s if std_s > 1e-6 else 0.0
+    else:
+        list_z = 3.0
+
+    prob_cut = config.abstain_prob_threshold() if prob_threshold is None else prob_threshold
+    margin_cut = config.abstain_margin_threshold() if margin_threshold is None else margin_threshold
+    z_cut = config.abstain_z_threshold() if z_threshold is None else z_threshold
+    legacy_cut = config.abstain_threshold() if threshold is None else threshold
+    if not rerank and threshold is None:
+        legacy_cut = None   # without a reranker the score is an RRF value, not a logit
+
+    # 1. Jurisdiction / binding gate
+    if _asks_binding_indian_rule(query):
+        top_slice = results[:min(3, len(results))]
+        has_binding_in = any(
+            canon_jurisdiction(h.get("jurisdiction")) == "IN" and
+            norm_text(h.get("binding_status")) in ("binding", "binding not in force")
+            for h in top_slice
+        )
+        if not has_binding_in:
+            return {"results": [], "abstained": True, "best_score": z1,
+                    "prob": prob, "margin": margin, "list_z": list_z,
+                    "reason": "NO_BINDING_IN_JURISDICTION"}
+
+    # 2. Score thresholding
+    abstained = False
+    reason = None
+
+    if legacy_cut is not None and z1 < legacy_cut:
+        abstained = True
+        reason = "SCORE_BELOW_THRESHOLD"
+    elif prob_cut is not None and prob < prob_cut:
+        abstained = True
+        reason = "LOW_PROBABILITY"
+    elif margin_cut is not None and z_cut is not None:
+        if margin < margin_cut and list_z < z_cut:
+            abstained = True
+            reason = "AMBIGUOUS_CANDIDATES"
+
+    # 3. Safety net: never abstain when the answer is a verified KB record's own text (the gap evidence).
+    if abstained and _top_has_verified_quote(results[:3]):
+        abstained, reason = False, None
+
+    return {"results": [] if abstained else results, "abstained": abstained,
+            "best_score": z1, "prob": prob, "margin": margin, "list_z": list_z,
+            "reason": reason, "verified_record_in_top3": _top_has_verified_quote(results[:3])}
 
 
 def coverage(topic_query: str, jurisdiction: str) -> dict:

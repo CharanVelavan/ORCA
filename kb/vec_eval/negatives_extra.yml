@@ -1,0 +1,194 @@
+# Extra negatives added 9 Nov for abstention tuning. Written before looking at any retrieval scores.
+- id: V3N-001
+  split: dev
+  kind: negative
+  subkind: off_topic
+  question: How do I bake sourdough bread at home?
+  expected: abstain
+- id: V3N-002
+  split: test
+  kind: negative
+  subkind: off_topic
+  question: What is the boiling point of ethanol?
+  expected: abstain
+- id: V3N-003
+  split: dev
+  kind: negative
+  subkind: off_topic
+  question: Who painted the Mona Lisa?
+  expected: abstain
+- id: V3N-004
+  split: test
+  kind: negative
+  subkind: off_topic
+  question: What is the best Python web framework for beginners?
+  expected: abstain
+- id: V3N-005
+  split: dev
+  kind: negative
+  subkind: off_topic
+  question: How many moons does Jupiter have?
+  expected: abstain
+- id: V3N-006
+  split: test
+  kind: negative
+  subkind: off_topic
+  question: What is the recipe for Chennai filter coffee?
+  expected: abstain
+- id: V3N-007
+  split: dev
+  kind: negative
+  subkind: off_topic
+  question: Which team won the 2018 football World Cup?
+  expected: abstain
+- id: V3N-008
+  split: test
+  kind: negative
+  subkind: off_topic
+  question: How do I renew a driving licence in Tamil Nadu?
+  expected: abstain
+- id: V3N-009
+  split: dev
+  kind: negative
+  subkind: off_topic
+  question: What is the GST rate on restaurant meals?
+  expected: abstain
+- id: V3N-010
+  split: test
+  kind: negative
+  subkind: off_topic
+  question: Explain the plot of Hamlet.
+  expected: abstain
+- id: V3N-011
+  split: dev
+  kind: negative
+  subkind: absent_law
+  question: What Indian statute mandates quantum-safe encryption for satellite uplinks?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-012
+  split: test
+  kind: negative
+  subkind: absent_law
+  question: Which binding Indian rule sets a maximum latency for emergency calls over
+    satellite?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-013
+  split: dev
+  kind: negative
+  subkind: absent_law
+  question: What Indian law requires satellite operators to hold a cyber insurance
+    policy?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-014
+  split: test
+  kind: negative
+  subkind: absent_law
+  question: What binding rule requires annual penetration testing of every VSAT terminal?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-015
+  split: dev
+  kind: negative
+  subkind: absent_law
+  question: Which Indian regulation sets a licence fee for emulated NTN testbeds?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-016
+  split: test
+  kind: negative
+  subkind: absent_law
+  question: What Indian law obliges telecom operators to publish their satellite failover
+    plans?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-017
+  split: dev
+  kind: negative
+  subkind: absent_law
+  question: Which statute fixes a 15-minute limit for restoring satellite backhaul
+    after a cyber attack?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-018
+  split: test
+  kind: negative
+  subkind: absent_law
+  question: What mandatory Indian rule requires hardware security modules in every
+    ground station?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-019
+  split: dev
+  kind: negative
+  subkind: absent_law
+  question: What Indian law grants citizens compensation for satellite outages caused
+    by hacking?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-020
+  split: test
+  kind: negative
+  subkind: absent_law
+  question: Which binding rule requires AI systems to approve satellite failover decisions
+    without a human?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-021
+  split: dev
+  kind: negative
+  subkind: absent_law
+  question: What Indian regulation caps the number of satellite terminals per household?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-022
+  split: test
+  kind: negative
+  subkind: absent_law
+  question: Which Indian law requires GNSS spoofing incidents to be reported within
+    30 minutes to the Ministry of Defence?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-023
+  split: dev
+  kind: negative
+  subkind: absent_law
+  question: What binding rule requires satellite operators to use open-source firmware
+    only?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-024
+  split: test
+  kind: negative
+  subkind: absent_law
+  question: Which Indian act defines a national satellite cyber-resilience score?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-025
+  split: dev
+  kind: negative
+  subkind: absent_law
+  question: What mandatory Indian provision requires telemetry to be stored in a blockchain
+    ledger?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-026
+  split: test
+  kind: negative
+  subkind: absent_law
+  question: Which Indian law requires rain-fade margins of at least 10 dB for Ka-band
+    links?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-027
+  split: dev
+  kind: negative
+  subkind: absent_law
+  question: What binding rule requires monthly red-team exercises against satellite
+    management networks?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-028
+  split: test
+  kind: negative
+  subkind: absent_law
+  question: Which Indian rule sets a certification scheme for satellite modem firmware?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-029
+  split: dev
+  kind: negative
+  subkind: absent_law
+  question: What Indian law requires each hospital to keep a spare satellite terminal?
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V3N-030
+  split: test
+  kind: negative
+  subkind: absent_law
+  question: What Indian regulation requires publishing the identity of attackers within
+    24 hours of a satellite cyber incident?
+  expected: abstain_or_nonbinding_or_other_jurisdiction

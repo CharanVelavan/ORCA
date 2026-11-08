@@ -401,7 +401,7 @@ class PolicyAdviser:
         vec = _kbvec()
         if vec is not None:
             try:
-                for c in vec.search(question, k=k, filters=None, rerank=True) or []:
+                for c in vec.search_with_abstention(question, k=k, filters=None, rerank=True)["results"]:
                     m = len(q & _words(c.get("text", "")))
                     hits.append((m, c["chunk_id"], {"id": c["chunk_id"], "kind": "chunk", "title": c.get("title"),
                                                     "jurisdiction": c.get("jurisdiction"),
@@ -413,7 +413,7 @@ class PolicyAdviser:
                 self.w.log("adviser_vector_error", "policy_adviser", {"error": str(e)[:300]})
         need = max(1, min(self.MIN_MATCH, len(q)))
         good = [h for h in hits if h[0] >= need and h[0] / len(q) >= self.MIN_RATIO]
-        good.sort(key=lambda h: (-h[0], h[2]["kind"] != "record", h[1]))
+        good.sort(key=lambda h: (h[2]["kind"] == "chunk", -h[0], h[2]["kind"] != "record", h[1]))  # verified records and gaps before corpus chunks
         return [h[2] for h in good[:k]]
 
     def ask(self, question: str, asker: str = "human") -> dict:
@@ -619,7 +619,7 @@ class Agent:
         vec = _kbvec()
         if vec is not None:
             try:
-                for c in vec.search(question, k=3, filters=None, rerank=True) or []:
+                for c in vec.search_with_abstention(question, k=3, filters=None, rerank=True)["results"]:
                     self.seen_chunks.add(c["chunk_id"])
                     chunks.append({k: c.get(k) for k in ("chunk_id", "title", "jurisdiction", "binding_status",
                                                           "page", "clause", "tier")} | {"text": c.get("text", "")[:400],
