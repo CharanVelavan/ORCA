@@ -24,7 +24,8 @@ export function PipelineFlow({ truth }: { truth: boolean }) {
 function Header({ truth }: { truth: boolean }) {
   const { scenario, beats, mode, explainIdx, setMode, explainStep } = usePipeline();
   const view = useUi((s) => s.pipeline);
-  const run = useUi((s) => s.config.run);
+  // Demo exists only on the Stage; the Console and Control always follow the live engine.
+  const run = useUi((s) => (window.location.pathname === '/stage' ? s.config.run : 'live'));
   const setPipeline = useUi((s) => s.setPipeline);
   const steps = pathFor(scenario)?.steps ?? [];
   const beat = beats[beats.length - 1];

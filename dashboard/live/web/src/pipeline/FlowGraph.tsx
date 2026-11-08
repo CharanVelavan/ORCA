@@ -289,7 +289,7 @@ function Bubble({ beat, step, box, width, rowEnd }: { beat?: Beat; step?: { node
   if (!box || (!beat && !step)) return null;
   const title = step?.title ?? beat!.title, text = step?.text ?? beat!.text, tone = step ? 'accent' : beat!.tone;
   const actor = DEF[step?.node ?? beat!.node];
-  const W = Math.min(260, width * 0.26);
+  const W = Math.min(220, width * 0.22);
   // Prefer the free space at the end of the active row, so the tile never covers another row.
   const side = rowEnd > 0 && width - rowEnd - 24 >= W;
   const style: CSSProperties = side ? { left: rowEnd + 16, width: Math.min(320, width - rowEnd - 28), top: box.y + box.h / 2, transform: 'translateY(-50%)' } : place(box, width, W, 58);

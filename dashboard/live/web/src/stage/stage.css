@@ -105,3 +105,4 @@
 @media (max-width: 1480px) {
   .st-title { max-width: 22ch; }
 }
+.st-drawer .inbox-head__title { display: none; }

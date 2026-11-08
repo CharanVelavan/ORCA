@@ -57,7 +57,7 @@ export const NODES: NodeDef[] = [
 
   // Band 5 - commander
   { id: 'rules', band: 'commander', kind: 'rules', label: 'Rule engine', role: 'Checks Indian law, in code', icon: 'Scale', refs: ['verdict'] },
-  { id: 'clocks', band: 'commander', kind: 'clocks', label: 'Reporting deadlines', role: 'Legal clocks running', icon: 'Timer', refs: ['clock_obligation'] },
+  { id: 'clocks', band: 'commander', kind: 'clocks', label: 'Deadlines', role: 'Legal reporting clocks', icon: 'Timer', refs: ['clock_obligation'] },
   { id: 'human', band: 'commander', kind: 'human', label: 'Incident commander', role: 'Approves fixes with a click', icon: 'UserCheck', refs: ['approval'] },
 
   // Band 6 - execute and heal
