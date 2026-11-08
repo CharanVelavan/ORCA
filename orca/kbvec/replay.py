@@ -47,8 +47,13 @@ def _current_sid() -> str:
     return _sid_cache[1]
 
 
-def cache_key(query: str, k: int, filters: dict, rerank: bool) -> str:
-    blob = json.dumps({"q": query, "k": k, "f": filters, "r": rerank, "snap": _current_sid()},
+RETRIEVAL_VERSION = "2"      # bump when ranking, dedupe or filter semantics change (invalidates replays)
+
+
+def cache_key(query: str, k: int, filters: dict, rerank: bool, dedupe: bool = True,
+              embed_model: str | None = None) -> str:
+    blob = json.dumps({"v": RETRIEVAL_VERSION, "q": query, "k": k, "f": filters, "r": rerank, "d": dedupe,
+                       "snap": _current_sid(), "model": embed_model or config.embed_model()},
                       sort_keys=True, default=str).encode()
     return hashlib.sha256(blob).hexdigest()[:24]
 

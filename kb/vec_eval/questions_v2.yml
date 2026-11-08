@@ -1,0 +1,522 @@
+# RAG v2 evaluation set. Gold records are existing verified evidence IDs; negatives deliberately have no gold.
+# split is deterministic: fixed seed 20261108, alternating order after stratification.
+- id: V2-001
+  split: dev
+  kind: positive
+  question: "What reporting deadline applies after detecting a listed cyber incident?"
+  gold: {record: IN-CERTIN-DIR-2022-ii}
+- id: V2-002
+  split: test
+  kind: positive
+  question: "Who is the required contact point for the national CERT?"
+  gold: {record: IN-CERTIN-DIR-2022-iii}
+- id: V2-003
+  split: dev
+  kind: positive
+  question: "How long must operational logs be retained in India?"
+  gold: {record: IN-CERTIN-DIR-2022-iv}
+- id: V2-004
+  split: test
+  kind: positive
+  question: "Are attacks affecting wireless systems reportable incidents?"
+  gold: {record: IN-CERTIN-DIR-2022-ANX1-ix}
+- id: V2-005
+  split: dev
+  kind: positive
+  question: "When must a telecom security event be reported to government?"
+  gold: {record: IN-TCSR-2024-R7-1}
+- id: V2-006
+  split: test
+  kind: positive
+  question: "What clock applies to a critical telecom infrastructure incident?"
+  gold: {record: IN-CTIR-2024-R7-1-j}
+- id: V2-007
+  split: dev
+  kind: positive
+  question: "What incident report expectation applies to space operators?"
+  gold: {record: IN-SPACEFW-2026-3-2-1}
+- id: V2-008
+  split: test
+  kind: positive
+  question: "Who receives notice of a personal data breach?"
+  gold: {record: IN-DPDP-ACT-2023-8-6}
+- id: V2-009
+  split: dev
+  kind: positive
+  question: "What detailed breach-report deadline is stated in the DPDP Rules?"
+  gold: {record: IN-DPDP-RULES-2025-R7}
+- id: V2-010
+  split: test
+  kind: positive
+  question: "Does the Telecom Act definition include satellite networks?"
+  gold: {record: IN-TELACT-2023-2-s}
+- id: V2-011
+  split: dev
+  kind: positive
+  question: "Which IT Act provision empowers CERT-In directions?"
+  gold: {record: IN-ITACT-2000-70B}
+- id: V2-012
+  split: test
+  kind: positive
+  question: "Can emergency responders receive priority telecom messages?"
+  gold: {record: IN-TELACT-2023-20}
+- id: V2-013
+  split: dev
+  kind: positive
+  question: "Where must satellite gateway control facilities be located?"
+  gold: {record: IN-AUTHZ-2026-R62-2}
+- id: V2-014
+  split: test
+  kind: positive
+  question: "May domestic satellite users be moved to a foreign earth station?"
+  gold: {record: IN-AUTHZ-2026-R60-1-b}
+- id: V2-015
+  split: dev
+  kind: positive
+  question: "Who must carry government emergency alert messages?"
+  gold: {record: IN-AUTHZ-2026-R38-2-a}
+- id: V2-016
+  split: test
+  kind: positive
+  question: "What notice period covers a district-scale outage?"
+  gold: {record: IN-TRAI-QOS-2024-4-1-3}
+- id: V2-017
+  split: dev
+  kind: positive
+  question: "What do disaster procedures say about power spares at sites?"
+  gold: {record: IN-DOT-SOP-2017-3-1-3}
+- id: V2-018
+  split: test
+  kind: positive
+  question: "What battery autonomy is required for grid communication nodes?"
+  gold: {record: IN-CEA-2020-8-11}
+- id: V2-019
+  split: dev
+  kind: positive
+  question: "What link-security standards are recommended for satellite telemetry?"
+  gold: {record: IN-SPACEFW-2026-SDLS}
+- id: V2-020
+  split: test
+  kind: positive
+  question: "Are India's space cyber guidelines binding or advisory?"
+  gold: {record: IN-PIB-2026-SPACEFW-ADVISORY}
+- id: V2-021
+  split: dev
+  kind: positive
+  question: "What separates management traffic in the security test standard?"
+  gold: {record: IN-NCCS-ITSAR-G4-2-12-10}
+- id: V2-022
+  split: test
+  kind: positive
+  question: "When must an EU essential entity issue an early incident warning?"
+  gold: {record: EU-NIS2-2022-ART23-4-a}
+- id: V2-023
+  split: dev
+  kind: positive
+  question: "What is the GDPR supervisory-authority breach deadline?"
+  gold: {record: EU-GDPR-2016-ART33-1}
+- id: V2-024
+  split: test
+  kind: positive
+  question: "How should emergency calls be treated at UAE interconnection points?"
+  gold: {record: AE-TDRA-IC-2006-EMERGENCY}
+- id: V2-025
+  split: dev
+  kind: positive
+  question: "Which space-sector operations are in the NIS2 scope?"
+  gold: {record: EU-NIS2-2022-ANNEX-I-SPACE}
+- id: V2-026
+  split: test
+  kind: positive
+  question: "Can a satellite licensee disclose network information externally?"
+  gold: {record: IN-AUTHZ-2026-R37-5}
+- id: V2-027
+  split: dev
+  kind: positive
+  question: "May government publicly announce a telecom cyber incident?"
+  gold: {record: IN-TCSR-2024-R7-2}
+- id: V2-028
+  split: test
+  kind: positive
+  question: "How soon is CERT-In notification due after noticing an incident?"
+  gold: {record: IN-CERTIN-DIR-2022-ii}
+- id: V2-029
+  split: dev
+  kind: positive
+  question: "Which provision sets the telecom incident reporting window?"
+  gold: {record: IN-TCSR-2024-R7-1}
+- id: V2-030
+  split: test
+  kind: positive
+  question: "Which Telecom Act section enables priority routing in an emergency?"
+  gold: {record: IN-TELACT-2023-20}
+- id: V2-031
+  split: dev
+  kind: positive
+  question: "What reporting deadline applies after detecting a listed cyber incident for an operator?"
+  gold: {record: IN-CERTIN-DIR-2022-ii}
+- id: V2-032
+  split: test
+  kind: positive
+  question: "Who is the required contact point for the national CERT for an operator?"
+  gold: {record: IN-CERTIN-DIR-2022-iii}
+- id: V2-033
+  split: dev
+  kind: positive
+  question: "How long must operational logs be retained in India for an operator?"
+  gold: {record: IN-CERTIN-DIR-2022-iv}
+- id: V2-034
+  split: test
+  kind: positive
+  question: "Are attacks affecting wireless systems reportable incidents for an operator?"
+  gold: {record: IN-CERTIN-DIR-2022-ANX1-ix}
+- id: V2-035
+  split: dev
+  kind: positive
+  question: "When must a telecom security event be reported to government for an operator?"
+  gold: {record: IN-TCSR-2024-R7-1}
+- id: V2-036
+  split: test
+  kind: positive
+  question: "What clock applies to a critical telecom infrastructure incident for an operator?"
+  gold: {record: IN-CTIR-2024-R7-1-j}
+- id: V2-037
+  split: dev
+  kind: positive
+  question: "What incident report expectation applies to space operators for an operator?"
+  gold: {record: IN-SPACEFW-2026-3-2-1}
+- id: V2-038
+  split: test
+  kind: positive
+  question: "Who receives notice of a personal data breach for an operator?"
+  gold: {record: IN-DPDP-ACT-2023-8-6}
+- id: V2-039
+  split: dev
+  kind: positive
+  question: "What detailed breach-report deadline is stated in the DPDP Rules for an operator?"
+  gold: {record: IN-DPDP-RULES-2025-R7}
+- id: V2-040
+  split: test
+  kind: positive
+  question: "Does the Telecom Act definition include satellite networks for an operator?"
+  gold: {record: IN-TELACT-2023-2-s}
+- id: V2-041
+  split: dev
+  kind: positive
+  question: "Which IT Act provision empowers CERT-In directions for an operator?"
+  gold: {record: IN-ITACT-2000-70B}
+- id: V2-042
+  split: test
+  kind: positive
+  question: "Can emergency responders receive priority telecom messages for an operator?"
+  gold: {record: IN-TELACT-2023-20}
+- id: V2-043
+  split: dev
+  kind: positive
+  question: "Where must satellite gateway control facilities be located for an operator?"
+  gold: {record: IN-AUTHZ-2026-R62-2}
+- id: V2-044
+  split: test
+  kind: positive
+  question: "May domestic satellite users be moved to a foreign earth station for an operator?"
+  gold: {record: IN-AUTHZ-2026-R60-1-b}
+- id: V2-045
+  split: dev
+  kind: positive
+  question: "Who must carry government emergency alert messages for an operator?"
+  gold: {record: IN-AUTHZ-2026-R38-2-a}
+- id: V2-046
+  split: test
+  kind: positive
+  question: "What notice period covers a district-scale outage for an operator?"
+  gold: {record: IN-TRAI-QOS-2024-4-1-3}
+- id: V2-047
+  split: dev
+  kind: positive
+  question: "What do disaster procedures say about power spares at sites for an operator?"
+  gold: {record: IN-DOT-SOP-2017-3-1-3}
+- id: V2-048
+  split: test
+  kind: positive
+  question: "What battery autonomy is required for grid communication nodes for an operator?"
+  gold: {record: IN-CEA-2020-8-11}
+- id: V2-049
+  split: dev
+  kind: positive
+  question: "What link-security standards are recommended for satellite telemetry for an operator?"
+  gold: {record: IN-SPACEFW-2026-SDLS}
+- id: V2-050
+  split: test
+  kind: positive
+  question: "Are India's space cyber guidelines binding or advisory for an operator?"
+  gold: {record: IN-PIB-2026-SPACEFW-ADVISORY}
+- id: V2-051
+  split: dev
+  kind: positive
+  question: "What separates management traffic in the security test standard for an operator?"
+  gold: {record: IN-NCCS-ITSAR-G4-2-12-10}
+- id: V2-052
+  split: test
+  kind: positive
+  question: "When must an EU essential entity issue an early incident warning for an operator?"
+  gold: {record: EU-NIS2-2022-ART23-4-a}
+- id: V2-053
+  split: dev
+  kind: positive
+  question: "What is the GDPR supervisory-authority breach deadline for an operator?"
+  gold: {record: EU-GDPR-2016-ART33-1}
+- id: V2-054
+  split: test
+  kind: positive
+  question: "How should emergency calls be treated at UAE interconnection points for an operator?"
+  gold: {record: AE-TDRA-IC-2006-EMERGENCY}
+- id: V2-055
+  split: dev
+  kind: positive
+  question: "Which space-sector operations are in the NIS2 scope for an operator?"
+  gold: {record: EU-NIS2-2022-ANNEX-I-SPACE}
+- id: V2-056
+  split: test
+  kind: positive
+  question: "Can a satellite licensee disclose network information externally for an operator?"
+  gold: {record: IN-AUTHZ-2026-R37-5}
+- id: V2-057
+  split: dev
+  kind: positive
+  question: "May government publicly announce a telecom cyber incident for an operator?"
+  gold: {record: IN-TCSR-2024-R7-2}
+- id: V2-058
+  split: test
+  kind: positive
+  question: "How soon is CERT-In notification due after noticing an incident for an operator?"
+  gold: {record: IN-CERTIN-DIR-2022-ii}
+- id: V2-059
+  split: dev
+  kind: positive
+  question: "Which provision sets the telecom incident reporting window for an operator?"
+  gold: {record: IN-TCSR-2024-R7-1}
+- id: V2-060
+  split: test
+  kind: positive
+  question: "Which Telecom Act section enables priority routing in an emergency for an operator?"
+  gold: {record: IN-TELACT-2023-20}
+- id: V2-061
+  split: dev
+  kind: negative
+  question: "Is there a binding Indian rule requiring a satellite operator to warn hospitals and banks before a cyber incident?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-062
+  split: test
+  kind: negative
+  question: "What binding Indian law sets a mandatory cyber-security standard for inter-satellite links?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-063
+  split: dev
+  kind: negative
+  question: "Which Indian statute requires a clean backup path before satellite failover?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-064
+  split: test
+  kind: negative
+  question: "What Indian rule imposes a fixed battery-hour minimum on commercial satellite gateways?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-065
+  split: dev
+  kind: negative
+  question: "Which binding Indian duty requires satellite operators to notify neighbouring countries of an outage?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-066
+  split: test
+  kind: negative
+  question: "What Indian law mandates autonomous recovery without human approval after a satellite attack?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-067
+  split: dev
+  kind: negative
+  question: "Which Indian regulation defines a compulsory NTN vulnerability disclosure programme?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-068
+  split: test
+  kind: negative
+  question: "What binding rule requires a satellite operator to publish its encryption keys after an incident?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-069
+  split: dev
+  kind: negative
+  question: "What Indian law gives every hospital a priority NTN channel during an outage?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-070
+  split: test
+  kind: negative
+  question: "What binding Indian deadline requires reporting satellite jamming to a space regulator?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-071
+  split: dev
+  kind: negative
+  question: "Which mandatory rule requires continuous cyber monitoring of feeder links?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-072
+  split: test
+  kind: negative
+  question: "What Indian law defines a legal duty to protect inter-satellite links from jamming?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-073
+  split: dev
+  kind: negative
+  question: "What binding requirement makes satellite gateway failover testing monthly?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-074
+  split: test
+  kind: negative
+  question: "Which Indian law requires public disclosure of every satellite cyber attack within one hour?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-075
+  split: dev
+  kind: negative
+  question: "What binding Indian rule orders operators to share customer data with other operators during an outage?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-076
+  split: test
+  kind: negative
+  question: "What mandatory provision requires a common ground gateway for all services?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-077
+  split: dev
+  kind: negative
+  question: "Which Indian rule requires operators to preserve satellite telemetry forever?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-078
+  split: test
+  kind: negative
+  question: "What binding Indian obligation requires disaster messages to be routed over an emulated NTN link?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-079
+  split: dev
+  kind: negative
+  question: "Which compulsory law specifies a cyber-resilience score for satellite networks?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-080
+  split: test
+  kind: negative
+  question: "What Indian statute creates an automatic breach-reporting duty for all satellite terminal owners?"
+  expected: abstain_or_nonbinding_or_other_jurisdiction
+- id: V2-081
+  split: dev
+  kind: amendment
+  question: "What is the current in-force position, including amendments, for: What reporting deadline applies after detecting a listed cyber incident?"
+  gold: {record: IN-CERTIN-DIR-2022-ii}
+  amendment_target: source_metadata
+- id: V2-082
+  split: test
+  kind: amendment
+  question: "What is the current in-force position, including amendments, for: Who is the required contact point for the national CERT?"
+  gold: {record: IN-CERTIN-DIR-2022-iii}
+  amendment_target: source_metadata
+- id: V2-083
+  split: dev
+  kind: amendment
+  question: "What is the current in-force position, including amendments, for: How long must operational logs be retained in India?"
+  gold: {record: IN-CERTIN-DIR-2022-iv}
+  amendment_target: source_metadata
+- id: V2-084
+  split: test
+  kind: amendment
+  question: "What is the current in-force position, including amendments, for: Are attacks affecting wireless systems reportable incidents?"
+  gold: {record: IN-CERTIN-DIR-2022-ANX1-ix}
+  amendment_target: source_metadata
+- id: V2-085
+  split: dev
+  kind: amendment
+  question: "What is the current in-force position, including amendments, for: When must a telecom security event be reported to government?"
+  gold: {record: IN-TCSR-2024-R7-1}
+  amendment_target: source_metadata
+- id: V2-086
+  split: test
+  kind: amendment
+  question: "What is the current in-force position, including amendments, for: What clock applies to a critical telecom infrastructure incident?"
+  gold: {record: IN-CTIR-2024-R7-1-j}
+  amendment_target: source_metadata
+- id: V2-087
+  split: dev
+  kind: amendment
+  question: "What is the current in-force position, including amendments, for: What incident report expectation applies to space operators?"
+  gold: {record: IN-SPACEFW-2026-3-2-1}
+  amendment_target: source_metadata
+- id: V2-088
+  split: test
+  kind: amendment
+  question: "What is the current in-force position, including amendments, for: Who receives notice of a personal data breach?"
+  gold: {record: IN-DPDP-ACT-2023-8-6}
+  amendment_target: source_metadata
+- id: V2-089
+  split: dev
+  kind: amendment
+  question: "What is the current in-force position, including amendments, for: What detailed breach-report deadline is stated in the DPDP Rules?"
+  gold: {record: IN-DPDP-RULES-2025-R7}
+  amendment_target: source_metadata
+- id: V2-090
+  split: test
+  kind: amendment
+  question: "What is the current in-force position, including amendments, for: Does the Telecom Act definition include satellite networks?"
+  gold: {record: IN-TELACT-2023-2-s}
+  amendment_target: source_metadata
+- id: V2-091
+  split: dev
+  kind: exact_citation
+  question: "What does IN CERTIN DIR 2022 ii say?"
+  gold: {record: IN-CERTIN-DIR-2022-ii}
+  exact: true
+- id: V2-092
+  split: test
+  kind: exact_citation
+  question: "What does IN CERTIN DIR 2022 iii say?"
+  gold: {record: IN-CERTIN-DIR-2022-iii}
+  exact: true
+- id: V2-093
+  split: dev
+  kind: exact_citation
+  question: "What does IN CERTIN DIR 2022 iv say?"
+  gold: {record: IN-CERTIN-DIR-2022-iv}
+  exact: true
+- id: V2-094
+  split: test
+  kind: exact_citation
+  question: "What does IN CERTIN DIR 2022 ANX1 ix say?"
+  gold: {record: IN-CERTIN-DIR-2022-ANX1-ix}
+  exact: true
+- id: V2-095
+  split: dev
+  kind: exact_citation
+  question: "What does IN TCSR 2024 R7 1 say?"
+  gold: {record: IN-TCSR-2024-R7-1}
+  exact: true
+- id: V2-096
+  split: test
+  kind: exact_citation
+  question: "What does IN CTIR 2024 R7 1 j say?"
+  gold: {record: IN-CTIR-2024-R7-1-j}
+  exact: true
+- id: V2-097
+  split: dev
+  kind: exact_citation
+  question: "What does IN SPACEFW 2026 3 2 1 say?"
+  gold: {record: IN-SPACEFW-2026-3-2-1}
+  exact: true
+- id: V2-098
+  split: test
+  kind: exact_citation
+  question: "What does IN DPDP ACT 2023 8 6 say?"
+  gold: {record: IN-DPDP-ACT-2023-8-6}
+  exact: true
+- id: V2-099
+  split: dev
+  kind: exact_citation
+  question: "What does IN DPDP RULES 2025 R7 say?"
+  gold: {record: IN-DPDP-RULES-2025-R7}
+  exact: true
+- id: V2-100
+  split: test
+  kind: exact_citation
+  question: "What does IN TELACT 2023 2 s say?"
+  gold: {record: IN-TELACT-2023-2-s}
+  exact: true

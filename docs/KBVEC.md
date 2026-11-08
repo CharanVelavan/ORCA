@@ -1,5 +1,47 @@
 # Vector KB (`orca/kbvec`)
 
+## RAG v2 build and acceptance
+
+RAG v2 uses clause-level chunks plus separate parent-section chunks. Each embedded clause begins with a
+deterministic legal header (instrument, authority, jurisdiction, legal status/in-force date, clause path and
+page). Returned clauses include their parent text and staged amendment links; parent ids are accepted by
+`get_chunk` for citation validation. All NTN/satellite material is evidence about an **emulated** network.
+
+Build the portable, GPU-free payload locally (or from a fresh clone alongside the unzipped Drive corpus):
+
+```bash
+python -m orca.kbvec chunk --corpus --corpus-dir /path/to/corpus --sources-dir /path/to/kb/sources \
+  --out kb/vec_build/chunks.jsonl
+```
+
+The command writes `chunks.jsonl` and a reproducibility `manifest.json` containing source hashes, parser version,
+counts and skipped extraction errors. No corpus text is committed. Run the exact Colab cells in
+[`finetune/colab/build_index_colab.md`](../finetune/colab/build_index_colab.md); its GPU step emits normalised
+Qwen3-Embedding-8B vectors, ids, model metadata, question drift vectors and Qwen3-Reranker-4B comparison scores.
+
+After copying the files into `kb/vec_build/`, load without calling an embedding service:
+
+```bash
+python -m orca.kbvec load-vectors
+python -m orca.kbvec snapshot
+python -m orca.kbvec eval --v2 --tier corpus
+```
+
+`questions_v2.yml` is a fixed 50/50 dev/test evaluation set. The abstention threshold is selected only from dev
+scores. Compare a v1 run and v2 run on test for corpus recall@5, MRR@10, nDCG@10, negative abstention accuracy,
+amendment hit rate, exact-citation hit@1, and p50/p95 latency. Do not make `orca_v2` the default unless it beats v1
+on corpus recall@5 and negative accuracy and has p95 under 3 seconds using the 0.6B reranker. Measurements have
+not yet been produced, so no v1-v2 results table is claimed here.
+
+| Test metric | v1 | v2 |
+|---|---:|---:|
+| Corpus recall@5 | pending | pending |
+| Negative abstention accuracy | pending | pending |
+| p95 latency (ms) | pending | pending |
+
+The retrieval cache key includes the collection snapshot and embedding model id. On machines without Chroma, a
+citation lookup fails closed (`get_chunk(...) -> None`) so an invented chunk cannot bypass the protocol guard.
+
 Mirrors the ITU reference stack (CrashingGuru/ITUAIReadiness): ChromaDB (cosine), nomic-embed-text, ~512-token
 chunks with 50 overlap, PyMuPDF parsing. Added: BM25 hybrid, RRF fusion, metadata filters, cross-encoder rerank,
 index snapshot and retrieval cache for exact replay.

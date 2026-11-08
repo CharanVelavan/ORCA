@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import hashlib
+import json
+import os
 import re
 import sys
 import time
@@ -9,8 +11,9 @@ from pathlib import Path
 
 import yaml
 
-from . import config, embed as emb, store
+from . import config, store
 from .chunk import chunk_page
+from .meta import canon_doc_type, canon_jurisdiction
 
 DOC_TYPES = [("act", r"\bact\b"), ("rules", r"\brules?\b"), ("directions", r"direction"),
              ("directive", r"directive"), ("regulation", r"regulation"), ("licence", r"licen[cs]e|authori[sz]ation"),
@@ -106,12 +109,15 @@ def official_sources() -> list[dict]:
     return out
 
 
-def corpus_sources() -> list[dict]:
+def corpus_sources(corpus_root: Path | None = None, staging: Path | None = None) -> list[dict]:
     """Staged downloads: kb/staging/<india|global>/<id>.yaml with files under corpus/raw."""
     out = []
     reg = _load_yaml(config.sources_yaml()) or []
     registered = {s["id"] for s in reg} | {s["sha256"] for s in reg if s.get("sha256")}
-    for y in sorted(config.staging_dir().glob("*/*.yaml")):
+    explicit_root = corpus_root is not None
+    corpus_root = corpus_root or config.corpus_dir()
+    staging = staging or config.staging_dir()
+    for y in sorted(staging.glob("*/*.yaml")):
         if y.name.startswith("_"):                 # pipeline outputs (_quotecheck etc.), not documents
             continue
         m = _load_yaml(y)
@@ -124,18 +130,135 @@ def corpus_sources() -> list[dict]:
                 or str(m.get("sha256") or "") in registered:
             continue
         lp = Path(m["local_path"])
-        cands = [lp] if lp.is_absolute() else [config.MAIN_REPO / lp, config.corpus_dir().parent / lp, config.corpus_dir() / lp]
+        # The Colab archive is rooted at the repository's corpus/ directory;
+        # staged metadata deliberately remains in git and retains repo-relative
+        # paths such as corpus/raw/india/doc.pdf.
+        cands = [lp] if lp.is_absolute() else ([corpus_root.parent / lp, corpus_root / lp, corpus_root / lp.name]
+                                                if explicit_root else [config.MAIN_REPO / lp, corpus_root.parent / lp,
+                                                                         corpus_root / lp, corpus_root / lp.name])
         f = next((c for c in cands if c.is_file()), None)
         if f is None:
             continue
         out.append({
             "source_id": str(m["id"]), "title": m.get("title", m["id"]), "authority": m.get("authority", ""),
-            "jurisdiction": m.get("jurisdiction") or ("IN" if y.parent.name == "india" else "INTL"),
-            "doc_type": m.get("doc_type", guess_doc_type(str(m.get("title", "")))),
+            "jurisdiction": canon_jurisdiction(m.get("jurisdiction") or ("IN" if y.parent.name == "india" else "INTL")),
+            "doc_type": canon_doc_type(m.get("doc_type", guess_doc_type(str(m.get("title", ""))))),
             "binding_status": m.get("binding_status", "not_stated"),
             "in_force_from": str(m.get("in_force_from") or ""), "licence": str(m.get("licence") or "not_stated"),
-            "url": m.get("url", ""), "path": f, "sidecar": None, "tier": "corpus"})
+            "url": m.get("url", ""), "path": f, "sidecar": None, "tier": "corpus",
+            "lang": m.get("language", "en"), "amends": m.get("amends") or [],
+            "amended_by": m.get("amended_by") or []})
     return out
+
+
+def _slug(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-") or "preamble"
+
+
+def _header(meta: dict) -> str:
+    clause = meta.get("clause_path") or meta.get("clause") or "preamble"
+    force = meta.get("in_force_from") or "not stated"
+    return (f"{meta.get('title', '')} | {meta.get('authority', '')} | {meta.get('jurisdiction', '')} | "
+            f"{meta.get('binding_status', 'not_stated')}, in force {force} | {clause} | p.{meta.get('page', 0)}")
+
+
+def v2_source_chunks(src: dict) -> list[dict]:
+    """Produce embeddable clause rows plus independent parent-section rows.
+
+    This is intentionally file-system only, so the same function runs from a
+    clean clone in Colab before Chroma, an embedding endpoint, or a GPU exist.
+    """
+    pages, sha, clauses, carry = parse_pages(src["path"], src.get("sidecar")), sha256_file(src["path"]), [], ""
+    for page, body in enumerate(pages, 1):
+        bits, carry = chunk_page(body, carry)
+        for ordinal, bit in enumerate(bits):
+            path = bit["clause"] or "Preamble"
+            parent_path = re.sub(r"\s*\([ivxlcdm]+\)$", "", path, flags=re.I).strip() or path
+            parent_id = f"{src['source_id']}:s:{_slug(parent_path)}"
+            meta = {"source_id": src["source_id"], "title": src["title"], "authority": src["authority"],
+                    "jurisdiction": canon_jurisdiction(src["jurisdiction"]), "doc_type": canon_doc_type(src["doc_type"]),
+                    "binding_status": src["binding_status"], "in_force_from": src["in_force_from"],
+                    "licence": src["licence"], "page": page, "clause": path, "clause_path": path,
+                    "parent_id": parent_id, "level": "clause", "lang": src.get("lang", "en"), "sha256": sha,
+                    "url": src["url"], "tier": src["tier"],
+                    # Chroma metadata accepts scalar values only; preserve link
+                    # lists losslessly for retrieval as compact JSON.
+                    "amendment_links": json.dumps(list(src.get("amends") or []) + list(src.get("amended_by") or []))}
+            clauses.append({"id": f"{src['source_id']}:p{page}:c{ordinal}",
+                            "text": _header(meta) + "\n" + bit["text"], "meta": meta})
+    parents: dict[str, list[dict]] = {}
+    for row in clauses:
+        parents.setdefault(row["meta"]["parent_id"], []).append(row)
+    output = clauses[:]
+    for parent_id, children in parents.items():
+        words = " ".join(r["text"].split("\n", 1)[-1] for r in children).split()
+        # Parent chunks are bounded independently; a suffix avoids duplicate ids
+        # for unusually long statutory sections.
+        for n in range(0, len(words), 2000):
+            first = children[0]
+            meta = dict(first["meta"], level="parent", clause=first["meta"]["clause_path"],
+                        parent_id=parent_id)
+            suffix = "" if n == 0 else f":{n // 2000 + 1}"
+            output.append({"id": parent_id + suffix, "text": _header(meta) + "\n" + " ".join(words[n:n + 2000]),
+                           "meta": meta})
+    return output
+
+
+def build_chunks(corpus: bool = False, corpus_root: Path | None = None, sources_root: Path | None = None,
+                 out: Path | None = None) -> dict:
+    """Write portable v2 JSONL and a content manifest without embeddings."""
+    corpus_root = corpus_root or config.corpus_dir()
+    old_sources = os.environ.get("ORCA_KB_SOURCES")
+    if sources_root is not None:
+        os.environ["ORCA_KB_SOURCES"] = str(sources_root)
+    try:
+        srcs = official_sources() + (corpus_sources(corpus_root) if corpus else [])
+    finally:
+        if sources_root is not None:
+            if old_sources is None:
+                os.environ.pop("ORCA_KB_SOURCES", None)
+            else:
+                os.environ["ORCA_KB_SOURCES"] = old_sources
+    rows, skipped, sources = [], [], []
+    for src in srcs:
+        try:
+            got = v2_source_chunks(src)
+        except Exception as exc:
+            skipped.append({"source_id": src["source_id"], "error": str(exc)})
+            continue
+        if not got:
+            skipped.append({"source_id": src["source_id"], "error": "no extractable text"})
+            continue
+        rows.extend(got)
+        sources.append({"source_id": src["source_id"], "sha256": sha256_file(src["path"]), "chunks": len(got)})
+    out = out or config.vec_build_dir() / "chunks.jsonl"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text("".join(json.dumps(r, ensure_ascii=False, sort_keys=True) + "\n" for r in rows))
+    manifest = {"parser_version": "rag-v2-legal-structure-1", "chunk_count": len(rows), "source_count": len(sources),
+                "sources": sources, "skipped": skipped, "chunks_sha256": sha256_file(out)}
+    (out.parent / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
+    return {"out": str(out), **manifest}
+
+
+def load_vectors(chunks: Path | None = None, embeddings: Path | None = None, ids: Path | None = None) -> dict:
+    """Load Colab vectors into orca_v2 exactly as supplied; never call the embedder."""
+    import numpy as np
+    base = config.vec_build_dir()
+    chunks, embeddings, ids = chunks or base / "chunks.jsonl", embeddings or base / "embeddings.f16.npy", ids or base / "ids.json"
+    rows = [json.loads(line) for line in chunks.read_text().splitlines() if line.strip()]
+    vector_ids, vectors = json.loads(ids.read_text()), np.load(embeddings)
+    if len(rows) != len(vector_ids) or len(rows) != len(vectors):
+        raise ValueError("chunks.jsonl, ids.json and embeddings.f16.npy have different lengths")
+    if [r["id"] for r in rows] != vector_ids:
+        raise ValueError("ids.json does not exactly match chunks.jsonl order")
+    col = store.collection(name="orca_v2")
+    for start in range(0, len(rows), 500):
+        part, vec = rows[start:start + 500], vectors[start:start + 500]
+        col.upsert(ids=[r["id"] for r in part], documents=[r["text"] for r in part],
+                   metadatas=[r["meta"] for r in part], embeddings=[[float(x) for x in v] for v in vec])
+    from . import retrieve
+    retrieve.invalidate()
+    return {"collection": "orca_v2", "loaded": len(rows), "dimensions": int(vectors.shape[1]) if len(vectors.shape) > 1 else 0}
 
 
 def source_chunks(src: dict) -> list[dict]:
@@ -173,6 +296,31 @@ def record_chunks() -> list[dict]:
 
 
 # ---------------------------------------------------------------- incremental write
+_REUSE: dict | None = None
+
+
+def _reuse_map() -> dict:
+    """text_sha -> embedding from another store (ORCA_REUSE_CHROMA, a read-only copy), same embed model.
+
+    Lets a rebuild into a scratch directory skip re-embedding chunks whose text did not change. Only used
+    when the env var is set; the live store is never opened by this path.
+    """
+    global _REUSE
+    if _REUSE is None:
+        _REUSE = {}
+        src = os.environ.get("ORCA_REUSE_CHROMA")
+        if src:
+            import chromadb
+            col = chromadb.PersistentClient(path=src).get_collection(config.COLLECTION)
+            model = config.embed_model()
+            for off in range(0, col.count(), 2000):
+                g = col.get(limit=2000, offset=off, include=["embeddings", "metadatas"])
+                for vec, m in zip(g["embeddings"], g["metadatas"]):
+                    if m.get("embed_model") == model and m.get("text_sha"):
+                        _REUSE.setdefault(m["text_sha"], [float(x) for x in vec])
+    return _REUSE
+
+
 def _upsert(rows: list[dict], what: str, log) -> int:
     """Embed and write rows whose text changed. Returns number written."""
     col = store.collection()
@@ -190,14 +338,24 @@ def _upsert(rows: list[dict], what: str, log) -> int:
             todo.append(r)
     if not todo:
         return 0
+    reuse = _reuse_map()
+    reused = [r for r in todo if r["meta"]["text_sha"] in reuse]
+    fresh = [r for r in todo if r["meta"]["text_sha"] not in reuse]
     t0 = time.time()
     B = 64
-    for i in range(0, len(todo), B):
-        part = todo[i:i + B]
+    for i in range(0, len(reused), B):
+        part = reused[i:i + B]
+        col.upsert(ids=[p["id"] for p in part], embeddings=[reuse[p["meta"]["text_sha"]] for p in part],
+                   documents=[p["text"] for p in part], metadatas=[p["meta"] for p in part])
+    if reused:
+        log(f"  {what}: {len(reused)} chunks reused from ORCA_REUSE_CHROMA")
+    for i in range(0, len(fresh), B):
+        part = fresh[i:i + B]
+        from . import embed as emb
         vecs = emb.embed([p["text"] for p in part])
         col.upsert(ids=[p["id"] for p in part], embeddings=vecs, documents=[p["text"] for p in part],
                    metadatas=[p["meta"] for p in part])
-        log(f"  {what}: {min(i + B, len(todo))}/{len(todo)} chunks embedded ({time.time() - t0:.0f}s)")
+        log(f"  {what}: {min(i + B, len(fresh))}/{len(fresh)} chunks embedded ({time.time() - t0:.0f}s)")
     return len(todo)
 
 
