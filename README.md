@@ -180,6 +180,8 @@ separates those mappings from observed proof.
 
 ## Reproduce and inspect
 
+The [documentation index](docs/README.md) separates current setup guides from historical planning records.
+
 Use [docs/RUN.md](docs/RUN.md) for the maintained test commands and
 [docs/KBVEC.md](docs/KBVEC.md) for retrieval methods and limitations. No real satellite connectivity,
 deployed operator recovery, perfect retrieval or automatic legal correctness is claimed. Model

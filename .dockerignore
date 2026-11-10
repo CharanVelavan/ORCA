@@ -25,3 +25,17 @@ corpus/
 data/raw/
 finetune/
 *.log
+
+# Local judge environment, downloaded weights and generated working artifacts
+.venv-judge/
+.vercel/
+.codex/
+.shots/
+.detector-work/
+output/
+node_modules/
+models/llm/
+kb/vec_build/
+kb/vec_cache/
+kb/vec_snapshots/
+*.tsbuildinfo

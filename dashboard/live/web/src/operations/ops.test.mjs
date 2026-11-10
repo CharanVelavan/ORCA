@@ -8,7 +8,7 @@ import { buildSync } from 'esbuild';
 
 function load(rel) {
   const source = fileURLToPath(new URL(rel, import.meta.url));
-  const compiled = buildSync({ entryPoints: [source], bundle: true, platform: 'node', format: 'cjs', write: false, logLevel: 'silent' });
+  const compiled = buildSync({ entryPoints: [source], bundle: true, platform: 'node', format: 'cjs', write: false, loader: { '.css': 'empty' }, logLevel: 'silent' });
   const filename = join(dirname(source), 'ops-test-bundle.cjs');
   const bundle = new Module(filename);
   bundle.filename = filename;
@@ -44,8 +44,10 @@ test('remediation steps follow the S1 fixture', () => {
 test('attack-vs-fault evidence uses observed signals only', () => {
   const models = events.filter((event) => event.kind === 'model');
   const ticks = events.filter((event) => event.kind === 'tick');
-  const site = models.find((event) => event.model === 'M3' && event.class && event.class !== 'normal')?.site ?? 'CHN-01';
-  const view = attackFaultEvidence(models, ticks, site);
+  const attack = models.find((event) => event.model === 'M3' && event.audience !== 'control' && event.class?.startsWith('attack'));
+  assert.ok(attack, 'S1 fixture must include a public attack classification');
+  const site = attack.site;
+  const view = attackFaultEvidence(models.filter((event) => event.seq <= attack.seq), ticks, site);
   assert.ok(view.sampleCount > 0);
   assert.equal(view.attack.find((item) => item.id === 'm3-attack').met, true);
   const leaked = attackFaultEvidence([{ kind: 'model', model: 'M3', site, class: 'attack-management-plane', audience: 'control', seq: 1, t: 0, ts: '' }], [], site);

@@ -1,3 +1,5 @@
+> **Historical planning record.** Original status and assumptions may be superseded. For current setup, use the [documentation index](README.md) and [judge reproducibility guide](JUDGE_REPRODUCIBILITY.md).
+
 # ORCA-NTN: build plan and design decisions
 
 Written 7 Nov 2026 from the planning discussion. Submission is due **10 Nov 2026**; the Dubai

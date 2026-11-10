@@ -50,7 +50,7 @@ The implementation references describe where to inspect evidence; they do not ce
 | D11 — AI for inclusion | Explicit emergency/hospital service protection or priority is planned. | Per-service demand/delivery and a recorded priority/warning/response. Service names or aggregate uptime alone are insufficient; no real-world equity outcome is claimed. |
 | D13 — digital infrastructure | Link, battery, gateway and capacity state are modelled. | Emulated telemetry, model/allocation/route records and measured service outcomes; do not imply deployed satellite infrastructure. |
 
-Useful implementation references: [docs/AGENTS.md](../AGENTS.md), [orca/protocol.py](../../orca/protocol.py),
+Useful implementation references: [docs/APPLICATION_ROLES.md](../AGENTS.md), [orca/protocol.py](../../orca/protocol.py),
 [orca/remediation.py](../../orca/remediation.py), [orca/live/session.py](../../orca/live/session.py), and
 [dashboard/live/web/src/workflow.ts](../../dashboard/live/web/src/workflow.ts). Human review confirmation,
 execution, clean-path success, staged rollout and re-attack success remain separate facts.

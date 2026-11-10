@@ -1,4 +1,7 @@
-# ORCA-NTN dashboard
+# Legacy lightweight replay viewer
+
+For the current exercise dashboard, use the [project quick start](../README.md) and
+[website guide](../guide.md). This directory also retains the original standard-library replay viewer described below.
 
 Reads run files and replays them in a browser. Offline: no LLM, no network, no build step, standard library only.
 Every satellite or NTN link shown is emulated.

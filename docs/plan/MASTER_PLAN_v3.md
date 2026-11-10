@@ -1,3 +1,5 @@
+> **Historical planning record.** Original status and assumptions may be superseded. For current setup, use the [documentation index](../README.md) and [judge reproducibility guide](../JUDGE_REPRODUCIBILITY.md).
+
 # ORCA-NTN master plan v3 (agreed with the user, 8 Nov 2026)
 
 **Read this first in a new session.** It supersedes `docs/BUILD_PLAN_v2.md` and the older parts of

@@ -17,7 +17,7 @@ kb/vec_snapshots/
 kb/vec_cache/
 kb/vec_build/*
 !kb/vec_build/manifest.json
-dashboard/live/web/node_modules/
+node_modules
 
 # Local browser verification, scratch work and incremental compiler cache
 .shots/
@@ -31,3 +31,13 @@ models/llm/
 
 # Isolated judge bootstrap environment
 .venv-judge/
+
+# Private local configuration and deployment metadata
+.env.*
+!.env.example
+.vercel/
+.codex/
+Thumbs.db
+
+# Generated production working files; published dashboard media remains trackable
+/output/

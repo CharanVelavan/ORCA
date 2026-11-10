@@ -1,3 +1,5 @@
+> **Historical planning record.** Original status and assumptions may be superseded. For current setup, use the [documentation index](README.md) and [judge reproducibility guide](JUDGE_REPRODUCIBILITY.md).
+
 > **8 Nov update: read `docs/plan/MASTER_PLAN_v3.md` first.** It is the agreed plan (goal, missions,
 > agent split, waves, rules, state). It overrides this file where they conflict.
 
