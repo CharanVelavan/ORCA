@@ -6,7 +6,7 @@
 <p align="center"><strong>Cyber-aware coordination for NTN.</strong><br/>Team <strong>SolarSailor</strong> · SSN, Chennai · ITU AI for Good Sandbox Hackathon UAE</p>
 
 <p align="center">
-  <a href="https://orca-demo-blush.vercel.app"><strong>Explore the demo ↗</strong></a> &nbsp;·&nbsp;
+  <a href="https://orca-ntn.vercel.app"><strong>Explore the demo ↗</strong></a> &nbsp;·&nbsp;
   <a href="https://github.com/CharanVelavan/ORCA#quick-start">Run locally</a> &nbsp;·&nbsp;
   <a href="https://github.com/CharanVelavan/ORCA/blob/main/docs/JUDGE_REPRODUCIBILITY.md">Reproduce results</a> &nbsp;·&nbsp;
   <a href="https://huggingface.co/CharanVelavan/orca-ntn-qwen3.6-35b-a3b-ft-gguf">Fine-tuned Qwen</a>
@@ -31,9 +31,9 @@ and retain evidence for policy review.
 
 ## Explore before installing
 
-![Recorded walkthrough of the learning page, Console, Policy, Recovery and Audit](docs/images/showcase.gif)
+![Accelerated browser playback of the recorded S1 Console](docs/images/scenario-replay.gif)
 
-*An animated overview of the hosted recorded showcase—not a fresh model-performance test.*
+*Real browser-playback frames from the current hosted S1 recording, accelerated for the GIF. No live inference or model-performance measurement.*
 
 | Open the hosted showcase | Run the implementation locally |
 |---|---|
@@ -42,7 +42,7 @@ and retain evidence for policy review.
 
 ## Inside ORCA-NTN
 
-![Architecture and responsibility boundaries in the ORCA-NTN learning dashboard](docs/images/architecture.png)
+![Architecture and responsibility boundaries in the ORCA-NTN learning dashboard](docs/images/architecture-full.png)
 
 | Component | Its job |
 |---|---|
@@ -54,7 +54,11 @@ and retain evidence for policy review.
 
 | Recorded Console | Policy evidence |
 |---|---|
-| ![Console with observed topology and the complete zoomable response flow](docs/images/console.png) | ![Policy verdicts, reporting clocks and candidate gaps](docs/images/policy.png) |
+| ![Console with observed topology and the complete zoomable response flow](docs/images/console-recorded.png) | ![Policy verdicts, reporting clocks and candidate gaps](docs/images/policy-recorded.png) |
+
+| Recovery validation | Audit & Replay |
+|---|---|
+| ![Recorded staged rollout and recovery evidence](docs/images/recovery-recorded.png) | ![Browser-verified recorded audit evidence](docs/images/audit-verified.png) |
 
 <a id="quick-start"></a>
 
