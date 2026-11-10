@@ -1,70 +1,76 @@
-# ORCA-NTN demo
+# ORCA-NTN judge demonstration
 
-The demo runs entirely on the emulated Chennai network. It uses the mock LLM and makes no external model calls.
+All links, conditions and recovery actions are emulated. This walkthrough uses one shared session.
 
-## Start the console
+## Start locally
 
-From the repository root, start the live server:
+Follow [RUN.md](RUN.md) to create a Python 3.12 environment and install requirements, then run:
 
 ```bash
 python -m orca.live --scenario S1 --llm mock --port 8060
 ```
 
-Open [http://127.0.0.1:8060/](http://127.0.0.1:8060/) in a browser. On Simulator, select a scenario and click **Start selected scenario**; this starts the emulated session and its clock. Use the clock controls to pause or resume it. All displayed times are simulation time in IST.
+Open http://127.0.0.1:8060/. First startup trains the full synthetic model bundle if the ignored
+`models/orca_models.pkl` cache is missing. Allow several minutes before expecting the server to answer.
+Later startups reuse the cache. The committed dashboard and media require no frontend build.
 
-For a source build, with Node.js 24 and npm installed:
+## Main judge path
+
+1. **Learn:** inspect the architecture and KB/RAG explanation. Play the narrated film if useful.
+2. **Scenarios:** select S1 and read its objective, signals, planned response, schedule and planned
+   Readiness dimensions. Selection is a preview; press **Start exercise** to create a fresh run and
+   enter **Console** automatically.
+3. **Console:** pause or use **Step 1 min** to inspect released observations. Read Models, Alerts and
+   Agents. The director rail launches additional emulated conditions; its countdown and Stop affect
+   future simulated ticks. Stop does not undo earlier changes. Director truth is separately labelled.
+4. **Approvals:** inspect the exact owner, targets, evidence, clone test and expiry. Approve or reject
+   manually. Approval does not guarantee execution: every backend guard still applies. No PIN is used.
+5. **Policy & Gaps:** inspect cited duties, separate reporting triggers and candidate gaps. Scroll the
+   clock list. New runs use Indian rules with EU/global comparison sources in the same collection.
+6. **Recovery:** inspect execution results, rollout health, clean-path and re-attack evidence. Preserve
+   refusals and missing evidence; throughput alone does not prove secure recovery.
+7. **Audit & Replay:** select the recording created by this run, scrub its events and **Verify chain**.
+   **Recording evidence JSON** exports public evidence for that entire recording, independently of
+   search filters. It may include several incidents and cannot independently verify the original chain.
+8. Use **Judge walkthrough** to review the six available evidence checkpoints. Completion measures
+   your review, not whether recovery succeeded. The separate **Guided tour** explains the interface.
+
+Use **Change scenario** to return to the briefing. Visiting Scenarios does not reset the active run.
+Replay stays read-only across views. Choose **Return to live** in Audit before changing an exercise.
+
+## Other exercises
+
+- **S2:** inspect rain/battery forecasts and constrained service capacity. Check actual 112/hospital
+  demand and delivery rather than assuming the scripted priority outcome happened.
+- **S3:** inspect jamming and unsafe or foreign backup offers; require a verified domestic path.
+- **N5:** inspect separate reporting clocks, telecom/grid evidence and candidate findings.
+
+There is no Active KB toggle. Historical EU recordings retain their own rule context; paired country
+comparisons can use the headless `--kb` option. The website starts new runs with India.
+
+## Real Qwen inference
+
+A model server must already be running. Open **Model connection**, enter the OpenAI-compatible
+base URL and exact model ID returned by `/v1/models`, test tool compatibility, then choose **Use for
+next run**. Select **Live endpoint / Qwen** and start the scenario. Configuration is in memory and
+resets when this dashboard server restarts. Keep API keys out of chat and source control.
+
+Alternatively export `LLM_BASE_URL`, `LLM_MODEL` and, if required, `LLM_API_KEY` in the shell before
+launching with `--llm local`. The Python CLI does not automatically load `.env`.
+
+Mock simulation makes no Qwen calls. Recorded replay makes no new inference calls. Live endpoint
+mode uses the configured server and reports errors; it does not silently fall back to mock replies.
+
+## Save a deterministic fallback recording
 
 ```bash
-cd dashboard/live/web
-npm ci
-npm run build
-cd ../../..
+python -m orca.live.headless --scenario S1 --llm mock --runs-dir runs
 ```
 
-The build is served by the live server. If Python dependencies are not installed, install the repository requirements in the active Python environment before starting the server.
+The headless driver uses a labelled scripted commander with a fixed approval delay. It exercises the
+same owner, token, expiry and execution guards. It is not a recording of a person approving in the UI.
+It writes audit and stream files. Restart the dashboard after generating recordings if the Audit list
+was already open; choose the stream recording in Audit and verify the chain.
 
-## Path 1: S1 - SAT-MGMT intrusion and recovery
-
-1. Select **S1** in Simulator and click **Start selected scenario**.
-2. Open **Operations**. Follow the M1/M3 evidence and the alert as the emulated incident develops. The intrusion targets SAT-MGMT, the operator's ground management network; the satellite itself is not compromised.
-3. Review the PB-01 request, its owner, targets, clone-test result and evidence. The incident commander approves or rejects it. Use the explicit confirmation action; no commander PIN is required. Execution still checks the exact plan, owner, expiry and safety guards.
-4. Open **Recovery** to inspect the execute diff, staged rollout, rollback and re-attack check, together with the event-derived delivery and timing results.
-5. Open **Investigation** to review the model and telemetry evidence. Ground truth is available only on Simulator.
-
-## Path 2: S2 - storm and capacity allocation
-
-1. In Simulator, select **S2** and click **Start selected scenario**.
-2. Review **Operations** for the storm, the clean-path check and the recovery action.
-3. Open **Recovery** and inspect the M4 allocation and delivered Mbps by service. During scarcity, verify from the displayed event data that 112 and hospital demand are prioritized while lower-priority service may be shed.
-
-## Path 3: N5 - reporting clocks and knowledge-base comparison
-
-1. In Simulator, select **N5** and click **Start selected scenario**.
-2. Let the simulation reach minute 64 (about 20:04 IST from its 19:00 start). This is when N5 evaluates the data-location question and the related candidate finding can appear.
-3. Open **Policy & Gaps** and review the reporting obligations, their trigger basis and due times, and the gap records.
-4. Switch the knowledge base from **India** to **EU** using the page control. Compare the updated clocks and gaps, then switch back to India. The records shown are those supplied by the selected knowledge base.
-
-## Headless smoke checks
-
-These commands run a scenario without the browser and print its final summary:
-
-```bash
-python -m orca.live.headless --scenario S1 --llm mock
-python -m orca.live.headless --scenario S2 --llm mock
-python -m orca.live.headless --scenario N5 --llm mock
-```
-
-Use the browser for the commander approval flow and the India/EU knowledge-base comparison. Do not treat simulator ground truth as operator evidence.
-
-
-## Redesigned dashboard and tour
-
-Open the landing page to learn the method. Use **Guided tour** in the navigation for a fourteen-step walkthrough. Follow **Learn → Simulator → Operator → Policy & Gaps → Recovery → Audit & Replay**.
-
-The Simulator previews each scenario before starting it and explains its planned events. Attack launch controls operate only inside the emulated network. The Operator receives observed public evidence.
-
-For live inference, open **Model connection**, enter an OpenAI-compatible base URL and exact served model identifier, test tool compatibility, and select **Use for next run**. Choose **Live endpoint / Qwen**, then start a new run. Mock simulation and recorded replay remain explicit alternatives. A model server must already be running; the dashboard does not download or host the model.
-
-Use **Shared view** to run the Simulator beside the Operator in one session. The Simulator sees director truth; the Operator receives released observations. Open **Mode help** for the difference between mock, live and recorded replay.
-
-Use **Detailed graph** on Operator to open the full execution diagram or system architecture. Lifecycle **Seen** means observed work, not verified incident completion. Historical verdicts show their evaluation time separately from current clocks. See [the journey implementation notes](plan/DASHBOARD_JOURNEY_IMPLEMENTATION.md) for contracts and validation.
+For further details, see [the website guide](../guide.md), [KB setup](KBVEC.md) and
+[the dimension mapping](plan/SCENARIO_DIMENSION_COVERAGE.md).

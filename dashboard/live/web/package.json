@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prebuild": "node scripts/sync-guides.mjs",
+    "predev": "node scripts/sync-guides.mjs"
   },
   "dependencies": {
     "@fontsource/geist-mono": "^5.3.0",

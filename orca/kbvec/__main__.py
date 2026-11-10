@@ -28,8 +28,8 @@ def main() -> None:
                    help="jurisdiction=IN|EU|US|AE|INTL, doc_type=act|rules|direction|guideline|standard|licence|...;"
                         " repeat a key or use commas for 'any of'")
     p.add_argument("--no-dedupe", action="store_true", help="keep identical or near-identical chunks")
-    p.add_argument("--v2", action="store_true", help="run fixed dev/test v2 evaluation and threshold calibration")
     p = sub.add_parser("eval", aliases=["evaluate"], help="retrieval test (recall@5, MRR)")
+    p.add_argument("--v2", action="store_true", help="run fixed dev/test v2 evaluation and threshold calibration")
     p.add_argument("--no-rerank", action="store_true")
     p.add_argument("--tier", choices=["corpus", "verified"], help="restrict retrieval to one tier")
     p.add_argument("--no-dedupe", action="store_true", help="keep identical or near-identical chunks")

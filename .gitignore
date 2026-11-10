@@ -28,3 +28,6 @@ dashboard/live/web/.wave2-home-sim.patch
 
 # local LLM weights (GGUF, adapters) - never commit
 models/llm/
+
+# Isolated judge bootstrap environment
+.venv-judge/

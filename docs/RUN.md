@@ -1,236 +1,231 @@
-# ORCA-NTN: Judge & Evaluator Run Guide
+# ORCA-NTN local judge run guide
 
-This guide provides step-by-step instructions to run and evaluate **ORCA-NTN** (Orchestrated Response and Coordination Agents for Non-Terrestrial Networks).
+Every NTN link and network action is emulated. The recommended dashboard route is local Python.
+The repository includes the built frontend, so Node.js is optional unless editing the website.
 
-> [!IMPORTANT]
-> **Emulation Notice:** Every satellite and non-terrestrial network (NTN) link in ORCA-NTN is strictly **emulated** within a software sandbox. No live orbital assets, commercial satellite constellations, or physical telecommunications infrastructure are accessed or controlled.
+## Clean installation
 
----
+Use Python 3.12 and Git. On macOS, LightGBM requires the OpenMP runtime (`brew install libomp`)
+if it is not installed. On Debian/Ubuntu install `libgomp1` with the system package manager.
 
-## 1. Quick Start via Docker Compose (Recommended)
-
-Docker Compose provides a reproducible environment that runs the entire testbed on one machine, including the ORCA-NTN application and a persistent ChromaDB vector store.
-
-### Prerequisites
-- Docker Engine 24.0+ / Docker Desktop (verified with Docker version 29.5.3)
-- Docker Compose v2.20+
-
-### Step 1: Clone and Enter the Repository
 ```bash
-git clone <repo-url>
-cd orca-ntn
-```
-
-### Step 2: Configure Environment (Optional)
-By default, ORCA-NTN runs in **offline mock mode** requiring no external API keys, internet connectivity, or credentials.
-
-To configure external endpoints, copy the template:
-```bash
-cp .env.example .env
-```
-*(Never bake secrets or tokens into images; Compose automatically pulls variables from `.env` without printing secrets.)*
-
-### Step 3: Run with Docker Compose
-To build the image and run the default demo scenario (`S1`):
-```bash
-docker compose up --build
-```
-Or to run via an ephemeral one-off container:
-```bash
-docker compose run --rm orca
-```
-
-### Step 4: Run Any Specific Scenario in Docker
-You can execute any of the 10 scenarios (`S0`–`S3`, `N1`–`N5`, `CAP`) directly:
-```bash
-# Run scenario S1 with deterministic rule engine
-docker compose run --rm orca python run_demo.py --scenario s1
-
-# Run scenario S1 without rules (baseline comparison)
-docker compose run --rm orca python run_demo.py --scenario s1 --no-rules
-
-# Run full capability scenario
-docker compose run --rm orca python run_demo.py --scenario cap
-```
-
-### Step 5: Stop Services
-```bash
-docker compose down
-```
-ChromaDB state is persisted to the local `./chroma` directory across container restarts.
-
----
-
-## 2. Quick Start via Local Python Environment
-
-If you prefer running directly on your host machine using a Python virtual environment:
-
-### Prerequisites
-- Python 3.12 (Python 3.11+ supported for core rules/tests; 3.12 recommended for vector KB)
-- Git
-
-### Step 1: Set Up Virtual Environment
-```bash
-cd orca-ntn
+git clone https://github.com/CharanVelavan/ORCA.git
+cd ORCA
 python3.12 -m venv .venv
 source .venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install --require-hashes -r requirements-judge.lock
+python -m orca.live --scenario S1 --llm mock --port 8060
 ```
-*(On Debian/Ubuntu Linux systems, ensure `libgomp1` is installed: `sudo apt-get install -y libgomp1` for LightGBM OpenMP support).*
 
-### Step 2: Run the Verification Suite
-Run the test suite offline with mock LLM:
+Open http://127.0.0.1:8060/. First startup trains M1–M3 on synthetic emulator data when the
+`models/orca_models.pkl` cache is absent; allow several minutes. Subsequent starts reuse it. The
+training can update `orca/models/metrics.json` and reports a non-fatal core-detection warning on some
+Macs. It does not require a Qwen endpoint or the full vector corpus.
+
+The server binds to loopback. Choose another free `--port` for concurrent tests. The simulation starts
+paused. In **Scenarios**, preview an exercise and press **Start exercise** to start its clock and open
+**Console**. Follow [DEMO.md](DEMO.md) for Console → Policy → Recovery → Audit.
+
+For the maintained `.venv-judge` launcher, optional model/embedding downloads and Windows setup, use
+[JUDGE_REPRODUCIBILITY.md](JUDGE_REPRODUCIBILITY.md) and [JUDGE_WINDOWS.md](JUDGE_WINDOWS.md).
+The [verification record](JUDGE_VERIFICATION.md) separates the commands actually run from platform
+and benchmark checks that remain unverified.
+
+## Scenarios and planned dimensions
+
+| ID | Exercise | Planned dimensions out of the selected nine |
+|---|---|---:|
+| S0 | Normal baseline and covered duties | 5 |
+| S1 | Ground-management intrusion and terminal loss | 9 |
+| S2 | Storm, battery risk and scarce service capacity | 9 |
+| S3 | Jamming and unsafe backup routes | 9 |
+| N1 | Hospital-corridor power and battery failure | 9 |
+| N2 | Payment-routing fault | 8 |
+| N3 | Unprotected feeder-link audit | 8 |
+| N4 | False management telemetry versus independent evidence | 9 |
+| N5 | Telecom/grid incident and separate reporting clocks | 9 |
+| CAP | Compound weather, intrusion, battery and capacity constraints | 9 |
+
+These are project mappings, not official readiness scores or observed outcomes. Reasons and evidence
+gates appear in the scenario briefing and [mapping](plan/SCENARIO_DIMENSION_COVERAGE.md).
+India is the default rule context; EU/global sources remain comparisons. No Active KB toggle exists.
+
+## Model modes and connection
+
+- **Mock simulation:** fresh simulator, models and rules; deterministic agent stand-ins; no Qwen call.
+- **Live endpoint / Qwen:** fresh simulator with actual OpenAI-compatible model calls.
+- **Recorded replay:** previously recorded evidence; no new inference or exercise changes.
+
+For Qwen, start the model server first. Open **Model connection**, configure the base URL and exact
+served model ID, discover/test tools, then **Use for next run**. Select the Live mode and start a new
+exercise. Settings apply to the next run and are held in memory. Existing runs retain their source.
+For the project’s tuned deployment, see [the Qwen evaluation](research/atlas-runs/QWEN_FT_REPORT.md).
+Other tool-compatible local servers are options, not an automatic fallback.
+
+CLI users can export environment variables before starting; the Python entry point does not load
+`.env` automatically. Docker Compose handles `.env` interpolation separately.
+
 ```bash
-python -m pytest -q
+export LLM_BASE_URL="http://localhost:8000/v1"
+# Replace this with the exact identifier returned by your server's /v1/models.
+export LLM_MODEL="orca-ntn-qwen-ft"
+export LLM_MODE=live
+python -m orca.live --scenario S1 --llm local --port 8060
 ```
-*Expected result:* 227+ passed (offline deterministic test double, zero external network calls).
 
-### Step 3: Validate the Knowledge Base
-Ensure all regulatory records and citations meet strict schema criteria:
+If authentication is required, set `LLM_API_KEY` privately or enter it in Model connection. Never
+commit it. The dashboard hosts neither Qwen nor the embedding model. A fresh clone does not contain
+the full vector index or response cache; [KBVEC.md](KBVEC.md) explains retrieval setup. Structured
+records and deterministic rules remain available offline.
+
+## Headless recording and checks
+
 ```bash
 python tools/validate_kb.py
-```
-*Expected result:* `OK` (validates all jurisdiction records, gaps, and verified official quotes).
-
-### Step 4: Verify Scenario Consistency
-Replay all 10 scenario event streams and evaluate state consistency:
-```bash
 python scenarios/check_scen.py
+python -m orca.live.headless --scenario S1 --llm mock --runs-dir runs
+python -m pytest -q
 ```
-*Expected result:* 0 problems across all scenarios (`CAP`, `N1`–`N5`, `S0`–`S3`).
 
----
+The headless commander is a scripted stand-in; the recording labels that fact. Recordings remain in
+`runs` when explicitly requested. Audit can load them after a dashboard restart. Verify the
+original chain in Audit. Public exports withhold control entries and cannot verify the full chain.
+Optional model/index tests may skip when their external artifacts are unavailable. Report the actual
+pytest result rather than assuming a historical count.
 
-## 3. Running Scenarios (S0–S3, N1–N5, CAP)
+## Evaluation and performance inspection
 
-ORCA-NTN includes ten reproducible scenarios testing automated fault vs. attack classification, regulatory compliance, multi-agency coordination, and gap detection.
+Run from the repository root with the prepared environment's interpreter. The commands below use
+`python` after activating that environment: `.venv` for the manual installation above, or
+`source .venv-judge/bin/activate` for the launcher environment. On Windows, use
+`.\.venv-judge\Scripts\python.exe` in place of `python`; activation is optional.
 
-### Scenario Descriptions
-
-| Scenario | Description | Key Focus |
-|---|---|---|
-| **S0** | Baseline Clean Run | Normal network conditions, zero false-alarm gap triggers |
-| **S1** | Multi-Operator Cyber Incident | Space ground-segment attack, reporting clocks, cross-sector coordination |
-| **S2** | Priority & Conflict Resolution | Competing emergency vs. critical-infrastructure traffic routing |
-| **S3** | Regulatory Regime Swap | Comparative analysis across jurisdictions (e.g. India vs. Global/EU) |
-| **N1** | Weather Fade vs. Jamming | Anomaly detection differentiating rain fade from uplink jamming |
-| **N2** | Cascading Power Outage | Backhaul battery depletion and critical-load shedding |
-| **N3** | Ground Segment Misconfiguration | VPN credential misuse and terminal unresponsiveness |
-| **N4** | Coordinated Physical + Cyber Attack | Multi-site simultaneous failover and path validation |
-| **N5** | Downstream Supply Chain Breach | Third-party maintenance vector and notification propagation |
-| **CAP** | Full Capability Benchmark | End-to-end evaluation covering all 9 regulatory gap categories |
-
-### Execution Commands
-
-Run any scenario using `run_demo.py`:
+First check the evaluation interfaces without a model request:
 
 ```bash
-# Core Scenarios
-python run_demo.py --scenario s0
-python run_demo.py --scenario s1
-python run_demo.py --scenario s2
-python run_demo.py --scenario s3
-
-# Network & Threat Scenarios
-python run_demo.py --scenario n1
-python run_demo.py --scenario n2
-python run_demo.py --scenario n3
-python run_demo.py --scenario n4
-python run_demo.py --scenario n5
-
-# Full Capability Scenario
-python run_demo.py --scenario cap
+python -m pytest -q tests/test_eval_cases.py tests/test_kbvec_cli.py
+python finetune/eval_cases.py --help
+python -m orca.kbvec eval --help
 ```
 
-### With Rules vs. Without Rules Comparison
-ORCA-NTN demonstrates the critical necessity of a deterministic policy engine over raw LLM reasoning:
+### Fresh retrieval evaluation
 
-1. **With Rules (Default):**
-   ```bash
-   python run_demo.py --scenario s1
-   ```
-   *Output:* Deterministic verdicts (`COMPLIANT`, `CONFLICT`, `AMBIGUITY`, `POTENTIAL_GAP`) verified against exact KB record citations (`GAP-IN-01`, `GAP-IN-02`, `GAP-IN-09`).
+Restore the pinned vector files and start a compatible embedding service using
+[the reproducibility guide](JUDGE_REPRODUCIBILITY.md#6-restore-and-use-rag).
+The following example uses the helper's local embedding service on port 1235; use the actual URL
+and exact advertised embedding ID for an external service. The embedding service must remain running.
+This is separate from the chat endpoint.
 
-2. **Without Rules Baseline (`--no-rules`):**
-   ```bash
-   python run_demo.py --scenario s1 --no-rules
-   ```
-   *Output:* Rule engine bypassed; agent prompts execute without statutory constraints, revealing missed gap detections and ungrounded coordination decisions.
-
-Every execution produces an immutable, SHA-256 chained audit trail stored in `runs/<SCENARIO>-<mode>.jsonl`.
-
----
-
-## 4. LLM Configuration Modes
-
-ORCA-NTN supports multiple execution backends depending on judge environment and hardware availability:
-
-### Option 1: Deterministic Offline Mock (Default & Recommended for Judges)
-- **Zero setup:** Default flag `--llm mock`.
-- **Zero cost & network:** Operates completely offline with no API keys or local LLM servers.
-- **Deterministic:** Provides identical, reproducible verdicts across any operating system.
 ```bash
-python run_demo.py --scenario s1 --llm mock
+export ORCA_EMBED_URL="http://127.0.0.1:1235/v1"
+export ORCA_EMBED_MODEL="text-embedding-qwen3-embedding-8b"
+mkdir -p runs/evaluation
+python -m orca.kbvec eval --v2 --tier corpus > runs/evaluation/rag-v2.json
 ```
 
-### Option 2: Local LM Studio (Local Inference)
-If evaluating with a local model on your laptop:
-1. Launch **LM Studio** and start the local server on `http://localhost:1234/v1`.
-2. Load `qwen2.5-14b-instruct` (or similar OpenAI-compatible model) and nomic embedding model.
-3. Configure your environment:
-   ```bash
-   export LLM_BASE_URL="http://localhost:1234/v1"
-   export LLM_MODEL="qwen2.5-14b"
-   ```
-4. Run:
-   ```bash
-   python run_demo.py --scenario s1 --llm local
-   ```
+PowerShell equivalent, using the launcher environment:
 
-### Option 3: Hosted Qwen Endpoint (Cloud / Atlas Tunnel)
-For live high-capacity evaluations using the hosted Qwen model (e.g., Qwen3.6-35B-A3B on Google Cloud via IAP/SSH tunnel):
-1. Establish the tunnel to the evaluation VM:
-   ```bash
-   # Tunnel exposes hosted endpoint on localhost:8000
-   ```
-2. Configure environment:
-   ```bash
-   export LLM_BASE_URL="http://localhost:8000/v1"
-   export LLM_MODEL="Qwen/Qwen3.6-35B-A3B"
-   ```
-3. Run:
-   ```bash
-   python run_demo.py --scenario s1 --llm local
-   ```
+```powershell
+$env:ORCA_EMBED_URL = "http://127.0.0.1:1235/v1"
+$env:ORCA_EMBED_MODEL = "text-embedding-qwen3-embedding-8b"
+New-Item -ItemType Directory -Force runs\evaluation | Out-Null
+.\.venv-judge\Scripts\python.exe -m orca.kbvec eval --v2 --tier corpus | Set-Content -Encoding utf8 runs\evaluation\rag-v2.json
+```
 
-### Option 4: Exact Replay Mode (`LLM_MODE=replay`)
-To inspect pre-recorded high-parameter live runs without active network calls:
+`--v2` runs the fixed dev/test questions through `search_with_abstention`, with retrieval caching
+disabled. The JSON includes per-question rows, the threshold, `test_n`, `recall@5`, `mrr@10`,
+`ndcg@10`, `negative_accuracy`, `negative_abstention_accuracy`, `amendment_hit_rate`,
+`exact_citation_hit@1` and test-query p50/p95 latency in milliseconds. Recall/MRR/nDCG use positive
+test questions; negative accuracy follows the documented negative-evidence criterion and is distinct
+from refusal rate. `--no-rerank` changes the pipeline and should be labelled as a separate diagnostic.
+
+Keep the vector revision, embedding GGUF/hash and quantization, served ID, reranker, Python lock,
+code revision, hardware and cache state alongside the output. The first run can include reranker
+download/loading overhead; report that state instead of treating latency as a hardware-independent
+promise. The [fresh verification record](JUDGE_VERIFICATION.md) and [historical retrieval results](KBVEC.md)
+describe separate configurations. A quantized query embedder can change rankings.
+
+### Current model smoke evaluation
+
+Start a tool-compatible chat server and replace the model ID below with the exact ID returned by
+its `/v1/models`. This example uses the managed helper alias. Set `LLM_API_KEY` privately if needed.
+
 ```bash
-export LLM_MODE=replay
-python run_demo.py --scenario s1 --llm local
+python finetune/eval_cases.py --model orca-ntn-qwen-ft \
+  --base-url http://127.0.0.1:8000/v1 \
+  --cases finetune/data/cases.jsonl --limit 10
 ```
-*Note:* Replay mode loads cryptographic matches from `data/llm_cache/`. If a new prompt is sent that has not been cached, it informs you to record it with `LLM_MODE=record`.
 
----
+The scorer selects the first ten held-out rows in file order and writes
+`finetune/eval/orca-ntn-qwen-ft-smoke-first10.json`. It makes real model requests but executes no
+tools. Omit `--limit` to score all available held-out rows, with the corresponding additional time
+and model cost. Output records case IDs, the input hash, per-case tool-schema hashes and their source,
+endpoint origin, elapsed seconds, metric denominators and per-case scores. Model IDs are sanitized
+for output filenames; copy results before repeating the same command to retain earlier runs.
 
-## 5. Vector Knowledge Base (ChromaDB)
+`valid_json` measures JSON-object tool arguments among predicted calls and is null when no calls
+were predicted. `unsafe_exec` is a legacy alias for cases that **attempted** forbidden tool calls;
+it does not measure tool execution. `scenario_verdicts_ok` is unmeasured by this scorer. Token speed
+and hardware are not inferred from its elapsed time.
 
-The vector KB (`orca.kbvec`) stores clause embeddings for semantic search and gap discovery over official regulatory texts.
+This ordered smoke run does not reproduce the historical stratified 300-case / 93% tool-selection
+result. The public case pack omits tool schemas; the current CLI supplies current role schemas.
+The exact frozen historical requests, supplied schemas and subset provenance remain missing. See
+the [benchmark boundary and publication follow-up](JUDGE_REPRODUCIBILITY.md#model-benchmark-reproducibility-boundary).
 
-- **Persistent storage:** Located in `./chroma` (and mounted into `/app/chroma` in Docker).
-- **Ingest:** Embeds official source documents and verified records.
-- **Query:** Fast retrieval of relevant regulatory clauses and binding directions.
+### End-to-end exercise timing
 
-Example query using local virtualenv:
+Use a dedicated output directory to retain a fresh headless recording. On macOS/Linux:
+
 ```bash
-python -m orca.kbvec query "6 hour incident reporting window" --filter jurisdiction=IN
+time python -m orca.live.headless --scenario S1 --llm mock --runs-dir runs/performance-mock
 ```
 
----
+For live calls, configure `LLM_BASE_URL`, `LLM_MODEL` and `LLM_MODE=live` as above, then:
 
-## 6. Security and Compliance Rules
+```bash
+time python -m orca.live.headless --scenario S1 --llm local --runs-dir runs/performance-live
+```
 
-- **Commander actions:** Approvals, autonomy changes, kill-switch actions and policy-gap decisions require explicit confirmation, without a PIN. Ownership, scoped expiry, one-time plan tokens and execution guards still apply.
-- **Read-Only Verification:** Hard-coded guardrails prevent modification of verified records in `kb/` during scenario execution.
-- **Audit Verification:** All actions, verdicts, and tool invocations append to a hash-chained audit log verifiable via `orca.audit.AuditLog.verify()`.
+Audit lists recordings directly under `runs/`. To inspect these nested performance outputs in the
+website, copy the chosen `.jsonl` and matching `.stream.jsonl` pair into `runs/`, or use
+`--runs-dir runs` from the start. Keep the pair's filenames unchanged.
+
+In PowerShell, wrap the corresponding interpreter command in `Measure-Command { ... }` to measure
+wall time. The headless commander uses scripted approval/notification delays. Inspect its summary
+and recording for actual guarded execution, refusals, notification status and recovery; elapsed time
+alone does not establish a successful outcome. Simulation minutes and wall seconds are different
+clocks. Preserve cold/warm cache state, endpoint configuration and raw evidence with every result.
+
+## Frontend source build
+
+With Node.js and npm:
+
+```bash
+cd dashboard/live/web
+npm ci
+npm run build
+cd ../../..
+```
+
+Reload the dashboard after rebuilding. The Python server serves `dashboard/live/dist`.
+
+## Docker batch runner
+
+The current Docker Compose command runs `run_demo.py` and a Chroma service. It is a batch runner,
+not the local browser dashboard command above. Docker execution was not part of the clean Python
+verification. Do not expect `docker compose up` to expose a dashboard port.
+
+```bash
+docker compose up --build
+docker compose run --rm orca python run_demo.py --scenario s1
+docker compose run --rm orca python run_demo.py --scenario s1 --no-rules
+docker compose down
+```
+
+## Review boundaries
+
+No commander PIN is required. Manual approvals, scoped autonomy, one-time plan tokens, expiry,
+ownership, clone tests, path checks and the kill switch remain enforced. Policy findings are bounded
+to checked sources. Treat missing evidence, refusal, rollback and reporting status as separate facts.
+See [guide.md](../guide.md) for controls and [API examples](plan/LIVE_API_EXAMPLES.md) for automation.

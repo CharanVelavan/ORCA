@@ -18,6 +18,7 @@ const Investigation = lazy(() => import('./shell/pages/Investigation'));
 const Policy = lazy(() => import('./shell/pages/Policy'));
 const Recovery = lazy(() => import('./shell/pages/Recovery'));
 const Audit = lazy(() => import('./shell/pages/Audit'));
+const Guide = lazy(() => import('./shell/pages/Guide'));
 const NotFound = lazy(() => import('./shell/pages/NotFound'));
 
 function ThemeSync() {
@@ -56,6 +57,7 @@ export default function App() {
             <Route path="/policy" element={<Policy />} />
             <Route path="/recovery" element={<Recovery />} />
             <Route path="/audit" element={<Audit />} />
+            <Route path="/guide" element={<Guide />} />
             <Route path="*" element={<NotFound />} />
           </Route>
           <Route path="/console" element={<KeepQueryRedirect to="/workspace" />} />

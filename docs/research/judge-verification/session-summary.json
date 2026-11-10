@@ -1,0 +1,105 @@
+{
+  "verified_on": "2026-11-10",
+  "baseline_commit": "d73ace6a682483c670c1a570404930691eac75e8",
+  "environment": "macOS arm64, Python 3.12; live chat on GCP L4; RAG embedding CPU Q4_K_M, bge-reranker-base ONNX",
+  "chat_weight_sha256": "011d7797836571495e8faf545101bee1e71d75a39292e06f946e8a3646b54e16",
+  "live_wall_seconds": 886.3,
+  "records": [
+    {
+      "recording": "live-20261110-075836-779395-s1-rules-mock.jsonl",
+      "mode": "mock",
+      "commander": "scripted headless commander",
+      "final_tick": 88,
+      "audit_entries": 325,
+      "stream_events": 1326,
+      "audit_chain_ok": true,
+      "audit_sha256": "22f4570527aef415a4f8cb1b6fa4a75d959da330fe205043782943a85075814d",
+      "stream_sha256": "338a13ae1158cae7ee71053237a5862b3cfd50af85cda38e5beca80ac91bd2e4",
+      "executed": [
+        {
+          "playbook": "PB-01",
+          "ok": true
+        },
+        {
+          "playbook": "PB-11",
+          "ok": true
+        },
+        {
+          "playbook": "PB-06",
+          "ok": true
+        }
+      ],
+      "agent_steps": 210,
+      "agent_finals": 70,
+      "audit_verdicts": 11,
+      "projected_verdict_events": 22,
+      "rejected_citation_occurrences": 0
+    },
+    {
+      "recording": "live-20261110-080452-200375-s1-rules-mock.jsonl",
+      "mode": "mock",
+      "commander": "browser approvals with automated stepping",
+      "final_tick": 88,
+      "audit_entries": 317,
+      "stream_events": 1311,
+      "audit_chain_ok": true,
+      "audit_sha256": "883e2e5780cad9313a0036278cc5a5a5c674dd20b91f0e1d382b1003c06c79cf",
+      "stream_sha256": "f8ec69ac2487514ca41e0765c385d24ffbb3b4d83a81441801e5bc2de976c3f1",
+      "executed": [
+        {
+          "playbook": "PB-01",
+          "ok": true
+        },
+        {
+          "playbook": "PB-11",
+          "ok": true
+        },
+        {
+          "playbook": "PB-06",
+          "ok": true
+        }
+      ],
+      "agent_steps": 204,
+      "agent_finals": 68,
+      "audit_verdicts": 11,
+      "projected_verdict_events": 22,
+      "rejected_citation_occurrences": 0
+    },
+    {
+      "recording": "live-20261110-081234-618448-s1-rules-local.jsonl",
+      "mode": "live_qwen",
+      "commander": "scripted headless commander",
+      "final_tick": 88,
+      "audit_entries": 427,
+      "stream_events": 1428,
+      "audit_chain_ok": true,
+      "audit_sha256": "a88e5b6847b848ba1296006b8c9c111b1209de8b5904dec5eb64ee148fbe9843",
+      "stream_sha256": "aea70925ac25dd4c8c544b1ae83284c20e7901edca5bfd40c7cb584bcfd67635",
+      "executed": [
+        {
+          "playbook": "PB-01",
+          "ok": true
+        },
+        {
+          "playbook": "PB-11",
+          "ok": true
+        },
+        {
+          "playbook": "PB-06",
+          "ok": true
+        }
+      ],
+      "agent_steps": 312,
+      "agent_finals": 70,
+      "audit_verdicts": 11,
+      "projected_verdict_events": 22,
+      "rejected_citation_occurrences": 14
+    }
+  ],
+  "limitations": [
+    "No native Windows runtime execution; Windows/Linux dependency resolution only.",
+    "Full live S1 used structured policy records, not the subsequently restored broad vector index. Fresh broad RAG retrieval was verified separately.",
+    "Current tool scorer tests pass, but no new historical 300-case benchmark score is claimed.",
+    "Raw local recordings remain ignored in runs; this public manifest is not a substitute for their chain verification."
+  ]
+}

@@ -6,18 +6,23 @@ Models detect and forecast. Agents explain evidence and coordinate a response. D
 
 ## Start the website locally
 
-From the repository root, using Python 3.12:
+For the standard judge setup, install 64-bit Python 3.12 and Git, then run the launcher from the repository root:
 
 ```bash
-python3.12 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python -m orca.live --scenario S1 --llm mock --port 8060
+./quickstart.sh
 ```
 
-Open [http://localhost:8060](http://localhost:8060). If the environment is already installed, run only the final command. Choose another free port if needed.
+On Windows PowerShell or Command Prompt:
 
-The server serves the production dashboard in `dashboard/live/dist`. Node.js is needed only when changing or rebuilding the frontend:
+```powershell
+.\quickstart.bat
+```
+
+Open [http://127.0.0.1:8060](http://127.0.0.1:8060). The launcher creates `.venv-judge`, installs the hash-checked `requirements-judge.lock` dependencies and starts mock-agent mode. It downloads no large model or vector payload by default. First startup trains the network-model cache if missing; allow several minutes. macOS needs `libomp` for LightGBM; Linux needs the corresponding OpenMP runtime. Windows instructions and their verification limits are in [JUDGE_WINDOWS.md](docs/JUDGE_WINDOWS.md).
+
+The [full reproducibility guide](docs/JUDGE_REPRODUCIBILITY.md) covers manual virtual environments, hardware planning, verified Hugging Face downloads, a local or remote chat server, and restoring the vector index. [RUN.md](docs/RUN.md) maintains general run and test commands. The chat model, embedding endpoint and local Chroma index are separate optional components; mock mode and dashboard replay need none of those external services.
+
+The Python server serves the bundled dashboard in `dashboard/live/dist`. Node.js is needed only when changing or rebuilding the frontend:
 
 ```bash
 cd dashboard/live/web
@@ -25,7 +30,7 @@ npm ci
 npm run build
 ```
 
-Return to the repository root before starting the Python server. See [docs/RUN.md](docs/RUN.md) for environment and model details.
+Return to the repository root before starting the Python server. Choose a different `--port` for a separate local server. The Python CLI does not automatically load `.env`.
 
 ## Follow the main journey
 
@@ -87,6 +92,28 @@ The mode selector prepares the next run. The source label describes the current 
 
 `localhost` in the model URL means the computer running the ORCA backend. Inside Docker on macOS, a host model server commonly uses `host.docker.internal`. Settings are held in backend memory for the next run. Model errors remain visible; a failed live request is not presented as a successful Qwen response.
 
+### Optional model and RAG downloads
+
+The public tuned model is [Qwen3.6-35B-A3B IQ4_XS](https://huggingface.co/CharanVelavan/orca-ntn-qwen3.6-35b-a3b-ft-gguf), a 19.18 GB weight file. The [RAG v2 release](https://huggingface.co/datasets/CharanVelavan/orca-ntn-kb-v2) contains four required files totaling about 933 MB before local index overhead. Both are optional and pinned/checksum verified by the launcher:
+
+```bash
+./quickstart.sh --download-model --download-only
+./quickstart.sh --download-rag --download-only
+```
+
+Use the same flags with `quickstart.bat` on Windows. Downloading weights does not start a model server. Downloading RAG files does not by itself restore Chroma: run `load-vectors`, then `snapshot`, using the prepared environment. Fresh vector search also needs a matching Qwen3-Embedding-8B embedding endpoint; the tuned chat model does not supply that service. Follow the [exact artifact and restoration steps](docs/JUDGE_REPRODUCIBILITY.md#5-verified-public-artifacts).
+
+With `llama-server` already installed and enough memory/disk for chat, embedding and Chroma together, the combined setup path is:
+
+```bash
+./quickstart.sh --download-model --serve-model --download-rag --prepare-rag \
+  --download-embedding --serve-embedding
+```
+
+The helper uses CPU inference by default, waits for its local chat and embedding services, then starts the live dashboard. It does not install llama.cpp. The optional embedding GGUF adds about 4.68 GB; quantized query vectors can change retrieval rankings. For an existing embedding service, use `--embedding-endpoint URL --embedding-model ID` instead of serving one locally. Set `--llama-server PATH` when needed; choose `--gpu-layers N` only for a compatible accelerator build. Windows accepts the same flags. [The full guide](docs/JUDGE_REPRODUCIBILITY.md#3-recommended-launchers) explains requirements, ports, shutdown and platform verification limits.
+
+The chat and optional official Qwen embedding model cards declare Apache-2.0. Source-document rights in the RAG payload remain mixed; the repository's MIT code licence does not cover every document.
+
 ## Use the Console
 
 The left icon rail launches emulated conditions. Hover or focus an icon to inspect its condition, target and duration **before clicking**. By default, each condition uses its catalogue target for five simulation minutes. Change the target or duration controls to override that choice. Clicking an enabled icon sends the injection request directly; the recorded director event confirms that the engine accepted it.
@@ -147,4 +174,8 @@ Replay applies across screens. Navigate to Console, Policy or Recovery to inspec
 
 Use [docs/RUN.md](docs/RUN.md) for the general test commands. The scenario-first revision's browser checks and results are recorded in [docs/plan/SCENARIO_FIRST_JOURNEY.md](docs/plan/SCENARIO_FIRST_JOURNEY.md). The full walkthrough uses the official Chrome DevTools MCP server. Mock-mode checks do not establish availability or quality of an external Qwen server.
 
+The [judge verification record](docs/JUDGE_VERIFICATION.md) records the fresh-install, restored-index and live-model checks actually performed. Use its configuration and limitations when comparing a local result; native Windows execution and exact reproduction of the historical 300-case model benchmark remain unverified.
+
 Each scenario briefing displays its planned Readiness dimension count, included IDs and rationale. The [dimension coverage mapping](docs/plan/SCENARIO_DIMENSION_COVERAGE.md) explains the evidence gates. The v7 report includes the same counts. These are planned mappings, not automatic scores for the current run.
+
+The current model-evaluation commands and the historical 300-case benchmark have different reproducibility boundaries. The public case pack omits tool schemas, while the historical evaluation used a stratified subset and a Colab wrapper. See the [benchmark boundary and missing artifact](docs/JUDGE_REPRODUCIBILITY.md#model-benchmark-reproducibility-boundary); a small current smoke test does not reproduce the published score.
