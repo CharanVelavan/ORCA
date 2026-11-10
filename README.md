@@ -181,7 +181,7 @@ separates those mappings from observed proof.
 
 ## Reproduce and inspect
 
-The [judge verification release](https://github.com/CharanVelavan/ORCA/releases/tag/judge-v1.0.0)
+The [judge verification release](https://github.com/CharanVelavan/ORCA/releases/tag/judge-v1.0.1)
 freezes the submitted PDF, pinned artifacts, exact code tag and verification evidence.
 
 The [documentation index](docs/README.md) separates current setup guides from historical planning records.

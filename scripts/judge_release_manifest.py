@@ -20,6 +20,7 @@ def digest(path):
 
 def manifest(tag):
     files = ['submission/ORCA-NTN-SolarSailors-Report.pdf', 'requirements-judge.lock', '.gitattributes', '.env.example', 'quickstart.sh', 'quickstart.bat',
+             '.github/workflows/ci.yml', 'tests/test_chunk_hierarchy.py',
              'orca/agents.py', 'orca/live/session.py', 'orca/kbvec/retrieve.py',
              'scripts/judge_setup.py', 'scripts/verify_live_rag.py',
              'finetune/benchmark300/run.py', 'finetune/benchmark300/verify.py',
@@ -27,6 +28,7 @@ def manifest(tag):
              'dashboard/live/web/public/media/orca-method-4k.mp4',
              'dashboard/live/web/public/media/orca-final-clean-4k.mp4']
     files += [str(p.relative_to(ROOT)) for p in (ROOT / 'docs/research/judge-verification').rglob('*') if p.is_file()]
+    files += [str(p.relative_to(ROOT)) for p in (ROOT / 'tests/fixtures/legal_hierarchy').rglob('*') if p.is_file()]
     return {
         'release_tag': tag, 'code_repository': 'https://github.com/CharanVelavan/ORCA',
         'code_snapshot': 'Resolve release_tag to its exact Git commit; the manifest avoids a self-referential commit hash.',

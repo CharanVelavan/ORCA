@@ -1,13 +1,14 @@
 # Judge release
 
-`judge-v1.0.0` is the post-submission verification release. The approved submitted PDF is preserved
+`judge-v1.0.1` adds the clean-checkout CI correction to the post-submission verification release.
+`judge-v1.0.0` remains an immutable record of the earlier local verification. The approved submitted PDF is preserved
 unchanged; the release adds tested fixes, frozen evaluation inputs and evidence. The originally
 submitted implementation/showcase commits remain recorded separately in the manifest.
 
 ```sh
-git clone -c core.autocrlf=false --branch judge-v1.0.0 https://github.com/CharanVelavan/ORCA.git ORCA-judge
+git clone -c core.autocrlf=false --branch judge-v1.0.1 https://github.com/CharanVelavan/ORCA.git ORCA-judge
 cd ORCA-judge
-python scripts/judge_release_manifest.py --verify docs/releases/judge-v1.0.0.json
+python scripts/judge_release_manifest.py --verify docs/releases/judge-v1.0.1.json
 ```
 
 Use Python 3.12 and `python3`/`py -3.12` where appropriate. `core.autocrlf=false` is local to this clone

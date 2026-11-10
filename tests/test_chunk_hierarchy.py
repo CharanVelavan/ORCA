@@ -8,11 +8,24 @@ and verification on in-tcsr-2024, in-ctir-2024, in-dpdp-act-2023, and CERT-In Di
 from __future__ import annotations
 
 import re
+import hashlib
+import json
 from pathlib import Path
 
 import pytest
 
 from orca.kbvec import chunk, config, ingest
+
+
+@pytest.fixture(autouse=True)
+def offline_official_source_text(monkeypatch):
+    """Use committed, hash-checked parser inputs; no downloaded source directory is required."""
+    fixtures = Path(__file__).parent / 'fixtures' / 'legal_hierarchy'
+    manifest = json.loads((fixtures / 'manifest.json').read_text())
+    for name, source in manifest['sources'].items():
+        assert hashlib.sha256((fixtures / name).read_bytes()).hexdigest() == source['fixture_sha256'], name
+    monkeypatch.setattr(config, 'sources_dir', lambda: fixtures)
+    monkeypatch.setattr(config, 'sources_yaml', lambda: Path(__file__).resolve().parents[1] / 'kb' / 'sources.yaml')
 
 
 def test_tcsr_2024_rule_7_1_a_exists():
@@ -99,3 +112,17 @@ def test_hierarchy_level_nesting_and_kind_labels():
     act_labels = [c["clause"] for c in chunks_act]
     assert "Section 7(1)(a)" in act_labels
     assert not any(c.startswith("s.") for c in act_labels)
+
+
+def test_pdf_page_extraction_remains_covered(tmp_path):
+    """Exercise the actual PDF reader separately from captured official-text fixtures."""
+    import fitz
+    path = tmp_path / 'synthetic-parser-input.pdf'
+    with fitz.open() as document:
+        document.new_page().insert_text((72, 72), 'First fixture page')
+        document.new_page().insert_text((72, 72), 'Second fixture page')
+        document.save(path)
+    pages = ingest.parse_pages(path)
+    assert len(pages) == 2
+    assert 'First fixture page' in pages[0]
+    assert 'Second fixture page' in pages[1]

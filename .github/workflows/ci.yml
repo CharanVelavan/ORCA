@@ -40,9 +40,11 @@ jobs:
           python scenarios/check_scen.py
 
       - name: Run Test Suite (Mock LLM, Offline, No Secrets)
+        # Tests choose mock/scripted clients or a local HTTP fixture explicitly.
+        # "mock" is not an endpoint URL; replay requires a request cache.
         env:
-          LLM_MODE: replay
-          LLM_BASE_URL: mock
-          LLM_MODEL: mock
+          ORCA_CHROMA_DIR: ${{ runner.temp }}/orca-unit-chroma
+          ORCA_KBVEC_CACHE: ${{ runner.temp }}/orca-unit-cache
+          ORCA_KBVEC_SNAPSHOTS: ${{ runner.temp }}/orca-unit-snapshots
         run: |
           python -m pytest -q

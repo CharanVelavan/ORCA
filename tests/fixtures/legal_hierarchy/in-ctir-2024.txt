@@ -1,0 +1,466 @@
+रजिस्ट्री सं. डी.एल.- 33004/99                                                        REGD. No. D. L.-33004/99
+
+
+
+
+                                           सी.जी.-डी.एल.-अ.-22112024-258842
+                                                      xxxGIDHxxx
+                                               CG-DL-E-22112024-258842
+                                                     xxxGIDExxx
+
+
+                                                    असाधारण
+                                                EXTRAORDINARY
+                                            भाग II—खण्ड 3—उप-खण्ड (i)
+                                         PART II—Section 3—Sub-section (i)
+                                                प्राजधकार से प्रकाजित
+                                           PUBLISHED BY AUTHORITY
+
+ सं. 664]                           नई ददल्ली, िुक्रिार, निम्बर 22, 2024/अग्रहायण 1, 1946
+ No. 664]                   NEW DELHI, FRIDAY, NOVEMBER 22, 2024/AGRAHAYANA 1, 1946
+
+
+                                                   संचार मंत्रालय
+                                                  (दूरसंचार जिभाग)
+                                                     अधिसूचना
+
+                                             नई ददल्ली, 22 निम्बर, 2024
+
+           सा.का.जन. 723(अ).—के न्द्रीय सरकार दूरसंचार (महत्िपूणण दूरसंचार अिसंरचना) जनयम, 2024 के प्रारूप को,
+जिसे दूरसंचार अजधजनयम, 2023 (2023 का 44) की धारा 56 की उप-धारा (2) के खंड (ब) के साथ पठित धारा 22 की
+उप-धारा (4) द्वारा प्रदत्त िजियों का प्रयोग करते हुए बनाने का प्रस्ट्ताि करती है, को उि अजधजनयम की धारा 56 की
+उप-धारा (1) की अपेक्षानुसार भारत सरकार के संचार मंत्रालय, दूरसंचार जिभाग की अजधसूचना संख्या सा.का.जन. 521
+(अ), तारीख 28 अगस्ट्त, 2024 द्वारा भारत के रािपत्र, असाधारण, भाग II, खंड 3, उप-खंड (i), तारीख 28 अगस्ट्त,
+2024 में प्रकाजित दकया गया था, जिसमें इससे प्रभाजित होने िाले व्यजियों से उि अजधसूचना िाले रािपत्र की प्रजतयां
+िनसाधारण को उपलब्ध कराए िाने की तारीख से तीस ददन की अिजध समाप्त होने से पूिण आपजत्तयां और सुझाि आमंजत्रत
+दकए गए थे;
+
+           और उि रािपत्र की प्रजतयां तारीख 29 अगस्ट्त, 2024 को िनसाधारण को उपलब्ध करा दी गई थीं;
+
+
+
+
+7557 GI/2024                                            (1)2                               THE GAZETTE OF INDIA : EXTRAORDINARY                              [PART II—SEC. 3(i)]
+
+          और के न्द्रीय सरकार द्वारा उि प्रारूप जनयमों के संबंध में िनसाधारण से प्राप्त आपजत्तयों और सुझािों पर जिजधित
+रूप से जिचार दकया गया है;
+
+          अतः अब के न्द्रीय सरकार दूरसंचार अजधजनयम, 2023 (2023 का 44) की धारा 56 की उप-धारा (2) के खंड (ब)
+के साथ पठित धारा 22 की उप-धारा (4) द्वारा प्रदत्त िजियों का प्रयोग करते हुए जनम्नजलजखत जनयम बनाती है, अथाणत:-
+
+1. संजक्षप्त नाम और प्रारं भ - (1) इन जनयमों का संजक्षप्त नाम दूरसंचार (महत्िपूणण दूरसंचार अिसंरचना) जनयम, 2024 है।
+
+          (2) ये रािपत्र में उनके प्रकािन की तारीख को प्रिृत्त होंगे।
+
+2. पठरभाषाएं - (1) इन जनयमों में, िब तक दक संदभण से अन्द्यथा अपेजक्षत न हो:
+
+      (क) “अजधजनयम” से दूरसंचार अजधजनयम, 2023 (2023 का 44) अजभप्रेत है;
+
+      (ख) “मुख्य दूरसंचार सुरक्षा अजधकारी” से दूरसंचार (दूरसंचार साइबर सुरक्षा) जनयम, 2024 के जनयम 6 के अधीन
+             जनयुि मुख्य दूरसंचार सुरक्षा अजधकारी अजभप्रेत है;
+
+      (ग) “महत्िपूणण दूरसंचार अिसंरचना” से अजधजनयम की धारा 22 की उप-धारा (3) के अधीन अजधसूजचत कोई भी
+             दूरसंचार नेटिकण अथिा उसका कोई भाग अजभप्रेत है;
+
+      (घ) “पोटणल” से जनयम 10 के उप-जनयम (1) के अधीन के न्द्रीय सरकार द्वारा अजधसूजचत पोटणल अजभप्रेत है;
+
+      (ङ) “सुरक्षा घटना” का िही अथण होगा िो दूरसंचार (दूरसंचार साइबर सुरक्षा) जनयम, 2024 के जनयम 2 के
+             उप-जनयम (1) के खंड (च) में समनुदेजित है; और
+
+      (च) "दूरसंचार इकाई" का िही अथण होगा िो दूरसंचार (दूरसंचार साइबर सुरक्षा) जनयम, 2024 के जनयम 2 के
+             उप-जनयम (1) के खंड (छ) में समनुदेजित है।
+
+          (2) उन िब्दों और पदों के , िो इसमें प्रयुि हैं और पठरभाजषत नहीं हैं दकन्द्तु अजधजनयम में पठरभाजषत हैं, के िही
+अथण होंगे िो उनके उस अजधजनयम में हैं।
+
+3. लागू होना - (1) ये जनयम दूरसंचार नेटिकण अथिा उसके दकसी भाग पर लागू होंगे, जिसे के न्द्रीय सरकार द्वारा अजधजनयम
+की धारा 22 की उप-धारा (3) के उपबंधों के अधीन महत्िपूणण दूरसंचार अिसंरचना के रूप में अजधसूजचत दकया गया है ,
+िो इस आकलन पर आधाठरत है दक ऐसी अिसंरचना के जिघटन से राष्ट्रीय सुरक्षा, अथणव्यिस्ट्था, सािणिजनक स्ट्िास्ट््य अथिा
+राष्ट्र की सुरक्षा पर प्रजतकू ल प्रभाि पडेगा।
+
+          (2) के न्द्रीय सरकार पोटणल पर िह प्ररूप और तरीका जनर्दणष्ट करे गी जिसमें प्रत्येक दूरसंचार इकाई अपने दूरसंचार
+नेटिकण , दूरसंचार सेिाओं तथा ऐसे नेटिकण और सेिाओं के घटकों का ब्यौरा उपलब्ध कराएगी।
+
+4. अनुपालन आिश्यकताएँ - (1) प्रत्येक दूरसंचार इकाई यह सुजनजित करे गी दक महत्िपूणण दूरसंचार अिसंरचना जिसमें
+ऐसी महत्िपूणण दूरसंचार अिसंरचना में उपयोग दकया िाने िाला कोई भी पुिाण , हाडणिेयर और सॉफ़्टिेयर िाजमल हैं,
+जनम्नजलजखत मानकों का अनुपालन कर रहे हैं, अथाणत:-
+
+      (क) अजनिायण आिश्यकताएँ (ईआर), इं टरफे स आिश्यकताएँ (आईआर), भारतीय दूरसंचार सुरक्षा आश्वासन
+             आिश्यकताएँ (आईटीएसएआर) और दूरसंचार अजभयांजत्रकी कें र, राष्ट्रीय संचार सुरक्षा कें र अथिा दकसी अन्द्य
+             व्यजि द्वारा िारी जिजनदेिों, परीक्षण आिश्यकताओं अथिा अनुरूपता मूल्यांकन जिसे इस उद्देश्य के जलए
+             के न्द्रीय सरकार द्वारा अजधसूजचत दकया िाएगा;[भाग II—खण्ड 3(i)]                            भारत का रािपत्र : असाधारण                                               3
+
+                     परं तु ऐसे मानकों के अभाि में, कोई दूरसंचार इकाई के िल ऐसे महत्िपूणण दूरसंचार अिसंरचना का
+              उपयोग कर सके गी, जिसमें ऐसे महत्िपूणण दूरसंचार अिसंरचना में प्रयुि कोई भी अजतठरि पुिे, हाडणिेयर और
+              सॉफ्टिेयर िाजमल हैं, िो इस संबंध में के न्द्रीय सरकार द्वारा अजधसूजचत सुसंगत मानकों को पूरा करते हों;
+
+        (ख) के न्द्रीय सरकार द्वारा िारी दूरसंचार सेक्टर (एनएसडीटीएस) पर राष्ट्रीय सुरक्षा जनदेि ;
+
+        (ग) के न्द्रीय सरकार द्वारा िारी संचार सुरक्षा प्रमाणन पर जनदेि।
+
+        (घ) महत्िपूणण दूरसंचार अिसंरचना पर लागू ऐसे अन्द्य मानक जिन्द्हें के न्द्रीय सरकार द्वारा समय-समय पर
+            अजधसूजचत दकया िा सके ।
+
+5. महत्िपूणण दूरसंचार अिसंरचना का जनरीक्षण - (1) के न्द्रीय सरकार, आदेि द्वारा, अपने कार्मणकों को दूरसंचार इकाइयों
+की महत्िपूणण दूरसंचार अिसंरचना से संबंजधत हाडणिेयर, सॉफ़्टिेयर और डेटा के पहुंच और उसका जनरीक्षण करने के जलए
+प्राजधकृ त करे गी।
+
+            (2) प्रत्येक दूरसंचार इकाई महत्िपूणण दूरसंचार अिसंरचना के जनरीक्षण के जलए उप-जनयम (1) के अधीन के न्द्रीय
+सरकार द्वारा प्राजधकृ त दकसी भी कार्मणक की पहुंच सुजनजित करे गी।
+
+6. मुख्य दूरसंचार सुरक्षा अजधकारी – (1) मुख्य दूरसंचार सुरक्षा अजधकारी इन जनयमों के कायाणन्द्ियन के जलए उत्तरदायी
+होगा।
+
+            (2) के न्द्रीय सरकार पोटणल पर िह प्ररूप और तरीका जनर्दणष्ट करे गी जिससे प्रत्येक दूरसंचार इकाई महत्िपूणण
+दूरसंचार अिसंरचना के संबंध में ब्यौरा उपलब्ध कराएगी, जिसमें जनम्नजलजखत ब्यौरा िाजमल होगा, अथाणत:-
+
+        (क) महत्िपूणण दूरसंचार अिसंरचना का दूरसंचार नेटिकण आर्कण टेक्चर;
+
+        (ख) महत्िपूणण दूरसंचार अिसंरचना तक पहुंच रखने िाले प्राजधकृ त कार्मणक;
+
+        (ग) महत्िपूणण दूरसंचार अिसंरचना से संबंजधत हाडणिेयर, सॉफ्टिेयर और पुिों की सूची;
+
+        (घ) महत्िपूणण दूरसंचार अिसंरचना की साइबर सुरक्षा आर्कण टेक्चर के जलए भेद्यता/खतरा/िोजखम जिश्लेषण का
+              ब्यौरा;
+
+        (ङ) महत्िपूणण दूरसंचार अिसंरचना के जलए साइबर संकट प्रबंधन योिना;
+
+        (च) महत्िपूणण दूरसंचार अिसंरचना की सुरक्षा लेखापरीक्षा ठरपोटण और लेखापरीक्षा की अनुपालन ठरपोटण ;
+
+        (छ) महत्िपूणण दूरसंचार अिसंरचना से संबंजधत सेिाओं के सेिा स्ट्तर करार (एसएलए);
+
+        (ि) जिसंगजतयों का पता लगाने में सहायता करने और के न्द्रीय सरकार को िास्ट्तजिक समय के आधार पर आसूचना
+              की िानकारी उपलब्ध कराने में सक्षम बनाने के जलए महत्िपूणण दूरसंचार अिसंरचना से संबंजधत सभी लॉग;
+              और
+
+        (झ) जनयम 7 के अधीन महत्िपूणण दूरसंचार अिसंरचना के जलए जिजनर्दणष्ट समय-सीमा में सुरक्षा घटनाओं की
+              ठरपोर्टिंग करना।
+
+7. महत्िपूणण दूरसंचार अिसंरचना से संबंजधत दाजयत्ि- (1) प्रत्येक दूरसंचार इकाई जनम्नजलजखत दाजयत्िों का पालन करे गी,
+अथाणत्: -
+
+        (क) जनयम 4 के अधीन ददए गए मानकों के अनुपालन सजहत महत्िपूणण दूरसंचार अिसंरचना की सुरक्षा सुजनजित
+              करना;4                             THE GAZETTE OF INDIA : EXTRAORDINARY                                [PART II—SEC. 3(i)]
+
+
+     (ख) सॉफ्टिेयर और हाडणिेयर जििरण के साथ-साथ ऐसे महत्िपूणण दूरसंचार अिसंरचना पर जनभणरता के साथ
+           महत्िपूणण दूरसंचार अिसंरचना की सम्पूणण सूची का रखरखाि;
+
+     (ग) ऐसे दूरसंचार नेटिकण संरचना में पठरितणन सजहत महत्िपूणण दूरसंचार अिसंरचना के दूरसंचार नेटिकण संरचना
+           के लॉग और प्रलेखन का कम से कम दो िषण की अिजध के जलए अथिा के न्द्रीय सरकार द्वारा जनधाणठरत दकसी
+           अन्द्य अिजध के जलए सुरजक्षत तरीके से संरजक्षत रखना;
+
+     (घ) महत्िपूणण दूरसंचार अिसंरचना तक पहुँच रखने िाले सभी अजधकृ त कार्मणकों के जलए लागू होने िाली पयाणप्त
+           सत्यापन प्रदक्रयाओं और प्रोटोकॉल के जलए योिना बनाने, जिकास करने तथा उनका रखरखाि बनाए रखने और
+           के न्द्रीय सरकार के जनदेिानुसार उनकी आिजधक पुनर्िणलोकन करना;
+
+     (ङ) महत्िपूणण दूरसंचार अिसंरचना के उपयोग में होने तक दूरसंचार उपकरणों और अन्द्य उपकरणों की आपूर्तण
+           िृंखला के अजभलेखों का रखरखाि करना तथा के न्द्रीय सरकार द्वारा िैसा और िब मांगे िाने पर ऐसी िानकारी
+           उपलब्ध कराना;
+
+     (च) यह सुजनजित करना दक महत्िपूणण दूरसंचार अिसंरचना की दूरसंचार नेटिकण संरचना के जलए भेद्यता अथिा
+         खतरा अथिा िोजखम का जिश्लेषण प्रजतिषण अथिा ऐसे अंतरालों पर दकया िाता है िैसा दक के न्द्रीय सरकार
+           द्वारा जनदेजित दकया गया है;
+
+     (छ) महत्िपूणण दूरसंचार अिसंरचना के संबंध में दूरसंचार इकाइयों द्वारा अपने िेंडर के साथ दकए गए सेिा स्ट्तर
+           करारों (एसएलए) के जलए आिश्यक प्रदक्रयाओं की योिना बनाना, उनका जिकास करना, रखरखाि करना और
+           पुनर्िणलोकन करना;
+
+     (ि) महत्िपूणण दूरसंचार अिसंरचना के कायण में सहायक नेटिर्किं ग और संचार उपकरणों, सिणरों, प्रणाजलयों और
+           सेिाओं के लॉग का जनयजमत बैकअप लेने की प्रदक्रयाओं की योिना बनाना, जिकजसत करना, रखरखाि करना
+           और पुनर्िणलोकन करना;
+
+     (झ) जडिास्ट्टर ठरकिरी और व्यिसाय जनरं तरता सजहत सुरक्षा घटना प्रजतदक्रया प्रणाजलयों के जलए मानक प्रचालन
+           प्रदक्रयाओं का कायाणन्द्ियन;
+
+     (ञ) सुरक्षा घटना(ओं) के बारे में के न्द्रीय सरकार को ऐसी घटना के घठटत होने के छ: घंटे के भीतर पोटणल पर यथा
+           जिजनर्दणष्ट जिजध और प्रदक्रया से सुजनजित करने के जलए तंत्र को कायाणजन्द्ित करना; और
+
+     (ट)   अपने नेटिकण के भीतर महत्िपूणण दूरसंचार अिसंरचना के जिजभन्न एजलमेंट्स से िुडे ग्रेडेड ठरस्ट्क एसेस्ट्मेंट सजहत
+           िोजखम रजिस्ट्टर का रखरखाि, महत्िपूणण दूरसंचार अिसंरचना के जलए उत्पन्न िोजखमों से नुकसान और
+           गंभीरता की पहचान करना तथा उन्द्हें कम करने के उपाय और के न्द्रीय सरकार द्वारा मांगे िाने पर ऐसी सूचना
+           प्रस्ट्तुत करना।
+
+(2) िहां दकसी दूरसंचार इकाई को भारत के क्षेत्र के बाहर दकसी स्ट्थान से मरम्मत अथिा रखरखाि के उद्देश्य से अपने
+महत्िपूणण दूरसंचार अिसंरचना तक दूरस्ट्थ पहुंच की आिश्यकता होती है तो िह ऐसा के िल ऐसे स्ट्थान से करे गी जिसके
+जलए उसने के न्द्रीय सरकार से पूिण जलजखत अनुमोदन प्राप्त दकया है और िह ऐसी दूरस्ट्थ पहुंच के प्रत्येक कायण के जलए –
+
+     (क) पोटणल पर जिजनर्दणष्ट जिजध और प्रदक्रया से कें र सरकार को ऐसी दूरस्ट्थ पहुंच की उजचत सूचना प्रदान करे गी;
+           और
+
+     (ख) यह सुजनजित करे गी दक ऐसी दूरस्ट्थ पहुंच के जलए लॉग को कम से कम एक िषण के जलए संरजक्षत दकए िाते हैं
+           और के न्द्रीय सरकार द्वारा मांगे िाने पर प्रदान दकए िाते हैं।[भाग II—खण्ड 3(i)]                                 भारत का रािपत्र : असाधारण                                          5
+
+(3) प्रत्येक दूरसंचार इकाई उप-जनयम (1) के अधीन अपने द्वारा की गई कारण िाई से संबंजधत एक जिस्ट्तृत ठरपोटण को पोटणल
+पर जिजनर्दणष्ट जिजध और प्रदक्रया से प्रस्ट्तुत करे गी।
+
+(4) के न्द्रीय सरकार उप-जनयम (3) के अधीन दकसी दूरसंचार इकाई से प्राप्त दकसी भी ठरपोटण अथिा अन्द्य िानकारी के
+अनुसरण में, -
+
+      (क) ऐसी दूरसंचार इकाई से आगे स्ट्पष्टीकरण मांग सकती है; अथिा
+
+      (ख) महत्िपूणण दूरसंचार अिसंरचना की सुरक्षा या ऐसी अिसंरचना के जलए िोजखम को कम करने के जलए ऐसी
+             दूरसंचार इकाई को कोई जिजनदेि, आदेि या अनुदेि िारी करना।
+
+8. महत्िपूणण दूरसंचार अिसंरचना के उन्नयन के जलए आिश्यकताएँ - (1) िहां महत्िपूणण दूरसंचार अिसंरचना का भाग
+बनने िाले उपकरणों का उन्नयन अपेजक्षत है िहां दूरसंचार इकाई ऐसे उन्नयन के जलए परीक्षण ठरपोटण के जििरण सजहत
+के न्द्रीय सरकार को उस जिजध और प्रदक्रया से सूजचत करे गी िैसा के न्द्रीय सरकार द्वारा इस प्रयोिन के जलए जिजनर्दणष्ट दकया
+िाए।
+
+(2) के न्द्रीय सरकार उप-जनयम (1) के अधीन आिेदन प्राप्त होने के चौदह ददनों के भीतर –
+
+          (क) यदद आिश्यक हो तो दूरसंचार इकाई से कोई और स्ट्पष्टीकरण मांगेगी;
+
+          (ख) उप-जनयम (3) के अधीन आगे परीक्षण करने के जलए ऐसी इकाई को जिजनदेि िारी करे गी; अथिा
+
+          (ग) उन्नयन गजतजिजध के जलए आिेदन को स्ट्िीकृ त या अस्ट्िीकार करे गी।
+
+(3)       के न्द्रीय सरकार दकसी दूरसंचार इकाई को महत्िपूणण दूरसंचार अिसंरचना में दकसी उन्नयन का समुजचत जनयंजत्रत
+प्रदक्रया के अधीन परीक्षण करने तथा ऐसे परीक्षणों के पठरणामों को के न्द्रीय सरकार द्वारा जिजनर्दणष्ट जिजध और प्रदक्रया से
+प्रस्ट्तुत करने का जिजनदेि भी दे सके गी और दूरसंचार इकाई ऐसे जिजनदेिों का अनुपालन करे गी।
+(4) िहां के न्द्रीय सरकार ऐसे आिेदन की प्राजप्त की तारीख से चौदह ददन की अिजध के भीतर उप-जनयम (2) के अधीन कोई
+स्ट्पष्टीकरण नहीं मांगती है अथिा जनदेि िारी नहीं करती है अथिा अपना अनुमोदन अथिा अस्ट्िीकृ जत जनर्दणष्ट नहीं करती
+है, िहां दूरसंचार इकाई ऐसे उन्नयन कायणकलाप के साथ आगे बढ़ सकती है:
+
+          परं तु िहां के न्द्रीय सरकार ने उप-जनयम (2) के अधीन स्ट्पष्टीकरण मांगा है, िहां चौदह ददनों की ऐसी अिजध ऐसी
+दूरसंचार इकाई द्वारा स्ट्पष्टीकरण प्रस्ट्तुत करने की तारीख से मानी िाएगी:
+
+          परं तु यह और दक िहां के न्द्रीय सरकार ने उप-जनयम (3) के अधीन उन्नयन का परीक्षण करने का जनदेि ददया है,
+िहां चौदह ददनों की ऐसी अिजध ऐसे परीक्षणों के पठरणामों को प्रस्ट्तुत करने की तारीख से मानी िाएगी िैसा दक के न्द्रीय
+सरकार द्वारा सुरजक्षत मोड के माध्यम से मामले दर मामले के आधार पर जिजनर्दणष्ट दकया िा सकता है।
+
+(5) िहां दकसी सुरक्षा घटना के प्रजतकू ल प्रभािों का पता लगाने अथिा कम करने के जलए उन्नयन आिश्यक है, िहां दूरसंचार
+इकाई उप-जनयम (1) के अधीन आिेदन दकए जबना महत्िपूणण दूरसंचार अिसंरचना का जहस्ट्सा बनने िाले दकसी भी उपकरण
+के सॉफ्टिेयर या हाडणिेयर में तत्काल उन्नयन कर सकती है और ऐसे उन्नयन के चौबीस घंटे के भीतर के न्द्रीय सरकार को उस
+जिजध और प्रदक्रया से ठरपोटण कर सकती है, िैसा दक के न्द्रीय सरकार जनम्न सुसंगत जििरण के साथ जनधाणठरत कर सकती है-
+
+      (क) संबंजधत सुरक्षा घटना का जििरण; और
+
+      (ख) उन्नयन की आिश्यकता िाले उपकरण का प्रासंजगक सॉफ्टिेयर अथिा हाडणिेयर और ऐसे उपकरण के संबंध में
+          दकए गए उन्नयन की प्रकृ जत।
+(6) के न्द्रीय सरकार उप-जनयम (5) के अधीन सूचना प्राप्त होने पर दूरसंचार इकाई से आगे की िानकारी या स्ट्पष्टीकरण मांग
+सकती है अथिा आगे के परीक्षण और ठरपोर्टिंग के जलए जनदेि िारी कर सकती है िैसा दक िह आिश्यक समझे।6                             THE GAZETTE OF INDIA : EXTRAORDINARY                                  [PART II—SEC. 3(i)]
+
+(7) दूरसंचार इकाई दकसी भी उन्नयन से संबंजधत अजभलेखों और सूचनाओं का संरक्षण सुजनजित करे गी िब तक दक सुसंगत
+महत्िपूणण दूरसंचार अिसंरचना उपयोग में है और ऐसे अजभलेखों को के न्द्रीय सरकार द्वारा मांगे िाने पर प्रस्ट्तुत दकया
+िाएगा।
+(8) इस जनयम में कोई भी बात ऐसे जनयजमत सॉफ्टिेयर अद्यतन पर लागू नहीं होगी जिसका उद्देश्य महत्िपूणण दूरसंचार
+अिसंरचना के कायणजनष्पादन अथिा सुरक्षा में क्रजमक सुधार करना हो।
+
+9. जनयमों का उल्लंघन. -- अन्द्यथा उपबंजधत के जसिाय इन जनयमों के उपबंधों के दकसी भी उल्लंघन से अजधजनयम के
+प्रािधानों के अनुसार जनपटा िाएगा।
+
+10. जडजिटल कायाणन्द्ियन. - (1) के न्द्रीय सरकार इन जनयमों के जडजिटल कायाणन्द्ियन के प्रयोिन के जलए एक पोटणल
+अजधसूजचत करे गी और कोई अन्द्य कायाणन्द्ियन प्रणाली भी जिजनर्दणष्ट कर सके गी।
+
+(2) िहां के न्द्रीय सरकार दूरसंचार इकाइयों को कोई आदेि, जनदेि अथिा अनुदेि िारी करने के जलए अथिा ऐसी दूरसंचार
+इकाइयों से कोई सूचना एकजत्रत करने के जलए पोटणल के अजतठरि संचार के दकसी अन्द्य सुरजक्षत तरीके का उपयोग करना
+आिश्यक समझती है िहां िह मामले दर मामले आधार पर संचार के ऐसे सुरजक्षत तरीके का उपयोग कर सकती है।
+
+(3) प्रत्येक दूरसंचार इकाई पोटणल का उपयोग करके अथिा के न्द्रीय सरकार द्वारा जनधाणठरत संचार के सुरजक्षत तरीके के
+माध्यम से इन जनयमों के अधीन के न्द्रीय सरकार को सूचना देने अथिा प्रस्ट्तुत करने से संबंजधत दाजयत्िों का अनुपालन
+सुजनजित करे गी।
+
+                                                                                          [फा. सं. 24-08/2024-यूबीबी]
+                                                                                          देिेंर कु मार राय, संयुक्त सजचि
+
+
+
+
+                                       MINISTRY OF COMMUNICATIONS
+                                        (Department of Telecommunications)
+                                                   NOTIFICATION
+                                         New Delhi, the 22nd November, 2024
+         G.S.R. 723(E).—Whereas a draft of the Telecommunications (Critical Telecommunication Infrastructure)
+Rules, 2024, which the Central Government proposes to make in exercise of the powers conferred by sub-section (4) of
+section 22 read with clause (w) of sub-section (2) of section 56 of the Telecommunications Act, 2023 (44 of 2023), was
+published as required by sub-section (1) of section 56 of the said Act vide notification of the Government of India in
+the Ministry of Communications, Department of Telecommunications number G.S.R. 521(E), dated the 28th August,
+2024, in the Gazette of India, Extraordinary, Part II, section 3, sub-section (i), dated the 28th August, 2024, inviting
+objections and suggestions from the persons likely to be affected thereby, before the expiry of the period of thirty days
+from the date on which the copies of the Official Gazette containing the said notification were made available to the
+public;
+         And whereas copies of the said Official Gazette were made available to the public on the 29 th August, 2024;
+        And whereas the objections and suggestions received from the public in respect of the said draft rules have
+been duly considered by the Central Government;
+         Now, therefore, in exercise of the powers conferred by sub-section (4) of section 22 read with clause (w) of
+sub-section (2) of section 56 of the Telecommunications Act, 2023 (44 of 2023), the Central Government hereby makes
+the following rules, namely:-
+1.   Short title and commencement. – (1) These rules may be called the Telecommunications (Critical
+     Telecommunication Infrastructure) Rules, 2024.
+         (2) They shall come into force on the date of their publication in the Official Gazette.[भाग II—खण्ड 3(i)]                            भारत का रािपत्र : असाधारण                                                 7
+
+2.   Definitions. – (1) In these rules, unless the context otherwise requires,–
+       (a) “Act” means the Telecommunications Act, 2023 (44 of 2023);
+       (b) “Chief Telecommunication Security Officer” means the Chief Telecommunication Security Officer
+           appointed under rule 6 of the Telecommunications (Telecom Cyber Security) Rules, 2024;
+       (c) “Critical Telecommunication Infrastructure” means any telecommunication network, or part thereof,
+           notified under sub-section (3) of section 22 of the Act;
+       (d) “portal” means the portal notified by the Central Government under sub-rule(1) of rule 10;
+       (e) “security incident” shall have the same meaning assigned to it in clause (f) of sub-rule (1) of rule 2 of the
+           Telecommunications (Telecom Cyber Security) Rules, 2024; and
+       (f) “telecommunication entity” shall have the same meaning assigned to it in clause (g) of sub-rule (1) of rule
+           2 of the Telecommunications (Telecom Cyber Security) Rules, 2024.
+(2)    Words and expressions used in these rules and not defined herein but defined in the Act, shall have the
+meanings respectively assigned to them in the Act.
+3.   Application. – (1) These rules shall apply to telecommunication network, or any part thereof, which has been
+     notified by the Central Government as Critical Telecommunication Infrastructure under sub-section (3) of section
+     22 of the Act, based on an assessment that disruption of such infrastructure shall have a debilitating impact on
+     national security, economy, public health or safety of the nation.
+(2)      The Central Government shall specify on the portal the form and manner in which every telecommunication
+entity shall provide the details of its telecommunication network, telecommunication services, and elements of such
+network and services.
+4.   Compliance requirements.- Every telecommunication entity shall ensure that Critical Telecommunication
+     Infrastructure, including any spares, hardware and software used in such Critical Telecommunication Infrastructure,
+     are in compliance with the following standards, namely:–
+     (a) Essential Requirements (ERs), Interface Requirements (IRs), Indian Telecommunication Security Assurance
+         Requirements (ITSARs) and specifications, testing requirements, or conformity assessment, as applicable,
+         issued by Telecommunication Engineering Centre, National Centre for Communication Security, or any other
+         person as may be notified by the Central Government for this purpose:
+          Provided that in the absence of such standards, a telecommunication entity may utilise only such Critical
+Telecommunication Infrastructure, including any spares, hardware and software used in such Critical
+Telecommunication Infrastructure, which meet the relevant standards as may be notified by the Central Government in
+this regard;
+     (b) National Security Directive on Telecommunication Sector (NSDTS) as issued by the Central Government;
+     (c) directives on communication security certification issued by the Central Government; and
+     (d) such other standards applicable to Critical Telecommunication Infrastructure, as may be notified by the Central
+         Government from time to time.
+5.   Inspection of Critical Telecommunication Infrastructure. – (1) The Central Government, may, by an order,
+     authorise its personnel to access and inspect hardware, software and data pertaining to Critical Telecommunication
+     Infrastructure of telecommunication entities.
+(2)     Every telecommunication entity shall ensure access to any personnel authorised by the Central Government
+under sub-rule (1) for inspection of Critical Telecommunication Infrastructure.
+6.   Chief Telecommunication Security Officer. – (1) The Chief Telecom Security Officer shall be responsible for
+     the implementation of these rules.
+(2)      The Central Government shall specify on the portal, the form and manner in which every telecommunication
+entity shall provide the details in respect of Critical Telecommunication Infrastructure, including the following details,
+namely:–
+            (a)   telecommunication network architecture of the Critical Telecommunication Infrastructure;
+            (b)   authorised personnel having access to Critical Telecommunication Infrastructure;
+            (c)   inventory of hardware, software and spares related to Critical Telecommunication Infrastructure;8                             THE GAZETTE OF INDIA : EXTRAORDINARY                                 [PART II—SEC. 3(i)]
+
+            (d)   details of vulnerability, threat or risk analysis for the cyber security architecture of Critical
+                  Telecommunication Infrastructure;
+            (e)   Cyber Crisis Management Plan for Critical Telecommunication Infrastructure;
+            (f)   security audit reports and audit compliance reports of Critical Telecommunication Infrastructure;
+            (g)   Service Level Agreements (SLAs) of services pertaining to Critical Telecommunication
+                  Infrastructure;
+            (h)   all logs relating to Critical Telecommunication Infrastructure to assist in detection of anomalies and
+                  enable the Central Government to generate intelligence on real time basis; and
+            (i)   reporting of security incidents within the timelines specified for Critical Telecommunication
+                  Infrastructure under rule 7.
+7.   Obligations related to Critical Telecommunication Infrastructure. – (1) Every telecommunication entity shall
+     comply with the following obligations, namely:–
+            (a)   ensure security of Critical Telecommunication Infrastructure, including through compliance with the
+                  standards as provided under rule 4;
+            (b)   maintain a complete list of Critical Telecommunication Infrastructure along with the software and
+                  hardware details, as well as the dependencies on such Critical Telecommunication Infrastructure;
+            (c)   preserve in a secure manner, for a minimum period of two years or such other period as may be
+                  determined by the Central Government, logs and documentation of the telecommunication network
+                  architecture of Critical Telecommunication Infrastructure, including changes in such
+                  telecommunication network architecture;
+            (d)   plan, develop and maintain adequate verification practices and protocols applicable for all personnel
+                  authorised to have access to Critical Telecommunication Infrastructure, and undertake periodic review
+                  of the same as directed by the Central Government;
+            (e)   maintain records of the supply chain of the telecommunication equipment and other equipment
+                  deployed in the Critical Telecommunication Infrastructure till such infrastructure is in use, and
+                  provide such records, as and when sought for by the Central Government;
+            (f)   ensure that vulnerability or threat or risk analysis for telecommunication network architecture of
+                  Critical Telecommunication Infrastructure is carried out annually or in such intervals as may be
+                  directed by the Central Government ;
+            (g)   plan, develop, maintain and review processes required for Service Level Agreements (SLAs) entered
+                  into by the telecommunication entities with their vendors in relation to Critical Telecommunication
+                  Infrastructure;
+            (h)   plan, develop, maintain and review processes of taking regular backup of logs of networking and
+                  communication devices, servers, systems and services supporting the functioning of the Critical
+                  Telecommunication Infrastructure;
+            (i)   implement standard operating procedures for security incident response systems, including disaster
+                  recovery and business continuity;
+            (j)   implement mechanisms to ensure intimation of security incident(s) to the Central Government, no
+                  later than six hours of occurrence of such incident, in the form and manner as may be specified on the
+                  portal; and
+            (k)   maintain a risk register including a graded risk assessment associated with different elements of
+                  Critical Telecommunication Infrastructure within its network, identifying the potential and severity
+                  of risks posed to the Critical Telecommunication Infrastructure and solutions to mitigate the same and
+                  produce such information as and when sought for by the Central Government.
+(2)      Where a telecommunication entity requires remote access to its Critical Telecommunication Infrastructure for
+the purpose of repair or maintenance from a location outside of the territory of India, it shall do so only from such
+location for which it has obtained prior written approval from the Central Government, and it shall, for each instance of
+such remote access –
+     (a) provide due intimation of such remote access to the Central Government in the form and manner specified on
+         the portal; and[भाग II—खण्ड 3(i)]                                   भारत का रािपत्र : असाधारण                                               9
+
+      (b) ensure that the logs for such remote access are preserved for at least one year and provided as and when sought
+          for by the Central Government.
+
+
+(3) Every telecommunication entity shall furnish a detailed report relating to the action taken by it under sub-rule (1) in
+the form and manner as may be specified on the portal.
+(4) The Central Government may, pursuant to any report or other information received from a telecommunication entity
+under sub-rule (3),––
+       (a)         seek further clarifications from such telecommunication entity; or
+       (b)         issue any directions, orders or instructions to such telecommunication entity for the protection of Critical
+                   Telecommunication Infrastructure or mitigating risks to such infrastructure.
+8.    Requirements for upgradation of Critical Telecommunication Infrastructure. – (1) Where upgradation of the
+      software or hardware of equipment which form part of the Critical Telecommunication Infrastructure is required,
+      the telecommunication entity shall make an application to the Central Government, along with details of the test
+      reports for such upgradation and other relevant information in the form and manner as may be specified on the
+      portal by that Government.
+(2)          The Central Government shall, within fourteen days of receipt of the application under sub-rule (1),–
+             (a)      seek any further clarifications if required from the telecommunication entity;
+             (b)      issue directions to such entity to conduct further testing under sub-rule (3); or
+             (c)      approve or reject the application for upgradation activity.
+(3)      The Central Government may direct a telecommunication entity to test any upgradation in the Critical
+Telecommunication Infrastructure in an appropriate controlled environment and submit the results of such tests in the
+form and manner, as may be specified by the Central Government on case to case basis, and the telecommunication
+entity shall comply with such directions.
+(4)      Where the Central Government does not seek any clarification or issue directions or specify its approval or
+rejection under sub-rule (2) within a period of fourteen days from the date of receipt of such application, the
+telecommunication entity may proceed with such upgradation activity:
+         Provided that where the Central Government has sought clarifications under sub-rule (2), such time period of
+fourteen days shall be considered from the date of submission of clarification by such telecommunication entity:
+        Provided further that where the Central Government has directed to test the upgradation under sub-rule (3),
+such time period of fourteen days shall be considered from the date of submission of the results of such tests in the form
+and manner as may be specified by the Central Government on case to case basis through secure mode.
+(5)     Where upgradation is necessary for addressing or mitigating the adverse effects of a security incident, a
+telecommunication entity may undertake immediate upgradation in the software or hardware of any equipment that
+forms part of Critical Telecommunication Infrastructure without making an application under sub rule (1) and within
+twenty-four hours of such upgradation, report to the Central Government in the form and manner as may be determined
+by the Central Government, with relevant details of –
+             (a)      the description of the concerned security incident; and
+             (b)      the relevant software or hardware of an equipment requiring upgradation and the nature of upgradation
+                      undertaken in respect of such equipment.
+(6)       The Central Government may, upon receipt of information under sub-rule (5), seek further information or
+clarifications from the telecommunication entity, or issue directions for further testing and reporting, as it may consider
+necessary.
+(7)     The telecommunication entity shall ensure preservation of records and information in relation to any
+upgradation, till such time the relevant Critical Telecommunication Infrastructure is in use, and such records shall be
+produced as and when sought by the Central Government.
+(8)      Nothing in this rule shall apply to a routine software update aimed to incrementally improve performance or
+security of Critical Telecom Infrastructure.
+9.    Contravention of rules. — Save as otherwise provided, any contravention of the provisions of these rules shall be
+      dealt with in accordance with the provisions of the Act.10                           THE GAZETTE OF INDIA : EXTRAORDINARY                                   [PART II—SEC. 3(i)]
+
+10. Digital implementation. – (1) The Central Government shall notify a portal for the purpose of digital
+    implementation of these rules and may also specify any other implementing mechanism.
+(2)      Where the Central Government considers it necessary to use any secure mode of communication, other than
+through the portal, for the issuance of any orders, directions or instructions to telecommunication entities, or for
+collection of any information from such telecommunication entities, it may use such secure mode of communication on
+case to case basis.
+(3)     Every telecommunication entity shall ensure compliance with the obligations relating to reporting or
+submission of information to the Central Government under these rules using the portal or through a secure mode of
+communication as determined by the Central Government.
+
+
+                                                                                              [F. No. 24-08/2024-UBB]
+                                                                                  DEVENDRA KUMAR RAI, Jt. Secy.
+
+
+
+
+            Uploaded by Dte. of Printing at Government of India Press, Ring Road, Mayapuri, New Delhi-110064
+                              and Published by the Controller of Publications, Delhi-110054. SARVESH KUMAR
+                                                                                                    Digitally signed by SARVESH
+                                                                                                    KUMAR SRIVASTAVA
+                                                                                             SRIVASTAVA
+                                                                                                    Date: 2024.11.22 21:31:21 +05'30'

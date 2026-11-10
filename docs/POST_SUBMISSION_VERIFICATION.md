@@ -109,3 +109,17 @@ The temporary cloud VM was deleted after the checks, and Windows was suspended. 
 embedding service on this development Mac remains idle on loopback pending desktop-user cleanup:
 the agent CLI identity could not signal the desktop-owned process. This is a developer-machine
 cleanup note, not a judge setup step; judges do not need that service or access to the team's cloud.
+
+## CI follow-up: judge-v1.0.1
+
+The v1.0.0 GitHub workflow failed despite the local checks above. Its environment set
+`LLM_BASE_URL=mock`, which the URL validator rejects, and four hierarchy tests depended on ignored
+PDF downloads present only on the developer machine. The patch removes the invalid global LLM
+settings: tests already select mock/scripted clients or local HTTP fixtures explicitly. Unit-test
+vector storage remains isolated. URL validation and all hierarchy assertions remain enabled.
+
+The hierarchy tests now use committed, checksummed extracted source text with page boundaries and
+original PDF hashes/URLs. A separate two-page synthetic PDF test exercises the actual PDF reader.
+This makes parser CI self-contained without pretending it downloaded or reverified government PDFs.
+The original v1.0.0 tag/report remain unchanged. The patch release is published only after the hosted
+GitHub checks pass; its release page links the actual CI runs and attaches their result summary.

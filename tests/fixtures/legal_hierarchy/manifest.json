@@ -1,0 +1,37 @@
+{
+  "scope": "Extracted text fixtures for offline legal-hierarchy parser tests; not new legal-status verification. Page boundaries are form feeds.",
+  "sources": {
+    "in-certin-dir-2022.txt": {
+      "source_id": "in-certin-dir-2022",
+      "url": "https://www.cert-in.org.in/PDF/CERT-In_Directions_70B_28.04.2022.pdf",
+      "original_pdf_sha256": "202c2f3953d792dcfb3ecb3634fc82ab75437ee596de89b8d59a211e8e42431f",
+      "fixture_sha256": "7ddd6805ca896b56ebd8ece4c6fd8fbf3dfe3e83a96e2a5e5f217d0c66998d38",
+      "extraction": "existing text sidecar",
+      "normalization": "Trailing line whitespace removed; form-feed page boundaries retained."
+    },
+    "in-tcsr-2024.txt": {
+      "source_id": "in-tcsr-2024",
+      "url": "https://thc.nic.in/Central%20Governmental%20Rules/Telecommunications%20(Telecom%20Cyber%20Security)%20Rules,%202024.pdf",
+      "original_pdf_sha256": "16f93fbc5e1bbdbdee56b3b98a020e0d49e32f98b524ed8942ac8d6f7dc81494",
+      "fixture_sha256": "7faa1a8436a884b8ccaade56f78801fb806cebd0347756a9c8128b519c13e55e",
+      "extraction": "existing text sidecar",
+      "normalization": "Trailing line whitespace removed; form-feed page boundaries retained."
+    },
+    "in-ctir-2024.txt": {
+      "source_id": "in-ctir-2024",
+      "url": "https://eservices.dot.gov.in/sites/default/files/circular-notifications/Critical%20Telecommunication%20Infrastructure%20Rules%2C%202024_0.pdf",
+      "original_pdf_sha256": "116466ec2799bb80750e9d810495fbfb1c0b041366dbb3625da03b2085199f4d",
+      "fixture_sha256": "d0b17f43512b3510ee8962ad1d2c6d9e3a254329094a7f270d9913230bc1943a",
+      "extraction": "existing text sidecar",
+      "normalization": "Trailing line whitespace removed; form-feed page boundaries retained."
+    },
+    "in-dpdp-act-2023.txt": {
+      "source_id": "in-dpdp-act-2023",
+      "url": "https://indiacode.gov.in/server/api/core/bitstreams/52f9ecbb-b927-4ba6-ae6f-ca2fac50d4df/content",
+      "original_pdf_sha256": "dda561b9fd6420e1b99157b60f92bb0470a6154c6d559bbee3482ac255ac2c24",
+      "fixture_sha256": "00f4a4fff24bd7ecf457da93f5485e1a31019920a1c85666873eea1b97fdd488",
+      "extraction": "existing text sidecar",
+      "normalization": "Trailing line whitespace removed; form-feed page boundaries retained."
+    }
+  }
+}
