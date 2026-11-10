@@ -1,8 +1,8 @@
 import { useCallback, useRef, useState } from 'react';
-import { Gauge, OctagonAlert, ShieldCheck } from 'lucide-react';
+import { CircleHelp, Gauge, OctagonAlert, ShieldCheck } from 'lucide-react';
 import { Popover } from './Popover';
 import { AutonomyPanel, useAutonomy } from './autonomy';
-import { KillPanel, useKilled } from './KillPanel';
+import { KillPanel, useKillStatus } from './KillPanel';
 import { ICON } from './parts';
 import './inbox.css';
 
@@ -26,14 +26,15 @@ export function AutonomyBadge() {
 
 /** Compact top-bar button: ARMED (ready) or ENGAGED. Click opens reason and confirm. */
 export function KillSwitchButton() {
-  const killed = useKilled();
+  const status = useKillStatus();
+  const killed = status === 'engaged';
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLButtonElement>(null);
   const close = useCallback(() => setOpen(false), []);
   return (
     <>
-      <button ref={ref} type="button" className={`inbox-topbtn ${killed ? 'inbox-topbtn--critical' : 'inbox-topbtn--unknown'}`} aria-haspopup="dialog" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
-        {killed ? <OctagonAlert {...ICON} /> : <ShieldCheck {...ICON} />}<span className="inbox-topbtn__lbl">Kill switch</span><span className="mono">{killed ? 'ENGAGED' : 'ARMED'}</span>
+      <button ref={ref} type="button" className={`inbox-topbtn ${killed ? 'inbox-topbtn--critical' : status === 'armed' ? 'inbox-topbtn--ok' : 'inbox-topbtn--unknown'}`} aria-haspopup="dialog" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
+        {killed ? <OctagonAlert {...ICON} /> : status === 'armed' ? <ShieldCheck {...ICON} /> : <CircleHelp {...ICON} />}<span className="inbox-topbtn__lbl">Kill switch</span><span className="inbox-topbtn__word">{killed ? 'Engaged' : status === 'armed' ? 'Armed' : 'State unavailable'}</span>
       </button>
       {open && <Popover anchor={ref} onClose={close} placement="below" label="Kill switch"><KillPanel onDone={close} /></Popover>}
     </>

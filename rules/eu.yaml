@@ -1,0 +1,20 @@
+# EU rules for the P node (orca/rules.py). Deadlines and triggers are read from the KB obligation
+# of each record (kb/global/records.yaml), never repeated here. NIS2 Article 23(4)(a) and (b) are
+# successive stages of one incident report, so they are not a clock group (their different
+# deadlines are not an ambiguity). GDPR Article 33(1) applies only when personal data is breached,
+# so a scenario must list it in `applies`.
+
+clock_groups: []
+
+deadline_rules:
+  - id: EU-R-DEADLINE-NIS2-23-4-a
+    record: EU-NIS2-2022-ART23-4-a
+    default: true
+  - id: EU-R-DEADLINE-NIS2-23-4-b
+    record: EU-NIS2-2022-ART23-4-b
+    default: true
+  - id: EU-R-DEADLINE-GDPR-33-1
+    record: EU-GDPR-2016-ART33-1
+    default: false
+
+conflicts: []

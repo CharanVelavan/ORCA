@@ -1,11 +1,13 @@
-import { Suspense, useEffect, useMemo, useRef, useState } from 'react';
+import { Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Html, Line, OrbitControls, useGLTF } from '@react-three/drei';
 import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib';
 import * as THREE from 'three';
 import { useLiveStore } from '../store';
 import { useUi } from '../stage/uiStore';
-import type { SiteState } from '../types';
+import type { LiveEvent, SiteState } from '../types';
+import { api } from '../api';
+import { models } from '../derive';
 import { usePipeline } from '../pipeline/pipelineStore';
 import { shotFor, DEFAULT_OFFSET, type Effect } from './beats3d';
 import { EffectsLayer, useFxDescriptor } from './effects/EffectsLayer';
@@ -21,6 +23,11 @@ const readPalette = (): Palette => {
   return { bg: v('--bg', '#111316'), surface: v('--surface', '#1A1D21'), surface2: v('--surface-2', '#22262B'), ink: v('--ink', '#E7E9EC'), muted: v('--ink-muted', '#9AA3AE'), border: v('--border', '#2A2E34'), accent: v('--accent', '#7FA7CF'), ok: v('--ok', '#74B08C'), warn: v('--warn', '#D6A24E'), critical: v('--critical', '#E07F72'), healing: v('--healing', '#A39BDA'), unknown: v('--unknown', '#8A8F98') };
 };
 const stateColor = (p: Palette, s?: string) => s === 'down' ? p.critical : s === 'degraded' ? p.warn : s === 'healing' ? p.healing : s === 'ok' ? p.ok : p.unknown;
+const stateWord = (s?: string) => s === 'down' ? 'Down' : s === 'degraded' ? 'Degraded' : s === 'healing' ? 'Recovering' : s === 'ok' ? 'Operational' : 'Unavailable';
+const stateIcon = (s?: string) => s === 'down' ? '×' : s === 'degraded' ? '!' : s === 'healing' ? '↻' : s === 'ok' ? '✓' : '?';
+type SiteTopology = Record<string, { paths?: Record<string, [string, string]> }>;
+const NO_TRUTH: LiveEvent[] = [];
+const BUILDINGS: [number, number][] = [[-3.4, -0.5], [-2.7, 0.2], [-2.3, 1.1], [-1.6, -2.8], [-0.4, -2.7], [0.2, -0.8], [-0.2, 2.5], [1.0, 0.5], [0.9, 3.5]];
 
 function Model({ name, palette, scale = 1, opacity = 1, ...rest }: { name: string; palette: Palette; scale?: number; opacity?: number } & JSX.IntrinsicElements['group']) {
   const { scene } = useGLTF('./models/orca-assets.glb');
@@ -39,6 +46,15 @@ function Model({ name, palette, scale = 1, opacity = 1, ...rest }: { name: strin
     });
     return c;
   }, [scene, name, palette, opacity]);
+  useEffect(() => () => {
+    obj?.traverse((o) => {
+      const mesh = o as THREE.Mesh;
+      if (mesh.isMesh && mesh.material) {
+        const materials = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
+        materials.forEach((material) => material.dispose());
+      }
+    });
+  }, [obj]);
   if (!obj) return null;
   return <group {...rest} scale={scale}><primitive object={obj} /></group>;
 }
@@ -46,12 +62,29 @@ function Model({ name, palette, scale = 1, opacity = 1, ...rest }: { name: strin
 function Ground({ palette }: { palette: Palette }) {
   // Chennai tile with a stylised coastline on the east (Bay of Bengal).
   const coast = useMemo(() => [[2.2, 0.01, -4.5], [2.0, 0.01, -3.0], [2.3, 0.01, -1.4], [2.1, 0.01, 0.2], [2.4, 0.01, 1.6], [2.3, 0.01, 3.2], [2.6, 0.01, 4.5]] as [number, number, number][], []);
+  const buildings = useRef<THREE.InstancedMesh>(null);
+  useLayoutEffect(() => {
+    if (!buildings.current) return;
+    const object = new THREE.Object3D();
+    BUILDINGS.forEach(([x, z], i) => {
+      object.position.set(x, 0.16 + (i % 3) * 0.08, z);
+      object.scale.set(1, 1 + (i % 3) * 0.5, 1);
+      object.updateMatrix();
+      buildings.current!.setMatrixAt(i, object.matrix);
+    });
+    buildings.current.instanceMatrix.needsUpdate = true;
+    buildings.current.computeBoundingSphere();
+  }, []);
   return (
     <group>
       <mesh rotation-x={-Math.PI / 2} position={[-1.5, -0.01, 0]}><planeGeometry args={[9, 10]} /><meshStandardMaterial color={palette.surface} roughness={1} /></mesh>
       <mesh rotation-x={-Math.PI / 2} position={[5.0, -0.02, 0]}><planeGeometry args={[5, 10]} /><meshStandardMaterial color={palette.bg} roughness={1} /></mesh>
       <gridHelper args={[14, 28, palette.border, palette.border]} position={[0, 0.001, 0]} />
       <Line points={coast} color={palette.accent} lineWidth={1.2} transparent opacity={0.55} />
+      <instancedMesh ref={buildings} args={[undefined, undefined, BUILDINGS.length]}>
+        <boxGeometry args={[0.32, 0.32, 0.3]} />
+        <meshStandardMaterial color={palette.surface2} roughness={1} />
+      </instancedMesh>
     </group>
   );
 }
@@ -65,37 +98,69 @@ function Satellite({ palette }: { palette: Palette }) {
     <group>
       <Line points={arc} color={palette.border} lineWidth={1} dashed dashSize={0.2} gapSize={0.15} />
       <group ref={g} position={SAT}><Model name="Satellite" palette={palette} scale={1.3} /></group>
-      <Html position={[SAT[0], SAT[1] + 0.9, SAT[2]]} center><span className="scn-label scn-label--sat">GEO satellite · emulated</span></Html>
+      <Html position={[SAT[0], SAT[1] + 0.9, SAT[2]]} center><span className="scn-label scn-label--sat">GEO satellite - Emulated</span></Html>
     </group>
   );
 }
 
-function Links({ palette, sites, paths }: { palette: Palette; sites: Record<string, SiteState>; paths: Record<string, unknown>[] }) {
+type LinkView = { id: string; points: [number, number, number][]; color: string; packetColor: string; path?: string; state?: string; satellite: boolean };
+
+function Packets({ links, reduced }: { links: LinkView[]; reduced: boolean }) {
+  const ref = useRef<THREE.InstancedMesh>(null);
+  const moving = useMemo(() => links.filter((link) => link.state !== 'down').map((link) => ({
+    curve: new THREE.CatmullRomCurve3(link.points.map((point) => new THREE.Vector3(...point))),
+    color: new THREE.Color(link.packetColor),
+  })), [links]);
+  const object = useMemo(() => new THREE.Object3D(), []);
+  const point = useMemo(() => new THREE.Vector3(), []);
+  const place = (elapsed: number) => {
+    if (!ref.current) return;
+    moving.forEach(({ curve }, i) => {
+      curve.getPoint((elapsed * 0.11) % 1, point);
+      object.position.copy(point);
+      object.updateMatrix();
+      ref.current!.setMatrixAt(i, object.matrix);
+    });
+    ref.current.instanceMatrix.needsUpdate = true;
+  };
+  useLayoutEffect(() => {
+    if (!ref.current) return;
+    moving.forEach(({ color }, i) => ref.current!.setColorAt(i, color));
+    if (ref.current.instanceColor) ref.current.instanceColor.needsUpdate = true;
+    place(0);
+  }, [moving]);
+  useFrame(({ clock }) => { if (!reduced) place(clock.elapsedTime); });
+  if (!moving.length) return null;
+  return <instancedMesh key={moving.length} ref={ref} args={[undefined, undefined, moving.length]} frustumCulled={false}>
+    <sphereGeometry args={[0.055, 8, 8]} /><meshBasicMaterial />
+  </instancedMesh>;
+}
+
+function Links({ palette, sites, paths, topology, reduced }: { palette: Palette; sites: Record<string, SiteState>; paths: Record<string, unknown>[]; topology: SiteTopology; reduced: boolean }) {
+  const links = useMemo<LinkView[]>(() => Object.entries(SITES).flatMap(([id, s]) => {
+    const st = sites[id];
+    const active = paths.find((p) => p.site === id && p.active) as { path?: string; gateway?: string; kind?: string } | undefined;
+    const path = active?.path ?? st?.active_path;
+    const pathInfo = path ? topology[id]?.paths?.[path] : undefined;
+    const gw = active?.gateway ?? st?.gateway ?? pathInfo?.[1];
+    const g = gw ? GATEWAYS[gw] : undefined;
+    if (!st || !g || !pathInfo) return [];
+    const satellite = pathInfo[0] === 'satellite';
+    const top: [number, number, number] = [s.pos[0], 0.95, s.pos[2]];
+    const gateway: [number, number, number] = [g.pos[0], 0.9, g.pos[2]];
+    return [{ id, points: satellite ? [top, SAT, gateway] : [top, gateway], color: stateColor(palette, st.state),
+      packetColor: path === 'B' ? palette.healing : palette.accent, path, state: st.state, satellite }];
+  }), [palette, sites, paths, topology]);
   return (
     <group>
-      {Object.entries(SITES).map(([id, s]) => {
-        const st = sites[id];
-        const active = paths.find((p) => p.site === id && p.active) as { path?: string; gateway?: string; kind?: string } | undefined;
-        const gw = (active?.gateway ?? st?.gateway ?? 'GW-IN-1') as string;
-        const g = GATEWAYS[gw] ?? GATEWAYS['GW-IN-1'];
-        const color = stateColor(palette, st?.state);
-        const satPath = !active?.path || active.path === 'A' || gw.startsWith('GW');
-        const top: [number, number, number] = [s.pos[0], 0.95, s.pos[2]];
-        return (
-          <group key={id}>
-            {satPath
-              ? <Line points={[top, SAT]} color={color} lineWidth={st?.state === 'down' ? 1 : 1.6} transparent opacity={st?.state === 'down' ? 0.35 : 0.85} dashed={st?.state === 'down'} dashSize={0.18} gapSize={0.14} />
-              : null}
-            {active && active.path !== 'A' && <Line points={[top, [(top[0] + g.pos[0]) / 2, 1.6, (top[2] + g.pos[2]) / 2], [g.pos[0], 0.9, g.pos[2]]]} color={palette.healing} lineWidth={2} />}
-          </group>
-        );
-      })}
-      {Object.entries(GATEWAYS).filter(([, g]) => !g.foreign).map(([id, g]) => <Line key={id} points={[[g.pos[0], 1.0, g.pos[2]], SAT]} color={palette.accent} lineWidth={1} transparent opacity={0.45} />)}
+      {links.map((link) => <Line key={link.id} points={link.points} color={link.color} lineWidth={link.path === 'B' ? 2 : 1.4}
+        transparent opacity={link.state === 'down' ? 0.35 : 0.8} dashed={!link.satellite || link.state === 'down'} dashSize={0.16} gapSize={0.12} />)}
+      <Packets links={links} reduced={reduced} />
     </group>
   );
 }
 
-function Sites({ palette, sites, focus }: { palette: Palette; sites: Record<string, SiteState>; focus: string | null }) {
+function Sites({ palette, sites, focus, compact }: { palette: Palette; sites: Record<string, SiteState>; focus: string | null; compact: boolean }) {
   return (
     <group>
       {Object.entries(SITES).map(([id, s]) => {
@@ -107,7 +172,7 @@ function Sites({ palette, sites, focus }: { palette: Palette; sites: Record<stri
             <Model name="CellTower" palette={palette} scale={0.95} />
             <Model name="UserTerminal" palette={palette} scale={0.32} position={[0.45, 0, 0.25]} />
             <Html position={[0, 1.25, 0]} center>
-              <span className={`scn-label ${focus === id ? 'is-focus' : ''}`} data-state={st?.state ?? 'unknown'}><span className="scn-dot" />{s.name}{st?.state && st.state !== 'ok' ? <b>{st.state.toUpperCase()}</b> : null}</span>
+              <span className={`scn-label ${focus === id ? 'is-focus' : ''}`} data-state={st?.state ?? 'unknown'} data-asset={compact ? id : undefined} title={`${s.name}: ${stateWord(st?.state)}`}><span className="scn-state-icon" aria-hidden>{stateIcon(st?.state)}</span>{s.name}{!compact && <b>{stateWord(st?.state)}</b>}</span>
             </Html>
           </group>
         );
@@ -116,14 +181,14 @@ function Sites({ palette, sites, focus }: { palette: Palette; sites: Record<stri
   );
 }
 
-function Gateways({ palette, gateways }: { palette: Palette; gateways: Record<string, string> }) {
+function Gateways({ palette, gateways, compact }: { palette: Palette; gateways: Record<string, string>; compact: boolean }) {
   return (
     <group>
       {Object.entries(GATEWAYS).map(([id, g]) => (
         <group key={id} position={g.pos}>
           <Model name="GatewayDish" palette={palette} scale={1.1} opacity={g.foreign ? 0.35 : 1} />
           <Html position={[0, 1.4, 0]} center>
-            <span className="scn-label" data-state={g.foreign ? 'locked' : gateways[id] === 'down' ? 'down' : 'ok'}><span className="scn-dot" />{g.name}<b>{g.foreign ? 'NOT ALLOWED' : (gateways[id] ?? 'up').toUpperCase()}</b></span>
+            <span className="scn-label" data-state={g.foreign ? 'locked' : gateways[id] === 'down' ? 'down' : gateways[id] === 'up' ? 'ok' : 'unknown'} data-asset={compact ? id : undefined} title={`${g.name}: ${g.foreign ? 'Not allowed' : stateWord(gateways[id] === 'up' ? 'ok' : gateways[id])}`}><span className="scn-state-icon" aria-hidden>{g.foreign ? '×' : stateIcon(gateways[id] === 'up' ? 'ok' : gateways[id])}</span>{compact ? id : g.name}{!compact && <b>{g.foreign ? 'Not allowed' : stateWord(gateways[id] === 'up' ? 'ok' : gateways[id])}</b>}</span>
           </Html>
         </group>
       ))}
@@ -156,14 +221,20 @@ function Attacker({ palette, target, injector }: { palette: Palette; target: str
 }
 
 /** SAT-MGMT: the satellite operator's management network, a small server block beside GW-IN-1. */
-function Mgmt({ palette }: { palette: Palette }) {
+function Mgmt({ palette, suspected, reduced, compact }: { palette: Palette; suspected: boolean; reduced: boolean; compact: boolean }) {
   const g = GATEWAYS['GW-IN-1'].pos;
+  const pulse = useRef<THREE.Mesh>(null);
+  useFrame(({ clock }) => {
+    if (!pulse.current || reduced) return;
+    pulse.current.scale.setScalar(1 + 0.12 * Math.sin(clock.elapsedTime * 1.5));
+  });
   return (
     <group>
       <group position={MGMT}>
+        {suspected && <mesh ref={pulse} rotation-x={-Math.PI / 2} position-y={0.02}><ringGeometry args={[0.55, 0.66, 32]} /><meshBasicMaterial color={palette.warn} transparent opacity={0.38} /></mesh>}
         <mesh position-y={0.3}><boxGeometry args={[0.6, 0.6, 0.42]} /><meshStandardMaterial color={palette.surface2} roughness={0.9} /></mesh>
         <mesh position-y={0.62}><boxGeometry args={[0.6, 0.05, 0.42]} /><meshStandardMaterial color={palette.accent} roughness={0.8} /></mesh>
-        <Html position={[0, 0.95, 0]} center><span className="scn-label scn-label--mgmt"><span className="scn-dot" />Satellite control centre</span></Html>
+        <Html position={[0, 0.95, 0]} center><span className="scn-label scn-label--mgmt" data-state={suspected ? 'degraded' : 'unknown'} data-asset={compact ? 'SAT-MGMT' : undefined}><span className="scn-state-icon" aria-hidden>{suspected ? '!' : '?'}</span>SAT-MGMT {!compact && <b>{suspected ? 'Suspected' : 'Not assessed'}</b>}</span></Html>
       </group>
       <Line points={[[MGMT[0], 0.6, MGMT[2]], [g[0], 0.9, g[2]]]} color={palette.border} lineWidth={1} dashed dashSize={0.12} gapSize={0.1} />
     </group>
@@ -219,14 +290,29 @@ function useReducedMotionFlag() {
   return r;
 }
 
-export function NetworkScene({ truth }: { truth: boolean }) {
+export function NetworkScene({ truth, compact = false }: { truth: boolean; compact?: boolean }) {
   const theme = useUi((s) => s.theme);
   const [palette, setPalette] = useState<Palette>(readPalette);
   useEffect(() => { const id = requestAnimationFrame(() => setPalette(readPalette())); return () => cancelAnimationFrame(id); }, [theme]);
   const sites = useLiveStore((s) => s.sites);
   const gateways = useLiveStore((s) => s.gateways);
   const paths = useLiveStore((s) => s.paths);
-  const truthEvents = useLiveStore((s) => s.truth);
+  const modelEvents = useLiveStore((s) => s.models);
+  const [topology, setTopology] = useState<SiteTopology>({});
+  const [topologyError, setTopologyError] = useState<string | null>(null);
+  useEffect(() => {
+    let active = true;
+    api.catalogue().then((catalogue) => {
+      if (!catalogue.sites || typeof catalogue.sites !== 'object' || Array.isArray(catalogue.sites)) {
+        throw new Error('The catalogue did not include site paths.');
+      }
+      if (active) { setTopology(catalogue.sites as SiteTopology); setTopologyError(null); }
+    }).catch((error: unknown) => {
+      if (active) { setTopology({}); setTopologyError(error instanceof Error ? error.message : 'Catalogue request failed.'); }
+    });
+    return () => { active = false; };
+  }, []);
+  const truthEvents = useLiveStore((s) => truth ? s.truth : NO_TRUTH);
   const [focus, setFocus] = useState<string | null>(null);
   const prev = useRef<Record<string, string>>({});
   useEffect(() => {
@@ -243,31 +329,45 @@ export function NetworkScene({ truth }: { truth: boolean }) {
   const injector = lastInject ? String(lastInject.injector ?? '') : '';
   const fx = useFxDescriptor();
   const reduced = useReducedMotionFlag();
+  const m3 = models({ models: truth ? modelEvents : modelEvents.filter((event) => event.audience !== 'control') }).find((model) => model.id === 'M3');
+  const suspected = m3?.klass === 'attack-management-plane' && !m3.abstain;
 
   return (
     <div className="scn" data-theme-key={theme}>
-      <Canvas dpr={[1, 2]} camera={{ position: [9.5, 8, 9.5], fov: 38 }} gl={{ antialias: true, powerPreference: 'high-performance' }}>
+      <div className="scn-viewport">
+      <Canvas dpr={[1, 1.5]} frameloop={reduced ? 'demand' : 'always'} camera={{ position: [10, 9, 12], fov: 42 }} gl={{ antialias: true, powerPreference: 'high-performance' }}>
         <color attach="background" args={[palette.bg]} />
         <fog attach="fog" args={[palette.bg, 16, 30]} />
         <hemisphereLight args={[palette.ink, palette.bg, 0.9]} />
         <directionalLight position={[4, 8, 3]} intensity={1.1} />
         <Suspense fallback={null}>
           <Ground palette={palette} />
-          <Links palette={palette} sites={sites} paths={paths} />
-          <Sites palette={palette} sites={sites} focus={focus} />
-          <Gateways palette={palette} gateways={gateways} />
+          <Links palette={palette} sites={sites} paths={paths} topology={topology} reduced={reduced} />
+          <Sites palette={palette} sites={sites} focus={focus} compact={compact} />
+          <Gateways palette={palette} gateways={gateways} compact={compact} />
           <Satellite palette={palette} />
           {truth && isAttack && <Attacker palette={palette} target={attackTarget} injector={injector} />}
-          <Mgmt palette={palette} />
-          <EffectsLayer fx={fx} palette={palette} truth={truth} reduced={reduced} />
+          <Mgmt palette={palette} suspected={suspected} reduced={reduced} compact={compact} />
+          {truth && <EffectsLayer fx={fx} palette={palette} truth={truth} reduced={reduced} />}
         </Suspense>
-        <OrbitControls makeDefault enablePan={false} enableZoom zoomSpeed={0.8} minDistance={3.5} maxDistance={24} enableDamping dampingFactor={0.12} maxPolarAngle={Math.PI / 2.15} minPolarAngle={0.35} />
-        <CameraRig focus={focus} fx={fx} />
+        <OrbitControls makeDefault target={[0, 2.2, 0]} enablePan={false} enableZoom zoomSpeed={0.8} minDistance={3.5} maxDistance={24} enableDamping={!reduced} dampingFactor={0.12} maxPolarAngle={Math.PI / 2.15} minPolarAngle={0.35} />
+        {truth && <CameraRig focus={focus} fx={fx} />}
       </Canvas>
-      <div className="scn-tag mono">EMULATED NETWORK · CHENNAI</div>
-      <div className="scn-legend">
-        <span data-state="ok"><i />OK</span><span data-state="degraded"><i />Degraded</span><span data-state="down"><i />Down</span><span data-state="healing"><i />Healing</span>
+      <div className="scn-tag">Emulated network - Chennai</div>
+      {topologyError && <p className="scn-error" role="alert">Network topology unavailable: {topologyError}</p>}
+      <div className="scn-legend" aria-label="Network status and emulated link legend">
+        <span data-state="ok"><b>✓</b> Operational</span><span data-state="degraded"><b>!</b> Degraded</span><span data-state="down"><b>×</b> Down</span><span data-state="healing"><b>↻</b> Recovering</span>
+        <span className="scn-link-key">Emulated satellite link</span><span className="scn-link-key scn-link-key--land">Emulated terrestrial link</span>
       </div>
+      </div>
+      {compact && <ul className="scn-roster" aria-label="Observed site and ground-network status">
+        {Object.entries(SITES).map(([id, site]) => <li key={id} data-state={sites[id]?.state ?? 'unknown'} title={id}><strong>{site.name}</strong><span aria-hidden>{stateIcon(sites[id]?.state)}</span><b>{stateWord(sites[id]?.state)}</b></li>)}
+        {Object.entries(GATEWAYS).map(([id, gateway]) => {
+          const state = gateway.foreign ? 'locked' : gateways[id] === 'up' ? 'ok' : gateways[id] === 'down' ? 'down' : 'unknown';
+          return <li key={id} data-state={state} title={gateway.name}><strong>{id}</strong><span aria-hidden>{gateway.foreign ? '×' : stateIcon(state)}</span><b>{gateway.foreign ? 'Not allowed' : stateWord(state)}</b></li>;
+        })}
+        <li data-state={suspected ? 'degraded' : 'unknown'}><strong>SAT-MGMT</strong><span aria-hidden>{suspected ? '!' : '?'}</span><b>{suspected ? 'Suspected' : 'Not assessed'}</b></li>
+      </ul>}
     </div>
   );
 }

@@ -34,8 +34,18 @@ data: {"seq":42,"t":12,"ts":"2026-11-10T19:12:00+05:30","kind":"tick","sites":{}
 `GET /api/replay?file=runs/live-20261108-190000-s1-rules-mock.jsonl`
 
 ```json
-{"ok":true,"events":[{"seq":1,"t":0,"ts":"2026-11-10T19:00:00+05:30","kind":"run_meta","scenario":"s1","emulated":true}]}
+{"ok":true,"source":"stream","events":[{"seq":1,"t":0,"ts":"2026-11-10T19:00:00+05:30","kind":"run_meta","scenario":"s1","emulated":true}],"audit":{"chain":{"ok":true,"bad_seq":null,"note":"audit chain intact"},"entries":[{"seq":1,"ts":"2026-11-10T19:00:00+05:30","kind":"run_meta","actor":"system","payload":{"scenario":"s1"},"prev_hash":"<previous hash>","hash":"<entry hash>"}],"omitted_control":0}}
 ```
+
+The audit chain is verified against the **complete original recording**, not the
+stream sidecar, which is not authenticated by that chain. `chain.ok` is `true`,
+`false`, or `null` (unavailable); malformed or tampered records are reported,
+never marked verified. `audit.entries` excludes
+exercise-control truth, with the omission count given separately. Therefore a
+JSONL export of these visible rows is a redacted view and cannot itself prove the
+complete original chain. Stream events can still include `audience:"control"`;
+render them only on Simulator. Without an independently anchored final hash,
+verification cannot detect a rewritten chain or a removed suffix.
 
 `POST /api/session`
 
@@ -72,6 +82,11 @@ data: {"seq":42,"t":12,"ts":"2026-11-10T19:12:00+05:30","kind":"tick","sites":{}
 ```json
 {"mode":"AUTO","sites":["CHN-02"],"playbooks":["PB-06"],"minutes":20,"pin":"<redacted>"}
 ```
+
+For `MANUAL`, empty site and playbook lists (or `"*"`) revoke all autonomy grants and unused
+autonomy-minted tokens. A scoped request removes exactly matching grants and revokes unused
+autonomy tokens whose plans those grants cover; separately human-approved tokens remain valid.
+An autonomy-minted token cannot outlive the grant that authorized it.
 
 `POST /api/approve`
 
@@ -136,7 +151,7 @@ Every SSE object has `seq`, simulation minute `t`, ISO simulation timestamp
 | Kind | Example JSON |
 | --- | --- |
 | `session` | `{"kind":"session","scenario":"s1","llm":"mock","rules":true,"emulated":true}` |
-| `tick` | `{"kind":"tick","sites":{"CHN-01":{"state":"degraded","active_path":"A"}},"gateways":{"GW-IN-1":"up"},"paths":[]}` |
+| `tick` | `{"kind":"tick","sites":{"CHN-01":{"state":"ok","active_path":"A","delivered_mbps":47.61}},"services":{"112":{"demand_mbps":36.72,"delivered_mbps":36.72,"pct":100}},"gateways":{"GW-IN-1":"up"},"paths":[],"instantaneous":true}` |
 | `inject` | `{"kind":"inject","audience":"control","id":"INJ-001","injector":"rain","truth_class":"fault-weather","target":"CHN-01","start":4,"end":14,"by":"human:commander"}` |
 | `scheduled` | `{"kind":"scheduled","audience":"control","id":"SCH-001","injector":"rain","target":"CHN-01","at_t":20,"duration_min":10}` |
 | `model` | `{"kind":"model","model":"M3","site":"CHN-01","class":"fault-weather","confidence":0.9,"top_features":[]}` |
@@ -159,7 +174,18 @@ Every SSE object has `seq`, simulation minute `t`, ISO simulation timestamp
 | `gap` | `{"kind":"gap","gap_id":"GAP-IN-001","title":"Example gap","status":"candidate","india":"Record summary","global_examples":[],"recommendation":"Human review."}` |
 | `phase` | `{"kind":"phase","active":["predict","report"],"latest":"report"}` |
 | `impact` | `{"kind":"impact","real":{"emulated_estimate":true,"payments_failed":0},"shadow":{"emulated_estimate":true,"payments_failed":20}}` |
+| `summary` | `{"kind":"summary","final":false,"network":{"instant_delivered_mbps":734.22,"cumulative_delivered_mbit":44053.2},"sites":{},"services":{},"units":{"rate":"Mbps","volume":"Mbit","sample_duration_s":60}}` |
 | `clock_waiting` | `{"kind":"clock_waiting","reason":"Agents deciding"}` |
 | `clock_resumed` | `{"kind":"clock_resumed","reason":"Agent queue drained"}` |
 | `error` | `{"kind":"error","where":"agent:satellite_operator","message":"safe failure detail"}` |
 
+The delivery examples above are abbreviated from the first S1 tick; the engine
+includes all sites and services.
+
+`impact.real.delivery` contains `now` and `cumulative` network, site and service
+measurements, including a service breakdown for each site. Cumulative `*_mbit`
+values integrate each one-minute Mbps sample for 60 seconds. Legacy summary
+fields ending in `_mbit_min` retain their previous values and are sums of Mbps
+samples, not Mbit. `impact.shadow.delivery` is
+`{"available":false,"reason":"not_simulated","provenance":"packet_loss_floor_estimate"}`:
+the shadow impact estimate does not independently simulate delivered Mbps.

@@ -19,29 +19,74 @@ STATIC = ROOT / "dashboard" / "live" / "static"
 
 def _replay_events(path: Path) -> list[dict]:
     """Translate audit JSONL to a minimal section-4 event stream for the replay client."""
-    # Parse once through the established replay adapter: a malformed/tampered chain is still visible
-    # in its normal after-action-review data, while the event list stays lightweight for the live UI.
-    adapter.build_run(path, path.stem)
+    # Malformed lines are reported by the accompanying audit integrity view.
+    entries, _ = adapter.read_entries(path)
     out = []
     kind_map = {"event_released": "alert", "inject": "inject", "scheduled": "scheduled",
+                "inject_stopped": "inject_stop",
                 "approval_requested": "approval", "approved": "approval",
                 "rejected": "approval", "executed": "execute", "execute_refused": "execute",
                 "autonomy_set": "autonomy", "autonomy_downgraded": "autonomy", "kill_switch": "kill",
                 "kill_switch_released": "kill", "msg_sent": "msg", "msg_rejected": "msg"}
-    for entry in json.loads("[" + ",".join(line for line in path.read_text().splitlines() if line.strip()) + "]") if path.stat().st_size else []:
-        payload = dict(entry.get("payload") or {})
+    for entry in entries:
+        raw_payload = entry.get("payload")
+        if raw_payload is not None and not isinstance(raw_payload, dict):
+            raise ValueError(f"invalid audit payload at entry {entry.get('seq')}")
+        payload = dict(raw_payload or {})
         kind = kind_map.get(entry.get("kind"), entry.get("kind"))
-        if kind in ("inject", "scheduled") and "kind" in payload:
+        if kind in ("inject", "scheduled", "inject_stop") and "kind" in payload:
             payload["injector"] = payload.pop("kind")
         event = {"seq": entry.get("seq"), "t": payload.get("t", payload.get("start", payload.get("at_t", 0))),
                  "ts": entry.get("ts"), "kind": kind, "actor": entry.get("actor"), **payload}
-        if kind in ("inject", "scheduled"):
+        if kind in ("inject", "scheduled", "inject_stop"):
             event["audience"] = "control"
         out.append(event)
     return out
 
 
 STREAM_SUFFIX = ".stream.jsonl"
+CONTROL_AUDIT_KINDS = {"inject", "scheduled", "inject_stop", "inject_stopped"}
+
+
+def _audit_view(path: Path) -> dict:
+    """Verify the original chain while withholding exercise-control truth from audit views."""
+    if not path.is_file():
+        return {"entries": [], "omitted_control": 0,
+                "chain": {"ok": None, "bad_seq": None, "note": "audit recording unavailable"}}
+    entries, malformed, position = [], None, 0
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        position += 1
+        try:
+            entry = json.loads(line)
+        except json.JSONDecodeError:
+            if malformed is None:
+                malformed = position
+            continue
+        if not isinstance(entry, dict):
+            if malformed is None:
+                malformed = position
+            continue
+        entries.append(entry)
+    chain = adapter.verify_chain(entries)
+    if malformed is not None:
+        prior = chain.get("bad_seq")
+        chain = {"ok": False, "bad_seq": min(malformed, prior) if isinstance(prior, int) else malformed,
+                 "note": f"malformed audit entry at position {malformed}; {chain['note']}"}
+    elif chain["ok"] is None and any("hash" in entry for entry in entries):
+        missing = next((i for i, entry in enumerate(entries, 1) if not isinstance(entry.get("hash"), str)), None)
+        if missing is not None:
+            chain = {"ok": False, "bad_seq": missing, "note": f"missing hash at entry {missing}"}
+
+    def public(entry: dict) -> bool:
+        payload = entry.get("payload")
+        return (entry.get("kind") not in CONTROL_AUDIT_KINDS
+                and entry.get("audience") != "control"
+                and not (isinstance(payload, dict) and payload.get("audience") == "control"))
+
+    rows = [entry for entry in entries if public(entry)]
+    return {"entries": rows, "omitted_control": len(entries) - len(rows), "chain": chain}
 
 
 def list_runs(runs: Path) -> dict:
@@ -124,6 +169,15 @@ def make_handler(session: LiveSession):
                 return self._json(session.state())
             if u.path == "/api/catalogue":
                 return self._json(session.catalogue())
+            if u.path == "/api/model-config":
+                return self._json(session.model_config.public())
+            if u.path == "/api/scenario-detail":
+                try:
+                    return self._json(session.scenario_detail((q.get("id") or [""])[0]))
+                except ValueError as exc:
+                    return self._json({"ok": False, "error": str(exc)}, 400)
+            if u.path == "/api/summary":
+                return self._json(session.summary())
             if u.path == "/api/truth":
                 return self._json(session.truth())
             if u.path == "/api/runs":
@@ -136,6 +190,11 @@ def make_handler(session: LiveSession):
             u = urlparse(self.path)
             try:
                 n = int(self.headers.get("Content-Length") or 0)
+                if u.path.startswith("/api/model-config"):
+                    if self.headers.get_content_type() != "application/json":
+                        raise ValueError("Model configuration requires JSON.")
+                    if n > 16384:
+                        raise ValueError("Model configuration request is too large.")
                 body = json.loads(self.rfile.read(n) or b"{}") if n else {}
                 if not isinstance(body, dict):
                     raise ValueError("body must be an object")
@@ -156,6 +215,12 @@ def make_handler(session: LiveSession):
             return self._json({"ok": False, "error": "not found"}, 404)
 
         def _command(self, path: str, b: dict) -> dict:
+            if path == "/api/model-config":
+                return session.model_config.update(b)
+            if path == "/api/model-config/discover":
+                return session.model_config.discover(b)
+            if path == "/api/model-config/test":
+                return session.model_config.test(b)
             if path == "/api/session":
                 return session.restart(**b)
             if path == "/api/clock":
@@ -167,17 +232,23 @@ def make_handler(session: LiveSession):
             if path == "/api/schedule":
                 return session.schedule(b["kind"], b.get("target"), b["at_t"], b["duration_min"], b.get("params") or {})
             if path == "/api/autonomy":
-                return session.autonomy(b["mode"], b.get("sites", "*"), b.get("playbooks", "*"), b["minutes"], b.get("pin", ""))
+                return session.autonomy(b["mode"], b.get("sites", "*"), b.get("playbooks", "*"), b["minutes"])
             if path == "/api/approve":
-                return session.approve(b["hash"], b.get("pin", ""))
+                return session.approve(b["hash"])
             if path == "/api/reject":
                 return session.reject(b["hash"], b.get("reason", ""))
             if path == "/api/kill":
-                return session.kill(b.get("pin", ""), b.get("reason", ""))
+                return session.kill(reason=b.get("reason", ""))
             if path == "/api/kill/release":
-                return session.release_kill(b.get("pin", ""))
+                return session.release_kill()
             if path == "/api/order":
                 return session.order(b["to"], b["text"])
+            if path == "/api/notify":
+                return session.notify(b["to"], b["text"], b.get("data_class", "operational"))
+            if path == "/api/finish":
+                return session.finish()
+            if path == "/api/stage_fault":
+                return session.arm_stage_fault(b.get("pct"))
             if path == "/api/ask":
                 return session.ask(b["to"], b["question"])
             if path == "/api/rules":
@@ -185,7 +256,7 @@ def make_handler(session: LiveSession):
             if path == "/api/kb":
                 return session.set_kb(b["kb"])
             if path == "/api/gap":
-                return session.decide_gap(b["gap_id"], b["decision"], b.get("pin", ""))
+                return session.decide_gap(b["gap_id"], b["decision"])
             raise ValueError("not found")
 
         def _stream(self, since: int) -> None:
@@ -218,10 +289,11 @@ def make_handler(session: LiveSession):
             try:
                 if sidecar.is_file():
                     lines = [json.loads(line) for line in sidecar.read_text(encoding="utf-8").splitlines() if line.strip()]
-                    return self._json({"ok": True, "events": lines, "source": "stream"})
+                    return self._json({"ok": True, "events": lines, "source": "stream", "audit": _audit_view(audit)})
                 if not audit.is_file():
                     return self._json({"ok": False, "error": "recording not found"}, 404)
-                return self._json({"ok": True, "events": _replay_events(audit), "source": "audit"})
+                return self._json({"ok": True, "events": _replay_events(audit), "source": "audit",
+                                   "audit": _audit_view(audit)})
             except Exception as exc:
                 return self._json({"ok": False, "error": f"cannot parse recording: {exc}"}, 400)
 

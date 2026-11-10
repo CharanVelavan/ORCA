@@ -77,7 +77,9 @@ def allocate(demand: dict[str, dict[str, float]], capacity: dict[str, float], sh
         out["note"] = f"MILP failed ({res.message}); greedy fallback"
         return out
     u = np.round(res.x[:n]).astype(int)
-    return _report("milp", keys, demand, [x * unit_mbps for x in u], capacity)
+    out = _report("milp", keys, demand, [x * unit_mbps for x in u], capacity)
+    out["solution"] = "optimal"
+    return out
 
 
 def greedy(demand, capacity, shared=None) -> dict:
@@ -97,7 +99,9 @@ def greedy(demand, capacity, shared=None) -> dict:
             if s in v["sites"]:
                 sh_left[k] -= g
         got.append(g)
-    return _report("greedy", keys, demand, got, capacity)
+    out = _report("greedy", keys, demand, got, capacity)
+    out["solution"] = "feasible"
+    return out
 
 
 def _report(method, keys, demand, got, capacity) -> dict:

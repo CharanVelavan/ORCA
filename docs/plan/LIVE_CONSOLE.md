@@ -76,12 +76,16 @@ named role only.
 ## 4. Event stream and state
 `GET /api/stream` = Server-Sent Events, one JSON object per `data:` line, field `seq` increasing.
 `?since=<seq>` replays missed events. `GET /api/state` = full snapshot (for reload).
+`GET /api/replay?file=<recording.jsonl>` returns replay events plus an `audit` view:
+the full original chain's tri-state verification result, original non-control entries
+with their hashes, and the number of control entries omitted. A public-row export
+is redacted and is not independently verifiable as the full chain.
 
 Every event: `{seq, t (sim minute), ts (sim ISO time), kind, ...}`. Kinds and payload fields:
 | kind | fields |
 |---|---|
 | `session` | scenario, title, story, start, llm, rules, kb, autoplay, sync, speed, emulated: true |
-| `tick` | sites: {site: {state: ok\|degraded\|down\|healing, active_path, gateway, snr_db, link_margin_db, packet_loss, battery_pct, mains_power, terminals_up, traffic_load, txn_success}} , gateways: {GW: up\|down\|suspect}, paths: [{site, path, gateway, integrity, active}] |
+| `tick` | sites: {site: {state, active_path, gateway, demand_mbps, capacity_mbps, delivered_mbps, telemetry}}, services: {service: {demand_mbps, delivered_mbps, pct}}, gateways and paths; instantaneous: true |
 | `inject` | id, kind, label, target, start, end, by: "human:commander" (ground truth hidden from agents) |
 | `model` | model (M1..M4), site, score/class/confidence, top_features, horizon (M2), text |
 | `alert` | id, source, site, label, visible_to [roles], text |
@@ -99,8 +103,9 @@ Every event: `{seq, t (sim minute), ts (sim ISO time), kind, ...}`. Kinds and pa
 | `autonomy` | mode MANUAL\|ASSISTED\|AUTO, scope {sites, playbooks}, expires_at, by, downgraded_from, cause |
 | `kill` | engaged: bool, by, reason, tokens_revoked |
 | `gap` | gap_id, title, status, india (one line + records), global_examples [{jurisdiction, clause, shows, tier}], recommendation |
-| `phase` | phase predict\|heal\|coordinate\|contain\|fix\|report (derived: see 7) |
-| `impact` | real {...}, shadow {...} (section 6) |
+| `phase` | active: [predict\|heal\|coordinate\|contain\|fix\|report], latest (derived: see 7) |
+| `impact` | real {..., delivery}, shadow {..., delivery}, instantaneous network totals (section 6) |
+| `summary` | final, timings, services, sites, network, units and impact_cumulative |
 | `clock_waiting` / `clock_resumed` | reason |
 | `error` | where, message (never secrets) |
 
@@ -126,7 +131,13 @@ entry and `net_state` entries every 5 sim-minutes, and alert details inside `eve
 | `/api/rules` | on bool | toggles the rule engine for subsequent agent turns |
 | `/api/kb` | india\|eu | swaps the KB jurisdiction for subsequent turns (scenario 3) |
 | `/api/gap` | gap_id, decision confirm\|reject, pin | human decision on a gap candidate (logged) |
+
 `GET /api/catalogue` returns scenarios, sites, gateways, accounts, playbooks, injectors (for the UI).
+
+Global `MANUAL` (both site and playbook scopes empty or wildcard) revokes every autonomy grant
+and unused automatic approval token. Scoped `MANUAL` removes matching grants and revokes the
+unused automatic tokens they cover; it does not revoke human approvals. Automatic approvals
+expire no later than their originating grant.
 
 ### 5.1 Injectors (`orca/live/inject.py`)
 | id | label (UI) | sim | default target | truth class |
@@ -154,9 +165,17 @@ Per sim-minute, from site records and the dependants of each site (add a small t
 - `people_affected` (site population share x outage), `warned_at` per dependant (minute PB-10 or
   a downstream warning message reached it; null if never), `minutes_to_warn`
 - `reports`: list of obligation clocks and whether met.
-**Shadow run ("without ORCA")**: a second `Simulator` with the same seed, scenario and injections but
-no playbooks executed and no warnings. Same counters. Cheap (no agents). Emitted as `impact.shadow`.
-Figures are emulated estimates; the UI labels them so.
+`impact.real.delivery` contains the simulator allocation for the current minute and cumulative
+network, site and service totals, including each site's service breakdown. Rates are Mbps; cumulative
+volumes are Mbit, calculated from one-minute samples (Mbps × 60 seconds). Site demand is the sum
+of independently rounded service demands and can differ slightly from the raw site demand in `tick`.
+The summary retains the older `cumulative_*_mbit_min` fields for compatibility: they are sums of the
+one-minute Mbps samples, not Mbit; use the new `cumulative_*_mbit` fields for actual volume.
+
+**Shadow estimate ("without ORCA")**: the current implementation applies a conservative packet-loss
+floor to the real telemetry for the impact counters. It is not a second simulator or an independent
+capacity allocation. Its `delivery` is explicitly unavailable with `reason: "not_simulated"`; do not
+present the real run's delivered Mbps as shadow throughput. All figures are emulated estimates.
 
 ## 7. Phase derivation
 predict: M2 forecast or M1 early score with no outage yet; heal: a `heal`/PB-06/battery-saving action

@@ -54,7 +54,7 @@ class M3:
 
     def predict(self, X: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
         """Returns (label index into LABELS, confidence). Abstain index = len(CLASSES)."""
-        P = self.model.predict_proba(X)
+        P = self.model.predict_proba(X, num_threads=1)
         srt = np.sort(P, 1)
         top, mar = srt[:, -1], srt[:, -1] - srt[:, -2]
         idx = P.argmax(1)
@@ -63,19 +63,20 @@ class M3:
 
     def classify(self, x) -> dict:
         x = np.asarray(x, dtype=float).reshape(1, -1)
-        P = self.model.predict_proba(x)[0]
-        idx, conf = self.predict(x)
-        label = LABELS[int(idx[0])]
+        P = self.model.predict_proba(x, num_threads=1)[0]
         top_cls = int(P.argmax())
-        return {"label": label, "confidence": round(float(conf[0]), 3),
+        conf = float(P[top_cls])
+        ranked = np.sort(P)
+        label = CLASSES[top_cls] if conf >= self.tau and ranked[-1] - ranked[-2] >= self.margin else ABSTAIN
+        return {"label": label, "confidence": round(conf, 3),
                 "probabilities": {c: round(float(p), 3) for c, p in zip(CLASSES, P)},
                 "abstained": label == ABSTAIN,
                 "why": self.explain(x[0], top_cls),
-                "note": (f"top probability {conf[0]:.2f} or margin below the abstain threshold "
+                "note": (f"top probability {conf:.2f} or margin below the abstain threshold "
                          f"(tau {self.tau:.2f}, margin {self.margin:.2f}); a human decides") if label == ABSTAIN else ""}
 
     def explain(self, x, cls_idx: int, k: int = 4) -> list[dict]:
-        contrib = self.model.booster_.predict(np.asarray(x, dtype=float).reshape(1, -1), pred_contrib=True)[0]
+        contrib = self.model.booster_.predict(np.asarray(x, dtype=float).reshape(1, -1), pred_contrib=True, num_threads=1)[0]
         nf = len(FEATURES)
         c = np.asarray(contrib).reshape(len(CLASSES), nf + 1)[cls_idx][:nf]
         idx = np.argsort(-np.abs(c))[:k]

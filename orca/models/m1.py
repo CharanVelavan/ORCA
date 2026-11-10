@@ -2,8 +2,8 @@
 
 Trained on NORMAL windows only (including benign surges), so it can flag attacks M3 never saw.
 It never acts alone: it only triggers M3 and the agents. Flag = Isolation Forest OR ECOD, each
-above the 99.75th percentile of its normal validation scores (about 0.5 % false alarms per
-site-minute in distribution).
+above the 99.9th percentile of its normal validation scores, reducing isolated benign telemetry
+spikes while preserving sustained anomaly detection.
 """
 from __future__ import annotations
 
@@ -40,8 +40,8 @@ class M1:
         self.sd = X_normal.std(axis=0) + 1e-6
         self.iforest = IsolationForest(n_estimators=200, random_state=self.seed, contamination="auto").fit(X_normal)
         self.ecod = ECOD().fit(X_normal)
-        self.threshold = float(np.quantile(self.score(X_val_normal), 0.9975))
-        self.ecod_threshold = float(np.quantile(self.ecod.score(X_val_normal), 0.9975))
+        self.threshold = float(np.quantile(self.score(X_val_normal), 0.999))
+        self.ecod_threshold = float(np.quantile(self.ecod.score(X_val_normal), 0.999))
         return self
 
     def score(self, X: np.ndarray) -> np.ndarray:
@@ -49,7 +49,7 @@ class M1:
         return -self.iforest.score_samples(X)
 
     def flag(self, X: np.ndarray) -> np.ndarray:
-        """Ensemble: Isolation Forest OR ECOD above its own 99.75th-percentile threshold (~0.5 % false alarms).
+        """Ensemble: Isolation Forest OR ECOD above its own 99.9th-percentile normal threshold.
 
         ECOD is kept in the flag because a feature that is constant in normal data (mains power,
         wipe commands) cannot be split by the forest, while its empirical tail probability is extreme."""

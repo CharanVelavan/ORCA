@@ -126,13 +126,14 @@ def test_expired_token_is_refused(w):
     assert "executed" not in kinds(w)
 
 
-def test_approval_needs_a_known_plan_and_a_pin(w):
+def test_approval_needs_a_known_plan_and_named_commander(w):
     rem = Remediation(w)
     with pytest.raises(Refused, match="unknown plan"):
         rem.approve("f" * 64, "Charan Velavan", "4321")
     plan = rem.request_approval("satellite_operator", "PB-01", ["noc-vendor-7"], {}, "test")
-    with pytest.raises(Refused, match="PIN"):
-        rem.approve(plan["hash"], "Charan Velavan", "")
+    with pytest.raises(Refused, match="commander name"):
+        rem.approve(plan["hash"], "")
+    assert rem.approve(plan["hash"], "Charan Velavan")
 
 
 def test_agents_have_no_approve_tool(w):
@@ -210,13 +211,15 @@ def test_stale_request_cannot_be_approved(w):
         rem.approve(plan["hash"], "Charan Velavan", "4321")
 
 
-def test_configured_pin_is_checked(w):
-    import hashlib
-    rem = Remediation(w, pin_sha256=hashlib.sha256(b"2468").hexdigest())
+def test_commander_approval_needs_no_pin_even_with_legacy_configuration(w, monkeypatch):
+    monkeypatch.setenv("ORCA_COMMANDER_PIN_SHA256", "obsolete-configuration")
+    rem = Remediation(w, pin_sha256="obsolete-constructor-value")
     plan = rem.request_approval("satellite_operator", "PB-01", ["noc-vendor-7"], {}, "t")
-    with pytest.raises(Refused, match="wrong PIN"):
-        rem.approve(plan["hash"], "Charan Velavan", "4321")
-    assert rem.approve(plan["hash"], "Charan Velavan", "2468")
+    with pytest.raises(Refused, match="commander name"):
+        rem.approve(plan["hash"], "")
+    token = rem.approve(plan["hash"], "Charan Velavan")
+    assert rem.tokens[token]["hash"] == plan["hash"]
+    assert rem.tokens[token]["approver"] == "Charan Velavan"
 
 
 # ------------------------------------------------------------------ Mission 6: autonomy modes

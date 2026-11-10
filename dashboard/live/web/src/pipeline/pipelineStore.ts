@@ -51,7 +51,7 @@ const refNode = (ref: string): string | null => {
   if (/^M[1-4]$/.test(ref)) return `model:${ref}`;
   if (ref.startsWith('GAP-IN-')) return `gap:${ref.slice(0, 9)}`;
   if (ref === 'commander' || ref === 'human' || ref.startsWith('human:')) return 'human';
-  if (ref === 'policy_adviser') return 'agent:gap_analyst';
+  if (ref === 'policy_adviser') return 'agent:policy_adviser';
   const agent = `agent:${ref}`;
   return NODE_IDS.has(agent) ? agent : null;
 };
@@ -186,35 +186,50 @@ export const usePipeline = create<PipelineState>((set, get) => ({
         const st = String(event.state ?? (event.class === 'normal' ? 'ok' : 'flagged'));
         if (site) siteMap[site] = st; else siteMap['*'] = st;
         msites[model] = siteMap;
-        const others = Object.entries(siteMap).filter(([k, v]) => k !== (site || '*') && v !== 'ok');
+        const others = Object.entries(siteMap).filter(([k, v]) => k !== (site || '*') && ['flagged', 'unsure', 'fault', 'replan'].includes(v));
         // A heartbeat saying "ok" for one site must not clear a tile another site still holds red.
-        if (st === 'ok' && others.length) break;
+        if ((st === 'ok' || st === 'warming' || st === 'unavailable') && others.length) break;
+        if (st === 'warming' || st === 'unavailable') {
+          const samples = typeof event.samples === 'number' && typeof event.required_samples === 'number'
+            ? ` (${event.samples}/${event.required_samples} samples)` : '';
+          put(id, { phase: 'path', tone: 'unknown', word: st === 'warming' ? 'WARMING' : 'UNAVAILABLE',
+            detail: st === 'warming' ? `Collecting observed telemetry${samples}` : 'Model output unavailable', pulse: false });
+          break;
+        }
         if (model === 'M1') {
-          const score = Number(event.score ?? 0), threshold = Number(event.threshold ?? 0.6);
-          m1 = { scores: [...m1.scores, score].slice(-32), threshold };
+          const score = typeof event.score === 'number' ? event.score : undefined;
+          const threshold = typeof event.threshold === 'number' ? event.threshold : undefined;
+          if (score !== undefined && threshold !== undefined) m1 = { scores: [...m1.scores, score].slice(-32), threshold };
           const flagged = event.state === 'flagged';
-          put(id, { phase: flagged ? 'active' : 'done', tone: flagged ? 'critical' : 'ok', word: flagged ? 'FLAGGED' : 'NORMAL', detail: `${site} score ${score.toFixed(2)} / ${threshold.toFixed(2)}`, pulse: flagged });
-          if (flagged && !wasRed) { send(refNode(site), id, 'anomaly', 'critical'); beat(id, 'Anomaly detector flags a problem', `Anomaly score ${score.toFixed(2)} at ${site} is above the ${threshold.toFixed(2)} threshold.`, 'critical'); }
+          const sources = Array.isArray(event.flag_sources) ? event.flag_sources.filter((value): value is string => typeof value === 'string') : [];
+          const detail = score === undefined || threshold === undefined ? 'Anomaly score unavailable'
+            : `${site} Isolation Forest ${score.toFixed(2)} / ${threshold.toFixed(2)}${sources.includes('ecod') ? '; ECOD flagged' : ''}`;
+          put(id, { phase: flagged ? 'active' : 'done', tone: flagged ? 'critical' : 'ok', word: flagged ? 'FLAGGED' : 'NORMAL', detail, pulse: flagged });
+          if (flagged && !wasRed) { send(refNode(site), id, 'anomaly', 'critical'); beat(id, 'Anomaly detector flags a problem', `${detail}.`, 'critical'); }
         } else if (model === 'M2') {
           const h = event.horizon_min, flagged = event.state === 'flagged';
           const what = event.metric === 'battery' ? 'battery empty' : 'link lost';
-          put(id, { phase: flagged ? 'active' : 'done', tone: flagged ? 'warn' : 'ok', word: flagged ? 'FORECAST' : 'NORMAL', detail: h == null ? 'no failure forecast' : Number(h) <= 0 ? `${site} ${what} now` : `${site} ${what} in ${h} min`, pulse: flagged });
+          const noFailure = typeof event.forecast_window_min === 'number'
+            ? `No failure within ${event.forecast_window_min} min (median)` : 'No failure time reported';
+          put(id, { phase: flagged ? 'active' : 'done', tone: flagged ? 'warn' : 'ok', word: flagged ? 'FORECAST' : 'NORMAL', detail: h == null ? noFailure : Number(h) <= 0 ? `${site} ${what} now` : `${site} ${what} in ${h} min`, pulse: flagged });
           if (flagged && !wasRed) { send(refNode(site), id, 'trend', 'warn'); beat(id, 'Failure forecaster warns', Number(h) <= 0 ? `${site}: ${what} now.` : `${site}: ${what} in about ${h} minutes.`, 'warn'); }
         } else if (model === 'M4') {
-          const alloc = Array.isArray(event.allocation) ? (event.allocation as string[]).join(' > ') : '';
+          const alloc = Array.isArray(event.allocation_priority) ? event.allocation_priority.filter((item): item is string => typeof item === 'string').join(' > ') : '';
           const replan = event.state === 'replan';
-          put(id, { phase: replan ? 'active' : 'done', tone: replan ? 'warn' : 'ok', word: replan ? 'RE-PLAN' : 'NORMAL', detail: alloc || 'capacity balanced' });
-          if (replan && !wasRed) beat(id, 'Capacity planner re-plans', `Scarce capacity goes first to ${alloc || '112 and the hospital'}.`, 'warn');
+          put(id, { phase: replan ? 'active' : 'done', tone: replan ? 'warn' : 'ok', word: replan ? 'RE-PLAN' : 'NORMAL', detail: alloc || 'Allocation priority unavailable' });
+          if (replan && !wasRed) beat(id, 'Capacity planner re-plans', alloc ? `Scarce capacity goes first to ${alloc}.` : 'Capacity replanning reported; allocation priority unavailable.', 'warn');
         } else {
-          const cls = String(event.class ?? ''), conf = Number(event.confidence ?? 0);
+          const cls = String(event.class ?? ''), conf = typeof event.confidence === 'number' ? event.confidence : undefined;
           if (cls === 'normal' || st === 'ok') { put(id, { phase: 'done', tone: 'ok', word: 'NORMAL', detail: 'all sites normal', pulse: false }); break; }
           const unsure = cls === 'abstain' || event.state === 'unsure';
           const attack = cls.startsWith('attack');
           const tone: Tone = unsure ? 'warn' : attack ? 'critical' : cls === 'normal' ? 'ok' : 'warn';
-          put(id, { phase: 'active', tone, word: unsure ? 'UNSURE' : attack ? 'ATTACK' : 'FAULT', detail: unsure ? 'abstains, human decides' : `${cls} ${conf.toFixed(2)}`, pulse: true });
-          if (!wasRed || nodes[id]?.detail !== `${cls} ${conf.toFixed(2)}`) {
+          const modelDetail = unsure ? 'abstains, human decides'
+            : `${cls}${conf === undefined ? '' : ` ${(conf * 100).toFixed(1)}% model score`}`;
+          put(id, { phase: 'active', tone, word: unsure ? 'UNSURE' : attack ? 'ATTACK' : 'FAULT', detail: modelDetail, pulse: true });
+          if (!wasRed || nodes[id]?.detail !== modelDetail) {
             send(refNode(site), id, unsure ? 'unclear' : cls.replace('attack-', '').replace('fault-', ''), tone);
-            beat(id, unsure ? 'Attack classifier is not sure' : attack ? 'Attack classifier: cyber attack' : 'Attack classifier: a fault', unsure ? `It abstains at ${site} and hands the call to the human.` : `${site} looks like ${cls.replace(/-/g, ' ')} (${Math.round(conf * 100)}% confident).`, tone);
+            beat(id, unsure ? 'Attack classifier is not sure' : attack ? 'Attack classifier: cyber attack' : 'Attack classifier: a fault', unsure ? `It abstains at ${site} and hands the call to the human.` : `${site} looks like ${cls.replace(/-/g, ' ')}${conf === undefined ? '' : ` (uncalibrated model score ${(conf * 100).toFixed(1)}%)`}.`, tone);
           }
           if (!truth && anomalySite) put('threat:anomaly', { detail: `${anomalySite}: M3 says ${unsure ? 'unsure' : cls}` });
         }
@@ -253,7 +268,7 @@ export const usePipeline = create<PipelineState>((set, get) => ({
           explain_model: ['model:M3', 'ASKS MODEL', 'asks M3 why'],
           run_rule_engine: ['rules', 'ASKS RULES', 'asks the rule engine'],
           query_kb: [null, 'READS LAW', 'reads the knowledge base'],
-          ask_adviser: ['agent:gap_analyst', 'ASKS ADVISER', 'asks the policy adviser'],
+          ask_adviser: ['agent:policy_adviser', 'ASKS ADVISER', 'asks the policy adviser'],
           select_playbook: [null, 'PICKS FIX', 'picks a playbook'],
           request_approval: ['human', 'ASKS HUMAN', 'asks the commander'],
           send_message: [null, 'MESSAGING', 'sends a message'],

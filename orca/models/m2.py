@@ -42,7 +42,7 @@ class M2:
 
     def _raw(self, X):
         base = X[:, self.PHYS]
-        return tuple(base + self.q[a].predict(X) for a in (0.1, 0.5, 0.9))
+        return tuple(base + self.q[a].predict(X, num_threads=1) for a in (0.1, 0.5, 0.9))
 
     def predict(self, X) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
         lo, mid, hi = self._raw(X)

@@ -1,0 +1,15 @@
+# Policy and Audit layout approval
+
+`policy-audit-approval.png` is a layout concept with illustrative sample data. It was generated with the built-in image-generation tool, then edited with that tool to remove invented source quotations and numerical power-duration requirements. It is not legal evidence or a screenshot of implemented features.
+
+Charan explicitly approved both layouts in this session. Implementation is underway. Both will use real backend data, the existing confirmation guards, light/dark tokens and resizable regions.
+
+## Design brief used for generation
+
+Create a high-fidelity two-screen desktop approval board for ORCA-NTN: Policy & Gaps above Audit & Replay. Use the existing black, burgundy and white theme, squared panels, fine borders and Geist-style typography. Keep navigation and page headers compact. Policy uses a searchable gap/duty/source list, a readable selected finding with incident evidence, verified citations, bounded search and comparisons, plus distinct reporting triggers and an evidence flow. Audit uses recording controls, read-only indication, filterable event list, time-aligned timeline, selected event inspector, source links, raw JSON, hash verification and a scrubber. Show drag handles; avoid clipped stacked rows and unused header space.
+
+## Final image-edit prompt
+
+Edit this approval board. Keep the exact overall two-screen layout, application navigation, typography, black/burgundy/white theme, resizable column handles and timeline. Correct ALL misleading example legal content. Board heading must include "LAYOUT CONCEPT • SAMPLE DATA".
+Policy selected finding title "Backup power duration". Finding text EXACT meaning: "No numeric minimum duration found in the checked sources. Candidate requires human review." Incident evidence: "Inspect the incident record and site battery forecast." Verified citations rows: "DoT disaster SOP — Redundancy guidance", "TRAI quality regulations — Power redundancy", "Search record — Checked scope and date". Do NOT include any fabricated quotes or legal minimum hours. Delete all four-hour/4-hour/minimum4 claims throughout image. Search boundary: "Sources checked • keywords • date • exclusions". Global comparisons: "Compare verified instruments; preserve binding status." Left list second finding "Failover safety duties", subtitle "Candidate for source review", status "Needs review". No made-up catalogue version, no RES03 rule. Reporting clock retain three distinct triggers: CERT-In noticing, DoT awareness, CTI occurrence; "6 h" each. Evidence path boxes Incident / Rules / Candidate / Human review, generic only no fabricated rule numbers.
+Audit inspector sample source citations must say "Linked source records" and "Recorded approval evidence", no fake guideline section numbers. Timestamp use "19:20 IST • example event". Timeline title "Recorded event timeline • example". Event text is illustrative only, no legal claims. Keep all other layout structure polished and legible. The result is solely a layout approval concept, not a legal evidence document.

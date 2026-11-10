@@ -37,10 +37,10 @@ def test_live_ui_dist_has_no_external_runtime_urls() -> None:
 
 
 def test_live_ui_bundle_has_all_routes_and_split_views() -> None:
-    """The offline bundle keeps the three exercise views as lazy route chunks."""
+    """The offline bundle keeps the seven shell routes as lazy route chunks."""
     assets = DIST / "assets"
     names = {path.name for path in assets.glob("*.js")}
-    for route in ("Landing-", "Control-", "Review-", "Console-"):
+    for route in ("Home-", "Simulator-", "Operations-", "Investigation-", "Policy-", "Recovery-", "Audit-"):
         assert any(name.startswith(route) for name in names), f"Missing built {route[:-1]} route chunk"
 
 
@@ -56,8 +56,10 @@ def test_live_ui_console_never_receives_ground_truth() -> None:
     """Plan 12: /console must never see inject/scheduled ground truth, in the store, the Pipeline or the 3D view."""
     web = ROOT / "dashboard" / "live" / "web" / "src"
     bridge = (web / "stage" / "DataBridge.tsx").read_text(encoding="utf-8")
-    assert "path === '/stage' || path === '/control' || path === '/review'" in bridge
-    assert "/console" not in bridge.split("truthRoute = ")[1].split("\n")[0]
+    expr = bridge.split("truthRoute = ")[1].split("\n")[0]
+    assert "path === '/simulator'" in expr      # ground truth reaches the Simulator route only (plus legacy /control)
+    for route in ("/console", "/operations", "/investigation", "/policy", "/recovery", "/audit", "/review", "/stage", "path === '/'"):
+        assert route not in expr, f"{route} must never receive ground truth"
     pipeline = (web / "pipeline" / "pipelineStore.ts").read_text(encoding="utf-8")
     assert "if (!truth && event.audience === 'control') return;" in pipeline
     console = (web / "Console.tsx").read_text(encoding="utf-8")
@@ -66,8 +68,9 @@ def test_live_ui_console_never_receives_ground_truth() -> None:
     assert "truth && isAttack && <Attacker" in scene
 
 
-def test_live_ui_has_stage_route_and_glb() -> None:
-    names = {path.name for path in (DIST / "assets").glob("*.js")}
-    assert any(name.startswith("Stage-") for name in names), "Missing built Stage route chunk"
+def test_live_ui_routes_are_lazy_in_source_and_glb_ships() -> None:
+    app = (ROOT / "dashboard" / "live" / "web" / "src" / "App.tsx").read_text(encoding="utf-8")
+    for route in ("Home", "Simulator", "Operations", "Investigation", "Policy", "Recovery", "Audit"):
+        assert f"const {route} = lazy(" in app, f"{route} must be a lazy route"
     glb = DIST / "models" / "orca-assets.glb"
     assert glb.is_file() and glb.stat().st_size < 2_000_000

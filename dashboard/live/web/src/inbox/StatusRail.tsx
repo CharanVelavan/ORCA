@@ -1,9 +1,9 @@
 import { useCallback, useRef, useState } from 'react';
-import { Gauge, OctagonAlert, ShieldCheck, Timer } from 'lucide-react';
+import { CircleHelp, Gauge, OctagonAlert, ShieldCheck, Timer } from 'lucide-react';
 import { useLiveStore } from '../store';
 import { Popover } from './Popover';
 import { AutonomyPanel, useAutonomy } from './autonomy';
-import { KillPanel, useKilled } from './KillPanel';
+import { KillPanel, useKillStatus } from './KillPanel';
 import { ICON } from './parts';
 import { clockText, toMs } from './format';
 import { useSimNow } from './simClock';
@@ -12,7 +12,8 @@ import './inbox.css';
 /** 64 px status rail for /console: autonomy mode, kill switch, open reporting clocks. */
 export function StatusRail() {
   const { mode } = useAutonomy();
-  const killed = useKilled();
+  const killStatus = useKillStatus();
+  const killed = killStatus === 'engaged';
   const obligations = useLiveStore((s) => s.obligations);
   const now = useSimNow();
   const [pop, setPop] = useState<'mode' | 'kill' | null>(null);
@@ -30,9 +31,9 @@ export function StatusRail() {
       </button>
       <button ref={killRef} type="button" className={`inbox-rail__btn inbox-rail__btn--${killed ? 'critical' : 'unknown'}`}
         aria-haspopup="dialog" aria-expanded={pop === 'kill'} onClick={() => setPop(pop === 'kill' ? null : 'kill')}>
-        {killed ? <OctagonAlert size={18} strokeWidth={1.5} aria-hidden="true" /> : <ShieldCheck size={18} strokeWidth={1.5} aria-hidden="true" />}
+        {killed ? <OctagonAlert size={18} strokeWidth={1.5} aria-hidden="true" /> : killStatus === 'armed' ? <ShieldCheck size={18} strokeWidth={1.5} aria-hidden="true" /> : <CircleHelp size={18} strokeWidth={1.5} aria-hidden="true" />}
         <span className="inbox-rail__cap">Kill</span>
-        <span className="mono inbox-rail__val">{killed ? 'ENGAGED' : 'ARMED'}</span>
+        <span className="inbox-rail__val">{killed ? 'Engaged' : killStatus === 'armed' ? 'Armed' : 'State unavailable'}</span>
       </button>
       <div className="inbox-rail__clocks" aria-label="Open reporting clocks">
         <div className="inbox-rail__cap inbox-rail__cap--row"><Timer {...ICON} />Clocks</div>

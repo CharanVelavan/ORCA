@@ -24,11 +24,11 @@ cd orca-ntn
 ### Step 2: Configure Environment (Optional)
 By default, ORCA-NTN runs in **offline mock mode** requiring no external API keys, internet connectivity, or credentials.
 
-To set an optional Commander PIN hash or configure external endpoints, copy the template:
+To configure external endpoints, copy the template:
 ```bash
 cp .env.example .env
 ```
-*(Never bake secrets or tokens into images; Compose automatically pulls variables from `.env` without printing or storing plaintext PINs.)*
+*(Never bake secrets or tokens into images; Compose automatically pulls variables from `.env` without printing secrets.)*
 
 ### Step 3: Run with Docker Compose
 To build the image and run the default demo scenario (`S1`):
@@ -231,6 +231,6 @@ python -m orca.kbvec query "6 hour incident reporting window" --filter jurisdict
 
 ## 6. Security and Compliance Rules
 
-- **PIN Security:** The incident commander PIN is never stored or logged in plain text. Only `ORCA_COMMANDER_PIN_SHA256` is ingested via environment or `.env`.
+- **Commander actions:** Approvals, autonomy changes, kill-switch actions and policy-gap decisions require explicit confirmation, without a PIN. Ownership, scoped expiry, one-time plan tokens and execution guards still apply.
 - **Read-Only Verification:** Hard-coded guardrails prevent modification of verified records in `kb/` during scenario execution.
 - **Audit Verification:** All actions, verdicts, and tool invocations append to a hash-chained audit log verifiable via `orca.audit.AuditLog.verify()`.

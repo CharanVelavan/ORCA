@@ -36,7 +36,7 @@ type UiStore = {
 };
 
 const readTheme = (): Theme => {
-  try { return (localStorage.getItem('orca-theme') as Theme) || 'dark'; } catch { return 'dark'; }
+  try { return localStorage.getItem('orca-theme') === 'dark' ? 'dark' : 'light'; } catch { return 'light'; }
 };
 
 export const useUi = create<UiStore>((set) => ({
@@ -53,6 +53,7 @@ export const useUi = create<UiStore>((set) => ({
   toggleDrawer: (open) => set((s) => ({ simDrawer: open ?? !s.simDrawer })),
   toggleTheme: () => set((s) => {
     const theme: Theme = s.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = theme;
     try { localStorage.setItem('orca-theme', theme); } catch { /* private mode */ }
     return { theme };
   }),

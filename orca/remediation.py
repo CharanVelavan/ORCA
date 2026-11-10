@@ -14,7 +14,7 @@ Then: staged rollout 5 -> 25 -> 100 %, with a health check after each stage and 
 Approval is a human act. ``approve`` is called by the commander console, never exposed as an agent tool.
 
 Autonomy (Mission 6). The human sets MANUAL / ASSISTED / AUTO with ``set_mode``, scoped to sites and
-playbooks, with a PIN and an expiry (facts clock). MANUAL: every action needs the commander. ASSISTED:
+playbooks, with explicit confirmation and an expiry (facts clock). MANUAL: every action needs the commander. ASSISTED:
 low-risk playbooks (catalogue ``risk: low``) are approved automatically, the rest need the commander.
 AUTO: every executable playbook in scope is approved automatically. The automatic approver is logged as
 ``autonomy:<MODE> (granted by <name>)``. Hard limits hold in every mode: own assets only, no foreign
@@ -31,8 +31,6 @@ from __future__ import annotations
 
 import datetime as dt
 import hashlib
-import hmac
-import os
 from pathlib import Path
 
 import yaml
@@ -72,7 +70,7 @@ class Remediation:
         self.cat = catalogue()
         self.plans: dict[str, dict] = {}      # hash -> plan
         self.tokens: dict[str, dict] = {}     # token -> {hash, approver, expires, used, revoked}
-        self.pin_sha256 = pin_sha256 or os.environ.get("ORCA_COMMANDER_PIN_SHA256") or None
+        self.pin_sha256 = None  # Legacy constructor argument is ignored; commander actions need no PIN.
         self.grants: list[dict] = []          # autonomy grants: {mode, sites, playbooks, expires, granted_by}
         self.downgraded: str | None = None    # cause, once AUTO has dropped to ASSISTED
         self.killed: dict | None = None       # kill-switch record while engaged
@@ -96,7 +94,8 @@ class Remediation:
         mode, grant = self.mode_for(playbook, targets)
         plan["mode"] = mode
         if self._auto_ok(mode, pb, targets, plan):
-            plan["auto_token"] = self._mint(h, f"autonomy:{mode} (granted by {grant['granted_by']})")
+            plan["auto_token"] = self._mint(h, f"autonomy:{mode} (granted by {grant['granted_by']})",
+                                            grant_expires_at=grant["expires"])
         return plan
 
     def execute(self, caller: str, playbook: str, targets: list[str], params: dict | None, token: str) -> dict:
@@ -140,14 +139,14 @@ class Remediation:
         return result
 
     # ------------------------------------------------------------ human side
-    def approve(self, plan_hash_: str, approver: str, pin: str) -> str:
+    def approve(self, plan_hash_: str, approver: str, pin: str = "") -> str:
         """Commander approves a plan. Returns a one-time token. Never called by an agent."""
         plan = self.plans.get(plan_hash_)
         if not plan:
             raise Refused("unknown plan")
         if self.killed:
             raise Refused("kill switch engaged: release it before approving")
-        self._check_pin(approver, pin)
+        self._check_commander(approver)
         if plan.get("executed"):
             raise Refused("this plan has already run; the agent must request again")
         if rules.parse_ts(self.w.now) > rules.parse_ts(plan["expires_at"]):
@@ -158,21 +157,32 @@ class Remediation:
         self.w.log("rejected", f"human:{approver}", {"plan_hash": plan_hash_, "reason": reason})
 
     # ------------------------------------------------------------ autonomy (human side)
-    def set_mode(self, mode: str, approver: str, pin: str, minutes: int, sites: list[str] | str = "*",
+    def set_mode(self, mode: str, approver: str, pin: str = "", minutes: int = 30, sites: list[str] | str = "*",
                  playbooks: list[str] | str = "*") -> dict:
-        """Grant an autonomy mode for a scope until now + minutes. MANUAL clears matching grants."""
+        """Grant a scoped mode; global MANUAL clears all grants, scoped MANUAL clears matching grants."""
         if mode not in MODES:
             raise Refused(f"unknown mode {mode}; use one of {', '.join(MODES)}")
         if self.killed:
             raise Refused("kill switch engaged: release it before changing modes")
-        self._check_pin(approver, pin)
+        self._check_commander(approver)
         if not 0 < minutes <= 24 * 60:
             raise Refused("a mode grant needs an expiry between 1 minute and 24 hours")
         grant = {"mode": mode, "sites": sites, "playbooks": playbooks, "granted_by": approver,
                  "granted_at": self.w.now,
                  "expires": (rules.parse_ts(self.w.now) + dt.timedelta(minutes=minutes)).isoformat()}
         if mode == "MANUAL":
-            self.grants = [g for g in self.grants if not (g["sites"] == sites and g["playbooks"] == playbooks)]
+            global_scope = sites == "*" and playbooks == "*"
+            removed = [g for g in self.grants if global_scope or (g["sites"] == sites and g["playbooks"] == playbooks)]
+            self.grants = [g for g in self.grants if g not in removed]
+            revoked = 0
+            for token in self.tokens.values():
+                if token["used"] or token.get("revoked") or not str(token["approver"]).startswith("autonomy:"):
+                    continue
+                plan = self.plans[token["hash"]]
+                if global_scope or any(self._grant_covers(g, plan["playbook"], plan["targets"]) for g in removed):
+                    token["revoked"] = True
+                    revoked += 1
+            grant["tokens_revoked"] = revoked
         else:
             self.grants.append(grant)
             if mode == "AUTO":
@@ -180,17 +190,17 @@ class Remediation:
         self.w.log("autonomy_set", f"human:{approver}", grant)
         return grant
 
-    def kill(self, approver: str, pin: str, reason: str) -> None:
+    def kill(self, approver: str, pin: str = "", reason: str = "") -> None:
         """Kill switch: revoke every token, drop all grants, refuse all execution until released."""
-        self._check_pin(approver, pin)
+        self._check_commander(approver)
         revoked = [k for k, t in self.tokens.items() if not t["used"] and not t.get("revoked")]
         for k in revoked:
             self.tokens[k]["revoked"] = True
         self.grants, self.killed = [], {"by": approver, "at": self.w.now, "reason": reason}
         self.w.log("kill_switch", f"human:{approver}", {"reason": reason, "tokens_revoked": len(revoked)})
 
-    def release_kill(self, approver: str, pin: str) -> None:
-        self._check_pin(approver, pin)
+    def release_kill(self, approver: str, pin: str = "") -> None:
+        self._check_commander(approver)
         self.w.log("kill_switch_released", f"human:{approver}", {"was": self.killed})
         self.killed = None                         # back to MANUAL everywhere; grants must be set again
 
@@ -204,14 +214,17 @@ class Remediation:
         for g in self.grants:
             if now > rules.parse_ts(g["expires"]):
                 continue
-            if g["playbooks"] != "*" and playbook not in g["playbooks"]:
-                continue
-            if g["sites"] != "*" and not all(t in g["sites"] for t in targets):
+            if not self._grant_covers(g, playbook, targets):
                 continue
             m = "ASSISTED" if (g["mode"] == "AUTO" and self.downgraded) else g["mode"]
             if MODES.index(m) > MODES.index(best):
                 best, best_g = m, g
         return best, best_g
+
+    @staticmethod
+    def _grant_covers(grant: dict, playbook: str, targets: list[str]) -> bool:
+        return ((grant["playbooks"] == "*" or playbook in grant["playbooks"])
+                and (grant["sites"] == "*" or all(target in grant["sites"] for target in targets)))
 
     # ------------------------------------------------------------ autonomy (internals)
     def _auto_ok(self, mode: str, pb: dict, targets: list[str], plan: dict) -> bool:
@@ -227,10 +240,14 @@ class Remediation:
             return False
         return True
 
-    def _mint(self, plan_hash_: str, approver: str, human: bool = False) -> str:
+    def _mint(self, plan_hash_: str, approver: str, human: bool = False,
+              grant_expires_at: str | None = None) -> str:
         self._seq += 1
         token = hashlib.sha256(f"{plan_hash_}|{approver}|{self.w.now}|{self._seq}".encode()).hexdigest()[:24]
-        expires = (rules.parse_ts(self.w.now) + TOKEN_TTL).isoformat()
+        deadline = rules.parse_ts(self.w.now) + TOKEN_TTL
+        if grant_expires_at is not None:
+            deadline = min(deadline, rules.parse_ts(grant_expires_at))
+        expires = deadline.isoformat()
         self.tokens[token] = {"hash": plan_hash_, "approver": approver, "expires": expires, "used": False}
         self.plans[plan_hash_]["token_expires_at"] = expires
         self.w.log("approved", f"human:{approver}" if human else approver,
@@ -238,14 +255,10 @@ class Remediation:
                     "token_expires_at": expires, "request_expires_at": self.plans[plan_hash_]["expires_at"]})
         return token
 
-    def _check_pin(self, approver: str, pin: str) -> None:
-        if not approver or not pin:
-            raise Refused("this needs a name and a PIN")
-        if self.pin_sha256 is None:
-            return                                 # demo mode: no PIN hash configured (logged in set_mode/approve)
-        if not hmac.compare_digest(hashlib.sha256(pin.encode()).hexdigest(), self.pin_sha256):
-            self.w.log("pin_refused", f"human:{approver}", {})
-            raise Refused("wrong PIN")
+    @staticmethod
+    def _check_commander(approver: str) -> None:
+        if not approver or not approver.strip():
+            raise Refused("this needs a commander name")
 
     def _check_downgrade(self) -> None:
         if self.downgraded or not any(g["mode"] == "AUTO" for g in self.grants):

@@ -10,7 +10,8 @@ offset, for example "2026-11-10T19:02:00+05:30"):
     jurisdiction: IN                    # which rules/<jur>.yaml and which KB records to use
     now: <ts>                           # the only clock; needed for "time left" and "not yet sent"
     on: 2026-11-10                      # date for in-force tests (default: date of now, else KB as-of)
-    applies: [record ids]               # which deadline records apply (default: rules marked default)
+    applies: [record ids]               # which deadline records apply (default: rules marked default, plus
+                                        # rules whose requires_entity flag is true in facts.entity)
     triggers:                           # when the clocks start
       noticing: <ts>
       occurrence: <ts> | [{label: .., at: <ts>}]   # a list means several readings
@@ -58,6 +59,8 @@ class Verdict:
     gap_id: str | None = None
     deadline: str | None = None           # ISO datetime (earliest = safe working deadline)
     time_left: str | None = None          # text such as "2 h 22 m left" / "34 m overdue"
+    trigger: str | None = None            # deadline rules only: the KB obligation's trigger kind
+    starts: str | None = None             # deadline rules only: when that trigger happened (clock start)
     readings: list[dict] = field(default_factory=list)   # AMBIGUITY: one per reading
     actions: list[dict] = field(default_factory=list)    # CONFLICT: the clashing actions
     notes: list[str] = field(default_factory=list)
@@ -154,7 +157,7 @@ class _Engine:
             verdict = "INSUFFICIENT_EVIDENCE"
             explanation = (f"Record unverified ({', '.join(unverified)}): the quote has not been checked "
                            f"against the official text, so no compliance finding is made.")
-            kw.update(deadline=None, time_left=None)
+            kw.update(deadline=None, time_left=None, trigger=None, starts=None)
         gap_id = kw.get("gap_id")
         if not known and not gap_id:
             raise ValueError(f"verdict {rule_id} cites nothing")
@@ -188,9 +191,14 @@ class _Engine:
         if not any(k in self.facts for k in ("triggers", "applies", "reports")):
             return                      # no incident described: nothing to count
         applies = self.facts.get("applies")
+        entity = self.facts.get("entity") or {}
         for rule in self.rules["deadline_rules"]:
             rid = rule["record"]
-            if (rid not in applies) if applies is not None else (not rule.get("default", False)):
+            if applies is not None:
+                chosen = rid in applies
+            else:    # default rules, plus rules that apply to this kind of entity (``requires_entity``)
+                chosen = bool(rule.get("default")) or bool(rule.get("requires_entity") and entity.get(rule["requires_entity"]))
+            if not chosen:
                 continue
             self.one_deadline(rule, self.kb.records[rid])
 
@@ -207,11 +215,12 @@ class _Engine:
 
         if status == "status_not_stated":   # never "not applicable"
             gap = rule.get("gap")
+            earliest = min(rows, key=lambda r: r["_dt"]) if rows else None
             self.add("AMBIGUITY", rule["id"], topic, [rid],
                      f"{rec['instrument']} {rec['clause']} says {ob.get('deadline', 'no deadline')} from {trig}, but "
                      f"its binding status is not stated in the document. Read it both ways until the "
                      f"authority says which applies; it is not treated as inapplicable.",
-                     gap_id=gap,
+                     gap_id=gap, trigger=trig, starts=earliest["starts"] if earliest else None,
                      deadline=min(r["_dt"] for r in rows).isoformat() if rows else None,
                      readings=[{"reading": "binding", "deadlines": [r["deadline"] for r in rows]},
                                {"reading": "not binding", "deadlines": []}],
@@ -259,7 +268,9 @@ class _Engine:
         else:
             verdict = "VIOLATION"
             body = f"{what}; {state}, {left_text(first, at)} against the earliest deadline."
+        starts = min(rows, key=lambda r: r["_dt"])["starts"]
         self.add(verdict, rule["id"], topic, [rid], body, deadline=first.isoformat(),
+                 trigger=trig, starts=starts,
                  time_left=left_text(first, at),
                  readings=[{k: v for k, v in r.items() if k != "_dt"} for r in rows] if len(rows) > 1 else [],
                  notes=["report pending"] if (verdict == "COMPLIANT" and not sent_at) else [])

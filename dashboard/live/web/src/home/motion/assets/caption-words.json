@@ -1,0 +1,1136 @@
+[
+  {
+    "text": "In",
+    "start": 0.3,
+    "end": 0.5,
+    "scene": 1
+  },
+  {
+    "text": "Chennai,",
+    "start": 0.5,
+    "end": 0.64,
+    "scene": 1
+  },
+  {
+    "text": "homes,",
+    "start": 1.2,
+    "end": 1.5,
+    "scene": 1
+  },
+  {
+    "text": "hospitals",
+    "start": 1.84,
+    "end": 2.18,
+    "scene": 1
+  },
+  {
+    "text": "and",
+    "start": 2.18,
+    "end": 2.54,
+    "scene": 1
+  },
+  {
+    "text": "emergency",
+    "start": 2.54,
+    "end": 2.78,
+    "scene": 1
+  },
+  {
+    "text": "services",
+    "start": 2.78,
+    "end": 3.46,
+    "scene": 1
+  },
+  {
+    "text": "depend",
+    "start": 3.46,
+    "end": 3.8,
+    "scene": 1
+  },
+  {
+    "text": "on",
+    "start": 3.8,
+    "end": 4.24,
+    "scene": 1
+  },
+  {
+    "text": "connected",
+    "start": 4.24,
+    "end": 4.64,
+    "scene": 1
+  },
+  {
+    "text": "networks.",
+    "start": 4.64,
+    "end": 5.2,
+    "scene": 1
+  },
+  {
+    "text": "ORCA",
+    "start": 5.98,
+    "end": 6.22,
+    "scene": 1
+  },
+  {
+    "text": "explores",
+    "start": 6.22,
+    "end": 6.64,
+    "scene": 1
+  },
+  {
+    "text": "how",
+    "start": 6.64,
+    "end": 7.06,
+    "scene": 1
+  },
+  {
+    "text": "an",
+    "start": 7.06,
+    "end": 7.2,
+    "scene": 1
+  },
+  {
+    "text": "emulated",
+    "start": 7.2,
+    "end": 7.68,
+    "scene": 1
+  },
+  {
+    "text": "satellite",
+    "start": 7.68,
+    "end": 8.06,
+    "scene": 1
+  },
+  {
+    "text": "backed",
+    "start": 8.06,
+    "end": 8.56,
+    "scene": 1
+  },
+  {
+    "text": "network",
+    "start": 8.56,
+    "end": 9.12,
+    "scene": 1
+  },
+  {
+    "text": "can",
+    "start": 9.12,
+    "end": 9.64,
+    "scene": 1
+  },
+  {
+    "text": "protect",
+    "start": 9.64,
+    "end": 9.92,
+    "scene": 1
+  },
+  {
+    "text": "these",
+    "start": 9.92,
+    "end": 10.26,
+    "scene": 1
+  },
+  {
+    "text": "everyday",
+    "start": 10.26,
+    "end": 10.6,
+    "scene": 1
+  },
+  {
+    "text": "services.",
+    "start": 10.6,
+    "end": 11.1,
+    "scene": 1
+  },
+  {
+    "text": "An",
+    "start": 12.8,
+    "end": 12.9,
+    "scene": 2
+  },
+  {
+    "text": "attacker",
+    "start": 12.9,
+    "end": 13.14,
+    "scene": 2
+  },
+  {
+    "text": "uses",
+    "start": 13.14,
+    "end": 13.64,
+    "scene": 2
+  },
+  {
+    "text": "stolen",
+    "start": 13.64,
+    "end": 13.98,
+    "scene": 2
+  },
+  {
+    "text": "credentials",
+    "start": 13.98,
+    "end": 14.3,
+    "scene": 2
+  },
+  {
+    "text": "to",
+    "start": 14.3,
+    "end": 14.98,
+    "scene": 2
+  },
+  {
+    "text": "reach",
+    "start": 14.98,
+    "end": 15.14,
+    "scene": 2
+  },
+  {
+    "text": "the",
+    "start": 15.14,
+    "end": 15.38,
+    "scene": 2
+  },
+  {
+    "text": "satellite",
+    "start": 15.38,
+    "end": 15.72,
+    "scene": 2
+  },
+  {
+    "text": "operator\u2019s",
+    "start": 15.72,
+    "end": 16.64,
+    "scene": 2
+  },
+  {
+    "text": "ground",
+    "start": 16.64,
+    "end": 16.88,
+    "scene": 2
+  },
+  {
+    "text": "management",
+    "start": 16.88,
+    "end": 17.3,
+    "scene": 2
+  },
+  {
+    "text": "network.",
+    "start": 17.3,
+    "end": 18.08,
+    "scene": 2
+  },
+  {
+    "text": "Terminals",
+    "start": 18.88,
+    "end": 19.48,
+    "scene": 2
+  },
+  {
+    "text": "are",
+    "start": 19.48,
+    "end": 19.62,
+    "scene": 2
+  },
+  {
+    "text": "disrupted.",
+    "start": 19.62,
+    "end": 20.08,
+    "scene": 2
+  },
+  {
+    "text": "A",
+    "start": 21.08,
+    "end": 21.105,
+    "scene": 2
+  },
+  {
+    "text": "backup",
+    "start": 21.105,
+    "end": 21.38,
+    "scene": 2
+  },
+  {
+    "text": "path",
+    "start": 21.38,
+    "end": 21.8,
+    "scene": 2
+  },
+  {
+    "text": "may",
+    "start": 21.8,
+    "end": 22.08,
+    "scene": 2
+  },
+  {
+    "text": "also",
+    "start": 22.08,
+    "end": 22.38,
+    "scene": 2
+  },
+  {
+    "text": "be",
+    "start": 22.38,
+    "end": 22.62,
+    "scene": 2
+  },
+  {
+    "text": "unsafe,",
+    "start": 22.62,
+    "end": 22.94,
+    "scene": 2
+  },
+  {
+    "text": "and",
+    "start": 23.9,
+    "end": 24.0,
+    "scene": 2
+  },
+  {
+    "text": "service",
+    "start": 24.0,
+    "end": 24.28,
+    "scene": 2
+  },
+  {
+    "text": "providers",
+    "start": 24.28,
+    "end": 24.72,
+    "scene": 2
+  },
+  {
+    "text": "need",
+    "start": 24.72,
+    "end": 25.04,
+    "scene": 2
+  },
+  {
+    "text": "to",
+    "start": 25.04,
+    "end": 25.18,
+    "scene": 2
+  },
+  {
+    "text": "be",
+    "start": 25.18,
+    "end": 25.3,
+    "scene": 2
+  },
+  {
+    "text": "told.",
+    "start": 25.3,
+    "end": 25.52,
+    "scene": 2
+  },
+  {
+    "text": "ORCA",
+    "start": 26.3,
+    "end": 27.12,
+    "scene": 3
+  },
+  {
+    "text": "collects",
+    "start": 27.12,
+    "end": 27.44,
+    "scene": 3
+  },
+  {
+    "text": "telemetry",
+    "start": 27.44,
+    "end": 28.04,
+    "scene": 3
+  },
+  {
+    "text": "and",
+    "start": 28.04,
+    "end": 28.68,
+    "scene": 3
+  },
+  {
+    "text": "prepares",
+    "start": 28.68,
+    "end": 28.84,
+    "scene": 3
+  },
+  {
+    "text": "features.",
+    "start": 28.84,
+    "end": 29.52,
+    "scene": 3
+  },
+  {
+    "text": "Model",
+    "start": 30.54,
+    "end": 30.565,
+    "scene": 3
+  },
+  {
+    "text": "one",
+    "start": 30.565,
+    "end": 30.96,
+    "scene": 3
+  },
+  {
+    "text": "detects",
+    "start": 30.96,
+    "end": 31.26,
+    "scene": 3
+  },
+  {
+    "text": "anomalies.",
+    "start": 31.26,
+    "end": 31.92,
+    "scene": 3
+  },
+  {
+    "text": "Model",
+    "start": 32.94,
+    "end": 33.0,
+    "scene": 3
+  },
+  {
+    "text": "two",
+    "start": 33.0,
+    "end": 33.46,
+    "scene": 3
+  },
+  {
+    "text": "forecasts",
+    "start": 33.46,
+    "end": 34.0,
+    "scene": 3
+  },
+  {
+    "text": "failure",
+    "start": 34.0,
+    "end": 34.58,
+    "scene": 3
+  },
+  {
+    "text": "in",
+    "start": 34.58,
+    "end": 34.82,
+    "scene": 3
+  },
+  {
+    "text": "minutes.",
+    "start": 34.82,
+    "end": 35.04,
+    "scene": 3
+  },
+  {
+    "text": "Model",
+    "start": 35.74,
+    "end": 35.78,
+    "scene": 3
+  },
+  {
+    "text": "three",
+    "start": 35.78,
+    "end": 36.28,
+    "scene": 3
+  },
+  {
+    "text": "distinguishes",
+    "start": 36.28,
+    "end": 37.02,
+    "scene": 3
+  },
+  {
+    "text": "faults",
+    "start": 37.02,
+    "end": 37.52,
+    "scene": 3
+  },
+  {
+    "text": "from",
+    "start": 37.52,
+    "end": 38.0,
+    "scene": 3
+  },
+  {
+    "text": "attacks,",
+    "start": 38.0,
+    "end": 38.34,
+    "scene": 3
+  },
+  {
+    "text": "or",
+    "start": 39.1,
+    "end": 39.16,
+    "scene": 3
+  },
+  {
+    "text": "abstains.",
+    "start": 39.16,
+    "end": 39.62,
+    "scene": 3
+  },
+  {
+    "text": "Model",
+    "start": 40.64,
+    "end": 40.7,
+    "scene": 3
+  },
+  {
+    "text": "four",
+    "start": 40.7,
+    "end": 41.26,
+    "scene": 3
+  },
+  {
+    "text": "allocates",
+    "start": 41.26,
+    "end": 41.96,
+    "scene": 3
+  },
+  {
+    "text": "limited",
+    "start": 41.96,
+    "end": 42.26,
+    "scene": 3
+  },
+  {
+    "text": "capacity.",
+    "start": 42.26,
+    "end": 42.86,
+    "scene": 3
+  },
+  {
+    "text": "Role",
+    "start": 44.8,
+    "end": 44.94,
+    "scene": 4
+  },
+  {
+    "text": "agents",
+    "start": 44.94,
+    "end": 45.32,
+    "scene": 4
+  },
+  {
+    "text": "coordinate",
+    "start": 45.32,
+    "end": 45.82,
+    "scene": 4
+  },
+  {
+    "text": "around",
+    "start": 45.82,
+    "end": 46.4,
+    "scene": 4
+  },
+  {
+    "text": "the",
+    "start": 46.4,
+    "end": 46.58,
+    "scene": 4
+  },
+  {
+    "text": "evidence.",
+    "start": 46.58,
+    "end": 46.98,
+    "scene": 4
+  },
+  {
+    "text": "Retrieval",
+    "start": 47.72,
+    "end": 48.16,
+    "scene": 4
+  },
+  {
+    "text": "searches",
+    "start": 48.16,
+    "end": 48.76,
+    "scene": 4
+  },
+  {
+    "text": "the",
+    "start": 48.76,
+    "end": 49.1,
+    "scene": 4
+  },
+  {
+    "text": "knowledge",
+    "start": 49.1,
+    "end": 49.36,
+    "scene": 4
+  },
+  {
+    "text": "base",
+    "start": 49.36,
+    "end": 49.68,
+    "scene": 4
+  },
+  {
+    "text": "for",
+    "start": 49.68,
+    "end": 49.96,
+    "scene": 4
+  },
+  {
+    "text": "relevant",
+    "start": 49.96,
+    "end": 50.22,
+    "scene": 4
+  },
+  {
+    "text": "sources.",
+    "start": 50.22,
+    "end": 50.66,
+    "scene": 4
+  },
+  {
+    "text": "A",
+    "start": 51.38,
+    "end": 51.405,
+    "scene": 4
+  },
+  {
+    "text": "deterministic",
+    "start": 51.405,
+    "end": 51.84,
+    "scene": 4
+  },
+  {
+    "text": "rule",
+    "start": 51.84,
+    "end": 52.24,
+    "scene": 4
+  },
+  {
+    "text": "engine",
+    "start": 52.24,
+    "end": 52.58,
+    "scene": 4
+  },
+  {
+    "text": "applies",
+    "start": 52.58,
+    "end": 52.9,
+    "scene": 4
+  },
+  {
+    "text": "verified",
+    "start": 52.9,
+    "end": 53.2,
+    "scene": 4
+  },
+  {
+    "text": "records",
+    "start": 53.2,
+    "end": 53.86,
+    "scene": 4
+  },
+  {
+    "text": "and",
+    "start": 53.86,
+    "end": 54.08,
+    "scene": 4
+  },
+  {
+    "text": "returns",
+    "start": 54.08,
+    "end": 54.36,
+    "scene": 4
+  },
+  {
+    "text": "cited",
+    "start": 54.36,
+    "end": 54.84,
+    "scene": 4
+  },
+  {
+    "text": "verdicts.",
+    "start": 54.84,
+    "end": 55.56,
+    "scene": 4
+  },
+  {
+    "text": "The",
+    "start": 56.06,
+    "end": 56.12,
+    "scene": 4
+  },
+  {
+    "text": "agents",
+    "start": 56.12,
+    "end": 56.4,
+    "scene": 4
+  },
+  {
+    "text": "explain;",
+    "start": 56.4,
+    "end": 56.86,
+    "scene": 4
+  },
+  {
+    "text": "the",
+    "start": 57.8,
+    "end": 57.825,
+    "scene": 4
+  },
+  {
+    "text": "human",
+    "start": 57.825,
+    "end": 58.0,
+    "scene": 4
+  },
+  {
+    "text": "remains",
+    "start": 58.0,
+    "end": 58.3,
+    "scene": 4
+  },
+  {
+    "text": "accountable.",
+    "start": 58.3,
+    "end": 58.74,
+    "scene": 4
+  },
+  {
+    "text": "Before",
+    "start": 61.8,
+    "end": 62.72,
+    "scene": 5
+  },
+  {
+    "text": "a",
+    "start": 62.72,
+    "end": 62.92,
+    "scene": 5
+  },
+  {
+    "text": "fix,",
+    "start": 62.92,
+    "end": 63.28,
+    "scene": 5
+  },
+  {
+    "text": "ORCA",
+    "start": 63.74,
+    "end": 63.92,
+    "scene": 5
+  },
+  {
+    "text": "checks",
+    "start": 63.92,
+    "end": 64.12,
+    "scene": 5
+  },
+  {
+    "text": "the",
+    "start": 64.12,
+    "end": 64.38,
+    "scene": 5
+  },
+  {
+    "text": "backup",
+    "start": 64.38,
+    "end": 64.64,
+    "scene": 5
+  },
+  {
+    "text": "path",
+    "start": 64.64,
+    "end": 65.14,
+    "scene": 5
+  },
+  {
+    "text": "and",
+    "start": 65.14,
+    "end": 65.62,
+    "scene": 5
+  },
+  {
+    "text": "tests",
+    "start": 65.62,
+    "end": 65.9,
+    "scene": 5
+  },
+  {
+    "text": "the",
+    "start": 65.9,
+    "end": 66.3,
+    "scene": 5
+  },
+  {
+    "text": "plan",
+    "start": 66.3,
+    "end": 66.64,
+    "scene": 5
+  },
+  {
+    "text": "in",
+    "start": 66.64,
+    "end": 66.82,
+    "scene": 5
+  },
+  {
+    "text": "a",
+    "start": 66.82,
+    "end": 66.86,
+    "scene": 5
+  },
+  {
+    "text": "clone.",
+    "start": 66.86,
+    "end": 67.12,
+    "scene": 5
+  },
+  {
+    "text": "In",
+    "start": 68.36,
+    "end": 68.385,
+    "scene": 5
+  },
+  {
+    "text": "assisted",
+    "start": 68.385,
+    "end": 68.64,
+    "scene": 5
+  },
+  {
+    "text": "mode,",
+    "start": 68.64,
+    "end": 69.14,
+    "scene": 5
+  },
+  {
+    "text": "a",
+    "start": 69.48,
+    "end": 69.58,
+    "scene": 5
+  },
+  {
+    "text": "human",
+    "start": 69.58,
+    "end": 69.82,
+    "scene": 5
+  },
+  {
+    "text": "approves",
+    "start": 69.82,
+    "end": 70.2,
+    "scene": 5
+  },
+  {
+    "text": "the",
+    "start": 70.2,
+    "end": 70.42,
+    "scene": 5
+  },
+  {
+    "text": "exact",
+    "start": 70.42,
+    "end": 70.56,
+    "scene": 5
+  },
+  {
+    "text": "plan.",
+    "start": 70.56,
+    "end": 71.24,
+    "scene": 5
+  },
+  {
+    "text": "The",
+    "start": 71.8,
+    "end": 71.825,
+    "scene": 5
+  },
+  {
+    "text": "change",
+    "start": 71.825,
+    "end": 72.02,
+    "scene": 5
+  },
+  {
+    "text": "rolls",
+    "start": 72.02,
+    "end": 72.4,
+    "scene": 5
+  },
+  {
+    "text": "out",
+    "start": 72.4,
+    "end": 72.7,
+    "scene": 5
+  },
+  {
+    "text": "in",
+    "start": 72.7,
+    "end": 72.84,
+    "scene": 5
+  },
+  {
+    "text": "stages:",
+    "start": 72.84,
+    "end": 73.08,
+    "scene": 5
+  },
+  {
+    "text": "five,",
+    "start": 73.84,
+    "end": 74.04,
+    "scene": 5
+  },
+  {
+    "text": "twenty",
+    "start": 74.62,
+    "end": 74.72,
+    "scene": 5
+  },
+  {
+    "text": "five,",
+    "start": 74.72,
+    "end": 75.2,
+    "scene": 5
+  },
+  {
+    "text": "then",
+    "start": 75.6,
+    "end": 75.78,
+    "scene": 5
+  },
+  {
+    "text": "one",
+    "start": 75.78,
+    "end": 76.04,
+    "scene": 5
+  },
+  {
+    "text": "hundred",
+    "start": 76.04,
+    "end": 76.44,
+    "scene": 5
+  },
+  {
+    "text": "percent.",
+    "start": 76.44,
+    "end": 76.86,
+    "scene": 5
+  },
+  {
+    "text": "Re-attack",
+    "start": 77.58,
+    "end": 77.96,
+    "scene": 5
+  },
+  {
+    "text": "checks",
+    "start": 77.96,
+    "end": 78.28,
+    "scene": 5
+  },
+  {
+    "text": "and",
+    "start": 78.28,
+    "end": 78.7,
+    "scene": 5
+  },
+  {
+    "text": "rollback",
+    "start": 78.7,
+    "end": 79.22,
+    "scene": 5
+  },
+  {
+    "text": "guard",
+    "start": 79.22,
+    "end": 79.46,
+    "scene": 5
+  },
+  {
+    "text": "the",
+    "start": 79.46,
+    "end": 79.68,
+    "scene": 5
+  },
+  {
+    "text": "result.",
+    "start": 79.68,
+    "end": 79.96,
+    "scene": 5
+  },
+  {
+    "text": "Services",
+    "start": 82.8,
+    "end": 83.68,
+    "scene": 6
+  },
+  {
+    "text": "can",
+    "start": 83.68,
+    "end": 83.96,
+    "scene": 6
+  },
+  {
+    "text": "recover",
+    "start": 83.96,
+    "end": 84.24,
+    "scene": 6
+  },
+  {
+    "text": "while",
+    "start": 84.24,
+    "end": 84.64,
+    "scene": 6
+  },
+  {
+    "text": "a",
+    "start": 84.64,
+    "end": 84.76,
+    "scene": 6
+  },
+  {
+    "text": "hash",
+    "start": 84.76,
+    "end": 84.9,
+    "scene": 6
+  },
+  {
+    "text": "chained",
+    "start": 84.9,
+    "end": 85.26,
+    "scene": 6
+  },
+  {
+    "text": "audit",
+    "start": 85.26,
+    "end": 85.56,
+    "scene": 6
+  },
+  {
+    "text": "preserves",
+    "start": 85.56,
+    "end": 85.98,
+    "scene": 6
+  },
+  {
+    "text": "the",
+    "start": 85.98,
+    "end": 86.3,
+    "scene": 6
+  },
+  {
+    "text": "evidence.",
+    "start": 86.3,
+    "end": 86.6,
+    "scene": 6
+  },
+  {
+    "text": "The",
+    "start": 87.54,
+    "end": 87.565,
+    "scene": 6
+  },
+  {
+    "text": "gap",
+    "start": 87.565,
+    "end": 87.72,
+    "scene": 6
+  },
+  {
+    "text": "analyst",
+    "start": 87.72,
+    "end": 88.16,
+    "scene": 6
+  },
+  {
+    "text": "records",
+    "start": 88.16,
+    "end": 88.58,
+    "scene": 6
+  },
+  {
+    "text": "potential",
+    "start": 88.58,
+    "end": 89.02,
+    "scene": 6
+  },
+  {
+    "text": "policy",
+    "start": 89.02,
+    "end": 89.58,
+    "scene": 6
+  },
+  {
+    "text": "gaps",
+    "start": 89.58,
+    "end": 89.84,
+    "scene": 6
+  },
+  {
+    "text": "for",
+    "start": 89.84,
+    "end": 90.18,
+    "scene": 6
+  },
+  {
+    "text": "human",
+    "start": 90.18,
+    "end": 90.44,
+    "scene": 6
+  },
+  {
+    "text": "review.",
+    "start": 90.44,
+    "end": 90.8,
+    "scene": 6
+  },
+  {
+    "text": "Models",
+    "start": 91.88,
+    "end": 92.02,
+    "scene": 6
+  },
+  {
+    "text": "detect,",
+    "start": 92.02,
+    "end": 92.52,
+    "scene": 6
+  },
+  {
+    "text": "agents",
+    "start": 93.3,
+    "end": 93.84,
+    "scene": 6
+  },
+  {
+    "text": "coordinate,",
+    "start": 93.84,
+    "end": 94.36,
+    "scene": 6
+  },
+  {
+    "text": "code",
+    "start": 95.1,
+    "end": 95.24,
+    "scene": 6
+  },
+  {
+    "text": "decides,",
+    "start": 95.24,
+    "end": 95.6,
+    "scene": 6
+  },
+  {
+    "text": "and",
+    "start": 96.42,
+    "end": 96.6,
+    "scene": 6
+  },
+  {
+    "text": "humans",
+    "start": 96.6,
+    "end": 96.9,
+    "scene": 6
+  },
+  {
+    "text": "approve.",
+    "start": 96.9,
+    "end": 97.32,
+    "scene": 6
+  }
+]

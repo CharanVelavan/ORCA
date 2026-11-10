@@ -17,7 +17,7 @@ events:
     actor: M1
     what: M1 detects rising traffic and packet loss during heavy monsoon rain.
     signals:
-      - {site: CHN-05, signal: rain_mm_h, value: 45.0}
+      - {site: CHN-05, signal: rain_mm_h, value: 34.0}
       - {site: CHN-05, signal: packet_loss, value: 0.22}
   - t: 7
     actor: M2
@@ -25,11 +25,12 @@ events:
     signals:
       - {site: CHN-05, signal: snr_db, value: 3.2}
       - {site: CHN-05, signal: link_margin_db, value: 1.5}
+      - {site: CHN-01, signal: rain_mm_h, value: 35.0}
   - t: 13
     actor: M3
     what: M3 evaluates degradation pattern as weather-induced fade.
     signals:
-      - {site: CHN-01, signal: traffic_load, value: {service: 112, load: 1.4}}
+      - {site: CHN-01, signal: traffic_load, value: {service: 112, load: 1.9}}
   - t: 21
     actor: M2
     what: M2 predicts battery exhaustion at coastal tower CHN-05 following mains interruption.
@@ -55,6 +56,11 @@ events:
   - t: 47
     actor: commander
     what: "Commander establishes a temporary operational priority order: 112 calls first, hospitals second, grid third."
+  - t: 56
+    actor: power_utility
+    what: Power utility restores mains at coastal tower CHN-05 before its battery reaches the cut-off.
+    signals:
+      - {site: CHN-05, signal: mains_power, value: 1}
   - t: 59
     actor: mobile_operator
     what: Mobile operator fails over coastal site CHN-05 to domestic backup gateway.
@@ -68,6 +74,12 @@ events:
   - t: 76
     actor: mobile_operator
     what: Mobile operator executes PB-10 to alert downstream emergency services after commander approval.
+  - t: 88
+    actor: M1
+    what: M1 sees the rain band move inland; rain stops at the monitored sites.
+    signals:
+      - {site: CHN-01, signal: rain_mm_h, value: 0}
+      - {site: CHN-05, signal: rain_mm_h, value: 0}
   - t: 94
     actor: M1
     what: M1 confirms critical traffic delivery restored on prioritized queues.

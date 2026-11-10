@@ -11,40 +11,40 @@
   },
   "M1": {
     "model": "IsolationForest(200 trees) on normal windows; ECOD (numpy) comparison",
-    "threshold": 0.5638,
+    "threshold": 0.5822,
     "in_distribution": {
       "auc_iforest": 0.897,
       "auc_ecod": 0.996,
-      "ensemble_false_alarm_rate_normal": 0.0079,
+      "ensemble_false_alarm_rate_normal": 0.0036,
       "ensemble_detection_rate_by_class": {
-        "fault-weather": 0.854,
-        "fault-power/equipment": 0.598,
-        "attack-jamming": 0.771,
-        "attack-management-plane": 0.677,
+        "fault-weather": 0.818,
+        "fault-power/equipment": 0.537,
+        "attack-jamming": 0.739,
+        "attack-management-plane": 0.614,
         "attack-gnss": 0.999,
-        "attack-signalling": 0.923
+        "attack-signalling": 0.864
       },
-      "iforest_only_false_alarm_rate": 0.0069,
-      "iforest_only_detection_rate": 0.246,
-      "ecod_only_false_alarm_rate": 0.0024,
-      "ecod_only_detection_rate": 0.808
+      "iforest_only_false_alarm_rate": 0.0026,
+      "iforest_only_detection_rate": 0.149,
+      "ecod_only_false_alarm_rate": 0.0017,
+      "ecod_only_detection_rate": 0.766
     },
     "heldout_harder": {
       "auc_iforest": 0.864,
       "auc_ecod": 0.988,
-      "ensemble_false_alarm_rate_normal": 0.0226,
+      "ensemble_false_alarm_rate_normal": 0.0119,
       "ensemble_detection_rate_by_class": {
-        "fault-weather": 0.755,
-        "fault-power/equipment": 0.79,
-        "attack-jamming": 0.601,
-        "attack-management-plane": 0.609,
-        "attack-gnss": 0.998,
-        "attack-signalling": 0.785
+        "fault-weather": 0.712,
+        "fault-power/equipment": 0.724,
+        "attack-jamming": 0.502,
+        "attack-management-plane": 0.539,
+        "attack-gnss": 0.995,
+        "attack-signalling": 0.651
       },
-      "iforest_only_false_alarm_rate": 0.019,
-      "iforest_only_detection_rate": 0.222,
-      "ecod_only_false_alarm_rate": 0.0095,
-      "ecod_only_detection_rate": 0.756
+      "iforest_only_false_alarm_rate": 0.0083,
+      "iforest_only_detection_rate": 0.157,
+      "ecod_only_false_alarm_rate": 0.0062,
+      "ecod_only_detection_rate": 0.688
     }
   },
   "M2_minute": {
@@ -438,5 +438,5 @@
     "is_microwave",
     "is_fibre"
   ],
-  "train_seconds": 20.0
+  "train_seconds": 60.5
 }

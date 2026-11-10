@@ -21,6 +21,7 @@ deadline_rules:
     record: IN-CTIR-2024-R7-1-j
     group: IN-R-CLOCKS
     default: false
+    requires_entity: designated_cti
   - id: IN-R-DEADLINE-SPACEFW          # advisory (PIB 2233122) -> not applied as a legal clock
     record: IN-SPACEFW-2026-3-2-1
     group: IN-R-CLOCKS

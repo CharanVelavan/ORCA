@@ -1,0 +1,1 @@
+function u(e,t,r,g,l){var o;if(!["ArrowRight","ArrowLeft","Home","End"].includes(e.key))return;e.preventDefault();const n=e.key==="Home"?0:e.key==="End"?t.length-1:(r+(e.key==="ArrowRight"?1:-1)+t.length)%t.length;g(t[n]),(o=document.getElementById(`${l}${t[n]}`))==null||o.focus()}export{u as t};

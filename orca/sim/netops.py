@@ -342,10 +342,9 @@ class NetOps:
                                        f"reattack={[r for r in v['reattack'] if r['succeeded']]}")
             return True
         except (PatchRefused, KeyError) as e:
-            for p in reversed(run["patches"]):
-                rollback(self.net, p, self.sim)
+            reverts = [rollback(self.net, p, self.sim) for p in reversed(run["patches"])]
             self.records.append({"event": "rolled_back", "playbook": playbook, "targets": targets,
-                                 "stage_pct": stage_pct, "reason": str(e)})
+                                 "stage_pct": stage_pct, "reason": str(e), "revert_diff": "".join(reverts)})
             run["done"] = True
             return False
 

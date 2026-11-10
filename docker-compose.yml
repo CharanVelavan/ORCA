@@ -43,7 +43,5 @@ services:
       # Default to mock offline LLM for judge reproducibility
       - LLM_BASE_URL=${LLM_BASE_URL:-mock}
       - LLM_MODEL=${LLM_MODEL:-mock}
-      # Commander PIN SHA256: loaded strictly from environment or .env, never hardcoded
-      - ORCA_COMMANDER_PIN_SHA256=${ORCA_COMMANDER_PIN_SHA256:-}
       - ORCA_CHROMA_DIR=/app/chroma
     command: python run_demo.py --scenario s1

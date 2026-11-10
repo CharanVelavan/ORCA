@@ -19,5 +19,12 @@ kb/vec_build/*
 !kb/vec_build/manifest.json
 dashboard/live/web/node_modules/
 
+# Local browser verification, scratch work and incremental compiler cache
+.shots/
+.detector-work/
+dashboard/live/web/.wave2-home-shots/
+dashboard/live/web/.wave2-home-sim.patch
+*.tsbuildinfo
+
 # local LLM weights (GGUF, adapters) - never commit
 models/llm/

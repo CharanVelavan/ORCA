@@ -117,6 +117,8 @@
 .inbox-topbtn:hover { border-color: var(--ink-muted); }
 .inbox-topbtn .mono { color: inherit; font-weight: 500; }
 .inbox-topbtn--accent { color: var(--accent); } .inbox-topbtn--warn { color: var(--warn); } .inbox-topbtn--unknown { color: var(--ink-muted); }
+.inbox-topbtn--ok { color: var(--ok); }
+.inbox-topbtn__word { color: inherit; font-weight: 600; }
 .inbox-topbtn--critical { color: var(--critical); border-color: var(--critical); background: var(--critical-soft); }
 .inbox-topbtn__lbl { color: var(--ink-muted); }
 

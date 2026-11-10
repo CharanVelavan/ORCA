@@ -1,17 +1,31 @@
 import { lazy, Suspense, useEffect } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { DataBridge } from './stage/DataBridge';
+import { Shell } from './shell';
+import { PageErrorBoundary } from './shell/PageErrorBoundary';
+import { ReplayProvider } from './review/ReplayProvider';
 import { useUi } from './stage/uiStore';
+import './shell/shell.css';
+import './shell/workspace-shell.css';
 
-const Landing = lazy(() => import('./Landing').then((m) => ({ default: m.Landing })));
-const Stage = lazy(() => import('./Stage').then((m) => ({ default: m.Stage })));
-const Console = lazy(() => import('./Console').then((m) => ({ default: m.Console })));
-const Control = lazy(() => import('./Control').then((m) => ({ default: m.Control })));
-const Review = lazy(() => import('./Review').then((m) => ({ default: m.Review })));
+/** The seven primary console routes lazy-load their page modules inside the shared shell. */
+const Home = lazy(() => import('./shell/pages/Home'));
+const Simulator = lazy(() => import('./shell/pages/Simulator'));
+const Scenarios = lazy(() => import('./shell/pages/Scenarios'));
+const Workspace = lazy(() => import('./shell/pages/Workspace'));
+const Operations = lazy(() => import('./shell/pages/Operations'));
+const Investigation = lazy(() => import('./shell/pages/Investigation'));
+const Policy = lazy(() => import('./shell/pages/Policy'));
+const Recovery = lazy(() => import('./shell/pages/Recovery'));
+const Audit = lazy(() => import('./shell/pages/Audit'));
+const NotFound = lazy(() => import('./shell/pages/NotFound'));
 
 function ThemeSync() {
-  const theme = useUi((s) => s.theme);
-  useEffect(() => { document.documentElement.dataset.theme = theme; }, [theme]);
+  const theme = useUi(s => s.theme);
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#111111' : '#F3F3F3');
+  }, [theme]);
   return null;
 }
 
@@ -19,20 +33,37 @@ function Loading() {
   return <main className="app-loading"><span className="mono">ORCA-NTN</span><span>Loading view</span></main>;
 }
 
+/** Redirect legacy entrypoints to the new routes, preserving ?fake / ?scn query. */
+function KeepQueryRedirect({ to }: { to: string }) {
+  const { search } = useLocation();
+  return <Navigate to={`${to}${search}`} replace />;
+}
+
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <ThemeSync />
       <DataBridge />
-      <Suspense fallback={<Loading />}>
+      <ReplayProvider><PageErrorBoundary><Suspense fallback={<Loading />}>
         <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/stage" element={<Stage />} />
-          <Route path="/console" element={<Console />} />
-          <Route path="/control" element={<Control />} />
-          <Route path="/review" element={<Review />} />
+          <Route element={<Shell />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/simulator" element={<Simulator />} />
+            <Route path="/scenarios" element={<Scenarios />} />
+            <Route path="/workspace" element={<Workspace />} />
+            <Route path="/operations" element={<Operations />} />
+            <Route path="/investigation" element={<Investigation />} />
+            <Route path="/policy" element={<Policy />} />
+            <Route path="/recovery" element={<Recovery />} />
+            <Route path="/audit" element={<Audit />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+          <Route path="/console" element={<KeepQueryRedirect to="/workspace" />} />
+          <Route path="/stage" element={<KeepQueryRedirect to="/operations" />} />
+          <Route path="/control" element={<KeepQueryRedirect to="/simulator" />} />
+          <Route path="/review" element={<KeepQueryRedirect to="/audit" />} />
         </Routes>
-      </Suspense>
+      </Suspense></PageErrorBoundary></ReplayProvider>
     </BrowserRouter>
   );
 }

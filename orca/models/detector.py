@@ -28,13 +28,17 @@ class Detector:
     def assess(self, hist: list[dict], site: str) -> dict:
         """Everything the models say about the latest minute (no change detection)."""
         x = np.asarray(window_features(hist), dtype=float)
-        flag = bool(self.m1.flag(x.reshape(1, -1))[0])
         score = float(self.m1.score(x.reshape(1, -1))[0])
+        ecod_score = float(self.m1.ecod.score(x.reshape(1, -1))[0])
+        flag_sources = (["isolation_forest"] if score > self.m1.threshold else []) + (
+            ["ecod"] if ecod_score > self.m1.ecod_threshold else [])
         m3 = self.m3.classify(x)
-        if flag and m3["label"] == "normal" and m3["confidence"] < 0.99:
+        if flag_sources and m3["label"] == "normal" and m3["confidence"] < 0.99:
             m3 = {**m3, "label": ABSTAIN, "abstained": True,
                   "note": "M1 sees an anomaly that M3 does not recognise; a human decides"}
-        return {"m1": {"anomalous": flag, "score": round(score, 4), "threshold": round(self.m1.threshold, 4),
+        return {"m1": {"anomalous": bool(flag_sources), "score": round(score, 4), "threshold": round(self.m1.threshold, 4),
+                       "ecod_score": round(ecod_score, 4), "ecod_threshold": round(self.m1.ecod_threshold, 4),
+                       "flag_sources": flag_sources,
                        "why": self.m1.explain(x)},
                 "m3": m3, "m2": self.m2.forecast(hist, site)}
 

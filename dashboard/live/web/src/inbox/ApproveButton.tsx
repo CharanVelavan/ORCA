@@ -2,47 +2,58 @@ import { useEffect, useRef, useState } from 'react';
 import { Loader2, ShieldAlert } from 'lucide-react';
 import { api } from '../api';
 import { usePipeline } from '../pipeline/pipelineStore';
-import { useUi } from '../stage/uiStore';
+import { useLiveStore } from '../store';
 import { ICON } from './parts';
 import { plainError } from './format';
+import { isReadOnlyPlayback, PLAYBACK_NOTICE } from './readOnly';
 import './inbox.css';
 
-/** One-click approval. The server may still refuse (clone test, path not clean); that text shows inline as a refusal. */
 export function ApproveButton({ hash, variant = 'inbox', label = 'Approve', onDone }: { hash: string; variant?: 'inbox' | 'node'; label?: string; onDone?: () => void }) {
+  const source = useLiveStore((s) => s.source);
+  const [asking, setAsking] = useState(false);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState('');
   const alive = useRef(true);
   useEffect(() => { alive.current = true; return () => { alive.current = false; }; }, []);
-  // Hide the request at once: the paced stream (stage/presenter.ts) may show the engine's 'approved' event a little later.
-  const drop = () => usePipeline.setState((st) => ({ pending: st.pending.filter((p) => p.hash !== hash) }));
+  const readOnly = source === 'replay' || isReadOnlyPlayback();
   const go = async () => {
     if (pending) return;
-    // Demo replays a recorded run: the click releases the recorded decision; nothing is sent to an engine.
-    if (window.location.pathname === '/stage' && useUi.getState().config.run === 'demo') { drop(); onDone?.(); return; }
+    if (isReadOnlyPlayback()) { setError(PLAYBACK_NOTICE); return; }
     setPending(true); setError('');
     try {
-      const res = (await api.approve({ hash, pin: 'click' })) as Record<string, unknown> | null;
-      if (res && res.ok === false) throw new Error(String(res.error ?? 'The console refused this approval.'));
-      drop();
+      await api.approve({ hash });
+      usePipeline.setState((st) => ({ pending: st.pending.filter((p) => p.hash !== hash) }));
+      if (alive.current) setAsking(false);
       onDone?.();
     } catch (err) {
-      const msg = plainError(err);
-      if (/already run/i.test(msg)) { drop(); return; } // decided a moment ago; the paced stream just has not shown it yet
-      if (alive.current) setError(msg);
+      if (alive.current) setError(plainError(err));
     }
     finally { if (alive.current) setPending(false); }
   };
   const node = variant === 'node';
   return (
-    <>
-      <button type="button" className={node ? 'fc-btn' : 'inbox-btn inbox-btn--primary'} disabled={pending} aria-busy={pending} onClick={() => void go()}>
-        {pending ? <><Loader2 {...ICON} className="inbox-spin" aria-hidden /> Approving</> : label}
-      </button>
+    <div className="inbox-approval-action">
+      {!asking ? (
+        <button type="button" className={node ? 'fc-btn' : 'inbox-btn inbox-btn--primary'} disabled={readOnly} title={readOnly ? PLAYBACK_NOTICE : undefined} onClick={() => { setError(''); setAsking(true); }}>
+          {label}
+        </button>
+      ) : (
+        <form className="inbox-confirm" onSubmit={(event) => { event.preventDefault(); void go(); }}>
+          <p className="inbox-body">Confirm this exact plan for execution.</p>
+          <div className="inbox-actions">
+            <button type="submit" className={node ? 'fc-btn' : 'inbox-btn inbox-btn--primary'} disabled={pending || readOnly} aria-busy={pending}>
+              {pending ? <><Loader2 {...ICON} className="inbox-spin" aria-hidden /> Approving</> : 'Confirm approval'}
+            </button>
+            <button type="button" className="inbox-btn" disabled={pending} onClick={() => { setAsking(false); setError(''); }}>Cancel</button>
+          </div>
+        </form>
+      )}
+      {readOnly && <p className="inbox-body inbox-body--muted">{PLAYBACK_NOTICE}</p>}
       {error && (
         <p className={node ? 'fc-ask__refusal' : 'inbox-refusal'} role="alert">
           <ShieldAlert {...ICON} aria-hidden /><span><strong>Refused.</strong> {error}</span>
         </p>
       )}
-    </>
+    </div>
   );
 }

@@ -2,12 +2,16 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, typ
 import { useReducedMotion } from 'framer-motion';
 import { Check, CircleDashed, Maximize, Minus, Plus } from 'lucide-react';
 import { useUi } from '../stage/uiStore';
+import { useDerived } from '../derive';
+import { graphEvidence } from './evidence';
 import { ist } from '../stage/time';
 import type { BandId, NodeDef } from './model';
 import { ICONS } from './icons';
 import { BANDS, NODES } from './pipelineNodes';
 import { pathFor } from './scenarioPaths';
 import { usePipeline, type Beat, type NodeInfo, type Packet, type Tone } from './pipelineStore';
+import { FlowPanel } from '../shell/FlowPanel';
+import type { FlowConfig } from '../shell/flowConfig';
 
 // Flowchart (docs/plan/FLOWCHART_V2_PLAN.md, revised 9 Nov after review): one lane per step, top to bottom, a shape
 // per kind of node. The whole chart is fitted to the panel with CSS zoom (no scrolling); the presenter can zoom in.
@@ -20,11 +24,7 @@ const BAND_TITLE: Record<BandId, string> = {
 };
 const BAND_OF: Record<string, BandId> = Object.fromEntries(NODES.map((n) => [n.id, n.band]));
 const DEF: Record<string, NodeDef> = Object.fromEntries(NODES.map((n) => [n.id, n]));
-const EXEC_ORDER = ['exec:clone', 'exec:r5', 'exec:r25', 'exec:r100', 'exec:reattack', 'exec:cleanpath', 'exec:failover', 'exec:return', 'exec:rollback'];
-const AGENT_HUE: Record<string, string> = {
-  'agent:mobile_operator': '#5B8DEF', 'agent:satellite_operator': '#3FB5C9', 'agent:power_utility': '#C9A43E',
-  'agent:cert_in': '#D9864C', 'agent:regulator': '#9C7BD0', 'agent:gap_analyst': '#4FA883',
-};
+const EXEC_ORDER = ['exec:clone', 'exec:cleanpath', 'exec:failover', 'exec:r5', 'exec:r25', 'exec:r100', 'exec:reattack', 'exec:return', 'exec:rollback'];
 const holdMs = (speed: number) => (speed >= 2 ? 750 : speed >= 1 ? 1200 : 1700);
 const lit = (n?: NodeInfo) => !!n && (n.phase === 'active' || (n.phase === 'done' && !!n.at));
 const MODEL_TAG: Record<string, string> = { 'model:M1': 'M1', 'model:M2': 'M2', 'model:M3': 'M3', 'model:M4': 'M4' };
@@ -35,10 +35,7 @@ function laneNodes(band: BandId, nodes: Record<string, NodeInfo>, truth: boolean
   switch (band) {
     case 'threat':
       return truth ? ids.filter((id) => !DEF[id].consoleOnly && nodes[id] && nodes[id].phase !== 'idle') : ['threat:anomaly'];
-    case 'execute': {
-      const on = EXEC_ORDER.filter((id) => nodes[id] && (nodes[id].phase !== 'idle' || lit(nodes[id])) && (id !== 'exec:rollback' || lit(nodes[id])));
-      return on.length ? on : ['exec:clone', 'exec:r5', 'exec:r25', 'exec:r100', 'exec:reattack'];
-    }
+    case 'execute': return EXEC_ORDER;
     case 'gaps':
       return ids.filter((id) => nodes[id] && (nodes[id].phase !== 'idle' || lit(nodes[id])));
     default:
@@ -62,8 +59,13 @@ function route(a: Box, b: Box): string {
   return `M${ax},${y0} C${ax},${y0 + k} ${bx},${y1 - k} ${bx},${y1}`;
 }
 
-export function FlowGraph({ truth }: { truth: boolean }) {
-  const nodes = usePipeline((s) => s.nodes);
+export function FlowGraph({ truth = false, config }: { truth?: boolean; config?: FlowConfig }) {
+  return config ? <FlowPanel config={config} /> : <FullFlowGraph truth={truth} />;
+}
+
+function FullFlowGraph({ truth }: { truth: boolean }) {
+  const data = useDerived();
+  const nodes = useMemo(() => graphEvidence(data), [data]);
   const beats = usePipeline((s) => s.beats);
   const mode = usePipeline((s) => s.mode);
   const explainIdx = usePipeline((s) => s.explainIdx);
@@ -179,7 +181,7 @@ export function FlowGraph({ truth }: { truth: boolean }) {
           return (
             <section key={band.id} className={`fg-lane is-${state}`} data-band={band.id} aria-label={BAND_TITLE[band.id]}>
               <header className="fg-lh">
-                <span className="fg-lh__n mono" ref={reg(`band:${band.id}`)}>{i < reachedBand || (i === reachedBand && band.id !== focusBand) ? <Check size={15} strokeWidth={2.2} /> : band.n}</span>
+                <span className="fg-lh__n mono" ref={reg(`band:${band.id}`)}>{band.n}</span>
                 <span className="fg-lh__t"><Icon size={15} strokeWidth={1.75} aria-hidden />{band.id === 'threat' && !truth ? 'Anomaly' : BAND_TITLE[band.id]}</span>
               </header>
               <div className={`fg-row fg-row--${band.id}`}>
@@ -192,7 +194,7 @@ export function FlowGraph({ truth }: { truth: boolean }) {
         {current && !reduced && boxes[current.from] && boxes[current.to] && shown.has(current.from) && shown.has(current.to) && (
           <PacketDot key={current.id} p={current} path={route(boxes[current.from], boxes[current.to])} ms={holdMs(speed)} />
         )}
-        {!hover && <Bubble beat={beat} step={step} box={boxes[focusNode] ?? boxes[`band:${focusBand}`]} width={size.w}
+        {!hover && (data.tickHistory?.length ?? 0) > 0 && <Bubble beat={beat} step={step} box={boxes[focusNode] ?? boxes[`band:${focusBand}`]} width={size.w}
           rowEnd={Math.max(0, ...(lanes.find((l) => l.band.id === focusBand)?.ids ?? []).map((id) => (boxes[id] ? boxes[id].x + boxes[id].w : 0)))} />}
         {hover && boxes[hover] && <HoverCard id={hover} info={nodes[hover]} box={boxes[hover]} width={size.w} height={size.h} />}
       </div>
@@ -219,9 +221,9 @@ function GraphNode({ id, info, focus, reg, onHover }: { id: string; info?: NodeI
   const def = DEF[id];
   const n = info ?? { phase: 'idle' as const };
   const Icon = ICONS[def.icon] ?? CircleDashed;
-  const state = n.phase === 'active' ? 'active' : lit(n) || def.band === 'network' || def.band === 'detect' ? 'done' : 'future';
+  const state = n.phase === 'active' ? 'active' : lit(n) ? 'done' : 'future';
   const cls = `fg-n fg-n--${def.kind} is-${state} t-${n.tone ?? 'unknown'} ${focus ? 'is-focus' : ''}`;
-  const style = (AGENT_HUE[id] ? { '--hue': AGENT_HUE[id] } : undefined) as CSSProperties | undefined;
+  const style = { '--hue': 'var(--accent)' } as CSSProperties;
   const hov = { onMouseEnter: () => onHover(id), onFocus: () => onHover(id), onBlur: () => onHover(null), tabIndex: 0, 'aria-label': `${def.label}. ${def.role}. ${n.word ?? ''} ${n.detail ?? ''}` };
   const shape = SHAPES[def.kind];
   const word = n.word && !(def.kind === 'site' && n.word === 'OK') && def.kind !== 'satellite' ? n.word : '';
@@ -239,7 +241,7 @@ function GraphNode({ id, info, focus, reg, onHover }: { id: string; info?: NodeI
     return (
       <div className={cls} ref={reg} {...hov}>
         <span className="fg-mc__id mono">{MODEL_TAG[id]}</span>
-        <span className="fg-n__txt"><b className="fg-n__label">{def.label}</b><span className="fg-word mono">{n.word ?? 'NORMAL'}</span></span>
+        <span className="fg-n__txt"><b className="fg-n__label">{def.label}</b><span className="fg-word mono">{n.word ?? 'Not observed'}</span></span>
       </div>
     );
   }

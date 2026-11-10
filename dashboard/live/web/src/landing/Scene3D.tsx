@@ -1,7 +1,10 @@
 import { Suspense, useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { useGLTF } from '@react-three/drei';
+import { Line, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
+import { GATEWAYS as NETWORK_GATEWAYS, SAT, SITES as NETWORK_SITES } from '../scenes/geo';
+import type { CatalogueSite } from '../sim/useCatalogue';
+import type { SiteState } from '../types';
 import type { Palette } from './palette';
 
 const MODEL_URL = './models/orca-assets.glb';
@@ -9,42 +12,34 @@ const MODEL_URL = './models/orca-assets.glb';
 // World layout. Earth top sits at y=0 under Chennai; the GEO arc is drawn about the Earth centre.
 const EARTH_R = 30;
 const EARTH_C = new THREE.Vector3(0, -EARTH_R, 0);
-const ORBIT_R = 46;
-const SAT_ANGLE = (98 * Math.PI) / 180;
-const SAT_POS = new THREE.Vector3(
-  EARTH_C.x + ORBIT_R * Math.cos(SAT_ANGLE), EARTH_C.y + ORBIT_R * Math.sin(SAT_ANGLE), 0,
-);
-const SAT_SCALE = 3;
+const SAT_POS = new THREE.Vector3(...SAT);
+const ORBIT_R = Math.hypot(SAT_POS.x - EARTH_C.x, SAT_POS.y - EARTH_C.y);
+const SAT_SCALE = 1.3;
 
-type Site = { x: number; z: number; s: number; ry?: number };
-const GATEWAY: Site = { x: -2.8, z: 0.8, s: 1.6, ry: 0.6 };
-const TOWERS: Site[] = [{ x: 0.8, z: -1.5, s: 1.9 }, { x: 2.9, z: 0.5, s: 1.9 }, { x: -0.5, z: 2.3, s: 1.9 }];
-const TERMINALS: Site[] = [
-  { x: 1.3, z: 1.2, s: 0.55, ry: 0.4 }, { x: 3.5, z: 2.2, s: 0.55, ry: 1.2 }, { x: -1.3, z: -1.9, s: 0.55, ry: 2.1 },
-  { x: 4.3, z: -1.1, s: 0.55, ry: 0.9 }, { x: 0.1, z: 0.3, s: 0.55, ry: 2.6 },
-];
+type Site = { id: string; x: number; z: number; s: number; ry?: number };
+const GATEWAYS: Site[] = Object.entries(NETWORK_GATEWAYS)
+  .filter(([, gateway]) => !gateway.foreign)
+  .map(([id, gateway]) => ({ id, x: gateway.pos[0], z: gateway.pos[2], s: 1.1, ry: 0.6 }));
+const TOWERS: Site[] = Object.entries(NETWORK_SITES)
+  .map(([id, site]) => ({ id, x: site.pos[0], z: site.pos[2], s: 0.95 }));
+const TERMINALS: Site[] = TOWERS.map((site, index) => ({
+  id: site.id, x: site.x + 0.45, z: site.z + 0.25, s: 0.32, ry: index * 0.4,
+}));
 
 const easeInOutCubic = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
-const LEG = 1.0;       // seconds per camera leg
-const HOLD = 0.25;     // seconds on the Earth view before the flight starts
+const LEG = 0.5;
+const HOLD = 0.1;
 
 type Waypoint = { p: THREE.Vector3; t: THREE.Vector3 };
 
-/** Camera waypoints: Earth, satellite, gateway, Chennai. On wide screens the scene is shifted right of the text. */
-function buildWaypoints(wide: boolean): Waypoint[] {
-  const raw: Waypoint[] = [
+/** Camera waypoints: Earth, satellite, gateway, then the emulated Chennai network. */
+function buildWaypoints(): Waypoint[] {
+  return [
     { p: new THREE.Vector3(-6, 10, 96), t: new THREE.Vector3(0, -9, 0) },
-    { p: new THREE.Vector3(-1, 21, 14), t: SAT_POS.clone() },
-    { p: new THREE.Vector3(1.5, 4, 9), t: new THREE.Vector3(GATEWAY.x, 0.8, GATEWAY.z) },
-    { p: new THREE.Vector3(8.5, 5.5, 11.5), t: new THREE.Vector3(1.2, 2.6, 0) },
+    { p: new THREE.Vector3(2, 9, 15), t: SAT_POS.clone() },
+    { p: new THREE.Vector3(1.5, 5, 10), t: new THREE.Vector3(GATEWAYS[0].x, 0.8, GATEWAYS[0].z) },
+    { p: new THREE.Vector3(10, 9, 16), t: new THREE.Vector3(-0.9, 2.3, 0) },
   ];
-  if (!wide) return raw;
-  return raw.map(({ p, t }) => {
-    const dir = t.clone().sub(p);
-    const right = new THREE.Vector3().crossVectors(dir, new THREE.Vector3(0, 1, 0)).setY(0).normalize();
-    const shift = right.multiplyScalar(-0.17 * dir.length());
-    return { p: p.clone().add(shift), t: t.clone().add(shift) };
-  });
 }
 
 function Models({ pal }: { pal: Palette }) {
@@ -77,16 +72,16 @@ function Models({ pal }: { pal: Palette }) {
     return () => (src ? src.clone(true) : new THREE.Object3D());
   }, [scene]);
   const sat = useMemo(() => make('Satellite')(), [make]);
-  const dish = useMemo(() => make('GatewayDish')(), [make]);
+  const dishes = useMemo(() => GATEWAYS.map(() => make('GatewayDish')()), [make]);
   const towers = useMemo(() => TOWERS.map(() => make('CellTower')()), [make]);
   const terms = useMemo(() => TERMINALS.map(() => make('UserTerminal')()), [make]);
 
   return (
     <>
       <primitive object={sat} position={SAT_POS} scale={SAT_SCALE} rotation={[0.25, 0.7, 0.1]} />
-      <primitive object={dish} position={[GATEWAY.x, 0, GATEWAY.z]} scale={GATEWAY.s} rotation={[0, GATEWAY.ry ?? 0, 0]} />
-      {towers.map((o, i) => <primitive key={`t${i}`} object={o} position={[TOWERS[i].x, 0, TOWERS[i].z]} scale={TOWERS[i].s} />)}
-      {terms.map((o, i) => <primitive key={`u${i}`} object={o} position={[TERMINALS[i].x, 0, TERMINALS[i].z]} scale={TERMINALS[i].s} rotation={[0, TERMINALS[i].ry ?? 0, 0]} />)}
+      {dishes.map((o, i) => <primitive key={GATEWAYS[i].id} object={o} position={[GATEWAYS[i].x, 0, GATEWAYS[i].z]} scale={GATEWAYS[i].s} rotation={[0, GATEWAYS[i].ry ?? 0, 0]} />)}
+      {towers.map((o, i) => <primitive key={TOWERS[i].id} object={o} position={[TOWERS[i].x, 0, TOWERS[i].z]} scale={TOWERS[i].s} />)}
+      {terms.map((o, i) => <primitive key={TERMINALS[i].id} object={o} position={[TERMINALS[i].x, 0, TERMINALS[i].z]} scale={TERMINALS[i].s} rotation={[0, TERMINALS[i].ry ?? 0, 0]} />)}
     </>
   );
 }
@@ -114,7 +109,7 @@ function Earth({ pal }: { pal: Palette }) {
   return (
     <group position={EARTH_C} rotation={[0.28, 0, 0.42]}>
       <mesh>
-        <sphereGeometry args={[EARTH_R, 96, 64]} />
+        <sphereGeometry args={[EARTH_R, 48, 32]} />
         <meshStandardMaterial color={surface} roughness={1} metalness={0} />
       </mesh>
       <lineSegments geometry={lines}>
@@ -124,8 +119,10 @@ function Earth({ pal }: { pal: Palette }) {
   );
 }
 
-function OrbitAndLinks({ pal }: { pal: Palette }) {
-  const { orbit, links, tile } = useMemo(() => {
+function OrbitAndLinks({ pal, siteStates, topology }: {
+  pal: Palette; siteStates?: Record<string, SiteState>; topology?: Record<string, CatalogueSite>;
+}) {
+  const { orbit, tile } = useMemo(() => {
     const o: number[] = [];
     const n = 160;
     const a0 = (38 * Math.PI) / 180;
@@ -133,34 +130,36 @@ function OrbitAndLinks({ pal }: { pal: Palette }) {
     for (let i = 0; i < n; i++) {
       const u = a0 + ((a1 - a0) * i) / n;
       const v = a0 + ((a1 - a0) * (i + 1)) / n;
-      o.push(EARTH_C.x + ORBIT_R * Math.cos(u), EARTH_C.y + ORBIT_R * Math.sin(u), 0,
-        EARTH_C.x + ORBIT_R * Math.cos(v), EARTH_C.y + ORBIT_R * Math.sin(v), 0);
+      o.push(EARTH_C.x + ORBIT_R * Math.cos(u), EARTH_C.y + ORBIT_R * Math.sin(u), SAT_POS.z,
+        EARTH_C.x + ORBIT_R * Math.cos(v), EARTH_C.y + ORBIT_R * Math.sin(v), SAT_POS.z);
     }
-    const l: number[] = [];
-    const add = (s: Site, top: number) => l.push(s.x, top * s.s, s.z, SAT_POS.x, SAT_POS.y, SAT_POS.z);
-    TOWERS.forEach((s) => add(s, 0.95));
-    TERMINALS.forEach((s) => add(s, 0.9));
     const mk = (a: number[]) => {
       const g = new THREE.BufferGeometry();
       g.setAttribute('position', new THREE.Float32BufferAttribute(a, 3));
       return g;
     };
-    const box = new THREE.BoxGeometry(12, 0.12, 8.5);
-    return { orbit: mk(o), links: mk(l), tile: { box, edges: new THREE.EdgesGeometry(box) } };
+    const box = new THREE.BoxGeometry(12, 0.12, 9);
+    return { orbit: mk(o), tile: { box, edges: new THREE.EdgesGeometry(box) } };
   }, []);
-  const feeder = useMemo(() => {
-    const g = new THREE.BufferGeometry();
-    g.setAttribute('position', new THREE.Float32BufferAttribute(
-      [GATEWAY.x, 0.9 * GATEWAY.s, GATEWAY.z, SAT_POS.x, SAT_POS.y, SAT_POS.z], 3));
-    return g;
-  }, []);
-  useEffect(() => () => { orbit.dispose(); links.dispose(); feeder.dispose(); tile.box.dispose(); tile.edges.dispose(); }, [orbit, links, feeder, tile]);
+  useEffect(() => () => { orbit.dispose(); tile.box.dispose(); tile.edges.dispose(); }, [orbit, tile]);
+  const links = useMemo(() => TOWERS.flatMap((site) => {
+    const state = siteStates?.[site.id];
+    const route = state?.active_path ? topology?.[site.id]?.paths?.[state.active_path] : undefined;
+    if (!Array.isArray(route) || !state) return [];
+    const gateway = NETWORK_GATEWAYS[state.gateway ?? route[1]];
+    if (!gateway) return [];
+    const top: [number, number, number] = [site.x, 0.95, site.z];
+    const ground: [number, number, number] = [gateway.pos[0], 0.9, gateway.pos[2]];
+    const points: [number, number, number][] = route[0] === 'satellite'
+      ? [top, [SAT_POS.x, SAT_POS.y, SAT_POS.z], ground] : [top, ground];
+    return [{ id: site.id, satellite: route[0] === 'satellite', points }];
+  }), [siteStates, topology]);
 
   return (
     <>
       <lineSegments geometry={orbit}><lineBasicMaterial color={pal.inkMuted} transparent opacity={0.5} /></lineSegments>
-      <lineSegments geometry={links}><lineBasicMaterial color={pal.accent} transparent opacity={0.55} /></lineSegments>
-      <lineSegments geometry={feeder}><lineBasicMaterial color={pal.accent} /></lineSegments>
+      {links.map((link) => <Line key={link.id} points={link.points} color={pal.accent}
+        lineWidth={1.3} transparent opacity={0.65} dashed={link.satellite} dashSize={0.22} gapSize={0.12} />)}
       <mesh geometry={tile.box} position={[1, -0.06, 0.2]}>
         <meshStandardMaterial color={pal.light ? pal.surface : pal.surface2} roughness={1} metalness={0} />
       </mesh>
@@ -171,12 +170,29 @@ function OrbitAndLinks({ pal }: { pal: Palette }) {
   );
 }
 
+function City({ pal }: { pal: Palette }) {
+  const blocks = useMemo(() => TOWERS.flatMap((site, i) => [
+    { x: site.x - 0.6, z: site.z + 0.28, height: 0.22 + (i % 3) * 0.12 },
+    { x: site.x + 0.55, z: site.z - 0.45, height: 0.3 + (i % 2) * 0.14 },
+  ]), []);
+  const building = useMemo(() => new THREE.Color(pal.surface2).lerp(new THREE.Color(pal.ink), pal.light ? 0.17 : 0.08), [pal]);
+  return (
+    <group>
+      <gridHelper args={[10, 20, pal.border, pal.border]} position={[0, 0.012, 0]} />
+      {blocks.map((block, i) => (
+        <mesh key={i} position={[block.x, block.height / 2 + 0.02, block.z]}>
+          <boxGeometry args={[0.3, block.height, 0.35]} />
+          <meshStandardMaterial color={building} roughness={1} />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
 function CameraRig({ reduced }: { reduced: boolean }) {
   const camera = useThree((s) => s.camera);
-  const aspect = useThree((s) => s.size.width / Math.max(1, s.size.height));
   const invalidate = useThree((s) => s.invalidate);
-  const wide = aspect > 1.2;
-  const wps = useMemo(() => buildWaypoints(wide), [wide]);
+  const wps = useMemo(() => buildWaypoints(), []);
   const t0 = useRef<number | null>(null);
   const look = useRef(new THREE.Vector3());
   const tmp = useRef(new THREE.Vector3());
@@ -184,6 +200,7 @@ function CameraRig({ reduced }: { reduced: boolean }) {
   // Static framing (reduced motion) and initial pose before the first frame.
   useLayoutEffect(() => {
     const w = reduced ? wps[wps.length - 1] : wps[0];
+    t0.current = null;
     camera.position.copy(w.p);
     look.current.copy(w.t);
     camera.lookAt(w.t);
@@ -233,7 +250,10 @@ function Ready({ onReady }: { onReady: () => void }) {
   return null;
 }
 
-export default function Scene3D({ pal, reduced, onReady }: { pal: Palette; reduced: boolean; onReady: () => void }) {
+export default function Scene3D({ pal, reduced, onReady, siteStates, topology }: {
+  pal: Palette; reduced: boolean; onReady: () => void;
+  siteStates?: Record<string, SiteState>; topology?: Record<string, CatalogueSite>;
+}) {
   return (
     <Canvas
       dpr={[1, 2]}
@@ -246,7 +266,8 @@ export default function Scene3D({ pal, reduced, onReady }: { pal: Palette; reduc
       <directionalLight position={[18, 30, 22]} intensity={pal.light ? 1.7 : 2.3} />
       <directionalLight position={[-20, 6, -10]} intensity={0.35} />
       <Earth pal={pal} />
-      <OrbitAndLinks pal={pal} />
+      <OrbitAndLinks pal={pal} siteStates={siteStates} topology={topology} />
+      <City pal={pal} />
       <Suspense fallback={null}>
         <Models pal={pal} />
         <Ready onReady={onReady} />

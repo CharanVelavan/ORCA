@@ -8,7 +8,7 @@ import type { LiveEvent } from '../types';
 // This file maps one shape to the other so the Pipeline can be driven unchanged.
 
 export const scenarioFromFile = (file: string): string => {
-  const m = /-(s\d+|cap)-/i.exec(file);
+  const m = /-(s\d+|n\d+|cap)-/i.exec(file);
   return m ? m[1].toUpperCase() : 'S1';
 };
 

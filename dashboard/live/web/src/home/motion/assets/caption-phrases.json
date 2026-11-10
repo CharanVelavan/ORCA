@@ -1,0 +1,207 @@
+[
+  {
+    "start": 0.27,
+    "end": 2.75,
+    "text": "In Chennai, homes, hospitals and emergency"
+  },
+  {
+    "start": 2.75,
+    "end": 5.32,
+    "text": "services depend on connected networks."
+  },
+  {
+    "start": 5.95,
+    "end": 8.03,
+    "text": "ORCA explores how an emulated satellite"
+  },
+  {
+    "start": 8.03,
+    "end": 10.57,
+    "text": "backed network can protect these everyday"
+  },
+  {
+    "start": 10.57,
+    "end": 11.22,
+    "text": "services."
+  },
+  {
+    "start": 12.77,
+    "end": 14.95,
+    "text": "An attacker uses stolen credentials to"
+  },
+  {
+    "start": 14.95,
+    "end": 16.85,
+    "text": "reach the satellite operator\u2019s ground"
+  },
+  {
+    "start": 16.85,
+    "end": 18.2,
+    "text": "management network."
+  },
+  {
+    "start": 18.85,
+    "end": 20.2,
+    "text": "Terminals are disrupted."
+  },
+  {
+    "start": 21.05,
+    "end": 22.59,
+    "text": "A backup path may also be"
+  },
+  {
+    "start": 22.59,
+    "end": 25.15,
+    "text": "unsafe, and service providers need to"
+  },
+  {
+    "start": 25.15,
+    "end": 25.64,
+    "text": "be told."
+  },
+  {
+    "start": 26.27,
+    "end": 29.64,
+    "text": "ORCA collects telemetry and prepares features."
+  },
+  {
+    "start": 30.51,
+    "end": 32.04,
+    "text": "Model one detects anomalies."
+  },
+  {
+    "start": 32.91,
+    "end": 35.16,
+    "text": "Model two forecasts failure in minutes."
+  },
+  {
+    "start": 35.71,
+    "end": 38.46,
+    "text": "Model three distinguishes faults from attacks,"
+  },
+  {
+    "start": 39.07,
+    "end": 39.74,
+    "text": "or abstains."
+  },
+  {
+    "start": 40.61,
+    "end": 42.98,
+    "text": "Model four allocates limited capacity."
+  },
+  {
+    "start": 44.77,
+    "end": 47.1,
+    "text": "Role agents coordinate around the evidence."
+  },
+  {
+    "start": 47.69,
+    "end": 49.93,
+    "text": "Retrieval searches the knowledge base for"
+  },
+  {
+    "start": 49.93,
+    "end": 50.78,
+    "text": "relevant sources."
+  },
+  {
+    "start": 51.35,
+    "end": 53.17,
+    "text": "A deterministic rule engine applies verified"
+  },
+  {
+    "start": 53.17,
+    "end": 55.68,
+    "text": "records and returns cited verdicts."
+  },
+  {
+    "start": 56.03,
+    "end": 58.27,
+    "text": "The agents explain; the human remains"
+  },
+  {
+    "start": 58.27,
+    "end": 58.86,
+    "text": "accountable."
+  },
+  {
+    "start": 61.77,
+    "end": 64.35,
+    "text": "Before a fix, ORCA checks the"
+  },
+  {
+    "start": 64.35,
+    "end": 66.61,
+    "text": "backup path and tests the plan"
+  },
+  {
+    "start": 66.61,
+    "end": 67.24,
+    "text": "in a clone."
+  },
+  {
+    "start": 68.33,
+    "end": 70.17,
+    "text": "In assisted mode, a human approves"
+  },
+  {
+    "start": 70.17,
+    "end": 71.36,
+    "text": "the exact plan."
+  },
+  {
+    "start": 71.77,
+    "end": 73.2,
+    "text": "The change rolls out in stages:"
+  },
+  {
+    "start": 73.81,
+    "end": 76.41,
+    "text": "five, twenty five, then one hundred"
+  },
+  {
+    "start": 76.41,
+    "end": 76.98,
+    "text": "percent."
+  },
+  {
+    "start": 77.55,
+    "end": 79.65,
+    "text": "Re-attack checks and rollback guard the"
+  },
+  {
+    "start": 79.65,
+    "end": 80.08,
+    "text": "result."
+  },
+  {
+    "start": 82.77,
+    "end": 84.87,
+    "text": "Services can recover while a hash"
+  },
+  {
+    "start": 84.87,
+    "end": 86.72,
+    "text": "chained audit preserves the evidence."
+  },
+  {
+    "start": 87.51,
+    "end": 89.55,
+    "text": "The gap analyst records potential policy"
+  },
+  {
+    "start": 89.55,
+    "end": 90.92,
+    "text": "gaps for human review."
+  },
+  {
+    "start": 91.85,
+    "end": 95.21,
+    "text": "Models detect, agents coordinate, code"
+  },
+  {
+    "start": 95.21,
+    "end": 97.44,
+    "text": "decides, and humans approve."
+  }
+]

@@ -27,7 +27,7 @@ import math
 import random
 from dataclasses import dataclass, field
 
-from orca.sim import physics
+from orca.sim import physics, service
 from orca.sim.topology import (DEMAND_SHARE, GATEWAYS, INDIAN_GATEWAYS, LINK_CLASSES, SITES,
                                TERMINALS_PER_SITE)
 
@@ -50,7 +50,7 @@ LINK_SIGNALS = {"snr_db", "link_margin_db", "packet_loss", "txn_success"}
 RECORD_KEYS = [
     "t", "ts", "site", "label", "active_path", "path_kind", "gateway",
     "rain_mm_h", "expected_fade_db", "snr_db", "rx_dbm", "noise_dbm", "noise_rise_db", "fade_residual_db",
-    "link_margin_db", "capacity_mbps", "demand_mbps", "traffic_load", "packet_loss", "txn_success",
+    "link_margin_db", "capacity_mbps", "demand_mbps", "delivered_mbps", "traffic_load", "packet_loss", "txn_success",
     "mains_power", "battery_pct", "battery_saving", "terminals_up",
     "mgmt_logins", "mgmt_login_anomalous", "mgmt_failed_logins", "mgmt_cmds", "mgmt_wipe", "mgmt_cfg_change",
     "mgmt_telemetry_edit", "reported_loss", "telemetry_mismatch",
@@ -109,6 +109,7 @@ class Simulator:
         self.history: list[dict] = []
         self.hour0 = self.start.hour if hour_of_day is None else hour_of_day
         self.gateway_up = {g: True for g in GATEWAYS}
+        self.m4_plan: dict = {}         # latest per-minute M4 allocation (see orca.sim.service)
         self.mgmt_contained = False     # set by netops after PB-01/PB-11/PB-12 close the intrusion path
 
     # ------------------------------------------------------------ inputs
@@ -161,7 +162,8 @@ class Simulator:
             for c in self.conditions:
                 if c.kind in ("mgmt_intrusion", "telemetry_edit") and c.active(self.t):
                     c.end = self.t
-        recs =[self._site_minute(s, self.t) for s in self.sites]
+        recs = [self._site_minute(s, self.t) for s in self.sites]
+        self.m4_plan = service.allocate_minute(recs)
         self.history.extend(recs)
         return recs
 

@@ -1,0 +1,18 @@
+{
+  "name": "orca-method-film",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.9.26 preview",
+    "check": "npx --yes hyperframes@0.9.26 check",
+    "snapshot": "npx --yes hyperframes@0.9.26 snapshot --at 2,15,30,46,62,80",
+    "render": "npm run render:clean && npm run captions:render && python3 finish_film.py --refresh-clean",
+    "render:visual": "npx --yes hyperframes@0.9.26 render --fps 24 --quality delivery -o ../../../public/media/orca-method.mp4",
+    "render:visual:4k": "npx --yes hyperframes@0.9.26 render --resolution 4k --fps 24 --quality delivery -o ../../../public/media/orca-method-4k-visual.mp4",
+    "sound-effects": "python3 sound_effects.py",
+    "render:clean": "npm run render:visual:4k && python3 assemble.py",
+    "captions:align": "python3 caption_timing.py",
+    "captions:render": "python3 render_captions.py",
+    "music": "python3 background_music.py"
+  }
+}
