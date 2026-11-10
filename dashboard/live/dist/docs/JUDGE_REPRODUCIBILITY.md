@@ -499,6 +499,6 @@ Do not infer a live recovery outcome from an artifact download, passing mock run
 
 The [follow-up verification record](POST_SUBMISSION_VERIFICATION.md) documents the combined
 fine-tuned Qwen + restored index + CPU embedding + BGE reranker run, native Windows/macOS
-launcher checks, recovered benchmark archive and release artifacts. It also records rejected
+launcher checks, recovered benchmark archive and pinned artifact versions. It also records rejected
 citations and the adviser fallback limitation. These are measured checks, not a claim of perfect
 model accuracy, native Linux support or live satellite connectivity.

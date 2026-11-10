@@ -181,8 +181,8 @@ separates those mappings from observed proof.
 
 ## Reproduce and inspect
 
-The [judge verification release](https://github.com/CharanVelavan/ORCA/releases/tag/judge-v1.0.1)
-freezes the submitted PDF, pinned artifacts, exact code tag and verification evidence.
+The [verification results](docs/POST_SUBMISSION_VERIFICATION.md) document the tested setup,
+live pipeline, platform coverage and known limitations. Current code and guides are on `main`.
 
 The [documentation index](docs/README.md) separates current setup guides from historical planning records.
 

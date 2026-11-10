@@ -1,0 +1,44 @@
+{
+  "scope": "Pinned external artifacts used by the recorded verification. Use main for current code; individual recordings retain their original hashes and provenance.",
+  "model": {
+    "repo": "CharanVelavan/orca-ntn-qwen3.6-35b-a3b-ft-gguf",
+    "revision": "a0bdc74681870544849cafaf2d5a35a6a5cbd488",
+    "files_sha256": {
+      "Qwen3.6-35B-A3B-orca-ft.IQ4_XS.gguf": "011d7797836571495e8faf545101bee1e71d75a39292e06f946e8a3646b54e16"
+    }
+  },
+  "embedding": {
+    "repo": "Qwen/Qwen3-Embedding-8B-GGUF",
+    "revision": "69d0e58a13e463cd99a9b83e3f5fee7c10265fab",
+    "files_sha256": {
+      "Qwen3-Embedding-8B-Q4_K_M.gguf": "3fcd3febec8b3fd64435204db75bf0dd73b91e8d0661e0331acfe7e7c3120b85"
+    }
+  },
+  "knowledge_base": {
+    "repo": "CharanVelavan/orca-ntn-kb-v2",
+    "revision": "769dcc85b6be9e308b038831072a5b848e740a94",
+    "files_sha256": {
+      "chunks.jsonl": "efe2d3f7b7b03d32e87da9cc38c75771287ade5184de2e6bdec20b800704c9b4",
+      "embeddings.f16.npy": "c3216a1917f3516deca194eac27eb98cb29500c7b87732974c347191fe0be4cf",
+      "ids.json": "b9ee8382010e469ebbc09e47b7579772dbb449433f3a8374014f82c5c4a5b55d",
+      "model.json": "470b4f3b2d50ca9a05e157f9880c7f6ea1238e2848c657505b4dc4980de42183"
+    }
+  },
+  "reranker": {
+    "repo": "BAAI/bge-reranker-base",
+    "revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+    "file": "onnx/model.onnx",
+    "sha256": "15b9a8c3da82eddf263df571281166e00e9308fe19d077084b642ebfcaf06d2b",
+    "verified_bytes": 1112459588
+  },
+  "submitted_report": {
+    "path": "submission/ORCA-NTN-SolarSailors-Report.pdf",
+    "pages": 5,
+    "sha256": "eb40a7343f45d2fac4d980a44d51bb373e9d2915301159871200eda07fce251f"
+  },
+  "showcase_url": "https://orca-ntn.vercel.app",
+  "video_urls": [
+    "https://orca-ntn.vercel.app/media/orca-method-4k.mp4",
+    "https://orca-ntn.vercel.app/media/orca-final-clean-4k.mp4"
+  ]
+}
