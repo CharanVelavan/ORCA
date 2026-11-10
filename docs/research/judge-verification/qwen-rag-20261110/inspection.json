@@ -1,0 +1,39 @@
+{
+  "scenario_minute": 88,
+  "counters": {
+    "fresh_model_calls": 319,
+    "embedding_http_calls": 3,
+    "reranker_calls": 3,
+    "retrieval_calls": 3
+  },
+  "elapsed_seconds": 952.353,
+  "audit_entries": 435,
+  "audit_chain_valid": true,
+  "playbooks_executed": [
+    "PB-01",
+    "PB-11",
+    "PB-06"
+  ],
+  "commander": "scripted headless commander; not an independent human study",
+  "query_kb_calls": 1,
+  "corpus_chunk_ids": [
+    "in-certin-dir-2022:p2:c2",
+    "in-certin-dir-2022:p5:c0",
+    "in-certin-faq-2022:p11:c0"
+  ],
+  "all_query_chunks_in_pinned_ids": true,
+  "rejected_citation_occurrences": 15,
+  "rejected_citation_ids": [
+    "IN-CERTIN-DIR-2022-ANX1-1",
+    "IN-TCSR-2024-R7-1-j"
+  ],
+  "accepted_citation_occurrences": 583,
+  "adviser_mode": "llm",
+  "adviser_quality_note": "The adviser returned the question text with a valid citation list. Source-constrained JSON and citation checks passed; the text is not a useful substantive explanation. Do not claim answer-quality success from this plumbing check.",
+  "runtime_source_sha256": {
+    "orca/live/session.py": "4844387f842fa324760e62f6d96f43b41b51d229c589c10af1b114bc770382b5",
+    "orca/kbvec/retrieve.py": "abfbd6de8ab16311d42f972cd7dcf5c8f7e5bdf49a06139862633bf687676762"
+  },
+  "agents_source_sha256_before_echo_fix": "f2b0df0ec08815d202602d9be28fb09731ce97ee09960f70454e41403e92a452",
+  "followup": "adviser-fallback-check verifies the later echo guard with fresh model/RAG calls; the original full recording is retained unchanged."
+}

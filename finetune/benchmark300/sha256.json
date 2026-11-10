@@ -1,0 +1,18 @@
+{
+  "case_ids.json": "89aa895cc970bb22966e322528f6c787fd98e53a7f76a2dfc3ff7bf8a45187e6",
+  "cases_subset300_tools.jsonl": "a555fcad9fb34eaa10aa722bdefae76f91e9b8af2cb06728f3b7b1387ddb11c9",
+  "gemma-4-12b-base.json": "e589118e7a0a171e8282bb43029184eff1c5199b8e4744ca105c481cb6937512",
+  "gemma-4-12b-base.raw.json": "362016e2ba9af091063c3cf99692e2c04e24b31239535d05762086a76d363ff1",
+  "gemma-4-12b-orca-ft.json": "1a4b471881179ea8d1db4da6eaf4b91fed9140f2f5b9b67c148fe80463f1ea6a",
+  "gemma-4-12b-orca-ft.raw.json": "fe1089ce876dbb0a3dfefb55e75fcb2ccb9c0c420fdbbf7741aba77cc168cd12",
+  "historical-eval_cases.py": "02b52a0fc92151f95fc27b95d16280dcf4f48d27972660942e01fd37a6b01269",
+  "historical-eval_wrap.py": "ac2522d1032077b0d7f7610c320311e355fb6e95bce5de9eefc1a1da72107773",
+  "historical-llm.py": "f59acf93623eb8191eba84abaeb64835b9d9b3b73223eba9040671325122b0c8",
+  "historical-run_eval.sh": "8704171be606e85398b2ae71e14bed07bb8d3d60ad3af3ab2c32f577531ab163",
+  "historical-serve.sh": "1f34f662139e5c4a2312fcb10c161c91a665edd19c9d5091d1e80cb66f592507",
+  "qwen3.6-35b-a3b-base.json": "ccd3566ad5414632167fc7567920851cfcda4facad542b0a6f2208b37c041807",
+  "qwen3.6-35b-a3b-base.raw.json": "20aa99e63a3e3ca3323c5798b3ba3b246178dbd36ed42aff098a4129498c2d17",
+  "qwen3.6-35b-a3b-orca-ft.json": "1e78949554ddc9e7470a7a313df3db0a42e44ad69947c252b52334dc1c5592b7",
+  "qwen3.6-35b-a3b-orca-ft.raw.json": "94393a963c2e8bcd1e705fa80c3a2767615d5f8cc9074907afe0142c576a6877",
+  "settings.json": "891e093f14eb86975131de9ebc5555384828144a1216162b3ecc7e6f621a349e"
+}

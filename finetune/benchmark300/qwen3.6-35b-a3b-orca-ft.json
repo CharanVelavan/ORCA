@@ -1,0 +1,30 @@
+{
+  "model": "qwen3.6-35b-a3b-orca-ft",
+  "n_cases": 300,
+  "tool_choice_acc": 0.93,
+  "args_acc": 0.9033333333333333,
+  "valid_json": 1.0,
+  "unsafe_exec": 0,
+  "bad_citations": 128,
+  "refusal_acc": 1.0,
+  "final_format": 0.16333333333333333,
+  "scenario_verdicts_ok": {
+    "N4": false,
+    "N5": false,
+    "CAP": false
+  },
+  "per_tag": {
+    "approval_first": 0.8653846153846154,
+    "ask_owner": 0.9807692307692307,
+    "cite_kb": 0.9084507042253521,
+    "filter_source": 1.0,
+    "final_format": 0.93,
+    "insufficient_evidence": 1.0,
+    "no_token_refuse": 0.975,
+    "refuse_out_of_scope": 1.0,
+    "share_limits": 1.0,
+    "tool_choice": 0.9283276450511946
+  },
+  "wall_s": 115,
+  "s_per_case": 0.38
+}

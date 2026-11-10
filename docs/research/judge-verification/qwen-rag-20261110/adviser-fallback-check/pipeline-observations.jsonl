@@ -1,0 +1,13 @@
+{"kind": "embedding_http_response", "elapsed_seconds": 76.25, "inputs": 1, "dimensions": 4096}
+{"kind": "rerank_response", "elapsed_seconds": 91.104, "model": "BAAI/bge-reranker-base", "candidates": 15}
+{"kind": "retrieval_response", "elapsed_seconds": 91.408, "query": "What incident-reporting obligations apply after stolen satellite operator management credentials?", "abstained": false, "chunk_ids": ["eu-space-act-proposal-2025:p1:c177", "us-cisa-circia-nprm-2024:p64:c3", "in-space-fw-2026:p12:c1", "us-cisa-circia-nprm-2024:p42:c0", "in-space-fw-2026:p50:c0"]}
+{"kind": "embedding_http_response", "elapsed_seconds": 103.174, "inputs": 1, "dimensions": 4096}
+{"kind": "rerank_response", "elapsed_seconds": 111.258, "model": "BAAI/bge-reranker-base", "candidates": 15}
+{"kind": "retrieval_response", "elapsed_seconds": 111.726, "query": "CERT-In incident reporting six hours noticing", "abstained": false, "chunk_ids": ["in-certin-dir-2022:p2:c2", "in-sebi-cscrf-2024:p200:c1", "in-certin-faq-2022:p13:c1", "in-irdai-cyber-security-guidelines-2023:p95:c1", "in-sebi-cscrf-2024:p123:c2"]}
+{"kind": "fresh_model_response", "elapsed_seconds": 114.683, "model": "/opt/qwen/models/Qwen3.6-35B-A3B-orca-ft.IQ4_XS.gguf", "tool_calls": 0}
+{"kind": "fresh_model_response", "elapsed_seconds": 115.933, "model": "/opt/qwen/models/Qwen3.6-35B-A3B-orca-ft.IQ4_XS.gguf", "tool_calls": 1}
+{"kind": "embedding_http_response", "elapsed_seconds": 127.19, "inputs": 1, "dimensions": 4096}
+{"kind": "rerank_response", "elapsed_seconds": 135.226, "model": "BAAI/bge-reranker-base", "candidates": 15}
+{"kind": "retrieval_response", "elapsed_seconds": 135.878, "query": "What are the CERT-In incident reporting obligations?", "abstained": false, "chunk_ids": ["in-certin-dir-2022:p2:c2", "in-certin-dir-2022:p5:c0", "in-certin-faq-2022:p11:c0"]}
+{"kind": "fresh_model_response", "elapsed_seconds": 137.198, "model": "/opt/qwen/models/Qwen3.6-35B-A3B-orca-ft.IQ4_XS.gguf", "tool_calls": 1}
+{"kind": "fresh_model_response", "elapsed_seconds": 139.43, "model": "/opt/qwen/models/Qwen3.6-35B-A3B-orca-ft.IQ4_XS.gguf", "tool_calls": 0}

@@ -1,0 +1,58 @@
+{
+  "answer": "CERT-In incident reporting six hours noticing",
+  "citations": [
+    "IN-CERTIN-DIR-2022-ii",
+    "IN-SPACEFW-2026-3-2-1"
+  ],
+  "mode": "llm",
+  "reasoning": null,
+  "found": true,
+  "sources": [
+    {
+      "id": "IN-CERTIN-DIR-2022-ii",
+      "kind": "record",
+      "title": "CERT-In Directions under section 70B(6) of the IT Act, 2000, Direction (ii)",
+      "verified": true,
+      "binding_status": "binding",
+      "status": null,
+      "tier": null
+    },
+    {
+      "id": "IN-SPACEFW-2026-3-2-1",
+      "kind": "record",
+      "title": "CERT-In / SIA-India Cyber Security Framework and Guidelines for Space including Satellite Communication, \u00a73.2.1",
+      "verified": true,
+      "binding_status": "non_binding",
+      "status": null,
+      "tier": null
+    },
+    {
+      "id": "GAP-IN-01-REPORTING-CLOCKS",
+      "kind": "gap",
+      "title": "Up to four reports to three bodies, with two different triggers",
+      "verified": true,
+      "binding_status": null,
+      "status": "confirmed",
+      "tier": null
+    },
+    {
+      "id": "IN-CTIR-2024-R7-1-j",
+      "kind": "record",
+      "title": "Telecommunications (Critical Telecommunication Infrastructure) Rules, 2024, Rule 7(1)(j)",
+      "verified": true,
+      "binding_status": "binding",
+      "status": null,
+      "tier": null
+    },
+    {
+      "id": "IN-TCSR-2024-R7-1",
+      "kind": "record",
+      "title": "Telecommunications (Telecom Cyber Security) Rules, 2024 (G.S.R. 720(E), 21 Nov 2024), Rule 7(1)(a)",
+      "verified": true,
+      "binding_status": "binding",
+      "status": null,
+      "tier": null
+    }
+  ],
+  "kb_as_of": "2026-11-07"
+}

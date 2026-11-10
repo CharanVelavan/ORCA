@@ -56,7 +56,7 @@ def _index() -> dict:
                     vals[key].add(m.get(key) or "")
             _idx = {"ids": rows["ids"], "docs": rows["documents"], "metas": rows["metadatas"],
                     "pos": {i: n for n, i in enumerate(rows["ids"])}, "vals": vals,
-                    "bm25": BM25Okapi([_tok(d) for d in rows["documents"]]) if rows["ids"] else None}
+                    "bm25": BM25Okapi((_tok(d) for d in rows["documents"])) if rows["ids"] else None}
         return _idx
 
 

@@ -6,9 +6,9 @@
 #      LLM_BASE_URL=mock
 #      LLM_MODEL=mock
 #
-#   2. Local LM Studio:
+#   2. Host OpenAI-compatible model server (use its advertised model ID):
 #      LLM_BASE_URL=http://host.docker.internal:1234/v1
-#      LLM_MODEL=qwen2.5-14b
+#      LLM_MODEL=orca-ntn-qwen-ft
 #
 #   3. Hosted Qwen endpoint (GCP / Atlas tunnel):
 #      LLM_BASE_URL=http://host.docker.internal:8000/v1

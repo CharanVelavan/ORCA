@@ -13,6 +13,7 @@ The [hosted showcase](https://orca-ntn.vercel.app) provides learning and recorde
 | [Website guide](../guide.md) | Scenario selection, Console, Policy, Recovery and Audit |
 | [Run commands](RUN.md) | Runtime and test commands |
 | [Demo walkthrough](DEMO.md) | Demonstration paths and expected evidence |
+| [Post-submission verification](POST_SUBMISSION_VERIFICATION.md) | Combined live pipeline, Windows/macOS and frozen benchmark checks |
 | [Verification record](JUDGE_VERIFICATION.md) | Tested setup and measured results; platform limitations |
 
 ## Understand the implementation

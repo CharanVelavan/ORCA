@@ -195,6 +195,7 @@ def test_live_session_uses_real_client_when_llm_is_local():
     s = LiveSession(scenario="S1", llm="local")
     try:
         assert all(isinstance(a.llm, LLMClient) for a in s.agents.values())
+        assert all(a.adviser is s.adviser and a.adviser.llm is a.llm for a in s.agents.values())
     finally:
         getattr(s, "close", lambda: None)()
 
@@ -1030,3 +1031,16 @@ def test_39_s1_terminals_lost_while_mains_power_stays_on(tmp_path):
     # the drop follows the scripted wipe (t=18) and modem loss (t=24), not the first M3 alert
     assert min(t for t, _, _ in lost) == 24
     s.close()
+
+
+def test_operator_question_reaches_requested_agent_unchanged(tmp_path, monkeypatch):
+    s = live(tmp_path)
+    try:
+        assert s.adviser.llm is None  # mock mode remains deterministic
+        received = []
+        monkeypatch.setattr(s.agents["cert_in"], "run", lambda task: received.append(task) or {"text": "Read the cited sources", "citations": {"accepted": []}})
+        question = "Explain CERT-In Direction (ii) and retrieve the reporting trigger."
+        s.ask("cert_in", question)
+        assert received == [question]
+    finally:
+        s.close()

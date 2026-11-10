@@ -1,0 +1,79 @@
+{
+  "scenario": "S1",
+  "adviser_only": true,
+  "all_links_emulated": true,
+  "commander": "scripted headless commander",
+  "mode": "fresh live model requests; fresh hybrid retrieval, no retrieval cache",
+  "collection_vectors": 82191,
+  "counters": {
+    "fresh_model_calls": 4,
+    "embedding_http_calls": 3,
+    "reranker_calls": 3,
+    "retrieval_calls": 3
+  },
+  "elapsed_seconds": 139.487,
+  "audit_chains": [
+    {
+      "file": "live-20261110-121951-782946-s1-rules-local.jsonl",
+      "entries": 7,
+      "bad_sequence": null,
+      "anchor": "a4e736a0877f3bc532c1a8d5e5320a396a873801ecc97dbf74ecde4678abef17",
+      "sha256": "cae191f729344a3679cde33620775362246c64e41b3a86fa445846a2be5ff6aa"
+    }
+  ],
+  "session_summary": {
+    "final": false,
+    "t": -1,
+    "emulated": true,
+    "scenario": "s1",
+    "rules": true,
+    "kb": "india",
+    "timings": {
+      "incident_start_t": null,
+      "incident_start_ts": null,
+      "time_to_detect_min": null,
+      "detected_at": null,
+      "clocks": [],
+      "time_to_notify_min": {},
+      "time_to_restore_min": null,
+      "degraded": null,
+      "restored_at": null,
+      "approvals": [],
+      "approval_latency_s": null,
+      "approval_latency_wall_s": null,
+      "failed_attempts": null,
+      "failed_breakdown": {
+        "rolled_back": 0,
+        "refused": 0
+      },
+      "rollback_ok": null
+    },
+    "services": {},
+    "sites": {},
+    "network": {
+      "instant_pct_now": null,
+      "instant_pct_min": null,
+      "cumulative_pct": null
+    },
+    "units": {
+      "rate": "Mbps",
+      "volume": "Mbit",
+      "sample_duration_s": 60
+    },
+    "impact_cumulative": {
+      "emulated_estimate": true,
+      "calls_112_failed": 0.0,
+      "hospital_offline_min": 0.0,
+      "payments_failed": 0.0,
+      "grid_scada_lost_min": 0.0,
+      "people_affected": 0.0,
+      "warned_at": {},
+      "reports": [],
+      "delivery": {
+        "available": false,
+        "reason": "awaiting_telemetry",
+        "provenance": "emulated_simulator_allocation"
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "repo": "BAAI/bge-reranker-base",
+  "revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+  "file": "onnx/model.onnx",
+  "sha256": "15b9a8c3da82eddf263df571281166e00e9308fe19d077084b642ebfcaf06d2b",
+  "verified_bytes": 1112459588
+}

@@ -1,0 +1,10 @@
+{
+  "command": "python -m pytest -q -p no:cacheprovider",
+  "result": "passed",
+  "passed": 441,
+  "skipped": 3,
+  "warnings": 1,
+  "elapsed_seconds": 501.89,
+  "environment": "macOS arm64; Python 3.12; isolated empty ORCA_CHROMA_DIR, retrieval cache and snapshots; live integration checked separately",
+  "note": "Completed final suite after adding the adviser empty/echo fallback. The three skips are the slow fine-tune rebuild and two optional retrieval checks without an index/embedder in the isolated unit environment."
+}

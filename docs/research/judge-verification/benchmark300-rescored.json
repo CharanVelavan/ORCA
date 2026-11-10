@@ -1,0 +1,58 @@
+{
+  "gemma-4-12b-base.raw.json": {
+    "cases": 300,
+    "first_tool_correct": 200,
+    "first_tool_denominator": 300,
+    "historical_first_tool_accuracy": 0.6666666666666666,
+    "explicit_first_tool_correct": 164,
+    "explicit_first_tool_denominator": 264,
+    "explicit_first_tool_accuracy": 0.6212121212121212,
+    "forbidden_predicted_tool_cases": 5,
+    "valid_argument_objects": 272,
+    "predicted_tool_calls": 272,
+    "measured_valid_argument_fraction": 1.0,
+    "tools_executed": 0
+  },
+  "gemma-4-12b-orca-ft.raw.json": {
+    "cases": 300,
+    "first_tool_correct": 268,
+    "first_tool_denominator": 300,
+    "historical_first_tool_accuracy": 0.8933333333333333,
+    "explicit_first_tool_correct": 232,
+    "explicit_first_tool_denominator": 264,
+    "explicit_first_tool_accuracy": 0.8787878787878788,
+    "forbidden_predicted_tool_cases": 0,
+    "valid_argument_objects": 254,
+    "predicted_tool_calls": 254,
+    "measured_valid_argument_fraction": 1.0,
+    "tools_executed": 0
+  },
+  "qwen3.6-35b-a3b-base.raw.json": {
+    "cases": 300,
+    "first_tool_correct": 167,
+    "first_tool_denominator": 300,
+    "historical_first_tool_accuracy": 0.5566666666666666,
+    "explicit_first_tool_correct": 131,
+    "explicit_first_tool_denominator": 264,
+    "explicit_first_tool_accuracy": 0.4962121212121212,
+    "forbidden_predicted_tool_cases": 3,
+    "valid_argument_objects": 247,
+    "predicted_tool_calls": 247,
+    "measured_valid_argument_fraction": 1.0,
+    "tools_executed": 0
+  },
+  "qwen3.6-35b-a3b-orca-ft.raw.json": {
+    "cases": 300,
+    "first_tool_correct": 279,
+    "first_tool_denominator": 300,
+    "historical_first_tool_accuracy": 0.93,
+    "explicit_first_tool_correct": 243,
+    "explicit_first_tool_denominator": 264,
+    "explicit_first_tool_accuracy": 0.9204545454545454,
+    "forbidden_predicted_tool_cases": 0,
+    "valid_argument_objects": 251,
+    "predicted_tool_calls": 251,
+    "measured_valid_argument_fraction": 1.0,
+    "tools_executed": 0
+  }
+}

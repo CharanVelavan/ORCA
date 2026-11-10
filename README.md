@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://orca-ntn.vercel.app"><strong>Explore the demo ↗</strong></a> &nbsp;·&nbsp;
-  <a href="https://github.com/CharanVelavan/ORCA#quick-start">Run locally</a> &nbsp;·&nbsp;
+  <a href="https://github.com/CharanVelavan/ORCA#run-it-locally">Run locally</a> &nbsp;·&nbsp;
   <a href="https://github.com/CharanVelavan/ORCA/blob/main/docs/JUDGE_REPRODUCIBILITY.md">Reproduce results</a> &nbsp;·&nbsp;
   <a href="https://huggingface.co/CharanVelavan/orca-ntn-qwen3.6-35b-a3b-ft-gguf">Fine-tuned Qwen</a>
 </p>
@@ -173,12 +173,16 @@ The short **Judge walkthrough** tracks review of actual evidence. Its completion
 success score. New website exercises use Indian rules; EU/global instruments remain comparisons.
 Historical recordings retain their recorded context.
 
-The five-page report is available as [PDF](submission/ORCA-NTN-report-v7.pdf) and
-[DOCX](submission/ORCA-NTN-report-v7.docx). Its nine selected Readiness dimensions and scenario
+The submitted five-page report is available as [PDF](submission/ORCA-NTN-SolarSailors-Report.pdf).
+The earlier [editable v7 source](submission/ORCA-NTN-report-v7.docx) is retained as a working reference.
+The report's nine selected Readiness dimensions and scenario
 counts are planned mappings; [the coverage plan](docs/plan/SCENARIO_DIMENSION_COVERAGE.md)
 separates those mappings from observed proof.
 
 ## Reproduce and inspect
+
+The [judge verification release](https://github.com/CharanVelavan/ORCA/releases/tag/judge-v1.0.0)
+freezes the submitted PDF, pinned artifacts, exact code tag and verification evidence.
 
 The [documentation index](docs/README.md) separates current setup guides from historical planning records.
 
@@ -187,9 +191,10 @@ Use [docs/RUN.md](docs/RUN.md) for the maintained test commands and
 deployed operator recovery, perfect retrieval or automatic legal correctness is claimed. Model
 classification, policy verdict, human authorisation and successful execution are separate evidence.
 
-The current model-evaluation commands record their cases and role schemas. Exact reproduction of
-the historical 300-case score still needs the missing frozen request/schema artifact; see
-[the benchmark boundary](docs/JUDGE_REPRODUCIBILITY.md#model-benchmark-reproducibility-boundary).
+The [frozen 300-case comparison](finetune/benchmark300/README.md) now includes the exact archived
+requests, tool schemas, labels, settings and raw responses. Offline rescoring reproduces tuned Qwen's
+279/300 first-tool matches (93%); 243/264 (92.05%) among cases with an explicit required first tool.
+The archive belongs to the 8 November rebuilt comparison, not a proven identical earlier Colab draw.
 
 Source layout: `orca/` runtime; `scenarios/` exercise plans; `rules/` deterministic policy;
 `kb/` structured records and source metadata; `dashboard/live/web/` frontend;

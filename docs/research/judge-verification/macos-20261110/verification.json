@@ -1,0 +1,21 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.12.14",
+  "launcher": "quickstart.sh",
+  "dependency_lock": "requirements-judge.lock",
+  "environment": "fresh .venv-judge created from current requirements",
+  "checks": [
+    "HTTP / and /api/state and final video captions returned 200",
+    "quickstart --check passed",
+    "headless S1 with mock agents and scripted commander; all links emulated"
+  ],
+  "chains": [
+    {
+      "file": "live-20261110-115416-303079-s1-rules-mock.jsonl",
+      "entries": 325,
+      "bad_sequence": null,
+      "anchor": "f043198dfe44048770587ecb28ec23c3d1136d3ca6f9e43e886b0cf882797e84",
+      "sha256": "22f4570527aef415a4f8cb1b6fa4a75d959da330fe205043782943a85075814d"
+    }
+  ]
+}

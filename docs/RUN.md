@@ -170,8 +170,9 @@ and hardware are not inferred from its elapsed time.
 
 This ordered smoke run does not reproduce the historical stratified 300-case / 93% tool-selection
 result. The public case pack omits tool schemas; the current CLI supplies current role schemas.
-The exact frozen historical requests, supplied schemas and subset provenance remain missing. See
-the [benchmark boundary and publication follow-up](JUDGE_REPRODUCIBILITY.md#model-benchmark-reproducibility-boundary).
+The separate [frozen comparison archive](../finetune/benchmark300/README.md) now provides historical
+requests, supplied schemas, raw responses and provenance. See the
+[benchmark boundary](JUDGE_REPRODUCIBILITY.md#model-benchmark-reproducibility-boundary).
 
 ### End-to-end exercise timing
 
@@ -229,3 +230,13 @@ No commander PIN is required. Manual approvals, scoped autonomy, one-time plan t
 ownership, clone tests, path checks and the kill switch remain enforced. Policy findings are bounded
 to checked sources. Treat missing evidence, refusal, rollback and reporting status as separate facts.
 See [guide.md](../guide.md) for controls and [API examples](plan/LIVE_API_EXAMPLES.md) for automation.
+
+## Frozen historical model comparison
+
+```sh
+python finetune/benchmark300/verify.py
+python finetune/benchmark300/run.py --model YOUR_SERVED_MODEL --base-url http://127.0.0.1:8000/v1 --output output/benchmark300-fresh
+```
+
+The first command verifies hashes and rescores saved responses offline. The second makes 300 fresh
+requests and saves case IDs and raw responses. Read the [archive scope and metric caveats](../finetune/benchmark300/README.md).

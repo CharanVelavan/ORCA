@@ -5,6 +5,10 @@ notification and remediation described here is emulated. It is not a production 
 an independent human evaluation. Start with [JUDGE_REPRODUCIBILITY.md](JUDGE_REPRODUCIBILITY.md)
 for setup and [RUN.md](RUN.md) for maintained commands.
 
+> **Follow-up completed:** see [post-submission verification](POST_SUBMISSION_VERIFICATION.md) for
+> the combined live Qwen/RAG run, native Windows/macOS checks, recovered frozen benchmark and
+> release evidence. The initial component checks below retain their original scope.
+
 ## Clean checkout and launcher
 
 The baseline was public `main` at `d73ace6a682483c670c1a570404930691eac75e8`, cloned into an
@@ -120,14 +124,15 @@ and schema/data hashes, and measures JSON validity rather than reporting a const
 executes predicted tools. `--limit 10` means the first ten held-out rows in file order, which are not
 the historical stratified 300-case sample.
 
-The published historical **93% tool-selection** result was **not rerun** in this verification. Exact
-reproduction still needs a public frozen bundle of the original 300 requests, full schemas, case
-IDs, labels, inference settings and raw responses. The documentation describes this missing artifact
-explicitly. A later limited model smoke attempt did not complete after the first VM disappeared;
+At this initial component-verification stage, the historical **93% tool-selection** result had not
+been rerun and its public request archive was missing. The follow-up recovered the 8 November
+comparison archive and reproduced 279/300 from its raw responses. See the
+[frozen inputs, provenance and limits](../finetune/benchmark300/README.md). A later limited model smoke attempt did not complete after the first VM disappeared;
 no passing result or new benchmark score is claimed for it.
 
-Other practical limits are native Windows/Linux runtime testing and simultaneous fully local chat
-plus embedding performance on the judge's hardware. The hosted model, fresh local vector search,
+At that initial stage, native Windows/Linux runtime testing and simultaneous fully local chat
+plus embedding performance were unverified. The follow-up adds Windows mock execution and combined
+remote-Qwen/local-RAG verification; Linux and fully local Windows model serving remain untested. The hosted model, fresh local vector search,
 managed embedding startup/cleanup and mock launcher are separate checks. The launch scripts make
 the supported setup paths concrete without claiming every hardware combination was exercised.
 

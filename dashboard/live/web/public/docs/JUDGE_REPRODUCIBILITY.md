@@ -49,8 +49,8 @@ Platform runtimes:
   A source-built model server additionally needs CMake and a C/C++ toolchain; CUDA builds need a
   compatible NVIDIA driver and CUDA toolkit.
 - **Windows:** follow [JUDGE_WINDOWS.md](JUDGE_WINDOWS.md). Use a Python 3.12 installer with its launcher.
-  Native Windows launch has been statically reviewed; this project's fresh-clone runtime checks were
-  performed on macOS. WSL2 can use the Linux instructions but is a separate environment.
+  The mock launcher was exercised on macOS and Windows 11 ARM with x64 Python under Parallels.
+  See the Windows guide for the exact scope. Linux native execution was excluded from this follow-up.
 
 ## 3. Recommended launchers
 
@@ -429,23 +429,21 @@ local judge website launcher; do not assume `docker compose up` exposes the dash
 
 ### Model benchmark reproducibility boundary
 
-The public `finetune/data/cases.jsonl` contains 1,221 cases but omits per-case `tools` schemas. The
-historical 300-case evaluation selected a stratified subset and supplied role tool schemas in its
-Colab wrapper. A frozen, public 300-case request/schema artifact is **not currently supplied**, so
-running the current case file does not establish an exact reproduction of the historical 93% tool
-selection result.
+The recovered [frozen 300-case comparison](../finetune/benchmark300/README.md) contains case IDs,
+full prompts, exact tool schemas and labels, documented inference settings, archived responses for
+four models and SHA-256 checks. `python finetune/benchmark300/verify.py` reproduces the historical
+first-tool scores without model calls. `run.py` in that directory records a fresh rerun separately.
 
-The maintained evaluation CLI injects the current role schemas and records their source/hash and
-case IDs. Its limited ordered held-out run (for example `--limit 10`) is a quick functional smoke
-check, not the original stratified 300-case benchmark. Follow [RUN.md](RUN.md) for current runnable
-commands and preserve the generated provenance. Report the measured result and case count rather
-than substituting a published score. Current role-schema changes can affect results.
+This is the 8 November rebuilt stratified comparison. Its row identity with the earlier Colab draw
+cannot be proved. Tuned Qwen matches 279/300 first-tool labels (93%), including 36 cases with no
+expected first tool; the explicit-label subset is 243/264 (92.05%). No tools execute in this benchmark.
+The historical server build and inference RNG seed were not retained, so exact requests and archived
+scores are reproducible, while bitwise inference outputs are not promised. The old scorer's
+`valid_json` constant is replaced by actual parsing in the new verifier. See the archive README for
+citation, refusal, final-format and scenario-placeholder limitations.
 
-**Missing follow-up artifact:** publish the exact 300 cases with their full messages, supplied tool
-schemas, expected labels and original case IDs; include split/selection provenance, scorer revision,
-model checksum and inference settings, plus raw responses/results. That publication is future work,
-not a file this guide claims exists. The GGUF checksum, current evaluation CLI and current role files
-alone do not fill this historical-request gap.
+The general `finetune/eval_cases.py --limit` command remains an ordered smoke test with a different
+scope. It is not the frozen stratified comparison. Use [RUN.md](RUN.md) for both commands.
 
 ### Operational troubleshooting
 
@@ -493,5 +491,14 @@ These measurements belong to this restored-index configuration, not the historic
 Negative accuracy follows the evaluator's evidence criterion and is distinct from negative
 abstention accuracy. Quantized-query rankings may differ from the original evaluation setup.
 The [judge verification record](JUDGE_VERIFICATION.md) holds the actual commands, environment,
-evidence locations and live-model outcomes. Windows native execution has not been verified.
+evidence locations and live-model outcomes. Windows mock-launcher and S1 checks passed in the
+recorded VM configuration; fully local Windows model serving remains untested.
 Do not infer a live recovery outcome from an artifact download, passing mock run or endpoint probe.
+
+## Post-submission combined verification
+
+The [follow-up verification record](POST_SUBMISSION_VERIFICATION.md) documents the combined
+fine-tuned Qwen + restored index + CPU embedding + BGE reranker run, native Windows/macOS
+launcher checks, recovered benchmark archive and release artifacts. It also records rejected
+citations and the adviser fallback limitation. These are measured checks, not a claim of perfect
+model accuracy, native Linux support or live satellite connectivity.

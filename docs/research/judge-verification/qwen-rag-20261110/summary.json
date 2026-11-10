@@ -1,0 +1,1313 @@
+{
+  "scenario": "S1",
+  "all_links_emulated": true,
+  "commander": "scripted headless commander",
+  "mode": "fresh live model requests; fresh hybrid retrieval, no retrieval cache",
+  "collection_vectors": 82191,
+  "counters": {
+    "fresh_model_calls": 319,
+    "embedding_http_calls": 3,
+    "reranker_calls": 3,
+    "retrieval_calls": 3
+  },
+  "elapsed_seconds": 952.353,
+  "audit_chains": [
+    {
+      "file": "live-20261110-120055-622263-s1-rules-local.jsonl",
+      "entries": 435,
+      "bad_sequence": null,
+      "anchor": "a0a97d45e10d5b3721b1fce6b8d397d8b9cc2b7698fd49f5fc4e862608a0ffd0",
+      "sha256": "8219fa0dbbef515efac1d81ef88a5c0bf0fcc9e003003bce227d694d9268c0ee"
+    }
+  ],
+  "session_summary": {
+    "final": true,
+    "t": 88,
+    "emulated": true,
+    "scenario": "s1",
+    "rules": true,
+    "kb": "india",
+    "timings": {
+      "incident_start_t": 0,
+      "incident_start_ts": "2026-11-10T19:00:00+05:30",
+      "time_to_detect_min": 2.0,
+      "detected_at": "2026-11-10T19:02:00+05:30",
+      "clocks": [
+        {
+          "regime": "IN-R-DEADLINE-CERTIN-ii",
+          "record_id": "IN-CERTIN-DIR-2022-ii",
+          "obligation_id": "6a58e2b107a74753b228e0264756ca9d",
+          "obligation_seq": 506,
+          "policy_epoch": -1,
+          "trigger": "noticing",
+          "started_at": "2026-11-10T19:04:00+05:30",
+          "due_at": "2026-11-11T01:04:00+05:30",
+          "notify_role": "cert_in",
+          "notified_at": "2026-11-10T19:07:00+05:30",
+          "notified_before_start": false,
+          "time_to_notify_min": 3.0,
+          "window_min": 360.0,
+          "met": true
+        },
+        {
+          "regime": "IN-R-DEADLINE-TCSR-7-1",
+          "record_id": "IN-TCSR-2024-R7-1",
+          "obligation_id": "2842bf1f6aa645a78b371e29a56c3c2b",
+          "obligation_seq": 508,
+          "policy_epoch": -1,
+          "trigger": "awareness",
+          "started_at": "2026-11-10T19:18:00+05:30",
+          "due_at": "2026-11-11T01:18:00+05:30",
+          "notify_role": "regulator",
+          "notified_at": "2026-11-10T19:07:00+05:30",
+          "notified_before_start": true,
+          "time_to_notify_min": 0.0,
+          "window_min": 360.0,
+          "met": true
+        },
+        {
+          "regime": "IN-R-DEADLINE-CTIR-7-1-j",
+          "record_id": "IN-CTIR-2024-R7-1-j",
+          "obligation_id": "0a07223a22244168aec52aa8268c03d3",
+          "obligation_seq": 510,
+          "policy_epoch": -1,
+          "trigger": "occurrence",
+          "started_at": "2026-11-10T19:00:00+05:30",
+          "due_at": "2026-11-11T01:00:00+05:30",
+          "notify_role": "regulator",
+          "notified_at": "2026-11-10T19:07:00+05:30",
+          "notified_before_start": false,
+          "time_to_notify_min": 7.0,
+          "window_min": 360.0,
+          "met": true
+        }
+      ],
+      "time_to_notify_min": {
+        "IN-R-DEADLINE-CERTIN-ii": 3.0,
+        "IN-R-DEADLINE-TCSR-7-1": 0.0,
+        "IN-R-DEADLINE-CTIR-7-1-j": 7.0
+      },
+      "time_to_restore_min": 59.0,
+      "degraded": {
+        "t": 24,
+        "ts": "2026-11-10T19:24:00+05:30",
+        "pct": 86.6,
+        "baseline_pct": 100.0
+      },
+      "restored_at": "2026-11-10T19:59:00+05:30",
+      "approvals": [
+        {
+          "hash": "935f08ba10e30547c329233771eed324ad4c91037391e50943f5ccd81e1c101a",
+          "playbook": "PB-01",
+          "auto": false,
+          "latency_s": 180,
+          "latency_wall_s": 29.41
+        },
+        {
+          "hash": "0ba6d1f6d1dfeedda0ecaca50b1d1cfcfd1b98215d7df1000ab44fe54113c711",
+          "playbook": "PB-11",
+          "auto": false,
+          "latency_s": 180,
+          "latency_wall_s": 17.17
+        },
+        {
+          "hash": "7b1d03aa1ce5b7f51939aa4c5ad1df62cf5df33b8098d1d12538ead89f0af86a",
+          "playbook": "PB-06",
+          "auto": false,
+          "latency_s": 180,
+          "latency_wall_s": 48.0
+        }
+      ],
+      "approval_latency_s": 180,
+      "approval_latency_wall_s": 29.41,
+      "failed_attempts": 0,
+      "failed_breakdown": {
+        "rolled_back": 0,
+        "refused": 0
+      },
+      "rollback_ok": null
+    },
+    "services": {
+      "112": {
+        "cumulative_demand_mbit_min": 3145.83,
+        "cumulative_delivered_mbit_min": 2976.2,
+        "cumulative_demand_mbit": 188749.8,
+        "cumulative_delivered_mbit": 178572.0,
+        "cumulative_pct": 94.6,
+        "instant_demand_mbps": 33.87,
+        "instant_delivered_mbps": 33.87,
+        "instant_pct_now": 100.0,
+        "instant_pct_min": 85.8,
+        "instant_pct_min_t": 35
+      },
+      "hospital": {
+        "cumulative_demand_mbit_min": 6291.71,
+        "cumulative_delivered_mbit_min": 5952.38,
+        "cumulative_demand_mbit": 377502.6,
+        "cumulative_delivered_mbit": 357142.8,
+        "cumulative_pct": 94.6,
+        "instant_demand_mbps": 67.73,
+        "instant_delivered_mbps": 67.73,
+        "instant_pct_now": 100.0,
+        "instant_pct_min": 85.8,
+        "instant_pct_min_t": 35
+      },
+      "grid": {
+        "cumulative_demand_mbit_min": 3145.83,
+        "cumulative_delivered_mbit_min": 2976.2,
+        "cumulative_demand_mbit": 188749.8,
+        "cumulative_delivered_mbit": 178572.0,
+        "cumulative_pct": 94.6,
+        "instant_demand_mbps": 33.87,
+        "instant_delivered_mbps": 33.87,
+        "instant_pct_now": 100.0,
+        "instant_pct_min": 85.8,
+        "instant_pct_min_t": 35
+      },
+      "upi_atm": {
+        "cumulative_demand_mbit_min": 9437.18,
+        "cumulative_delivered_mbit_min": 8928.22,
+        "cumulative_demand_mbit": 566230.8,
+        "cumulative_delivered_mbit": 535693.2,
+        "cumulative_pct": 94.6,
+        "instant_demand_mbps": 101.61,
+        "instant_delivered_mbps": 101.61,
+        "instant_pct_now": 100.0,
+        "instant_pct_min": 85.8,
+        "instant_pct_min_t": 35
+      },
+      "general": {
+        "cumulative_demand_mbit_min": 40894.97,
+        "cumulative_delivered_mbit_min": 38689.49,
+        "cumulative_demand_mbit": 2453698.2,
+        "cumulative_delivered_mbit": 2321369.4,
+        "cumulative_pct": 94.6,
+        "instant_demand_mbps": 440.31,
+        "instant_delivered_mbps": 440.31,
+        "instant_pct_now": 100.0,
+        "instant_pct_min": 85.8,
+        "instant_pct_min_t": 35
+      }
+    },
+    "sites": {
+      "CHN-01": {
+        "cumulative_demand_mbit_min": 4198.26,
+        "cumulative_delivered_mbit_min": 2513.96,
+        "cumulative_demand_mbit": 251895.6,
+        "cumulative_delivered_mbit": 150837.6,
+        "cumulative_pct": 59.9,
+        "instant_demand_mbps": 46.62,
+        "instant_delivered_mbps": 46.62,
+        "instant_pct_now": 100.0,
+        "instant_pct_min": 0.0,
+        "instant_pct_min_t": 24,
+        "services": {
+          "112": {
+            "cumulative_demand_mbit_min": 209.95,
+            "cumulative_delivered_mbit_min": 125.72,
+            "cumulative_demand_mbit": 12597.0,
+            "cumulative_delivered_mbit": 7543.2,
+            "cumulative_pct": 59.9,
+            "instant_demand_mbps": 2.33,
+            "instant_delivered_mbps": 2.33,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 0.0,
+            "instant_pct_min_t": 24
+          },
+          "hospital": {
+            "cumulative_demand_mbit_min": 419.87,
+            "cumulative_delivered_mbit_min": 251.43,
+            "cumulative_demand_mbit": 25192.2,
+            "cumulative_delivered_mbit": 15085.8,
+            "cumulative_pct": 59.9,
+            "instant_demand_mbps": 4.66,
+            "instant_delivered_mbps": 4.66,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 0.0,
+            "instant_pct_min_t": 24
+          },
+          "upi_atm": {
+            "cumulative_demand_mbit_min": 629.69,
+            "cumulative_delivered_mbit_min": 377.05,
+            "cumulative_demand_mbit": 37781.4,
+            "cumulative_delivered_mbit": 22623.0,
+            "cumulative_pct": 59.9,
+            "instant_demand_mbps": 6.99,
+            "instant_delivered_mbps": 6.99,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 0.0,
+            "instant_pct_min_t": 24
+          },
+          "grid": {
+            "cumulative_demand_mbit_min": 209.95,
+            "cumulative_delivered_mbit_min": 125.72,
+            "cumulative_demand_mbit": 12597.0,
+            "cumulative_delivered_mbit": 7543.2,
+            "cumulative_pct": 59.9,
+            "instant_demand_mbps": 2.33,
+            "instant_delivered_mbps": 2.33,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 0.0,
+            "instant_pct_min_t": 24
+          },
+          "general": {
+            "cumulative_demand_mbit_min": 2728.8,
+            "cumulative_delivered_mbit_min": 1634.04,
+            "cumulative_demand_mbit": 163728.0,
+            "cumulative_delivered_mbit": 98042.4,
+            "cumulative_pct": 59.9,
+            "instant_demand_mbps": 30.31,
+            "instant_delivered_mbps": 30.31,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 0.0,
+            "instant_pct_min_t": 24
+          }
+        }
+      },
+      "CHN-02": {
+        "cumulative_demand_mbit_min": 4207.02,
+        "cumulative_delivered_mbit_min": 2498.29,
+        "cumulative_demand_mbit": 252421.2,
+        "cumulative_delivered_mbit": 149897.4,
+        "cumulative_pct": 59.4,
+        "instant_demand_mbps": 46.92,
+        "instant_delivered_mbps": 46.92,
+        "instant_pct_now": 100.0,
+        "instant_pct_min": 0.0,
+        "instant_pct_min_t": 24,
+        "services": {
+          "112": {
+            "cumulative_demand_mbit_min": 210.34,
+            "cumulative_delivered_mbit_min": 124.94,
+            "cumulative_demand_mbit": 12620.4,
+            "cumulative_delivered_mbit": 7496.4,
+            "cumulative_pct": 59.4,
+            "instant_demand_mbps": 2.35,
+            "instant_delivered_mbps": 2.35,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 0.0,
+            "instant_pct_min_t": 24
+          },
+          "hospital": {
+            "cumulative_demand_mbit_min": 420.72,
+            "cumulative_delivered_mbit_min": 249.83,
+            "cumulative_demand_mbit": 25243.2,
+            "cumulative_delivered_mbit": 14989.8,
+            "cumulative_pct": 59.4,
+            "instant_demand_mbps": 4.69,
+            "instant_delivered_mbps": 4.69,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 0.0,
+            "instant_pct_min_t": 24
+          },
+          "upi_atm": {
+            "cumulative_demand_mbit_min": 631.06,
+            "cumulative_delivered_mbit_min": 374.74,
+            "cumulative_demand_mbit": 37863.6,
+            "cumulative_delivered_mbit": 22484.4,
+            "cumulative_pct": 59.4,
+            "instant_demand_mbps": 7.04,
+            "instant_delivered_mbps": 7.04,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 0.0,
+            "instant_pct_min_t": 24
+          },
+          "grid": {
+            "cumulative_demand_mbit_min": 210.34,
+            "cumulative_delivered_mbit_min": 124.94,
+            "cumulative_demand_mbit": 12620.4,
+            "cumulative_delivered_mbit": 7496.4,
+            "cumulative_pct": 59.4,
+            "instant_demand_mbps": 2.35,
+            "instant_delivered_mbps": 2.35,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 0.0,
+            "instant_pct_min_t": 24
+          },
+          "general": {
+            "cumulative_demand_mbit_min": 2734.56,
+            "cumulative_delivered_mbit_min": 1623.84,
+            "cumulative_demand_mbit": 164073.6,
+            "cumulative_delivered_mbit": 97430.4,
+            "cumulative_pct": 59.4,
+            "instant_demand_mbps": 30.49,
+            "instant_delivered_mbps": 30.49,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 0.0,
+            "instant_pct_min_t": 24
+          }
+        }
+      },
+      "CHN-03": {
+        "cumulative_demand_mbit_min": 11221.53,
+        "cumulative_delivered_mbit_min": 11221.53,
+        "cumulative_demand_mbit": 673291.8,
+        "cumulative_delivered_mbit": 673291.8,
+        "cumulative_pct": 100.0,
+        "instant_demand_mbps": 118.26,
+        "instant_delivered_mbps": 118.26,
+        "instant_pct_now": 100.0,
+        "instant_pct_min": 100.0,
+        "instant_pct_min_t": 0,
+        "services": {
+          "112": {
+            "cumulative_demand_mbit_min": 561.06,
+            "cumulative_delivered_mbit_min": 561.06,
+            "cumulative_demand_mbit": 33663.6,
+            "cumulative_delivered_mbit": 33663.6,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 5.91,
+            "instant_delivered_mbps": 5.91,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "hospital": {
+            "cumulative_demand_mbit_min": 1122.2,
+            "cumulative_delivered_mbit_min": 1122.2,
+            "cumulative_demand_mbit": 67332.0,
+            "cumulative_delivered_mbit": 67332.0,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 11.83,
+            "instant_delivered_mbps": 11.83,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "upi_atm": {
+            "cumulative_demand_mbit_min": 1683.21,
+            "cumulative_delivered_mbit_min": 1683.21,
+            "cumulative_demand_mbit": 100992.6,
+            "cumulative_delivered_mbit": 100992.6,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 17.74,
+            "instant_delivered_mbps": 17.74,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "grid": {
+            "cumulative_demand_mbit_min": 561.06,
+            "cumulative_delivered_mbit_min": 561.06,
+            "cumulative_demand_mbit": 33663.6,
+            "cumulative_delivered_mbit": 33663.6,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 5.91,
+            "instant_delivered_mbps": 5.91,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "general": {
+            "cumulative_demand_mbit_min": 7294.0,
+            "cumulative_delivered_mbit_min": 7294.0,
+            "cumulative_demand_mbit": 437640.0,
+            "cumulative_delivered_mbit": 437640.0,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 76.87,
+            "instant_delivered_mbps": 76.87,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          }
+        }
+      },
+      "CHN-04": {
+        "cumulative_demand_mbit_min": 27942.64,
+        "cumulative_delivered_mbit_min": 27942.64,
+        "cumulative_demand_mbit": 1676558.4,
+        "cumulative_delivered_mbit": 1676558.4,
+        "cumulative_pct": 100.0,
+        "instant_demand_mbps": 307.04,
+        "instant_delivered_mbps": 307.04,
+        "instant_pct_now": 100.0,
+        "instant_pct_min": 100.0,
+        "instant_pct_min_t": 0,
+        "services": {
+          "112": {
+            "cumulative_demand_mbit_min": 1397.13,
+            "cumulative_delivered_mbit_min": 1397.13,
+            "cumulative_demand_mbit": 83827.8,
+            "cumulative_delivered_mbit": 83827.8,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 15.35,
+            "instant_delivered_mbps": 15.35,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "hospital": {
+            "cumulative_demand_mbit_min": 2794.31,
+            "cumulative_delivered_mbit_min": 2794.31,
+            "cumulative_demand_mbit": 167658.6,
+            "cumulative_delivered_mbit": 167658.6,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 30.7,
+            "instant_delivered_mbps": 30.7,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "upi_atm": {
+            "cumulative_demand_mbit_min": 4191.37,
+            "cumulative_delivered_mbit_min": 4191.37,
+            "cumulative_demand_mbit": 251482.2,
+            "cumulative_delivered_mbit": 251482.2,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 46.06,
+            "instant_delivered_mbps": 46.06,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "grid": {
+            "cumulative_demand_mbit_min": 1397.13,
+            "cumulative_delivered_mbit_min": 1397.13,
+            "cumulative_demand_mbit": 83827.8,
+            "cumulative_delivered_mbit": 83827.8,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 15.35,
+            "instant_delivered_mbps": 15.35,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "general": {
+            "cumulative_demand_mbit_min": 18162.7,
+            "cumulative_delivered_mbit_min": 18162.7,
+            "cumulative_demand_mbit": 1089762.0,
+            "cumulative_delivered_mbit": 1089762.0,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 199.58,
+            "instant_delivered_mbps": 199.58,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          }
+        }
+      },
+      "CHN-05": {
+        "cumulative_demand_mbit_min": 4164.92,
+        "cumulative_delivered_mbit_min": 4164.92,
+        "cumulative_demand_mbit": 249895.2,
+        "cumulative_delivered_mbit": 249895.2,
+        "cumulative_pct": 100.0,
+        "instant_demand_mbps": 43.34,
+        "instant_delivered_mbps": 43.34,
+        "instant_pct_now": 100.0,
+        "instant_pct_min": 100.0,
+        "instant_pct_min_t": 0,
+        "services": {
+          "112": {
+            "cumulative_demand_mbit_min": 208.26,
+            "cumulative_delivered_mbit_min": 208.26,
+            "cumulative_demand_mbit": 12495.6,
+            "cumulative_delivered_mbit": 12495.6,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 2.17,
+            "instant_delivered_mbps": 2.17,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "hospital": {
+            "cumulative_demand_mbit_min": 416.49,
+            "cumulative_delivered_mbit_min": 416.49,
+            "cumulative_demand_mbit": 24989.4,
+            "cumulative_delivered_mbit": 24989.4,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 4.33,
+            "instant_delivered_mbps": 4.33,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "upi_atm": {
+            "cumulative_demand_mbit_min": 624.75,
+            "cumulative_delivered_mbit_min": 624.75,
+            "cumulative_demand_mbit": 37485.0,
+            "cumulative_delivered_mbit": 37485.0,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 6.5,
+            "instant_delivered_mbps": 6.5,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "grid": {
+            "cumulative_demand_mbit_min": 208.26,
+            "cumulative_delivered_mbit_min": 208.26,
+            "cumulative_demand_mbit": 12495.6,
+            "cumulative_delivered_mbit": 12495.6,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 2.17,
+            "instant_delivered_mbps": 2.17,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "general": {
+            "cumulative_demand_mbit_min": 2707.16,
+            "cumulative_delivered_mbit_min": 2707.16,
+            "cumulative_demand_mbit": 162429.6,
+            "cumulative_delivered_mbit": 162429.6,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 28.17,
+            "instant_delivered_mbps": 28.17,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          }
+        }
+      },
+      "CHN-06": {
+        "cumulative_demand_mbit_min": 11181.15,
+        "cumulative_delivered_mbit_min": 11181.15,
+        "cumulative_demand_mbit": 670869.0,
+        "cumulative_delivered_mbit": 670869.0,
+        "cumulative_pct": 100.0,
+        "instant_demand_mbps": 115.21,
+        "instant_delivered_mbps": 115.21,
+        "instant_pct_now": 100.0,
+        "instant_pct_min": 100.0,
+        "instant_pct_min_t": 0,
+        "services": {
+          "112": {
+            "cumulative_demand_mbit_min": 559.09,
+            "cumulative_delivered_mbit_min": 559.09,
+            "cumulative_demand_mbit": 33545.4,
+            "cumulative_delivered_mbit": 33545.4,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 5.76,
+            "instant_delivered_mbps": 5.76,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "hospital": {
+            "cumulative_demand_mbit_min": 1118.12,
+            "cumulative_delivered_mbit_min": 1118.12,
+            "cumulative_demand_mbit": 67087.2,
+            "cumulative_delivered_mbit": 67087.2,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 11.52,
+            "instant_delivered_mbps": 11.52,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "upi_atm": {
+            "cumulative_demand_mbit_min": 1677.1,
+            "cumulative_delivered_mbit_min": 1677.1,
+            "cumulative_demand_mbit": 100626.0,
+            "cumulative_delivered_mbit": 100626.0,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 17.28,
+            "instant_delivered_mbps": 17.28,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "grid": {
+            "cumulative_demand_mbit_min": 559.09,
+            "cumulative_delivered_mbit_min": 559.09,
+            "cumulative_demand_mbit": 33545.4,
+            "cumulative_delivered_mbit": 33545.4,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 5.76,
+            "instant_delivered_mbps": 5.76,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          },
+          "general": {
+            "cumulative_demand_mbit_min": 7267.75,
+            "cumulative_delivered_mbit_min": 7267.75,
+            "cumulative_demand_mbit": 436065.0,
+            "cumulative_delivered_mbit": 436065.0,
+            "cumulative_pct": 100.0,
+            "instant_demand_mbps": 74.89,
+            "instant_delivered_mbps": 74.89,
+            "instant_pct_now": 100.0,
+            "instant_pct_min": 100.0,
+            "instant_pct_min_t": 0
+          }
+        }
+      }
+    },
+    "network": {
+      "cumulative_demand_mbit_min": 62915.52,
+      "cumulative_delivered_mbit_min": 59522.49,
+      "cumulative_demand_mbit": 3774931.2,
+      "cumulative_delivered_mbit": 3571349.4,
+      "cumulative_pct": 94.6,
+      "instant_demand_mbps": 677.39,
+      "instant_delivered_mbps": 677.39,
+      "instant_pct_now": 100.0,
+      "instant_pct_min": 85.8,
+      "instant_pct_min_t": 35
+    },
+    "units": {
+      "rate": "Mbps",
+      "volume": "Mbit",
+      "sample_duration_s": 60
+    },
+    "impact_cumulative": {
+      "emulated_estimate": true,
+      "calls_112_failed": 123.22,
+      "hospital_offline_min": 35.77,
+      "payments_failed": 11982.83,
+      "grid_scada_lost_min": 0.55,
+      "people_affected": 3584276.1,
+      "warned_at": {
+        "CHN-01:112": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-01:hospital": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-01:payments": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-01:grid": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-02:112": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-02:hospital": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-02:payments": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-02:grid": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-03:112": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-03:hospital": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-03:payments": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-03:grid": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-04:112": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-04:hospital": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-04:payments": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-04:grid": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-05:112": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-05:hospital": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-05:payments": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-05:grid": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-06:112": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-06:hospital": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-06:payments": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        },
+        "CHN-06:grid": {
+          "warned_at": null,
+          "minutes_to_warn": null
+        }
+      },
+      "reports": [],
+      "delivery": {
+        "available": true,
+        "provenance": "emulated_simulator_allocation",
+        "now": {
+          "t": 88,
+          "network": {
+            "demand_mbps": 677.39,
+            "delivered_mbps": 677.39,
+            "pct": 100.0
+          },
+          "sites": {
+            "CHN-01": {
+              "demand_mbps": 46.62,
+              "delivered_mbps": 46.62,
+              "pct": 100.0,
+              "services": {
+                "112": {
+                  "demand_mbps": 2.33,
+                  "delivered_mbps": 2.33,
+                  "pct": 100.0
+                },
+                "hospital": {
+                  "demand_mbps": 4.66,
+                  "delivered_mbps": 4.66,
+                  "pct": 100.0
+                },
+                "upi_atm": {
+                  "demand_mbps": 6.99,
+                  "delivered_mbps": 6.99,
+                  "pct": 100.0
+                },
+                "grid": {
+                  "demand_mbps": 2.33,
+                  "delivered_mbps": 2.33,
+                  "pct": 100.0
+                },
+                "general": {
+                  "demand_mbps": 30.31,
+                  "delivered_mbps": 30.31,
+                  "pct": 100.0
+                }
+              }
+            },
+            "CHN-02": {
+              "demand_mbps": 46.92,
+              "delivered_mbps": 46.92,
+              "pct": 100.0,
+              "services": {
+                "112": {
+                  "demand_mbps": 2.35,
+                  "delivered_mbps": 2.35,
+                  "pct": 100.0
+                },
+                "hospital": {
+                  "demand_mbps": 4.69,
+                  "delivered_mbps": 4.69,
+                  "pct": 100.0
+                },
+                "upi_atm": {
+                  "demand_mbps": 7.04,
+                  "delivered_mbps": 7.04,
+                  "pct": 100.0
+                },
+                "grid": {
+                  "demand_mbps": 2.35,
+                  "delivered_mbps": 2.35,
+                  "pct": 100.0
+                },
+                "general": {
+                  "demand_mbps": 30.49,
+                  "delivered_mbps": 30.49,
+                  "pct": 100.0
+                }
+              }
+            },
+            "CHN-03": {
+              "demand_mbps": 118.26,
+              "delivered_mbps": 118.26,
+              "pct": 100.0,
+              "services": {
+                "112": {
+                  "demand_mbps": 5.91,
+                  "delivered_mbps": 5.91,
+                  "pct": 100.0
+                },
+                "hospital": {
+                  "demand_mbps": 11.83,
+                  "delivered_mbps": 11.83,
+                  "pct": 100.0
+                },
+                "upi_atm": {
+                  "demand_mbps": 17.74,
+                  "delivered_mbps": 17.74,
+                  "pct": 100.0
+                },
+                "grid": {
+                  "demand_mbps": 5.91,
+                  "delivered_mbps": 5.91,
+                  "pct": 100.0
+                },
+                "general": {
+                  "demand_mbps": 76.87,
+                  "delivered_mbps": 76.87,
+                  "pct": 100.0
+                }
+              }
+            },
+            "CHN-04": {
+              "demand_mbps": 307.04,
+              "delivered_mbps": 307.04,
+              "pct": 100.0,
+              "services": {
+                "112": {
+                  "demand_mbps": 15.35,
+                  "delivered_mbps": 15.35,
+                  "pct": 100.0
+                },
+                "hospital": {
+                  "demand_mbps": 30.7,
+                  "delivered_mbps": 30.7,
+                  "pct": 100.0
+                },
+                "upi_atm": {
+                  "demand_mbps": 46.06,
+                  "delivered_mbps": 46.06,
+                  "pct": 100.0
+                },
+                "grid": {
+                  "demand_mbps": 15.35,
+                  "delivered_mbps": 15.35,
+                  "pct": 100.0
+                },
+                "general": {
+                  "demand_mbps": 199.58,
+                  "delivered_mbps": 199.58,
+                  "pct": 100.0
+                }
+              }
+            },
+            "CHN-05": {
+              "demand_mbps": 43.34,
+              "delivered_mbps": 43.34,
+              "pct": 100.0,
+              "services": {
+                "112": {
+                  "demand_mbps": 2.17,
+                  "delivered_mbps": 2.17,
+                  "pct": 100.0
+                },
+                "hospital": {
+                  "demand_mbps": 4.33,
+                  "delivered_mbps": 4.33,
+                  "pct": 100.0
+                },
+                "upi_atm": {
+                  "demand_mbps": 6.5,
+                  "delivered_mbps": 6.5,
+                  "pct": 100.0
+                },
+                "grid": {
+                  "demand_mbps": 2.17,
+                  "delivered_mbps": 2.17,
+                  "pct": 100.0
+                },
+                "general": {
+                  "demand_mbps": 28.17,
+                  "delivered_mbps": 28.17,
+                  "pct": 100.0
+                }
+              }
+            },
+            "CHN-06": {
+              "demand_mbps": 115.21,
+              "delivered_mbps": 115.21,
+              "pct": 100.0,
+              "services": {
+                "112": {
+                  "demand_mbps": 5.76,
+                  "delivered_mbps": 5.76,
+                  "pct": 100.0
+                },
+                "hospital": {
+                  "demand_mbps": 11.52,
+                  "delivered_mbps": 11.52,
+                  "pct": 100.0
+                },
+                "upi_atm": {
+                  "demand_mbps": 17.28,
+                  "delivered_mbps": 17.28,
+                  "pct": 100.0
+                },
+                "grid": {
+                  "demand_mbps": 5.76,
+                  "delivered_mbps": 5.76,
+                  "pct": 100.0
+                },
+                "general": {
+                  "demand_mbps": 74.89,
+                  "delivered_mbps": 74.89,
+                  "pct": 100.0
+                }
+              }
+            }
+          },
+          "services": {
+            "112": {
+              "demand_mbps": 33.87,
+              "delivered_mbps": 33.87,
+              "pct": 100.0
+            },
+            "hospital": {
+              "demand_mbps": 67.73,
+              "delivered_mbps": 67.73,
+              "pct": 100.0
+            },
+            "grid": {
+              "demand_mbps": 33.87,
+              "delivered_mbps": 33.87,
+              "pct": 100.0
+            },
+            "upi_atm": {
+              "demand_mbps": 101.61,
+              "delivered_mbps": 101.61,
+              "pct": 100.0
+            },
+            "general": {
+              "demand_mbps": 440.31,
+              "delivered_mbps": 440.31,
+              "pct": 100.0
+            }
+          }
+        },
+        "cumulative": {
+          "network": {
+            "demand_mbit": 3774931.2,
+            "delivered_mbit": 3571349.4,
+            "pct": 94.6,
+            "min_pct": 85.8,
+            "min_t": 35
+          },
+          "sites": {
+            "CHN-01": {
+              "demand_mbit": 251895.6,
+              "delivered_mbit": 150837.6,
+              "pct": 59.9,
+              "min_pct": 0.0,
+              "min_t": 24,
+              "services": {
+                "112": {
+                  "demand_mbit": 12597.0,
+                  "delivered_mbit": 7543.2,
+                  "pct": 59.9,
+                  "min_pct": 0.0,
+                  "min_t": 24
+                },
+                "hospital": {
+                  "demand_mbit": 25192.2,
+                  "delivered_mbit": 15085.8,
+                  "pct": 59.9,
+                  "min_pct": 0.0,
+                  "min_t": 24
+                },
+                "upi_atm": {
+                  "demand_mbit": 37781.4,
+                  "delivered_mbit": 22623.0,
+                  "pct": 59.9,
+                  "min_pct": 0.0,
+                  "min_t": 24
+                },
+                "grid": {
+                  "demand_mbit": 12597.0,
+                  "delivered_mbit": 7543.2,
+                  "pct": 59.9,
+                  "min_pct": 0.0,
+                  "min_t": 24
+                },
+                "general": {
+                  "demand_mbit": 163728.0,
+                  "delivered_mbit": 98042.4,
+                  "pct": 59.9,
+                  "min_pct": 0.0,
+                  "min_t": 24
+                }
+              }
+            },
+            "CHN-02": {
+              "demand_mbit": 252421.2,
+              "delivered_mbit": 149897.4,
+              "pct": 59.4,
+              "min_pct": 0.0,
+              "min_t": 24,
+              "services": {
+                "112": {
+                  "demand_mbit": 12620.4,
+                  "delivered_mbit": 7496.4,
+                  "pct": 59.4,
+                  "min_pct": 0.0,
+                  "min_t": 24
+                },
+                "hospital": {
+                  "demand_mbit": 25243.2,
+                  "delivered_mbit": 14989.8,
+                  "pct": 59.4,
+                  "min_pct": 0.0,
+                  "min_t": 24
+                },
+                "upi_atm": {
+                  "demand_mbit": 37863.6,
+                  "delivered_mbit": 22484.4,
+                  "pct": 59.4,
+                  "min_pct": 0.0,
+                  "min_t": 24
+                },
+                "grid": {
+                  "demand_mbit": 12620.4,
+                  "delivered_mbit": 7496.4,
+                  "pct": 59.4,
+                  "min_pct": 0.0,
+                  "min_t": 24
+                },
+                "general": {
+                  "demand_mbit": 164073.6,
+                  "delivered_mbit": 97430.4,
+                  "pct": 59.4,
+                  "min_pct": 0.0,
+                  "min_t": 24
+                }
+              }
+            },
+            "CHN-03": {
+              "demand_mbit": 673291.8,
+              "delivered_mbit": 673291.8,
+              "pct": 100.0,
+              "min_pct": 100.0,
+              "min_t": 0,
+              "services": {
+                "112": {
+                  "demand_mbit": 33663.6,
+                  "delivered_mbit": 33663.6,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "hospital": {
+                  "demand_mbit": 67332.0,
+                  "delivered_mbit": 67332.0,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "upi_atm": {
+                  "demand_mbit": 100992.6,
+                  "delivered_mbit": 100992.6,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "grid": {
+                  "demand_mbit": 33663.6,
+                  "delivered_mbit": 33663.6,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "general": {
+                  "demand_mbit": 437640.0,
+                  "delivered_mbit": 437640.0,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                }
+              }
+            },
+            "CHN-04": {
+              "demand_mbit": 1676558.4,
+              "delivered_mbit": 1676558.4,
+              "pct": 100.0,
+              "min_pct": 100.0,
+              "min_t": 0,
+              "services": {
+                "112": {
+                  "demand_mbit": 83827.8,
+                  "delivered_mbit": 83827.8,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "hospital": {
+                  "demand_mbit": 167658.6,
+                  "delivered_mbit": 167658.6,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "upi_atm": {
+                  "demand_mbit": 251482.2,
+                  "delivered_mbit": 251482.2,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "grid": {
+                  "demand_mbit": 83827.8,
+                  "delivered_mbit": 83827.8,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "general": {
+                  "demand_mbit": 1089762.0,
+                  "delivered_mbit": 1089762.0,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                }
+              }
+            },
+            "CHN-05": {
+              "demand_mbit": 249895.2,
+              "delivered_mbit": 249895.2,
+              "pct": 100.0,
+              "min_pct": 100.0,
+              "min_t": 0,
+              "services": {
+                "112": {
+                  "demand_mbit": 12495.6,
+                  "delivered_mbit": 12495.6,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "hospital": {
+                  "demand_mbit": 24989.4,
+                  "delivered_mbit": 24989.4,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "upi_atm": {
+                  "demand_mbit": 37485.0,
+                  "delivered_mbit": 37485.0,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "grid": {
+                  "demand_mbit": 12495.6,
+                  "delivered_mbit": 12495.6,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "general": {
+                  "demand_mbit": 162429.6,
+                  "delivered_mbit": 162429.6,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                }
+              }
+            },
+            "CHN-06": {
+              "demand_mbit": 670869.0,
+              "delivered_mbit": 670869.0,
+              "pct": 100.0,
+              "min_pct": 100.0,
+              "min_t": 0,
+              "services": {
+                "112": {
+                  "demand_mbit": 33545.4,
+                  "delivered_mbit": 33545.4,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "hospital": {
+                  "demand_mbit": 67087.2,
+                  "delivered_mbit": 67087.2,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "upi_atm": {
+                  "demand_mbit": 100626.0,
+                  "delivered_mbit": 100626.0,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "grid": {
+                  "demand_mbit": 33545.4,
+                  "delivered_mbit": 33545.4,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                },
+                "general": {
+                  "demand_mbit": 436065.0,
+                  "delivered_mbit": 436065.0,
+                  "pct": 100.0,
+                  "min_pct": 100.0,
+                  "min_t": 0
+                }
+              }
+            }
+          },
+          "services": {
+            "112": {
+              "demand_mbit": 188749.8,
+              "delivered_mbit": 178572.0,
+              "pct": 94.6,
+              "min_pct": 85.8,
+              "min_t": 35
+            },
+            "hospital": {
+              "demand_mbit": 377502.6,
+              "delivered_mbit": 357142.8,
+              "pct": 94.6,
+              "min_pct": 85.8,
+              "min_t": 35
+            },
+            "grid": {
+              "demand_mbit": 188749.8,
+              "delivered_mbit": 178572.0,
+              "pct": 94.6,
+              "min_pct": 85.8,
+              "min_t": 35
+            },
+            "upi_atm": {
+              "demand_mbit": 566230.8,
+              "delivered_mbit": 535693.2,
+              "pct": 94.6,
+              "min_pct": 85.8,
+              "min_t": 35
+            },
+            "general": {
+              "demand_mbit": 2453698.2,
+              "delivered_mbit": 2321369.4,
+              "pct": 94.6,
+              "min_pct": 85.8,
+              "min_t": 35
+            }
+          }
+        },
+        "units": {
+          "rate": "Mbps",
+          "volume": "Mbit",
+          "sample_duration_s": 60
+        }
+      }
+    }
+  }
+}

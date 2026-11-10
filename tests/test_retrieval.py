@@ -270,3 +270,24 @@ def test_verified_record_text_is_never_treated_as_unanswerable():
     assert _top_has_verified_quote([hit])
     assert not _top_has_verified_quote([{"source_id": "other-source", "text": rec["quote"]}])
     assert not _top_has_verified_quote([{"source_id": rec["source"], "text": "an unrelated passage"}])
+
+
+def test_bm25_initialization_streams_tokens_without_changing_scores(monkeypatch):
+    import numpy as np
+    import rank_bm25
+    from orca.kbvec import retrieve
+    original = rank_bm25.BM25Okapi
+    docs = ['satellite management incident report', 'weather rain backhaul fault', 'battery power outage']
+    expected = original([retrieve._tok(d) for d in docs]).get_scores(retrieve._tok('incident report'))
+    seen = []
+    def streamed(corpus):
+        assert not isinstance(corpus, list), 'Do not retain tokens for the full corpus at once'
+        seen.append(True)
+        return original(corpus)
+    monkeypatch.setattr(rank_bm25, 'BM25Okapi', streamed)
+    monkeypatch.setattr(retrieve, '_idx', None)
+    monkeypatch.setattr(retrieve.store, 'all_rows', lambda: {
+        'ids': ['a', 'b', 'c'], 'documents': docs, 'metadatas': [{}, {}, {}]})
+    idx = retrieve._index()
+    np.testing.assert_array_equal(idx['bm25'].get_scores(retrieve._tok('incident report')), expected)
+    assert seen == [True]

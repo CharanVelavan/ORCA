@@ -1,0 +1,6 @@
+# Preserve exact archived evidence bytes across platforms.
+docs/research/judge-verification/** -text
+finetune/benchmark300/*.json -text
+finetune/benchmark300/*.jsonl -text
+# Windows recordings retain CRLF as captured; it is not accidental trailing whitespace.
+docs/research/judge-verification/windows-20261110/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

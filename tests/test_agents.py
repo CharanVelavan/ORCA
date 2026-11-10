@@ -326,3 +326,14 @@ def test_coordinator_runs_s1_with_mock_llm(w):
     cert = next(r for r in res if r["role"] == "cert_in")
     assert "GAP-IN-01-REPORTING-CLOCKS" in cert["citations"]["accepted"]
     assert w.audit.verify() is None
+
+
+def test_adviser_falls_back_when_model_only_echoes_the_question(w, monkeypatch):
+    question = "CERT-In incident reporting six hours noticing"
+    adviser = PolicyAdviser(w, ScriptedLLM([{"content": json.dumps({"answer": question, "citations": ["IN-CERTIN-DIR-2022-ii"]})}]))
+    monkeypatch.setattr(adviser, "retrieve", lambda _q: [{"id": "IN-CERTIN-DIR-2022-ii", "kind": "record", "verified": True,
+        "title": "CERT-In Direction (ii)", "text": "Report within six hours of noticing.", "summary": "Report within six hours of noticing."}])
+    result = adviser.ask(question)
+    assert result["mode"] == "quote"
+    assert "Report within six hours of noticing" in result["answer"]
+    assert any(e["kind"] == "adviser_llm_discarded" and e["payload"].get("reason") == "empty_or_echoed_question" for e in w.audit.entries())

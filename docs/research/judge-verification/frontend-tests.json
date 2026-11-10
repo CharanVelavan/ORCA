@@ -1,0 +1,8 @@
+{
+  "production_build": "passed: TypeScript + Vite; guide copies synchronized",
+  "frontend_tests": 66,
+  "passed": 66,
+  "test_concurrency": 1,
+  "existing_warning": "Optional 3D chunk exceeds Vite size advisory; build succeeded.",
+  "scope": "Current frontend source tests and build; native Windows follow-up used HTTP route checks, not a new interactive browser usability test."
+}

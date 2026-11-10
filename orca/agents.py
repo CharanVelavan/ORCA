@@ -460,6 +460,9 @@ class PolicyAdviser:
             ans, cits = str(d["answer"]), [str(c) for c in d.get("citations", [])]
         except (ValueError, KeyError, TypeError):
             return None
+        if not ans.strip() or re.sub(r"[^a-z0-9]+", "", ans.lower()) == re.sub(r"[^a-z0-9]+", "", question.lower()):
+            self.w.log("adviser_llm_discarded", "policy_adviser", {"reason": "empty_or_echoed_question", "answer": ans, "citations": cits})
+            return None
         cits = list(dict.fromkeys(cits + [c for c in ids if f"[{c}]" in ans]))
         stray = [c for c in ID_RE.findall(ans) if c not in ids]
         if not cits or any(c not in ids for c in cits) or stray or any(v in ans for v in VERDICT_WORDS):

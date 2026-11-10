@@ -1,0 +1,57 @@
+[
+    {
+        "status":  200,
+        "bytes":  661,
+        "route":  "/"
+    },
+    {
+        "status":  200,
+        "bytes":  661,
+        "route":  "/scenarios"
+    },
+    {
+        "status":  200,
+        "bytes":  661,
+        "route":  "/console"
+    },
+    {
+        "status":  200,
+        "bytes":  661,
+        "route":  "/policy"
+    },
+    {
+        "status":  200,
+        "bytes":  661,
+        "route":  "/recovery"
+    },
+    {
+        "status":  200,
+        "bytes":  661,
+        "route":  "/audit"
+    },
+    {
+        "status":  200,
+        "bytes":  661,
+        "route":  "/guide"
+    },
+    {
+        "status":  200,
+        "bytes":  2677,
+        "route":  "/media/orca-method.vtt"
+    },
+    {
+        "status":  200,
+        "bytes":  10645,
+        "route":  "/media/orca-final-clean.vtt"
+    },
+    {
+        "status":  200,
+        "bytes":  91535,
+        "route":  "/api/catalogue"
+    },
+    {
+        "status":  200,
+        "bytes":  1079,
+        "route":  "/api/state"
+    }
+]

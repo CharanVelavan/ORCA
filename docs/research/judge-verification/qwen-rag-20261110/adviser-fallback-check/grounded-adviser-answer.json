@@ -1,0 +1,58 @@
+{
+  "answer": "From the sources we checked (KB as of 2026-11-07):\n- CERT-In Directions under section 70B(6) of the IT Act, 2000, Direction (ii) [IN-CERTIN-DIR-2022-ii] (verified record): Annexure I incidents go to CERT-In within six hours of noticing them. The CERT-In FAQ explains severity and scale criteria for applying the deadline.\n- CERT-In / SIA-India Cyber Security Framework and Guidelines for Space including Satellite Communication, \u00a73.2.1 [IN-SPACEFW-2026-3-2-1] (verified record): Repeats the six-hour CERT-In clock for satellite operators; \u00a77.1 (PDF p. 33) says the same.\n- Up to four reports to three bodies, with two different triggers [GAP-IN-01-REPORTING-CLOCKS] (gap register, human-confirmed): For one NTN incident a telecom entity reports to CERT-In within six hours of noticing it and to DoT within six hours of becoming aware of it (details within 24 hours). If it also owns designated Critical Telecommunication Infrastructure, it reports within six hours of the incident's occurrence. An a\nThis is a reading of the sources, not a verdict or legal advice.",
+  "citations": [
+    "IN-CERTIN-DIR-2022-ii",
+    "IN-SPACEFW-2026-3-2-1",
+    "GAP-IN-01-REPORTING-CLOCKS"
+  ],
+  "mode": "quote",
+  "found": true,
+  "sources": [
+    {
+      "id": "IN-CERTIN-DIR-2022-ii",
+      "kind": "record",
+      "title": "CERT-In Directions under section 70B(6) of the IT Act, 2000, Direction (ii)",
+      "verified": true,
+      "binding_status": "binding",
+      "status": null,
+      "tier": null
+    },
+    {
+      "id": "IN-SPACEFW-2026-3-2-1",
+      "kind": "record",
+      "title": "CERT-In / SIA-India Cyber Security Framework and Guidelines for Space including Satellite Communication, \u00a73.2.1",
+      "verified": true,
+      "binding_status": "non_binding",
+      "status": null,
+      "tier": null
+    },
+    {
+      "id": "GAP-IN-01-REPORTING-CLOCKS",
+      "kind": "gap",
+      "title": "Up to four reports to three bodies, with two different triggers",
+      "verified": true,
+      "binding_status": null,
+      "status": "confirmed",
+      "tier": null
+    },
+    {
+      "id": "IN-CTIR-2024-R7-1-j",
+      "kind": "record",
+      "title": "Telecommunications (Critical Telecommunication Infrastructure) Rules, 2024, Rule 7(1)(j)",
+      "verified": true,
+      "binding_status": "binding",
+      "status": null,
+      "tier": null
+    },
+    {
+      "id": "IN-TCSR-2024-R7-1",
+      "kind": "record",
+      "title": "Telecommunications (Telecom Cyber Security) Rules, 2024 (G.S.R. 720(E), 21 Nov 2024), Rule 7(1)(a)",
+      "verified": true,
+      "binding_status": "binding",
+      "status": null,
+      "tier": null
+    }
+  ],
+  "kb_as_of": "2026-11-07"
+}

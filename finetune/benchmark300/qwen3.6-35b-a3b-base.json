@@ -1,0 +1,30 @@
+{
+  "model": "qwen3.6-35b-a3b-base",
+  "n_cases": 300,
+  "tool_choice_acc": 0.5566666666666666,
+  "args_acc": 0.63,
+  "valid_json": 1.0,
+  "unsafe_exec": 3,
+  "bad_citations": 118,
+  "refusal_acc": 1.0,
+  "final_format": 0.23,
+  "scenario_verdicts_ok": {
+    "N4": false,
+    "N5": false,
+    "CAP": false
+  },
+  "per_tag": {
+    "approval_first": 0.4807692307692308,
+    "ask_owner": 0.46153846153846156,
+    "cite_kb": 0.6126760563380281,
+    "filter_source": 0.9714285714285714,
+    "final_format": 0.5566666666666666,
+    "insufficient_evidence": 0.0,
+    "no_token_refuse": 0.55,
+    "refuse_out_of_scope": 1.0,
+    "share_limits": 0.4375,
+    "tool_choice": 0.5460750853242321
+  },
+  "wall_s": 194,
+  "s_per_case": 0.65
+}

@@ -13,7 +13,7 @@ from functools import lru_cache
 from pathlib import Path
 
 from orca import rules
-from orca.agents import Agent, EventFeed, PolicyMockLLM, Role, _merge_facts, all_roles, load_agent_roles
+from orca.agents import Agent, EventFeed, PolicyAdviser, PolicyMockLLM, Role, _merge_facts, all_roles, load_agent_roles
 from orca.llm import LLMClient
 from orca.audit import AuditLog
 from orca.models.detector import Detector
@@ -121,7 +121,9 @@ class LiveSession:
         self.llm_source = "mock" if self.llm_mode == "mock" else llm_client.mode
         self.llm_model = "mock" if self.llm_mode == "mock" else (getattr(llm_client, "model", None)
                                                                   or os.environ.get("LLM_MODEL", "local"))
-        self.agents = {name: Agent(role, self.world, llm_client, self.rem) for name, role in self.roles.items()}
+        self.adviser = PolicyAdviser(self.world, None if self.llm_mode == "mock" else llm_client)
+        self.agents = {name: Agent(role, self.world, llm_client, self.rem, adviser=self.adviser)
+                       for name, role in self.roles.items()}
         # Scripted-scenario playback reuses the batch runner's signal -> simulator mapping on this sim.
         self._scen = ScenarioRun(self.scenario, world=self.world, roles=self.roles, net=self.net)
         self._scen.sim = self.sim
@@ -689,11 +691,11 @@ class LiveSession:
         elif source == "M1" or label.startswith("fault"):
             self.phases["predict"] = self.sim.t
 
-    def _agent_turns(self, roles: list[str], alert: dict) -> None:
+    def _agent_turns(self, roles: list[str], alert: dict, task: str | None = None) -> None:
         for role in roles:
             self.emit("agent_busy", role=role, busy=True, queue=1)
             try:
-                result = self.agents[role].run(f"Assess alert {alert['id']} at {alert['site']}.")
+                result = self.agents[role].run(task if task is not None else f"Assess alert {alert['id']} at {alert['site']}.")
                 self.emit("agent_final", role=role, text=result.get("text", "")[:2048], citations=result.get("citations", {}).get("accepted", []))
             except Exception as exc:  # a UI stream must survive one model/role failure
                 self.emit("error", where=f"agent:{role}", message=str(exc)[:240])
@@ -1008,7 +1010,7 @@ class LiveSession:
             raise ValueError("unknown role")
         with self.lock:
             self.emit("agent_task", role=to, task=text)
-            self._agent_turns([to], {"id": "ORDER", "site": None})
+            self._agent_turns([to], {"id": "ORDER", "site": None}, task=text)
             return {"ok": True}
 
     def notify(self, to: str, text: str, data_class: str = "operational") -> dict:

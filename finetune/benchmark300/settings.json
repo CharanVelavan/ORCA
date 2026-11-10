@@ -1,0 +1,18 @@
+{
+  "archive_scope": "8 Nov 2026 rebuilt stratified 300-case comparison; not proven identical to original Colab sample",
+  "temperature": 0,
+  "max_tokens": 1024,
+  "thinking": false,
+  "tool_choice": "auto when tools supplied",
+  "server_context": 16384,
+  "server_parallel": 1,
+  "server_jinja": true,
+  "sampling_seed": "not recorded for server inference; subset selection seed 3407",
+  "subset_selection_seed": 3407,
+  "hardware": "RTX PRO 6000 Blackwell Server Edition 96 GB; historical notes",
+  "model_revision": "a0bdc74681870544849cafaf2d5a35a6a5cbd488",
+  "qwen_gguf_sha256": "011d7797836571495e8faf545101bee1e71d75a39292e06f946e8a3646b54e16",
+  "historical_raw_alignment": "Response index corresponds to case-file row order; historical raw files do not independently include case IDs.",
+  "historical_scorer_git_commit": "dcfdc34",
+  "llama_cpp_build": "not recorded in archived benchmark; exact bitwise inference reproduction not promised"
+}

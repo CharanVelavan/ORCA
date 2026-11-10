@@ -1,0 +1,21 @@
+{
+  "dataset_revision": "769dcc85b6be9e308b038831072a5b848e740a94",
+  "files": {
+    "chunks.jsonl": {
+      "expected_sha256": "efe2d3f7b7b03d32e87da9cc38c75771287ade5184de2e6bdec20b800704c9b4",
+      "actual_sha256": "efe2d3f7b7b03d32e87da9cc38c75771287ade5184de2e6bdec20b800704c9b4"
+    },
+    "embeddings.f16.npy": {
+      "expected_sha256": "c3216a1917f3516deca194eac27eb98cb29500c7b87732974c347191fe0be4cf",
+      "actual_sha256": "c3216a1917f3516deca194eac27eb98cb29500c7b87732974c347191fe0be4cf"
+    },
+    "ids.json": {
+      "expected_sha256": "b9ee8382010e469ebbc09e47b7579772dbb449433f3a8374014f82c5c4a5b55d",
+      "actual_sha256": "b9ee8382010e469ebbc09e47b7579772dbb449433f3a8374014f82c5c4a5b55d"
+    },
+    "model.json": {
+      "expected_sha256": "470b4f3b2d50ca9a05e157f9880c7f6ea1238e2848c657505b4dc4980de42183",
+      "actual_sha256": "470b4f3b2d50ca9a05e157f9880c7f6ea1238e2848c657505b4dc4980de42183"
+    }
+  }
+}
