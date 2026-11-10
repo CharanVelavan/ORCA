@@ -1,4 +1,9 @@
-# ORCA-NTN agents (Mission 4)
+# ORCA-NTN application roles
+
+The live setup uses the project fine-tuned Qwen3.6-35B-A3B model. See
+[Judge reproducibility](JUDGE_REPRODUCIBILITY.md) for the pinned artifact and endpoint setup, and
+[Post-submission verification](POST_SUBMISSION_VERIFICATION.md) for the combined Qwen/RAG run.
+The Gemma experiments below are historical development evidence.
 
 Code: `orca/agents.py`, `orca/protocol.py`, role files `agents/roles/*.yaml`. Tests: `tests/test_agents.py`,
 `tests/test_protocol.py` (mock LLM, no network). Every NTN link is **emulated**.
@@ -6,8 +11,8 @@ Code: `orca/agents.py`, `orca/protocol.py`, role files `agents/roles/*.yaml`. Te
 ## Parties
 | Role | Kind | Sees (scenario routing) | Tools (A-level cap) | Owns | Sharing limits |
 |---|---|---|---|---|---|
-| satellite_operator | agent | `vpn_login`, `mgmt_command`, `telemetry_reported`; M1/M3 | all 11 (A2) | PB-01..05 | may share customer/personal data, never to another operator |
-| mobile_operator | agent | link, traffic, route offers, battery; M2/M4 | all 11 (A2) | PB-06, 07, 09, 10 | same |
+| satellite_operator | agent | `vpn_login`, `mgmt_command`, `telemetry_reported`; M1/M3 | all 11 (A2) | PB-01..05, PB-11..14 | no customer/personal data to other operators; personal data only to CERT-In |
+| mobile_operator | agent | link, traffic, route offers, battery; M2/M4 | all 11 (A2) | PB-06, 07, 09, 10, PB-15..17 | same |
 | power_utility | agent | `mains_power`, `battery_pct`; M2 | no playbook tools (A1) | none | operational, indicators |
 | cert_in | agent | only events addressed to it | no playbook tools (A1) | none | the only role that may send a (draft) `legal_direction` |
 | regulator (DoT) | agent | only events addressed to it | no playbook tools (A1) | none | inform/request/object only; cannot propose or execute |
@@ -48,7 +53,8 @@ worked example. `Role.load` refuses unknown tools, a tool above `max_level`, or 
 - **Ask the adviser.** Retrieval over records, non-rejected gaps and the vector corpus (if present), with a
   word-overlap relevance gate. No relevant source: "Not found in the sources we checked, as of <kb_as_of>."
   With an LLM, the answer must cite only retrieved ids and contain no verdict word, else it is replaced by a
-  direct quote of the sources.
+  direct quote of the sources. Empty responses and exact echoes of the question also trigger this
+  source-quote fallback; retrieved citations alone do not make an echoed question an answer.
 
 ## Small-model fixes (Gemma 4 12B)
 Role-filtered tools; enums on `source`, `site`, `topic`, `type`, `data_class`, `playbook`; `select_playbook`

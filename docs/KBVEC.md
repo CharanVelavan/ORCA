@@ -15,7 +15,8 @@ python -m orca.kbvec chunk --corpus --corpus-dir /path/to/corpus --sources-dir /
 ```
 
 The command writes `chunks.jsonl` and a reproducibility `manifest.json` containing source hashes, parser version,
-counts and skipped extraction errors. No corpus text is committed. Run the exact Colab cells in
+counts and skipped extraction errors. The full corpus and vector payload are excluded from Git; small,
+provenance-documented legal-text fixtures are committed for parser tests. Run the exact Colab cells in
 [`finetune/colab/build_index_colab.md`](../finetune/colab/build_index_colab.md); its GPU step emits normalised
 Qwen3-Embedding-8B vectors, ids, model metadata, question drift vectors and Qwen3-Reranker-4B comparison scores.
 
@@ -58,17 +59,25 @@ parser) was built and measured (`research/rag-v3/p2/FINAL.md`); it did not beat 
 The retrieval cache key includes the collection snapshot and embedding model id. On machines without Chroma, a
 citation lookup fails closed (`get_chunk(...) -> None`) so an invented chunk cannot bypass the protocol guard.
 
-Mirrors the ITU reference stack (CrashingGuru/ITUAIReadiness): ChromaDB (cosine), nomic-embed-text, ~512-token
-chunks with 50 overlap, PyMuPDF parsing. Added: BM25 hybrid, RRF fusion, metadata filters, cross-encoder rerank,
+The original v1 followed the ITU reference stack (CrashingGuru/ITUAIReadiness): ChromaDB (cosine),
+nomic-embed-text, ~512-token chunks with 50 overlap, PyMuPDF parsing. The current v2 default uses
+Qwen3 embeddings and legal clause/parent chunks as described above. Added: BM25 hybrid, RRF fusion, metadata filters, cross-encoder rerank,
 index snapshot and retrieval cache for exact replay.
 
 ## Run
-```
-python3.12 -m venv .venv && .venv/bin/pip install -r requirements.txt
+
+For the tested artifact-restore path, use [Judge reproducibility](JUDGE_REPRODUCIBILITY.md).
+The commands below are for rebuilding or inspecting an index after obtaining its source documents
+and starting the matching embedding service. Run from the repository root.
+
+```bash
+python3.12 -m venv .venv
+.venv/bin/python -m pip install --require-hashes -r requirements-judge.lock
 .venv/bin/python -m orca.kbvec ingest            # kb/sources + verified records (incremental, skips unchanged sha256)
-.venv/bin/python -m orca.kbvec ingest --corpus   # also corpus/raw + kb/staging (run on the Atlas L4 for the full set)
+.venv/bin/python -m orca.kbvec ingest --corpus   # also corpus/raw + kb/staging; full re-embedding is resource intensive
 .venv/bin/python -m orca.kbvec query "6 hour incident report" --filter jurisdiction=IN
-.venv/bin/python -m orca.kbvec evaluate [--tier corpus] [--no-rerank]   # alias: eval
+.venv/bin/python -m orca.kbvec eval --v2 --tier corpus
+.venv/bin/python -m orca.kbvec eval --v2 --tier corpus --no-rerank
 .venv/bin/python -m orca.kbvec snapshot
 .venv/bin/python -m orca.kbvec coverage "backup power hours" IN
 ```
@@ -97,7 +106,11 @@ cite the source (else `not_stated`); staged corpus items use their YAML metadata
 hash of the index. `search()` caches results in `kb/vec_cache/<hash>.json` keyed by query + k + filters + rerank +
 snapshot id; a cache hit needs neither the embedder nor the reranker. Pass `cache=False` to bypass.
 
-## Retrieval test
+## Historical v1 retrieval test
+
+These nomic/MiniLM results describe the original v1 experiment, not the current v2 pipeline.
+For the restored v2 verification, see [Post-submission verification](POST_SUBMISSION_VERIFICATION.md).
+
 30 questions in `kb/vec_eval/questions.yml` (`.yml`, not `.yaml`, so `orca/kb.py`'s `kb/*/*.yaml` loader skips it).
 Gold = a verified record id (hit also if a corpus chunk of the same source contains the record's quote) or a
 (source, PDF page) pair. Metric: right clause in top 5 and MRR.
@@ -114,5 +127,10 @@ question. The corpus-only row is the honest test of chunking plus embedding. The
 not help on this set (it was trained for web passages, not statutes); keep it switchable.
 
 ## Limits
-The v2 index keeps the old sub-clause parser (Roman numerals only); the router matches `(1)(a)` levels by clause text, and `orca_v3` has the fuller parser. Scanned PDFs without a text layer are
-skipped and logged (OCR is not built here). nomic is English-only. Corpus ingest is untested at scale.
+The published, frozen v2 index was built with the earlier sub-clause parser; its citation router
+also matches `(1)(a)` levels by clause text. The current parser code supports the fuller legal
+hierarchy, including numeric, alphabetic and Roman sub-clauses; this does not retroactively rebuild
+the published index or change its measured results. Scanned PDFs without a text layer are skipped
+and logged (OCR is not built here). The legacy nomic configuration is English-only. Restoring the
+82,191-vector v2 payload and running retrieval were tested; this is separate from reproducing a
+complete source extraction and re-embedding run at corpus scale.

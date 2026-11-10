@@ -4,14 +4,20 @@ Missions 5 and 6 (Opus B, 8 Nov 2026). **Everything is emulated.** No real netwo
 code or exploit is used. Attacks are simulated conditions with observable effects only. Re-attack tests
 are logical attack-graph checks on the emulated configs.
 
+> This reference includes historical model measurements and development notes from 8 November.
+> Use [RUN.md](RUN.md) and [Judge reproducibility](JUDGE_REPRODUCIBILITY.md) for maintained setup,
+> and [Post-submission verification](POST_SUBMISSION_VERIFICATION.md) for later execution evidence.
+> Section 7 preserves the original integration handoff; it is not a patch to apply today.
+
 ## 1. How to run
 
 ```bash
-uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requirements.txt
-python3 -m orca.scanner                    # posture of the committed netconfig/ (stdlib + pyyaml only)
-python3 -m orca.sim.demo [--diffs]         # scan -> PB-12/11/13/14/15/06 -> re-scan -> re-attack -> rollback
-.venv/bin/python -m orca.models.train      # trains M1-M3, evaluates M1-M4, writes orca/models/metrics.json (~20 s)
-ORCA_TURKCELL_DIR=<folder with rl-kpis.tsv> .venv/bin/python -m orca.models.m2_daily   # M2 daily tier (real data)
+python3.12 -m venv .venv
+.venv/bin/python -m pip install --require-hashes -r requirements-judge.lock
+.venv/bin/python -m orca.scanner                    # posture of the committed netconfig/ (stdlib + pyyaml only)
+.venv/bin/python -m orca.sim.demo --diffs         # scan -> PB-12/11/13/14/15/06 -> re-scan -> re-attack -> rollback
+.venv/bin/python -m orca.models.train      # trains M1-M3, evaluates M1-M4, writes orca/models/metrics.json (allow several minutes; hardware dependent)
+ORCA_TURKCELL_DIR="/path/to/folder/with/rl-kpis.tsv" .venv/bin/python -m orca.models.m2_daily   # M2 daily tier (real data)
 .venv/bin/python -m pytest -q              # all tests; test_models.py is skipped without lightgbm/sklearn/scipy
 ```
 
@@ -20,9 +26,12 @@ From code (what the runner and dashboard call):
 from orca.sim.scenario import ScenarioRun
 from orca.models.detector import Detector
 from orca.sim import netops
+from orca.world import World
+from pathlib import Path
+world = World.new({}, Path("output/network-example-audit.jsonl"))
 run = ScenarioRun("s1", world=world, detector=Detector.load())   # world and detector are optional
 run.step_to(30)                          # simulate minutes 0..30; returns {role: [alerts released this call]}
-ops = netops.attach(world, sim=run.sim)  # world.health = ops.health; world.netops = ops
+ops = netops.attach(world, net=run.net, sim=run.sim)  # world.health = ops.health; world.netops = ops
 ```
 
 ## 2. Simulator (`orca/sim/`)
@@ -39,7 +48,7 @@ ops = netops.attach(world, sim=run.sim)  # world.health = ops.health; world.neto
 | `dataset.py` | Training episodes; `train` and **harder** `heldout` ranges (weaker jammers, low-and-slow intrusions, weak spoofers, more confounders) |
 | `demo.py` | Patch demo CLI |
 
-Scenario mapping notes: `snr_db` becomes jamming only when the scenario is `attack-jamming` and there is no rain. A routine `config_change` in a `fault-power/equipment` scenario (N2) becomes an equipment fault, not an intrusion. All 10 scenarios simulate; M3 (via the detector) gives the scenario's story label at each affected site.
+Scenario mapping notes: `snr_db` becomes jamming only when the scenario is `attack-jamming` and there is no rain. A routine `config_change` in a `fault-power/equipment` scenario (N2) becomes an equipment fault, not an intrusion. All 10 scenarios simulate. M3 classifies released observation features through the detector; scenario ground-truth labels describe planned conditions and are not supplied as model predictions. A prediction may differ from the scenario label or abstain.
 
 ## 3. Posture scanner and config as code
 
@@ -151,7 +160,10 @@ payments or general traffic get capacity.
 - M2 daily tier has no weather join (met-real.tsv not used).
 - Scenarios N2/N3 run in the simulator; N3 (audit) has no incident, so M3 says normal, not abstain.
 
-## 7. Patches for the lead
+## 7. Historical integration handoff (8 November; do not apply)
+
+The text and diff below preserve the original handoff. They describe work requested at that time,
+not outstanding tasks or the current implementation. Consult the current source and tests instead.
 
 I did not edit `orca/world.py`, `orca/remediation.py`, `orca/rules.py`, `agents/roles/` or `scenarios/`.
 Checked: this diff applies with `patch -p1` and the whole suite passes on a patched copy (153 passed);
@@ -255,4 +267,4 @@ PB-13 then executes end to end (clone test passes, re-scan clean, feeder re-atta
 - The demand model (35 % of primary capacity at nominal load) is ASSUMED; S2's 112 overload comes from
   scenario pins, not physics.
 - Lightgbm on macOS needs libomp (it worked here with the wheel); Docker needs `libgomp1`.
-- `models/orca_models.pkl` is a gitignored cache; `load_or_train()` retrains if it is missing (~20 s).
+- `models/orca_models.pkl` is a gitignored cache; `load_or_train()` retrains if it is missing (allow several minutes; hardware dependent).

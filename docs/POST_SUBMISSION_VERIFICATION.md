@@ -62,7 +62,7 @@ substantive legal or model-answer accuracy.
 Windows: Windows 11 build 26200, ARM64 guest, Python 3.12.10 `win-amd64` under Windows x64 emulation,
 8 virtual CPUs and 18 GB RAM. Parallels Desktop/Tools remained version 26.4.0; neither was updated.
 The test started from public `cec8197`, then overlaid the session/retrieval fixes and regression source
-for the final native S1. This is not a clean-clone claim about a release tag that did not yet exist.
+for the final native S1. This verifies the stated public base commit plus the listed fixes, rather than a fresh clone of a later commit.
 First-run full network-model training took **625 seconds** in that guest, plus installation/startup.
 This is an observation, not a promised startup time. Website routes were HTTP-tested; this follow-up
 did not perform a new interactive Windows-browser usability test. Fully local chat/embedding model

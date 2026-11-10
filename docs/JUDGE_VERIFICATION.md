@@ -23,8 +23,10 @@ were then overlaid for verification. This is not a claim that the old commit con
 - `--check` passed. Ctrl+C stopped the helper's dashboard child and released its port.
 - An occupied dashboard port now produces a short error before installation or downloads; it does
   not terminate the process already using that port.
-- Windows and Linux dependency resolution dry runs passed against the universal lock. **Native
-  Windows and Linux execution was not performed.** The `.bat` launcher was reviewed statically.
+- Windows and Linux dependency resolution dry runs passed against the universal lock. **At this initial component-check stage, native
+  Windows and Linux execution had not been performed.** The `.bat` launcher was then reviewed statically.
+  The later [native Windows verification](POST_SUBMISSION_VERIFICATION.md) supersedes that Windows limitation;
+  native Linux launcher execution remains unverified.
 
 Git, 64-bit Python 3.12 and the platform's native runtime are prerequisites. The optional fully local
 model path also requires a compatible installed `llama-server`; the launcher does not install that

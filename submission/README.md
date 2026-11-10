@@ -1,7 +1,7 @@
 # Submitted report
 
 [ORCA-NTN-SolarSailors-Report.pdf](ORCA-NTN-SolarSailors-Report.pdf) is the approved, submitted
-five-page PDF. It is archived unchanged for the judge release. SHA-256:
+five-page PDF. It is archived unchanged as the submission record. SHA-256:
 `eb40a7343f45d2fac4d980a44d51bb373e9d2915301159871200eda07fce251f`.
 
 The older v7 working files and update script below are retained for history. They can predate the

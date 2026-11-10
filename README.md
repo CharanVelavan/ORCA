@@ -83,7 +83,7 @@ cd ORCA
 ```
 
 Open **http://127.0.0.1:8060/**. The launcher prepares `.venv-judge`, installs the hash-checked `requirements-judge.lock`
-and starts the mock-agent dashboard. The built website and narrated film are included. **Node.js,
+and starts the mock-agent dashboard. The built website, narrated overview and detailed walkthrough are included. **Node.js,
 Qwen weights, a GPU and the vector corpus are not required for this default path.** Installation
 needs internet; the installed mock exercise does not call an external model. First startup trains
 M1–M3 when the ignored model cache is missing, so allow several minutes.
