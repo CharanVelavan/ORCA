@@ -1,11 +1,62 @@
-# ORCA-NTN
+<p align="center">
+  <img src="docs/images/orca-ntn.png" alt="ORCA-NTN horizon logo" width="220" />
+</p>
 
-**Cyber-aware coordination for NTN.** Orchestrated Response and Coordination Agents demonstrate
-secure self-healing and incident coordination for an **emulated** satellite-backed Chennai network.
-Solar Sailors · SSN, Chennai · ITU AI for Good Sandbox Hackathon UAE · problem C1.
+<h1 align="center">ORCA-NTN</h1>
+<p align="center"><strong>Cyber-aware coordination for NTN.</strong><br/>Team <strong>SolarSailor</strong> · SSN, Chennai · ITU AI for Good Sandbox Hackathon UAE</p>
 
-Models detect and forecast. Agents explain and coordinate. Deterministic code evaluates policy and
-execution guards. Humans review plans and confirm candidate policy gaps.
+<p align="center">
+  <a href="https://orca-demo-blush.vercel.app"><strong>Explore the demo ↗</strong></a> &nbsp;·&nbsp;
+  <a href="https://github.com/CharanVelavan/ORCA#quick-start">Run locally</a> &nbsp;·&nbsp;
+  <a href="https://github.com/CharanVelavan/ORCA/blob/main/docs/JUDGE_REPRODUCIBILITY.md">Reproduce results</a> &nbsp;·&nbsp;
+  <a href="https://huggingface.co/CharanVelavan/orca-ntn-qwen3.6-35b-a3b-ft-gguf">Fine-tuned Qwen</a>
+</p>
+
+<p align="center">
+  <img alt="Network links: emulated" src="https://img.shields.io/badge/Network-emulated-6D001A?style=flat-square" />
+  <img alt="Team: SolarSailor" src="https://img.shields.io/badge/Team-SolarSailor-111111?style=flat-square" />
+  <img alt="License: MIT" src="https://img.shields.io/badge/Code-MIT-6D001A?style=flat-square" />
+</p>
+
+> **Hosted demo only:** no AI models are connected to the website. It plays recorded emulated
+> scenarios. For fresh inference and reproducible results, clone and run the
+> [full ORCA-NTN implementation](https://github.com/CharanVelavan/ORCA).
+
+ORCA-NTN—**Orchestrated Response and Coordination Agents**—demonstrates secure self-healing and
+cyber incident coordination for an **emulated** satellite-backed Chennai network. It addresses
+problem **C1**: recognise an incident, recover over a trusted path, coordinate the responsible parties
+and retain evidence for policy review.
+
+**Models detect. Agents coordinate. Code decides. Humans approve.**
+
+## Explore before installing
+
+![Recorded walkthrough of the learning page, Console, Policy, Recovery and Audit](docs/images/showcase.gif)
+
+*An animated overview of the hosted recorded showcase—not a fresh model-performance test.*
+
+| Open the hosted showcase | Run the implementation locally |
+|---|---|
+| Learn the architecture, choose a scenario, play/pause/seek recorded evidence. | Start fresh emulated exercises, connect your model endpoint, inspect new evidence and evaluate the models/RAG. |
+| No setup and no live AI connection. | Python quick-start scripts; optional Qwen and vector retrieval setup. |
+
+## Inside ORCA-NTN
+
+![Architecture and responsibility boundaries in the ORCA-NTN learning dashboard](docs/images/architecture.png)
+
+| Component | Its job |
+|---|---|
+| **M1–M4** | Detect anomalies, forecast failure windows, distinguish fault/attack and allocate capacity. |
+| **Role agents + retrieval** | Investigate permitted evidence, retrieve sources and coordinate recommendations. |
+| **Deterministic policy engine** | Produce one of six cited verdicts from typed facts and YAML conditions. |
+| **Guarded recovery** | Enforce ownership, clone tests, approvals, staged rollout and clean-path/re-attack checks. |
+| **Audit and human review** | Preserve the response trail; keep candidate gaps separate from confirmed findings. |
+
+| Recorded Console | Policy evidence |
+|---|---|
+| ![Console with observed topology and the complete zoomable response flow](docs/images/console.png) | ![Policy verdicts, reporting clocks and candidate gaps](docs/images/policy.png) |
+
+<a id="quick-start"></a>
 
 ## Run it locally
 

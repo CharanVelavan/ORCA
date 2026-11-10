@@ -95,3 +95,6 @@
 [data-theme="dark"] .model-dialog input::placeholder{color:var(--ink-muted);opacity:1}
 .repository-link{white-space:nowrap;text-decoration:none}
 @media(max-width:600px){.repository-link{width:32px;min-width:32px;justify-content:center;padding-inline:0}.repository-link>span{display:none}}
+
+/* Approved horizon logo retains its supplied colours on a white tile. */
+.sh-topnav .sh-brand__mark{width:44px;height:44px;min-width:44px;padding:0;background:#fff;box-shadow:none}
